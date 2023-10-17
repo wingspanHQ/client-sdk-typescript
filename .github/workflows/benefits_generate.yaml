@@ -8,10 +8,10 @@ name: Generate Client SDKs for Wingspan benefits
         default: false
   schedule:
   - cron: 0 1 * * 1
+env:
+  DOC_LOC: ${{ secrets.OPENAPI_SPEC_LOCATION_BENEFITS }}
 jobs:
   generate:
-    env:
-      DOC_LOC: ${{ secrets.OPENAPI_SPEC_LOCATION_BENEFITS }}
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-generation.yaml@v14
     with:
       openapi_doc_location: ${{ env.DOC_LOC }}
