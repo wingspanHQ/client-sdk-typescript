@@ -9,3 +9,4 @@ Based on:
 - [typescript v0.1.0] previous-versions/benefits
 ### Releases
 - [NPM v0.1.0] https://www.npmjs.com/package/openapi/v/0.1.0 - previous-versions/benefits
+
