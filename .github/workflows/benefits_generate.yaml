@@ -14,7 +14,7 @@ jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-generation.yaml@v14
     with:
-      openapi_doc_location: ${{ env.DOC_LOC }}
+      openapi_doc_location: ${{ DOC_LOC }}
       speakeasy_version: latest
       languages: |-
         - typescript: ./previous-versions/benefits
