@@ -4,7 +4,7 @@ name: Release Wingspan Benefits library
     paths:
     - previous-versions/benefits/RELEASES.md
     branches:
-    - main
+    - staging
 jobs:
   publish:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v14
