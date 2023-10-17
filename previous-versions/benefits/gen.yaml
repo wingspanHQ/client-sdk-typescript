@@ -1,9 +1,0 @@
-generation:
-  telemetryEnabled: false
-  sdkClassName: benefits
-  singleTagPerOp: false
-typescript:
-  version: 1.0.0
-  author: Wingspan Networks, Inc.
-  maxMethodParams: 0
-  packageName: '@wingspanHQ/benefits'
