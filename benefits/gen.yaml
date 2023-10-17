@@ -3,7 +3,7 @@ generation:
   sdkClassName: benefits
   singleTagPerOp: false
 typescript:
-  maxMethodParams: 4
   version: 1.0.0
-  author: Wingspan Networks, Inc
+  author: Wingspan Networks, Inc.
+  maxMethodParams: 0
   packageName: '@wingspanHQ/benefits'
