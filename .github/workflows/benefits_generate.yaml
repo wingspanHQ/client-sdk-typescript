@@ -15,7 +15,7 @@ jobs:
       openapi_doc_location: "https://docs.wingspan.app/openapi/${{ vars.README_OPENAPI_ID_BENEFITS }}"
       speakeasy_version: latest
       languages: |-
-        - typescript: ./previous-versions/benefits
+        - typescript: ./benefits
       create_release: true
       mode: pr
       force: ${{ github.event.inputs.force }}
