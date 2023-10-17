@@ -13,7 +13,6 @@ jobs:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-generation.yaml@v14
     with:
       speakeasy_version: latest
-      openapi_doc_location: ${{ secrets.OPENAPI_SPEC_LOCATION_BENEFITS }}
       languages: |-
         - typescript: ./previous-versions/benefits
       create_release: true
@@ -21,5 +20,6 @@ jobs:
       force: ${{ github.event.inputs.force }}
       publish_typescript: true
     secrets:
+      openapi_doc_location: ${{ secrets.OPENAPI_SPEC_LOCATION_BENEFITS }}
       github_access_token: ${{ secrets.ADMIN_PERSONAL_ACCESS_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
