@@ -2,7 +2,7 @@ name: Release Wingspan Benefits library
 'on':
   push:
     paths:
-    - previous-versions/benefits/RELEASES.md
+    - "benefits/RELEASES.md"
     branches:
     - staging
 jobs:
