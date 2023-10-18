@@ -12,20 +12,20 @@
 ### NPM
 
 ```bash
-npm add @wingspanhq/benefits
+npm add @wingspan/benefits
 ```
 
 ### Yarn
 
 ```bash
-yarn add @wingspanhq/benefits
+yarn add @wingspan/benefits
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async () => {
     const sdk = new Benefits();

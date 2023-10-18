@@ -20,7 +20,7 @@ Fetches the enrollment status and details for a member identified by the provide
 ### Example Usage
 
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async() => {
   const sdk = new Benefits();
@@ -55,7 +55,7 @@ List all plan enrollments
 ### Example Usage
 
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async() => {
   const sdk = new Benefits();
@@ -87,7 +87,7 @@ Get a particular plan enrollment by ID
 ### Example Usage
 
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async() => {
   const sdk = new Benefits();
@@ -122,7 +122,7 @@ Fetches the current status indicating whether the benefits service is enabled or
 ### Example Usage
 
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async() => {
   const sdk = new Benefits();
@@ -154,7 +154,7 @@ Allows users to change the enablement status of a specified benefits service.
 ### Example Usage
 
 ```typescript
-import { Benefits } from "@wingspanhq/benefits";
+import { Benefits } from "@wingspan/benefits";
 
 (async() => {
   const sdk = new Benefits();
