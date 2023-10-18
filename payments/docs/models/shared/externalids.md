@@ -1,0 +1,10 @@
+# ExternalIds
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `bulk`                                                                                        | [ExternalIdsBulkImport](../../models/shared/externalidsbulkimport.md)                         | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `quickbooks`                                                                                  | Record<string, [ExternalIdsQuickbooksData](../../models/shared/externalidsquickbooksdata.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `stripe`                                                                                      | *string*                                                                                      | :heavy_minus_sign:                                                                            | N/A                                                                                           |
