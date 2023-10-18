@@ -17,4 +17,4 @@ typescript:
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   maxMethodParams: "0"
-  packageName: '@wingspanhq/benefits'
+  packageName: '@wingspan/benefits'
