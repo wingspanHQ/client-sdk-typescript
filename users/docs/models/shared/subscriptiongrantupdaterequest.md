@@ -1,0 +1,9 @@
+# SubscriptionGrantUpdateRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `package`                                                                                                     | [SubscriptionGrantUpdateRequestPackage](../../models/shared/subscriptiongrantupdaterequestpackage.md)         | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `packageTier`                                                                                                 | [SubscriptionGrantUpdateRequestPackageTier](../../models/shared/subscriptiongrantupdaterequestpackagetier.md) | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |

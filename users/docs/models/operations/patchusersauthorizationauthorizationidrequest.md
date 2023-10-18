@@ -1,0 +1,9 @@
+# PatchUsersAuthorizationAuthorizationIdRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `authorizationUpdateRequest`                                                           | [shared.AuthorizationUpdateRequest](../../models/shared/authorizationupdaterequest.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `authorizationId`                                                                      | *string*                                                                               | :heavy_check_mark:                                                                     | Authorization Id                                                                       |
