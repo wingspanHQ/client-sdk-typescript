@@ -1,4 +1,4 @@
-name: Release Wingspan Benefits library
+name: Release Wingspan benefits library
 'on':
   push:
     paths:
