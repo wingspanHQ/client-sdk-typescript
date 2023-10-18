@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add @wingspanHQ/benefits
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add @wingspanHQ/benefits
@@ -24,8 +24,6 @@ yarn add @wingspanHQ/benefits
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Benefits } from "@wingspanHQ/benefits";
 
@@ -45,9 +43,9 @@ import { Benefits } from "@wingspanHQ/benefits";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Benefits SDK](docs/sdks/benefits/README.md)
+### [Benefits SDK](docs/sdks/benefits/README.md)
 
 * [getBenefitsEnrollmentId](docs/sdks/benefits/README.md#getbenefitsenrollmentid) - Retrieve Enrollment Details for a Specific Member
 * [getBenefitsPlanEnrollment](docs/sdks/benefits/README.md#getbenefitsplanenrollment) - List all plan enrollments
@@ -57,8 +55,6 @@ import { Benefits } from "@wingspanHQ/benefits";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
