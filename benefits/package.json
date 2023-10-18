@@ -1,6 +1,6 @@
 {
-  "name": "@wingspanhq/benefits",
-  "version": "1.3.0",
+  "name": "@wingspan/benefits",
+  "version": "1.4.0",
   "author": "Wingspan Networks, Inc.",
   "scripts": {
     "prepare": "tsc --build",
