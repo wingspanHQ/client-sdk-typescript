@@ -2,7 +2,7 @@
 
 
 ```typescript
-import { Benefits } from "@wingspanHQ/benefits";
+import { Benefits } from "@wingspanhq/benefits";
 
 (async () => {
     const sdk = new Benefits();
