@@ -1,0 +1,11 @@
+# PhoneVerificationResponse
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `phone`                                                                                   | *string*                                                                                  | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `session`                                                                                 | [SessionResponse](../../models/shared/sessionresponse.md)                                 | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `status`                                                                                  | [PhoneVerificationResponseStatus](../../models/shared/phoneverificationresponsestatus.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `userId`                                                                                  | *string*                                                                                  | :heavy_check_mark:                                                                        | N/A                                                                                       |

@@ -1,0 +1,13 @@
+# ScheduledChange
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `effectiveDate`                                                                 | *string*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             |
+| `package`                                                                       | [ScheduledChangePackage](../../models/shared/scheduledchangepackage.md)         | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `packageTier`                                                                   | [ScheduledChangePackageTier](../../models/shared/scheduledchangepackagetier.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `planId`                                                                        | *string*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `status`                                                                        | [ScheduledChangeStatus](../../models/shared/scheduledchangestatus.md)           | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `term`                                                                          | [ScheduledChangeTerm](../../models/shared/scheduledchangeterm.md)               | :heavy_minus_sign:                                                              | N/A                                                                             |
