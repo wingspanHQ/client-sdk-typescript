@@ -1,0 +1,10 @@
+configVersion: 1.0.0
+generation:
+  sdkClassName: cms
+  singleTagPerOp: false
+  telemetryEnabled: false
+typescript:
+  version: 1.0.0
+  author: Wingspan Networks, Inc.
+  maxMethodParams: "0"
+  packageName: '@wingspan/cms'
