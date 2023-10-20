@@ -1,0 +1,13 @@
+# CompanyPersonWrite
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `email`                                                                     | *string*                                                                    | :heavy_check_mark:                                                          | N/A                                                                         |
+| `firstName`                                                                 | *string*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `lastName`                                                                  | *string*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `member`                                                                    | [CompanyPersonWriteMember](../../models/shared/companypersonwritemember.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `memberId`                                                                  | *string*                                                                    | :heavy_check_mark:                                                          | N/A                                                                         |
+| `ownershipPercentage`                                                       | *number*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
