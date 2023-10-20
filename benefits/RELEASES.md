@@ -49,3 +49,13 @@ Based on:
 - [typescript v1.4.0] benefits
 ### Releases
 - [NPM v1.4.0] https://www.npmjs.com/package/@wingspan/benefits/v/1.4.0 - benefits
+
+## 2023-10-20 15:27:33
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 https://docs.wingspan.app/openapi/6470f38d65c260000c025474
+- Speakeasy CLI 1.102.0 (2.166.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v1.5.0] benefits
+### Releases
+- [NPM v1.5.0] https://www.npmjs.com/package/@wingspan/benefits/v/1.5.0 - benefits
