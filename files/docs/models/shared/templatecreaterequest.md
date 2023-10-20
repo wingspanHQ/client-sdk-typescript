@@ -1,0 +1,11 @@
+# TemplateCreateRequest
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `fileId`                                                                            | *string*                                                                            | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `purpose`                                                                           | [TemplateCreateRequestPurpose](../../models/shared/templatecreaterequestpurpose.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `roles`                                                                             | [TemplateCreateRequestRoles](../../models/shared/templatecreaterequestroles.md)[]   | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `title`                                                                             | *string*                                                                            | :heavy_check_mark:                                                                  | N/A                                                                                 |
