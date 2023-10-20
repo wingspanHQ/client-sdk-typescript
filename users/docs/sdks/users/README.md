@@ -186,7 +186,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.deleteUsersAuthorizationAuthorizationId({
-    authorizationId: "West",
+    authorizationId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -397,7 +397,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.deleteUsersUserMemberMemberIdNextgenSubscriptionId({
     id: "<ID>",
-    memberId: "Austria",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -630,7 +630,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizationAccountsUserId({
-    userId: "Functionality",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -665,7 +665,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizationAuthorizationId({
-    authorizationId: "redefine",
+    authorizationId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -732,7 +732,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizedScopeGroupsRequestingUserId({
-    requestingUserId: "neck",
+    requestingUserId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -799,7 +799,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizedScopesRequestingUserId({
-    requestingUserId: "efficient",
+    requestingUserId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -898,7 +898,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersOrganizationUserUserId({
-    userId: "Manager",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -933,7 +933,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersOrganizationUserUserIdSession({
-    userId: "salmon",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1510,7 +1510,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersUserMemberMemberIdNextgenSubscription({
-    memberId: "microchip",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1545,7 +1545,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersUserMemberMemberIdNextgenSubscriptionPlan({
-    memberId: "withdrawal",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1581,7 +1581,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsersUserMemberMemberIdNextgenSubscriptionPlanId({
     id: "<ID>",
-    memberId: "Hartford",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1617,7 +1617,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsersUserMemberMemberIdNextgenSubscriptionId({
     id: "<ID>",
-    memberId: "parsing",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1873,7 +1873,7 @@ import { AuthorizationUpdateRequestAllowedAction } from "@wingspan/users/dist/sd
 
   const res = await sdk.users.patchUsersAuthorizationAuthorizationId({
     authorizationUpdateRequest: {},
-    authorizationId: "SUV",
+    authorizationId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1908,7 +1908,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.patchUsersOrganizationUserUserId({
-    userId: "Bronze",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1959,7 +1959,7 @@ import {
         wingspanFinancialSettings: OrganizationInheritanceStrategyWingspanFinancialSettings.Parent,
       },
     },
-    userId: "Computers",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1996,7 +1996,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.patchUsersSessionApiId({
     apiSessionUpdateRequest: {
       labels: {
-        "developing": "Nissan",
+        "key": "string",
       },
     },
     id: "<ID>",
@@ -2034,7 +2034,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.patchUsersSessionOtp({
-    code: "Granite",
+    code: "string",
   });
 
   if (res.statusCode == 200) {
@@ -2108,15 +2108,15 @@ import { CompanyStructure } from "@wingspan/users/dist/sdk/models/shared";
 
   const res = await sdk.users.patchUsersUserClientId({
     clientUpdateRequest: {
-      clientId: "Swaziland",
+      clientId: "string",
       profile: {
         address: {
-          country: "Algeria",
+          country: "Aruba",
         },
         company: {
           companyOwners: [
             {
-              memberId: "logistical",
+              memberId: "string",
             },
           ],
           links: {},
@@ -2253,40 +2253,40 @@ import {
 
   const res = await sdk.users.patchUsersUserMemberId({
     memberUpdateRequest: {
-      memberId: "Decentralized",
+      memberId: "string",
       profile: {
         address: {
-          country: "Christmas Island",
+          country: "Guadeloupe",
         },
         bookkeepingProductsUsed: [
-          MemberProfileWriteBookkeepingProductsUsed.Spreadsheet,
+          MemberProfileWriteBookkeepingProductsUsed.AccountingSoftware,
         ],
         company: {
           companyOwners: [
             {
-              email: "Rodrick10@gmail.com",
+              email: "Jonas_Harber4@gmail.com",
               member: {},
-              memberId: "Account",
+              memberId: "string",
             },
           ],
           links: {},
         },
         homeAddress: {
-          country: "Philippines",
+          country: "Bosnia and Herzegovina",
         },
         interests: [
-          MemberProfileWriteInterests.TaxSaving,
+          MemberProfileWriteInterests.Invoicing,
         ],
         productAspectImportance: [
-          MemberProfileWriteProductAspectImportance.MindAndBodySupport,
+          MemberProfileWriteProductAspectImportance.HealthInsurance,
         ],
         productImportance: [
-          MemberProfileWriteProductImportance.Payments,
+          MemberProfileWriteProductImportance.LessThanNilGreaterThan,
         ],
         taxInfo: {
           occupations: [
             {
-              category: "input",
+              category: "string",
             },
           ],
         },
@@ -2379,7 +2379,7 @@ import {
   const res = await sdk.users.patchUsersUserMemberMemberIdNextgenSubscriptionId({
     subscriptionUpdateRequest: {},
     id: "<ID>",
-    memberId: "Polonium",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -2455,7 +2455,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.patchUsersUserIdVerificationEmail({
     completeEmailVerificationRequest: {
-      emailVerificationId: "aggregate",
+      emailVerificationId: "string",
     },
     id: "<ID>",
   });
@@ -2493,7 +2493,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.patchUsersUserIdVerificationPhone({
     completePhoneVerificationRequest: {
-      code: "World",
+      code: "string",
     },
     id: "<ID>",
   });
@@ -2541,7 +2541,7 @@ import {
       account: "31307069",
     },
     owners: [
-      "Account",
+      "string",
     ],
     usedFor: {},
   });
@@ -2647,7 +2647,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersActivity({
-    userId: "Card",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -2722,23 +2722,23 @@ import {
   const sdk = new Users();
 
   const res = await sdk.users.postUsersAuthorization({
-    requestingUserId: "quantify",
+    requestingUserId: "string",
     scopeModifications: {
       payments: {
         memberClient: [
           {
-            action: ScopeModificationAction.Deny,
-            attribute: "deposit",
+            action: ScopeModificationAction.Allow,
+            attribute: "string",
             comparator: ScopeModificationComparator.Includes,
-            value: "magenta",
+            value: "string",
           },
         ],
         payable: [
           {
-            action: ScopeModificationAction.Allow,
-            attribute: "Chief",
-            comparator: ScopeModificationComparator.Includes,
-            value: "Dirham",
+            action: ScopeModificationAction.Deny,
+            attribute: "string",
+            comparator: ScopeModificationComparator.Equals,
+            value: "string",
           },
         ],
       },
@@ -2777,7 +2777,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersFlatfileAuthToken({
-    embedId: "smell",
+    embedId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -2812,8 +2812,8 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersGuestAccountNumbers({
-    accountId: "Southwest",
-    publicToken: "reintermediate",
+    accountId: "string",
+    publicToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -2903,7 +2903,7 @@ import {
         wingspanFinancialSettings: OrganizationInheritanceStrategyWingspanFinancialSettings.None,
       },
     },
-    userId: "matrices",
+    userId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -3044,7 +3044,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.postUsersSessionApi({
     labels: {
-      "Cotton": "navigate",
+      "key": "string",
     },
   });
 
@@ -3147,7 +3147,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersSessionSingleSignOn({
-    singleSignOnCode: "Pataca",
+    singleSignOnCode: "string",
   });
 
   if (res.statusCode == 200) {
@@ -3182,7 +3182,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersSessionSocialAuthGoogle({
-    idToken: "Oganesson",
+    idToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -3218,9 +3218,9 @@ import { SubscriptionGrantCreateRequestPackage, SubscriptionGrantCreateRequestPa
   const sdk = new Users();
 
   const res = await sdk.users.postUsersSubscriptionGrant({
-    granteeId: "Vermont",
-    package: SubscriptionGrantCreateRequestPackage.Professional,
-    packageTier: SubscriptionGrantCreateRequestPackageTier.Basic,
+    granteeId: "string",
+    package: SubscriptionGrantCreateRequestPackage.None,
+    packageTier: SubscriptionGrantCreateRequestPackageTier.Premium,
   });
 
   if (res.statusCode == 200) {
@@ -3303,7 +3303,7 @@ import { CompanyStructure } from "@wingspan/users/dist/sdk/models/shared";
         company: {
           companyOwners: [
             {
-              memberId: "slim",
+              memberId: "string",
             },
           ],
           links: {},
@@ -3314,7 +3314,7 @@ import { CompanyStructure } from "@wingspan/users/dist/sdk/models/shared";
         ],
         subscriptionPaymentMethod: {},
       },
-      userId: "Jewelery",
+      userId: "string",
     },
     id: "<ID>",
   });
@@ -3412,19 +3412,19 @@ import {
             {
               email: "Roderick50@gmail.com",
               member: {},
-              memberId: "curly",
+              memberId: "string",
             },
           ],
           links: {},
         },
         homeAddress: {
-          country: "Uruguay",
+          country: "Tanzania",
         },
         interests: [
-          MemberProfileWriteInterests.Benefits,
+          MemberProfileWriteInterests.Marketing,
         ],
         productAspectImportance: [
-          MemberProfileWriteProductAspectImportance.MindAndBodySupport,
+          MemberProfileWriteProductAspectImportance.LessThanNilGreaterThan,
         ],
         productImportance: [
           MemberProfileWriteProductImportance.Benefits,
@@ -3432,7 +3432,7 @@ import {
         taxInfo: {
           occupations: [
             {
-              category: "North",
+              category: "string",
             },
           ],
         },
@@ -3441,7 +3441,7 @@ import {
           tax: {},
         },
       },
-      userId: "Orchestrator",
+      userId: "string",
     },
     id: "<ID>",
   });
@@ -3525,7 +3525,7 @@ import {
 
   const res = await sdk.users.postUsersUserMemberMemberIdNextgenSubscription({
     subscriptionCreateRequest: {},
-    memberId: "Security",
+    memberId: "string",
   });
 
   if (res.statusCode == 200) {

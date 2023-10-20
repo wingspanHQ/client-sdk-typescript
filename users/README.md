@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add @wingspan/users
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add @wingspan/users
@@ -24,8 +24,6 @@ yarn add @wingspan/users
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Users } from "@wingspan/users";
 
@@ -45,9 +43,9 @@ import { Users } from "@wingspan/users";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Users SDK](docs/sdks/users/README.md)
+### [Users SDK](docs/sdks/users/README.md)
 
 * [deleteUsersAccountId](docs/sdks/users/README.md#deleteusersaccountid) - Unlink Bank Account
 * [deleteUsersActivityId](docs/sdks/users/README.md#deleteusersactivityid) - Remove Specific Activity Record for a Member
@@ -147,8 +145,6 @@ import { Users } from "@wingspan/users";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
