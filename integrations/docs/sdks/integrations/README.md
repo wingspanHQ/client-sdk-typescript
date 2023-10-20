@@ -1520,7 +1520,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.patchIntegrationsWebhooksPreferenceId({
     webhooksPreferenceUpdateRequest: {
       subscribedEvents: [
-        "alarm",
+        "string",
       ],
     },
     id: "<ID>",
@@ -1790,7 +1790,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.postIntegrationsQuickbooksService({
     defaults: {},
-    redirectUrl: "Rock",
+    redirectUrl: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1894,11 +1894,11 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsWebhooksPreference({
-    sharedSecret: "Soap",
+    sharedSecret: "string",
     subscribedEvents: [
-      "et",
+      "string",
     ],
-    url: "http://concrete-acknowledgment.org",
+    url: "http://corny-registry.name",
   });
 
   if (res.statusCode == 200) {
