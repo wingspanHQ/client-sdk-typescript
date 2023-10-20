@@ -1,0 +1,10 @@
+# FundingSource
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `fundingSourceCurrency`                                                                         | [FundingSourceFundingSourceCurrency](../../models/shared/fundingsourcefundingsourcecurrency.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `fundingSourceId`                                                                               | *string*                                                                                        | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `fundingSourceType`                                                                             | [FundingSourceFundingSourceType](../../models/shared/fundingsourcefundingsourcetype.md)         | :heavy_check_mark:                                                                              | N/A                                                                                             |

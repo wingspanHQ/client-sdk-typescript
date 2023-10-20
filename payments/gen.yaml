@@ -1,10 +1,25 @@
 configVersion: 1.0.0
+management:
+  docChecksum: ae2c67f813d2fb7209d6f9e0379284d2
+  docVersion: 1.0.0
+  speakeasyVersion: 1.103.0
+  generationVersion: 2.168.0
 generation:
+  repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: payments
   singleTagPerOp: false
   telemetryEnabled: false
+features:
+  typescript:
+    core: 2.92.4
+    deprecations: 2.81.1
+    globalServerURLs: 2.82.0
 typescript:
   version: 1.0.0
   author: Wingspan Networks, Inc.
+  flattenGlobalSecurity: true
+  installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
   maxMethodParams: "0"
   packageName: '@wingspan/payments'
+  published: true
+  repoSubDirectory: payments
