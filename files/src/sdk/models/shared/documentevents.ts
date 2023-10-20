@@ -11,6 +11,10 @@ export class DocumentEvents extends SpeakeasyBase {
     clientSignedAt?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "completedAt" })
+    completedAt?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "memberSignedAt" })
     memberSignedAt?: string;
 }

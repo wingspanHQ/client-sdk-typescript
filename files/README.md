@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add @wingspan/files
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add @wingspan/files
@@ -24,8 +24,6 @@ yarn add @wingspan/files
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Files } from "@wingspan/files";
 
@@ -45,16 +43,16 @@ import { Files } from "@wingspan/files";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Files SDK](docs/sdks/files/README.md)
+### [Files SDK](docs/sdks/files/README.md)
 
 * [deleteFilesMemberPrivateId](docs/sdks/files/README.md#deletefilesmemberprivateid) - Remove a Specific Private File
 * [deleteFilesMemberPublicId](docs/sdks/files/README.md#deletefilesmemberpublicid) - Remove Member's Public File
-* [deleteFilesTemplateId](docs/sdks/files/README.md#deletefilestemplateid) - Remove a Specific Document Template
+* [deleteFilesTemplateId](docs/sdks/files/README.md#deletefilestemplateid) - Remove a Specific E-signature Document Template
 * [getFilesDocument](docs/sdks/files/README.md#getfilesdocument) - Retrieve All Documents
 * [getFilesDocumentId](docs/sdks/files/README.md#getfilesdocumentid) - Retrieve Specific Document Details
-* [getFilesDocumentIdSaveFiles](docs/sdks/files/README.md#getfilesdocumentidsavefiles) - Retrieve Latest E-Signed Documents as PDF
+* [getFilesDocumentIdSaveFiles](docs/sdks/files/README.md#getfilesdocumentidsavefiles) - Retrieve E-Signed Documents as PDF
 * [getFilesDocumentIdSigningUrls](docs/sdks/files/README.md#getfilesdocumentidsigningurls) - Obtain URLs for Document Signing
 * [getFilesMemberPrivate](docs/sdks/files/README.md#getfilesmemberprivate) - Fetch a List of All Private Files for the Member
 * [getFilesMemberPrivateId](docs/sdks/files/README.md#getfilesmemberprivateid) - Retrieve Specific Private File Details
@@ -63,20 +61,18 @@ import { Files } from "@wingspan/files";
 * [getFilesMemberPublicId](docs/sdks/files/README.md#getfilesmemberpublicid) - Fetch Specific Public File Details
 * [getFilesMemberPublicIdDownload](docs/sdks/files/README.md#getfilesmemberpubliciddownload) - Download a Specific Public File
 * [getFilesMemberPublicIdSummary](docs/sdks/files/README.md#getfilesmemberpublicidsummary) - Retrieve Summary of a Specific Public File
-* [getFilesTemplate](docs/sdks/files/README.md#getfilestemplate) - Retrieve All Document Templates
-* [getFilesTemplateId](docs/sdks/files/README.md#getfilestemplateid) - Retrieve Specific Document Template Details
+* [getFilesTemplate](docs/sdks/files/README.md#getfilestemplate) - Retrieve All E-signature Document Templates
+* [getFilesTemplateId](docs/sdks/files/README.md#getfilestemplateid) - Retrieve Specific E-signature Document Template Details
 * [patchFilesMemberPrivateId](docs/sdks/files/README.md#patchfilesmemberprivateid) - Modify Specific Private File's Metadata
 * [patchFilesMemberPublicId](docs/sdks/files/README.md#patchfilesmemberpublicid) - Update Member's Public File
 * [postFilesMemberPrivate](docs/sdks/files/README.md#postfilesmemberprivate) - Generate Entry for a New Private File
 * [postFilesMemberPrivateUpload](docs/sdks/files/README.md#postfilesmemberprivateupload) - Upload a Private File
 * [postFilesMemberPublic](docs/sdks/files/README.md#postfilesmemberpublic) - Initialize Public File Creation
 * [postFilesMemberPublicUpload](docs/sdks/files/README.md#postfilesmemberpublicupload) - Upload Publicly Viewable File
-* [postFilesTemplate](docs/sdks/files/README.md#postfilestemplate) - Create a New Document Template
+* [postFilesTemplate](docs/sdks/files/README.md#postfilestemplate) - Create a New E-signature Document Template
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

@@ -53,9 +53,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "2.0.0";
+    sdkVersion = "2.1.0";
     genVersion = "2.166.0";
-    userAgent = "speakeasy-sdk/typescript 2.0.0 2.166.0 1.0.0 @wingspan/files";
+    userAgent = "speakeasy-sdk/typescript 2.1.0 2.166.0 1.0.0 @wingspan/files";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -86,6 +86,9 @@ export class Files {
 
     /**
      * Remove a Specific Private File
+     *
+     * @remarks
+     * Permanently deletes a specific private file associated with the provided ID from the system, ensuring it cannot be retrieved again.
      */
     async deleteFilesMemberPrivateId(
         req: operations.DeleteFilesMemberPrivateIdRequest,
@@ -151,6 +154,9 @@ export class Files {
 
     /**
      * Remove Member's Public File
+     *
+     * @remarks
+     * Deletes a specific publicly viewable file owned by the member using its unique identifier.
      */
     async deleteFilesMemberPublicId(
         req: operations.DeleteFilesMemberPublicIdRequest,
@@ -215,7 +221,10 @@ export class Files {
     }
 
     /**
-     * Remove a Specific Document Template
+     * Remove a Specific E-signature Document Template
+     *
+     * @remarks
+     * Deletes a specified e-signature document template from the system, preventing its future use for document requirements.
      */
     async deleteFilesTemplateId(
         req: operations.DeleteFilesTemplateIdRequest,
@@ -281,6 +290,9 @@ export class Files {
 
     /**
      * Retrieve All Documents
+     *
+     * @remarks
+     * Fetches a list of all stored documents available to the requester. This can be useful for obtaining a comprehensive overview of documents in the system.
      */
     async getFilesDocument(
         config?: AxiosRequestConfig
@@ -343,6 +355,9 @@ export class Files {
 
     /**
      * Retrieve Specific Document Details
+     *
+     * @remarks
+     * Fetches detailed information of a specific document using its unique identifier. This provides a more granular view of an individual document.
      */
     async getFilesDocumentId(
         req: operations.GetFilesDocumentIdRequest,
@@ -407,7 +422,10 @@ export class Files {
     }
 
     /**
-     * Retrieve Latest E-Signed Documents as PDF
+     * Retrieve E-Signed Documents as PDF
+     *
+     * @remarks
+     * Fetches e-signed documents associated with the given ID, and saves them as PDFs in the file vault for secure storage and access.
      */
     async getFilesDocumentIdSaveFiles(
         req: operations.GetFilesDocumentIdSaveFilesRequest,
@@ -473,6 +491,9 @@ export class Files {
 
     /**
      * Obtain URLs for Document Signing
+     *
+     * @remarks
+     * Retrieves the signing URLs associated with a specific document, facilitating electronic signing or verification processes.
      */
     async getFilesDocumentIdSigningUrls(
         req: operations.GetFilesDocumentIdSigningUrlsRequest,
@@ -538,6 +559,9 @@ export class Files {
 
     /**
      * Fetch a List of All Private Files for the Member
+     *
+     * @remarks
+     * Retrieves a list of all private files associated with the member. This includes details such as file name, type, size, and date uploaded.
      */
     async getFilesMemberPrivate(
         config?: AxiosRequestConfig
@@ -601,6 +625,9 @@ export class Files {
 
     /**
      * Retrieve Specific Private File Details
+     *
+     * @remarks
+     * Fetches the details of a specific private file associated with the given ID, ensuring that only authorized members can access its information.
      */
     async getFilesMemberPrivateId(
         req: operations.GetFilesMemberPrivateIdRequest,
@@ -666,6 +693,9 @@ export class Files {
 
     /**
      * Download a Member's Private File
+     *
+     * @remarks
+     * Downloads a member's private file, ensuring secure and exclusive access to the specified content.
      */
     async getFilesMemberPrivateIdDownload(
         req: operations.GetFilesMemberPrivateIdDownloadRequest,
@@ -717,6 +747,9 @@ export class Files {
 
     /**
      * Retrieve List of Member's Public Files
+     *
+     * @remarks
+     * Fetches a list of files that are publicly viewable and owned by the member.
      */
     async getFilesMemberPublic(
         config?: AxiosRequestConfig
@@ -780,6 +813,9 @@ export class Files {
 
     /**
      * Fetch Specific Public File Details
+     *
+     * @remarks
+     * Retrieves details of a specific publicly viewable file owned by the member using its unique identifier.
      */
     async getFilesMemberPublicId(
         req: operations.GetFilesMemberPublicIdRequest,
@@ -845,6 +881,9 @@ export class Files {
 
     /**
      * Download a Specific Public File
+     *
+     * @remarks
+     * Initiates a download for the specified public file, allowing members to access and save the file to their local device.
      */
     async getFilesMemberPublicIdDownload(
         req: operations.GetFilesMemberPublicIdDownloadRequest,
@@ -896,6 +935,9 @@ export class Files {
 
     /**
      * Retrieve Summary of a Specific Public File
+     *
+     * @remarks
+     * Fetches a concise summary of the specified public file, which includes meta-information like file name, type, size, and date modified.
      */
     async getFilesMemberPublicIdSummary(
         req: operations.GetFilesMemberPublicIdSummaryRequest,
@@ -960,7 +1002,10 @@ export class Files {
     }
 
     /**
-     * Retrieve All Document Templates
+     * Retrieve All E-signature Document Templates
+     *
+     * @remarks
+     * Fetches a list of all stored e-signature document templates, providing an overview of available templates for document requirements.
      */
     async getFilesTemplate(
         config?: AxiosRequestConfig
@@ -1022,7 +1067,10 @@ export class Files {
     }
 
     /**
-     * Retrieve Specific Document Template Details
+     * Retrieve Specific E-signature Document Template Details
+     *
+     * @remarks
+     * Fetches detailed metadata and content of a particular document e-signature template using its unique identifier.
      */
     async getFilesTemplateId(
         req: operations.GetFilesTemplateIdRequest,
@@ -1088,6 +1136,9 @@ export class Files {
 
     /**
      * Modify Specific Private File's Metadata
+     *
+     * @remarks
+     * Updates the metadata or other non-content related information of a specific private file associated with the provided ID.
      */
     async patchFilesMemberPrivateId(
         req: operations.PatchFilesMemberPrivateIdRequest,
@@ -1150,6 +1201,9 @@ export class Files {
 
     /**
      * Update Member's Public File
+     *
+     * @remarks
+     * Allows for modifications or updates to the existing public file owned by the member using its unique identifier.
      */
     async patchFilesMemberPublicId(
         req: operations.PatchFilesMemberPublicIdRequest,
@@ -1212,6 +1266,9 @@ export class Files {
 
     /**
      * Generate Entry for a New Private File
+     *
+     * @remarks
+     * Creates a new entry in the system for a private file. This does not upload the file, but prepares the system to receive a file for the given entry.
      */
     async postFilesMemberPrivate(
         config?: AxiosRequestConfig
@@ -1258,6 +1315,9 @@ export class Files {
 
     /**
      * Upload a Private File
+     *
+     * @remarks
+     * Provides a mechanism for members to securely upload private files to the platform. These files are not accessible to other members or the public.
      */
     async postFilesMemberPrivateUpload(
         config?: AxiosRequestConfig
@@ -1318,6 +1378,9 @@ export class Files {
 
     /**
      * Initialize Public File Creation
+     *
+     * @remarks
+     * Begin the process of creating a new public file entry for a member, usually followed by an upload action.
      */
     async postFilesMemberPublic(
         config?: AxiosRequestConfig
@@ -1364,6 +1427,9 @@ export class Files {
 
     /**
      * Upload Publicly Viewable File
+     *
+     * @remarks
+     * Allows members to upload files that will be publicly viewable.
      */
     async postFilesMemberPublicUpload(
         config?: AxiosRequestConfig
@@ -1423,7 +1489,10 @@ export class Files {
     }
 
     /**
-     * Create a New Document Template
+     * Create a New E-signature Document Template
+     *
+     * @remarks
+     * Uploads and registers a new e-signature document template, allowing users to start the issuing document and eligibility requirements for Collaborators.
      */
     async postFilesTemplate(
         req: shared.TemplateCreateRequest,
