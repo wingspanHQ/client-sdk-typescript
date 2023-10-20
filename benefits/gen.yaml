@@ -2,19 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: e377727f5ba4f1205fcadb3246757bab
   docVersion: 1.0.0
-  speakeasyVersion: 1.101.0
-  generationVersion: 2.161.0
+  speakeasyVersion: 1.102.0
+  generationVersion: 2.166.0
 generation:
+  repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: benefits
   singleTagPerOp: false
   telemetryEnabled: false
 features:
   typescript:
-    core: 2.90.4
+    core: 2.92.4
     globalServerURLs: 2.82.0
 typescript:
-  version: 1.4.0
+  version: 1.5.0
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
+  installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/benefits
   maxMethodParams: "0"
   packageName: '@wingspan/benefits'
+  published: true
+  repoSubDirectory: benefits
