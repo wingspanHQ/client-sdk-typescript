@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: c2d453cc77acccdfaae0accd2b0854b2
   docVersion: 1.0.0
-  speakeasyVersion: 1.102.0
-  generationVersion: 2.166.0
+  speakeasyVersion: 1.103.0
+  generationVersion: 2.168.0
 generation:
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: integrations
@@ -14,7 +14,7 @@ features:
     core: 2.92.4
     globalServerURLs: 2.82.0
 typescript:
-  version: 2.0.0
+  version: 2.1.0
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/integrations

@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add @wingspan/integrations
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add @wingspan/integrations
@@ -24,8 +24,6 @@ yarn add @wingspan/integrations
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Integrations } from "@wingspan/integrations";
 
@@ -45,9 +43,9 @@ import { Integrations } from "@wingspan/integrations";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Integrations SDK](docs/sdks/integrations/README.md)
+### [Integrations SDK](docs/sdks/integrations/README.md)
 
 * [deleteIntegrationsQuickbooksAccountAssetId](docs/sdks/integrations/README.md#deleteintegrationsquickbooksaccountassetid) - Delete Quickbooks Account details
 * [deleteIntegrationsQuickbooksAccountEquityId](docs/sdks/integrations/README.md#deleteintegrationsquickbooksaccountequityid) - Delete Quickbooks Account details
@@ -106,8 +104,6 @@ import { Integrations } from "@wingspan/integrations";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
