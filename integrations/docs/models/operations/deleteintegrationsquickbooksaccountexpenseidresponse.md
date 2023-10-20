@@ -1,0 +1,11 @@
+# DeleteIntegrationsQuickbooksAccountExpenseIdResponse
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `contentType`                                                                          | *string*                                                                               | :heavy_check_mark:                                                                     | HTTP response content type for this operation                                          |
+| `integrationAccountResponse`                                                           | [shared.IntegrationAccountResponse](../../models/shared/integrationaccountresponse.md) | :heavy_minus_sign:                                                                     | a ws formatted qbo account                                                             |
+| `statusCode`                                                                           | *number*                                                                               | :heavy_check_mark:                                                                     | HTTP response status code for this operation                                           |
+| `rawResponse`                                                                          | [AxiosResponse](https://axios-http.com/docs/res_schema)                                | :heavy_minus_sign:                                                                     | Raw HTTP response; suitable for custom response parsing                                |
