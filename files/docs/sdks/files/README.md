@@ -797,12 +797,12 @@ import { TemplateCreateRequestPurpose, TemplateCreateRequestRoles } from "@wings
   const sdk = new Files();
 
   const res = await sdk.files.postFilesTemplate({
-    fileId: "chase",
+    fileId: "string",
     purpose: TemplateCreateRequestPurpose.OnboardCollaborator,
     roles: [
-      TemplateCreateRequestRoles.Client,
+      TemplateCreateRequestRoles.LessThanNilGreaterThan,
     ],
-    title: "Midland",
+    title: "string",
   });
 
   if (res.statusCode == 200) {
