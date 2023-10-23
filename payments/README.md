@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add @wingspan/payments
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add @wingspan/payments
@@ -24,8 +24,6 @@ yarn add @wingspan/payments
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Payments } from "@wingspan/payments";
 
@@ -45,9 +43,9 @@ import { Payments } from "@wingspan/payments";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Payments SDK](docs/sdks/payments/README.md)
+### [Payments SDK](docs/sdks/payments/README.md)
 
 * [deletePaymentsBankingCardId](docs/sdks/payments/README.md#deletepaymentsbankingcardid) - Remove a card using its unique ID
 * [deletePaymentsBankingInstantPayout](docs/sdks/payments/README.md#deletepaymentsbankinginstantpayout) - Deprecated Remove Instant Payout Configuration
@@ -214,8 +212,6 @@ import { Payments } from "@wingspan/payments";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
