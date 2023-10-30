@@ -15,6 +15,7 @@ export enum BulkPayableItemCreatePayableStatus {
 
 export enum BulkPayableItemCreateWorkflowSubStatus {
     Submitted = "Submitted",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class BulkPayableItemCreate extends SpeakeasyBase {

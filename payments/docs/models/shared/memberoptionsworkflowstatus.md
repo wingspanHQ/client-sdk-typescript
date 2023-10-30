@@ -3,8 +3,9 @@
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `Disputed`    | Disputed      |
-| `Accepted`    | Accepted      |
-| `Resubmitted` | Resubmitted   |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Disputed`               | Disputed                 |
+| `Accepted`               | Accepted                 |
+| `Resubmitted`            | Resubmitted              |
+| `LessThanNilGreaterThan` | <nil>                    |

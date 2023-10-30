@@ -18,6 +18,7 @@ export enum Form1099CorrectionCompanyStructure {
     LLCPartnership = "LLCPartnership",
     CorporationC = "CorporationC",
     Partnership = "Partnership",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class Form1099Correction extends SpeakeasyBase {

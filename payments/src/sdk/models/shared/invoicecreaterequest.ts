@@ -17,6 +17,7 @@ export enum InvoiceCreateRequestAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class InvoiceCreateRequestClient extends SpeakeasyBase {}
@@ -24,6 +25,7 @@ export class InvoiceCreateRequestClient extends SpeakeasyBase {}
 export enum InvoiceCreateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class InvoiceCreateRequestMember extends SpeakeasyBase {}
@@ -36,6 +38,7 @@ export enum InvoiceCreateRequestStatus {
     Pending = "Pending",
     PaymentInTransit = "PaymentInTransit",
     Paid = "Paid",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class InvoiceCreateRequest extends SpeakeasyBase {

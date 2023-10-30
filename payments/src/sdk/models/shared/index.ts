@@ -155,6 +155,7 @@ export * from "./mark1099asundeliveredresponse";
 export * from "./mccresponse";
 export * from "./memberclient";
 export * from "./memberclientcreaterequest";
+export * from "./memberclientevents";
 export * from "./memberclientform1099balances";
 export * from "./memberclientformw9info";
 export * from "./memberclientrequirementresponse";

@@ -53,9 +53,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.1.0";
-    genVersion = "2.169.0";
-    userAgent = "speakeasy-sdk/typescript 1.1.0 2.169.0 1.0.0 @wingspan/payments";
+    sdkVersion = "1.2.0";
+    genVersion = "2.173.0";
+    userAgent = "speakeasy-sdk/typescript 1.2.0 2.173.0 1.0.0 @wingspan/payments";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -86,6 +86,9 @@ export class Payments {
 
     /**
      * Remove a card using its unique ID
+     *
+     * @remarks
+     * Deletes a card from the system based on its unique identifier. This action is irreversible.
      */
     async deletePaymentsBankingCardId(
         req: operations.DeletePaymentsBankingCardIdRequest,
@@ -148,6 +151,9 @@ export class Payments {
 
     /**
      * Deprecated Remove Instant Payout Configuration
+     *
+     * @remarks
+     * Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
      */
     async deletePaymentsBankingInstantPayout(
         config?: AxiosRequestConfig
@@ -208,6 +214,9 @@ export class Payments {
 
     /**
      * Remove a Specific Collaborator Batch
+     *
+     * @remarks
+     * Deletes a specific bulk collaborator batch using its unique identifier. Once deleted, the batch cannot be recovered.
      */
     async deletePaymentsBulkCollaboratorBatchBatchId(
         req: operations.DeletePaymentsBulkCollaboratorBatchBatchIdRequest,
@@ -277,6 +286,9 @@ export class Payments {
 
     /**
      * Remove a Specific Bulk Payable Batch
+     *
+     * @remarks
+     * Deletes a specific batch for bulk payables, using the provided batch ID, preventing any further operations on it.
      */
     async deletePaymentsBulkPayableBatchBatchId(
         req: operations.DeletePaymentsBulkPayableBatchBatchIdRequest,
@@ -346,6 +358,9 @@ export class Payments {
 
     /**
      * Remove a Client Deduction
+     *
+     * @remarks
+     * Allows for the deletion of a client deduction based on its unique identifier, removing it permanently from the system.
      */
     async deletePaymentsClientDeductionId(
         req: operations.DeletePaymentsClientDeductionIdRequest,
@@ -411,6 +426,9 @@ export class Payments {
 
     /**
      * Erase a Specific Deduction Entry
+     *
+     * @remarks
+     * Delete a specific deduction entry, eliminating its record from the system.
      */
     async deletePaymentsCollaboratorDeductionId(
         req: operations.DeletePaymentsCollaboratorDeductionIdRequest,
@@ -480,6 +498,9 @@ export class Payments {
 
     /**
      * Remove Eligibility Requirement from Collaborator Group
+     *
+     * @remarks
+     * Delete a specific eligibility requirement from the designated collaborator group.
      */
     async deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId(
         req: operations.DeletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest,
@@ -555,6 +576,9 @@ export class Payments {
     /**
      * Erase a Specific Collaborator-Member Custom Data
      *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Remove a specific custom data point, eliminating the additional details provided about a collaborator-member relationship.
+     *
      * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     async deletePaymentsCollaboratorSettingsAdditionalDataId(
@@ -625,6 +649,9 @@ export class Payments {
 
     /**
      * Remove a Specific Eligibility Requirement
+     *
+     * @remarks
+     * Delete an eligibility requirement from the system based on its unique identifier.
      */
     async deletePaymentsCollaboratorSettingsEligibilityRequirementId(
         req: operations.DeletePaymentsCollaboratorSettingsEligibilityRequirementIdRequest,
@@ -699,6 +726,9 @@ export class Payments {
 
     /**
      * Remove a specific Payment Eligibility Requirement
+     *
+     * @remarks
+     * Delete an existing payment eligibility requirement based on its unique identifier, removing associated criteria for a member's payment eligibility.
      */
     async deletePaymentsCollaboratorSettingsPaymentEligibilityId(
         req: operations.DeletePaymentsCollaboratorSettingsPaymentEligibilityIdRequest,
@@ -768,6 +798,9 @@ export class Payments {
 
     /**
      * Remove a Specific Collaborator Record
+     *
+     * @remarks
+     * Permanently delete the record of a specific collaborator from the system.
      */
     async deletePaymentsCollaboratorId(
         req: operations.DeletePaymentsCollaboratorIdRequest,
@@ -833,6 +866,9 @@ export class Payments {
 
     /**
      * Remove a Specific Custom Field
+     *
+     * @remarks
+     * Permanently delete a custom field from the system based on its unique identifier.
      */
     async deletePaymentsCustomFieldsId(
         req: operations.DeletePaymentsCustomFieldsIdRequest,
@@ -898,6 +934,9 @@ export class Payments {
 
     /**
      * Remove a specific invoice template
+     *
+     * @remarks
+     * Deletes the invoice template associated with the provided unique identifier.
      */
     async deletePaymentsInvoiceTemplateId(
         req: operations.DeletePaymentsInvoiceTemplateIdRequest,
@@ -963,6 +1002,9 @@ export class Payments {
 
     /**
      * Remove Invoice Record by ID
+     *
+     * @remarks
+     * Enables the deletion of a specific member's invoice using its unique ID, helping in maintaining accurate billing records.
      */
     async deletePaymentsInvoiceId(
         req: operations.DeletePaymentsInvoiceIdRequest,
@@ -1025,6 +1067,9 @@ export class Payments {
 
     /**
      * Remove a specific member-client relationship from the system
+     *
+     * @remarks
+     * Deletes the association between a member and a client using the provided unique identifier. Once deleted, this relationship data can't be recovered.
      */
     async deletePaymentsMemberClientId(
         req: operations.DeletePaymentsMemberClientIdRequest,
@@ -1090,6 +1135,9 @@ export class Payments {
 
     /**
      * Delete Client Payable by Payable ID
+     *
+     * @remarks
+     * This API endpoint is designed to remove the payable information related to a client using a unique Payable ID.
      */
     async deletePaymentsPayableId(
         req: operations.DeletePaymentsPayableIdRequest,
@@ -1155,6 +1203,9 @@ export class Payments {
 
     /**
      * Unlink and delete a specific payout debit card from a member's profile
+     *
+     * @remarks
+     * Initiates a process to remove and permanently delete a specific debit card from a member's payout settings.
      */
     async deletePaymentsPayoutSettingsMemberIdDebitCardId(
         req: operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdRequest,
@@ -1224,6 +1275,9 @@ export class Payments {
 
     /**
      * Check Service Status
+     *
+     * @remarks
+     * Use this endpoint to determine the operational status of the payment service by obtaining the current timestamp and service name.
      */
     async getPayments(config?: AxiosRequestConfig): Promise<operations.GetPaymentsResponse> {
         const baseURL: string = utils.templateUrl(
@@ -1278,6 +1332,9 @@ export class Payments {
 
     /**
      * List All Stored Wingspan Wallet Cards
+     *
+     * @remarks
+     * Retrieve a comprehensive list of all stored  Wingspan Wallet cards within the system. This includes both active and deactivated cards.
      */
     async getPaymentsBankingCard(
         config?: AxiosRequestConfig
@@ -1341,6 +1398,9 @@ export class Payments {
 
     /**
      * Retrieve card details by its unique ID
+     *
+     * @remarks
+     * Fetches detailed information about a card associated with the given unique identifier.
      */
     async getPaymentsBankingCardId(
         req: operations.GetPaymentsBankingCardIdRequest,
@@ -1406,6 +1466,9 @@ export class Payments {
 
     /**
      * Deprecated Retrieve Instant Payout Information
+     *
+     * @remarks
+     * Fetch detailed information about the current status and details of instant payouts configured in the system.
      */
     async getPaymentsBankingInstantPayout(
         config?: AxiosRequestConfig
@@ -1466,6 +1529,9 @@ export class Payments {
 
     /**
      * Retrieve banking institution details by its routing number
+     *
+     * @remarks
+     * Fetches comprehensive information about a banking institution based on the provided routing number.
      */
     async getPaymentsBankingInstitutionRoutingNumber(
         req: operations.GetPaymentsBankingInstitutionRoutingNumberRequest,
@@ -1535,6 +1601,9 @@ export class Payments {
 
     /**
      * Retrieve All Bank Statements
+     *
+     * @remarks
+     * Fetch a comprehensive list of all bank statements available in the system, providing an overview of financial transactions.
      */
     async getPaymentsBankingStatement(
         config?: AxiosRequestConfig
@@ -1598,6 +1667,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Bank Statement
+     *
+     * @remarks
+     * Fetch details of a specific bank statement using its unique identifier, providing a detailed view of its transactions.
      */
     async getPaymentsBankingStatementId(
         req: operations.GetPaymentsBankingStatementIdRequest,
@@ -1666,6 +1738,9 @@ export class Payments {
 
     /**
      * Download a specific bank statement as a PDF
+     *
+     * @remarks
+     * Retrieve and download the specified bank statement in PDF format using the provided unique identifier.
      */
     async getPaymentsBankingStatementIdDownload(
         req: operations.GetPaymentsBankingStatementIdDownloadRequest,
@@ -1721,6 +1796,9 @@ export class Payments {
 
     /**
      * Retrieve all bulk calculation 1099 batches
+     *
+     * @remarks
+     * Fetches a comprehensive list of all batches created for bulk 1099 calculations.
      */
     async getPaymentsBulkCalculation1099Batch(
         config?: AxiosRequestConfig
@@ -1784,6 +1862,9 @@ export class Payments {
 
     /**
      * Retrieve specific details of a bulk calculation 1099 batch
+     *
+     * @remarks
+     * Fetches detailed information about a specific batch meant for bulk 1099 calculations using its unique batch identifier.
      */
     async getPaymentsBulkCalculation1099BatchBatchId(
         req: operations.GetPaymentsBulkCalculation1099BatchBatchIdRequest,
@@ -1853,6 +1934,9 @@ export class Payments {
 
     /**
      * Retrieve all items from a calculation 1099 batch
+     *
+     * @remarks
+     * Access a comprehensive list of items contained within a specified calculation 1099 batch, useful for verifying or inspecting batch contents.
      */
     async getPaymentsBulkCalculation1099BatchBatchIdItem(
         req: operations.GetPaymentsBulkCalculation1099BatchBatchIdItemRequest,
@@ -1925,6 +2009,9 @@ export class Payments {
 
     /**
      * Fetch details of a specific item from a calculation 1099 batch
+     *
+     * @remarks
+     * Gain insights into a particular item's attributes and data stored within a calculation 1099 batch, enhancing data management and verification.
      */
     async getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId(
         req: operations.GetPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest,
@@ -1996,6 +2083,9 @@ export class Payments {
 
     /**
      * Retrieve all bulk client batches
+     *
+     * @remarks
+     * Provides an overview of all existing bulk client batches, allowing users to quickly ascertain and manage batches created for the purpose of client onboarding or import.
      */
     async getPaymentsBulkClientBatch(
         config?: AxiosRequestConfig
@@ -2059,6 +2149,9 @@ export class Payments {
 
     /**
      * Fetch Details of a Specific Item from a Client Batch
+     *
+     * @remarks
+     * Retrieves the detailed information of a specific item within the bulk client batch using both batch and item unique identifiers.
      */
     async getPaymentsBulkClientBatchBatchId(
         req: operations.GetPaymentsBulkClientBatchBatchIdRequest,
@@ -2128,6 +2221,9 @@ export class Payments {
 
     /**
      * Retrieve All Items from a Client Batch
+     *
+     * @remarks
+     * Fetches all items present in the specified bulk client batch, providing a comprehensive view of all client data in the batch.
      */
     async getPaymentsBulkClientBatchBatchIdItem(
         req: operations.GetPaymentsBulkClientBatchBatchIdItemRequest,
@@ -2200,6 +2296,9 @@ export class Payments {
 
     /**
      * Fetch Details of a Specific Item from a Client Batch
+     *
+     * @remarks
+     * Retrieves the detailed information of a specific item within the bulk client batch using both batch and item unique identifiers.
      */
     async getPaymentsBulkClientBatchBatchIdItemBatchItemId(
         req: operations.GetPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest,
@@ -2269,6 +2368,9 @@ export class Payments {
 
     /**
      * Fetch all bulk collaborator batches
+     *
+     * @remarks
+     * Provides a list of all existing bulk collaborator batches, allowing users to view and manage batches that have been created for collaboration purposes.
      */
     async getPaymentsBulkCollaboratorBatch(
         config?: AxiosRequestConfig
@@ -2332,6 +2434,9 @@ export class Payments {
 
     /**
      * Retrieve Details of a Specific Collaborator Batch
+     *
+     * @remarks
+     * Fetches detailed information of a specific bulk collaborator batch, using the provided batch ID.
      */
     async getPaymentsBulkCollaboratorBatchBatchId(
         req: operations.GetPaymentsBulkCollaboratorBatchBatchIdRequest,
@@ -2401,6 +2506,9 @@ export class Payments {
 
     /**
      * Retrieve all items from a specific collaborator batch
+     *
+     * @remarks
+     * Provides a comprehensive list of items present within a specified batch of collaborators, identifiable through its unique batch identifier.
      */
     async getPaymentsBulkCollaboratorBatchBatchIdItem(
         req: operations.GetPaymentsBulkCollaboratorBatchBatchIdItemRequest,
@@ -2473,6 +2581,9 @@ export class Payments {
 
     /**
      * Retrieve details of a specific item from a collaborator batch
+     *
+     * @remarks
+     * Enables fetching of detailed information about an individual item from a specified batch of collaborators using both the batch and item unique identifiers.
      */
     async getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId(
         req: operations.GetPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest,
@@ -2542,6 +2653,9 @@ export class Payments {
 
     /**
      * Retrieve All Bulk Invoice Batches
+     *
+     * @remarks
+     * Fetches a list of all the batches created for bulk invoices, providing an overview of the bulk invoicing operations.
      */
     async getPaymentsBulkInvoiceBatch(
         config?: AxiosRequestConfig
@@ -2605,6 +2719,9 @@ export class Payments {
 
     /**
      * Retrieve details of a specific bulk invoice batch
+     *
+     * @remarks
+     * Allows for the retrieval of a specified batch of bulk invoices by providing its unique batch identifier.
      */
     async getPaymentsBulkInvoiceBatchBatchId(
         req: operations.GetPaymentsBulkInvoiceBatchBatchIdRequest,
@@ -2674,6 +2791,9 @@ export class Payments {
 
     /**
      * Fetch all items from a specific bulk invoice batch
+     *
+     * @remarks
+     * Provides a list of all the items within a specified batch of bulk invoices, identified by its unique batch identifier.
      */
     async getPaymentsBulkInvoiceBatchBatchIdItem(
         req: operations.GetPaymentsBulkInvoiceBatchBatchIdItemRequest,
@@ -2746,6 +2866,9 @@ export class Payments {
 
     /**
      * Retrieve a specific item from a bulk invoice batch
+     *
+     * @remarks
+     * Fetches detailed information about a specific item located within a designated bulk invoice batch. Useful for obtaining particular item data without browsing the entire batch.
      */
     async getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId(
         req: operations.GetPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest,
@@ -2815,6 +2938,9 @@ export class Payments {
 
     /**
      * Retrieve All Bulk Payable Batches
+     *
+     * @remarks
+     * Fetches a list of all the batches created for bulk payables, providing an overview of the bulk payment operations.
      */
     async getPaymentsBulkPayableBatch(
         config?: AxiosRequestConfig
@@ -2878,6 +3004,9 @@ export class Payments {
 
     /**
      * Retrieve Details of a Specific Bulk Payable Batch
+     *
+     * @remarks
+     * Fetches detailed information of a specific batch created for bulk payables, using the provided batch ID.
      */
     async getPaymentsBulkPayableBatchBatchId(
         req: operations.GetPaymentsBulkPayableBatchBatchIdRequest,
@@ -2947,6 +3076,9 @@ export class Payments {
 
     /**
      * Fetch the import summary for a specific bulk payable batch
+     *
+     * @remarks
+     * Provides an overview and summary of the import process for a given bulk payable batch, allowing for tracking of imported items, errors, and other relevant batch statistics.
      */
     async getPaymentsBulkPayableBatchBatchIdImportSummary(
         req: operations.GetPaymentsBulkPayableBatchBatchIdImportSummaryRequest,
@@ -3016,6 +3148,9 @@ export class Payments {
 
     /**
      * Retrieve all items from a specific bulk payable batch
+     *
+     * @remarks
+     * Fetches and lists all individual payable items associated with a specified bulk payable batch. Useful for tracking and verifying batch details.
      */
     async getPaymentsBulkPayableBatchBatchIdItem(
         req: operations.GetPaymentsBulkPayableBatchBatchIdItemRequest,
@@ -3088,6 +3223,9 @@ export class Payments {
 
     /**
      * Retrieve a Specific Item from a Bulk Payable Batch
+     *
+     * @remarks
+     * Fetches detailed information of a specific item within a bulk payable batch, using both the batch ID and the item ID.
      */
     async getPaymentsBulkPayableBatchBatchIdItemBatchItemId(
         req: operations.GetPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest,
@@ -3157,6 +3295,9 @@ export class Payments {
 
     /**
      * Retrieve All Client Deductions
+     *
+     * @remarks
+     * Fetches a comprehensive list of all client deductions present in the system.
      */
     async getPaymentsClientDeduction(
         config?: AxiosRequestConfig
@@ -3220,6 +3361,9 @@ export class Payments {
 
     /**
      * Fetch Specific Client Deduction Details
+     *
+     * @remarks
+     * Provides detailed information for a client deduction based on its unique identifier.
      */
     async getPaymentsClientDeductionId(
         req: operations.GetPaymentsClientDeductionIdRequest,
@@ -3285,6 +3429,9 @@ export class Payments {
 
     /**
      * Retrieve All Invoices Generated by a Client
+     *
+     * @remarks
+     * Fetch a comprehensive list of invoices that have been generated by a client, offering an overview of all client-related billing records.
      */
     async getPaymentsClientInvoice(
         config?: AxiosRequestConfig
@@ -3348,6 +3495,9 @@ export class Payments {
 
     /**
      * Retrieve all client-generated invoice templates
+     *
+     * @remarks
+     * Fetches a comprehensive list of all invoice templates created by clients in the system.
      */
     async getPaymentsClientInvoiceTemplate(
         config?: AxiosRequestConfig
@@ -3411,6 +3561,9 @@ export class Payments {
 
     /**
      * Fetch a specific client-generated invoice template by ID
+     *
+     * @remarks
+     * Provides details of the client-generated invoice template associated with the provided unique identifier.
      */
     async getPaymentsClientInvoiceTemplateId(
         req: operations.GetPaymentsClientInvoiceTemplateIdRequest,
@@ -3480,6 +3633,9 @@ export class Payments {
 
     /**
      * Fetch Specific Client-Generated Invoice by ID
+     *
+     * @remarks
+     * Retrieve detailed information of an individual invoice created by a client using its unique ID for in-depth billing analysis.
      */
     async getPaymentsClientInvoiceId(
         req: operations.GetPaymentsClientInvoiceIdRequest,
@@ -3545,6 +3701,9 @@ export class Payments {
 
     /**
      * Retrieve Fees Associated with a Client's Invoice
+     *
+     * @remarks
+     * Obtain a detailed breakdown of all the fees associated with a specific client's invoice, identified by its unique ID.
      */
     async getPaymentsClientInvoiceInvoiceIdFees(
         req: operations.GetPaymentsClientInvoiceInvoiceIdFeesRequest,
@@ -3614,6 +3773,9 @@ export class Payments {
 
     /**
      * Retrieve All Registered Collaborators
+     *
+     * @remarks
+     * Fetch a comprehensive list of all collaborators currently registered in the system.
      */
     async getPaymentsCollaborator(
         config?: AxiosRequestConfig
@@ -3677,6 +3839,9 @@ export class Payments {
 
     /**
      * Retrieve All Deductions for Collaborators
+     *
+     * @remarks
+     * Fetch a list of all deduction entries currently registered for collaborators.
      */
     async getPaymentsCollaboratorDeduction(
         config?: AxiosRequestConfig
@@ -3740,6 +3905,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Deduction Details
+     *
+     * @remarks
+     * Fetch details of a specific deduction entry for a collaborator based on its unique identifier.
      */
     async getPaymentsCollaboratorDeductionId(
         req: operations.GetPaymentsCollaboratorDeductionIdRequest,
@@ -3809,6 +3977,9 @@ export class Payments {
 
     /**
      * Retrieve All Collaborator Groups
+     *
+     * @remarks
+     * Fetch a comprehensive list of all collaborator groups created by the client, showcasing configurations and member details.
      */
     async getPaymentsCollaboratorGroup(
         config?: AxiosRequestConfig
@@ -3872,6 +4043,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Collaborator Group Configuration
+     *
+     * @remarks
+     * Fetch detailed configuration and attributes associated with a specific collaborator group.
      */
     async getPaymentsCollaboratorGroupId(
         req: operations.GetPaymentsCollaboratorGroupIdRequest,
@@ -3938,6 +4112,9 @@ export class Payments {
     /**
      * Retrieve All Collaborator-Member Custom Data Points
      *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Fetch all custom data fields that are associated with the memberClient objects, giving insight into additional details between collaborators and members.
+     *
      * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     async getPaymentsCollaboratorSettingsAdditionalData(
@@ -4003,6 +4180,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Collaborator Custom Data
+     *
+     * @remarks
+     * Deprecated - use /payments/custom-fields/:id
      *
      * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
@@ -4074,6 +4254,9 @@ export class Payments {
 
     /**
      * Retrieve all Eligibility Requirements
+     *
+     * @remarks
+     * List and display all the set eligibility requirements for collaborators.
      */
     async getPaymentsCollaboratorSettingsEligibilityRequirement(
         config?: AxiosRequestConfig
@@ -4138,6 +4321,9 @@ export class Payments {
 
     /**
      * Retrieve a Specific Eligibility Requirement
+     *
+     * @remarks
+     * Fetch details for a given eligibility requirement based on its unique identifier.
      */
     async getPaymentsCollaboratorSettingsEligibilityRequirementId(
         req: operations.GetPaymentsCollaboratorSettingsEligibilityRequirementIdRequest,
@@ -4212,6 +4398,9 @@ export class Payments {
 
     /**
      * Retrieve All Payment Eligibility Requirements
+     *
+     * @remarks
+     * Obtain a list of all payment eligibility requirements configured for collaborators.
      */
     async getPaymentsCollaboratorSettingsPaymentEligibility(
         config?: AxiosRequestConfig
@@ -4276,6 +4465,9 @@ export class Payments {
 
     /**
      * Retrieve details of a specific Payment Eligibility Requirement
+     *
+     * @remarks
+     * Fetch detailed information about a particular payment eligibility requirement using its unique identifier.
      */
     async getPaymentsCollaboratorSettingsPaymentEligibilityId(
         req: operations.GetPaymentsCollaboratorSettingsPaymentEligibilityIdRequest,
@@ -4345,6 +4537,9 @@ export class Payments {
 
     /**
      * Retrieve Details of a Specific Collaborator
+     *
+     * @remarks
+     * Fetch detailed information about a specific collaborator using its unique identifier.
      */
     async getPaymentsCollaboratorId(
         req: operations.GetPaymentsCollaboratorIdRequest,
@@ -4410,6 +4605,9 @@ export class Payments {
 
     /**
      * Retrieve Form 1099 PDF for a Collaborator by Year and Index
+     *
+     * @remarks
+     * Facilitates downloading of the specified 1099 form for a given collaborator, corresponding to the provided year and index.
      */
     async getPaymentsCollaboratorIdDownload1099YearIndex(
         req: operations.GetPaymentsCollaboratorIdDownload1099YearIndexRequest,
@@ -4479,6 +4677,9 @@ export class Payments {
 
     /**
      * Retrieve Form W9 PDF for a Collaborator
+     *
+     * @remarks
+     * Enables the downloading of the W9 form for the specified collaborator, ensuring compliance and streamlined financial procedures.
      */
     async getPaymentsCollaboratorIdDownloadW9(
         req: operations.GetPaymentsCollaboratorIdDownloadW9Request,
@@ -4548,6 +4749,9 @@ export class Payments {
 
     /**
      * Retrieve Events Associated with a Collaborator
+     *
+     * @remarks
+     * Fetch a list of all events linked to a collaborator based on the provided collaborator ID.
      */
     async getPaymentsCollaboratorIdEvents(
         req: operations.GetPaymentsCollaboratorIdEventsRequest,
@@ -4613,6 +4817,9 @@ export class Payments {
 
     /**
      * Retrieve All Custom Fields
+     *
+     * @remarks
+     * Obtain a list of all user-defined custom fields associated with payments.
      */
     async getPaymentsCustomFields(
         config?: AxiosRequestConfig
@@ -4676,6 +4883,9 @@ export class Payments {
 
     /**
      * Fetch Details of a Specific Custom Field
+     *
+     * @remarks
+     * Retrieve detailed information for a custom field based on its unique identifier.
      */
     async getPaymentsCustomFieldsId(
         req: operations.GetPaymentsCustomFieldsIdRequest,
@@ -4741,6 +4951,9 @@ export class Payments {
 
     /**
      * Retrieve All Member Invoices
+     *
+     * @remarks
+     * Fetch a complete list of invoices associated with members, providing a comprehensive overview of all member-related billing details.
      */
     async getPaymentsInvoice(
         config?: AxiosRequestConfig
@@ -4804,6 +5017,9 @@ export class Payments {
 
     /**
      * Retrieve all available invoice templates
+     *
+     * @remarks
+     * Fetches a comprehensive list of all invoice templates in the system.
      */
     async getPaymentsInvoiceTemplate(
         config?: AxiosRequestConfig
@@ -4867,6 +5083,9 @@ export class Payments {
 
     /**
      * Retrieve a specific invoice template by ID
+     *
+     * @remarks
+     * Fetches details of the invoice template corresponding to the provided unique identifier.
      */
     async getPaymentsInvoiceTemplateId(
         req: operations.GetPaymentsInvoiceTemplateIdRequest,
@@ -4932,6 +5151,9 @@ export class Payments {
 
     /**
      * Fetch Invoice by ID
+     *
+     * @remarks
+     * Retrieve the specifics of an individual invoice associated with a member using its unique ID. Ideal for diving into invoice details.
      */
     async getPaymentsInvoiceId(
         req: operations.GetPaymentsInvoiceIdRequest,
@@ -4994,6 +5216,9 @@ export class Payments {
 
     /**
      * Retrieve Merchant Category Codes (MCC)
+     *
+     * @remarks
+     * This endpoint provides a comprehensive list of available Merchant Category Codes (MCC) which are used to classify businesses by the type of services or goods they provide.
      */
     async getPaymentsMcc(config?: AxiosRequestConfig): Promise<operations.GetPaymentsMccResponse> {
         const baseURL: string = utils.templateUrl(
@@ -5054,6 +5279,9 @@ export class Payments {
 
     /**
      * Fetch a list of member and client associations
+     *
+     * @remarks
+     * Retrieve a detailed list showcasing all the existing associations between members and clients in the system.
      */
     async getPaymentsMemberClient(
         config?: AxiosRequestConfig
@@ -5117,6 +5345,9 @@ export class Payments {
 
     /**
      * Retrieve detailed information of a specific member-client relationship
+     *
+     * @remarks
+     * Fetches comprehensive details of the association between a member and a client using the provided unique identifier.
      */
     async getPaymentsMemberClientId(
         req: operations.GetPaymentsMemberClientIdRequest,
@@ -5182,6 +5413,9 @@ export class Payments {
 
     /**
      * List All Payables Associated with a Client
+     *
+     * @remarks
+     * Provides an list of all Payables associated with a specific client, facilitating easier management and overview of the client's financial obligations.
      */
     async getPaymentsPayable(
         config?: AxiosRequestConfig
@@ -5245,6 +5479,9 @@ export class Payments {
 
     /**
      * Retrieve Payable Details by Payable ID
+     *
+     * @remarks
+     * This API endpoint is designed to fetch the detailed Payable information of a member using a unique Payable ID.
      */
     async getPaymentsPayableId(
         req: operations.GetPaymentsPayableIdRequest,
@@ -5310,6 +5547,9 @@ export class Payments {
 
     /**
      * Retrieve payout settings for a specific member
+     *
+     * @remarks
+     * Fetches the payout configuration, including linked debit cards and payout preferences, for a specific member.
      */
     async getPaymentsPayoutSettingsId(
         req: operations.GetPaymentsPayoutSettingsIdRequest,
@@ -5375,6 +5615,9 @@ export class Payments {
 
     /**
      * Fetch all registered payout debit cards for a member
+     *
+     * @remarks
+     * Retrieves a list of all debit cards linked to a member's profile for payout purposes.
      */
     async getPaymentsPayoutSettingsMemberIdDebitCard(
         req: operations.GetPaymentsPayoutSettingsMemberIdDebitCardRequest,
@@ -5447,6 +5690,9 @@ export class Payments {
 
     /**
      * Retrieve a specific payout debit card linked to a member
+     *
+     * @remarks
+     * Fetches detailed information of a specific debit card linked to a member's profile for payout purposes.
      */
     async getPaymentsPayoutSettingsMemberIdDebitCardId(
         req: operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdRequest,
@@ -5516,6 +5762,9 @@ export class Payments {
 
     /**
      * Retrieve Individual Payroll Settings
+     *
+     * @remarks
+     * Fetch the detailed payroll settings associated with the provided unique identifier.
      */
     async getPaymentsPayrollSettingsId(
         req: operations.GetPaymentsPayrollSettingsIdRequest,
@@ -5581,6 +5830,9 @@ export class Payments {
 
     /**
      * Retrieve Approved Payables Ready for Immediate Payroll
+     *
+     * @remarks
+     * Fetches all payables that have been approved and are awaiting immediate payroll processing. This provides a quick view of all payments that are due for immediate payroll execution.
      */
     async getPaymentsPayrollImmediatePayable(
         config?: AxiosRequestConfig
@@ -5644,6 +5896,9 @@ export class Payments {
 
     /**
      * Obtain Aging Report for Line Items
+     *
+     * @remarks
+     * Retrieve a comprehensive report detailing line items that have been open for a set number of days.
      */
     async getPaymentsReportsAgingLineItems(
         config?: AxiosRequestConfig
@@ -5707,6 +5962,9 @@ export class Payments {
 
     /**
      * Retrieve Aging Report for Payables
+     *
+     * @remarks
+     * Access a detailed report that showcases the list of payables categorized by age.
      */
     async getPaymentsReportsAgingPayables(
         config?: AxiosRequestConfig
@@ -5770,6 +6028,9 @@ export class Payments {
 
     /**
      * Retrieve detailed information on all collaborators
+     *
+     * @remarks
+     * Fetches comprehensive data on all collaborators, including their activities and current status, as listed in the reports.
      */
     async getPaymentsReportsCollaborators(
         config?: AxiosRequestConfig
@@ -5833,6 +6094,9 @@ export class Payments {
 
     /**
      * Obtain a summarized report of payable amounts for each collaborator
+     *
+     * @remarks
+     * Gathers and presents a concise summary showcasing the payable amounts due to each collaborator, helping in financial planning and payout strategies.
      */
     async getPaymentsReportsCollaboratorsPayablesSummary(
         config?: AxiosRequestConfig
@@ -5897,6 +6161,9 @@ export class Payments {
 
     /**
      * Extract detailed report of payables associated with a particular payroll run
+     *
+     * @remarks
+     * Offers a deep dive into the payables connected to a specific payroll run, facilitating better management and reconciliation of payroll-related finances.
      */
     async getPaymentsReportsPayrollPayrollId(
         req: operations.GetPaymentsReportsPayrollPayrollIdRequest,
@@ -5966,6 +6233,9 @@ export class Payments {
 
     /**
      * Fetch the application link for setting up a clearing bank account
+     *
+     * @remarks
+     * Get the application link required for a member to initiate the creation of a clearing bank account.
      */
     async getPaymentsServiceBankingMemberIdApplication(
         req: operations.GetPaymentsServiceBankingMemberIdApplicationRequest,
@@ -6035,6 +6305,9 @@ export class Payments {
 
     /**
      * Retrieve Summary of All Payables
+     *
+     * @remarks
+     * This endpoint provides a comprehensive summary of all the payables, offering insights into the current state of pending and completed payments. Ideal for clients and financial departments looking for a snapshot view of their payment obligations.
      */
     async getPaymentsSummaryPayables(
         config?: AxiosRequestConfig
@@ -6095,6 +6368,9 @@ export class Payments {
 
     /**
      * Retrieve All Clients (Version 2)
+     *
+     * @remarks
+     * Fetches a comprehensive list of clients formatted in the V2 standard, providing an overview of all client data.
      */
     async getPaymentsV2Client(
         config?: AxiosRequestConfig
@@ -6158,6 +6434,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Client Details (Version 2)
+     *
+     * @remarks
+     * Fetches detailed information of a specific client, identified by the clientId, in the V2 format.
      */
     async getPaymentsV2ClientClientId(
         req: operations.GetPaymentsV2ClientClientIdRequest,
@@ -6223,6 +6502,9 @@ export class Payments {
 
     /**
      * Retrieve All Collaborators (Version 2)
+     *
+     * @remarks
+     * Fetches a comprehensive list of collaborators formatted in the V2 standard, providing an overview of all collaborator data.
      */
     async getPaymentsV2Collaborator(
         config?: AxiosRequestConfig
@@ -6286,6 +6568,9 @@ export class Payments {
 
     /**
      * Retrieve Specific Collaborator Details (Version 2)
+     *
+     * @remarks
+     * Fetches detailed information of a specific collaborator, identified by the memberId, in the V2 format.
      */
     async getPaymentsV2CollaboratorMemberId(
         req: operations.GetPaymentsV2CollaboratorMemberIdRequest,
@@ -6351,6 +6636,9 @@ export class Payments {
 
     /**
      * Modify card details by its unique ID
+     *
+     * @remarks
+     * Updates specific information about a card using the provided data.
      */
     async patchPaymentsBankingCardId(
         req: operations.PatchPaymentsBankingCardIdRequest,
@@ -6428,6 +6716,9 @@ export class Payments {
 
     /**
      * Validate verification code to receive a token
+     *
+     * @remarks
+     * Validates the received verification code and, if correct, returns a token for card operations.
      */
     async patchPaymentsBankingCardIdToken(
         req: operations.PatchPaymentsBankingCardIdTokenRequest,
@@ -6504,6 +6795,9 @@ export class Payments {
 
     /**
      * Modify the details of a specific bulk calculation 1099 batch
+     *
+     * @remarks
+     * Provides the ability to update or alter attributes of a given batch for bulk 1099 calculations by using its unique batch identifier.
      */
     async patchPaymentsBulkCalculation1099BatchBatchId(
         req: operations.PatchPaymentsBulkCalculation1099BatchBatchIdRequest,
@@ -6584,6 +6878,9 @@ export class Payments {
 
     /**
      * Revise the attributes of an item in a calculation 1099 batch
+     *
+     * @remarks
+     * Make alterations or updates to a specific item within the calculation 1099 batch, ensuring accurate and up-to-date record-keeping.
      */
     async patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId(
         req: operations.PatchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest,
@@ -6670,6 +6967,9 @@ export class Payments {
 
     /**
      * Modify Details of a Specific Item in a Client Batch
+     *
+     * @remarks
+     * Allows modification of the details of a specific item within the bulk client batch, using the provided item and batch identifiers.
      */
     async patchPaymentsBulkClientBatchBatchId(
         req: operations.PatchPaymentsBulkClientBatchBatchIdRequest,
@@ -6750,6 +7050,9 @@ export class Payments {
 
     /**
      * Modify Details of a Specific Item in a Client Batch
+     *
+     * @remarks
+     * Allows modification of the details of a specific item within the bulk client batch, using the provided item and batch identifiers.
      */
     async patchPaymentsBulkClientBatchBatchIdItemBatchItemId(
         req: operations.PatchPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest,
@@ -6834,6 +7137,9 @@ export class Payments {
 
     /**
      * Modify Details of a Bulk Collaborator Batch
+     *
+     * @remarks
+     * Allows for updating or altering the details and items within a specific bulk collaborator batch using the given batch ID.
      */
     async patchPaymentsBulkCollaboratorBatchBatchId(
         req: operations.PatchPaymentsBulkCollaboratorBatchBatchIdRequest,
@@ -6914,6 +7220,9 @@ export class Payments {
 
     /**
      * Modify the details of a specific item within a collaborator batch
+     *
+     * @remarks
+     * Provides the functionality to update or alter the attributes of an item present in a given collaborator batch using the unique identifiers for both the batch and the item.
      */
     async patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId(
         req: operations.PatchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest,
@@ -7000,6 +7309,9 @@ export class Payments {
 
     /**
      * Modify the details of a specific bulk invoice batch
+     *
+     * @remarks
+     * Enables the user to update or modify the attributes of a given batch of bulk invoices by specifying its unique batch identifier.
      */
     async patchPaymentsBulkInvoiceBatchBatchId(
         req: operations.PatchPaymentsBulkInvoiceBatchBatchIdRequest,
@@ -7084,6 +7396,9 @@ export class Payments {
 
     /**
      * Modify a specific item within a bulk invoice batch
+     *
+     * @remarks
+     * Allows for updates or edits to be made to a specific items details within an existing bulk invoice batch. Enhances the flexibility and management of invoice data.
      */
     async patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId(
         req: operations.PatchPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest,
@@ -7168,6 +7483,9 @@ export class Payments {
 
     /**
      * Modify a Specific Bulk Payable Batch
+     *
+     * @remarks
+     * Updates the information or items of a specific bulk payable batch, given its unique batch ID.
      */
     async patchPaymentsBulkPayableBatchBatchId(
         req: operations.PatchPaymentsBulkPayableBatchBatchIdRequest,
@@ -7252,6 +7570,9 @@ export class Payments {
 
     /**
      * Modify a Specific Item in a Bulk Payable Batch
+     *
+     * @remarks
+     * Updates the details or status of a specific item within a bulk payable batch, given both the batch ID and the item ID.
      */
     async patchPaymentsBulkPayableBatchBatchIdItemBatchItemId(
         req: operations.PatchPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest,
@@ -7336,6 +7657,9 @@ export class Payments {
 
     /**
      * Modify a Client Deduction
+     *
+     * @remarks
+     * Allows for updating specific details or attributes of an existing client deduction.
      */
     async patchPaymentsClientDeductionId(
         req: operations.PatchPaymentsClientDeductionIdRequest,
@@ -7416,6 +7740,9 @@ export class Payments {
 
     /**
      * Modify a client-generated invoice template
+     *
+     * @remarks
+     * Updates the specified client-generated invoice template with the provided modifications.
      */
     async patchPaymentsClientInvoiceTemplateId(
         req: operations.PatchPaymentsClientInvoiceTemplateIdRequest,
@@ -7500,6 +7827,9 @@ export class Payments {
 
     /**
      * Modify an Existing Client-Generated Invoice
+     *
+     * @remarks
+     * Allows for modifications to a client-generated invoice using its unique ID, ensuring billing details remain current and accurate.
      */
     async patchPaymentsClientInvoiceId(
         req: operations.PatchPaymentsClientInvoiceIdRequest,
@@ -7580,6 +7910,9 @@ export class Payments {
 
     /**
      * Modify Details of a Specific Deduction
+     *
+     * @remarks
+     * Update attributes or data related to an existing deduction entry for a collaborator.
      */
     async patchPaymentsCollaboratorDeductionId(
         req: operations.PatchPaymentsCollaboratorDeductionIdRequest,
@@ -7664,6 +7997,9 @@ export class Payments {
 
     /**
      * Modify Collaborator Group Configuration
+     *
+     * @remarks
+     * Update specific attributes or configuration details of an existing collaborator group.
      */
     async patchPaymentsCollaboratorGroupId(
         req: operations.PatchPaymentsCollaboratorGroupIdRequest,
@@ -7744,6 +8080,9 @@ export class Payments {
 
     /**
      * Modify Eligibility Requirement for Collaborator Group
+     *
+     * @remarks
+     * Update details or attributes of a specific eligibility requirement linked to a collaborator group.
      */
     async patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId(
         req: operations.PatchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest,
@@ -7834,6 +8173,9 @@ export class Payments {
     /**
      * Modify a Specific Collaborator-Member Custom Data
      *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Update details or attributes of an existing custom data point associated with the relationship between a collaborator and a member.
+     *
      * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     async patchPaymentsCollaboratorSettingsAdditionalDataId(
@@ -7919,6 +8261,9 @@ export class Payments {
 
     /**
      * Modify a Specific Eligibility Requirement
+     *
+     * @remarks
+     * Update specific details or attributes of an existing eligibility requirement.
      */
     async patchPaymentsCollaboratorSettingsEligibilityRequirementId(
         req: operations.PatchPaymentsCollaboratorSettingsEligibilityRequirementIdRequest,
@@ -8008,6 +8353,9 @@ export class Payments {
 
     /**
      * Modify a specific Payment Eligibility Requirement
+     *
+     * @remarks
+     * Update attributes or criteria of an existing payment eligibility requirement using its unique identifier.
      */
     async patchPaymentsCollaboratorSettingsPaymentEligibilityId(
         req: operations.PatchPaymentsCollaboratorSettingsPaymentEligibilityIdRequest,
@@ -8092,6 +8440,9 @@ export class Payments {
 
     /**
      * Modify Collaborator Details
+     *
+     * @remarks
+     * Update specific details or attributes related to an existing collaborator.
      */
     async patchPaymentsCollaboratorId(
         req: operations.PatchPaymentsCollaboratorIdRequest,
@@ -8172,6 +8523,9 @@ export class Payments {
 
     /**
      * Associate Collaborator with a Specific Group
+     *
+     * @remarks
+     * Add the specified collaborator to the designated group, allowing group-specific configurations and permissions.
      */
     async patchPaymentsCollaboratorIdAddGroupGroupId(
         req: operations.PatchPaymentsCollaboratorIdAddGroupGroupIdRequest,
@@ -8241,6 +8595,9 @@ export class Payments {
 
     /**
      * Disassociate Collaborator from a Specific Group
+     *
+     * @remarks
+     * Remove the collaborator from the designated group, revoking any group-specific configurations and permissions.
      */
     async patchPaymentsCollaboratorIdRemoveGroupGroupId(
         req: operations.PatchPaymentsCollaboratorIdRemoveGroupGroupIdRequest,
@@ -8310,6 +8667,9 @@ export class Payments {
 
     /**
      * Modify Details of a Specific Custom Field
+     *
+     * @remarks
+     * Update specific attributes or data for an existing custom field.
      */
     async patchPaymentsCustomFieldsId(
         req: operations.PatchPaymentsCustomFieldsIdRequest,
@@ -8390,6 +8750,9 @@ export class Payments {
 
     /**
      * Modify details of an existing invoice template
+     *
+     * @remarks
+     * Updates details of the specified invoice template based on the provided information.
      */
     async patchPaymentsInvoiceTemplateId(
         req: operations.PatchPaymentsInvoiceTemplateIdRequest,
@@ -8470,6 +8833,9 @@ export class Payments {
 
     /**
      * Modify Existing Invoice Details
+     *
+     * @remarks
+     * Allows updates to the details of an existing member invoice using its unique ID. Useful for making corrections or updates to billing records.
      */
     async patchPaymentsInvoiceId(
         req: operations.PatchPaymentsInvoiceIdRequest,
@@ -8547,6 +8913,9 @@ export class Payments {
 
     /**
      * Update information of a specific member-client relationship
+     *
+     * @remarks
+     * Modifies details of the association between a member and a client based on the provided data.
      */
     async patchPaymentsMemberClientId(
         req: operations.PatchPaymentsMemberClientIdRequest,
@@ -8627,6 +8996,9 @@ export class Payments {
 
     /**
      * Update Client Payable Information by Payable ID
+     *
+     * @remarks
+     * This API endpoint facilitates the updating of existing payable details related to a client using a unique Payable ID.
      */
     async patchPaymentsPayableId(
         req: operations.PatchPaymentsPayableIdRequest,
@@ -8707,6 +9079,9 @@ export class Payments {
 
     /**
      * Modify and update payout settings for a specific member
+     *
+     * @remarks
+     * Allows adjustments and updates to a member's payout configuration, including changing linked debit cards and adjusting payout preferences.
      */
     async patchPaymentsPayoutSettingsId(
         req: operations.PatchPaymentsPayoutSettingsIdRequest,
@@ -8787,6 +9162,9 @@ export class Payments {
 
     /**
      * Modify Existing Payroll Settings
+     *
+     * @remarks
+     * Update certain attributes or details of payroll settings associated with the provided identifier.
      */
     async patchPaymentsPayrollSettingsId(
         req: operations.PatchPaymentsPayrollSettingsIdRequest,
@@ -8867,6 +9245,9 @@ export class Payments {
 
     /**
      * Register a New  Wingspan Wallet Card
+     *
+     * @remarks
+     * Add a new  Wingspan Wallet card to the system, allowing it to be used for future transactions.
      */
     async postPaymentsBankingCard(
         req: shared.CardCreateRequest,
@@ -8940,6 +9321,9 @@ export class Payments {
 
     /**
      * Request a verification code for card authentication
+     *
+     * @remarks
+     * Sends a verification code to the users registered contact method for additional card authentication.
      */
     async postPaymentsBankingCardIdToken(
         req: operations.PostPaymentsBankingCardIdTokenRequest,
@@ -9016,6 +9400,9 @@ export class Payments {
 
     /**
      * Deprecated Set Up Instant Payout Configuration
+     *
+     * @remarks
+     * Configure a new instant payout setting, specifying details like amount, frequency, and destination.
      */
     async postPaymentsBankingInstantPayout(
         req: shared.InstantPayoutRequest,
@@ -9092,6 +9479,9 @@ export class Payments {
 
     /**
      * Initialize a new batch for bulk calculation 1099
+     *
+     * @remarks
+     * Allows users to create a new batch for facilitating bulk 1099 calculations by providing necessary batch details.
      */
     async postPaymentsBulkCalculation1099Batch(
         req: shared.BulkBatchCreate,
@@ -9168,6 +9558,9 @@ export class Payments {
 
     /**
      * Add a new item to a calculation 1099 batch
+     *
+     * @remarks
+     * Facilitates the incorporation of a new item into the specified calculation 1099 batch, streamlining the process of batch expansion.
      */
     async postPaymentsBulkCalculation1099BatchBatchIdItem(
         req: operations.PostPaymentsBulkCalculation1099BatchBatchIdItemRequest,
@@ -9252,6 +9645,9 @@ export class Payments {
 
     /**
      * Create a new bulk client batch
+     *
+     * @remarks
+     * Initiates the creation of a fresh bulk client batch, streamlining the process of adding multiple clients in one go.
      */
     async postPaymentsBulkClientBatch(
         req: shared.BulkBatchCreate,
@@ -9328,6 +9724,9 @@ export class Payments {
 
     /**
      * Add a New Item to a Client Batch
+     *
+     * @remarks
+     * Inserts a new item into the specified bulk client batch, allowing for further expansion of client data within the batch.
      */
     async postPaymentsBulkClientBatchBatchIdItem(
         req: operations.PostPaymentsBulkClientBatchBatchIdItemRequest,
@@ -9412,6 +9811,9 @@ export class Payments {
 
     /**
      * Initiate a new bulk collaborator batch.
+     *
+     * @remarks
+     * Enables the creation of a new bulk collaborator batch, facilitating the bulk management and addition of collaborators for various projects or tasks.
      */
     async postPaymentsBulkCollaboratorBatch(
         req: shared.BulkBatchCreate,
@@ -9488,6 +9890,9 @@ export class Payments {
 
     /**
      * Append a new item to a specific collaborator batch
+     *
+     * @remarks
+     * Allows for the addition of a new item to an existing batch of collaborators by providing the batchs unique identifier and item details.
      */
     async postPaymentsBulkCollaboratorBatchBatchIdItem(
         req: operations.PostPaymentsBulkCollaboratorBatchBatchIdItemRequest,
@@ -9572,6 +9977,9 @@ export class Payments {
 
     /**
      * Initiate a New Bulk Invoice Batch
+     *
+     * @remarks
+     * Creates a new batch for importing multiple invoices at once, streamlining the bulk invoicing operations.
      */
     async postPaymentsBulkInvoiceBatch(
         req: shared.BulkInvoiceBatchCreate,
@@ -9648,6 +10056,9 @@ export class Payments {
 
     /**
      * Add a new item to a specific bulk invoice batch
+     *
+     * @remarks
+     * Allows users to append a new item to a given batch of bulk invoices by supplying its unique batch identifier and the details of the new item.
      */
     async postPaymentsBulkInvoiceBatchBatchIdItem(
         req: operations.PostPaymentsBulkInvoiceBatchBatchIdItemRequest,
@@ -9732,6 +10143,9 @@ export class Payments {
 
     /**
      * Initiate a New Bulk Payable Batch
+     *
+     * @remarks
+     * Creates a new batch for importing multiple payables at once, streamlining the bulk payment operations.
      */
     async postPaymentsBulkPayableBatch(
         req: shared.BulkPayableBatchCreate,
@@ -9808,6 +10222,9 @@ export class Payments {
 
     /**
      * Add a new item to a specific bulk payable batch
+     *
+     * @remarks
+     * Allows for the creation and addition of a new individual payable item into an existing bulk payable batch. This enhances batch management and payable tracking.
      */
     async postPaymentsBulkPayableBatchBatchIdItem(
         req: operations.PostPaymentsBulkPayableBatchBatchIdItemRequest,
@@ -9892,6 +10309,9 @@ export class Payments {
 
     /**
      * Register a New Client Deduction
+     *
+     * @remarks
+     * Allows for the creation of a new client deduction based on the provided details.
      */
     async postPaymentsClientDeduction(
         req: shared.DeductionCreateRequest,
@@ -9968,6 +10388,9 @@ export class Payments {
 
     /**
      * Generate a New Invoice on Behalf of the Client
+     *
+     * @remarks
+     * Enables the creation of a new invoice on behalf of a client using the provided details, facilitating new billing records.
      */
     async postPaymentsClientInvoice(
         req: shared.ClientInvoiceCreateRequest,
@@ -10044,6 +10467,9 @@ export class Payments {
 
     /**
      * Create a new client-generated invoice template
+     *
+     * @remarks
+     * Allows clients to create a new invoice template based on the provided details.
      */
     async postPaymentsClientInvoiceTemplate(
         req: shared.ClientInvoiceTemplateCreateRequest,
@@ -10120,6 +10546,9 @@ export class Payments {
 
     /**
      * Execute Payment for a Client-Generated Invoice
+     *
+     * @remarks
+     * Process a payment for a specific client-generated invoice using the provided details, ensuring the invoice is marked as settled.
      */
     async postPaymentsClientInvoiceInvoiceIdPay(
         req: operations.PostPaymentsClientInvoiceInvoiceIdPayRequest,
@@ -10200,6 +10629,9 @@ export class Payments {
 
     /**
      * Register a New Collaborator
+     *
+     * @remarks
+     * Add a new collaborator to the system, allowing them to be eligible for payments.
      */
     async postPaymentsCollaborator(
         req: shared.CollaboratorCreateRequest,
@@ -10276,6 +10708,9 @@ export class Payments {
 
     /**
      * Register a New Deduction for a Collaborator
+     *
+     * @remarks
+     * Create and add a new deduction entry for a collaborator based on the provided data.
      */
     async postPaymentsCollaboratorDeduction(
         req: shared.DeductionCreateRequest,
@@ -10352,6 +10787,9 @@ export class Payments {
 
     /**
      * Generate New Collaborator Group
+     *
+     * @remarks
+     * Create a new collaborator group with specific configurations and permissions as defined by the client.
      */
     async postPaymentsCollaboratorGroup(
         req: shared.CollaboratorGroupCreateRequest,
@@ -10428,6 +10866,9 @@ export class Payments {
 
     /**
      * Register New Custom Data for Collaborator-Member Relationship
+     *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Create custom fields that can be associated with the memberClient object to provide extra details about the relationship between a collaborator and a member.
      *
      * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
@@ -10507,6 +10948,9 @@ export class Payments {
 
     /**
      * Establish a new Eligibility Requirement
+     *
+     * @remarks
+     * Define and create a new eligibility requirement for collaborators.
      */
     async postPaymentsCollaboratorSettingsEligibilityRequirement(
         req: shared.EligibilityRequirementCreateRequest,
@@ -10584,6 +11028,9 @@ export class Payments {
 
     /**
      * Add a New Payment Eligibility Requirement
+     *
+     * @remarks
+     * Define a new payment eligibility requirement for collaborators in the system.
      */
     async postPaymentsCollaboratorSettingsPaymentEligibility(
         req: shared.PaymentEligibility,
@@ -10661,6 +11108,9 @@ export class Payments {
 
     /**
      * Determine 1099 Amounts for Collaborators
+     *
+     * @remarks
+     * Analyzes and calculates the appropriate 1099 amounts for collaborators based on provided data and relevant financial parameters.
      */
     async postPaymentsCollaborator1099Calculate(
         req: shared.Calculate1099Request,
@@ -10737,6 +11187,9 @@ export class Payments {
 
     /**
      * Indicate a collaborator's 1099 form was returned undelivered
+     *
+     * @remarks
+     * Mark a specific 1099 submission for a collaborator as undelivered, typically due to mail return or incorrect address details.
      */
     async postPaymentsCollaborator1099MarkUndelivered(
         req: shared.Mark1099AsUndeliveredRequest,
@@ -10814,6 +11267,9 @@ export class Payments {
 
     /**
      * Request a new mailing of the 1099 form for a collaborator
+     *
+     * @remarks
+     * Initiates a process to resend the 1099 form to a collaborator in the event of a previous failed delivery or at the request of the collaborator.
      */
     async postPaymentsCollaborator1099Remail(
         req: shared.Remail1099Request,
@@ -10890,6 +11346,9 @@ export class Payments {
 
     /**
      * Add a New Custom Field
+     *
+     * @remarks
+     * Define a new custom field for payments using additional data provided.
      */
     async postPaymentsCustomFields(
         req: shared.AdditionalData,
@@ -10966,6 +11425,9 @@ export class Payments {
 
     /**
      * Initiate New Invoice for a Member
+     *
+     * @remarks
+     * Facilitates the creation of a new invoice for a member using the provided invoice details. Useful for adding new billing records.
      */
     async postPaymentsInvoice(
         req: shared.InvoiceCreateRequest,
@@ -11039,6 +11501,9 @@ export class Payments {
 
     /**
      * Create a new invoice template
+     *
+     * @remarks
+     * Creates a new invoice template based on the provided details.
      */
     async postPaymentsInvoiceTemplate(
         req: shared.InvoiceTemplateCreateRequest,
@@ -11115,6 +11580,9 @@ export class Payments {
 
     /**
      * Generate Test Invoice for a Client
+     *
+     * @remarks
+     * Use this endpoint to create a test invoice for testing and validation purposes. This invoice will mimic a client's real invoice.
      */
     async postPaymentsInvoiceTestCreate(
         req: shared.TestInvoiceCreate,
@@ -11191,6 +11659,9 @@ export class Payments {
 
     /**
      * Generate a PDF for a specific invoice
+     *
+     * @remarks
+     * This endpoint allows for the dynamic generation of a PDF document for a given invoice, identified by its unique ID.
      */
     async postPaymentsInvoiceInvoiceIdGenerate(
         req: operations.PostPaymentsInvoiceInvoiceIdGenerateRequest,
@@ -11260,6 +11731,9 @@ export class Payments {
 
     /**
      * Send an invoice by email
+     *
+     * @remarks
+     * Use this endpoint to send an invoice by email using its unique ID for identification.
      */
     async postPaymentsInvoiceInvoiceIdSend(
         req: operations.PostPaymentsInvoiceInvoiceIdSendRequest,
@@ -11322,6 +11796,9 @@ export class Payments {
 
     /**
      * Establish a new association between a member and client
+     *
+     * @remarks
+     * Use this endpoint to create a new linkage between a member and client in the system, allowing for better relationship management.
      */
     async postPaymentsMemberClient(
         req: shared.MemberClientCreateRequest,
@@ -11398,6 +11875,9 @@ export class Payments {
 
     /**
      * Execute Approved Payroll Transactions
+     *
+     * @remarks
+     * Processes all approved payroll transactions, ensuring employees and vendors are compensated as per their respective invoices.
      */
     async postPaymentsPayApproved(
         config?: AxiosRequestConfig
@@ -11455,6 +11935,9 @@ export class Payments {
 
     /**
      * Create a New Payable for a Member on Behalf of a Client
+     *
+     * @remarks
+     * Allows for the generation of a new Payables for a specific member on behalf of a client. This ensures streamlined billing and effective financial tracking between clients and members.
      */
     async postPaymentsPayable(
         req: shared.PayableCreateRequest,
@@ -11531,6 +12014,9 @@ export class Payments {
 
     /**
      * Register a new payout debit card for a member
+     *
+     * @remarks
+     * Allows the addition of a new debit card to a member's profile for payout transactions.
      */
     async postPaymentsPayoutSettingsMemberIdDebitCard(
         req: operations.PostPaymentsPayoutSettingsMemberIdDebitCardRequest,

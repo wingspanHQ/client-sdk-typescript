@@ -11,10 +11,12 @@ export enum BulkPayableItemUpdatePayableStatus {
     Approved = "Approved",
     Paid = "Paid",
     Cancelled = "Cancelled",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum BulkPayableItemUpdateWorkflowSubStatus {
     Submitted = "Submitted",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class BulkPayableItemUpdate extends SpeakeasyBase {

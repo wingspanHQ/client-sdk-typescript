@@ -12,6 +12,7 @@ export enum PayoutSettingsUpdatePayoutPreferences {
     Expedited = "Expedited",
     Check = "Check",
     ECheck = "ECheck",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class PayoutSettingsUpdate extends SpeakeasyBase {

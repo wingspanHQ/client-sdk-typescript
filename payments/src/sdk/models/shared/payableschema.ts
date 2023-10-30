@@ -24,6 +24,7 @@ export enum PayableSchemaAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PayableSchemaCurrency {

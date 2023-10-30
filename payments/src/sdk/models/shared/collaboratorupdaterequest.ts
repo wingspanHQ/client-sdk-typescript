@@ -14,6 +14,7 @@ export enum CollaboratorUpdateRequestStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class CollaboratorUpdateRequest extends SpeakeasyBase {

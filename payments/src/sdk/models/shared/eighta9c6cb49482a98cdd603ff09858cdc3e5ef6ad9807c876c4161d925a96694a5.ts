@@ -9,6 +9,7 @@ export enum Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
     Open = "Open",
     Accepted = "Accepted",
     Rejected = "Rejected",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5 extends SpeakeasyBase {

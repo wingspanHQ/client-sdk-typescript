@@ -172,7 +172,7 @@ Wingspan Payments API: Payments
 
 ## deletePaymentsBankingCardId
 
-Remove a card using its unique ID
+Deletes a card from the system based on its unique identifier. This action is irreversible.
 
 ### Example Usage
 
@@ -185,6 +185,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsBankingCardId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -207,7 +208,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsBankingInstantPayout
 
-Deprecated Remove Instant Payout Configuration
+Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
 
 ### Example Usage
 
@@ -218,6 +219,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.deletePaymentsBankingInstantPayout();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -239,7 +241,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsBulkCollaboratorBatchBatchId
 
-Remove a Specific Collaborator Batch
+Deletes a specific bulk collaborator batch using its unique identifier. Once deleted, the batch cannot be recovered.
 
 ### Example Usage
 
@@ -252,6 +254,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsBulkCollaboratorBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,7 +277,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsBulkPayableBatchBatchId
 
-Remove a Specific Bulk Payable Batch
+Deletes a specific batch for bulk payables, using the provided batch ID, preventing any further operations on it.
 
 ### Example Usage
 
@@ -287,6 +290,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsBulkPayableBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -309,7 +313,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsClientDeductionId
 
-Remove a Client Deduction
+Allows for the deletion of a client deduction based on its unique identifier, removing it permanently from the system.
 
 ### Example Usage
 
@@ -322,6 +326,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsClientDeductionId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -344,7 +349,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCollaboratorDeductionId
 
-Erase a Specific Deduction Entry
+Delete a specific deduction entry, eliminating its record from the system.
 
 ### Example Usage
 
@@ -357,6 +362,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCollaboratorDeductionId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -379,7 +385,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId
 
-Remove Eligibility Requirement from Collaborator Group
+Delete a specific eligibility requirement from the designated collaborator group.
 
 ### Example Usage
 
@@ -393,6 +399,7 @@ import { Payments } from "@wingspan/payments";
     eligibilityRequirementId: "string",
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -415,7 +422,7 @@ import { Payments } from "@wingspan/payments";
 
 ## ~~deletePaymentsCollaboratorSettingsAdditionalDataId~~
 
-Erase a Specific Collaborator-Member Custom Data
+[Deprecated - use /payments/custom-fields] Remove a specific custom data point, eliminating the additional details provided about a collaborator-member relationship.
 
 > :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
@@ -430,6 +437,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCollaboratorSettingsAdditionalDataId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -452,7 +460,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCollaboratorSettingsEligibilityRequirementId
 
-Remove a Specific Eligibility Requirement
+Delete an eligibility requirement from the system based on its unique identifier.
 
 ### Example Usage
 
@@ -465,6 +473,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCollaboratorSettingsEligibilityRequirementId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -487,7 +496,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCollaboratorSettingsPaymentEligibilityId
 
-Remove a specific Payment Eligibility Requirement
+Delete an existing payment eligibility requirement based on its unique identifier, removing associated criteria for a member's payment eligibility.
 
 ### Example Usage
 
@@ -500,6 +509,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCollaboratorSettingsPaymentEligibilityId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -522,7 +532,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCollaboratorId
 
-Remove a Specific Collaborator Record
+Permanently delete the record of a specific collaborator from the system.
 
 ### Example Usage
 
@@ -535,6 +545,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCollaboratorId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -557,7 +568,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsCustomFieldsId
 
-Remove a Specific Custom Field
+Permanently delete a custom field from the system based on its unique identifier.
 
 ### Example Usage
 
@@ -570,6 +581,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsCustomFieldsId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -592,7 +604,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsInvoiceTemplateId
 
-Remove a specific invoice template
+Deletes the invoice template associated with the provided unique identifier.
 
 ### Example Usage
 
@@ -605,6 +617,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsInvoiceTemplateId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -627,7 +640,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsInvoiceId
 
-Remove Invoice Record by ID
+Enables the deletion of a specific member's invoice using its unique ID, helping in maintaining accurate billing records.
 
 ### Example Usage
 
@@ -640,6 +653,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsInvoiceId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -662,7 +676,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsMemberClientId
 
-Remove a specific member-client relationship from the system
+Deletes the association between a member and a client using the provided unique identifier. Once deleted, this relationship data can't be recovered.
 
 ### Example Usage
 
@@ -675,6 +689,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsMemberClientId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -697,7 +712,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsPayableId
 
-Delete Client Payable by Payable ID
+This API endpoint is designed to remove the payable information related to a client using a unique Payable ID.
 
 ### Example Usage
 
@@ -710,6 +725,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.deletePaymentsPayableId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -732,7 +748,7 @@ import { Payments } from "@wingspan/payments";
 
 ## deletePaymentsPayoutSettingsMemberIdDebitCardId
 
-Unlink and delete a specific payout debit card from a member's profile
+Initiates a process to remove and permanently delete a specific debit card from a member's payout settings.
 
 ### Example Usage
 
@@ -746,6 +762,7 @@ import { Payments } from "@wingspan/payments";
     id: "<ID>",
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -768,7 +785,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPayments
 
-Check Service Status
+Use this endpoint to determine the operational status of the payment service by obtaining the current timestamp and service name.
 
 ### Example Usage
 
@@ -779,6 +796,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPayments();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -800,7 +818,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingCard
 
-List All Stored Wingspan Wallet Cards
+Retrieve a comprehensive list of all stored  Wingspan Wallet cards within the system. This includes both active and deactivated cards.
 
 ### Example Usage
 
@@ -811,6 +829,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBankingCard();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -832,7 +851,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingCardId
 
-Retrieve card details by its unique ID
+Fetches detailed information about a card associated with the given unique identifier.
 
 ### Example Usage
 
@@ -845,6 +864,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBankingCardId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -867,7 +887,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingInstantPayout
 
-Deprecated Retrieve Instant Payout Information
+Fetch detailed information about the current status and details of instant payouts configured in the system.
 
 ### Example Usage
 
@@ -878,6 +898,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBankingInstantPayout();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -899,7 +920,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingInstitutionRoutingNumber
 
-Retrieve banking institution details by its routing number
+Fetches comprehensive information about a banking institution based on the provided routing number.
 
 ### Example Usage
 
@@ -912,6 +933,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBankingInstitutionRoutingNumber({
     routingNumber: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -934,7 +956,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingStatement
 
-Retrieve All Bank Statements
+Fetch a comprehensive list of all bank statements available in the system, providing an overview of financial transactions.
 
 ### Example Usage
 
@@ -945,6 +967,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBankingStatement();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -966,7 +989,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingStatementId
 
-Retrieve Specific Bank Statement
+Fetch details of a specific bank statement using its unique identifier, providing a detailed view of its transactions.
 
 ### Example Usage
 
@@ -979,6 +1002,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBankingStatementId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1001,7 +1025,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBankingStatementIdDownload
 
-Download a specific bank statement as a PDF
+Retrieve and download the specified bank statement in PDF format using the provided unique identifier.
 
 ### Example Usage
 
@@ -1014,6 +1038,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBankingStatementIdDownload({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1036,7 +1061,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCalculation1099Batch
 
-Retrieve all bulk calculation 1099 batches
+Fetches a comprehensive list of all batches created for bulk 1099 calculations.
 
 ### Example Usage
 
@@ -1047,6 +1072,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBulkCalculation1099Batch();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1068,7 +1094,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCalculation1099BatchBatchId
 
-Retrieve specific details of a bulk calculation 1099 batch
+Fetches detailed information about a specific batch meant for bulk 1099 calculations using its unique batch identifier.
 
 ### Example Usage
 
@@ -1081,6 +1107,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkCalculation1099BatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1103,7 +1130,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItem
 
-Retrieve all items from a calculation 1099 batch
+Access a comprehensive list of items contained within a specified calculation 1099 batch, useful for verifying or inspecting batch contents.
 
 ### Example Usage
 
@@ -1116,6 +1143,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkCalculation1099BatchBatchIdItem({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1138,7 +1166,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
-Fetch details of a specific item from a calculation 1099 batch
+Gain insights into a particular item's attributes and data stored within a calculation 1099 batch, enhancing data management and verification.
 
 ### Example Usage
 
@@ -1152,6 +1180,7 @@ import { Payments } from "@wingspan/payments";
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1174,7 +1203,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkClientBatch
 
-Retrieve all bulk client batches
+Provides an overview of all existing bulk client batches, allowing users to quickly ascertain and manage batches created for the purpose of client onboarding or import.
 
 ### Example Usage
 
@@ -1185,6 +1214,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBulkClientBatch();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1206,7 +1236,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkClientBatchBatchId
 
-Fetch Details of a Specific Item from a Client Batch
+Retrieves the detailed information of a specific item within the bulk client batch using both batch and item unique identifiers.
 
 ### Example Usage
 
@@ -1219,6 +1249,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkClientBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1241,7 +1272,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkClientBatchBatchIdItem
 
-Retrieve All Items from a Client Batch
+Fetches all items present in the specified bulk client batch, providing a comprehensive view of all client data in the batch.
 
 ### Example Usage
 
@@ -1254,6 +1285,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkClientBatchBatchIdItem({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1276,7 +1308,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkClientBatchBatchIdItemBatchItemId
 
-Fetch Details of a Specific Item from a Client Batch
+Retrieves the detailed information of a specific item within the bulk client batch using both batch and item unique identifiers.
 
 ### Example Usage
 
@@ -1290,6 +1322,7 @@ import { Payments } from "@wingspan/payments";
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1312,7 +1345,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCollaboratorBatch
 
-Fetch all bulk collaborator batches
+Provides a list of all existing bulk collaborator batches, allowing users to view and manage batches that have been created for collaboration purposes.
 
 ### Example Usage
 
@@ -1323,6 +1356,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBulkCollaboratorBatch();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1344,7 +1378,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCollaboratorBatchBatchId
 
-Retrieve Details of a Specific Collaborator Batch
+Fetches detailed information of a specific bulk collaborator batch, using the provided batch ID.
 
 ### Example Usage
 
@@ -1357,6 +1391,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkCollaboratorBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1379,7 +1414,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCollaboratorBatchBatchIdItem
 
-Retrieve all items from a specific collaborator batch
+Provides a comprehensive list of items present within a specified batch of collaborators, identifiable through its unique batch identifier.
 
 ### Example Usage
 
@@ -1392,6 +1427,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkCollaboratorBatchBatchIdItem({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1414,7 +1450,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId
 
-Retrieve details of a specific item from a collaborator batch
+Enables fetching of detailed information about an individual item from a specified batch of collaborators using both the batch and item unique identifiers.
 
 ### Example Usage
 
@@ -1428,6 +1464,7 @@ import { Payments } from "@wingspan/payments";
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1450,7 +1487,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkInvoiceBatch
 
-Retrieve All Bulk Invoice Batches
+Fetches a list of all the batches created for bulk invoices, providing an overview of the bulk invoicing operations.
 
 ### Example Usage
 
@@ -1461,6 +1498,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBulkInvoiceBatch();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1482,7 +1520,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkInvoiceBatchBatchId
 
-Retrieve details of a specific bulk invoice batch
+Allows for the retrieval of a specified batch of bulk invoices by providing its unique batch identifier.
 
 ### Example Usage
 
@@ -1495,6 +1533,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkInvoiceBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1517,7 +1556,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkInvoiceBatchBatchIdItem
 
-Fetch all items from a specific bulk invoice batch
+Provides a list of all the items within a specified batch of bulk invoices, identified by its unique batch identifier.
 
 ### Example Usage
 
@@ -1530,6 +1569,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkInvoiceBatchBatchIdItem({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1552,7 +1592,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId
 
-Retrieve a specific item from a bulk invoice batch
+Fetches detailed information about a specific item located within a designated bulk invoice batch. Useful for obtaining particular item data without browsing the entire batch.
 
 ### Example Usage
 
@@ -1566,6 +1606,7 @@ import { Payments } from "@wingspan/payments";
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1588,7 +1629,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkPayableBatch
 
-Retrieve All Bulk Payable Batches
+Fetches a list of all the batches created for bulk payables, providing an overview of the bulk payment operations.
 
 ### Example Usage
 
@@ -1599,6 +1640,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsBulkPayableBatch();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1620,7 +1662,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkPayableBatchBatchId
 
-Retrieve Details of a Specific Bulk Payable Batch
+Fetches detailed information of a specific batch created for bulk payables, using the provided batch ID.
 
 ### Example Usage
 
@@ -1633,6 +1675,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkPayableBatchBatchId({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1655,7 +1698,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkPayableBatchBatchIdImportSummary
 
-Fetch the import summary for a specific bulk payable batch
+Provides an overview and summary of the import process for a given bulk payable batch, allowing for tracking of imported items, errors, and other relevant batch statistics.
 
 ### Example Usage
 
@@ -1668,6 +1711,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkPayableBatchBatchIdImportSummary({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1690,7 +1734,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkPayableBatchBatchIdItem
 
-Retrieve all items from a specific bulk payable batch
+Fetches and lists all individual payable items associated with a specified bulk payable batch. Useful for tracking and verifying batch details.
 
 ### Example Usage
 
@@ -1703,6 +1747,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsBulkPayableBatchBatchIdItem({
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1725,7 +1770,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsBulkPayableBatchBatchIdItemBatchItemId
 
-Retrieve a Specific Item from a Bulk Payable Batch
+Fetches detailed information of a specific item within a bulk payable batch, using both the batch ID and the item ID.
 
 ### Example Usage
 
@@ -1739,6 +1784,7 @@ import { Payments } from "@wingspan/payments";
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1761,7 +1807,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientDeduction
 
-Retrieve All Client Deductions
+Fetches a comprehensive list of all client deductions present in the system.
 
 ### Example Usage
 
@@ -1772,6 +1818,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsClientDeduction();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1793,7 +1840,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientDeductionId
 
-Fetch Specific Client Deduction Details
+Provides detailed information for a client deduction based on its unique identifier.
 
 ### Example Usage
 
@@ -1806,6 +1853,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsClientDeductionId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1828,7 +1876,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientInvoice
 
-Retrieve All Invoices Generated by a Client
+Fetch a comprehensive list of invoices that have been generated by a client, offering an overview of all client-related billing records.
 
 ### Example Usage
 
@@ -1839,6 +1887,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsClientInvoice();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1860,7 +1909,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientInvoiceTemplate
 
-Retrieve all client-generated invoice templates
+Fetches a comprehensive list of all invoice templates created by clients in the system.
 
 ### Example Usage
 
@@ -1871,6 +1920,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsClientInvoiceTemplate();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1892,7 +1942,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientInvoiceTemplateId
 
-Fetch a specific client-generated invoice template by ID
+Provides details of the client-generated invoice template associated with the provided unique identifier.
 
 ### Example Usage
 
@@ -1905,6 +1955,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsClientInvoiceTemplateId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1927,7 +1978,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientInvoiceId
 
-Fetch Specific Client-Generated Invoice by ID
+Retrieve detailed information of an individual invoice created by a client using its unique ID for in-depth billing analysis.
 
 ### Example Usage
 
@@ -1940,6 +1991,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsClientInvoiceId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1962,7 +2014,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsClientInvoiceInvoiceIdFees
 
-Retrieve Fees Associated with a Client's Invoice
+Obtain a detailed breakdown of all the fees associated with a specific client's invoice, identified by its unique ID.
 
 ### Example Usage
 
@@ -1975,6 +2027,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsClientInvoiceInvoiceIdFees({
     invoiceId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1997,7 +2050,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaborator
 
-Retrieve All Registered Collaborators
+Fetch a comprehensive list of all collaborators currently registered in the system.
 
 ### Example Usage
 
@@ -2008,6 +2061,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaborator();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2029,7 +2083,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorDeduction
 
-Retrieve All Deductions for Collaborators
+Fetch a list of all deduction entries currently registered for collaborators.
 
 ### Example Usage
 
@@ -2040,6 +2094,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaboratorDeduction();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2061,7 +2116,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorDeductionId
 
-Retrieve Specific Deduction Details
+Fetch details of a specific deduction entry for a collaborator based on its unique identifier.
 
 ### Example Usage
 
@@ -2074,6 +2129,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorDeductionId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2096,7 +2152,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorGroup
 
-Retrieve All Collaborator Groups
+Fetch a comprehensive list of all collaborator groups created by the client, showcasing configurations and member details.
 
 ### Example Usage
 
@@ -2107,6 +2163,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaboratorGroup();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2128,7 +2185,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorGroupId
 
-Retrieve Specific Collaborator Group Configuration
+Fetch detailed configuration and attributes associated with a specific collaborator group.
 
 ### Example Usage
 
@@ -2141,6 +2198,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorGroupId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2163,7 +2221,7 @@ import { Payments } from "@wingspan/payments";
 
 ## ~~getPaymentsCollaboratorSettingsAdditionalData~~
 
-Retrieve All Collaborator-Member Custom Data Points
+[Deprecated - use /payments/custom-fields] Fetch all custom data fields that are associated with the memberClient objects, giving insight into additional details between collaborators and members.
 
 > :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
@@ -2176,6 +2234,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaboratorSettingsAdditionalData();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2197,7 +2256,7 @@ import { Payments } from "@wingspan/payments";
 
 ## ~~getPaymentsCollaboratorSettingsAdditionalDataId~~
 
-Retrieve Specific Collaborator Custom Data
+Deprecated - use /payments/custom-fields/:id
 
 > :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
@@ -2212,6 +2271,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorSettingsAdditionalDataId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2234,7 +2294,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorSettingsEligibilityRequirement
 
-Retrieve all Eligibility Requirements
+List and display all the set eligibility requirements for collaborators.
 
 ### Example Usage
 
@@ -2245,6 +2305,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaboratorSettingsEligibilityRequirement();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2266,7 +2327,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorSettingsEligibilityRequirementId
 
-Retrieve a Specific Eligibility Requirement
+Fetch details for a given eligibility requirement based on its unique identifier.
 
 ### Example Usage
 
@@ -2279,6 +2340,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorSettingsEligibilityRequirementId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2301,7 +2363,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorSettingsPaymentEligibility
 
-Retrieve All Payment Eligibility Requirements
+Obtain a list of all payment eligibility requirements configured for collaborators.
 
 ### Example Usage
 
@@ -2312,6 +2374,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCollaboratorSettingsPaymentEligibility();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2333,7 +2396,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorSettingsPaymentEligibilityId
 
-Retrieve details of a specific Payment Eligibility Requirement
+Fetch detailed information about a particular payment eligibility requirement using its unique identifier.
 
 ### Example Usage
 
@@ -2346,6 +2409,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorSettingsPaymentEligibilityId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2368,7 +2432,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorId
 
-Retrieve Details of a Specific Collaborator
+Fetch detailed information about a specific collaborator using its unique identifier.
 
 ### Example Usage
 
@@ -2381,6 +2445,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2403,7 +2468,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorIdDownload1099YearIndex
 
-Retrieve Form 1099 PDF for a Collaborator by Year and Index
+Facilitates downloading of the specified 1099 form for a given collaborator, corresponding to the provided year and index.
 
 ### Example Usage
 
@@ -2418,6 +2483,7 @@ import { Payments } from "@wingspan/payments";
     index: "string",
     year: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2440,7 +2506,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorIdDownloadW9
 
-Retrieve Form W9 PDF for a Collaborator
+Enables the downloading of the W9 form for the specified collaborator, ensuring compliance and streamlined financial procedures.
 
 ### Example Usage
 
@@ -2453,6 +2519,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorIdDownloadW9({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2475,7 +2542,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCollaboratorIdEvents
 
-Retrieve Events Associated with a Collaborator
+Fetch a list of all events linked to a collaborator based on the provided collaborator ID.
 
 ### Example Usage
 
@@ -2488,6 +2555,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCollaboratorIdEvents({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2510,7 +2578,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCustomFields
 
-Retrieve All Custom Fields
+Obtain a list of all user-defined custom fields associated with payments.
 
 ### Example Usage
 
@@ -2521,6 +2589,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsCustomFields();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2542,7 +2611,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsCustomFieldsId
 
-Fetch Details of a Specific Custom Field
+Retrieve detailed information for a custom field based on its unique identifier.
 
 ### Example Usage
 
@@ -2555,6 +2624,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsCustomFieldsId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2577,7 +2647,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsInvoice
 
-Retrieve All Member Invoices
+Fetch a complete list of invoices associated with members, providing a comprehensive overview of all member-related billing details.
 
 ### Example Usage
 
@@ -2588,6 +2658,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsInvoice();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2609,7 +2680,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsInvoiceTemplate
 
-Retrieve all available invoice templates
+Fetches a comprehensive list of all invoice templates in the system.
 
 ### Example Usage
 
@@ -2620,6 +2691,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsInvoiceTemplate();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2641,7 +2713,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsInvoiceTemplateId
 
-Retrieve a specific invoice template by ID
+Fetches details of the invoice template corresponding to the provided unique identifier.
 
 ### Example Usage
 
@@ -2654,6 +2726,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsInvoiceTemplateId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2676,7 +2749,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsInvoiceId
 
-Fetch Invoice by ID
+Retrieve the specifics of an individual invoice associated with a member using its unique ID. Ideal for diving into invoice details.
 
 ### Example Usage
 
@@ -2689,6 +2762,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsInvoiceId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2711,7 +2785,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsMcc
 
-Retrieve Merchant Category Codes (MCC)
+This endpoint provides a comprehensive list of available Merchant Category Codes (MCC) which are used to classify businesses by the type of services or goods they provide.
 
 ### Example Usage
 
@@ -2722,6 +2796,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsMcc();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2743,7 +2818,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsMemberClient
 
-Fetch a list of member and client associations
+Retrieve a detailed list showcasing all the existing associations between members and clients in the system.
 
 ### Example Usage
 
@@ -2754,6 +2829,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsMemberClient();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2775,7 +2851,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsMemberClientId
 
-Retrieve detailed information of a specific member-client relationship
+Fetches comprehensive details of the association between a member and a client using the provided unique identifier.
 
 ### Example Usage
 
@@ -2788,6 +2864,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsMemberClientId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2810,7 +2887,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayable
 
-List All Payables Associated with a Client
+Provides an list of all Payables associated with a specific client, facilitating easier management and overview of the client's financial obligations.
 
 ### Example Usage
 
@@ -2821,6 +2898,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsPayable();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2842,7 +2920,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayableId
 
-Retrieve Payable Details by Payable ID
+This API endpoint is designed to fetch the detailed Payable information of a member using a unique Payable ID.
 
 ### Example Usage
 
@@ -2855,6 +2933,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsPayableId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2877,7 +2956,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayoutSettingsId
 
-Retrieve payout settings for a specific member
+Fetches the payout configuration, including linked debit cards and payout preferences, for a specific member.
 
 ### Example Usage
 
@@ -2890,6 +2969,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsPayoutSettingsId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2912,7 +2992,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayoutSettingsMemberIdDebitCard
 
-Fetch all registered payout debit cards for a member
+Retrieves a list of all debit cards linked to a member's profile for payout purposes.
 
 ### Example Usage
 
@@ -2925,6 +3005,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsPayoutSettingsMemberIdDebitCard({
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2947,7 +3028,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayoutSettingsMemberIdDebitCardId
 
-Retrieve a specific payout debit card linked to a member
+Fetches detailed information of a specific debit card linked to a member's profile for payout purposes.
 
 ### Example Usage
 
@@ -2961,6 +3042,7 @@ import { Payments } from "@wingspan/payments";
     id: "<ID>",
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2983,7 +3065,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayrollSettingsId
 
-Retrieve Individual Payroll Settings
+Fetch the detailed payroll settings associated with the provided unique identifier.
 
 ### Example Usage
 
@@ -2996,6 +3078,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsPayrollSettingsId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3018,7 +3101,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsPayrollImmediatePayable
 
-Retrieve Approved Payables Ready for Immediate Payroll
+Fetches all payables that have been approved and are awaiting immediate payroll processing. This provides a quick view of all payments that are due for immediate payroll execution.
 
 ### Example Usage
 
@@ -3029,6 +3112,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsPayrollImmediatePayable();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3050,7 +3134,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsReportsAgingLineItems
 
-Obtain Aging Report for Line Items
+Retrieve a comprehensive report detailing line items that have been open for a set number of days.
 
 ### Example Usage
 
@@ -3061,6 +3145,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsReportsAgingLineItems();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3082,7 +3167,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsReportsAgingPayables
 
-Retrieve Aging Report for Payables
+Access a detailed report that showcases the list of payables categorized by age.
 
 ### Example Usage
 
@@ -3093,6 +3178,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsReportsAgingPayables();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3114,7 +3200,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsReportsCollaborators
 
-Retrieve detailed information on all collaborators
+Fetches comprehensive data on all collaborators, including their activities and current status, as listed in the reports.
 
 ### Example Usage
 
@@ -3125,6 +3211,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsReportsCollaborators();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3146,7 +3233,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsReportsCollaboratorsPayablesSummary
 
-Obtain a summarized report of payable amounts for each collaborator
+Gathers and presents a concise summary showcasing the payable amounts due to each collaborator, helping in financial planning and payout strategies.
 
 ### Example Usage
 
@@ -3157,6 +3244,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsReportsCollaboratorsPayablesSummary();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3178,7 +3266,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsReportsPayrollPayrollId
 
-Extract detailed report of payables associated with a particular payroll run
+Offers a deep dive into the payables connected to a specific payroll run, facilitating better management and reconciliation of payroll-related finances.
 
 ### Example Usage
 
@@ -3191,6 +3279,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsReportsPayrollPayrollId({
     payrollId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3213,7 +3302,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsServiceBankingMemberIdApplication
 
-Fetch the application link for setting up a clearing bank account
+Get the application link required for a member to initiate the creation of a clearing bank account.
 
 ### Example Usage
 
@@ -3226,6 +3315,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsServiceBankingMemberIdApplication({
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3248,7 +3338,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsSummaryPayables
 
-Retrieve Summary of All Payables
+This endpoint provides a comprehensive summary of all the payables, offering insights into the current state of pending and completed payments. Ideal for clients and financial departments looking for a snapshot view of their payment obligations.
 
 ### Example Usage
 
@@ -3259,6 +3349,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsSummaryPayables();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3280,7 +3371,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsV2Client
 
-Retrieve All Clients (Version 2)
+Fetches a comprehensive list of clients formatted in the V2 standard, providing an overview of all client data.
 
 ### Example Usage
 
@@ -3291,6 +3382,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsV2Client();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3312,7 +3404,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsV2ClientClientId
 
-Retrieve Specific Client Details (Version 2)
+Fetches detailed information of a specific client, identified by the clientId, in the V2 format.
 
 ### Example Usage
 
@@ -3325,6 +3417,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsV2ClientClientId({
     clientId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3347,7 +3440,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsV2Collaborator
 
-Retrieve All Collaborators (Version 2)
+Fetches a comprehensive list of collaborators formatted in the V2 standard, providing an overview of all collaborator data.
 
 ### Example Usage
 
@@ -3358,6 +3451,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.getPaymentsV2Collaborator();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3379,7 +3473,7 @@ import { Payments } from "@wingspan/payments";
 
 ## getPaymentsV2CollaboratorMemberId
 
-Retrieve Specific Collaborator Details (Version 2)
+Fetches detailed information of a specific collaborator, identified by the memberId, in the V2 format.
 
 ### Example Usage
 
@@ -3392,6 +3486,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.getPaymentsV2CollaboratorMemberId({
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3414,7 +3509,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsBankingCardId
 
-Modify card details by its unique ID
+Updates specific information about a card using the provided data.
 
 ### Example Usage
 
@@ -3431,6 +3526,7 @@ import { CardUpdateRequestStatus } from "@wingspan/payments/dist/sdk/models/shar
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3453,7 +3549,7 @@ import { CardUpdateRequestStatus } from "@wingspan/payments/dist/sdk/models/shar
 
 ## patchPaymentsBankingCardIdToken
 
-Validate verification code to receive a token
+Validates the received verification code and, if correct, returns a token for card operations.
 
 ### Example Usage
 
@@ -3470,6 +3566,7 @@ import { Payments } from "@wingspan/payments";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3492,7 +3589,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsBulkCalculation1099BatchBatchId
 
-Modify the details of a specific bulk calculation 1099 batch
+Provides the ability to update or alter attributes of a given batch for bulk 1099 calculations by using its unique batch identifier.
 
 ### Example Usage
 
@@ -3511,6 +3608,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3533,7 +3631,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ## patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
-Revise the attributes of an item in a calculation 1099 batch
+Make alterations or updates to a specific item within the calculation 1099 batch, ensuring accurate and up-to-date record-keeping.
 
 ### Example Usage
 
@@ -3553,6 +3651,7 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3575,7 +3674,7 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
 
 ## patchPaymentsBulkClientBatchBatchId
 
-Modify Details of a Specific Item in a Client Batch
+Allows modification of the details of a specific item within the bulk client batch, using the provided item and batch identifiers.
 
 ### Example Usage
 
@@ -3594,6 +3693,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3616,7 +3716,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ## patchPaymentsBulkClientBatchBatchIdItemBatchItemId
 
-Modify Details of a Specific Item in a Client Batch
+Allows modification of the details of a specific item within the bulk client batch, using the provided item and batch identifiers.
 
 ### Example Usage
 
@@ -3645,6 +3745,7 @@ import {
     batchItemId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3666,7 +3767,7 @@ import {
 
 ## patchPaymentsBulkCollaboratorBatchBatchId
 
-Modify Details of a Bulk Collaborator Batch
+Allows for updating or altering the details and items within a specific bulk collaborator batch using the given batch ID.
 
 ### Example Usage
 
@@ -3685,6 +3786,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3707,7 +3809,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ## patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId
 
-Modify the details of a specific item within a collaborator batch
+Provides the functionality to update or alter the attributes of an item present in a given collaborator batch using the unique identifiers for both the batch and the item.
 
 ### Example Usage
 
@@ -3739,6 +3841,7 @@ import {
     batchItemId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3760,7 +3863,7 @@ import {
 
 ## patchPaymentsBulkInvoiceBatchBatchId
 
-Modify the details of a specific bulk invoice batch
+Enables the user to update or modify the attributes of a given batch of bulk invoices by specifying its unique batch identifier.
 
 ### Example Usage
 
@@ -3779,6 +3882,7 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3801,7 +3905,7 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 ## patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId
 
-Modify a specific item within a bulk invoice batch
+Allows for updates or edits to be made to a specific items details within an existing bulk invoice batch. Enhances the flexibility and management of invoice data.
 
 ### Example Usage
 
@@ -3815,7 +3919,7 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
   const res = await sdk.payments.patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
     bulkInvoiceItemUpdate: {
       acceptedPaymentMethods: [
-        BulkInvoiceItemUpdateAcceptedPaymentMethods.Ach,
+        BulkInvoiceItemUpdateAcceptedPaymentMethods.Manual,
       ],
       creditFeeHandling: {},
       labels: {
@@ -3825,6 +3929,7 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3847,7 +3952,7 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
 
 ## patchPaymentsBulkPayableBatchBatchId
 
-Modify a Specific Bulk Payable Batch
+Updates the information or items of a specific bulk payable batch, given its unique batch ID.
 
 ### Example Usage
 
@@ -3866,6 +3971,7 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3888,7 +3994,7 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 ## patchPaymentsBulkPayableBatchBatchIdItemBatchItemId
 
-Modify a Specific Item in a Bulk Payable Batch
+Updates the details or status of a specific item within a bulk payable batch, given both the batch ID and the item ID.
 
 ### Example Usage
 
@@ -3908,6 +4014,7 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
     batchId: "string",
     batchItemId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3930,7 +4037,7 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
 
 ## patchPaymentsClientDeductionId
 
-Modify a Client Deduction
+Allows for updating specific details or attributes of an existing client deduction.
 
 ### Example Usage
 
@@ -3945,6 +4052,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
     deductionUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3967,7 +4075,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 ## patchPaymentsClientInvoiceTemplateId
 
-Modify a client-generated invoice template
+Updates the specified client-generated invoice template with the provided modifications.
 
 ### Example Usage
 
@@ -3983,6 +4091,7 @@ import { Payments } from "@wingspan/payments";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4005,7 +4114,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsClientInvoiceId
 
-Modify an Existing Client-Generated Invoice
+Allows for modifications to a client-generated invoice using its unique ID, ensuring billing details remain current and accurate.
 
 ### Example Usage
 
@@ -4022,6 +4131,7 @@ import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/dist/sdk/mo
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4044,7 +4154,7 @@ import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/dist/sdk/mo
 
 ## patchPaymentsCollaboratorDeductionId
 
-Modify Details of a Specific Deduction
+Update attributes or data related to an existing deduction entry for a collaborator.
 
 ### Example Usage
 
@@ -4059,6 +4169,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
     deductionUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4081,7 +4192,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 ## patchPaymentsCollaboratorGroupId
 
-Modify Collaborator Group Configuration
+Update specific attributes or configuration details of an existing collaborator group.
 
 ### Example Usage
 
@@ -4102,6 +4213,7 @@ import { Payments } from "@wingspan/payments";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4124,7 +4236,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId
 
-Modify Eligibility Requirement for Collaborator Group
+Update details or attributes of a specific eligibility requirement linked to a collaborator group.
 
 ### Example Usage
 
@@ -4141,6 +4253,7 @@ import { Payments } from "@wingspan/payments";
     eligibilityRequirementId: "string",
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4163,7 +4276,7 @@ import { Payments } from "@wingspan/payments";
 
 ## ~~patchPaymentsCollaboratorSettingsAdditionalDataId~~
 
-Modify a Specific Collaborator-Member Custom Data
+[Deprecated - use /payments/custom-fields] Update details or attributes of an existing custom data point associated with the relationship between a collaborator and a member.
 
 > :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
@@ -4180,6 +4293,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
     additionalDataUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4202,7 +4316,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 ## patchPaymentsCollaboratorSettingsEligibilityRequirementId
 
-Modify a Specific Eligibility Requirement
+Update specific details or attributes of an existing eligibility requirement.
 
 ### Example Usage
 
@@ -4219,6 +4333,7 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4241,7 +4356,7 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
 
 ## patchPaymentsCollaboratorSettingsPaymentEligibilityId
 
-Modify a specific Payment Eligibility Requirement
+Update attributes or criteria of an existing payment eligibility requirement using its unique identifier.
 
 ### Example Usage
 
@@ -4257,6 +4372,7 @@ import { Payments } from "@wingspan/payments";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4279,7 +4395,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsCollaboratorId
 
-Modify Collaborator Details
+Update specific details or attributes related to an existing collaborator.
 
 ### Example Usage
 
@@ -4328,6 +4444,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4349,7 +4466,7 @@ import {
 
 ## patchPaymentsCollaboratorIdAddGroupGroupId
 
-Associate Collaborator with a Specific Group
+Add the specified collaborator to the designated group, allowing group-specific configurations and permissions.
 
 ### Example Usage
 
@@ -4363,6 +4480,7 @@ import { Payments } from "@wingspan/payments";
     groupId: "string",
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4385,7 +4503,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsCollaboratorIdRemoveGroupGroupId
 
-Disassociate Collaborator from a Specific Group
+Remove the collaborator from the designated group, revoking any group-specific configurations and permissions.
 
 ### Example Usage
 
@@ -4399,6 +4517,7 @@ import { Payments } from "@wingspan/payments";
     groupId: "string",
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4421,7 +4540,7 @@ import { Payments } from "@wingspan/payments";
 
 ## patchPaymentsCustomFieldsId
 
-Modify Details of a Specific Custom Field
+Update specific attributes or data for an existing custom field.
 
 ### Example Usage
 
@@ -4436,6 +4555,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
     additionalDataUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4458,7 +4578,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 ## patchPaymentsInvoiceTemplateId
 
-Modify details of an existing invoice template
+Updates details of the specified invoice template based on the provided information.
 
 ### Example Usage
 
@@ -4538,6 +4658,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4559,7 +4680,7 @@ import {
 
 ## patchPaymentsInvoiceId
 
-Modify Existing Invoice Details
+Allows updates to the details of an existing member invoice using its unique ID. Useful for making corrections or updates to billing records.
 
 ### Example Usage
 
@@ -4579,7 +4700,7 @@ import {
   const res = await sdk.payments.patchPaymentsInvoiceId({
     invoiceUpdateRequest: {
       acceptedPaymentMethods: [
-        InvoiceUpdateRequestAcceptedPaymentMethods.Manual,
+        InvoiceUpdateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
       ],
       attachments: {
         customAttachmentIds: [
@@ -4628,6 +4749,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4649,7 +4771,7 @@ import {
 
 ## patchPaymentsMemberClientId
 
-Update information of a specific member-client relationship
+Modifies details of the association between a member and a client based on the provided data.
 
 ### Example Usage
 
@@ -4704,6 +4826,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4725,7 +4848,7 @@ import {
 
 ## patchPaymentsPayableId
 
-Update Client Payable Information by Payable ID
+This API endpoint facilitates the updating of existing payable details related to a client using a unique Payable ID.
 
 ### Example Usage
 
@@ -4746,7 +4869,7 @@ import {
   const res = await sdk.payments.patchPaymentsPayableId({
     payableUpdateRequest: {
       acceptedPaymentMethods: [
-        PayableUpdateRequestAcceptedPaymentMethods.Ach,
+        PayableUpdateRequestAcceptedPaymentMethods.Manual,
       ],
       attachments: {
         customAttachmentIds: [
@@ -4798,6 +4921,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4819,7 +4943,7 @@ import {
 
 ## patchPaymentsPayoutSettingsId
 
-Modify and update payout settings for a specific member
+Allows adjustments and updates to a member's payout configuration, including changing linked debit cards and adjusting payout preferences.
 
 ### Example Usage
 
@@ -4843,6 +4967,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4864,7 +4989,7 @@ import {
 
 ## patchPaymentsPayrollSettingsId
 
-Modify Existing Payroll Settings
+Update certain attributes or details of payroll settings associated with the provided identifier.
 
 ### Example Usage
 
@@ -4905,6 +5030,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4926,7 +5052,7 @@ import {
 
 ## postPaymentsBankingCard
 
-Register a New  Wingspan Wallet Card
+Add a new  Wingspan Wallet card to the system, allowing it to be used for future transactions.
 
 ### Example Usage
 
@@ -4944,6 +5070,7 @@ import { Payments } from "@wingspan/payments";
       state: "string",
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -4966,7 +5093,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBankingCardIdToken
 
-Request a verification code for card authentication
+Sends a verification code to the users registered contact method for additional card authentication.
 
 ### Example Usage
 
@@ -4982,6 +5109,7 @@ import { Payments } from "@wingspan/payments";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5004,7 +5132,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBankingInstantPayout
 
-Deprecated Set Up Instant Payout Configuration
+Configure a new instant payout setting, specifying details like amount, frequency, and destination.
 
 ### Example Usage
 
@@ -5017,6 +5145,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.postPaymentsBankingInstantPayout({
     externalPayoutAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5039,7 +5168,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBulkCalculation1099Batch
 
-Initialize a new batch for bulk calculation 1099
+Allows users to create a new batch for facilitating bulk 1099 calculations by providing necessary batch details.
 
 ### Example Usage
 
@@ -5054,6 +5183,7 @@ import { Payments } from "@wingspan/payments";
       "key": "string",
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5076,7 +5206,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBulkCalculation1099BatchBatchIdItem
 
-Add a new item to a calculation 1099 batch
+Facilitates the incorporation of a new item into the specified calculation 1099 batch, streamlining the process of batch expansion.
 
 ### Example Usage
 
@@ -5097,6 +5227,7 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
     },
     batchId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5119,7 +5250,7 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
 
 ## postPaymentsBulkClientBatch
 
-Create a new bulk client batch
+Initiates the creation of a fresh bulk client batch, streamlining the process of adding multiple clients in one go.
 
 ### Example Usage
 
@@ -5134,6 +5265,7 @@ import { Payments } from "@wingspan/payments";
       "key": "string",
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5156,7 +5288,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBulkClientBatchBatchIdItem
 
-Add a New Item to a Client Batch
+Inserts a new item into the specified bulk client batch, allowing for further expansion of client data within the batch.
 
 ### Example Usage
 
@@ -5184,6 +5316,7 @@ import {
     batchId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5205,7 +5338,7 @@ import {
 
 ## postPaymentsBulkCollaboratorBatch
 
-Initiate a new bulk collaborator batch.
+Enables the creation of a new bulk collaborator batch, facilitating the bulk management and addition of collaborators for various projects or tasks.
 
 ### Example Usage
 
@@ -5220,6 +5353,7 @@ import { Payments } from "@wingspan/payments";
       "key": "string",
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5242,7 +5376,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsBulkCollaboratorBatchBatchIdItem
 
-Append a new item to a specific collaborator batch
+Allows for the addition of a new item to an existing batch of collaborators by providing the batchs unique identifier and item details.
 
 ### Example Usage
 
@@ -5273,6 +5407,7 @@ import {
     batchId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5294,7 +5429,7 @@ import {
 
 ## postPaymentsBulkInvoiceBatch
 
-Initiate a New Bulk Invoice Batch
+Creates a new batch for importing multiple invoices at once, streamlining the bulk invoicing operations.
 
 ### Example Usage
 
@@ -5311,6 +5446,7 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
     },
     processingStrategy: BulkInvoiceBatchCreateProcessingStrategy.Single,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5333,7 +5469,7 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 ## postPaymentsBulkInvoiceBatchBatchIdItem
 
-Add a new item to a specific bulk invoice batch
+Allows users to append a new item to a given batch of bulk invoices by supplying its unique batch identifier and the details of the new item.
 
 ### Example Usage
 
@@ -5362,6 +5498,7 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
     batchId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5383,7 +5520,7 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
 
 ## postPaymentsBulkPayableBatch
 
-Initiate a New Bulk Payable Batch
+Creates a new batch for importing multiple payables at once, streamlining the bulk payment operations.
 
 ### Example Usage
 
@@ -5400,6 +5537,7 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
     },
     processingStrategy: BulkPayableBatchCreateProcessingStrategy.Single,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5422,7 +5560,7 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 ## postPaymentsBulkPayableBatchBatchIdItem
 
-Add a new item to a specific bulk payable batch
+Allows for the creation and addition of a new individual payable item into an existing bulk payable batch. This enhances batch management and payable tracking.
 
 ### Example Usage
 
@@ -5447,6 +5585,7 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
     batchId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5468,7 +5607,7 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
 
 ## postPaymentsClientDeduction
 
-Register a New Client Deduction
+Allows for the creation of a new client deduction based on the provided details.
 
 ### Example Usage
 
@@ -5487,6 +5626,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
     name: "string",
     type: DeductionCreateRequestType.PostPayment,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5509,7 +5649,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 ## postPaymentsClientInvoice
 
-Generate a New Invoice on Behalf of the Client
+Enables the creation of a new invoice on behalf of a client using the provided details, facilitating new billing records.
 
 ### Example Usage
 
@@ -5541,6 +5681,7 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5562,7 +5703,7 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
 
 ## postPaymentsClientInvoiceTemplate
 
-Create a new client-generated invoice template
+Allows clients to create a new invoice template based on the provided details.
 
 ### Example Usage
 
@@ -5610,6 +5751,7 @@ import {
     status: ClientInvoiceTemplateCreateRequestStatus.Expired,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5631,7 +5773,7 @@ import {
 
 ## postPaymentsClientInvoiceInvoiceIdPay
 
-Execute Payment for a Client-Generated Invoice
+Process a payment for a specific client-generated invoice using the provided details, ensuring the invoice is marked as settled.
 
 ### Example Usage
 
@@ -5645,6 +5787,7 @@ import { Payments } from "@wingspan/payments";
     payRequest: {},
     invoiceId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5667,7 +5810,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsCollaborator
 
-Register a New Collaborator
+Add a new collaborator to the system, allowing them to be eligible for payments.
 
 ### Example Usage
 
@@ -5702,6 +5845,7 @@ import {
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5723,7 +5867,7 @@ import {
 
 ## postPaymentsCollaboratorDeduction
 
-Register a New Deduction for a Collaborator
+Create and add a new deduction entry for a collaborator based on the provided data.
 
 ### Example Usage
 
@@ -5742,6 +5886,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
     name: "string",
     type: DeductionCreateRequestType.PrePayment,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5764,7 +5909,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 ## postPaymentsCollaboratorGroup
 
-Generate New Collaborator Group
+Create a new collaborator group with specific configurations and permissions as defined by the client.
 
 ### Example Usage
 
@@ -5784,6 +5929,7 @@ import { Payments } from "@wingspan/payments";
     ],
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5806,7 +5952,7 @@ import { Payments } from "@wingspan/payments";
 
 ## ~~postPaymentsCollaboratorSettingsAdditionalData~~
 
-Register New Custom Data for Collaborator-Member Relationship
+[Deprecated - use /payments/custom-fields] Create custom fields that can be associated with the memberClient object to provide extra details about the relationship between a collaborator and a member.
 
 > :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
@@ -5826,6 +5972,7 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
     resourceType: AdditionalDataResourceType.LineItem,
     type: AdditionalDataType.String,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5848,7 +5995,7 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
 
 ## postPaymentsCollaboratorSettingsEligibilityRequirement
 
-Establish a new Eligibility Requirement
+Define and create a new eligibility requirement for collaborators.
 
 ### Example Usage
 
@@ -5862,6 +6009,7 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
   const res = await sdk.payments.postPaymentsCollaboratorSettingsEligibilityRequirement({
     requirementType: EligibilityRequirementCreateRequestRequirementType.Signature,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5884,7 +6032,7 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
 
 ## postPaymentsCollaboratorSettingsPaymentEligibility
 
-Add a New Payment Eligibility Requirement
+Define a new payment eligibility requirement for collaborators in the system.
 
 ### Example Usage
 
@@ -5898,6 +6046,7 @@ import { Payments } from "@wingspan/payments";
     field: "string",
     value: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5920,7 +6069,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsCollaborator1099Calculate
 
-Determine 1099 Amounts for Collaborators
+Analyzes and calculates the appropriate 1099 amounts for collaborators based on provided data and relevant financial parameters.
 
 ### Example Usage
 
@@ -5934,6 +6083,7 @@ import { Payments } from "@wingspan/payments";
     memberClientId: "string",
     year: 7927.08,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5956,7 +6106,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsCollaborator1099MarkUndelivered
 
-Indicate a collaborator's 1099 form was returned undelivered
+Mark a specific 1099 submission for a collaborator as undelivered, typically due to mail return or incorrect address details.
 
 ### Example Usage
 
@@ -5971,6 +6121,7 @@ import { Payments } from "@wingspan/payments";
     submissionIndex: 2792.15,
     year: 7049.25,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -5993,7 +6144,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsCollaborator1099Remail
 
-Request a new mailing of the 1099 form for a collaborator
+Initiates a process to resend the 1099 form to a collaborator in the event of a previous failed delivery or at the request of the collaborator.
 
 ### Example Usage
 
@@ -6013,6 +6164,7 @@ import { Payments } from "@wingspan/payments";
     memberId: "string",
     year: 1958.97,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6035,7 +6187,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsCustomFields
 
-Add a New Custom Field
+Define a new custom field for payments using additional data provided.
 
 ### Example Usage
 
@@ -6053,6 +6205,7 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
     resourceType: AdditionalDataResourceType.LineItem,
     type: AdditionalDataType.String,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6075,7 +6228,7 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
 
 ## postPaymentsInvoice
 
-Initiate New Invoice for a Member
+Facilitates the creation of a new invoice for a member using the provided invoice details. Useful for adding new billing records.
 
 ### Example Usage
 
@@ -6142,6 +6295,7 @@ import {
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6163,7 +6317,7 @@ import {
 
 ## postPaymentsInvoiceTemplate
 
-Create a new invoice template
+Creates a new invoice template based on the provided details.
 
 ### Example Usage
 
@@ -6188,7 +6342,7 @@ import {
     },
     invoiceData: {
       acceptedPaymentMethods: [
-        InvoiceDataCreateRequestAcceptedPaymentMethods.Manual,
+        InvoiceDataCreateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
       ],
       attachments: {
         customAttachmentIds: [
@@ -6240,6 +6394,7 @@ import {
     status: InvoiceTemplateCreateRequestStatus.Cancelled,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6261,7 +6416,7 @@ import {
 
 ## postPaymentsInvoiceTestCreate
 
-Generate Test Invoice for a Client
+Use this endpoint to create a test invoice for testing and validation purposes. This invoice will mimic a client's real invoice.
 
 ### Example Usage
 
@@ -6275,6 +6430,7 @@ import { Payments } from "@wingspan/payments";
     contactName: "string",
     email: "Zechariah.Bradtke36@yahoo.com",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6297,7 +6453,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsInvoiceInvoiceIdGenerate
 
-Generate a PDF for a specific invoice
+This endpoint allows for the dynamic generation of a PDF document for a given invoice, identified by its unique ID.
 
 ### Example Usage
 
@@ -6310,6 +6466,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.postPaymentsInvoiceInvoiceIdGenerate({
     invoiceId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6332,7 +6489,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsInvoiceInvoiceIdSend
 
-Send an invoice by email
+Use this endpoint to send an invoice by email using its unique ID for identification.
 
 ### Example Usage
 
@@ -6345,6 +6502,7 @@ import { Payments } from "@wingspan/payments";
   const res = await sdk.payments.postPaymentsInvoiceInvoiceIdSend({
     invoiceId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6367,7 +6525,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsMemberClient
 
-Establish a new association between a member and client
+Use this endpoint to create a new linkage between a member and client in the system, allowing for better relationship management.
 
 ### Example Usage
 
@@ -6395,6 +6553,7 @@ import {
     memberData: {},
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6416,7 +6575,7 @@ import {
 
 ## postPaymentsPayApproved
 
-Execute Approved Payroll Transactions
+Processes all approved payroll transactions, ensuring employees and vendors are compensated as per their respective invoices.
 
 ### Example Usage
 
@@ -6427,6 +6586,7 @@ import { Payments } from "@wingspan/payments";
   const sdk = new Payments();
 
   const res = await sdk.payments.postPaymentsPayApproved();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -6448,7 +6608,7 @@ import { Payments } from "@wingspan/payments";
 
 ## postPaymentsPayable
 
-Create a New Payable for a Member on Behalf of a Client
+Allows for the generation of a new Payables for a specific member on behalf of a client. This ensures streamlined billing and effective financial tracking between clients and members.
 
 ### Example Usage
 
@@ -6506,6 +6666,7 @@ import {
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6527,7 +6688,7 @@ import {
 
 ## postPaymentsPayoutSettingsMemberIdDebitCard
 
-Register a new payout debit card for a member
+Allows the addition of a new debit card to a member's profile for payout transactions.
 
 ### Example Usage
 
@@ -6552,6 +6713,7 @@ import { Payments } from "@wingspan/payments";
     },
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

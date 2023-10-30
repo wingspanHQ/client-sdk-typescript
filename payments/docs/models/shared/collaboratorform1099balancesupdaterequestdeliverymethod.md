@@ -3,8 +3,9 @@
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Electronic` | Electronic   |
-| `Mail`       | Mail         |
-| `Both`       | Both         |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Electronic`             | Electronic               |
+| `Mail`                   | Mail                     |
+| `Both`                   | Both                     |
+| `LessThanNilGreaterThan` | <nil>                    |

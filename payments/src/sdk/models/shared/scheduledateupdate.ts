@@ -10,6 +10,7 @@ export enum ScheduleDateUpdateStatus {
     Completed = "Completed",
     Skipped = "Skipped",
     Modified = "Modified",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class ScheduleDateUpdate extends SpeakeasyBase {

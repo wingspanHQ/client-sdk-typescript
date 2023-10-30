@@ -8,6 +8,7 @@ import { Expose } from "class-transformer";
 export enum BulkCalculation1099ItemUpdateCalculationType {
     Balances = "Balances",
     Submissions = "Submissions",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class BulkCalculation1099ItemUpdate extends SpeakeasyBase {
