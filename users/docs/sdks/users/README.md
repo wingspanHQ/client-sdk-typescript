@@ -119,6 +119,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -153,6 +154,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.deleteUsersActivityId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -189,6 +191,7 @@ import { Users } from "@wingspan/users";
     authorizationId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -223,6 +226,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.deleteUsersSessionApiId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -259,6 +263,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -293,6 +298,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.deleteUsersSubscriptionGrantId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -329,6 +335,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -363,6 +370,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.deleteUsersUserMemberIdSubscription({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -400,6 +408,7 @@ import { Users } from "@wingspan/users";
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -433,6 +442,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsers();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -464,6 +474,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAccount();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -499,6 +510,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -531,6 +543,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersActivity();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -566,6 +579,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -598,6 +612,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorization();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -632,6 +647,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersAuthorizationAccountsUserId({
     userId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -668,6 +684,7 @@ import { Users } from "@wingspan/users";
     authorizationId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -700,6 +717,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizedScopeGroups();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -735,6 +753,7 @@ import { Users } from "@wingspan/users";
     requestingUserId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -767,6 +786,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersAuthorizedScopes();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -802,6 +822,7 @@ import { Users } from "@wingspan/users";
     requestingUserId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -835,6 +856,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsersGrantedSubscriberSubscriptionGrant();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -866,6 +888,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersOrganizationUser();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -900,6 +923,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersOrganizationUserUserId({
     userId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -936,6 +960,7 @@ import { Users } from "@wingspan/users";
     userId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -968,6 +993,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersSessionApi();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1002,6 +1028,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersSessionApiId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1038,6 +1065,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1070,6 +1098,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersSubscriptionGrant();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1104,6 +1133,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersSubscriptionGrantId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1140,6 +1170,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1175,6 +1206,7 @@ import { Users } from "@wingspan/users";
     email: "Vincenzo19@gmail.com",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1208,6 +1240,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsersUserLocation();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1239,6 +1272,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersUserMemberSubscriptionPaymentHistory();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1272,6 +1306,7 @@ import { Users } from "@wingspan/users";
 
   const res = await sdk.users.getUsersUserMemberSubscriptionPaymentMethod();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1303,6 +1338,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersUserMemberSubscriptionPlan();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1337,6 +1373,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserMemberSubscriptionPlanId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1373,6 +1410,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1407,6 +1445,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserMemberId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1443,6 +1482,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1477,6 +1517,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserMemberIdSubscription({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1513,6 +1554,7 @@ import { Users } from "@wingspan/users";
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1547,6 +1589,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserMemberMemberIdNextgenSubscriptionPlan({
     memberId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1584,6 +1627,7 @@ import { Users } from "@wingspan/users";
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1620,6 +1664,7 @@ import { Users } from "@wingspan/users";
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1652,6 +1697,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.getUsersUserOccupation();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1686,6 +1732,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserPublicId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1722,6 +1769,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1756,6 +1804,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.getUsersUserId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1799,6 +1848,7 @@ import { AccountUpdateRequestStatus, AccountUpdateRequestUsage } from "@wingspan
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1839,6 +1889,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1876,6 +1927,7 @@ import { AuthorizationUpdateRequestAllowedAction } from "@wingspan/users/dist/sd
     authorizationId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1910,6 +1962,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.patchUsersOrganizationUserUserId({
     userId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1962,6 +2015,7 @@ import {
     userId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2002,6 +2056,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2036,6 +2091,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.patchUsersSessionOtp({
     code: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2073,6 +2129,7 @@ import { SubscriptionGrantUpdateRequestPackage, SubscriptionGrantUpdateRequestPa
     subscriptionGrantUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2131,6 +2188,7 @@ import { CompanyStructure } from "@wingspan/users/dist/sdk/models/shared";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2163,6 +2221,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.patchUsersUserMemberSubscriptionPaymentMethod({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2204,6 +2263,7 @@ import {
     subscriptionUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2299,6 +2359,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2339,6 +2400,7 @@ import {
     subscriptionUpdateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2382,6 +2444,7 @@ import {
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2422,6 +2485,7 @@ import { UserProfileGender } from "@wingspan/users/dist/sdk/models/shared";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2460,6 +2524,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2497,6 +2562,7 @@ import { Users } from "@wingspan/users";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2546,6 +2612,7 @@ import {
     usedFor: {},
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2578,6 +2645,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersAccountLink({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2615,6 +2683,7 @@ import { Users } from "@wingspan/users";
     currency: "Uganda Shilling",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2650,6 +2719,7 @@ import { Users } from "@wingspan/users";
     userId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2684,6 +2754,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.postUsersAuthentication({
     email: "Malvina_Christiansen@gmail.com",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2745,6 +2816,7 @@ import {
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2779,6 +2851,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.postUsersFlatfileAuthToken({
     embedId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2815,6 +2888,7 @@ import { Users } from "@wingspan/users";
     accountId: "string",
     publicToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2854,6 +2928,7 @@ import { NewUserSettingsUserAccountType, UserCreateRequestStatus, UserProfileGen
     profile: {},
     settings: {},
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2906,6 +2981,7 @@ import {
     userId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -2938,6 +3014,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersPendingSession({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -2978,6 +3055,7 @@ import { NewUserSettingsUserAccountType, UserCreateRequestStatus, UserProfileGen
     settings: {},
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3010,6 +3088,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersSession({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3048,6 +3127,7 @@ import { Users } from "@wingspan/users";
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3082,6 +3162,7 @@ import { OtpSessionCreateRequestChannel } from "@wingspan/users/dist/sdk/models/
 
   const res = await sdk.users.postUsersSessionOtp({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3114,6 +3195,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersSessionRequestingUser({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3150,6 +3232,7 @@ import { Users } from "@wingspan/users";
     singleSignOnCode: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3184,6 +3267,7 @@ import { Users } from "@wingspan/users";
   const res = await sdk.users.postUsersSessionSocialAuthGoogle({
     idToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3223,6 +3307,7 @@ import { SubscriptionGrantCreateRequestPackage, SubscriptionGrantCreateRequestPa
     packageTier: SubscriptionGrantCreateRequestPackageTier.Premium,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3261,6 +3346,7 @@ import { NewUserSettingsUserAccountType, UserCreateRequestStatus, UserProfileGen
     profile: {},
     settings: {},
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3319,6 +3405,7 @@ import { CompanyStructure } from "@wingspan/users/dist/sdk/models/shared";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3351,6 +3438,7 @@ import { Users } from "@wingspan/users";
   const sdk = new Users();
 
   const res = await sdk.users.postUsersUserMemberSubscriptionPaymentMethod({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3446,6 +3534,7 @@ import {
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3486,6 +3575,7 @@ import {
     subscriptionCreateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3528,6 +3618,7 @@ import {
     memberId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3564,6 +3655,7 @@ import { PasswordResetRequestUserType } from "@wingspan/users/dist/sdk/models/sh
     email: "Corrine44@yahoo.com",
     userType: PasswordResetRequestUserType.Member,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3603,6 +3695,7 @@ import { Users } from "@wingspan/users";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3638,6 +3731,7 @@ import { Users } from "@wingspan/users";
     beginExistingEmailVerificationRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -3677,6 +3771,7 @@ import { BeginPhoneVerificationRequestChannel } from "@wingspan/users/dist/sdk/m
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
