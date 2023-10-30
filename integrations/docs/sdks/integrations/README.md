@@ -78,6 +78,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -112,6 +113,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountEquityId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -148,6 +150,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -182,6 +185,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountLiabilityId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -218,6 +222,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -252,6 +257,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.deleteIntegrationsQuickbooksCustomerId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -288,6 +294,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -320,6 +327,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.deleteIntegrationsQuickbooksService();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -354,6 +362,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.deleteIntegrationsQuickbooksVendorId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -390,6 +399,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -422,6 +432,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksAccountAsset();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -457,6 +468,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -489,6 +501,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksAccountEquity();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -524,6 +537,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -556,6 +570,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksAccountExpense();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -591,6 +606,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -623,6 +639,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksAccountLiability();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -658,6 +675,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -690,6 +708,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksAccountRevenue();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -725,6 +744,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -757,6 +777,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksCustomer();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -792,6 +813,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -824,6 +846,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksItem();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -859,6 +882,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -892,6 +916,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.getIntegrationsQuickbooksService();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -923,6 +948,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksServiceSyncActivity();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -958,6 +984,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -990,6 +1017,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsQuickbooksVendor();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1025,6 +1053,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1058,6 +1087,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.getIntegrationsWebhooksEventnames();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1089,6 +1119,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.getIntegrationsWebhooksPreference();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1123,6 +1154,7 @@ import { Integrations } from "@wingspan/integrations";
   const res = await sdk.integrations.getIntegrationsWebhooksPreferenceId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1160,6 +1192,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1195,6 +1228,7 @@ import { Integrations } from "@wingspan/integrations";
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1232,6 +1266,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1267,6 +1302,7 @@ import { Integrations } from "@wingspan/integrations";
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1304,6 +1340,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1339,6 +1376,7 @@ import { Integrations } from "@wingspan/integrations";
     integrationCustomerCreateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1376,6 +1414,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1411,6 +1450,7 @@ import { IntegrationsQuickbooksUpdateRequestSyncStatus } from "@wingspan/integra
   const res = await sdk.integrations.patchIntegrationsQuickbooksService({
     defaults: {},
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1450,6 +1490,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1485,6 +1526,7 @@ import { Integrations } from "@wingspan/integrations";
     integrationVendorCreateRequest: {},
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1526,6 +1568,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1558,6 +1601,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsQuickbooksAccountAsset({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1592,6 +1636,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.postIntegrationsQuickbooksAccountEquity({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1624,6 +1669,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsQuickbooksAccountExpense({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1658,6 +1704,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.postIntegrationsQuickbooksAccountLiability({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1690,6 +1737,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsQuickbooksAccountRevenue({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1724,6 +1772,7 @@ import { Integrations } from "@wingspan/integrations";
 
   const res = await sdk.integrations.postIntegrationsQuickbooksCustomer({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1756,6 +1805,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsQuickbooksItem({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1793,6 +1843,7 @@ import { Integrations } from "@wingspan/integrations";
     redirectUrl: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1829,6 +1880,7 @@ import { Integrations } from "@wingspan/integrations";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1861,6 +1913,7 @@ import { Integrations } from "@wingspan/integrations";
   const sdk = new Integrations();
 
   const res = await sdk.integrations.postIntegrationsQuickbooksVendor({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1900,6 +1953,7 @@ import { Integrations } from "@wingspan/integrations";
     ],
     url: "http://corny-registry.name",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
