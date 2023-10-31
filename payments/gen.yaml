@@ -15,7 +15,7 @@ features:
     deprecations: 2.81.1
     globalServerURLs: 2.82.0
 typescript:
-  version: 1.1.0
+  version: 1.0.0
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
