@@ -47,6 +47,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -81,6 +82,7 @@ import { Files } from "@wingspan/files";
   const res = await sdk.files.deleteFilesMemberPublicId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -117,6 +119,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -149,6 +152,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.getFilesDocument();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -183,6 +187,7 @@ import { Files } from "@wingspan/files";
   const res = await sdk.files.getFilesDocumentId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -219,6 +224,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -254,6 +260,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -286,6 +293,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.getFilesMemberPrivate();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -320,6 +328,7 @@ import { Files } from "@wingspan/files";
   const res = await sdk.files.getFilesMemberPrivateId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +365,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -388,6 +398,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.getFilesMemberPublic();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -422,6 +433,7 @@ import { Files } from "@wingspan/files";
   const res = await sdk.files.getFilesMemberPublicId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -458,6 +470,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -493,6 +506,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -525,6 +539,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.getFilesTemplate();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -559,6 +574,7 @@ import { Files } from "@wingspan/files";
   const res = await sdk.files.getFilesTemplateId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -598,6 +614,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -636,6 +653,7 @@ import { Files } from "@wingspan/files";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -669,6 +687,7 @@ import { Files } from "@wingspan/files";
 
   const res = await sdk.files.postFilesMemberPrivate();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -700,6 +719,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.postFilesMemberPrivateUpload();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -733,6 +753,7 @@ import { Files } from "@wingspan/files";
 
   const res = await sdk.files.postFilesMemberPublic();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -764,6 +785,7 @@ import { Files } from "@wingspan/files";
   const sdk = new Files();
 
   const res = await sdk.files.postFilesMemberPublicUpload();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -797,13 +819,14 @@ import { TemplateCreateRequestPurpose, TemplateCreateRequestRoles } from "@wings
   const sdk = new Files();
 
   const res = await sdk.files.postFilesTemplate({
-    fileId: "chase",
+    fileId: "string",
     purpose: TemplateCreateRequestPurpose.OnboardCollaborator,
     roles: [
-      TemplateCreateRequestRoles.Client,
+      TemplateCreateRequestRoles.LessThanNilGreaterThan,
     ],
-    title: "Midland",
+    title: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
