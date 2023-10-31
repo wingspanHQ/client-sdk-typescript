@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Boolean` | Boolean   |
-| `String`  | String    |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Boolean`                | Boolean                  |
+| `String`                 | String                   |
+| `LessThanNilGreaterThan` | <nil>                    |

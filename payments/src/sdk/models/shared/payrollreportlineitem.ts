@@ -51,6 +51,10 @@ export class PayrollReportLineItem extends SpeakeasyBase {
     labels: Record<string, string>;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "labelsBak2" })
+    labelsBak2: Record<string, string>;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "quantity" })
     quantity: number;
 

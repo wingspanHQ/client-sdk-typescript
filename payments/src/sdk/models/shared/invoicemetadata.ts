@@ -21,6 +21,7 @@ export enum InvoiceMetadataPayoutPendingReason {
     InstantPayoutMethodNotSelected = "InstantPayoutMethodNotSelected",
     PlatformErrorInstantPayout = "PlatformErrorInstantPayout",
     InstantPayoutNotEligibleYet = "InstantPayoutNotEligibleYet",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum InvoiceMetadataPendingStatusReason {
@@ -28,6 +29,7 @@ export enum InvoiceMetadataPendingStatusReason {
     CollaboratorMissingEligibilityRequirement = "CollaboratorMissingEligibilityRequirement",
     MemberPayoutMethodNotSelected = "MemberPayoutMethodNotSelected",
     MemberTaxDocumentationNotVerified = "MemberTaxDocumentationNotVerified",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class InvoiceMetadata extends SpeakeasyBase {

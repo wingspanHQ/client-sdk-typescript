@@ -10,6 +10,7 @@ import { Expose, Type } from "class-transformer";
 export enum ClientInvoiceCreateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class ClientInvoiceCreateRequest extends SpeakeasyBase {

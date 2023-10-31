@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name           | Value          |
-| -------------- | -------------- |
-| `Collaborator` | Collaborator   |
-| `LineItem`     | LineItem       |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Collaborator`           | Collaborator             |
+| `LineItem`               | LineItem                 |
+| `LessThanNilGreaterThan` | <nil>                    |

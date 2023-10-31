@@ -11,6 +11,7 @@ export enum BulkPayableBatchUpdateStatus {
     Processing = "Processing",
     Complete = "Complete",
     Failed = "Failed",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class BulkPayableBatchUpdate extends SpeakeasyBase {

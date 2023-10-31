@@ -12,10 +12,12 @@ export enum ClientOptionsWorkflowStatus {
     PaymentInitiated = "PaymentInitiated",
     Funded = "Funded",
     Declined = "Declined",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum ClientOptionsWorkflowSubStatus {
     Submitted = "Submitted",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class ClientOptions extends SpeakeasyBase {

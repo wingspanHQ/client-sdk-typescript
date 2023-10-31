@@ -284,6 +284,7 @@ src/sdk/models/shared/bulkpayableitem.ts
 src/sdk/models/shared/a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.ts
 src/sdk/models/shared/clientinvoice.ts
 src/sdk/models/shared/memberclient.ts
+src/sdk/models/shared/memberclientevents.ts
 src/sdk/models/shared/clientinvoicetemplate.ts
 src/sdk/models/shared/invoicefeecalculation.ts
 src/sdk/models/shared/download1099response.ts
@@ -839,6 +840,7 @@ docs/models/shared/clientinvoice.md
 docs/models/shared/memberclientstatus.md
 docs/models/shared/memberclienttaxstatus.md
 docs/models/shared/memberclient.md
+docs/models/shared/memberclientevents.md
 docs/models/shared/clientinvoicetemplatestatus.md
 docs/models/shared/clientinvoicetemplate.md
 docs/models/shared/invoicefeecalculation.md

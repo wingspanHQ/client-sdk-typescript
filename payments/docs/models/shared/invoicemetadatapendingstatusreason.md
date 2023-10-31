@@ -9,3 +9,4 @@
 | `CollaboratorMissingEligibilityRequirement`       | CollaboratorMissingEligibilityRequirement         |
 | `MemberPayoutMethodNotSelected`                   | MemberPayoutMethodNotSelected                     |
 | `MemberTaxDocumentationNotVerified`               | MemberTaxDocumentationNotVerified                 |
+| `LessThanNilGreaterThan`                          | <nil>                                             |

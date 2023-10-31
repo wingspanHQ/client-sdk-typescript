@@ -6,6 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c } from "./b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c";
 import { ClientData } from "./clientdata";
 import { ExternalIds } from "./externalids";
+import { MemberClientEvents } from "./memberclientevents";
 import { MemberClientFormW9Info } from "./memberclientformw9info";
 import { MemberClientRequirementResponse } from "./memberclientrequirementresponse";
 import { MemberClientWireAccount } from "./memberclientwireaccount";
@@ -80,6 +81,11 @@ export class MemberClient extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "eventActors" })
     eventActors: Record<string, string>;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "events" })
+    @Type(() => MemberClientEvents)
+    events: MemberClientEvents;
 
     @SpeakeasyMetadata()
     @Expose({ name: "externalIds" })
