@@ -29,6 +29,7 @@ import { Benefits } from "@wingspan/benefits";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -61,6 +62,7 @@ import { Benefits } from "@wingspan/benefits";
   const sdk = new Benefits();
 
   const res = await sdk.benefits.getBenefitsPlanEnrollment();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -96,6 +98,7 @@ import { Benefits } from "@wingspan/benefits";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -128,6 +131,7 @@ import { Benefits } from "@wingspan/benefits";
   const sdk = new Benefits();
 
   const res = await sdk.benefits.getBenefitsService();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -165,6 +169,7 @@ import { Benefits } from "@wingspan/benefits";
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
