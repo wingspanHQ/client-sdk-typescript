@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `Balances`    | Balances      |
-| `Submissions` | Submissions   |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Balances`               | Balances                 |
+| `Submissions`            | Submissions              |
+| `LessThanNilGreaterThan` | <nil>                    |

@@ -11,6 +11,7 @@ export enum MemberClientCreateRequestStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class MemberClientCreateRequest extends SpeakeasyBase {

@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `Week`  | Week    |
-| `Month` | Month   |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Week`                   | Week                     |
+| `Month`                  | Month                    |
+| `LessThanNilGreaterThan` | <nil>                    |

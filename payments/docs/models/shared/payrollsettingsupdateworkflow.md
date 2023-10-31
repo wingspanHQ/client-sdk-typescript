@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `SingleStage` | SingleStage   |
-| `DualStage`   | DualStage     |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `SingleStage`            | SingleStage              |
+| `DualStage`              | DualStage                |
+| `LessThanNilGreaterThan` | <nil>                    |

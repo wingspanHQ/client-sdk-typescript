@@ -20,3 +20,4 @@
 | `InstantPayoutMethodNotSelected` | InstantPayoutMethodNotSelected   |
 | `PlatformErrorInstantPayout`     | PlatformErrorInstantPayout       |
 | `InstantPayoutNotEligibleYet`    | InstantPayoutNotEligibleYet      |
+| `LessThanNilGreaterThan`         | <nil>                            |

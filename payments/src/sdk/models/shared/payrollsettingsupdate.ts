@@ -14,11 +14,13 @@ export enum PayrollSettingsUpdateStatus {
     Draft = "Draft",
     Expired = "Expired",
     Cancelled = "Cancelled",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PayrollSettingsUpdateWorkflow {
     SingleStage = "SingleStage",
     DualStage = "DualStage",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class PayrollSettingsUpdate extends SpeakeasyBase {

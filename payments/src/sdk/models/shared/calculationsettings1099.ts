@@ -8,16 +8,19 @@ import { Expose } from "class-transformer";
 export enum CalculationSettings1099CardProcessingFees {
     Include = "Include",
     Exclude = "Exclude",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum CalculationSettings1099OffPlatformPayments {
     Include = "Include",
     Exclude = "Exclude",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum CalculationSettings1099ReimbursableExpenses {
     Include = "Include",
     Exclude = "Exclude",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class CalculationSettings1099 extends SpeakeasyBase {

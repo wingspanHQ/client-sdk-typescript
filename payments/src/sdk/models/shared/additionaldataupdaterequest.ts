@@ -8,11 +8,13 @@ import { Expose } from "class-transformer";
 export enum AdditionalDataUpdateRequestResourceType {
     Collaborator = "Collaborator",
     LineItem = "LineItem",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum AdditionalDataUpdateRequestType {
     Boolean = "Boolean",
     String = "String",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class AdditionalDataUpdateRequest extends SpeakeasyBase {

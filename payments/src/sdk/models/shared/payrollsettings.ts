@@ -19,6 +19,7 @@ export enum PayrollSettingsStatus {
 export enum PayrollSettingsWorkflow {
     SingleStage = "SingleStage",
     DualStage = "DualStage",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class PayrollSettings extends SpeakeasyBase {

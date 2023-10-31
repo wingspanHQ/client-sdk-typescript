@@ -3,10 +3,11 @@
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Open`       | Open         |
-| `Pending`    | Pending      |
-| `Processing` | Processing   |
-| `Complete`   | Complete     |
-| `Failed`     | Failed       |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `Open`                   | Open                     |
+| `Pending`                | Pending                  |
+| `Processing`             | Processing               |
+| `Complete`               | Complete                 |
+| `Failed`                 | Failed                   |
+| `LessThanNilGreaterThan` | <nil>                    |
