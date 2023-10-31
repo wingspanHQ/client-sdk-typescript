@@ -14,7 +14,7 @@ features:
     core: 2.94.0
     globalServerURLs: 2.82.0
 typescript:
-  version: 1.2.0
+  version: 1.0.0
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/users
