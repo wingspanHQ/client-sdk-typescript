@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 09b184af6e751d006ac6ae14ff98da88
   docVersion: 1.0.0
-  speakeasyVersion: 1.103.0
-  generationVersion: 2.168.0
+  speakeasyVersion: 1.109.0
+  generationVersion: 2.173.0
 generation:
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: users
@@ -11,10 +11,10 @@ generation:
   telemetryEnabled: false
 features:
   typescript:
-    core: 2.92.4
+    core: 2.94.0
     globalServerURLs: 2.82.0
 typescript:
-  version: 1.1.0
+  version: 1.2.0
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/users
