@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsPayoutSettingsMemberIdDebitCardRequest extends SpeakeasyBase {
@@ -15,12 +15,6 @@ export class GetPaymentsPayoutSettingsMemberIdDebitCardRequest extends Speakeasy
 }
 
 export class GetPaymentsPayoutSettingsMemberIdDebitCardResponse extends SpeakeasyBase {
-    /**
-     * A list of payout debit cards
-     */
-    @SpeakeasyMetadata({ elemType: shared.CheckbookCard })
-    checkbookCards?: shared.CheckbookCard[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -38,4 +32,10 @@ export class GetPaymentsPayoutSettingsMemberIdDebitCardResponse extends Speakeas
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of payout debit cards
+     */
+    @SpeakeasyMetadata({ elemType: shared.CheckbookCard })
+    classes?: shared.CheckbookCard[];
 }

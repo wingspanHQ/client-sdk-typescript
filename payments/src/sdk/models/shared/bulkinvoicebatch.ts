@@ -7,7 +7,7 @@ import { SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkInvoiceBatchProcessingStrategy {
+export enum ProcessingStrategy {
     Merge = "Merge",
     Single = "Single",
 }
@@ -43,7 +43,7 @@ export class BulkInvoiceBatch extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "processingStrategy" })
-    processingStrategy: BulkInvoiceBatchProcessingStrategy;
+    processingStrategy: ProcessingStrategy;
 
     @SpeakeasyMetadata()
     @Expose({ name: "statistics" })

@@ -16,7 +16,7 @@ export enum PayrollSettingsStatus {
     Cancelled = "Cancelled",
 }
 
-export enum PayrollSettingsWorkflow {
+export enum Workflow {
     SingleStage = "SingleStage",
     DualStage = "DualStage",
     LessThanNilGreaterThan = "<nil>",
@@ -65,5 +65,5 @@ export class PayrollSettings extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "workflow" })
-    workflow?: PayrollSettingsWorkflow;
+    workflow?: Workflow;
 }

@@ -25,7 +25,7 @@ export class PayableUpdateRequestClient extends SpeakeasyBase {}
 
 export class PayableUpdateRequestMember extends SpeakeasyBase {}
 
-export enum PayableUpdateRequestPaymentMethods {
+export enum PaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
@@ -124,7 +124,7 @@ export class PayableUpdateRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethods" })
-    paymentMethods?: PayableUpdateRequestPaymentMethods[];
+    paymentMethods?: PaymentMethods[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })

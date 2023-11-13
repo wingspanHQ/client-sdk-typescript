@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum InvoiceMetadataPayoutPendingReason {
+export enum PayoutPendingReason {
     Admin = "Admin",
     PaymentNotClearedCard = "PaymentNotClearedCard",
     PaymentNotCleared = "PaymentNotCleared",
@@ -24,7 +24,7 @@ export enum InvoiceMetadataPayoutPendingReason {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum InvoiceMetadataPendingStatusReason {
+export enum PendingStatusReason {
     CollaboratorMissingCustomEligibilityRequirement = "CollaboratorMissingCustomEligibilityRequirement",
     CollaboratorMissingEligibilityRequirement = "CollaboratorMissingEligibilityRequirement",
     MemberPayoutMethodNotSelected = "MemberPayoutMethodNotSelected",
@@ -43,11 +43,11 @@ export class InvoiceMetadata extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "payoutPendingReason" })
-    payoutPendingReason?: InvoiceMetadataPayoutPendingReason;
+    payoutPendingReason?: PayoutPendingReason;
 
     @SpeakeasyMetadata()
     @Expose({ name: "pendingStatusReason" })
-    pendingStatusReason?: InvoiceMetadataPendingStatusReason;
+    pendingStatusReason?: PendingStatusReason;
 
     @SpeakeasyMetadata()
     @Expose({ name: "purchaseOrderNumber" })

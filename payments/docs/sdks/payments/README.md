@@ -182,10 +182,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsBankingCardId({
+  const res = await sdk.deletePaymentsBankingCardId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -195,16 +194,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.DeletePaymentsBankingCardIdRequest](../../models/operations/deletepaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.DeletePaymentsBankingCardIdRequest](../../sdk/models/operations/deletepaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsBankingCardIdResponse](../../models/operations/deletepaymentsbankingcardidresponse.md)>**
+**Promise<[operations.DeletePaymentsBankingCardIdResponse](../../sdk/models/operations/deletepaymentsbankingcardidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsBankingInstantPayout
 
@@ -218,8 +221,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsBankingInstantPayout();
-
+  const res = await sdk.deletePaymentsBankingInstantPayout();
 
   if (res.statusCode == 200) {
     // handle response
@@ -236,8 +238,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.DeletePaymentsBankingInstantPayoutResponse](../../models/operations/deletepaymentsbankinginstantpayoutresponse.md)>**
+**Promise<[operations.DeletePaymentsBankingInstantPayoutResponse](../../sdk/models/operations/deletepaymentsbankinginstantpayoutresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsBulkCollaboratorBatchBatchId
 
@@ -251,10 +257,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsBulkCollaboratorBatchBatchId({
+  const res = await sdk.deletePaymentsBulkCollaboratorBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -264,16 +269,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.DeletePaymentsBulkCollaboratorBatchBatchIdRequest](../../models/operations/deletepaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeletePaymentsBulkCollaboratorBatchBatchIdRequest](../../sdk/models/operations/deletepaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsBulkCollaboratorBatchBatchIdResponse](../../models/operations/deletepaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+**Promise<[operations.DeletePaymentsBulkCollaboratorBatchBatchIdResponse](../../sdk/models/operations/deletepaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsBulkPayableBatchBatchId
 
@@ -287,10 +296,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsBulkPayableBatchBatchId({
+  const res = await sdk.deletePaymentsBulkPayableBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -300,16 +308,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.DeletePaymentsBulkPayableBatchBatchIdRequest](../../models/operations/deletepaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.DeletePaymentsBulkPayableBatchBatchIdRequest](../../sdk/models/operations/deletepaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsBulkPayableBatchBatchIdResponse](../../models/operations/deletepaymentsbulkpayablebatchbatchidresponse.md)>**
+**Promise<[operations.DeletePaymentsBulkPayableBatchBatchIdResponse](../../sdk/models/operations/deletepaymentsbulkpayablebatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsClientDeductionId
 
@@ -323,10 +335,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsClientDeductionId({
+  const res = await sdk.deletePaymentsClientDeductionId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -336,16 +347,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.DeletePaymentsClientDeductionIdRequest](../../models/operations/deletepaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.DeletePaymentsClientDeductionIdRequest](../../sdk/models/operations/deletepaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsClientDeductionIdResponse](../../models/operations/deletepaymentsclientdeductionidresponse.md)>**
+**Promise<[operations.DeletePaymentsClientDeductionIdResponse](../../sdk/models/operations/deletepaymentsclientdeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCollaboratorDeductionId
 
@@ -359,10 +374,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorDeductionId({
+  const res = await sdk.deletePaymentsCollaboratorDeductionId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -372,16 +386,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.DeletePaymentsCollaboratorDeductionIdRequest](../../models/operations/deletepaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.DeletePaymentsCollaboratorDeductionIdRequest](../../sdk/models/operations/deletepaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorDeductionIdResponse](../../models/operations/deletepaymentscollaboratordeductionidresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorDeductionIdResponse](../../sdk/models/operations/deletepaymentscollaboratordeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId
 
@@ -395,11 +413,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
+  const res = await sdk.deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
     eligibilityRequirementId: "string",
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -409,16 +426,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                              | Type                                                                                                                                                                                                                   | Required                                                                                                                                                                                                               | Description                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                                              | [operations.DeletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest](../../models/operations/deletepaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                                                                     | The request object to use for the request.                                                                                                                                                                             |
-| `config`                                                                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                           | :heavy_minus_sign:                                                                                                                                                                                                     | Available config options for making requests.                                                                                                                                                                          |
+| Parameter                                                                                                                                                                                                                  | Type                                                                                                                                                                                                                       | Required                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                                                                  | [operations.DeletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest](../../sdk/models/operations/deletepaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                                                                         | The request object to use for the request.                                                                                                                                                                                 |
+| `config`                                                                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                                                                         | Available config options for making requests.                                                                                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdResponse](../../models/operations/deletepaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdResponse](../../sdk/models/operations/deletepaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~deletePaymentsCollaboratorSettingsAdditionalDataId~~
 
@@ -434,10 +455,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorSettingsAdditionalDataId({
+  const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -447,16 +467,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdRequest](../../models/operations/deletepaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
+| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                        | [operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdRequest](../../sdk/models/operations/deletepaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| `config`                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                     | :heavy_minus_sign:                                                                                                                                               | Available config options for making requests.                                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdResponse](../../models/operations/deletepaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdResponse](../../sdk/models/operations/deletepaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCollaboratorSettingsEligibilityRequirementId
 
@@ -470,10 +494,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorSettingsEligibilityRequirementId({
+  const res = await sdk.deletePaymentsCollaboratorSettingsEligibilityRequirementId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -483,16 +506,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                    | [operations.DeletePaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../models/operations/deletepaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
-| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
+| Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                        | [operations.DeletePaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../sdk/models/operations/deletepaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| `config`                                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                     | :heavy_minus_sign:                                                                                                                                                               | Available config options for making requests.                                                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../models/operations/deletepaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../sdk/models/operations/deletepaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCollaboratorSettingsPaymentEligibilityId
 
@@ -506,10 +533,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorSettingsPaymentEligibilityId({
+  const res = await sdk.deletePaymentsCollaboratorSettingsPaymentEligibilityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -519,16 +545,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [operations.DeletePaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../models/operations/deletepaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
-| `config`                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                         | :heavy_minus_sign:                                                                                                                                                   | Available config options for making requests.                                                                                                                        |
+| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                | [operations.DeletePaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../sdk/models/operations/deletepaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
+| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../models/operations/deletepaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../sdk/models/operations/deletepaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCollaboratorId
 
@@ -542,10 +572,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCollaboratorId({
+  const res = await sdk.deletePaymentsCollaboratorId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -555,16 +584,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeletePaymentsCollaboratorIdRequest](../../models/operations/deletepaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.DeletePaymentsCollaboratorIdRequest](../../sdk/models/operations/deletepaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCollaboratorIdResponse](../../models/operations/deletepaymentscollaboratoridresponse.md)>**
+**Promise<[operations.DeletePaymentsCollaboratorIdResponse](../../sdk/models/operations/deletepaymentscollaboratoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsCustomFieldsId
 
@@ -578,10 +611,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsCustomFieldsId({
+  const res = await sdk.deletePaymentsCustomFieldsId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -591,16 +623,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeletePaymentsCustomFieldsIdRequest](../../models/operations/deletepaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.DeletePaymentsCustomFieldsIdRequest](../../sdk/models/operations/deletepaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsCustomFieldsIdResponse](../../models/operations/deletepaymentscustomfieldsidresponse.md)>**
+**Promise<[operations.DeletePaymentsCustomFieldsIdResponse](../../sdk/models/operations/deletepaymentscustomfieldsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsInvoiceTemplateId
 
@@ -614,10 +650,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsInvoiceTemplateId({
+  const res = await sdk.deletePaymentsInvoiceTemplateId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -627,16 +662,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.DeletePaymentsInvoiceTemplateIdRequest](../../models/operations/deletepaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.DeletePaymentsInvoiceTemplateIdRequest](../../sdk/models/operations/deletepaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsInvoiceTemplateIdResponse](../../models/operations/deletepaymentsinvoicetemplateidresponse.md)>**
+**Promise<[operations.DeletePaymentsInvoiceTemplateIdResponse](../../sdk/models/operations/deletepaymentsinvoicetemplateidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsInvoiceId
 
@@ -650,10 +689,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsInvoiceId({
+  const res = await sdk.deletePaymentsInvoiceId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -663,16 +701,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.DeletePaymentsInvoiceIdRequest](../../models/operations/deletepaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.DeletePaymentsInvoiceIdRequest](../../sdk/models/operations/deletepaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsInvoiceIdResponse](../../models/operations/deletepaymentsinvoiceidresponse.md)>**
+**Promise<[operations.DeletePaymentsInvoiceIdResponse](../../sdk/models/operations/deletepaymentsinvoiceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsMemberClientId
 
@@ -686,10 +728,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsMemberClientId({
+  const res = await sdk.deletePaymentsMemberClientId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -699,16 +740,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeletePaymentsMemberClientIdRequest](../../models/operations/deletepaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.DeletePaymentsMemberClientIdRequest](../../sdk/models/operations/deletepaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsMemberClientIdResponse](../../models/operations/deletepaymentsmemberclientidresponse.md)>**
+**Promise<[operations.DeletePaymentsMemberClientIdResponse](../../sdk/models/operations/deletepaymentsmemberclientidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsPayableId
 
@@ -722,10 +767,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsPayableId({
+  const res = await sdk.deletePaymentsPayableId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -735,16 +779,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.DeletePaymentsPayableIdRequest](../../models/operations/deletepaymentspayableidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.DeletePaymentsPayableIdRequest](../../sdk/models/operations/deletepaymentspayableidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsPayableIdResponse](../../models/operations/deletepaymentspayableidresponse.md)>**
+**Promise<[operations.DeletePaymentsPayableIdResponse](../../sdk/models/operations/deletepaymentspayableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsPayoutSettingsMemberIdDebitCardId
 
@@ -758,11 +806,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.deletePaymentsPayoutSettingsMemberIdDebitCardId({
+  const res = await sdk.deletePaymentsPayoutSettingsMemberIdDebitCardId({
     id: "<ID>",
     memberId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -772,16 +819,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdRequest](../../models/operations/deletepaymentspayoutsettingsmemberiddebitcardidrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdRequest](../../sdk/models/operations/deletepaymentspayoutsettingsmemberiddebitcardidrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse](../../models/operations/deletepaymentspayoutsettingsmemberiddebitcardidresponse.md)>**
+**Promise<[operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse](../../sdk/models/operations/deletepaymentspayoutsettingsmemberiddebitcardidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPayments
 
@@ -795,8 +846,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPayments();
-
+  const res = await sdk.getPayments();
 
   if (res.statusCode == 200) {
     // handle response
@@ -813,8 +863,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsResponse](../../models/operations/getpaymentsresponse.md)>**
+**Promise<[operations.GetPaymentsResponse](../../sdk/models/operations/getpaymentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingCard
 
@@ -828,8 +882,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingCard();
-
+  const res = await sdk.getPaymentsBankingCard();
 
   if (res.statusCode == 200) {
     // handle response
@@ -846,8 +899,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingCardResponse](../../models/operations/getpaymentsbankingcardresponse.md)>**
+**Promise<[operations.GetPaymentsBankingCardResponse](../../sdk/models/operations/getpaymentsbankingcardresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingCardId
 
@@ -861,10 +918,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingCardId({
+  const res = await sdk.getPaymentsBankingCardId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -874,16 +930,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetPaymentsBankingCardIdRequest](../../models/operations/getpaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetPaymentsBankingCardIdRequest](../../sdk/models/operations/getpaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingCardIdResponse](../../models/operations/getpaymentsbankingcardidresponse.md)>**
+**Promise<[operations.GetPaymentsBankingCardIdResponse](../../sdk/models/operations/getpaymentsbankingcardidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingInstantPayout
 
@@ -897,8 +957,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingInstantPayout();
-
+  const res = await sdk.getPaymentsBankingInstantPayout();
 
   if (res.statusCode == 200) {
     // handle response
@@ -915,8 +974,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingInstantPayoutResponse](../../models/operations/getpaymentsbankinginstantpayoutresponse.md)>**
+**Promise<[operations.GetPaymentsBankingInstantPayoutResponse](../../sdk/models/operations/getpaymentsbankinginstantpayoutresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingInstitutionRoutingNumber
 
@@ -930,10 +993,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingInstitutionRoutingNumber({
+  const res = await sdk.getPaymentsBankingInstitutionRoutingNumber({
     routingNumber: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -943,16 +1005,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.GetPaymentsBankingInstitutionRoutingNumberRequest](../../models/operations/getpaymentsbankinginstitutionroutingnumberrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.GetPaymentsBankingInstitutionRoutingNumberRequest](../../sdk/models/operations/getpaymentsbankinginstitutionroutingnumberrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingInstitutionRoutingNumberResponse](../../models/operations/getpaymentsbankinginstitutionroutingnumberresponse.md)>**
+**Promise<[operations.GetPaymentsBankingInstitutionRoutingNumberResponse](../../sdk/models/operations/getpaymentsbankinginstitutionroutingnumberresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingStatement
 
@@ -966,8 +1032,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingStatement();
-
+  const res = await sdk.getPaymentsBankingStatement();
 
   if (res.statusCode == 200) {
     // handle response
@@ -984,8 +1049,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingStatementResponse](../../models/operations/getpaymentsbankingstatementresponse.md)>**
+**Promise<[operations.GetPaymentsBankingStatementResponse](../../sdk/models/operations/getpaymentsbankingstatementresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingStatementId
 
@@ -999,10 +1068,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingStatementId({
+  const res = await sdk.getPaymentsBankingStatementId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1012,16 +1080,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetPaymentsBankingStatementIdRequest](../../models/operations/getpaymentsbankingstatementidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.GetPaymentsBankingStatementIdRequest](../../sdk/models/operations/getpaymentsbankingstatementidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingStatementIdResponse](../../models/operations/getpaymentsbankingstatementidresponse.md)>**
+**Promise<[operations.GetPaymentsBankingStatementIdResponse](../../sdk/models/operations/getpaymentsbankingstatementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBankingStatementIdDownload
 
@@ -1035,10 +1107,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBankingStatementIdDownload({
+  const res = await sdk.getPaymentsBankingStatementIdDownload({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1048,16 +1119,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.GetPaymentsBankingStatementIdDownloadRequest](../../models/operations/getpaymentsbankingstatementiddownloadrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.GetPaymentsBankingStatementIdDownloadRequest](../../sdk/models/operations/getpaymentsbankingstatementiddownloadrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBankingStatementIdDownloadResponse](../../models/operations/getpaymentsbankingstatementiddownloadresponse.md)>**
+**Promise<[operations.GetPaymentsBankingStatementIdDownloadResponse](../../sdk/models/operations/getpaymentsbankingstatementiddownloadresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCalculation1099Batch
 
@@ -1071,8 +1146,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCalculation1099Batch();
-
+  const res = await sdk.getPaymentsBulkCalculation1099Batch();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1089,8 +1163,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCalculation1099BatchResponse](../../models/operations/getpaymentsbulkcalculation1099batchresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCalculation1099BatchResponse](../../sdk/models/operations/getpaymentsbulkcalculation1099batchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchId
 
@@ -1104,10 +1182,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCalculation1099BatchBatchId({
+  const res = await sdk.getPaymentsBulkCalculation1099BatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1117,16 +1194,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.GetPaymentsBulkCalculation1099BatchBatchIdRequest](../../models/operations/getpaymentsbulkcalculation1099batchbatchidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.GetPaymentsBulkCalculation1099BatchBatchIdRequest](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdResponse](../../models/operations/getpaymentsbulkcalculation1099batchbatchidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdResponse](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItem
 
@@ -1140,10 +1221,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCalculation1099BatchBatchIdItem({
+  const res = await sdk.getPaymentsBulkCalculation1099BatchBatchIdItem({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1153,16 +1233,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.GetPaymentsBulkCalculation1099BatchBatchIdItemRequest](../../models/operations/getpaymentsbulkcalculation1099batchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [operations.GetPaymentsBulkCalculation1099BatchBatchIdItemRequest](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdItemResponse](../../models/operations/getpaymentsbulkcalculation1099batchbatchiditemresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdItemResponse](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
@@ -1176,11 +1260,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
+  const res = await sdk.getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
     batchId: "string",
     batchItemId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1190,16 +1273,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.GetPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest](../../models/operations/getpaymentsbulkcalculation1099batchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
-| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdResponse](../../models/operations/getpaymentsbulkcalculation1099batchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/getpaymentsbulkcalculation1099batchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkClientBatch
 
@@ -1213,8 +1300,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkClientBatch();
-
+  const res = await sdk.getPaymentsBulkClientBatch();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1231,8 +1317,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkClientBatchResponse](../../models/operations/getpaymentsbulkclientbatchresponse.md)>**
+**Promise<[operations.GetPaymentsBulkClientBatchResponse](../../sdk/models/operations/getpaymentsbulkclientbatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkClientBatchBatchId
 
@@ -1246,10 +1336,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkClientBatchBatchId({
+  const res = await sdk.getPaymentsBulkClientBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1259,16 +1348,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.GetPaymentsBulkClientBatchBatchIdRequest](../../models/operations/getpaymentsbulkclientbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.GetPaymentsBulkClientBatchBatchIdRequest](../../sdk/models/operations/getpaymentsbulkclientbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkClientBatchBatchIdResponse](../../models/operations/getpaymentsbulkclientbatchbatchidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkClientBatchBatchIdResponse](../../sdk/models/operations/getpaymentsbulkclientbatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkClientBatchBatchIdItem
 
@@ -1282,10 +1375,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkClientBatchBatchIdItem({
+  const res = await sdk.getPaymentsBulkClientBatchBatchIdItem({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1295,16 +1387,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.GetPaymentsBulkClientBatchBatchIdItemRequest](../../models/operations/getpaymentsbulkclientbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.GetPaymentsBulkClientBatchBatchIdItemRequest](../../sdk/models/operations/getpaymentsbulkclientbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkClientBatchBatchIdItemResponse](../../models/operations/getpaymentsbulkclientbatchbatchiditemresponse.md)>**
+**Promise<[operations.GetPaymentsBulkClientBatchBatchIdItemResponse](../../sdk/models/operations/getpaymentsbulkclientbatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkClientBatchBatchIdItemBatchItemId
 
@@ -1318,11 +1414,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkClientBatchBatchIdItemBatchItemId({
+  const res = await sdk.getPaymentsBulkClientBatchBatchIdItemBatchItemId({
     batchId: "string",
     batchItemId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1332,16 +1427,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [operations.GetPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest](../../models/operations/getpaymentsbulkclientbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
+| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                    | [operations.GetPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/getpaymentsbulkclientbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkClientBatchBatchIdItemBatchItemIdResponse](../../models/operations/getpaymentsbulkclientbatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkClientBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/getpaymentsbulkclientbatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCollaboratorBatch
 
@@ -1355,8 +1454,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCollaboratorBatch();
-
+  const res = await sdk.getPaymentsBulkCollaboratorBatch();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1373,8 +1471,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCollaboratorBatchResponse](../../models/operations/getpaymentsbulkcollaboratorbatchresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCollaboratorBatchResponse](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCollaboratorBatchBatchId
 
@@ -1388,10 +1490,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCollaboratorBatchBatchId({
+  const res = await sdk.getPaymentsBulkCollaboratorBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1401,16 +1502,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetPaymentsBulkCollaboratorBatchBatchIdRequest](../../models/operations/getpaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.GetPaymentsBulkCollaboratorBatchBatchIdRequest](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdResponse](../../models/operations/getpaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdResponse](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCollaboratorBatchBatchIdItem
 
@@ -1424,10 +1529,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCollaboratorBatchBatchIdItem({
+  const res = await sdk.getPaymentsBulkCollaboratorBatchBatchIdItem({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1437,16 +1541,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.GetPaymentsBulkCollaboratorBatchBatchIdItemRequest](../../models/operations/getpaymentsbulkcollaboratorbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.GetPaymentsBulkCollaboratorBatchBatchIdItemRequest](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdItemResponse](../../models/operations/getpaymentsbulkcollaboratorbatchbatchiditemresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdItemResponse](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId
 
@@ -1460,11 +1568,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
+  const res = await sdk.getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
     batchId: "string",
     batchItemId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1474,16 +1581,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [operations.GetPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest](../../models/operations/getpaymentsbulkcollaboratorbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
-| `config`                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                         | :heavy_minus_sign:                                                                                                                                                   | Available config options for making requests.                                                                                                                        |
+| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                | [operations.GetPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
+| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdResponse](../../models/operations/getpaymentsbulkcollaboratorbatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/getpaymentsbulkcollaboratorbatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkInvoiceBatch
 
@@ -1497,8 +1608,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkInvoiceBatch();
-
+  const res = await sdk.getPaymentsBulkInvoiceBatch();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1515,8 +1625,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkInvoiceBatchResponse](../../models/operations/getpaymentsbulkinvoicebatchresponse.md)>**
+**Promise<[operations.GetPaymentsBulkInvoiceBatchResponse](../../sdk/models/operations/getpaymentsbulkinvoicebatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkInvoiceBatchBatchId
 
@@ -1530,10 +1644,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkInvoiceBatchBatchId({
+  const res = await sdk.getPaymentsBulkInvoiceBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1543,16 +1656,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetPaymentsBulkInvoiceBatchBatchIdRequest](../../models/operations/getpaymentsbulkinvoicebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetPaymentsBulkInvoiceBatchBatchIdRequest](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdResponse](../../models/operations/getpaymentsbulkinvoicebatchbatchidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdResponse](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkInvoiceBatchBatchIdItem
 
@@ -1566,10 +1683,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkInvoiceBatchBatchIdItem({
+  const res = await sdk.getPaymentsBulkInvoiceBatchBatchIdItem({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1579,16 +1695,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.GetPaymentsBulkInvoiceBatchBatchIdItemRequest](../../models/operations/getpaymentsbulkinvoicebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.GetPaymentsBulkInvoiceBatchBatchIdItemRequest](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdItemResponse](../../models/operations/getpaymentsbulkinvoicebatchbatchiditemresponse.md)>**
+**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdItemResponse](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId
 
@@ -1602,11 +1722,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
+  const res = await sdk.getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
     batchId: "string",
     batchItemId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1616,16 +1735,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest](../../models/operations/getpaymentsbulkinvoicebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                      | [operations.GetPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdResponse](../../models/operations/getpaymentsbulkinvoicebatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/getpaymentsbulkinvoicebatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkPayableBatch
 
@@ -1639,8 +1762,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkPayableBatch();
-
+  const res = await sdk.getPaymentsBulkPayableBatch();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1657,8 +1779,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkPayableBatchResponse](../../models/operations/getpaymentsbulkpayablebatchresponse.md)>**
+**Promise<[operations.GetPaymentsBulkPayableBatchResponse](../../sdk/models/operations/getpaymentsbulkpayablebatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkPayableBatchBatchId
 
@@ -1672,10 +1798,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkPayableBatchBatchId({
+  const res = await sdk.getPaymentsBulkPayableBatchBatchId({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1685,16 +1810,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetPaymentsBulkPayableBatchBatchIdRequest](../../models/operations/getpaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetPaymentsBulkPayableBatchBatchIdRequest](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdResponse](../../models/operations/getpaymentsbulkpayablebatchbatchidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdResponse](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkPayableBatchBatchIdImportSummary
 
@@ -1708,10 +1837,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkPayableBatchBatchIdImportSummary({
+  const res = await sdk.getPaymentsBulkPayableBatchBatchIdImportSummary({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1721,16 +1849,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetPaymentsBulkPayableBatchBatchIdImportSummaryRequest](../../models/operations/getpaymentsbulkpayablebatchbatchidimportsummaryrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.GetPaymentsBulkPayableBatchBatchIdImportSummaryRequest](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchidimportsummaryrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdImportSummaryResponse](../../models/operations/getpaymentsbulkpayablebatchbatchidimportsummaryresponse.md)>**
+**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdImportSummaryResponse](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchidimportsummaryresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkPayableBatchBatchIdItem
 
@@ -1744,10 +1876,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkPayableBatchBatchIdItem({
+  const res = await sdk.getPaymentsBulkPayableBatchBatchIdItem({
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1757,16 +1888,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.GetPaymentsBulkPayableBatchBatchIdItemRequest](../../models/operations/getpaymentsbulkpayablebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.GetPaymentsBulkPayableBatchBatchIdItemRequest](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdItemResponse](../../models/operations/getpaymentsbulkpayablebatchbatchiditemresponse.md)>**
+**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdItemResponse](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsBulkPayableBatchBatchIdItemBatchItemId
 
@@ -1780,11 +1915,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsBulkPayableBatchBatchIdItemBatchItemId({
+  const res = await sdk.getPaymentsBulkPayableBatchBatchIdItemBatchItemId({
     batchId: "string",
     batchItemId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1794,16 +1928,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest](../../models/operations/getpaymentsbulkpayablebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                      | [operations.GetPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdItemBatchItemIdResponse](../../models/operations/getpaymentsbulkpayablebatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.GetPaymentsBulkPayableBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/getpaymentsbulkpayablebatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientDeduction
 
@@ -1817,8 +1955,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientDeduction();
-
+  const res = await sdk.getPaymentsClientDeduction();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1835,8 +1972,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientDeductionResponse](../../models/operations/getpaymentsclientdeductionresponse.md)>**
+**Promise<[operations.GetPaymentsClientDeductionResponse](../../sdk/models/operations/getpaymentsclientdeductionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientDeductionId
 
@@ -1850,10 +1991,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientDeductionId({
+  const res = await sdk.getPaymentsClientDeductionId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1863,16 +2003,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetPaymentsClientDeductionIdRequest](../../models/operations/getpaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.GetPaymentsClientDeductionIdRequest](../../sdk/models/operations/getpaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientDeductionIdResponse](../../models/operations/getpaymentsclientdeductionidresponse.md)>**
+**Promise<[operations.GetPaymentsClientDeductionIdResponse](../../sdk/models/operations/getpaymentsclientdeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientInvoice
 
@@ -1886,8 +2030,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientInvoice();
-
+  const res = await sdk.getPaymentsClientInvoice();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1904,8 +2047,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientInvoiceResponse](../../models/operations/getpaymentsclientinvoiceresponse.md)>**
+**Promise<[operations.GetPaymentsClientInvoiceResponse](../../sdk/models/operations/getpaymentsclientinvoiceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientInvoiceTemplate
 
@@ -1919,8 +2066,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientInvoiceTemplate();
-
+  const res = await sdk.getPaymentsClientInvoiceTemplate();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1937,8 +2083,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientInvoiceTemplateResponse](../../models/operations/getpaymentsclientinvoicetemplateresponse.md)>**
+**Promise<[operations.GetPaymentsClientInvoiceTemplateResponse](../../sdk/models/operations/getpaymentsclientinvoicetemplateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientInvoiceTemplateId
 
@@ -1952,10 +2102,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientInvoiceTemplateId({
+  const res = await sdk.getPaymentsClientInvoiceTemplateId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1965,16 +2114,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetPaymentsClientInvoiceTemplateIdRequest](../../models/operations/getpaymentsclientinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetPaymentsClientInvoiceTemplateIdRequest](../../sdk/models/operations/getpaymentsclientinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientInvoiceTemplateIdResponse](../../models/operations/getpaymentsclientinvoicetemplateidresponse.md)>**
+**Promise<[operations.GetPaymentsClientInvoiceTemplateIdResponse](../../sdk/models/operations/getpaymentsclientinvoicetemplateidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientInvoiceId
 
@@ -1988,10 +2141,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientInvoiceId({
+  const res = await sdk.getPaymentsClientInvoiceId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2001,16 +2153,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetPaymentsClientInvoiceIdRequest](../../models/operations/getpaymentsclientinvoiceidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetPaymentsClientInvoiceIdRequest](../../sdk/models/operations/getpaymentsclientinvoiceidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientInvoiceIdResponse](../../models/operations/getpaymentsclientinvoiceidresponse.md)>**
+**Promise<[operations.GetPaymentsClientInvoiceIdResponse](../../sdk/models/operations/getpaymentsclientinvoiceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsClientInvoiceInvoiceIdFees
 
@@ -2024,10 +2180,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsClientInvoiceInvoiceIdFees({
+  const res = await sdk.getPaymentsClientInvoiceInvoiceIdFees({
     invoiceId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2037,16 +2192,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.GetPaymentsClientInvoiceInvoiceIdFeesRequest](../../models/operations/getpaymentsclientinvoiceinvoiceidfeesrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.GetPaymentsClientInvoiceInvoiceIdFeesRequest](../../sdk/models/operations/getpaymentsclientinvoiceinvoiceidfeesrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsClientInvoiceInvoiceIdFeesResponse](../../models/operations/getpaymentsclientinvoiceinvoiceidfeesresponse.md)>**
+**Promise<[operations.GetPaymentsClientInvoiceInvoiceIdFeesResponse](../../sdk/models/operations/getpaymentsclientinvoiceinvoiceidfeesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaborator
 
@@ -2060,8 +2219,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaborator();
-
+  const res = await sdk.getPaymentsCollaborator();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2078,8 +2236,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorResponse](../../models/operations/getpaymentscollaboratorresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorResponse](../../sdk/models/operations/getpaymentscollaboratorresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorDeduction
 
@@ -2093,8 +2255,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorDeduction();
-
+  const res = await sdk.getPaymentsCollaboratorDeduction();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2111,8 +2272,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorDeductionResponse](../../models/operations/getpaymentscollaboratordeductionresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorDeductionResponse](../../sdk/models/operations/getpaymentscollaboratordeductionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorDeductionId
 
@@ -2126,10 +2291,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorDeductionId({
+  const res = await sdk.getPaymentsCollaboratorDeductionId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2139,16 +2303,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetPaymentsCollaboratorDeductionIdRequest](../../models/operations/getpaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetPaymentsCollaboratorDeductionIdRequest](../../sdk/models/operations/getpaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorDeductionIdResponse](../../models/operations/getpaymentscollaboratordeductionidresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorDeductionIdResponse](../../sdk/models/operations/getpaymentscollaboratordeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorGroup
 
@@ -2162,8 +2330,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorGroup();
-
+  const res = await sdk.getPaymentsCollaboratorGroup();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2180,8 +2347,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorGroupResponse](../../models/operations/getpaymentscollaboratorgroupresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorGroupResponse](../../sdk/models/operations/getpaymentscollaboratorgroupresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorGroupId
 
@@ -2195,10 +2366,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorGroupId({
+  const res = await sdk.getPaymentsCollaboratorGroupId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2208,16 +2378,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetPaymentsCollaboratorGroupIdRequest](../../models/operations/getpaymentscollaboratorgroupidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.GetPaymentsCollaboratorGroupIdRequest](../../sdk/models/operations/getpaymentscollaboratorgroupidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorGroupIdResponse](../../models/operations/getpaymentscollaboratorgroupidresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorGroupIdResponse](../../sdk/models/operations/getpaymentscollaboratorgroupidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~getPaymentsCollaboratorSettingsAdditionalData~~
 
@@ -2233,8 +2407,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsAdditionalData();
-
+  const res = await sdk.getPaymentsCollaboratorSettingsAdditionalData();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2251,8 +2424,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsAdditionalDataResponse](../../models/operations/getpaymentscollaboratorsettingsadditionaldataresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsAdditionalDataResponse](../../sdk/models/operations/getpaymentscollaboratorsettingsadditionaldataresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~getPaymentsCollaboratorSettingsAdditionalDataId~~
 
@@ -2268,10 +2445,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsAdditionalDataId({
+  const res = await sdk.getPaymentsCollaboratorSettingsAdditionalDataId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2281,16 +2457,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetPaymentsCollaboratorSettingsAdditionalDataIdRequest](../../models/operations/getpaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.GetPaymentsCollaboratorSettingsAdditionalDataIdRequest](../../sdk/models/operations/getpaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsAdditionalDataIdResponse](../../models/operations/getpaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsAdditionalDataIdResponse](../../sdk/models/operations/getpaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorSettingsEligibilityRequirement
 
@@ -2304,8 +2484,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsEligibilityRequirement();
-
+  const res = await sdk.getPaymentsCollaboratorSettingsEligibilityRequirement();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2322,8 +2501,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsEligibilityRequirementResponse](../../models/operations/getpaymentscollaboratorsettingseligibilityrequirementresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsEligibilityRequirementResponse](../../sdk/models/operations/getpaymentscollaboratorsettingseligibilityrequirementresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorSettingsEligibilityRequirementId
 
@@ -2337,10 +2520,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsEligibilityRequirementId({
+  const res = await sdk.getPaymentsCollaboratorSettingsEligibilityRequirementId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2350,16 +2532,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.GetPaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../models/operations/getpaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
-| `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
+| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                  | [operations.GetPaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../sdk/models/operations/getpaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../models/operations/getpaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../sdk/models/operations/getpaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorSettingsPaymentEligibility
 
@@ -2373,8 +2559,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsPaymentEligibility();
-
+  const res = await sdk.getPaymentsCollaboratorSettingsPaymentEligibility();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2391,8 +2576,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsPaymentEligibilityResponse](../../models/operations/getpaymentscollaboratorsettingspaymenteligibilityresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsPaymentEligibilityResponse](../../sdk/models/operations/getpaymentscollaboratorsettingspaymenteligibilityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorSettingsPaymentEligibilityId
 
@@ -2406,10 +2595,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorSettingsPaymentEligibilityId({
+  const res = await sdk.getPaymentsCollaboratorSettingsPaymentEligibilityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2419,16 +2607,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetPaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../models/operations/getpaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
-| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
+| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                          | [operations.GetPaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../sdk/models/operations/getpaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../models/operations/getpaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../sdk/models/operations/getpaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorId
 
@@ -2442,10 +2634,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorId({
+  const res = await sdk.getPaymentsCollaboratorId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2455,16 +2646,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetPaymentsCollaboratorIdRequest](../../models/operations/getpaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.GetPaymentsCollaboratorIdRequest](../../sdk/models/operations/getpaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorIdResponse](../../models/operations/getpaymentscollaboratoridresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorIdResponse](../../sdk/models/operations/getpaymentscollaboratoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorIdDownload1099YearIndex
 
@@ -2478,12 +2673,11 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorIdDownload1099YearIndex({
+  const res = await sdk.getPaymentsCollaboratorIdDownload1099YearIndex({
     id: "<ID>",
     index: "string",
     year: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2493,16 +2687,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.GetPaymentsCollaboratorIdDownload1099YearIndexRequest](../../models/operations/getpaymentscollaboratoriddownload1099yearindexrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [operations.GetPaymentsCollaboratorIdDownload1099YearIndexRequest](../../sdk/models/operations/getpaymentscollaboratoriddownload1099yearindexrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorIdDownload1099YearIndexResponse](../../models/operations/getpaymentscollaboratoriddownload1099yearindexresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorIdDownload1099YearIndexResponse](../../sdk/models/operations/getpaymentscollaboratoriddownload1099yearindexresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorIdDownloadW9
 
@@ -2516,10 +2714,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorIdDownloadW9({
+  const res = await sdk.getPaymentsCollaboratorIdDownloadW9({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2529,16 +2726,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.GetPaymentsCollaboratorIdDownloadW9Request](../../models/operations/getpaymentscollaboratoriddownloadw9request.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.GetPaymentsCollaboratorIdDownloadW9Request](../../sdk/models/operations/getpaymentscollaboratoriddownloadw9request.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorIdDownloadW9Response](../../models/operations/getpaymentscollaboratoriddownloadw9response.md)>**
+**Promise<[operations.GetPaymentsCollaboratorIdDownloadW9Response](../../sdk/models/operations/getpaymentscollaboratoriddownloadw9response.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCollaboratorIdEvents
 
@@ -2552,10 +2753,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCollaboratorIdEvents({
+  const res = await sdk.getPaymentsCollaboratorIdEvents({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2565,16 +2765,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.GetPaymentsCollaboratorIdEventsRequest](../../models/operations/getpaymentscollaboratorideventsrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.GetPaymentsCollaboratorIdEventsRequest](../../sdk/models/operations/getpaymentscollaboratorideventsrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCollaboratorIdEventsResponse](../../models/operations/getpaymentscollaboratorideventsresponse.md)>**
+**Promise<[operations.GetPaymentsCollaboratorIdEventsResponse](../../sdk/models/operations/getpaymentscollaboratorideventsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCustomFields
 
@@ -2588,8 +2792,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCustomFields();
-
+  const res = await sdk.getPaymentsCustomFields();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2606,8 +2809,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsCustomFieldsResponse](../../models/operations/getpaymentscustomfieldsresponse.md)>**
+**Promise<[operations.GetPaymentsCustomFieldsResponse](../../sdk/models/operations/getpaymentscustomfieldsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsCustomFieldsId
 
@@ -2621,10 +2828,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsCustomFieldsId({
+  const res = await sdk.getPaymentsCustomFieldsId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2634,16 +2840,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetPaymentsCustomFieldsIdRequest](../../models/operations/getpaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.GetPaymentsCustomFieldsIdRequest](../../sdk/models/operations/getpaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsCustomFieldsIdResponse](../../models/operations/getpaymentscustomfieldsidresponse.md)>**
+**Promise<[operations.GetPaymentsCustomFieldsIdResponse](../../sdk/models/operations/getpaymentscustomfieldsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsInvoice
 
@@ -2657,8 +2867,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsInvoice();
-
+  const res = await sdk.getPaymentsInvoice();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2675,8 +2884,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsInvoiceResponse](../../models/operations/getpaymentsinvoiceresponse.md)>**
+**Promise<[operations.GetPaymentsInvoiceResponse](../../sdk/models/operations/getpaymentsinvoiceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsInvoiceTemplate
 
@@ -2690,8 +2903,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsInvoiceTemplate();
-
+  const res = await sdk.getPaymentsInvoiceTemplate();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2708,8 +2920,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsInvoiceTemplateResponse](../../models/operations/getpaymentsinvoicetemplateresponse.md)>**
+**Promise<[operations.GetPaymentsInvoiceTemplateResponse](../../sdk/models/operations/getpaymentsinvoicetemplateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsInvoiceTemplateId
 
@@ -2723,10 +2939,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsInvoiceTemplateId({
+  const res = await sdk.getPaymentsInvoiceTemplateId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2736,16 +2951,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetPaymentsInvoiceTemplateIdRequest](../../models/operations/getpaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.GetPaymentsInvoiceTemplateIdRequest](../../sdk/models/operations/getpaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsInvoiceTemplateIdResponse](../../models/operations/getpaymentsinvoicetemplateidresponse.md)>**
+**Promise<[operations.GetPaymentsInvoiceTemplateIdResponse](../../sdk/models/operations/getpaymentsinvoicetemplateidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsInvoiceId
 
@@ -2759,10 +2978,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsInvoiceId({
+  const res = await sdk.getPaymentsInvoiceId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2772,16 +2990,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetPaymentsInvoiceIdRequest](../../models/operations/getpaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetPaymentsInvoiceIdRequest](../../sdk/models/operations/getpaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsInvoiceIdResponse](../../models/operations/getpaymentsinvoiceidresponse.md)>**
+**Promise<[operations.GetPaymentsInvoiceIdResponse](../../sdk/models/operations/getpaymentsinvoiceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsMcc
 
@@ -2795,8 +3017,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsMcc();
-
+  const res = await sdk.getPaymentsMcc();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2813,8 +3034,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsMccResponse](../../models/operations/getpaymentsmccresponse.md)>**
+**Promise<[operations.GetPaymentsMccResponse](../../sdk/models/operations/getpaymentsmccresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsMemberClient
 
@@ -2828,8 +3053,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsMemberClient();
-
+  const res = await sdk.getPaymentsMemberClient();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2846,8 +3070,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsMemberClientResponse](../../models/operations/getpaymentsmemberclientresponse.md)>**
+**Promise<[operations.GetPaymentsMemberClientResponse](../../sdk/models/operations/getpaymentsmemberclientresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsMemberClientId
 
@@ -2861,10 +3089,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsMemberClientId({
+  const res = await sdk.getPaymentsMemberClientId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2874,16 +3101,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetPaymentsMemberClientIdRequest](../../models/operations/getpaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.GetPaymentsMemberClientIdRequest](../../sdk/models/operations/getpaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsMemberClientIdResponse](../../models/operations/getpaymentsmemberclientidresponse.md)>**
+**Promise<[operations.GetPaymentsMemberClientIdResponse](../../sdk/models/operations/getpaymentsmemberclientidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayable
 
@@ -2897,8 +3128,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayable();
-
+  const res = await sdk.getPaymentsPayable();
 
   if (res.statusCode == 200) {
     // handle response
@@ -2915,8 +3145,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayableResponse](../../models/operations/getpaymentspayableresponse.md)>**
+**Promise<[operations.GetPaymentsPayableResponse](../../sdk/models/operations/getpaymentspayableresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayableId
 
@@ -2930,10 +3164,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayableId({
+  const res = await sdk.getPaymentsPayableId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2943,16 +3176,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetPaymentsPayableIdRequest](../../models/operations/getpaymentspayableidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetPaymentsPayableIdRequest](../../sdk/models/operations/getpaymentspayableidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayableIdResponse](../../models/operations/getpaymentspayableidresponse.md)>**
+**Promise<[operations.GetPaymentsPayableIdResponse](../../sdk/models/operations/getpaymentspayableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayoutSettingsId
 
@@ -2966,10 +3203,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayoutSettingsId({
+  const res = await sdk.getPaymentsPayoutSettingsId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -2979,16 +3215,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetPaymentsPayoutSettingsIdRequest](../../models/operations/getpaymentspayoutsettingsidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetPaymentsPayoutSettingsIdRequest](../../sdk/models/operations/getpaymentspayoutsettingsidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayoutSettingsIdResponse](../../models/operations/getpaymentspayoutsettingsidresponse.md)>**
+**Promise<[operations.GetPaymentsPayoutSettingsIdResponse](../../sdk/models/operations/getpaymentspayoutsettingsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayoutSettingsMemberIdDebitCard
 
@@ -3002,10 +3242,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayoutSettingsMemberIdDebitCard({
+  const res = await sdk.getPaymentsPayoutSettingsMemberIdDebitCard({
     memberId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3015,16 +3254,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.GetPaymentsPayoutSettingsMemberIdDebitCardRequest](../../models/operations/getpaymentspayoutsettingsmemberiddebitcardrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.GetPaymentsPayoutSettingsMemberIdDebitCardRequest](../../sdk/models/operations/getpaymentspayoutsettingsmemberiddebitcardrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayoutSettingsMemberIdDebitCardResponse](../../models/operations/getpaymentspayoutsettingsmemberiddebitcardresponse.md)>**
+**Promise<[operations.GetPaymentsPayoutSettingsMemberIdDebitCardResponse](../../sdk/models/operations/getpaymentspayoutsettingsmemberiddebitcardresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayoutSettingsMemberIdDebitCardId
 
@@ -3038,11 +3281,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayoutSettingsMemberIdDebitCardId({
+  const res = await sdk.getPaymentsPayoutSettingsMemberIdDebitCardId({
     id: "<ID>",
     memberId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3052,16 +3294,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdRequest](../../models/operations/getpaymentspayoutsettingsmemberiddebitcardidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdRequest](../../sdk/models/operations/getpaymentspayoutsettingsmemberiddebitcardidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdResponse](../../models/operations/getpaymentspayoutsettingsmemberiddebitcardidresponse.md)>**
+**Promise<[operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdResponse](../../sdk/models/operations/getpaymentspayoutsettingsmemberiddebitcardidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayrollSettingsId
 
@@ -3075,10 +3321,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayrollSettingsId({
+  const res = await sdk.getPaymentsPayrollSettingsId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3088,16 +3333,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetPaymentsPayrollSettingsIdRequest](../../models/operations/getpaymentspayrollsettingsidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.GetPaymentsPayrollSettingsIdRequest](../../sdk/models/operations/getpaymentspayrollsettingsidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayrollSettingsIdResponse](../../models/operations/getpaymentspayrollsettingsidresponse.md)>**
+**Promise<[operations.GetPaymentsPayrollSettingsIdResponse](../../sdk/models/operations/getpaymentspayrollsettingsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsPayrollImmediatePayable
 
@@ -3111,8 +3360,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsPayrollImmediatePayable();
-
+  const res = await sdk.getPaymentsPayrollImmediatePayable();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3129,8 +3377,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsPayrollImmediatePayableResponse](../../models/operations/getpaymentspayrollimmediatepayableresponse.md)>**
+**Promise<[operations.GetPaymentsPayrollImmediatePayableResponse](../../sdk/models/operations/getpaymentspayrollimmediatepayableresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsReportsAgingLineItems
 
@@ -3144,8 +3396,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsReportsAgingLineItems();
-
+  const res = await sdk.getPaymentsReportsAgingLineItems();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3162,8 +3413,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsReportsAgingLineItemsResponse](../../models/operations/getpaymentsreportsaginglineitemsresponse.md)>**
+**Promise<[operations.GetPaymentsReportsAgingLineItemsResponse](../../sdk/models/operations/getpaymentsreportsaginglineitemsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsReportsAgingPayables
 
@@ -3177,8 +3432,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsReportsAgingPayables();
-
+  const res = await sdk.getPaymentsReportsAgingPayables();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3195,8 +3449,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsReportsAgingPayablesResponse](../../models/operations/getpaymentsreportsagingpayablesresponse.md)>**
+**Promise<[operations.GetPaymentsReportsAgingPayablesResponse](../../sdk/models/operations/getpaymentsreportsagingpayablesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsReportsCollaborators
 
@@ -3210,8 +3468,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsReportsCollaborators();
-
+  const res = await sdk.getPaymentsReportsCollaborators();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3228,8 +3485,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsReportsCollaboratorsResponse](../../models/operations/getpaymentsreportscollaboratorsresponse.md)>**
+**Promise<[operations.GetPaymentsReportsCollaboratorsResponse](../../sdk/models/operations/getpaymentsreportscollaboratorsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsReportsCollaboratorsPayablesSummary
 
@@ -3243,8 +3504,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsReportsCollaboratorsPayablesSummary();
-
+  const res = await sdk.getPaymentsReportsCollaboratorsPayablesSummary();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3261,8 +3521,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsReportsCollaboratorsPayablesSummaryResponse](../../models/operations/getpaymentsreportscollaboratorspayablessummaryresponse.md)>**
+**Promise<[operations.GetPaymentsReportsCollaboratorsPayablesSummaryResponse](../../sdk/models/operations/getpaymentsreportscollaboratorspayablessummaryresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsReportsPayrollPayrollId
 
@@ -3276,10 +3540,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsReportsPayrollPayrollId({
+  const res = await sdk.getPaymentsReportsPayrollPayrollId({
     payrollId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3289,16 +3552,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetPaymentsReportsPayrollPayrollIdRequest](../../models/operations/getpaymentsreportspayrollpayrollidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetPaymentsReportsPayrollPayrollIdRequest](../../sdk/models/operations/getpaymentsreportspayrollpayrollidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsReportsPayrollPayrollIdResponse](../../models/operations/getpaymentsreportspayrollpayrollidresponse.md)>**
+**Promise<[operations.GetPaymentsReportsPayrollPayrollIdResponse](../../sdk/models/operations/getpaymentsreportspayrollpayrollidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsServiceBankingMemberIdApplication
 
@@ -3312,10 +3579,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsServiceBankingMemberIdApplication({
+  const res = await sdk.getPaymentsServiceBankingMemberIdApplication({
     memberId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3325,16 +3591,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.GetPaymentsServiceBankingMemberIdApplicationRequest](../../models/operations/getpaymentsservicebankingmemberidapplicationrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.GetPaymentsServiceBankingMemberIdApplicationRequest](../../sdk/models/operations/getpaymentsservicebankingmemberidapplicationrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsServiceBankingMemberIdApplicationResponse](../../models/operations/getpaymentsservicebankingmemberidapplicationresponse.md)>**
+**Promise<[operations.GetPaymentsServiceBankingMemberIdApplicationResponse](../../sdk/models/operations/getpaymentsservicebankingmemberidapplicationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsSummaryPayables
 
@@ -3348,8 +3618,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsSummaryPayables();
-
+  const res = await sdk.getPaymentsSummaryPayables();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3366,8 +3635,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsSummaryPayablesResponse](../../models/operations/getpaymentssummarypayablesresponse.md)>**
+**Promise<[operations.GetPaymentsSummaryPayablesResponse](../../sdk/models/operations/getpaymentssummarypayablesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsV2Client
 
@@ -3381,8 +3654,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsV2Client();
-
+  const res = await sdk.getPaymentsV2Client();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3399,8 +3671,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsV2ClientResponse](../../models/operations/getpaymentsv2clientresponse.md)>**
+**Promise<[operations.GetPaymentsV2ClientResponse](../../sdk/models/operations/getpaymentsv2clientresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsV2ClientClientId
 
@@ -3414,10 +3690,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsV2ClientClientId({
+  const res = await sdk.getPaymentsV2ClientClientId({
     clientId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3427,16 +3702,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetPaymentsV2ClientClientIdRequest](../../models/operations/getpaymentsv2clientclientidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetPaymentsV2ClientClientIdRequest](../../sdk/models/operations/getpaymentsv2clientclientidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsV2ClientClientIdResponse](../../models/operations/getpaymentsv2clientclientidresponse.md)>**
+**Promise<[operations.GetPaymentsV2ClientClientIdResponse](../../sdk/models/operations/getpaymentsv2clientclientidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsV2Collaborator
 
@@ -3450,8 +3729,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsV2Collaborator();
-
+  const res = await sdk.getPaymentsV2Collaborator();
 
   if (res.statusCode == 200) {
     // handle response
@@ -3468,8 +3746,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.GetPaymentsV2CollaboratorResponse](../../models/operations/getpaymentsv2collaboratorresponse.md)>**
+**Promise<[operations.GetPaymentsV2CollaboratorResponse](../../sdk/models/operations/getpaymentsv2collaboratorresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPaymentsV2CollaboratorMemberId
 
@@ -3483,10 +3765,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.getPaymentsV2CollaboratorMemberId({
+  const res = await sdk.getPaymentsV2CollaboratorMemberId({
     memberId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3496,16 +3777,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.GetPaymentsV2CollaboratorMemberIdRequest](../../models/operations/getpaymentsv2collaboratormemberidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.GetPaymentsV2CollaboratorMemberIdRequest](../../sdk/models/operations/getpaymentsv2collaboratormemberidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPaymentsV2CollaboratorMemberIdResponse](../../models/operations/getpaymentsv2collaboratormemberidresponse.md)>**
+**Promise<[operations.GetPaymentsV2CollaboratorMemberIdResponse](../../sdk/models/operations/getpaymentsv2collaboratormemberidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBankingCardId
 
@@ -3520,13 +3805,12 @@ import { CardUpdateRequestStatus } from "@wingspan/payments/dist/sdk/models/shar
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBankingCardId({
+  const res = await sdk.patchPaymentsBankingCardId({
     cardUpdateRequest: {
       status: CardUpdateRequestStatus.Active,
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3536,16 +3820,20 @@ import { CardUpdateRequestStatus } from "@wingspan/payments/dist/sdk/models/shar
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PatchPaymentsBankingCardIdRequest](../../models/operations/patchpaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.PatchPaymentsBankingCardIdRequest](../../sdk/models/operations/patchpaymentsbankingcardidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBankingCardIdResponse](../../models/operations/patchpaymentsbankingcardidresponse.md)>**
+**Promise<[operations.PatchPaymentsBankingCardIdResponse](../../sdk/models/operations/patchpaymentsbankingcardidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBankingCardIdToken
 
@@ -3559,14 +3847,13 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBankingCardIdToken({
+  const res = await sdk.patchPaymentsBankingCardIdToken({
     cardTokenRequest: {
       verificationCode: "string",
       verificationToken: "string",
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3576,16 +3863,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PatchPaymentsBankingCardIdTokenRequest](../../models/operations/patchpaymentsbankingcardidtokenrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PatchPaymentsBankingCardIdTokenRequest](../../sdk/models/operations/patchpaymentsbankingcardidtokenrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBankingCardIdTokenResponse](../../models/operations/patchpaymentsbankingcardidtokenresponse.md)>**
+**Promise<[operations.PatchPaymentsBankingCardIdTokenResponse](../../sdk/models/operations/patchpaymentsbankingcardidtokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkCalculation1099BatchBatchId
 
@@ -3600,7 +3891,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkCalculation1099BatchBatchId({
+  const res = await sdk.patchPaymentsBulkCalculation1099BatchBatchId({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -3608,7 +3899,6 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3618,16 +3908,20 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PatchPaymentsBulkCalculation1099BatchBatchIdRequest](../../models/operations/patchpaymentsbulkcalculation1099batchbatchidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.PatchPaymentsBulkCalculation1099BatchBatchIdRequest](../../sdk/models/operations/patchpaymentsbulkcalculation1099batchbatchidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkCalculation1099BatchBatchIdResponse](../../models/operations/patchpaymentsbulkcalculation1099batchbatchidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkCalculation1099BatchBatchIdResponse](../../sdk/models/operations/patchpaymentsbulkcalculation1099batchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
@@ -3642,7 +3936,7 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
+  const res = await sdk.patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
     bulkCalculation1099ItemUpdate: {
       labels: {
         "key": "string",
@@ -3652,7 +3946,6 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
     batchItemId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3661,16 +3954,20 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.PatchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest](../../models/operations/patchpaymentsbulkcalculation1099batchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
+| Parameter                                                                                                                                                                          | Type                                                                                                                                                                               | Required                                                                                                                                                                           | Description                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                          | [operations.PatchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/patchpaymentsbulkcalculation1099batchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                                 | The request object to use for the request.                                                                                                                                         |
+| `config`                                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                 | Available config options for making requests.                                                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdResponse](../../models/operations/patchpaymentsbulkcalculation1099batchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/patchpaymentsbulkcalculation1099batchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkClientBatchBatchId
 
@@ -3685,7 +3982,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkClientBatchBatchId({
+  const res = await sdk.patchPaymentsBulkClientBatchBatchId({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -3693,7 +3990,6 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3703,16 +3999,20 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PatchPaymentsBulkClientBatchBatchIdRequest](../../models/operations/patchpaymentsbulkclientbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.PatchPaymentsBulkClientBatchBatchIdRequest](../../sdk/models/operations/patchpaymentsbulkclientbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkClientBatchBatchIdResponse](../../models/operations/patchpaymentsbulkclientbatchbatchidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkClientBatchBatchIdResponse](../../sdk/models/operations/patchpaymentsbulkclientbatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkClientBatchBatchIdItemBatchItemId
 
@@ -3722,16 +4022,12 @@ Allows modification of the details of a specific item within the bulk client bat
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  BulkClientItemUpdateClientStatus,
-  MemberDataAutoPayRequirement,
-  MemberDataShareTaxDocument,
-} from "@wingspan/payments/dist/sdk/models/shared";
+import { AutoPayRequirement, BulkClientItemUpdateClientStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkClientBatchBatchIdItemBatchItemId({
+  const res = await sdk.patchPaymentsBulkClientBatchBatchIdItemBatchItemId({
     bulkClientItemUpdate: {
       integration: {
         quickbooks: {},
@@ -3745,7 +4041,6 @@ import {
     batchItemId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3754,16 +4049,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [operations.PatchPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest](../../models/operations/patchpaymentsbulkclientbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
+| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                        | [operations.PatchPaymentsBulkClientBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/patchpaymentsbulkclientbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| `config`                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                     | :heavy_minus_sign:                                                                                                                                               | Available config options for making requests.                                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkClientBatchBatchIdItemBatchItemIdResponse](../../models/operations/patchpaymentsbulkclientbatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkClientBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/patchpaymentsbulkclientbatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkCollaboratorBatchBatchId
 
@@ -3778,7 +4077,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkCollaboratorBatchBatchId({
+  const res = await sdk.patchPaymentsBulkCollaboratorBatchBatchId({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -3786,7 +4085,6 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
     },
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3796,16 +4094,20 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.PatchPaymentsBulkCollaboratorBatchBatchIdRequest](../../models/operations/patchpaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.PatchPaymentsBulkCollaboratorBatchBatchIdRequest](../../sdk/models/operations/patchpaymentsbulkcollaboratorbatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkCollaboratorBatchBatchIdResponse](../../models/operations/patchpaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkCollaboratorBatchBatchIdResponse](../../sdk/models/operations/patchpaymentsbulkcollaboratorbatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId
 
@@ -3823,7 +4125,7 @@ import {
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
+  const res = await sdk.patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
     bulkCollaboratorItemUpdate: {
       formW9Data: {
         addressLine1: "string",
@@ -3841,7 +4143,6 @@ import {
     batchItemId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3850,16 +4151,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [operations.PatchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest](../../models/operations/patchpaymentsbulkcollaboratorbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
+| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                    | [operations.PatchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/patchpaymentsbulkcollaboratorbatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
+| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdResponse](../../models/operations/patchpaymentsbulkcollaboratorbatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/patchpaymentsbulkcollaboratorbatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkInvoiceBatchBatchId
 
@@ -3874,7 +4179,7 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkInvoiceBatchBatchId({
+  const res = await sdk.patchPaymentsBulkInvoiceBatchBatchId({
     bulkInvoiceBatchUpdate: {
       labels: {
         "key": "string",
@@ -3882,7 +4187,6 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
     },
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3892,16 +4196,20 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PatchPaymentsBulkInvoiceBatchBatchIdRequest](../../models/operations/patchpaymentsbulkinvoicebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PatchPaymentsBulkInvoiceBatchBatchIdRequest](../../sdk/models/operations/patchpaymentsbulkinvoicebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkInvoiceBatchBatchIdResponse](../../models/operations/patchpaymentsbulkinvoicebatchbatchidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkInvoiceBatchBatchIdResponse](../../sdk/models/operations/patchpaymentsbulkinvoicebatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId
 
@@ -3916,7 +4224,7 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
+  const res = await sdk.patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
     bulkInvoiceItemUpdate: {
       acceptedPaymentMethods: [
         BulkInvoiceItemUpdateAcceptedPaymentMethods.Manual,
@@ -3930,7 +4238,6 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
     batchItemId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -3939,16 +4246,20 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.PatchPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest](../../models/operations/patchpaymentsbulkinvoicebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
-| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
+| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                          | [operations.PatchPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/patchpaymentsbulkinvoicebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdResponse](../../models/operations/patchpaymentsbulkinvoicebatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkInvoiceBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/patchpaymentsbulkinvoicebatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkPayableBatchBatchId
 
@@ -3963,7 +4274,7 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkPayableBatchBatchId({
+  const res = await sdk.patchPaymentsBulkPayableBatchBatchId({
     bulkPayableBatchUpdate: {
       labels: {
         "key": "string",
@@ -3971,7 +4282,6 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
     },
     batchId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -3981,16 +4291,20 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PatchPaymentsBulkPayableBatchBatchIdRequest](../../models/operations/patchpaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PatchPaymentsBulkPayableBatchBatchIdRequest](../../sdk/models/operations/patchpaymentsbulkpayablebatchbatchidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkPayableBatchBatchIdResponse](../../models/operations/patchpaymentsbulkpayablebatchbatchidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkPayableBatchBatchIdResponse](../../sdk/models/operations/patchpaymentsbulkpayablebatchbatchidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsBulkPayableBatchBatchIdItemBatchItemId
 
@@ -4005,7 +4319,7 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsBulkPayableBatchBatchIdItemBatchItemId({
+  const res = await sdk.patchPaymentsBulkPayableBatchBatchIdItemBatchItemId({
     bulkPayableItemUpdate: {
       labels: {
         "key": "string",
@@ -4015,7 +4329,6 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
     batchItemId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4024,16 +4337,20 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.PatchPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest](../../models/operations/patchpaymentsbulkpayablebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
-| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
+| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                          | [operations.PatchPaymentsBulkPayableBatchBatchIdItemBatchItemIdRequest](../../sdk/models/operations/patchpaymentsbulkpayablebatchbatchiditembatchitemidrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsBulkPayableBatchBatchIdItemBatchItemIdResponse](../../models/operations/patchpaymentsbulkpayablebatchbatchiditembatchitemidresponse.md)>**
+**Promise<[operations.PatchPaymentsBulkPayableBatchBatchIdItemBatchItemIdResponse](../../sdk/models/operations/patchpaymentsbulkpayablebatchbatchiditembatchitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsClientDeductionId
 
@@ -4048,11 +4365,10 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsClientDeductionId({
+  const res = await sdk.patchPaymentsClientDeductionId({
     deductionUpdateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4062,16 +4378,20 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PatchPaymentsClientDeductionIdRequest](../../models/operations/patchpaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PatchPaymentsClientDeductionIdRequest](../../sdk/models/operations/patchpaymentsclientdeductionidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsClientDeductionIdResponse](../../models/operations/patchpaymentsclientdeductionidresponse.md)>**
+**Promise<[operations.PatchPaymentsClientDeductionIdResponse](../../sdk/models/operations/patchpaymentsclientdeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsClientInvoiceTemplateId
 
@@ -4085,13 +4405,12 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsClientInvoiceTemplateId({
+  const res = await sdk.patchPaymentsClientInvoiceTemplateId({
     clientInvoiceTemplateUpdateRequest: {
       clientId: "string",
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4101,16 +4420,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PatchPaymentsClientInvoiceTemplateIdRequest](../../models/operations/patchpaymentsclientinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PatchPaymentsClientInvoiceTemplateIdRequest](../../sdk/models/operations/patchpaymentsclientinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsClientInvoiceTemplateIdResponse](../../models/operations/patchpaymentsclientinvoicetemplateidresponse.md)>**
+**Promise<[operations.PatchPaymentsClientInvoiceTemplateIdResponse](../../sdk/models/operations/patchpaymentsclientinvoicetemplateidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsClientInvoiceId
 
@@ -4125,13 +4448,12 @@ import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/dist/sdk/mo
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsClientInvoiceId({
+  const res = await sdk.patchPaymentsClientInvoiceId({
     clientInvoiceUpdateRequest: {
       creditFeeHandling: {},
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4141,16 +4463,20 @@ import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/dist/sdk/mo
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PatchPaymentsClientInvoiceIdRequest](../../models/operations/patchpaymentsclientinvoiceidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.PatchPaymentsClientInvoiceIdRequest](../../sdk/models/operations/patchpaymentsclientinvoiceidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsClientInvoiceIdResponse](../../models/operations/patchpaymentsclientinvoiceidresponse.md)>**
+**Promise<[operations.PatchPaymentsClientInvoiceIdResponse](../../sdk/models/operations/patchpaymentsclientinvoiceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorDeductionId
 
@@ -4165,11 +4491,10 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorDeductionId({
+  const res = await sdk.patchPaymentsCollaboratorDeductionId({
     deductionUpdateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4179,16 +4504,20 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PatchPaymentsCollaboratorDeductionIdRequest](../../models/operations/patchpaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PatchPaymentsCollaboratorDeductionIdRequest](../../sdk/models/operations/patchpaymentscollaboratordeductionidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorDeductionIdResponse](../../models/operations/patchpaymentscollaboratordeductionidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorDeductionIdResponse](../../sdk/models/operations/patchpaymentscollaboratordeductionidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorGroupId
 
@@ -4202,7 +4531,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorGroupId({
+  const res = await sdk.patchPaymentsCollaboratorGroupId({
     collaboratorGroupUpdateRequest: {
       collaboratorSettings: {
         "key": "string",
@@ -4214,7 +4543,6 @@ import { Payments } from "@wingspan/payments";
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4223,16 +4551,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.PatchPaymentsCollaboratorGroupIdRequest](../../models/operations/patchpaymentscollaboratorgroupidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.PatchPaymentsCollaboratorGroupIdRequest](../../sdk/models/operations/patchpaymentscollaboratorgroupidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorGroupIdResponse](../../models/operations/patchpaymentscollaboratorgroupidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorGroupIdResponse](../../sdk/models/operations/patchpaymentscollaboratorgroupidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId
 
@@ -4246,14 +4578,13 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
+  const res = await sdk.patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
     collaboratorGroupRequirementUpdate: {
       newEligibilityRequirementId: "string",
     },
     eligibilityRequirementId: "string",
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4263,16 +4594,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                            | Type                                                                                                                                                                                                                 | Required                                                                                                                                                                                                             | Description                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                                            | [operations.PatchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest](../../models/operations/patchpaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                                                                   | The request object to use for the request.                                                                                                                                                                           |
-| `config`                                                                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                                                   | Available config options for making requests.                                                                                                                                                                        |
+| Parameter                                                                                                                                                                                                                | Type                                                                                                                                                                                                                     | Required                                                                                                                                                                                                                 | Description                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                                                                | [operations.PatchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdRequest](../../sdk/models/operations/patchpaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                                                                       | The request object to use for the request.                                                                                                                                                                               |
+| `config`                                                                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                                                             | :heavy_minus_sign:                                                                                                                                                                                                       | Available config options for making requests.                                                                                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdResponse](../../models/operations/patchpaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementIdResponse](../../sdk/models/operations/patchpaymentscollaboratorgroupideligibilityrequirementeligibilityrequirementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~patchPaymentsCollaboratorSettingsAdditionalDataId~~
 
@@ -4289,11 +4624,10 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorSettingsAdditionalDataId({
+  const res = await sdk.patchPaymentsCollaboratorSettingsAdditionalDataId({
     additionalDataUpdateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4303,16 +4637,20 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdRequest](../../models/operations/patchpaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                      | [operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdRequest](../../sdk/models/operations/patchpaymentscollaboratorsettingsadditionaldataidrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdResponse](../../models/operations/patchpaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdResponse](../../sdk/models/operations/patchpaymentscollaboratorsettingsadditionaldataidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorSettingsEligibilityRequirementId
 
@@ -4327,13 +4665,12 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorSettingsEligibilityRequirementId({
+  const res = await sdk.patchPaymentsCollaboratorSettingsEligibilityRequirementId({
     eligibilityRequirementUpdateRequest: {
       requirementType: EligibilityRequirementUpdateRequestRequirementType.Signature,
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4343,16 +4680,20 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.PatchPaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../models/operations/patchpaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
-| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PatchPaymentsCollaboratorSettingsEligibilityRequirementIdRequest](../../sdk/models/operations/patchpaymentscollaboratorsettingseligibilityrequirementidrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `config`                                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                   | :heavy_minus_sign:                                                                                                                                                             | Available config options for making requests.                                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../models/operations/patchpaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorSettingsEligibilityRequirementIdResponse](../../sdk/models/operations/patchpaymentscollaboratorsettingseligibilityrequirementidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorSettingsPaymentEligibilityId
 
@@ -4366,13 +4707,12 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorSettingsPaymentEligibilityId({
+  const res = await sdk.patchPaymentsCollaboratorSettingsPaymentEligibilityId({
     paymentEligibilityUpdateRequest: {
       value: {},
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4382,16 +4722,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [operations.PatchPaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../models/operations/patchpaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
-| `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
+| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                              | [operations.PatchPaymentsCollaboratorSettingsPaymentEligibilityIdRequest](../../sdk/models/operations/patchpaymentscollaboratorsettingspaymenteligibilityidrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../models/operations/patchpaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorSettingsPaymentEligibilityIdResponse](../../sdk/models/operations/patchpaymentscollaboratorsettingspaymenteligibilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorId
 
@@ -4402,19 +4746,19 @@ Update specific details or attributes related to an existing collaborator.
 ```typescript
 import { Payments } from "@wingspan/payments";
 import {
+  AutoPayStrategy,
   Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure,
-  ClientDataAutoPayStrategy,
-  ClientDataVerificationStratgy,
-  CollaboratorForm1099BalancesUpdateRequestDeliveryMethod,
   CollaboratorForm1099BalancesUpdateRequestStatus,
   CollaboratorUpdateRequestStatus,
+  DeliveryMethod,
   Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status,
+  VerificationStratgy,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorId({
+  const res = await sdk.patchPaymentsCollaboratorId({
     collaboratorUpdateRequest: {
       clientData: {},
       form1099Balances: {
@@ -4444,7 +4788,6 @@ import {
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4453,16 +4796,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PatchPaymentsCollaboratorIdRequest](../../models/operations/patchpaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.PatchPaymentsCollaboratorIdRequest](../../sdk/models/operations/patchpaymentscollaboratoridrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorIdResponse](../../models/operations/patchpaymentscollaboratoridresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorIdResponse](../../sdk/models/operations/patchpaymentscollaboratoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorIdAddGroupGroupId
 
@@ -4476,11 +4823,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorIdAddGroupGroupId({
+  const res = await sdk.patchPaymentsCollaboratorIdAddGroupGroupId({
     groupId: "string",
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4490,16 +4836,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PatchPaymentsCollaboratorIdAddGroupGroupIdRequest](../../models/operations/patchpaymentscollaboratoridaddgroupgroupidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.PatchPaymentsCollaboratorIdAddGroupGroupIdRequest](../../sdk/models/operations/patchpaymentscollaboratoridaddgroupgroupidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorIdAddGroupGroupIdResponse](../../models/operations/patchpaymentscollaboratoridaddgroupgroupidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorIdAddGroupGroupIdResponse](../../sdk/models/operations/patchpaymentscollaboratoridaddgroupgroupidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCollaboratorIdRemoveGroupGroupId
 
@@ -4513,11 +4863,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCollaboratorIdRemoveGroupGroupId({
+  const res = await sdk.patchPaymentsCollaboratorIdRemoveGroupGroupId({
     groupId: "string",
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4527,16 +4876,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.PatchPaymentsCollaboratorIdRemoveGroupGroupIdRequest](../../models/operations/patchpaymentscollaboratoridremovegroupgroupidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.PatchPaymentsCollaboratorIdRemoveGroupGroupIdRequest](../../sdk/models/operations/patchpaymentscollaboratoridremovegroupgroupidrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCollaboratorIdRemoveGroupGroupIdResponse](../../models/operations/patchpaymentscollaboratoridremovegroupgroupidresponse.md)>**
+**Promise<[operations.PatchPaymentsCollaboratorIdRemoveGroupGroupIdResponse](../../sdk/models/operations/patchpaymentscollaboratoridremovegroupgroupidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsCustomFieldsId
 
@@ -4551,11 +4904,10 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsCustomFieldsId({
+  const res = await sdk.patchPaymentsCustomFieldsId({
     additionalDataUpdateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4565,16 +4917,20 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PatchPaymentsCustomFieldsIdRequest](../../models/operations/patchpaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.PatchPaymentsCustomFieldsIdRequest](../../sdk/models/operations/patchpaymentscustomfieldsidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsCustomFieldsIdResponse](../../models/operations/patchpaymentscustomfieldsidresponse.md)>**
+**Promise<[operations.PatchPaymentsCustomFieldsIdResponse](../../sdk/models/operations/patchpaymentscustomfieldsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsInvoiceTemplateId
 
@@ -4586,18 +4942,18 @@ Updates details of the specified invoice template based on the provided informat
 import { Payments } from "@wingspan/payments";
 import {
   FrequencyUpdateInterval,
-  InvoiceMetadataPayoutPendingReason,
-  InvoiceMetadataPendingStatusReason,
   InvoiceTemplateUpdateRequestStatus,
   InvoiceUpdateRequestAcceptedPaymentMethods,
   InvoiceUpdateRequestStatus,
+  PayoutPendingReason,
+  PendingStatusReason,
   ScheduleDateUpdateStatus,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsInvoiceTemplateId({
+  const res = await sdk.patchPaymentsInvoiceTemplateId({
     invoiceTemplateUpdateRequest: {
       frequency: {},
       invoiceData: {
@@ -4658,7 +5014,6 @@ import {
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4667,16 +5022,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PatchPaymentsInvoiceTemplateIdRequest](../../models/operations/patchpaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PatchPaymentsInvoiceTemplateIdRequest](../../sdk/models/operations/patchpaymentsinvoicetemplateidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsInvoiceTemplateIdResponse](../../models/operations/patchpaymentsinvoicetemplateidresponse.md)>**
+**Promise<[operations.PatchPaymentsInvoiceTemplateIdResponse](../../sdk/models/operations/patchpaymentsinvoicetemplateidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsInvoiceId
 
@@ -4688,16 +5047,16 @@ Allows updates to the details of an existing member invoice using its unique ID.
 import { Payments } from "@wingspan/payments";
 import {
   FrequencyUpdateInterval,
-  InvoiceMetadataPayoutPendingReason,
-  InvoiceMetadataPendingStatusReason,
   InvoiceUpdateRequestAcceptedPaymentMethods,
   InvoiceUpdateRequestStatus,
+  PayoutPendingReason,
+  PendingStatusReason,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsInvoiceId({
+  const res = await sdk.patchPaymentsInvoiceId({
     invoiceUpdateRequest: {
       acceptedPaymentMethods: [
         InvoiceUpdateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
@@ -4749,7 +5108,6 @@ import {
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4758,16 +5116,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchPaymentsInvoiceIdRequest](../../models/operations/patchpaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PatchPaymentsInvoiceIdRequest](../../sdk/models/operations/patchpaymentsinvoiceidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsInvoiceIdResponse](../../models/operations/patchpaymentsinvoiceidresponse.md)>**
+**Promise<[operations.PatchPaymentsInvoiceIdResponse](../../sdk/models/operations/patchpaymentsinvoiceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsMemberClientId
 
@@ -4778,21 +5140,21 @@ Modifies details of the association between a member and a client based on the p
 ```typescript
 import { Payments } from "@wingspan/payments";
 import {
+  AutoPayRequirement,
+  AutoPayStrategy,
   Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure,
-  ClientDataAutoPayStrategy,
-  ClientDataVerificationStratgy,
-  CollaboratorForm1099BalancesUpdateRequestDeliveryMethod,
   CollaboratorForm1099BalancesUpdateRequestStatus,
+  DeliveryMethod,
   Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status,
   MemberClientUpdateRequestStatus,
-  MemberDataAutoPayRequirement,
-  MemberDataShareTaxDocument,
+  ShareTaxDocument,
+  VerificationStratgy,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsMemberClientId({
+  const res = await sdk.patchPaymentsMemberClientId({
     memberClientUpdateRequest: {
       clientData: {},
       emailCC: [
@@ -4826,7 +5188,6 @@ import {
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -4835,16 +5196,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PatchPaymentsMemberClientIdRequest](../../models/operations/patchpaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.PatchPaymentsMemberClientIdRequest](../../sdk/models/operations/patchpaymentsmemberclientidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsMemberClientIdResponse](../../models/operations/patchpaymentsmemberclientidresponse.md)>**
+**Promise<[operations.PatchPaymentsMemberClientIdResponse](../../sdk/models/operations/patchpaymentsmemberclientidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsPayableId
 
@@ -4856,17 +5221,17 @@ This API endpoint facilitates the updating of existing payable details related t
 import { Payments } from "@wingspan/payments";
 import {
   FrequencyUpdateInterval,
-  InvoiceMetadataPayoutPendingReason,
-  InvoiceMetadataPendingStatusReason,
   PayableUpdateRequestAcceptedPaymentMethods,
-  PayableUpdateRequestPaymentMethods,
   PayableUpdateRequestStatus,
+  PaymentMethods,
+  PayoutPendingReason,
+  PendingStatusReason,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsPayableId({
+  const res = await sdk.patchPaymentsPayableId({
     payableUpdateRequest: {
       acceptedPaymentMethods: [
         PayableUpdateRequestAcceptedPaymentMethods.Manual,
@@ -4915,12 +5280,11 @@ import {
         sendReminders: false,
       },
       paymentMethods: [
-        PayableUpdateRequestPaymentMethods.Ach,
+        PaymentMethods.Ach,
       ],
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4930,16 +5294,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchPaymentsPayableIdRequest](../../models/operations/patchpaymentspayableidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PatchPaymentsPayableIdRequest](../../sdk/models/operations/patchpaymentspayableidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsPayableIdResponse](../../models/operations/patchpaymentspayableidresponse.md)>**
+**Promise<[operations.PatchPaymentsPayableIdResponse](../../sdk/models/operations/patchpaymentspayableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsPayoutSettingsId
 
@@ -4958,7 +5326,7 @@ import {
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsPayoutSettingsId({
+  const res = await sdk.patchPaymentsPayoutSettingsId({
     payoutSettingsUpdate: {
       payoutDestinations: [
         {},
@@ -4966,7 +5334,6 @@ import {
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -4976,16 +5343,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PatchPaymentsPayoutSettingsIdRequest](../../models/operations/patchpaymentspayoutsettingsidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.PatchPaymentsPayoutSettingsIdRequest](../../sdk/models/operations/patchpaymentspayoutsettingsidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsPayoutSettingsIdResponse](../../models/operations/patchpaymentspayoutsettingsidresponse.md)>**
+**Promise<[operations.PatchPaymentsPayoutSettingsIdResponse](../../sdk/models/operations/patchpaymentspayoutsettingsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchPaymentsPayrollSettingsId
 
@@ -4996,21 +5367,21 @@ Update certain attributes or details of payroll settings associated with the pro
 ```typescript
 import { Payments } from "@wingspan/payments";
 import {
-  CalculationSettings1099CardProcessingFees,
-  CalculationSettings1099OffPlatformPayments,
-  CalculationSettings1099ReimbursableExpenses,
+  CardProcessingFees,
   FrequencyUpdateInterval,
-  FundingSourceFundingSourceCurrency,
-  FundingSourceFundingSourceType,
+  FundingSourceCurrency,
+  FundingSourceType,
+  OffPlatformPayments,
   PayrollSettingsUpdateStatus,
   PayrollSettingsUpdateWorkflow,
+  ReimbursableExpenses,
   ScheduleDateUpdateStatus,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.patchPaymentsPayrollSettingsId({
+  const res = await sdk.patchPaymentsPayrollSettingsId({
     payrollSettingsUpdate: {
       calculationSettings1099: {
         stateTaxId: {
@@ -5019,9 +5390,9 @@ import {
       },
       frequency: {},
       fundingSource: {
-        fundingSourceCurrency: FundingSourceFundingSourceCurrency.Cad,
+        fundingSourceCurrency: FundingSourceCurrency.Cad,
         fundingSourceId: "string",
-        fundingSourceType: FundingSourceFundingSourceType.Account,
+        fundingSourceType: FundingSourceType.Account,
       },
       scheduleDates: [
         {},
@@ -5029,7 +5400,6 @@ import {
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5039,16 +5409,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PatchPaymentsPayrollSettingsIdRequest](../../models/operations/patchpaymentspayrollsettingsidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PatchPaymentsPayrollSettingsIdRequest](../../sdk/models/operations/patchpaymentspayrollsettingsidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchPaymentsPayrollSettingsIdResponse](../../models/operations/patchpaymentspayrollsettingsidresponse.md)>**
+**Promise<[operations.PatchPaymentsPayrollSettingsIdResponse](../../sdk/models/operations/patchpaymentspayrollsettingsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBankingCard
 
@@ -5062,7 +5436,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBankingCard({
+  const res = await sdk.postPaymentsBankingCard({
     shippingAddress: {
       addressLine1: "string",
       city: "Tamarafield",
@@ -5070,7 +5444,6 @@ import { Payments } from "@wingspan/payments";
       state: "string",
     },
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5080,16 +5453,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `request`                                                            | [shared.CardCreateRequest](../../models/shared/cardcreaterequest.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
-| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `request`                                                                | [shared.CardCreateRequest](../../sdk/models/shared/cardcreaterequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBankingCardResponse](../../models/operations/postpaymentsbankingcardresponse.md)>**
+**Promise<[operations.PostPaymentsBankingCardResponse](../../sdk/models/operations/postpaymentsbankingcardresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBankingCardIdToken
 
@@ -5103,13 +5480,12 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBankingCardIdToken({
+  const res = await sdk.postPaymentsBankingCardIdToken({
     cardCodeRequest: {
       channel: "string",
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5119,16 +5495,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PostPaymentsBankingCardIdTokenRequest](../../models/operations/postpaymentsbankingcardidtokenrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PostPaymentsBankingCardIdTokenRequest](../../sdk/models/operations/postpaymentsbankingcardidtokenrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBankingCardIdTokenResponse](../../models/operations/postpaymentsbankingcardidtokenresponse.md)>**
+**Promise<[operations.PostPaymentsBankingCardIdTokenResponse](../../sdk/models/operations/postpaymentsbankingcardidtokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBankingInstantPayout
 
@@ -5142,10 +5522,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBankingInstantPayout({
+  const res = await sdk.postPaymentsBankingInstantPayout({
     externalPayoutAccountToken: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5155,16 +5534,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [shared.InstantPayoutRequest](../../models/shared/instantpayoutrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.InstantPayoutRequest](../../sdk/models/shared/instantpayoutrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBankingInstantPayoutResponse](../../models/operations/postpaymentsbankinginstantpayoutresponse.md)>**
+**Promise<[operations.PostPaymentsBankingInstantPayoutResponse](../../sdk/models/operations/postpaymentsbankinginstantpayoutresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkCalculation1099Batch
 
@@ -5178,12 +5561,11 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkCalculation1099Batch({
+  const res = await sdk.postPaymentsBulkCalculation1099Batch({
     labels: {
       "key": "string",
     },
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5193,16 +5575,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `request`                                                        | [shared.BulkBatchCreate](../../models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                               | The request object to use for the request.                       |
-| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `request`                                                            | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkCalculation1099BatchResponse](../../models/operations/postpaymentsbulkcalculation1099batchresponse.md)>**
+**Promise<[operations.PostPaymentsBulkCalculation1099BatchResponse](../../sdk/models/operations/postpaymentsbulkcalculation1099batchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkCalculation1099BatchBatchIdItem
 
@@ -5217,7 +5603,7 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkCalculation1099BatchBatchIdItem({
+  const res = await sdk.postPaymentsBulkCalculation1099BatchBatchIdItem({
     bulkCalculation1099ItemCreate: {
       clientId: "string",
       labels: {
@@ -5228,7 +5614,6 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
     batchId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5237,16 +5622,20 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.PostPaymentsBulkCalculation1099BatchBatchIdItemRequest](../../models/operations/postpaymentsbulkcalculation1099batchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.PostPaymentsBulkCalculation1099BatchBatchIdItemRequest](../../sdk/models/operations/postpaymentsbulkcalculation1099batchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkCalculation1099BatchBatchIdItemResponse](../../models/operations/postpaymentsbulkcalculation1099batchbatchiditemresponse.md)>**
+**Promise<[operations.PostPaymentsBulkCalculation1099BatchBatchIdItemResponse](../../sdk/models/operations/postpaymentsbulkcalculation1099batchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkClientBatch
 
@@ -5260,12 +5649,11 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkClientBatch({
+  const res = await sdk.postPaymentsBulkClientBatch({
     labels: {
       "key": "string",
     },
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5275,16 +5663,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `request`                                                        | [shared.BulkBatchCreate](../../models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                               | The request object to use for the request.                       |
-| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `request`                                                            | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkClientBatchResponse](../../models/operations/postpaymentsbulkclientbatchresponse.md)>**
+**Promise<[operations.PostPaymentsBulkClientBatchResponse](../../sdk/models/operations/postpaymentsbulkclientbatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkClientBatchBatchIdItem
 
@@ -5294,16 +5686,12 @@ Inserts a new item into the specified bulk client batch, allowing for further ex
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  BulkClientItemCreateClientStatus,
-  MemberDataAutoPayRequirement,
-  MemberDataShareTaxDocument,
-} from "@wingspan/payments/dist/sdk/models/shared";
+import { AutoPayRequirement, BulkClientItemCreateClientStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkClientBatchBatchIdItem({
+  const res = await sdk.postPaymentsBulkClientBatchBatchIdItem({
     bulkClientItemCreate: {
       integration: {
         quickbooks: {},
@@ -5316,7 +5704,6 @@ import {
     batchId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5325,16 +5712,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.PostPaymentsBulkClientBatchBatchIdItemRequest](../../models/operations/postpaymentsbulkclientbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.PostPaymentsBulkClientBatchBatchIdItemRequest](../../sdk/models/operations/postpaymentsbulkclientbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkClientBatchBatchIdItemResponse](../../models/operations/postpaymentsbulkclientbatchbatchiditemresponse.md)>**
+**Promise<[operations.PostPaymentsBulkClientBatchBatchIdItemResponse](../../sdk/models/operations/postpaymentsbulkclientbatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkCollaboratorBatch
 
@@ -5348,12 +5739,11 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkCollaboratorBatch({
+  const res = await sdk.postPaymentsBulkCollaboratorBatch({
     labels: {
       "key": "string",
     },
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5363,16 +5753,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `request`                                                        | [shared.BulkBatchCreate](../../models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                               | The request object to use for the request.                       |
-| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `request`                                                            | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkCollaboratorBatchResponse](../../models/operations/postpaymentsbulkcollaboratorbatchresponse.md)>**
+**Promise<[operations.PostPaymentsBulkCollaboratorBatchResponse](../../sdk/models/operations/postpaymentsbulkcollaboratorbatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkCollaboratorBatchBatchIdItem
 
@@ -5390,7 +5784,7 @@ import {
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkCollaboratorBatchBatchIdItem({
+  const res = await sdk.postPaymentsBulkCollaboratorBatchBatchIdItem({
     bulkCollaboratorItemCreate: {
       formW9Data: {
         addressLine1: "string",
@@ -5407,7 +5801,6 @@ import {
     batchId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5416,16 +5809,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PostPaymentsBulkCollaboratorBatchBatchIdItemRequest](../../models/operations/postpaymentsbulkcollaboratorbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.PostPaymentsBulkCollaboratorBatchBatchIdItemRequest](../../sdk/models/operations/postpaymentsbulkcollaboratorbatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkCollaboratorBatchBatchIdItemResponse](../../models/operations/postpaymentsbulkcollaboratorbatchbatchiditemresponse.md)>**
+**Promise<[operations.PostPaymentsBulkCollaboratorBatchBatchIdItemResponse](../../sdk/models/operations/postpaymentsbulkcollaboratorbatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkInvoiceBatch
 
@@ -5440,13 +5837,12 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkInvoiceBatch({
+  const res = await sdk.postPaymentsBulkInvoiceBatch({
     labels: {
       "key": "string",
     },
     processingStrategy: BulkInvoiceBatchCreateProcessingStrategy.Single,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5456,16 +5852,20 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.BulkInvoiceBatchCreate](../../models/shared/bulkinvoicebatchcreate.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [shared.BulkInvoiceBatchCreate](../../sdk/models/shared/bulkinvoicebatchcreate.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkInvoiceBatchResponse](../../models/operations/postpaymentsbulkinvoicebatchresponse.md)>**
+**Promise<[operations.PostPaymentsBulkInvoiceBatchResponse](../../sdk/models/operations/postpaymentsbulkinvoicebatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkInvoiceBatchBatchIdItem
 
@@ -5480,7 +5880,7 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkInvoiceBatchBatchIdItem({
+  const res = await sdk.postPaymentsBulkInvoiceBatchBatchIdItem({
     bulkInvoiceItemCreate: {
       acceptedPaymentMethods: [
         BulkInvoiceItemCreateAcceptedPaymentMethods.Credit,
@@ -5498,7 +5898,6 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
     batchId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5507,16 +5906,20 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.PostPaymentsBulkInvoiceBatchBatchIdItemRequest](../../models/operations/postpaymentsbulkinvoicebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.PostPaymentsBulkInvoiceBatchBatchIdItemRequest](../../sdk/models/operations/postpaymentsbulkinvoicebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkInvoiceBatchBatchIdItemResponse](../../models/operations/postpaymentsbulkinvoicebatchbatchiditemresponse.md)>**
+**Promise<[operations.PostPaymentsBulkInvoiceBatchBatchIdItemResponse](../../sdk/models/operations/postpaymentsbulkinvoicebatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkPayableBatch
 
@@ -5531,13 +5934,12 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkPayableBatch({
+  const res = await sdk.postPaymentsBulkPayableBatch({
     labels: {
       "key": "string",
     },
     processingStrategy: BulkPayableBatchCreateProcessingStrategy.Single,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5547,16 +5949,20 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.BulkPayableBatchCreate](../../models/shared/bulkpayablebatchcreate.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [shared.BulkPayableBatchCreate](../../sdk/models/shared/bulkpayablebatchcreate.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkPayableBatchResponse](../../models/operations/postpaymentsbulkpayablebatchresponse.md)>**
+**Promise<[operations.PostPaymentsBulkPayableBatchResponse](../../sdk/models/operations/postpaymentsbulkpayablebatchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsBulkPayableBatchBatchIdItem
 
@@ -5571,7 +5977,7 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsBulkPayableBatchBatchIdItem({
+  const res = await sdk.postPaymentsBulkPayableBatchBatchIdItem({
     bulkPayableItemCreate: {
       amount: 5083.09,
       bulkPayableBatchId: "string",
@@ -5585,7 +5991,6 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
     batchId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5594,16 +5999,20 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.PostPaymentsBulkPayableBatchBatchIdItemRequest](../../models/operations/postpaymentsbulkpayablebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.PostPaymentsBulkPayableBatchBatchIdItemRequest](../../sdk/models/operations/postpaymentsbulkpayablebatchbatchiditemrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsBulkPayableBatchBatchIdItemResponse](../../models/operations/postpaymentsbulkpayablebatchbatchiditemresponse.md)>**
+**Promise<[operations.PostPaymentsBulkPayableBatchBatchIdItemResponse](../../sdk/models/operations/postpaymentsbulkpayablebatchbatchiditemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsClientDeduction
 
@@ -5618,7 +6027,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsClientDeduction({
+  const res = await sdk.postPaymentsClientDeduction({
     amount: 7904.18,
     clientId: "string",
     currency: DeductionCreateRequestCurrency.Cad,
@@ -5626,7 +6035,6 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
     name: "string",
     type: DeductionCreateRequestType.PostPayment,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5636,16 +6044,20 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.DeductionCreateRequest](../../models/shared/deductioncreaterequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [shared.DeductionCreateRequest](../../sdk/models/shared/deductioncreaterequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsClientDeductionResponse](../../models/operations/postpaymentsclientdeductionresponse.md)>**
+**Promise<[operations.PostPaymentsClientDeductionResponse](../../sdk/models/operations/postpaymentsclientdeductionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsClientInvoice
 
@@ -5660,7 +6072,7 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsClientInvoice({
+  const res = await sdk.postPaymentsClientInvoice({
     clientEmail: "string",
     clientEmailCC: [
       "string",
@@ -5681,7 +6093,6 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
     memberId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5690,16 +6101,20 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [shared.ClientInvoiceCreateRequest](../../models/shared/clientinvoicecreaterequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [shared.ClientInvoiceCreateRequest](../../sdk/models/shared/clientinvoicecreaterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsClientInvoiceResponse](../../models/operations/postpaymentsclientinvoiceresponse.md)>**
+**Promise<[operations.PostPaymentsClientInvoiceResponse](../../sdk/models/operations/postpaymentsclientinvoiceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsClientInvoiceTemplate
 
@@ -5712,14 +6127,14 @@ import { Payments } from "@wingspan/payments";
 import {
   ClientInvoiceDataCreateRequestCurrency,
   ClientInvoiceTemplateCreateRequestStatus,
-  FrequencyInterval,
+  Interval,
   ScheduleDateStatus,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsClientInvoiceTemplate({
+  const res = await sdk.postPaymentsClientInvoiceTemplate({
     clientEmail: "string",
     clientEmailCC: [
       "string",
@@ -5751,7 +6166,6 @@ import {
     status: ClientInvoiceTemplateCreateRequestStatus.Expired,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5760,16 +6174,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [shared.ClientInvoiceTemplateCreateRequest](../../models/shared/clientinvoicetemplatecreaterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [shared.ClientInvoiceTemplateCreateRequest](../../sdk/models/shared/clientinvoicetemplatecreaterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsClientInvoiceTemplateResponse](../../models/operations/postpaymentsclientinvoicetemplateresponse.md)>**
+**Promise<[operations.PostPaymentsClientInvoiceTemplateResponse](../../sdk/models/operations/postpaymentsclientinvoicetemplateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsClientInvoiceInvoiceIdPay
 
@@ -5783,11 +6201,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsClientInvoiceInvoiceIdPay({
+  const res = await sdk.postPaymentsClientInvoiceInvoiceIdPay({
     payRequest: {},
     invoiceId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5797,16 +6214,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PostPaymentsClientInvoiceInvoiceIdPayRequest](../../models/operations/postpaymentsclientinvoiceinvoiceidpayrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.PostPaymentsClientInvoiceInvoiceIdPayRequest](../../sdk/models/operations/postpaymentsclientinvoiceinvoiceidpayrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsClientInvoiceInvoiceIdPayResponse](../../models/operations/postpaymentsclientinvoiceinvoiceidpayresponse.md)>**
+**Promise<[operations.PostPaymentsClientInvoiceInvoiceIdPayResponse](../../sdk/models/operations/postpaymentsclientinvoiceinvoiceidpayresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaborator
 
@@ -5817,16 +6238,16 @@ Add a new collaborator to the system, allowing them to be eligible for payments.
 ```typescript
 import { Payments } from "@wingspan/payments";
 import {
-  ClientDataAutoPayStrategy,
-  ClientDataVerificationStratgy,
+  AutoPayStrategy,
   CollaboratorCreateRequestStatus,
   MemberClientFormW9InfoCompanyStructure,
+  VerificationStratgy,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaborator({
+  const res = await sdk.postPaymentsCollaborator({
     clientData: {},
     clientId: "string",
     formW9Data: {
@@ -5845,7 +6266,6 @@ import {
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5854,16 +6274,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.CollaboratorCreateRequest](../../models/shared/collaboratorcreaterequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [shared.CollaboratorCreateRequest](../../sdk/models/shared/collaboratorcreaterequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorResponse](../../models/operations/postpaymentscollaboratorresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorResponse](../../sdk/models/operations/postpaymentscollaboratorresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaboratorDeduction
 
@@ -5878,7 +6302,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaboratorDeduction({
+  const res = await sdk.postPaymentsCollaboratorDeduction({
     amount: 2103.26,
     clientId: "string",
     currency: DeductionCreateRequestCurrency.Cad,
@@ -5886,7 +6310,6 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
     name: "string",
     type: DeductionCreateRequestType.PrePayment,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5896,16 +6319,20 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.DeductionCreateRequest](../../models/shared/deductioncreaterequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [shared.DeductionCreateRequest](../../sdk/models/shared/deductioncreaterequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorDeductionResponse](../../models/operations/postpaymentscollaboratordeductionresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorDeductionResponse](../../sdk/models/operations/postpaymentscollaboratordeductionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaboratorGroup
 
@@ -5919,7 +6346,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaboratorGroup({
+  const res = await sdk.postPaymentsCollaboratorGroup({
     collaboratorSettings: {
       "key": "string",
     },
@@ -5930,7 +6357,6 @@ import { Payments } from "@wingspan/payments";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -5939,16 +6365,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [shared.CollaboratorGroupCreateRequest](../../models/shared/collaboratorgroupcreaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [shared.CollaboratorGroupCreateRequest](../../sdk/models/shared/collaboratorgroupcreaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorGroupResponse](../../models/operations/postpaymentscollaboratorgroupresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorGroupResponse](../../sdk/models/operations/postpaymentscollaboratorgroupresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~postPaymentsCollaboratorSettingsAdditionalData~~
 
@@ -5960,19 +6390,18 @@ import { Payments } from "@wingspan/payments";
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/payments/dist/sdk/models/shared";
+import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaboratorSettingsAdditionalData({
+  const res = await sdk.postPaymentsCollaboratorSettingsAdditionalData({
     key: "<key>",
     name: "string",
     required: false,
-    resourceType: AdditionalDataResourceType.LineItem,
-    type: AdditionalDataType.String,
+    resourceType: ResourceType.LineItem,
+    type: TypeT.String,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -5982,16 +6411,20 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
 
 ### Parameters
 
-| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
-| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| `request`                                                      | [shared.AdditionalData](../../models/shared/additionaldata.md) | :heavy_check_mark:                                             | The request object to use for the request.                     |
-| `config`                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)   | :heavy_minus_sign:                                             | Available config options for making requests.                  |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `request`                                                          | [shared.AdditionalData](../../sdk/models/shared/additionaldata.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+| `config`                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)       | :heavy_minus_sign:                                                 | Available config options for making requests.                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorSettingsAdditionalDataResponse](../../models/operations/postpaymentscollaboratorsettingsadditionaldataresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorSettingsAdditionalDataResponse](../../sdk/models/operations/postpaymentscollaboratorsettingsadditionaldataresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaboratorSettingsEligibilityRequirement
 
@@ -6006,10 +6439,9 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaboratorSettingsEligibilityRequirement({
+  const res = await sdk.postPaymentsCollaboratorSettingsEligibilityRequirement({
     requirementType: EligibilityRequirementCreateRequestRequirementType.Signature,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6019,16 +6451,20 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [shared.EligibilityRequirementCreateRequest](../../models/shared/eligibilityrequirementcreaterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [shared.EligibilityRequirementCreateRequest](../../sdk/models/shared/eligibilityrequirementcreaterequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorSettingsEligibilityRequirementResponse](../../models/operations/postpaymentscollaboratorsettingseligibilityrequirementresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorSettingsEligibilityRequirementResponse](../../sdk/models/operations/postpaymentscollaboratorsettingseligibilityrequirementresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaboratorSettingsPaymentEligibility
 
@@ -6042,11 +6478,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaboratorSettingsPaymentEligibility({
+  const res = await sdk.postPaymentsCollaboratorSettingsPaymentEligibility({
     field: "string",
     value: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6056,16 +6491,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `request`                                                              | [shared.PaymentEligibility](../../models/shared/paymenteligibility.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
-| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [shared.PaymentEligibility](../../sdk/models/shared/paymenteligibility.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaboratorSettingsPaymentEligibilityResponse](../../models/operations/postpaymentscollaboratorsettingspaymenteligibilityresponse.md)>**
+**Promise<[operations.PostPaymentsCollaboratorSettingsPaymentEligibilityResponse](../../sdk/models/operations/postpaymentscollaboratorsettingspaymenteligibilityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaborator1099Calculate
 
@@ -6079,11 +6518,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaborator1099Calculate({
+  const res = await sdk.postPaymentsCollaborator1099Calculate({
     memberClientId: "string",
     year: 7927.08,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6093,16 +6531,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [shared.Calculate1099Request](../../models/shared/calculate1099request.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.Calculate1099Request](../../sdk/models/shared/calculate1099request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaborator1099CalculateResponse](../../models/operations/postpaymentscollaborator1099calculateresponse.md)>**
+**Promise<[operations.PostPaymentsCollaborator1099CalculateResponse](../../sdk/models/operations/postpaymentscollaborator1099calculateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaborator1099MarkUndelivered
 
@@ -6116,12 +6558,11 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaborator1099MarkUndelivered({
+  const res = await sdk.postPaymentsCollaborator1099MarkUndelivered({
     memberId: "string",
     submissionIndex: 2792.15,
     year: 7049.25,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6131,16 +6572,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [shared.Mark1099AsUndeliveredRequest](../../models/shared/mark1099asundeliveredrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [shared.Mark1099AsUndeliveredRequest](../../sdk/models/shared/mark1099asundeliveredrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaborator1099MarkUndeliveredResponse](../../models/operations/postpaymentscollaborator1099markundeliveredresponse.md)>**
+**Promise<[operations.PostPaymentsCollaborator1099MarkUndeliveredResponse](../../sdk/models/operations/postpaymentscollaborator1099markundeliveredresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCollaborator1099Remail
 
@@ -6154,7 +6599,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCollaborator1099Remail({
+  const res = await sdk.postPaymentsCollaborator1099Remail({
     address: {
       addressLine1: "string",
       city: "Johnstonfield",
@@ -6165,7 +6610,6 @@ import { Payments } from "@wingspan/payments";
     year: 1958.97,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6174,16 +6618,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `request`                                                            | [shared.Remail1099Request](../../models/shared/remail1099request.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
-| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `request`                                                                | [shared.Remail1099Request](../../sdk/models/shared/remail1099request.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCollaborator1099RemailResponse](../../models/operations/postpaymentscollaborator1099remailresponse.md)>**
+**Promise<[operations.PostPaymentsCollaborator1099RemailResponse](../../sdk/models/operations/postpaymentscollaborator1099remailresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsCustomFields
 
@@ -6193,19 +6641,18 @@ Define a new custom field for payments using additional data provided.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/payments/dist/sdk/models/shared";
+import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsCustomFields({
+  const res = await sdk.postPaymentsCustomFields({
     key: "<key>",
     name: "string",
     required: false,
-    resourceType: AdditionalDataResourceType.LineItem,
-    type: AdditionalDataType.String,
+    resourceType: ResourceType.LineItem,
+    type: TypeT.String,
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6215,16 +6662,20 @@ import { AdditionalDataResourceType, AdditionalDataType } from "@wingspan/paymen
 
 ### Parameters
 
-| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
-| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| `request`                                                      | [shared.AdditionalData](../../models/shared/additionaldata.md) | :heavy_check_mark:                                             | The request object to use for the request.                     |
-| `config`                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)   | :heavy_minus_sign:                                             | Available config options for making requests.                  |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `request`                                                          | [shared.AdditionalData](../../sdk/models/shared/additionaldata.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+| `config`                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)       | :heavy_minus_sign:                                                 | Available config options for making requests.                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsCustomFieldsResponse](../../models/operations/postpaymentscustomfieldsresponse.md)>**
+**Promise<[operations.PostPaymentsCustomFieldsResponse](../../sdk/models/operations/postpaymentscustomfieldsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsInvoice
 
@@ -6240,14 +6691,14 @@ import {
   InvoiceCreateRequestAcceptedPaymentMethods,
   InvoiceCreateRequestCurrency,
   InvoiceCreateRequestStatus,
-  InvoiceMetadataPayoutPendingReason,
-  InvoiceMetadataPendingStatusReason,
+  PayoutPendingReason,
+  PendingStatusReason,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsInvoice({
+  const res = await sdk.postPaymentsInvoice({
     acceptedPaymentMethods: [
       InvoiceCreateRequestAcceptedPaymentMethods.Manual,
     ],
@@ -6295,7 +6746,6 @@ import {
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6304,16 +6754,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [shared.InvoiceCreateRequest](../../models/shared/invoicecreaterequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.InvoiceCreateRequest](../../sdk/models/shared/invoicecreaterequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsInvoiceResponse](../../models/operations/postpaymentsinvoiceresponse.md)>**
+**Promise<[operations.PostPaymentsInvoiceResponse](../../sdk/models/operations/postpaymentsinvoiceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsInvoiceTemplate
 
@@ -6324,7 +6778,7 @@ Creates a new invoice template based on the provided details.
 ```typescript
 import { Payments } from "@wingspan/payments";
 import {
-  FrequencyInterval,
+  Interval,
   InvoiceCollaboratorCreateRequestCurrency,
   InvoiceDataCreateRequestAcceptedPaymentMethods,
   InvoiceDataCreateRequestCurrency,
@@ -6336,7 +6790,7 @@ import {
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsInvoiceTemplate({
+  const res = await sdk.postPaymentsInvoiceTemplate({
     frequency: {
       startDate: "string",
     },
@@ -6394,7 +6848,6 @@ import {
     status: InvoiceTemplateCreateRequestStatus.Cancelled,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6403,16 +6856,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [shared.InvoiceTemplateCreateRequest](../../models/shared/invoicetemplatecreaterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [shared.InvoiceTemplateCreateRequest](../../sdk/models/shared/invoicetemplatecreaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsInvoiceTemplateResponse](../../models/operations/postpaymentsinvoicetemplateresponse.md)>**
+**Promise<[operations.PostPaymentsInvoiceTemplateResponse](../../sdk/models/operations/postpaymentsinvoicetemplateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsInvoiceTestCreate
 
@@ -6426,11 +6883,10 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsInvoiceTestCreate({
+  const res = await sdk.postPaymentsInvoiceTestCreate({
     contactName: "string",
     email: "Zechariah.Bradtke36@yahoo.com",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6440,16 +6896,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `request`                                                            | [shared.TestInvoiceCreate](../../models/shared/testinvoicecreate.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
-| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `request`                                                                | [shared.TestInvoiceCreate](../../sdk/models/shared/testinvoicecreate.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsInvoiceTestCreateResponse](../../models/operations/postpaymentsinvoicetestcreateresponse.md)>**
+**Promise<[operations.PostPaymentsInvoiceTestCreateResponse](../../sdk/models/operations/postpaymentsinvoicetestcreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsInvoiceInvoiceIdGenerate
 
@@ -6463,10 +6923,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsInvoiceInvoiceIdGenerate({
+  const res = await sdk.postPaymentsInvoiceInvoiceIdGenerate({
     invoiceId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6476,16 +6935,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PostPaymentsInvoiceInvoiceIdGenerateRequest](../../models/operations/postpaymentsinvoiceinvoiceidgeneraterequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PostPaymentsInvoiceInvoiceIdGenerateRequest](../../sdk/models/operations/postpaymentsinvoiceinvoiceidgeneraterequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsInvoiceInvoiceIdGenerateResponse](../../models/operations/postpaymentsinvoiceinvoiceidgenerateresponse.md)>**
+**Promise<[operations.PostPaymentsInvoiceInvoiceIdGenerateResponse](../../sdk/models/operations/postpaymentsinvoiceinvoiceidgenerateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsInvoiceInvoiceIdSend
 
@@ -6499,10 +6962,9 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsInvoiceInvoiceIdSend({
+  const res = await sdk.postPaymentsInvoiceInvoiceIdSend({
     invoiceId: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -6512,16 +6974,20 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.PostPaymentsInvoiceInvoiceIdSendRequest](../../models/operations/postpaymentsinvoiceinvoiceidsendrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.PostPaymentsInvoiceInvoiceIdSendRequest](../../sdk/models/operations/postpaymentsinvoiceinvoiceidsendrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsInvoiceInvoiceIdSendResponse](../../models/operations/postpaymentsinvoiceinvoiceidsendresponse.md)>**
+**Promise<[operations.PostPaymentsInvoiceInvoiceIdSendResponse](../../sdk/models/operations/postpaymentsinvoiceinvoiceidsendresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsMemberClient
 
@@ -6531,16 +6997,12 @@ Use this endpoint to create a new linkage between a member and client in the sys
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  MemberClientCreateRequestStatus,
-  MemberDataAutoPayRequirement,
-  MemberDataShareTaxDocument,
-} from "@wingspan/payments/dist/sdk/models/shared";
+import { AutoPayRequirement, MemberClientCreateRequestStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsMemberClient({
+  const res = await sdk.postPaymentsMemberClient({
     emailCC: [
       "string",
     ],
@@ -6553,7 +7015,6 @@ import {
     memberData: {},
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6562,16 +7023,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.MemberClientCreateRequest](../../models/shared/memberclientcreaterequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [shared.MemberClientCreateRequest](../../sdk/models/shared/memberclientcreaterequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsMemberClientResponse](../../models/operations/postpaymentsmemberclientresponse.md)>**
+**Promise<[operations.PostPaymentsMemberClientResponse](../../sdk/models/operations/postpaymentsmemberclientresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsPayApproved
 
@@ -6585,8 +7050,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsPayApproved();
-
+  const res = await sdk.postPaymentsPayApproved();
 
   if (res.statusCode == 200) {
     // handle response
@@ -6603,8 +7067,12 @@ import { Payments } from "@wingspan/payments";
 
 ### Response
 
-**Promise<[operations.PostPaymentsPayApprovedResponse](../../models/operations/postpaymentspayapprovedresponse.md)>**
+**Promise<[operations.PostPaymentsPayApprovedResponse](../../sdk/models/operations/postpaymentspayapprovedresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsPayable
 
@@ -6616,17 +7084,17 @@ Allows for the generation of a new Payables for a specific member on behalf of a
 import { Payments } from "@wingspan/payments";
 import {
   FrequencyUpdateInterval,
-  InvoiceMetadataPayoutPendingReason,
-  InvoiceMetadataPendingStatusReason,
   PayableCreateRequestAcceptedPaymentMethods,
   PayableCreateRequestCurrency,
   PayableCreateRequestStatus,
+  PayoutPendingReason,
+  PendingStatusReason,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsPayable({
+  const res = await sdk.postPaymentsPayable({
     acceptedPaymentMethods: [
       PayableCreateRequestAcceptedPaymentMethods.Credit,
     ],
@@ -6666,7 +7134,6 @@ import {
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6675,16 +7142,20 @@ import {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [shared.PayableCreateRequest](../../models/shared/payablecreaterequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.PayableCreateRequest](../../sdk/models/shared/payablecreaterequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsPayableResponse](../../models/operations/postpaymentspayableresponse.md)>**
+**Promise<[operations.PostPaymentsPayableResponse](../../sdk/models/operations/postpaymentspayableresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPaymentsPayoutSettingsMemberIdDebitCard
 
@@ -6698,7 +7169,7 @@ import { Payments } from "@wingspan/payments";
 (async() => {
   const sdk = new Payments();
 
-  const res = await sdk.payments.postPaymentsPayoutSettingsMemberIdDebitCard({
+  const res = await sdk.postPaymentsPayoutSettingsMemberIdDebitCard({
     checkbookCardCreate: {
       address: {
         addressLine1: "string",
@@ -6714,7 +7185,6 @@ import { Payments } from "@wingspan/payments";
     memberId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -6723,13 +7193,17 @@ import { Payments } from "@wingspan/payments";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PostPaymentsPayoutSettingsMemberIdDebitCardRequest](../../models/operations/postpaymentspayoutsettingsmemberiddebitcardrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.PostPaymentsPayoutSettingsMemberIdDebitCardRequest](../../sdk/models/operations/postpaymentspayoutsettingsmemberiddebitcardrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PostPaymentsPayoutSettingsMemberIdDebitCardResponse](../../models/operations/postpaymentspayoutsettingsmemberiddebitcardresponse.md)>**
+**Promise<[operations.PostPaymentsPayoutSettingsMemberIdDebitCardResponse](../../sdk/models/operations/postpaymentspayoutsettingsmemberiddebitcardresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

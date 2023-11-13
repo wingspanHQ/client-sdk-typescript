@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsMemberClientResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetPaymentsMemberClientResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * A list of memberClient objects
-     */
-    @SpeakeasyMetadata({ elemType: shared.MemberClientSchema })
-    memberClientSchemas?: shared.MemberClientSchema[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetPaymentsMemberClientResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of memberClient objects
+     */
+    @SpeakeasyMetadata({ elemType: shared.MemberClientSchema })
+    classes?: shared.MemberClientSchema[];
 }

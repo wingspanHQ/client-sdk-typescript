@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum MemberOptionsPayoutPreferences {
+export enum PayoutPreferences {
     Standard = "Standard",
     Instant = "Instant",
     Expedited = "Expedited",
@@ -33,7 +33,7 @@ export class MemberOptions extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "payoutPreferences" })
-    payoutPreferences?: MemberOptionsPayoutPreferences;
+    payoutPreferences?: PayoutPreferences;
 
     @SpeakeasyMetadata()
     @Expose({ name: "workflowStatus" })

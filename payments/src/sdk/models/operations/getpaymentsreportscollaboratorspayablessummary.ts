@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsReportsCollaboratorsPayablesSummaryResponse extends SpeakeasyBase {
-    /**
-     * Collaborators payouts summary report
-     */
-    @SpeakeasyMetadata({ elemType: shared.CollaboratorsPayoutsSummaryReportResponse })
-    collaboratorsPayoutsSummaryReportResponses?: shared.CollaboratorsPayoutsSummaryReportResponse[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetPaymentsReportsCollaboratorsPayablesSummaryResponse extends Spea
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Collaborators payouts summary report
+     */
+    @SpeakeasyMetadata({ elemType: shared.CollaboratorsPayoutsSummaryReportResponse })
+    classes?: shared.CollaboratorsPayoutsSummaryReportResponse[];
 }

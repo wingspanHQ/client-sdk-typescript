@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsCollaboratorSettingsAdditionalDataResponse extends SpeakeasyBase {
-    /**
-     * A list of custom data-points
-     */
-    @SpeakeasyMetadata({ elemType: shared.AdditionalData })
-    additionalData?: shared.AdditionalData[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetPaymentsCollaboratorSettingsAdditionalDataResponse extends Speak
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of custom data-points
+     */
+    @SpeakeasyMetadata({ elemType: shared.AdditionalData })
+    classes?: shared.AdditionalData[];
 }

@@ -20,7 +20,7 @@ export enum InvoiceCreateRequestAcceptedPaymentMethods {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export class InvoiceCreateRequestClient extends SpeakeasyBase {}
+export class Client extends SpeakeasyBase {}
 
 export enum InvoiceCreateRequestCurrency {
     Usd = "USD",
@@ -28,7 +28,7 @@ export enum InvoiceCreateRequestCurrency {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export class InvoiceCreateRequestMember extends SpeakeasyBase {}
+export class Member extends SpeakeasyBase {}
 
 export enum InvoiceCreateRequestStatus {
     Draft = "Draft",
@@ -53,8 +53,8 @@ export class InvoiceCreateRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "client" })
-    @Type(() => InvoiceCreateRequestClient)
-    client?: InvoiceCreateRequestClient;
+    @Type(() => Client)
+    client?: Client;
 
     @SpeakeasyMetadata({ elemType: InvoiceCollaboratorCreateRequest })
     @Expose({ name: "collaborators" })
@@ -102,8 +102,8 @@ export class InvoiceCreateRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "member" })
-    @Type(() => InvoiceCreateRequestMember)
-    member?: InvoiceCreateRequestMember;
+    @Type(() => Member)
+    member?: Member;
 
     @SpeakeasyMetadata()
     @Expose({ name: "memberClientId" })

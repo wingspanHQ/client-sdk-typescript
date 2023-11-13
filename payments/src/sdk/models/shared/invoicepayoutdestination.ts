@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum InvoicePayoutDestinationDestinationType {
+export enum DestinationType {
     Account = "Account",
     Card = "Card",
     InternalAccount = "InternalAccount",
@@ -13,7 +13,7 @@ export enum InvoicePayoutDestinationDestinationType {
     WeGift = "WeGift",
 }
 
-export enum InvoicePayoutDestinationPayoutMethod {
+export enum PayoutMethod {
     Standard = "Standard",
     Instant = "Instant",
     Expedited = "Expedited",
@@ -40,7 +40,7 @@ export class InvoicePayoutDestination extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "destinationType" })
-    destinationType: InvoicePayoutDestinationDestinationType;
+    destinationType: DestinationType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "last4" })
@@ -48,7 +48,7 @@ export class InvoicePayoutDestination extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "payoutMethod" })
-    payoutMethod: InvoicePayoutDestinationPayoutMethod;
+    payoutMethod: PayoutMethod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "percentage" })

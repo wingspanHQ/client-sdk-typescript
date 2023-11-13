@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum CollaboratorV2FormW9InfoCompanyStructure {
+export enum CompanyStructure {
     None = "None",
     SoleProprietorship = "SoleProprietorship",
     LlcSingleMember = "LlcSingleMember",
@@ -33,7 +33,7 @@ export class CollaboratorV2FormW9Info extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "companyStructure" })
-    companyStructure: CollaboratorV2FormW9InfoCompanyStructure;
+    companyStructure: CompanyStructure;
 
     @SpeakeasyMetadata()
     @Expose({ name: "country" })

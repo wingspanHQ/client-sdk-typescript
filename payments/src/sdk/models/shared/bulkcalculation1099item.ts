@@ -7,7 +7,7 @@ import { EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkCalculation1099ItemCalculationType {
+export enum CalculationType {
     Balances = "Balances",
     Submissions = "Submissions",
 }
@@ -31,7 +31,7 @@ export class BulkCalculation1099Item extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "calculationType" })
-    calculationType: BulkCalculation1099ItemCalculationType;
+    calculationType: CalculationType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "clientId" })

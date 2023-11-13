@@ -1,13 +1,11 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Payments } from "@wingspan/payments";
 
 (async () => {
     const sdk = new Payments();
 
-    const res = await sdk.payments.deletePaymentsBankingCardId({
+    const res = await sdk.deletePaymentsBankingCardId({
         id: "<ID>",
     });
 

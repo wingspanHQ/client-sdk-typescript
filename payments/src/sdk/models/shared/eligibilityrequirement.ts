@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum EligibilityRequirementRequirementType {
+export enum RequirementType {
     Signature = "Signature",
 }
 
@@ -20,7 +20,7 @@ export class EligibilityRequirement extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "requirementType" })
-    requirementType: EligibilityRequirementRequirementType;
+    requirementType: RequirementType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "templateId" })

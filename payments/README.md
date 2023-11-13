@@ -24,13 +24,15 @@ yarn add @wingspan/payments
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```typescript
 import { Payments } from "@wingspan/payments";
 
 (async () => {
     const sdk = new Payments();
 
-    const res = await sdk.payments.deletePaymentsBankingCardId({
+    const res = await sdk.deletePaymentsBankingCardId({
         id: "<ID>",
     });
 
@@ -218,19 +220,43 @@ import { Payments } from "@wingspan/payments";
 
 
 <!-- Start Error Handling -->
-# Error Handling
+## Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
+Example
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async () => {
+    const sdk = new Payments();
+
+    let res;
+    try {
+        res = await sdk.deletePaymentsBankingCardId({
+            id: "<ID>",
+        });
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
 
 <!-- Start Server Selection -->
-# Server Selection
+## Server Selection
 
-## Select Server by Index
+### Select Server by Index
 
 You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
@@ -239,8 +265,7 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `https://api.wingspan.app` | None |
 | 1 | `https://stagingapi.wingspan.app` | None |
 
-For example:
-
+#### Example
 
 ```typescript
 import { Payments } from "@wingspan/payments";
@@ -250,7 +275,7 @@ import { Payments } from "@wingspan/payments";
         serverIdx: 1,
     });
 
-    const res = await sdk.payments.deletePaymentsBankingCardId({
+    const res = await sdk.deletePaymentsBankingCardId({
         id: "<ID>",
     });
 
@@ -262,11 +287,9 @@ import { Payments } from "@wingspan/payments";
 ```
 
 
-## Override Server URL Per-Client
+### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
-
-
 ```typescript
 import { Payments } from "@wingspan/payments";
 
@@ -275,7 +298,7 @@ import { Payments } from "@wingspan/payments";
         serverURL: "https://api.wingspan.app",
     });
 
-    const res = await sdk.payments.deletePaymentsBankingCardId({
+    const res = await sdk.deletePaymentsBankingCardId({
         id: "<ID>",
     });
 
@@ -290,10 +313,9 @@ import { Payments } from "@wingspan/payments";
 
 
 <!-- Start Custom HTTP Client -->
-# Custom HTTP Client
+## Custom HTTP Client
 
 The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
-
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
@@ -305,11 +327,8 @@ const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
 })
 
-
 const sdk = new Payments({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

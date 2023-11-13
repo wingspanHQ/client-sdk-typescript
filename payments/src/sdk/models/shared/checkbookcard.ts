@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Address } from "./address";
 import { Expose, Type } from "class-transformer";
 
-export enum CheckbookCardBrand {
+export enum Brand {
     AmericanExpress = "AmericanExpress",
     Visa = "Visa",
     Mastercard = "Mastercard",
@@ -23,7 +23,7 @@ export class CheckbookCard extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "brand" })
-    brand: CheckbookCardBrand;
+    brand: Brand;
 
     @SpeakeasyMetadata()
     @Expose({ name: "cardId" })

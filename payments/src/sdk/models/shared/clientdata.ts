@@ -5,13 +5,13 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ClientDataAutoPayStrategy {
+export enum AutoPayStrategy {
     All = "All",
     None = "None",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ClientDataVerificationStratgy {
+export enum VerificationStratgy {
     None = "None",
     All = "All",
     LessThanNilGreaterThan = "<nil>",
@@ -20,7 +20,7 @@ export enum ClientDataVerificationStratgy {
 export class ClientData extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "autoPayStrategy" })
-    autoPayStrategy?: ClientDataAutoPayStrategy;
+    autoPayStrategy?: AutoPayStrategy;
 
     @SpeakeasyMetadata()
     @Expose({ name: "externalId" })
@@ -28,5 +28,5 @@ export class ClientData extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "verificationStratgy" })
-    verificationStratgy?: ClientDataVerificationStratgy;
+    verificationStratgy?: VerificationStratgy;
 }

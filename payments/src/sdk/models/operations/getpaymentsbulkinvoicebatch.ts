@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsBulkInvoiceBatchResponse extends SpeakeasyBase {
-    /**
-     * A list of bulk invoice batches
-     */
-    @SpeakeasyMetadata({ elemType: shared.BulkInvoiceBatch })
-    bulkInvoiceBatches?: shared.BulkInvoiceBatch[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetPaymentsBulkInvoiceBatchResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of bulk invoice batches
+     */
+    @SpeakeasyMetadata({ elemType: shared.BulkInvoiceBatch })
+    classes?: shared.BulkInvoiceBatch[];
 }

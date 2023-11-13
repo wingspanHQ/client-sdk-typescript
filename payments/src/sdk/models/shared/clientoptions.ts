@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ClientOptionsWorkflowStatus {
+export enum WorkflowStatus {
     Pending = "Pending",
     PreApproved = "PreApproved",
     Approved = "Approved",
@@ -31,7 +31,7 @@ export class ClientOptions extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "workflowStatus" })
-    workflowStatus?: ClientOptionsWorkflowStatus;
+    workflowStatus?: WorkflowStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "workflowSubStatus" })

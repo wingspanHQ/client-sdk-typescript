@@ -27,7 +27,7 @@ export enum ClientInvoiceAcceptedPaymentMethods {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ClientInvoiceCurrency {
+export enum Currency {
     Usd = "USD",
     Cad = "CAD",
 }
@@ -90,7 +90,7 @@ export class ClientInvoice extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "currency" })
-    currency: ClientInvoiceCurrency;
+    currency: Currency;
 
     @SpeakeasyMetadata()
     @Expose({ name: "dueDate" })

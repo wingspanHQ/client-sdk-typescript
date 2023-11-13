@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class PatchPaymentsCollaboratorSettingsEligibilityRequirementIdRequest extends SpeakeasyBase {
@@ -25,12 +25,6 @@ export class PatchPaymentsCollaboratorSettingsEligibilityRequirementIdResponse e
     contentType: string;
 
     /**
-     * List of Eligibility Requirements
-     */
-    @SpeakeasyMetadata({ elemType: shared.EligibilityRequirement })
-    eligibilityRequirements?: shared.EligibilityRequirement[];
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -41,4 +35,10 @@ export class PatchPaymentsCollaboratorSettingsEligibilityRequirementIdResponse e
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * List of Eligibility Requirements
+     */
+    @SpeakeasyMetadata({ elemType: shared.EligibilityRequirement })
+    classes?: shared.EligibilityRequirement[];
 }

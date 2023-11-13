@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07Status {
+export enum Status {
     Draft = "Draft",
     Open = "Open",
     Overdue = "Overdue",
@@ -46,7 +46,7 @@ export class FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07Status;
+    status: Status;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsReportsAgingLineItemsResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetPaymentsReportsAgingLineItemsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * Line items list grouped by age
-     */
-    @SpeakeasyMetadata({ elemType: shared.LineItemsAgingReportResponse })
-    lineItemsAgingReportResponses?: shared.LineItemsAgingReportResponse[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetPaymentsReportsAgingLineItemsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Line items list grouped by age
+     */
+    @SpeakeasyMetadata({ elemType: shared.LineItemsAgingReportResponse })
+    classes?: shared.LineItemsAgingReportResponse[];
 }

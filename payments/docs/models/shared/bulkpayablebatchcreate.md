@@ -1,9 +1,0 @@
-# BulkPayableBatchCreate
-
-
-## Fields
-
-| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `labels`                                                                                                    | Record<string, *string*>                                                                                    | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
-| `processingStrategy`                                                                                        | [BulkPayableBatchCreateProcessingStrategy](../../models/shared/bulkpayablebatchcreateprocessingstrategy.md) | :heavy_check_mark:                                                                                          | N/A                                                                                                         |

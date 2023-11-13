@@ -8,7 +8,7 @@ import { MemberClientFormW9Info } from "./memberclientformw9info";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkCollaboratorItemCollaboratorStatus {
+export enum CollaboratorStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
@@ -45,7 +45,7 @@ export class BulkCollaboratorItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "collaboratorStatus" })
-    collaboratorStatus: BulkCollaboratorItemCollaboratorStatus;
+    collaboratorStatus: CollaboratorStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "company" })

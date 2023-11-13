@@ -9,7 +9,7 @@ import { MemberData } from "./memberdata";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkClientItemClientStatus {
+export enum ClientStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
@@ -34,7 +34,7 @@ export class BulkClientItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "clientStatus" })
-    clientStatus: BulkClientItemClientStatus;
+    clientStatus: ClientStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "company" })

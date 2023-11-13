@@ -13,7 +13,7 @@ export enum MemberClientForm1099BalancesDeliveryMethod {
     Mail = "Mail",
 }
 
-export enum MemberClientForm1099BalancesExclusionReason {
+export enum ExclusionReason {
     BelowThreshold = "BelowThreshold",
     CompanyStructure = "CompanyStructure",
     NonUsEntity = "NonUsEntity",
@@ -29,7 +29,7 @@ export enum MemberClientForm1099BalancesStatus {
     Excluded = "Excluded",
 }
 
-export class MemberClientForm1099BalancesTaxForm extends SpeakeasyBase {}
+export class TaxForm extends SpeakeasyBase {}
 
 export enum MemberClientForm1099BalancesType {
     Nec = "NEC",
@@ -61,7 +61,7 @@ export class MemberClientForm1099Balances extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusionReason" })
-    exclusionReason: MemberClientForm1099BalancesExclusionReason;
+    exclusionReason: ExclusionReason;
 
     @SpeakeasyMetadata()
     @Expose({ name: "form1099Generated" })
@@ -81,8 +81,8 @@ export class MemberClientForm1099Balances extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "taxForm" })
-    @Type(() => MemberClientForm1099BalancesTaxForm)
-    taxForm?: MemberClientForm1099BalancesTaxForm;
+    @Type(() => TaxForm)
+    taxForm?: TaxForm;
 
     @SpeakeasyMetadata()
     @Expose({ name: "taxFormId" })

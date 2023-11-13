@@ -1,0 +1,11 @@
+# PostPaymentsBulkCalculation1099BatchBatchIdItemResponse
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `bulkCalculation1099Item`                                                               | [shared.BulkCalculation1099Item](../../../sdk/models/shared/bulkcalculation1099item.md) | :heavy_minus_sign:                                                                      | An item that will be converted into a calculation 1099                                  |
+| `contentType`                                                                           | *string*                                                                                | :heavy_check_mark:                                                                      | HTTP response content type for this operation                                           |
+| `statusCode`                                                                            | *number*                                                                                | :heavy_check_mark:                                                                      | HTTP response status code for this operation                                            |
+| `rawResponse`                                                                           | [AxiosResponse](https://axios-http.com/docs/res_schema)                                 | :heavy_minus_sign:                                                                      | Raw HTTP response; suitable for custom response parsing                                 |

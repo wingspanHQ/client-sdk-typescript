@@ -8,7 +8,7 @@ import { InvoiceIntegrations } from "./invoiceintegrations";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkPayableItemPayableStatus {
+export enum PayableStatus {
     Draft = "Draft",
     Open = "Open",
     Approved = "Approved",
@@ -24,7 +24,7 @@ export enum BulkPayableItemStatus {
     Failed = "Failed",
 }
 
-export enum BulkPayableItemWorkflowSubStatus {
+export enum WorkflowSubStatus {
     Submitted = "Submitted",
     LessThanNilGreaterThan = "<nil>",
 }
@@ -114,7 +114,7 @@ export class BulkPayableItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "payableStatus" })
-    payableStatus: BulkPayableItemPayableStatus;
+    payableStatus: PayableStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "reimbursableExpense" })
@@ -135,5 +135,5 @@ export class BulkPayableItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "workflowSubStatus" })
-    workflowSubStatus?: BulkPayableItemWorkflowSubStatus;
+    workflowSubStatus?: WorkflowSubStatus;
 }

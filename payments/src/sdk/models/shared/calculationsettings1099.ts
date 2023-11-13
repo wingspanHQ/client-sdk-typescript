@@ -5,19 +5,19 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum CalculationSettings1099CardProcessingFees {
+export enum CardProcessingFees {
     Include = "Include",
     Exclude = "Exclude",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum CalculationSettings1099OffPlatformPayments {
+export enum OffPlatformPayments {
     Include = "Include",
     Exclude = "Exclude",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum CalculationSettings1099ReimbursableExpenses {
+export enum ReimbursableExpenses {
     Include = "Include",
     Exclude = "Exclude",
     LessThanNilGreaterThan = "<nil>",
@@ -26,15 +26,15 @@ export enum CalculationSettings1099ReimbursableExpenses {
 export class CalculationSettings1099 extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "cardProcessingFees" })
-    cardProcessingFees?: CalculationSettings1099CardProcessingFees;
+    cardProcessingFees?: CardProcessingFees;
 
     @SpeakeasyMetadata()
     @Expose({ name: "offPlatformPayments" })
-    offPlatformPayments?: CalculationSettings1099OffPlatformPayments;
+    offPlatformPayments?: OffPlatformPayments;
 
     @SpeakeasyMetadata()
     @Expose({ name: "reimbursableExpenses" })
-    reimbursableExpenses?: CalculationSettings1099ReimbursableExpenses;
+    reimbursableExpenses?: ReimbursableExpenses;
 
     @SpeakeasyMetadata()
     @Expose({ name: "stateTaxId" })

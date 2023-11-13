@@ -14,7 +14,7 @@ export enum InvoiceRefundDestinationDestinationType {
     WeGift = "WeGift",
 }
 
-export enum InvoiceRefundDestinationRefundType {
+export enum RefundType {
     Account = "Account",
     TaxWithholding = "TaxWithholding",
     Wallet = "Wallet",
@@ -49,7 +49,7 @@ export class InvoiceRefundDestination extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "refundType" })
-    refundType: InvoiceRefundDestinationRefundType;
+    refundType: RefundType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "stripeTransferId" })

@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsBankingCardResponse extends SpeakeasyBase {
-    /**
-     * A list of card summaries
-     */
-    @SpeakeasyMetadata({ elemType: shared.Card })
-    cards?: shared.Card[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetPaymentsBankingCardResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of card summaries
+     */
+    @SpeakeasyMetadata({ elemType: shared.Card })
+    classes?: shared.Card[];
 }

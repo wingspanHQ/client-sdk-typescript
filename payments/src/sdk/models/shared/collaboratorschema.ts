@@ -20,7 +20,7 @@ export enum CollaboratorSchemaStatus {
     Pending = "Pending",
 }
 
-export enum CollaboratorSchemaTaxStatus {
+export enum TaxStatus {
     Complete = "Complete",
     Failed = "Failed",
     Pending = "Pending",
@@ -107,7 +107,7 @@ export class CollaboratorSchema extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "taxStatus" })
-    taxStatus: CollaboratorSchemaTaxStatus;
+    taxStatus: TaxStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })

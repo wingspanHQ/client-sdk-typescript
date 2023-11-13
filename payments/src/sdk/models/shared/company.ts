@@ -7,7 +7,7 @@ import { CompanyLinks } from "./companylinks";
 import { CompanyPerson } from "./companyperson";
 import { Expose, Type } from "class-transformer";
 
-export enum CompanyStructure {
+export enum Structure {
     None = "None",
     SoleProprietorship = "SoleProprietorship",
     LlcSingleMember = "LlcSingleMember",
@@ -54,7 +54,7 @@ export class Company extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "structure" })
-    structure?: CompanyStructure;
+    structure?: Structure;
 
     @SpeakeasyMetadata()
     @Expose({ name: "taxId" })

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsCustomFieldsResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetPaymentsCustomFieldsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * A list of user defined custom fields
-     */
-    @SpeakeasyMetadata({ elemType: shared.CustomField })
-    customFields?: shared.CustomField[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetPaymentsCustomFieldsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of user defined custom fields
+     */
+    @SpeakeasyMetadata({ elemType: shared.CustomField })
+    classes?: shared.CustomField[];
 }

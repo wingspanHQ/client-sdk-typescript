@@ -5,13 +5,13 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum MemberDataAutoPayRequirement {
+export enum AutoPayRequirement {
     All = "All",
     None = "None",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberDataShareTaxDocument {
+export enum ShareTaxDocument {
     Allow = "Allow",
     Decline = "Decline",
     LessThanNilGreaterThan = "<nil>",
@@ -20,7 +20,7 @@ export enum MemberDataShareTaxDocument {
 export class MemberData extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "autoPayRequirement" })
-    autoPayRequirement?: MemberDataAutoPayRequirement;
+    autoPayRequirement?: AutoPayRequirement;
 
     @SpeakeasyMetadata()
     @Expose({ name: "externalId" })
@@ -28,5 +28,5 @@ export class MemberData extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "shareTaxDocument" })
-    shareTaxDocument?: MemberDataShareTaxDocument;
+    shareTaxDocument?: ShareTaxDocument;
 }

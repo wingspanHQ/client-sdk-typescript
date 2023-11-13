@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetPaymentsClientInvoiceTemplateResponse extends SpeakeasyBase {
-    /**
-     * A list of Client Created Invoice Template
-     */
-    @SpeakeasyMetadata({ elemType: shared.ClientInvoiceTemplate })
-    clientInvoiceTemplates?: shared.ClientInvoiceTemplate[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetPaymentsClientInvoiceTemplateResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of Client Created Invoice Template
+     */
+    @SpeakeasyMetadata({ elemType: shared.ClientInvoiceTemplate })
+    classes?: shared.ClientInvoiceTemplate[];
 }

@@ -40,7 +40,7 @@ export enum InvoiceCurrency {
     Cad = "CAD",
 }
 
-export enum InvoiceStatus {
+export enum InvoiceSchemasStatus {
     Draft = "Draft",
     Open = "Open",
     Overdue = "Overdue",
@@ -239,7 +239,7 @@ export class Invoice extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: InvoiceStatus;
+    status: InvoiceSchemasStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })

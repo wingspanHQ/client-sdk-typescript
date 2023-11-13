@@ -5,12 +5,12 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum FundingSourceFundingSourceCurrency {
+export enum FundingSourceCurrency {
     Usd = "USD",
     Cad = "CAD",
 }
 
-export enum FundingSourceFundingSourceType {
+export enum FundingSourceType {
     InternalAccount = "InternalAccount",
     Account = "Account",
     PaymentCard = "PaymentCard",
@@ -19,7 +19,7 @@ export enum FundingSourceFundingSourceType {
 export class FundingSource extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "fundingSourceCurrency" })
-    fundingSourceCurrency: FundingSourceFundingSourceCurrency;
+    fundingSourceCurrency: FundingSourceCurrency;
 
     @SpeakeasyMetadata()
     @Expose({ name: "fundingSourceId" })
@@ -27,5 +27,5 @@ export class FundingSource extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "fundingSourceType" })
-    fundingSourceType: FundingSourceFundingSourceType;
+    fundingSourceType: FundingSourceType;
 }

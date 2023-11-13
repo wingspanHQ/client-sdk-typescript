@@ -8,7 +8,7 @@ import { Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7 } 
 import { TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4 } from "./twentysixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4";
 import { Expose, Type } from "class-transformer";
 
-export class CollaboratorUpdateRequestFormW9Data extends SpeakeasyBase {}
+export class FormW9Data extends SpeakeasyBase {}
 
 export enum CollaboratorUpdateRequestStatus {
     Active = "Active",
@@ -30,8 +30,8 @@ export class CollaboratorUpdateRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "formW9Data" })
-    @Type(() => CollaboratorUpdateRequestFormW9Data)
-    formW9Data?: CollaboratorUpdateRequestFormW9Data;
+    @Type(() => FormW9Data)
+    formW9Data?: FormW9Data;
 
     @SpeakeasyMetadata()
     @Expose({ name: "integration" })

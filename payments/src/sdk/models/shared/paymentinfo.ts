@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum PaymentInfoMeansType {
+export enum MeansType {
     Card = "Card",
     Account = "Account",
     InternalAccount = "InternalAccount",
@@ -30,5 +30,5 @@ export class PaymentInfo extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "meansType" })
-    meansType: PaymentInfoMeansType;
+    meansType: MeansType;
 }

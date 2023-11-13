@@ -9,14 +9,14 @@ import { InvoiceIntegrations } from "./invoiceintegrations";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum BulkInvoiceItemAcceptedPaymentMethods {
+export enum AcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum BulkInvoiceItemInvoiceStatus {
+export enum InvoiceStatus {
     Draft = "Draft",
     Open = "Open",
     Approved = "Approved",
@@ -35,7 +35,7 @@ export enum BulkInvoiceItemStatus {
 export class BulkInvoiceItem extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "acceptedPaymentMethods" })
-    acceptedPaymentMethods?: BulkInvoiceItemAcceptedPaymentMethods[];
+    acceptedPaymentMethods?: AcceptedPaymentMethods[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "amount" })
@@ -97,7 +97,7 @@ export class BulkInvoiceItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "invoiceStatus" })
-    invoiceStatus: BulkInvoiceItemInvoiceStatus;
+    invoiceStatus: InvoiceStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "labels" })
