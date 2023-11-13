@@ -1,13 +1,11 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
 (async () => {
     const sdk = new Benefits();
 
-    const res = await sdk.benefits.getBenefitsEnrollmentId({
+    const res = await sdk.getBenefitsEnrollmentId({
         id: "<ID>",
     });
 

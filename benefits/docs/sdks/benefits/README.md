@@ -25,10 +25,9 @@ import { Benefits } from "@wingspan/benefits";
 (async() => {
   const sdk = new Benefits();
 
-  const res = await sdk.benefits.getBenefitsEnrollmentId({
+  const res = await sdk.getBenefitsEnrollmentId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -38,16 +37,20 @@ import { Benefits } from "@wingspan/benefits";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetBenefitsEnrollmentIdRequest](../../models/operations/getbenefitsenrollmentidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetBenefitsEnrollmentIdRequest](../../sdk/models/operations/getbenefitsenrollmentidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetBenefitsEnrollmentIdResponse](../../models/operations/getbenefitsenrollmentidresponse.md)>**
+**Promise<[operations.GetBenefitsEnrollmentIdResponse](../../sdk/models/operations/getbenefitsenrollmentidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBenefitsPlanEnrollment
 
@@ -61,8 +64,7 @@ import { Benefits } from "@wingspan/benefits";
 (async() => {
   const sdk = new Benefits();
 
-  const res = await sdk.benefits.getBenefitsPlanEnrollment();
-
+  const res = await sdk.getBenefitsPlanEnrollment();
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,8 +81,12 @@ import { Benefits } from "@wingspan/benefits";
 
 ### Response
 
-**Promise<[operations.GetBenefitsPlanEnrollmentResponse](../../models/operations/getbenefitsplanenrollmentresponse.md)>**
+**Promise<[operations.GetBenefitsPlanEnrollmentResponse](../../sdk/models/operations/getbenefitsplanenrollmentresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBenefitsPlanEnrollmentId
 
@@ -94,10 +100,9 @@ import { Benefits } from "@wingspan/benefits";
 (async() => {
   const sdk = new Benefits();
 
-  const res = await sdk.benefits.getBenefitsPlanEnrollmentId({
+  const res = await sdk.getBenefitsPlanEnrollmentId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -107,16 +112,20 @@ import { Benefits } from "@wingspan/benefits";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetBenefitsPlanEnrollmentIdRequest](../../models/operations/getbenefitsplanenrollmentidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetBenefitsPlanEnrollmentIdRequest](../../sdk/models/operations/getbenefitsplanenrollmentidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetBenefitsPlanEnrollmentIdResponse](../../models/operations/getbenefitsplanenrollmentidresponse.md)>**
+**Promise<[operations.GetBenefitsPlanEnrollmentIdResponse](../../sdk/models/operations/getbenefitsplanenrollmentidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBenefitsService
 
@@ -130,8 +139,7 @@ import { Benefits } from "@wingspan/benefits";
 (async() => {
   const sdk = new Benefits();
 
-  const res = await sdk.benefits.getBenefitsService();
-
+  const res = await sdk.getBenefitsService();
 
   if (res.statusCode == 200) {
     // handle response
@@ -148,8 +156,12 @@ import { Benefits } from "@wingspan/benefits";
 
 ### Response
 
-**Promise<[operations.GetBenefitsServiceResponse](../../models/operations/getbenefitsserviceresponse.md)>**
+**Promise<[operations.GetBenefitsServiceResponse](../../sdk/models/operations/getbenefitsserviceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchBenefitsServiceId
 
@@ -163,13 +175,12 @@ import { Benefits } from "@wingspan/benefits";
 (async() => {
   const sdk = new Benefits();
 
-  const res = await sdk.benefits.patchBenefitsServiceId({
+  const res = await sdk.patchBenefitsServiceId({
     serviceEnablementUpdate: {
       enabled: false,
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -179,13 +190,17 @@ import { Benefits } from "@wingspan/benefits";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchBenefitsServiceIdRequest](../../models/operations/patchbenefitsserviceidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PatchBenefitsServiceIdRequest](../../sdk/models/operations/patchbenefitsserviceidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.PatchBenefitsServiceIdResponse](../../models/operations/patchbenefitsserviceidresponse.md)>**
+**Promise<[operations.PatchBenefitsServiceIdResponse](../../sdk/models/operations/patchbenefitsserviceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { A71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc } from "./a71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc";
 import { Expose, Type } from "class-transformer";
 
-export enum PlanEnrollmentCoverageMonthFundingStatus {
+export enum FundingStatus {
     Pending = "Pending",
     Complete = "Complete",
 }
@@ -18,7 +18,7 @@ export class PlanEnrollmentCoverageMonth extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "fundingStatus" })
-    fundingStatus: PlanEnrollmentCoverageMonthFundingStatus;
+    fundingStatus: FundingStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "internal" })

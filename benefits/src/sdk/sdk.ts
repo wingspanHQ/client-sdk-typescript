@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import axios from "axios";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -53,9 +53,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.0.0";
-    genVersion = "2.173.0";
-    userAgent = "speakeasy-sdk/typescript 1.0.0 2.173.0 1.0.0 @wingspan/benefits";
+    sdkVersion = "2.0.0";
+    genVersion = "2.188.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.188.1 1.0.0 @wingspan/benefits";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -76,7 +76,7 @@ export class Benefits {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -102,7 +102,7 @@ export class Benefits {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/benefits/enrollment/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/benefits/enrollment/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
@@ -111,14 +111,14 @@ export class Benefits {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -127,17 +127,17 @@ export class Benefits {
         const res: operations.GetBenefitsEnrollmentIdResponse =
             new operations.GetBenefitsEnrollmentIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.enrollment = utils.objectToClass(JSON.parse(decodedRes), shared.Enrollment);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -159,7 +159,7 @@ export class Benefits {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/benefits/plan-enrollment";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/benefits/plan-enrollment";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
@@ -168,14 +168,14 @@ export class Benefits {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -184,23 +184,23 @@ export class Benefits {
         const res: operations.GetBenefitsPlanEnrollmentResponse =
             new operations.GetBenefitsPlanEnrollmentResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
-                    res.planEnrollments = [];
+                if (utils.matchContentType(responseContentType, `application/json`)) {
+                    res.classes = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.planEnrollments = utils.objectToClass(
+                    res.classes = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.PlanEnrollment,
                         resFieldDepth
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -227,7 +227,11 @@ export class Benefits {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/benefits/plan-enrollment/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/benefits/plan-enrollment/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
@@ -236,14 +240,14 @@ export class Benefits {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -252,20 +256,20 @@ export class Benefits {
         const res: operations.GetBenefitsPlanEnrollmentIdResponse =
             new operations.GetBenefitsPlanEnrollmentIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.planEnrollment = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.PlanEnrollment
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -290,7 +294,7 @@ export class Benefits {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/benefits/service";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/benefits/service";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
@@ -299,14 +303,14 @@ export class Benefits {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -315,20 +319,20 @@ export class Benefits {
         const res: operations.GetBenefitsServiceResponse =
             new operations.GetBenefitsServiceResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.serviceEnablementResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ServiceEnablementResponse
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -358,7 +362,7 @@ export class Benefits {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/benefits/service/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/benefits/service/{id}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -381,7 +385,7 @@ export class Benefits {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "patch",
             headers: headers,
             responseType: "arraybuffer",
@@ -389,7 +393,7 @@ export class Benefits {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -398,20 +402,20 @@ export class Benefits {
         const res: operations.PatchBenefitsServiceIdResponse =
             new operations.PatchBenefitsServiceIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.serviceEnablementResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ServiceEnablementResponse
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes

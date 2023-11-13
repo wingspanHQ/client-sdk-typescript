@@ -7,11 +7,11 @@ import { PlanEnrollmentCoverageMonth } from "./planenrollmentcoveragemonth";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum PlanEnrollmentPlanType {
+export enum PlanType {
     MeridioHealth = "MeridioHealth",
 }
 
-export enum PlanEnrollmentStatus {
+export enum Status {
     Pending = "Pending",
     Active = "Active",
     Terminated = "Terminated",
@@ -65,7 +65,7 @@ export class PlanEnrollment extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "planType" })
-    planType: PlanEnrollmentPlanType;
+    planType: PlanType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "sku" })
@@ -73,7 +73,7 @@ export class PlanEnrollment extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: PlanEnrollmentStatus;
+    status: Status;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })

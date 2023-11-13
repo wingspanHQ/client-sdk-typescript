@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetBenefitsPlanEnrollmentResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetBenefitsPlanEnrollmentResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * List of plan enrollments for a member
-     */
-    @SpeakeasyMetadata({ elemType: shared.PlanEnrollment })
-    planEnrollments?: shared.PlanEnrollment[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetBenefitsPlanEnrollmentResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * List of plan enrollments for a member
+     */
+    @SpeakeasyMetadata({ elemType: shared.PlanEnrollment })
+    classes?: shared.PlanEnrollment[];
 }

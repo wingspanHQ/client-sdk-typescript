@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ServiceEnablementResponseServiceState {
+export enum ServiceState {
     Disabled = "Disabled",
     Enabled = "Enabled",
     Pending = "Pending",
@@ -22,5 +22,5 @@ export class ServiceEnablementResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "serviceState" })
-    serviceState: ServiceEnablementResponseServiceState;
+    serviceState: ServiceState;
 }
