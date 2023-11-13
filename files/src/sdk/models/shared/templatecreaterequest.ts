@@ -5,11 +5,11 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum TemplateCreateRequestPurpose {
+export enum Purpose {
     OnboardCollaborator = "OnboardCollaborator",
 }
 
-export enum TemplateCreateRequestRoles {
+export enum Roles {
     Member = "Member",
     Client = "Client",
     Collaborator = "Collaborator",
@@ -23,11 +23,11 @@ export class TemplateCreateRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "purpose" })
-    purpose: TemplateCreateRequestPurpose;
+    purpose: Purpose;
 
     @SpeakeasyMetadata()
     @Expose({ name: "roles" })
-    roles?: TemplateCreateRequestRoles[];
+    roles?: Roles[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "title" })

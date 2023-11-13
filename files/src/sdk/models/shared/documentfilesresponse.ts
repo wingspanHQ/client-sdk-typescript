@@ -8,7 +8,7 @@ import { DocumentFiles } from "./documentfiles";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum DocumentFilesResponseStatus {
+export enum Status {
     New = "New",
     Sent = "Sent",
     Pending = "Pending",
@@ -40,7 +40,7 @@ export class DocumentFilesResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: DocumentFilesResponseStatus;
+    status: Status;
 
     @SpeakeasyMetadata()
     @Expose({ name: "templateId" })
