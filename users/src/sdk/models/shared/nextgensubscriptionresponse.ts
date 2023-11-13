@@ -14,12 +14,12 @@ export enum NextgenSubscriptionResponseStatus {
     Canceled = "Canceled",
 }
 
-export enum NextgenSubscriptionResponseTerm {
+export enum Term {
     Yearly = "Yearly",
     Monthly = "Monthly",
 }
 
-export enum NextgenSubscriptionResponseUnits {
+export enum Units {
     Month = "Month",
 }
 
@@ -97,11 +97,11 @@ export class NextgenSubscriptionResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "term" })
-    term: NextgenSubscriptionResponseTerm;
+    term: Term;
 
     @SpeakeasyMetadata()
     @Expose({ name: "units" })
-    units: NextgenSubscriptionResponseUnits;
+    units: Units;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetUsersUserMemberMemberIdNextgenSubscriptionRequest extends SpeakeasyBase {
@@ -22,12 +22,6 @@ export class GetUsersUserMemberMemberIdNextgenSubscriptionResponse extends Speak
     contentType: string;
 
     /**
-     * A list of nextgen subscriptions
-     */
-    @SpeakeasyMetadata({ elemType: shared.NextgenSubscriptionResponse })
-    nextgenSubscriptionResponses?: shared.NextgenSubscriptionResponse[];
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -38,4 +32,10 @@ export class GetUsersUserMemberMemberIdNextgenSubscriptionResponse extends Speak
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of nextgen subscriptions
+     */
+    @SpeakeasyMetadata({ elemType: shared.NextgenSubscriptionResponse })
+    classes?: shared.NextgenSubscriptionResponse[];
 }

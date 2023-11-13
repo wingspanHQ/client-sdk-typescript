@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ApiSessionResponseSessionType {
+export enum SessionType {
     User = "User",
     Api = "API",
     Guest = "Guest",
@@ -30,7 +30,7 @@ export class ApiSessionResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "sessionType" })
-    sessionType: ApiSessionResponseSessionType;
+    sessionType: SessionType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "token" })

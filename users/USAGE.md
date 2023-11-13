@@ -1,13 +1,11 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Users } from "@wingspan/users";
 
 (async () => {
     const sdk = new Users();
 
-    const res = await sdk.users.deleteUsersAccountId({
+    const res = await sdk.deleteUsersAccountId({
         id: "<ID>",
     });
 

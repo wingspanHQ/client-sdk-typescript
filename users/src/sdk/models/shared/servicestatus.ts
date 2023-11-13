@@ -5,14 +5,14 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ServiceStatusBenefits {
+export enum Benefits {
     Disabled = "Disabled",
     Enabled = "Enabled",
     Pending = "Pending",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ServiceStatusPayments {
+export enum Payments {
     Disabled = "Disabled",
     Enabled = "Enabled",
     Pending = "Pending",
@@ -22,9 +22,9 @@ export enum ServiceStatusPayments {
 export class ServiceStatus extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "benefits" })
-    benefits?: ServiceStatusBenefits;
+    benefits?: Benefits;
 
     @SpeakeasyMetadata()
     @Expose({ name: "payments" })
-    payments?: ServiceStatusPayments;
+    payments?: Payments;
 }

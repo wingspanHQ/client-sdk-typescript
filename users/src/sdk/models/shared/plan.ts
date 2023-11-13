@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum PlanInterval {
+export enum Interval {
     Day = "day",
     Week = "week",
     Month = "month",
@@ -23,7 +23,7 @@ export class Plan extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "interval" })
-    interval: PlanInterval;
+    interval: Interval;
 
     @SpeakeasyMetadata()
     @Expose({ name: "planId" })

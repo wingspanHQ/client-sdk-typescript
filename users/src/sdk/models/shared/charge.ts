@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ChargeChargeStatus {
+export enum ChargeStatus {
     Zero = "0",
     One = "1",
     Two = "2",
@@ -26,7 +26,7 @@ export class Charge extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "chargeStatus" })
-    chargeStatus: ChargeChargeStatus;
+    chargeStatus: ChargeStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "created" })

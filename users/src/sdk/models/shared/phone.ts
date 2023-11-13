@@ -11,7 +11,7 @@ export enum PhoneChannel {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum PhoneChannelPendingVerification {
+export enum ChannelPendingVerification {
     PhoneCall = "PhoneCall",
     Sms = "SMS",
     LessThanNilGreaterThan = "<nil>",
@@ -30,7 +30,7 @@ export class Phone extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "channelPendingVerification" })
-    channelPendingVerification?: PhoneChannelPendingVerification;
+    channelPendingVerification?: ChannelPendingVerification;
 
     @SpeakeasyMetadata()
     @Expose({ name: "number" })

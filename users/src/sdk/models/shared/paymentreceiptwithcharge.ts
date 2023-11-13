@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Charge } from "./charge";
 import { Expose, Type } from "class-transformer";
 
-export enum PaymentReceiptWithChargeInvoiceStatus {
+export enum InvoiceStatus {
     Draft = "draft",
     Open = "open",
     Paid = "paid",
@@ -34,7 +34,7 @@ export class PaymentReceiptWithCharge extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "invoiceStatus" })
-    invoiceStatus: PaymentReceiptWithChargeInvoiceStatus;
+    invoiceStatus: InvoiceStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "nextPaymentAttempt" })

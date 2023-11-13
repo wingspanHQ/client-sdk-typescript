@@ -1,9 +1,0 @@
-# PatchUsersSubscriptionGrantIdRequest
-
-
-## Fields
-
-| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `subscriptionGrantUpdateRequest`                                                               | [shared.SubscriptionGrantUpdateRequest](../../models/shared/subscriptiongrantupdaterequest.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `id`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | Unique identifier                                                                              |

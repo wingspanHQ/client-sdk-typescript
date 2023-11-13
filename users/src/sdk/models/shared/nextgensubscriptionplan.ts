@@ -6,12 +6,12 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SixHundredAndTwentyNined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278 } from "./sixhundredandtwentynined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278";
 import { Expose, Type } from "class-transformer";
 
-export enum NextgenSubscriptionPlanPartner {
+export enum Partner {
     Usa = "USA",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum NextgenSubscriptionPlanPlanType {
+export enum PlanType {
     Base = "Base",
     Benefits = "Benefits",
     Corporate = "Corporate",
@@ -29,7 +29,7 @@ export class NextgenSubscriptionPlan extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "partner" })
-    partner?: NextgenSubscriptionPlanPartner;
+    partner?: Partner;
 
     @SpeakeasyMetadata()
     @Expose({ name: "planId" })
@@ -37,7 +37,7 @@ export class NextgenSubscriptionPlan extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "planType" })
-    planType: NextgenSubscriptionPlanPlanType;
+    planType: PlanType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "price" })

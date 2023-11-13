@@ -5,27 +5,27 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum OrganizationInheritanceStrategyExternalFinancialAccounts {
+export enum ExternalFinancialAccounts {
     None = "None",
     Parent = "Parent",
 }
 
-export enum OrganizationInheritanceStrategyFundingSource {
+export enum FundingSource {
     None = "None",
     Parent = "Parent",
 }
 
-export enum OrganizationInheritanceStrategyPayoutSettings {
+export enum PayoutSettings {
     None = "None",
     Parent = "Parent",
 }
 
-export enum OrganizationInheritanceStrategyWingspanAccount {
+export enum WingspanAccount {
     None = "None",
     Parent = "Parent",
 }
 
-export enum OrganizationInheritanceStrategyWingspanFinancialSettings {
+export enum WingspanFinancialSettings {
     None = "None",
     Parent = "Parent",
 }
@@ -33,21 +33,21 @@ export enum OrganizationInheritanceStrategyWingspanFinancialSettings {
 export class OrganizationInheritanceStrategy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "externalFinancialAccounts" })
-    externalFinancialAccounts: OrganizationInheritanceStrategyExternalFinancialAccounts;
+    externalFinancialAccounts: ExternalFinancialAccounts;
 
     @SpeakeasyMetadata()
     @Expose({ name: "fundingSource" })
-    fundingSource: OrganizationInheritanceStrategyFundingSource;
+    fundingSource: FundingSource;
 
     @SpeakeasyMetadata()
     @Expose({ name: "payoutSettings" })
-    payoutSettings: OrganizationInheritanceStrategyPayoutSettings;
+    payoutSettings: PayoutSettings;
 
     @SpeakeasyMetadata()
     @Expose({ name: "wingspanAccount" })
-    wingspanAccount: OrganizationInheritanceStrategyWingspanAccount;
+    wingspanAccount: WingspanAccount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "wingspanFinancialSettings" })
-    wingspanFinancialSettings: OrganizationInheritanceStrategyWingspanFinancialSettings;
+    wingspanFinancialSettings: WingspanFinancialSettings;
 }

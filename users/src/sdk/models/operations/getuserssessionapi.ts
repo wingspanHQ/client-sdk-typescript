@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetUsersSessionApiResponse extends SpeakeasyBase {
-    /**
-     * a list of api session objects
-     */
-    @SpeakeasyMetadata({ elemType: shared.ApiSessionResponse })
-    apiSessionResponses?: shared.ApiSessionResponse[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetUsersSessionApiResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * a list of api session objects
+     */
+    @SpeakeasyMetadata({ elemType: shared.ApiSessionResponse })
+    classes?: shared.ApiSessionResponse[];
 }

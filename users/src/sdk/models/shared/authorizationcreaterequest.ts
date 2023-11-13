@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { ScopeModificationsMap } from "./scopemodificationsmap";
 import { Expose, Type } from "class-transformer";
 
-export enum AuthorizationCreateRequestAllowedAction {
+export enum AllowedAction {
     Read = "Read",
     Write = "Write",
     LessThanNilGreaterThan = "<nil>",
@@ -15,7 +15,7 @@ export enum AuthorizationCreateRequestAllowedAction {
 export class AuthorizationCreateRequest extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "allowedAction" })
-    allowedAction?: AuthorizationCreateRequestAllowedAction;
+    allowedAction?: AllowedAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "allowedScope" })

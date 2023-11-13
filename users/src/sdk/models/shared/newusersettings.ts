@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum NewUserSettingsUserAccountType {
+export enum UserAccountType {
     Member = "member",
     Enterprise = "enterprise",
     LessThanNilGreaterThan = "<nil>",
@@ -14,5 +14,5 @@ export enum NewUserSettingsUserAccountType {
 export class NewUserSettings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "userAccountType" })
-    userAccountType?: NewUserSettingsUserAccountType;
+    userAccountType?: UserAccountType;
 }

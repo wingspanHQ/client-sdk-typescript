@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ActivityContextGrowthSource {
+export enum GrowthSource {
     Partner = "Partner",
     Referral = "Referral",
     Collaborator = "Collaborator",
@@ -20,7 +20,7 @@ export enum ActivityContextGrowthSource {
 export class ActivityContext extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "growthSource" })
-    growthSource?: ActivityContextGrowthSource;
+    growthSource?: GrowthSource;
 
     @SpeakeasyMetadata()
     @Expose({ name: "growthSourceName" })

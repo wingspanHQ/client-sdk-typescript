@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum AuthenticationRequestResponseAuthenticationStrategy {
+export enum AuthenticationStrategy {
     Password = "Password",
     SingleSignOn = "SingleSignOn",
 }
@@ -13,7 +13,7 @@ export enum AuthenticationRequestResponseAuthenticationStrategy {
 export class AuthenticationRequestResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "authenticationStrategy" })
-    authenticationStrategy: AuthenticationRequestResponseAuthenticationStrategy;
+    authenticationStrategy: AuthenticationStrategy;
 
     @SpeakeasyMetadata()
     @Expose({ name: "authenticationUrl" })

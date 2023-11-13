@@ -8,7 +8,7 @@ import { ScheduledChange } from "./scheduledchange";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum SubscriptionLatestPaymentStatus {
+export enum LatestPaymentStatus {
     Failed = "Failed",
     Succeeded = "Succeeded",
     ActionRequired = "ActionRequired",
@@ -77,7 +77,7 @@ export class Subscription extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "latestPaymentStatus" })
-    latestPaymentStatus: SubscriptionLatestPaymentStatus;
+    latestPaymentStatus: LatestPaymentStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "memberId" })

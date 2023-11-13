@@ -1,9 +1,0 @@
-# PostUsersUserIdVerificationPhoneRequest
-
-
-## Fields
-
-| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `beginPhoneVerificationRequest`                                                              | [shared.BeginPhoneVerificationRequest](../../models/shared/beginphoneverificationrequest.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
-| `id`                                                                                         | *string*                                                                                     | :heavy_check_mark:                                                                           | Unique identifier                                                                            |

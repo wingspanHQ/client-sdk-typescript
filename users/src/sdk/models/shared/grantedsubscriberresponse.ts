@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum GrantedSubscriberResponsePackage {
+export enum Package {
     None = "None",
     Benefits = "Benefits",
     Essentials = "Essentials",
@@ -13,7 +13,7 @@ export enum GrantedSubscriberResponsePackage {
     Corporate = "Corporate",
 }
 
-export enum GrantedSubscriberResponsePackageTier {
+export enum PackageTier {
     Basic = "Basic",
     Premium = "Premium",
 }
@@ -39,11 +39,11 @@ export class GrantedSubscriberResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
-    package: GrantedSubscriberResponsePackage;
+    package: Package;
 
     @SpeakeasyMetadata()
     @Expose({ name: "packageTier" })
-    packageTier: GrantedSubscriberResponsePackageTier;
+    packageTier: PackageTier;
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })

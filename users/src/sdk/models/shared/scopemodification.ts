@@ -5,14 +5,14 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ScopeModificationAction {
+export enum Action {
     Include = "Include",
     Exclude = "Exclude",
     Allow = "Allow",
     Deny = "Deny",
 }
 
-export enum ScopeModificationComparator {
+export enum Comparator {
     Equals = "Equals",
     Includes = "Includes",
 }
@@ -20,7 +20,7 @@ export enum ScopeModificationComparator {
 export class ScopeModification extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action: ScopeModificationAction;
+    action: Action;
 
     @SpeakeasyMetadata()
     @Expose({ name: "attribute" })
@@ -28,7 +28,7 @@ export class ScopeModification extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "comparator" })
-    comparator: ScopeModificationComparator;
+    comparator: Comparator;
 
     @SpeakeasyMetadata()
     @Expose({ name: "value" })

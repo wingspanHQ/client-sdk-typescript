@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum UserProfileGender {
+export enum Gender {
     Male = "Male",
     Female = "Female",
     Other = "Other",
@@ -23,7 +23,7 @@ export class UserProfile extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "gender" })
-    gender?: UserProfileGender;
+    gender?: Gender;
 
     @SpeakeasyMetadata()
     @Expose({ name: "lastName" })

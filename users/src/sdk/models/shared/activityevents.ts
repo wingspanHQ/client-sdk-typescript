@@ -5,28 +5,28 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ActivityEventsAgreeToClientTermsToDoStatus {
+export enum AgreeToClientTermsToDoStatus {
     ToDo = "ToDo",
     InProgress = "InProgress",
     Completed = "Completed",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ActivityEventsFindFirstDeductibleExpenseToDoStatus {
+export enum FindFirstDeductibleExpenseToDoStatus {
     ToDo = "ToDo",
     InProgress = "InProgress",
     Completed = "Completed",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ActivityEventsKnowingCompanyStructureToDoStatus {
+export enum KnowingCompanyStructureToDoStatus {
     ToDo = "ToDo",
     InProgress = "InProgress",
     Completed = "Completed",
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum ActivityEventsWatchTourVideoToDoStatus {
+export enum WatchTourVideoToDoStatus {
     ToDo = "ToDo",
     InProgress = "InProgress",
     Completed = "Completed",
@@ -36,7 +36,7 @@ export enum ActivityEventsWatchTourVideoToDoStatus {
 export class ActivityEvents extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "agreeToClientTermsToDoStatus" })
-    agreeToClientTermsToDoStatus?: ActivityEventsAgreeToClientTermsToDoStatus;
+    agreeToClientTermsToDoStatus?: AgreeToClientTermsToDoStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "benefitsOnlySignup" })
@@ -64,7 +64,7 @@ export class ActivityEvents extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "findFirstDeductibleExpenseToDoStatus" })
-    findFirstDeductibleExpenseToDoStatus?: ActivityEventsFindFirstDeductibleExpenseToDoStatus;
+    findFirstDeductibleExpenseToDoStatus?: FindFirstDeductibleExpenseToDoStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "incomeReviewedAt" })
@@ -76,7 +76,7 @@ export class ActivityEvents extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "knowingCompanyStructureToDoStatus" })
-    knowingCompanyStructureToDoStatus?: ActivityEventsKnowingCompanyStructureToDoStatus;
+    knowingCompanyStructureToDoStatus?: KnowingCompanyStructureToDoStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "paymentsInfoBannerClosed" })
@@ -100,5 +100,5 @@ export class ActivityEvents extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "watchTourVideoToDoStatus" })
-    watchTourVideoToDoStatus?: ActivityEventsWatchTourVideoToDoStatus;
+    watchTourVideoToDoStatus?: WatchTourVideoToDoStatus;
 }

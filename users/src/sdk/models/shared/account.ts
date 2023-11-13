@@ -19,7 +19,7 @@ export enum AccountStatus {
     Ephemeral = "Ephemeral",
 }
 
-export enum AccountSubType {
+export enum SubType {
     Paypal = "Paypal",
     Checking = "Checking",
     Savings = "Savings",
@@ -27,12 +27,12 @@ export enum AccountSubType {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum AccountType {
+export enum TypeT {
     Depository = "Depository",
     Credit = "Credit",
 }
 
-export enum AccountUsage {
+export enum Usage {
     Business = "Business",
     Personal = "Personal",
     Mixed = "Mixed",
@@ -119,11 +119,11 @@ export class Account extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "subType" })
-    subType?: AccountSubType;
+    subType?: SubType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type: AccountType;
+    type: TypeT;
 
     @SpeakeasyMetadata()
     @Expose({ name: "updatedAt" })
@@ -131,7 +131,7 @@ export class Account extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "usage" })
-    usage?: AccountUsage;
+    usage?: Usage;
 
     @SpeakeasyMetadata()
     @Expose({ name: "usedFor" })

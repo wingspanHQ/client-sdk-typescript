@@ -10,7 +10,7 @@ import { MemberTaxInfo } from "./membertaxinfo";
 import { MemberWithholdings } from "./memberwithholdings";
 import { Expose, Type } from "class-transformer";
 
-export enum MemberProfileBookkeepingProductsUsed {
+export enum BookkeepingProductsUsed {
     AccountingSoftware = "AccountingSoftware",
     Cpa = "CPA",
     PenAndPaper = "PenAndPaper",
@@ -19,7 +19,7 @@ export enum MemberProfileBookkeepingProductsUsed {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileFreelanceDuration {
+export enum FreelanceDuration {
     LessThanOne = "LessThanOne",
     OneToThree = "OneToThree",
     ThreeToFive = "ThreeToFive",
@@ -27,7 +27,7 @@ export enum MemberProfileFreelanceDuration {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileFreelanceType {
+export enum FreelanceType {
     Team = "Team",
     FullTime = "FullTime",
     PartTime = "PartTime",
@@ -35,7 +35,7 @@ export enum MemberProfileFreelanceType {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileIndustry {
+export enum Industry {
     AdultEntertainmentDatingOrEscortServices = "AdultEntertainmentDatingOrEscortServices",
     AgricultureForestryFishingOrHunting = "AgricultureForestryFishingOrHunting",
     ArtsEntertainmentAndRecreation = "ArtsEntertainmentAndRecreation",
@@ -65,7 +65,7 @@ export enum MemberProfileIndustry {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileInterests {
+export enum Interests {
     Incorporating = "Incorporating",
     Marketing = "Marketing",
     FindingWork = "FindingWork",
@@ -78,7 +78,7 @@ export enum MemberProfileInterests {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileProductAspectImportance {
+export enum ProductAspectImportance {
     Invoicing = "Invoicing",
     PaymentSpeed = "PaymentSpeed",
     ClientManagement = "ClientManagement",
@@ -93,7 +93,7 @@ export enum MemberProfileProductAspectImportance {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberProfileProductImportance {
+export enum ProductImportance {
     Payments = "Payments",
     Bookkeeping = "Bookkeeping",
     Benefits = "Benefits",
@@ -108,7 +108,7 @@ export class MemberProfile extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "bookkeepingProductsUsed" })
-    bookkeepingProductsUsed?: MemberProfileBookkeepingProductsUsed[];
+    bookkeepingProductsUsed?: BookkeepingProductsUsed[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "bookkeepingProductsUsedOther" })
@@ -121,11 +121,11 @@ export class MemberProfile extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "freelanceDuration" })
-    freelanceDuration?: MemberProfileFreelanceDuration;
+    freelanceDuration?: FreelanceDuration;
 
     @SpeakeasyMetadata()
     @Expose({ name: "freelanceType" })
-    freelanceType?: MemberProfileFreelanceType;
+    freelanceType?: FreelanceType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "homeAddress" })
@@ -134,11 +134,11 @@ export class MemberProfile extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "industry" })
-    industry?: MemberProfileIndustry;
+    industry?: Industry;
 
     @SpeakeasyMetadata()
     @Expose({ name: "interests" })
-    interests?: MemberProfileInterests[];
+    interests?: Interests[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "logoFileId" })
@@ -162,11 +162,11 @@ export class MemberProfile extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "productAspectImportance" })
-    productAspectImportance?: MemberProfileProductAspectImportance[];
+    productAspectImportance?: ProductAspectImportance[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "productImportance" })
-    productImportance?: MemberProfileProductImportance[];
+    productImportance?: ProductImportance[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "ssnLastFourProvided" })

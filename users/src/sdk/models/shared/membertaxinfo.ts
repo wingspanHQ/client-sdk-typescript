@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { MemberOccupation } from "./memberoccupation";
 import { Expose, Type } from "class-transformer";
 
-export enum MemberTaxInfoFilingCode {
+export enum FilingCode {
     S = "S",
     M = "M",
     H = "H",
@@ -15,7 +15,7 @@ export enum MemberTaxInfoFilingCode {
     LessThanNilGreaterThan = "<nil>",
 }
 
-export enum MemberTaxInfoFilingType {
+export enum FilingType {
     Personal = "Personal",
     Business = "Business",
     LessThanNilGreaterThan = "<nil>",
@@ -28,11 +28,11 @@ export class MemberTaxInfo extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "filingCode" })
-    filingCode?: MemberTaxInfoFilingCode;
+    filingCode?: FilingCode;
 
     @SpeakeasyMetadata()
     @Expose({ name: "filingType" })
-    filingType?: MemberTaxInfoFilingType;
+    filingType?: FilingType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "incomeEstimateForYear" })

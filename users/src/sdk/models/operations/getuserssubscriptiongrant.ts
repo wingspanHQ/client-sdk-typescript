@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetUsersSubscriptionGrantResponse extends SpeakeasyBase {
@@ -29,5 +29,5 @@ export class GetUsersSubscriptionGrantResponse extends SpeakeasyBase {
      * A list of subscription grants
      */
     @SpeakeasyMetadata({ elemType: shared.SubscriptionGrantResponse })
-    subscriptionGrantResponses?: shared.SubscriptionGrantResponse[];
+    classes?: shared.SubscriptionGrantResponse[];
 }

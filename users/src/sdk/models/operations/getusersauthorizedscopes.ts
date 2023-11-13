@@ -3,16 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetUsersAuthorizedScopesResponse extends SpeakeasyBase {
-    /**
-     * A list of of authorization scope-groups
-     */
-    @SpeakeasyMetadata({ elemType: shared.AuthorizationScopeGroup })
-    authorizationScopeGroups?: shared.AuthorizationScopeGroup[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -30,4 +24,10 @@ export class GetUsersAuthorizedScopesResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * A list of of authorization scope-groups
+     */
+    @SpeakeasyMetadata({ elemType: shared.AuthorizationScopeGroup })
+    classes?: shared.AuthorizationScopeGroup[];
 }

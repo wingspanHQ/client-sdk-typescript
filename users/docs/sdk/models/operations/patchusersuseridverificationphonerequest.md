@@ -1,0 +1,9 @@
+# PatchUsersUserIdVerificationPhoneRequest
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `completePhoneVerificationRequest`                                                                        | [shared.CompletePhoneVerificationRequest](../../../sdk/models/shared/completephoneverificationrequest.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `id`                                                                                                      | *string*                                                                                                  | :heavy_check_mark:                                                                                        | Unique identifier                                                                                         |

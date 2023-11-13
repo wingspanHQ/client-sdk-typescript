@@ -5,22 +5,22 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class ActivityUpdateRequestContext extends SpeakeasyBase {}
+export class Context extends SpeakeasyBase {}
 
-export class ActivityUpdateRequestEvents extends SpeakeasyBase {}
+export class Events extends SpeakeasyBase {}
 
 export class ActivityUpdateRequestFlows extends SpeakeasyBase {}
 
 export class ActivityUpdateRequest extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "context" })
-    @Type(() => ActivityUpdateRequestContext)
-    context?: ActivityUpdateRequestContext;
+    @Type(() => Context)
+    context?: Context;
 
     @SpeakeasyMetadata()
     @Expose({ name: "events" })
-    @Type(() => ActivityUpdateRequestEvents)
-    events?: ActivityUpdateRequestEvents;
+    @Type(() => Events)
+    events?: Events;
 
     @SpeakeasyMetadata()
     @Expose({ name: "flows" })

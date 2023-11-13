@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum PasswordResetRequestUserType {
+export enum UserType {
     Member = "Member",
     Client = "Client",
 }
@@ -17,5 +17,5 @@ export class PasswordResetRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "userType" })
-    userType: PasswordResetRequestUserType;
+    userType: UserType;
 }

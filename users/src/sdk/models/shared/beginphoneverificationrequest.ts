@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum BeginPhoneVerificationRequestChannel {
+export enum Channel {
     PhoneCall = "PhoneCall",
     Sms = "SMS",
     LessThanNilGreaterThan = "<nil>",
@@ -14,7 +14,7 @@ export enum BeginPhoneVerificationRequestChannel {
 export class BeginPhoneVerificationRequest extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "channel" })
-    channel?: BeginPhoneVerificationRequestChannel;
+    channel?: Channel;
 
     @SpeakeasyMetadata()
     @Expose({ name: "phone" })

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetUsersOrganizationUserResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetUsersOrganizationUserResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * List of user objects (used only as part organization user accounts
-     */
-    @SpeakeasyMetadata({ elemType: shared.NewUser })
-    newUsers?: shared.NewUser[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetUsersOrganizationUserResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * List of user objects (used only as part organization user accounts
+     */
+    @SpeakeasyMetadata({ elemType: shared.NewUser })
+    classes?: shared.NewUser[];
 }
