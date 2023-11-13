@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetIntegrationsWebhooksPreferenceResponse extends SpeakeasyBase {
@@ -29,5 +29,5 @@ export class GetIntegrationsWebhooksPreferenceResponse extends SpeakeasyBase {
      * a list of webhooks preference object
      */
     @SpeakeasyMetadata({ elemType: shared.WebhooksPreferenceResponse })
-    webhooksPreferenceResponses?: shared.WebhooksPreferenceResponse[];
+    classes?: shared.WebhooksPreferenceResponse[];
 }

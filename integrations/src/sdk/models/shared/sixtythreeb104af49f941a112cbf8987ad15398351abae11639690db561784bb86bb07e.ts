@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum SixtyThreeb104af49f941a112cbf8987ad15398351abae11639690db561784bb86bb07eHealth {
+export enum Health {
     Healthy = "Healthy",
     Unhealthy = "Unhealthy",
     Unknown = "Unknown",
@@ -18,5 +18,5 @@ export class SixtyThreeb104af49f941a112cbf8987ad15398351abae11639690db561784bb86
 
     @SpeakeasyMetadata()
     @Expose({ name: "health" })
-    health: SixtyThreeb104af49f941a112cbf8987ad15398351abae11639690db561784bb86bb07eHealth;
+    health: Health;
 }

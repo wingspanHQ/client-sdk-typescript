@@ -1,13 +1,11 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Integrations } from "@wingspan/integrations";
 
 (async () => {
     const sdk = new Integrations();
 
-    const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountAssetId({
+    const res = await sdk.deleteIntegrationsQuickbooksAccountAssetId({
         id: "<ID>",
     });
 

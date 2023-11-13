@@ -1,0 +1,9 @@
+# IntegrationsQuickbooksCreateRequest
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `defaults`                                                                                            | [shared.IntegrationsQuickbooksDefaults](../../../sdk/models/shared/integrationsquickbooksdefaults.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `redirectUrl`                                                                                         | *string*                                                                                              | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

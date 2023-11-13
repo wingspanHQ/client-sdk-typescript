@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetIntegrationsQuickbooksServiceSyncActivityResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetIntegrationsQuickbooksServiceSyncActivityResponse extends Speake
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * a list of quickbooks sync activities
-     */
-    @SpeakeasyMetadata({ elemType: shared.IntegrationsQuickbooksSyncActivityGetResponse })
-    integrationsQuickbooksSyncActivityGetResponses?: shared.IntegrationsQuickbooksSyncActivityGetResponse[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetIntegrationsQuickbooksServiceSyncActivityResponse extends Speake
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * a list of quickbooks sync activities
+     */
+    @SpeakeasyMetadata({ elemType: shared.IntegrationsQuickbooksSyncActivityGetResponse })
+    classes?: shared.IntegrationsQuickbooksSyncActivityGetResponse[];
 }

@@ -1,0 +1,24 @@
+# IntegrationsQuickbooksSyncActivityGetResponse
+
+
+## Fields
+
+| Field                                                       | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `action`                                                    | [shared.Action](../../../sdk/models/shared/action.md)       | :heavy_check_mark:                                          | N/A                                                         |
+| `createdAt`                                                 | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `displayName`                                               | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `entityId`                                                  | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `entityName`                                                | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `eventActors`                                               | Record<string, *string*>                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `integrationsId`                                            | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `isError`                                                   | *boolean*                                                   | :heavy_minus_sign:                                          | N/A                                                         |
+| `isHidden`                                                  | *boolean*                                                   | :heavy_minus_sign:                                          | N/A                                                         |
+| `labels`                                                    | Record<string, *string*>                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `message`                                                   | *string*                                                    | :heavy_minus_sign:                                          | N/A                                                         |
+| `qboEntityId`                                               | *string*                                                    | :heavy_minus_sign:                                          | N/A                                                         |
+| `qboEntityName`                                             | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `syncActivityId`                                            | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `updatedAt`                                                 | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `userId`                                                    | *string*                                                    | :heavy_check_mark:                                          | N/A                                                         |
+| `userRoles`                                                 | [shared.UserRoles](../../../sdk/models/shared/userroles.md) | :heavy_check_mark:                                          | N/A                                                         |

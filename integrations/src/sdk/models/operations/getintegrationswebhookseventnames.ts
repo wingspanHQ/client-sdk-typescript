@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetIntegrationsWebhooksEventnamesResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetIntegrationsWebhooksEventnamesResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * a list of event names
-     */
-    @SpeakeasyMetadata({ elemType: shared.EventName })
-    eventNames?: shared.EventName[];
 
     /**
      * HTTP response status code for this operation
@@ -30,4 +24,10 @@ export class GetIntegrationsWebhooksEventnamesResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * a list of event names
+     */
+    @SpeakeasyMetadata({ elemType: shared.EventName })
+    classes?: shared.EventName[];
 }

@@ -1,0 +1,9 @@
+# PatchIntegrationsQuickbooksCustomerIdRequest
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `integrationCustomerCreateRequest`                                                                        | [shared.IntegrationCustomerCreateRequest](../../../sdk/models/shared/integrationcustomercreaterequest.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `id`                                                                                                      | *string*                                                                                                  | :heavy_check_mark:                                                                                        | Unique identifier                                                                                         |

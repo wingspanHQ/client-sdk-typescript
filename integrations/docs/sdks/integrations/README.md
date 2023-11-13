@@ -74,10 +74,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountAssetId({
+  const res = await sdk.deleteIntegrationsQuickbooksAccountAssetId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -87,16 +86,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.DeleteIntegrationsQuickbooksAccountAssetIdRequest](../../models/operations/deleteintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeleteIntegrationsQuickbooksAccountAssetIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksAccountAssetIdResponse](../../models/operations/deleteintegrationsquickbooksaccountassetidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksAccountAssetIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksaccountassetidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksAccountEquityId
 
@@ -110,10 +113,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountEquityId({
+  const res = await sdk.deleteIntegrationsQuickbooksAccountEquityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -123,16 +125,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.DeleteIntegrationsQuickbooksAccountEquityIdRequest](../../models/operations/deleteintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.DeleteIntegrationsQuickbooksAccountEquityIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksAccountEquityIdResponse](../../models/operations/deleteintegrationsquickbooksaccountequityidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksAccountEquityIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksaccountequityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksAccountExpenseId
 
@@ -146,10 +152,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountExpenseId({
+  const res = await sdk.deleteIntegrationsQuickbooksAccountExpenseId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -159,16 +164,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeleteIntegrationsQuickbooksAccountExpenseIdRequest](../../models/operations/deleteintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.DeleteIntegrationsQuickbooksAccountExpenseIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksAccountExpenseIdResponse](../../models/operations/deleteintegrationsquickbooksaccountexpenseidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksAccountExpenseIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksaccountexpenseidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksAccountLiabilityId
 
@@ -182,10 +191,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountLiabilityId({
+  const res = await sdk.deleteIntegrationsQuickbooksAccountLiabilityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -195,16 +203,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.DeleteIntegrationsQuickbooksAccountLiabilityIdRequest](../../models/operations/deleteintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [operations.DeleteIntegrationsQuickbooksAccountLiabilityIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksAccountLiabilityIdResponse](../../models/operations/deleteintegrationsquickbooksaccountliabilityidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksAccountLiabilityIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksaccountliabilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksAccountRevenueId
 
@@ -218,10 +230,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksAccountRevenueId({
+  const res = await sdk.deleteIntegrationsQuickbooksAccountRevenueId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -231,16 +242,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeleteIntegrationsQuickbooksAccountRevenueIdRequest](../../models/operations/deleteintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.DeleteIntegrationsQuickbooksAccountRevenueIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksAccountRevenueIdResponse](../../models/operations/deleteintegrationsquickbooksaccountrevenueidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksAccountRevenueIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksaccountrevenueidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksCustomerId
 
@@ -254,10 +269,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksCustomerId({
+  const res = await sdk.deleteIntegrationsQuickbooksCustomerId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -267,16 +281,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.DeleteIntegrationsQuickbooksCustomerIdRequest](../../models/operations/deleteintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.DeleteIntegrationsQuickbooksCustomerIdRequest](../../sdk/models/operations/deleteintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksCustomerIdResponse](../../models/operations/deleteintegrationsquickbookscustomeridresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksCustomerIdResponse](../../sdk/models/operations/deleteintegrationsquickbookscustomeridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksItemId
 
@@ -290,10 +308,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksItemId({
+  const res = await sdk.deleteIntegrationsQuickbooksItemId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -303,16 +320,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.DeleteIntegrationsQuickbooksItemIdRequest](../../models/operations/deleteintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.DeleteIntegrationsQuickbooksItemIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksItemIdResponse](../../models/operations/deleteintegrationsquickbooksitemidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksItemIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksService
 
@@ -326,8 +347,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksService();
-
+  const res = await sdk.deleteIntegrationsQuickbooksService();
 
   if (res.statusCode == 200) {
     // handle response
@@ -344,8 +364,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksServiceResponse](../../models/operations/deleteintegrationsquickbooksserviceresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksServiceResponse](../../sdk/models/operations/deleteintegrationsquickbooksserviceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsQuickbooksVendorId
 
@@ -359,10 +383,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsQuickbooksVendorId({
+  const res = await sdk.deleteIntegrationsQuickbooksVendorId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -372,16 +395,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.DeleteIntegrationsQuickbooksVendorIdRequest](../../models/operations/deleteintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.DeleteIntegrationsQuickbooksVendorIdRequest](../../sdk/models/operations/deleteintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsQuickbooksVendorIdResponse](../../models/operations/deleteintegrationsquickbooksvendoridresponse.md)>**
+**Promise<[operations.DeleteIntegrationsQuickbooksVendorIdResponse](../../sdk/models/operations/deleteintegrationsquickbooksvendoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteIntegrationsWebhooksPreferenceId
 
@@ -395,10 +422,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.deleteIntegrationsWebhooksPreferenceId({
+  const res = await sdk.deleteIntegrationsWebhooksPreferenceId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -408,16 +434,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.DeleteIntegrationsWebhooksPreferenceIdRequest](../../models/operations/deleteintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.DeleteIntegrationsWebhooksPreferenceIdRequest](../../sdk/models/operations/deleteintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteIntegrationsWebhooksPreferenceIdResponse](../../models/operations/deleteintegrationswebhookspreferenceidresponse.md)>**
+**Promise<[operations.DeleteIntegrationsWebhooksPreferenceIdResponse](../../sdk/models/operations/deleteintegrationswebhookspreferenceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountAsset
 
@@ -431,8 +461,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountAsset();
-
+  const res = await sdk.getIntegrationsQuickbooksAccountAsset();
 
   if (res.statusCode == 200) {
     // handle response
@@ -449,8 +478,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountAssetResponse](../../models/operations/getintegrationsquickbooksaccountassetresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountAssetResponse](../../sdk/models/operations/getintegrationsquickbooksaccountassetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountAssetId
 
@@ -464,10 +497,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountAssetId({
+  const res = await sdk.getIntegrationsQuickbooksAccountAssetId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -477,16 +509,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetIntegrationsQuickbooksAccountAssetIdRequest](../../models/operations/getintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.GetIntegrationsQuickbooksAccountAssetIdRequest](../../sdk/models/operations/getintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountAssetIdResponse](../../models/operations/getintegrationsquickbooksaccountassetidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountAssetIdResponse](../../sdk/models/operations/getintegrationsquickbooksaccountassetidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountEquity
 
@@ -500,8 +536,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountEquity();
-
+  const res = await sdk.getIntegrationsQuickbooksAccountEquity();
 
   if (res.statusCode == 200) {
     // handle response
@@ -518,8 +553,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountEquityResponse](../../models/operations/getintegrationsquickbooksaccountequityresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountEquityResponse](../../sdk/models/operations/getintegrationsquickbooksaccountequityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountEquityId
 
@@ -533,10 +572,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountEquityId({
+  const res = await sdk.getIntegrationsQuickbooksAccountEquityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -546,16 +584,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.GetIntegrationsQuickbooksAccountEquityIdRequest](../../models/operations/getintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.GetIntegrationsQuickbooksAccountEquityIdRequest](../../sdk/models/operations/getintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountEquityIdResponse](../../models/operations/getintegrationsquickbooksaccountequityidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountEquityIdResponse](../../sdk/models/operations/getintegrationsquickbooksaccountequityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountExpense
 
@@ -569,8 +611,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountExpense();
-
+  const res = await sdk.getIntegrationsQuickbooksAccountExpense();
 
   if (res.statusCode == 200) {
     // handle response
@@ -587,8 +628,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountExpenseResponse](../../models/operations/getintegrationsquickbooksaccountexpenseresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountExpenseResponse](../../sdk/models/operations/getintegrationsquickbooksaccountexpenseresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountExpenseId
 
@@ -602,10 +647,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountExpenseId({
+  const res = await sdk.getIntegrationsQuickbooksAccountExpenseId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -615,16 +659,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetIntegrationsQuickbooksAccountExpenseIdRequest](../../models/operations/getintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.GetIntegrationsQuickbooksAccountExpenseIdRequest](../../sdk/models/operations/getintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountExpenseIdResponse](../../models/operations/getintegrationsquickbooksaccountexpenseidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountExpenseIdResponse](../../sdk/models/operations/getintegrationsquickbooksaccountexpenseidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountLiability
 
@@ -638,8 +686,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountLiability();
-
+  const res = await sdk.getIntegrationsQuickbooksAccountLiability();
 
   if (res.statusCode == 200) {
     // handle response
@@ -656,8 +703,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountLiabilityResponse](../../models/operations/getintegrationsquickbooksaccountliabilityresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountLiabilityResponse](../../sdk/models/operations/getintegrationsquickbooksaccountliabilityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountLiabilityId
 
@@ -671,10 +722,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountLiabilityId({
+  const res = await sdk.getIntegrationsQuickbooksAccountLiabilityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -684,16 +734,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.GetIntegrationsQuickbooksAccountLiabilityIdRequest](../../models/operations/getintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.GetIntegrationsQuickbooksAccountLiabilityIdRequest](../../sdk/models/operations/getintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountLiabilityIdResponse](../../models/operations/getintegrationsquickbooksaccountliabilityidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountLiabilityIdResponse](../../sdk/models/operations/getintegrationsquickbooksaccountliabilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountRevenue
 
@@ -707,8 +761,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountRevenue();
-
+  const res = await sdk.getIntegrationsQuickbooksAccountRevenue();
 
   if (res.statusCode == 200) {
     // handle response
@@ -725,8 +778,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountRevenueResponse](../../models/operations/getintegrationsquickbooksaccountrevenueresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountRevenueResponse](../../sdk/models/operations/getintegrationsquickbooksaccountrevenueresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksAccountRevenueId
 
@@ -740,10 +797,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksAccountRevenueId({
+  const res = await sdk.getIntegrationsQuickbooksAccountRevenueId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -753,16 +809,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetIntegrationsQuickbooksAccountRevenueIdRequest](../../models/operations/getintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.GetIntegrationsQuickbooksAccountRevenueIdRequest](../../sdk/models/operations/getintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksAccountRevenueIdResponse](../../models/operations/getintegrationsquickbooksaccountrevenueidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksAccountRevenueIdResponse](../../sdk/models/operations/getintegrationsquickbooksaccountrevenueidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksCustomer
 
@@ -776,8 +836,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksCustomer();
-
+  const res = await sdk.getIntegrationsQuickbooksCustomer();
 
   if (res.statusCode == 200) {
     // handle response
@@ -794,8 +853,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksCustomerResponse](../../models/operations/getintegrationsquickbookscustomerresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksCustomerResponse](../../sdk/models/operations/getintegrationsquickbookscustomerresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksCustomerId
 
@@ -809,10 +872,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksCustomerId({
+  const res = await sdk.getIntegrationsQuickbooksCustomerId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -822,16 +884,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.GetIntegrationsQuickbooksCustomerIdRequest](../../models/operations/getintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.GetIntegrationsQuickbooksCustomerIdRequest](../../sdk/models/operations/getintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksCustomerIdResponse](../../models/operations/getintegrationsquickbookscustomeridresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksCustomerIdResponse](../../sdk/models/operations/getintegrationsquickbookscustomeridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksItem
 
@@ -845,8 +911,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksItem();
-
+  const res = await sdk.getIntegrationsQuickbooksItem();
 
   if (res.statusCode == 200) {
     // handle response
@@ -863,8 +928,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksItemResponse](../../models/operations/getintegrationsquickbooksitemresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksItemResponse](../../sdk/models/operations/getintegrationsquickbooksitemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksItemId
 
@@ -878,10 +947,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksItemId({
+  const res = await sdk.getIntegrationsQuickbooksItemId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -891,16 +959,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.GetIntegrationsQuickbooksItemIdRequest](../../models/operations/getintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.GetIntegrationsQuickbooksItemIdRequest](../../sdk/models/operations/getintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksItemIdResponse](../../models/operations/getintegrationsquickbooksitemidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksItemIdResponse](../../sdk/models/operations/getintegrationsquickbooksitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksService
 
@@ -914,8 +986,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksService();
-
+  const res = await sdk.getIntegrationsQuickbooksService();
 
   if (res.statusCode == 200) {
     // handle response
@@ -932,8 +1003,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksServiceResponse](../../models/operations/getintegrationsquickbooksserviceresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksServiceResponse](../../sdk/models/operations/getintegrationsquickbooksserviceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksServiceSyncActivity
 
@@ -947,8 +1022,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksServiceSyncActivity();
-
+  const res = await sdk.getIntegrationsQuickbooksServiceSyncActivity();
 
   if (res.statusCode == 200) {
     // handle response
@@ -965,8 +1039,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksServiceSyncActivityResponse](../../models/operations/getintegrationsquickbooksservicesyncactivityresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksServiceSyncActivityResponse](../../sdk/models/operations/getintegrationsquickbooksservicesyncactivityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksServiceSyncActivityId
 
@@ -980,10 +1058,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksServiceSyncActivityId({
+  const res = await sdk.getIntegrationsQuickbooksServiceSyncActivityId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -993,16 +1070,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.GetIntegrationsQuickbooksServiceSyncActivityIdRequest](../../models/operations/getintegrationsquickbooksservicesyncactivityidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [operations.GetIntegrationsQuickbooksServiceSyncActivityIdRequest](../../sdk/models/operations/getintegrationsquickbooksservicesyncactivityidrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksServiceSyncActivityIdResponse](../../models/operations/getintegrationsquickbooksservicesyncactivityidresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksServiceSyncActivityIdResponse](../../sdk/models/operations/getintegrationsquickbooksservicesyncactivityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksVendor
 
@@ -1016,8 +1097,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksVendor();
-
+  const res = await sdk.getIntegrationsQuickbooksVendor();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1034,8 +1114,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksVendorResponse](../../models/operations/getintegrationsquickbooksvendorresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksVendorResponse](../../sdk/models/operations/getintegrationsquickbooksvendorresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsQuickbooksVendorId
 
@@ -1049,10 +1133,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsQuickbooksVendorId({
+  const res = await sdk.getIntegrationsQuickbooksVendorId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1062,16 +1145,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.GetIntegrationsQuickbooksVendorIdRequest](../../models/operations/getintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.GetIntegrationsQuickbooksVendorIdRequest](../../sdk/models/operations/getintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsQuickbooksVendorIdResponse](../../models/operations/getintegrationsquickbooksvendoridresponse.md)>**
+**Promise<[operations.GetIntegrationsQuickbooksVendorIdResponse](../../sdk/models/operations/getintegrationsquickbooksvendoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsWebhooksEventnames
 
@@ -1085,8 +1172,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsWebhooksEventnames();
-
+  const res = await sdk.getIntegrationsWebhooksEventnames();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1103,8 +1189,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsWebhooksEventnamesResponse](../../models/operations/getintegrationswebhookseventnamesresponse.md)>**
+**Promise<[operations.GetIntegrationsWebhooksEventnamesResponse](../../sdk/models/operations/getintegrationswebhookseventnamesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsWebhooksPreference
 
@@ -1118,8 +1208,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsWebhooksPreference();
-
+  const res = await sdk.getIntegrationsWebhooksPreference();
 
   if (res.statusCode == 200) {
     // handle response
@@ -1136,8 +1225,12 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Response
 
-**Promise<[operations.GetIntegrationsWebhooksPreferenceResponse](../../models/operations/getintegrationswebhookspreferenceresponse.md)>**
+**Promise<[operations.GetIntegrationsWebhooksPreferenceResponse](../../sdk/models/operations/getintegrationswebhookspreferenceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getIntegrationsWebhooksPreferenceId
 
@@ -1151,10 +1244,9 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.getIntegrationsWebhooksPreferenceId({
+  const res = await sdk.getIntegrationsWebhooksPreferenceId({
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1164,16 +1256,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.GetIntegrationsWebhooksPreferenceIdRequest](../../models/operations/getintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.GetIntegrationsWebhooksPreferenceIdRequest](../../sdk/models/operations/getintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetIntegrationsWebhooksPreferenceIdResponse](../../models/operations/getintegrationswebhookspreferenceidresponse.md)>**
+**Promise<[operations.GetIntegrationsWebhooksPreferenceIdResponse](../../sdk/models/operations/getintegrationswebhookspreferenceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksAccountAssetId
 
@@ -1187,11 +1283,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksAccountAssetId({
+  const res = await sdk.patchIntegrationsQuickbooksAccountAssetId({
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1201,16 +1296,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.PatchIntegrationsQuickbooksAccountAssetIdRequest](../../models/operations/patchintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.PatchIntegrationsQuickbooksAccountAssetIdRequest](../../sdk/models/operations/patchintegrationsquickbooksaccountassetidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksAccountAssetIdResponse](../../models/operations/patchintegrationsquickbooksaccountassetidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksAccountAssetIdResponse](../../sdk/models/operations/patchintegrationsquickbooksaccountassetidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksAccountEquityId
 
@@ -1224,11 +1323,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksAccountEquityId({
+  const res = await sdk.patchIntegrationsQuickbooksAccountEquityId({
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1238,16 +1336,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PatchIntegrationsQuickbooksAccountEquityIdRequest](../../models/operations/patchintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.PatchIntegrationsQuickbooksAccountEquityIdRequest](../../sdk/models/operations/patchintegrationsquickbooksaccountequityidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksAccountEquityIdResponse](../../models/operations/patchintegrationsquickbooksaccountequityidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksAccountEquityIdResponse](../../sdk/models/operations/patchintegrationsquickbooksaccountequityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksAccountExpenseId
 
@@ -1261,11 +1363,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksAccountExpenseId({
+  const res = await sdk.patchIntegrationsQuickbooksAccountExpenseId({
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1275,16 +1376,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PatchIntegrationsQuickbooksAccountExpenseIdRequest](../../models/operations/patchintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.PatchIntegrationsQuickbooksAccountExpenseIdRequest](../../sdk/models/operations/patchintegrationsquickbooksaccountexpenseidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksAccountExpenseIdResponse](../../models/operations/patchintegrationsquickbooksaccountexpenseidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksAccountExpenseIdResponse](../../sdk/models/operations/patchintegrationsquickbooksaccountexpenseidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksAccountLiabilityId
 
@@ -1298,11 +1403,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksAccountLiabilityId({
+  const res = await sdk.patchIntegrationsQuickbooksAccountLiabilityId({
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1312,16 +1416,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.PatchIntegrationsQuickbooksAccountLiabilityIdRequest](../../models/operations/patchintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.PatchIntegrationsQuickbooksAccountLiabilityIdRequest](../../sdk/models/operations/patchintegrationsquickbooksaccountliabilityidrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksAccountLiabilityIdResponse](../../models/operations/patchintegrationsquickbooksaccountliabilityidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksAccountLiabilityIdResponse](../../sdk/models/operations/patchintegrationsquickbooksaccountliabilityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksAccountRevenueId
 
@@ -1335,11 +1443,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksAccountRevenueId({
+  const res = await sdk.patchIntegrationsQuickbooksAccountRevenueId({
     integrationAccountCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1349,16 +1456,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PatchIntegrationsQuickbooksAccountRevenueIdRequest](../../models/operations/patchintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.PatchIntegrationsQuickbooksAccountRevenueIdRequest](../../sdk/models/operations/patchintegrationsquickbooksaccountrevenueidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksAccountRevenueIdResponse](../../models/operations/patchintegrationsquickbooksaccountrevenueidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksAccountRevenueIdResponse](../../sdk/models/operations/patchintegrationsquickbooksaccountrevenueidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksCustomerId
 
@@ -1372,11 +1483,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksCustomerId({
+  const res = await sdk.patchIntegrationsQuickbooksCustomerId({
     integrationCustomerCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1386,16 +1496,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PatchIntegrationsQuickbooksCustomerIdRequest](../../models/operations/patchintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.PatchIntegrationsQuickbooksCustomerIdRequest](../../sdk/models/operations/patchintegrationsquickbookscustomeridrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksCustomerIdResponse](../../models/operations/patchintegrationsquickbookscustomeridresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksCustomerIdResponse](../../sdk/models/operations/patchintegrationsquickbookscustomeridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksItemId
 
@@ -1409,11 +1523,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksItemId({
+  const res = await sdk.patchIntegrationsQuickbooksItemId({
     integrationItemCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1423,16 +1536,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.PatchIntegrationsQuickbooksItemIdRequest](../../models/operations/patchintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.PatchIntegrationsQuickbooksItemIdRequest](../../sdk/models/operations/patchintegrationsquickbooksitemidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksItemIdResponse](../../models/operations/patchintegrationsquickbooksitemidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksItemIdResponse](../../sdk/models/operations/patchintegrationsquickbooksitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksService
 
@@ -1447,10 +1564,9 @@ import { IntegrationsQuickbooksUpdateRequestSyncStatus } from "@wingspan/integra
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksService({
+  const res = await sdk.patchIntegrationsQuickbooksService({
     defaults: {},
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1460,16 +1576,20 @@ import { IntegrationsQuickbooksUpdateRequestSyncStatus } from "@wingspan/integra
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [shared.IntegrationsQuickbooksUpdateRequest](../../models/shared/integrationsquickbooksupdaterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [shared.IntegrationsQuickbooksUpdateRequest](../../sdk/models/shared/integrationsquickbooksupdaterequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksServiceResponse](../../models/operations/patchintegrationsquickbooksserviceresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksServiceResponse](../../sdk/models/operations/patchintegrationsquickbooksserviceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksServiceSyncActivityId
 
@@ -1483,13 +1603,12 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksServiceSyncActivityId({
+  const res = await sdk.patchIntegrationsQuickbooksServiceSyncActivityId({
     integrationsQuickbooksSyncActivityUpdateRequest: {
       isHidden: false,
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1499,16 +1618,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [operations.PatchIntegrationsQuickbooksServiceSyncActivityIdRequest](../../models/operations/patchintegrationsquickbooksservicesyncactivityidrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
+| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                    | [operations.PatchIntegrationsQuickbooksServiceSyncActivityIdRequest](../../sdk/models/operations/patchintegrationsquickbooksservicesyncactivityidrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksServiceSyncActivityIdResponse](../../models/operations/patchintegrationsquickbooksservicesyncactivityidresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksServiceSyncActivityIdResponse](../../sdk/models/operations/patchintegrationsquickbooksservicesyncactivityidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsQuickbooksVendorId
 
@@ -1522,11 +1645,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsQuickbooksVendorId({
+  const res = await sdk.patchIntegrationsQuickbooksVendorId({
     integrationVendorCreateRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1536,16 +1658,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PatchIntegrationsQuickbooksVendorIdRequest](../../models/operations/patchintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.PatchIntegrationsQuickbooksVendorIdRequest](../../sdk/models/operations/patchintegrationsquickbooksvendoridrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsQuickbooksVendorIdResponse](../../models/operations/patchintegrationsquickbooksvendoridresponse.md)>**
+**Promise<[operations.PatchIntegrationsQuickbooksVendorIdResponse](../../sdk/models/operations/patchintegrationsquickbooksvendoridresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patchIntegrationsWebhooksPreferenceId
 
@@ -1559,7 +1685,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.patchIntegrationsWebhooksPreferenceId({
+  const res = await sdk.patchIntegrationsWebhooksPreferenceId({
     webhooksPreferenceUpdateRequest: {
       subscribedEvents: [
         "string",
@@ -1567,7 +1693,6 @@ import { Integrations } from "@wingspan/integrations";
     },
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1577,16 +1702,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PatchIntegrationsWebhooksPreferenceIdRequest](../../models/operations/patchintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.PatchIntegrationsWebhooksPreferenceIdRequest](../../sdk/models/operations/patchintegrationswebhookspreferenceidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PatchIntegrationsWebhooksPreferenceIdResponse](../../models/operations/patchintegrationswebhookspreferenceidresponse.md)>**
+**Promise<[operations.PatchIntegrationsWebhooksPreferenceIdResponse](../../sdk/models/operations/patchintegrationswebhookspreferenceidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksAccountAsset
 
@@ -1600,8 +1729,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksAccountAsset({});
-
+  const res = await sdk.postIntegrationsQuickbooksAccountAsset({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1611,16 +1739,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.IntegrationAccountCreateRequest](../../models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.IntegrationAccountCreateRequest](../../sdk/models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksAccountAssetResponse](../../models/operations/postintegrationsquickbooksaccountassetresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksAccountAssetResponse](../../sdk/models/operations/postintegrationsquickbooksaccountassetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksAccountEquity
 
@@ -1634,8 +1766,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksAccountEquity({});
-
+  const res = await sdk.postIntegrationsQuickbooksAccountEquity({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1645,16 +1776,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.IntegrationAccountCreateRequest](../../models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.IntegrationAccountCreateRequest](../../sdk/models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksAccountEquityResponse](../../models/operations/postintegrationsquickbooksaccountequityresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksAccountEquityResponse](../../sdk/models/operations/postintegrationsquickbooksaccountequityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksAccountExpense
 
@@ -1668,8 +1803,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksAccountExpense({});
-
+  const res = await sdk.postIntegrationsQuickbooksAccountExpense({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1679,16 +1813,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.IntegrationAccountCreateRequest](../../models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.IntegrationAccountCreateRequest](../../sdk/models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksAccountExpenseResponse](../../models/operations/postintegrationsquickbooksaccountexpenseresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksAccountExpenseResponse](../../sdk/models/operations/postintegrationsquickbooksaccountexpenseresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksAccountLiability
 
@@ -1702,8 +1840,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksAccountLiability({});
-
+  const res = await sdk.postIntegrationsQuickbooksAccountLiability({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1713,16 +1850,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.IntegrationAccountCreateRequest](../../models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.IntegrationAccountCreateRequest](../../sdk/models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksAccountLiabilityResponse](../../models/operations/postintegrationsquickbooksaccountliabilityresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksAccountLiabilityResponse](../../sdk/models/operations/postintegrationsquickbooksaccountliabilityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksAccountRevenue
 
@@ -1736,8 +1877,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksAccountRevenue({});
-
+  const res = await sdk.postIntegrationsQuickbooksAccountRevenue({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1747,16 +1887,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.IntegrationAccountCreateRequest](../../models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.IntegrationAccountCreateRequest](../../sdk/models/shared/integrationaccountcreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksAccountRevenueResponse](../../models/operations/postintegrationsquickbooksaccountrevenueresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksAccountRevenueResponse](../../sdk/models/operations/postintegrationsquickbooksaccountrevenueresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksCustomer
 
@@ -1770,8 +1914,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksCustomer({});
-
+  const res = await sdk.postIntegrationsQuickbooksCustomer({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1781,16 +1924,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [shared.IntegrationCustomerCreateRequest](../../models/shared/integrationcustomercreaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [shared.IntegrationCustomerCreateRequest](../../sdk/models/shared/integrationcustomercreaterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksCustomerResponse](../../models/operations/postintegrationsquickbookscustomerresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksCustomerResponse](../../sdk/models/operations/postintegrationsquickbookscustomerresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksItem
 
@@ -1804,8 +1951,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksItem({});
-
+  const res = await sdk.postIntegrationsQuickbooksItem({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1815,16 +1961,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [shared.IntegrationItemCreateRequest](../../models/shared/integrationitemcreaterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [shared.IntegrationItemCreateRequest](../../sdk/models/shared/integrationitemcreaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksItemResponse](../../models/operations/postintegrationsquickbooksitemresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksItemResponse](../../sdk/models/operations/postintegrationsquickbooksitemresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksService
 
@@ -1838,11 +1988,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksService({
+  const res = await sdk.postIntegrationsQuickbooksService({
     defaults: {},
     redirectUrl: "string",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1852,16 +2001,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [shared.IntegrationsQuickbooksCreateRequest](../../models/shared/integrationsquickbookscreaterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [shared.IntegrationsQuickbooksCreateRequest](../../sdk/models/shared/integrationsquickbookscreaterequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksServiceResponse](../../models/operations/postintegrationsquickbooksserviceresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksServiceResponse](../../sdk/models/operations/postintegrationsquickbooksserviceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksServiceSyncActivityIdForceSync
 
@@ -1875,11 +2028,10 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksServiceSyncActivityIdForceSync({
+  const res = await sdk.postIntegrationsQuickbooksServiceSyncActivityIdForceSync({
     integrationsQuickbooksSyncActivityForceSyncRequest: {},
     id: "<ID>",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1889,16 +2041,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [operations.PostIntegrationsQuickbooksServiceSyncActivityIdForceSyncRequest](../../models/operations/postintegrationsquickbooksservicesyncactivityidforcesyncrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
+| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                    | [operations.PostIntegrationsQuickbooksServiceSyncActivityIdForceSyncRequest](../../sdk/models/operations/postintegrationsquickbooksservicesyncactivityidforcesyncrequest.md) | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
+| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksServiceSyncActivityIdForceSyncResponse](../../models/operations/postintegrationsquickbooksservicesyncactivityidforcesyncresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksServiceSyncActivityIdForceSyncResponse](../../sdk/models/operations/postintegrationsquickbooksservicesyncactivityidforcesyncresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsQuickbooksVendor
 
@@ -1912,8 +2068,7 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsQuickbooksVendor({});
-
+  const res = await sdk.postIntegrationsQuickbooksVendor({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -1923,16 +2078,20 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [shared.IntegrationVendorCreateRequest](../../models/shared/integrationvendorcreaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [shared.IntegrationVendorCreateRequest](../../sdk/models/shared/integrationvendorcreaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsQuickbooksVendorResponse](../../models/operations/postintegrationsquickbooksvendorresponse.md)>**
+**Promise<[operations.PostIntegrationsQuickbooksVendorResponse](../../sdk/models/operations/postintegrationsquickbooksvendorresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postIntegrationsWebhooksPreference
 
@@ -1946,14 +2105,13 @@ import { Integrations } from "@wingspan/integrations";
 (async() => {
   const sdk = new Integrations();
 
-  const res = await sdk.integrations.postIntegrationsWebhooksPreference({
+  const res = await sdk.postIntegrationsWebhooksPreference({
     sharedSecret: "string",
     subscribedEvents: [
       "string",
     ],
     url: "http://corny-registry.name",
   });
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -1963,13 +2121,17 @@ import { Integrations } from "@wingspan/integrations";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [shared.WebhooksPreferenceCreateRequest](../../models/shared/webhookspreferencecreaterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [shared.WebhooksPreferenceCreateRequest](../../sdk/models/shared/webhookspreferencecreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostIntegrationsWebhooksPreferenceResponse](../../models/operations/postintegrationswebhookspreferenceresponse.md)>**
+**Promise<[operations.PostIntegrationsWebhooksPreferenceResponse](../../sdk/models/operations/postintegrationswebhookspreferenceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
