@@ -7,11 +7,11 @@ import { SixtyThreeb104af49f941a112cbf8987ad15398351abae11639690db561784bb86bb07
 import { Thirteenf81ff99f0b27f3425dded9d307db61524bb8425c7a5c38c5dc6da2c8bb52a4 } from "./thirteenf81ff99f0b27f3425dded9d307db61524bb8425c7a5c38c5dc6da2c8bb52a4";
 import { Expose, Type } from "class-transformer";
 
-export enum IntegrationAccountResponseIntegrationPartner {
+export enum IntegrationPartner {
     Quickbooks = "Quickbooks",
 }
 
-export enum IntegrationAccountResponseStatus {
+export enum Status {
     Active = "Active",
     Inactive = "Inactive",
     Deleted = "Deleted",
@@ -49,7 +49,7 @@ export class IntegrationAccountResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "integrationPartner" })
-    integrationPartner: IntegrationAccountResponseIntegrationPartner;
+    integrationPartner: IntegrationPartner;
 
     @SpeakeasyMetadata()
     @Expose({ name: "internal" })
@@ -62,7 +62,7 @@ export class IntegrationAccountResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: IntegrationAccountResponseStatus;
+    status: Status;
 
     @SpeakeasyMetadata()
     @Expose({ name: "subAccount" })

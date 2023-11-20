@@ -6,14 +6,14 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { IntegrationsQuickbooksDefaults } from "./integrationsquickbooksdefaults";
 import { Expose, Type } from "class-transformer";
 
-export enum IntegrationsQuickbooksCreateResponseAuthStatus {
+export enum AuthStatus {
     NeverConnected = "NeverConnected",
     Connected = "Connected",
     RetryingConnection = "RetryingConnection",
     Disconnected = "Disconnected",
 }
 
-export enum IntegrationsQuickbooksCreateResponseSyncStatus {
+export enum SyncStatus {
     NeverSynced = "NeverSynced",
     PendingSync = "PendingSync",
     Synced = "Synced",
@@ -27,7 +27,7 @@ export class IntegrationsQuickbooksCreateResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "authStatus" })
-    authStatus: IntegrationsQuickbooksCreateResponseAuthStatus;
+    authStatus: AuthStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "defaults" })
@@ -44,7 +44,7 @@ export class IntegrationsQuickbooksCreateResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "syncStatus" })
-    syncStatus: IntegrationsQuickbooksCreateResponseSyncStatus;
+    syncStatus: SyncStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "userId" })

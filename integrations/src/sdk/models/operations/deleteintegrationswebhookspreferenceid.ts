@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class DeleteIntegrationsWebhooksPreferenceIdRequest extends SpeakeasyBase {
@@ -31,7 +31,7 @@ export class DeleteIntegrationsWebhooksPreferenceIdResponse extends SpeakeasyBas
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * a webhooks preference object

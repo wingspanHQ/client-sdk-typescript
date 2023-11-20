@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum IntegrationsQuickbooksSyncActivityGetResponseAction {
+export enum Action {
     Create = "Create",
     Update = "Update",
     Delete = "Delete",
@@ -15,7 +15,7 @@ export enum IntegrationsQuickbooksSyncActivityGetResponseAction {
 export class IntegrationsQuickbooksSyncActivityGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action: IntegrationsQuickbooksSyncActivityGetResponseAction;
+    action: Action;
 
     @SpeakeasyMetadata()
     @Expose({ name: "createdAt" })
