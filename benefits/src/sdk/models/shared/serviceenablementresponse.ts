@@ -23,4 +23,8 @@ export class ServiceEnablementResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "serviceState" })
     serviceState: ServiceState;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "test" })
+    test?: string;
 }

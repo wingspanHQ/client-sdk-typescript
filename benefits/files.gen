@@ -1,3 +1,5 @@
+src/sdk/benefitsenrollment.ts
+src/sdk/benefitsservice.ts
 src/sdk/sdk.ts
 .eslintrc.yml
 jest.config.js
@@ -31,6 +33,7 @@ src/sdk/models/shared/planenrollmentcoveragemonth.ts
 src/sdk/models/shared/a71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc.ts
 src/sdk/models/shared/serviceenablementresponse.ts
 src/sdk/models/shared/serviceenablementupdate.ts
+src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
@@ -56,5 +59,8 @@ docs/sdk/models/shared/a71f30be878693b235f8c5f1650be03c9920ca9821526545760476436
 docs/sdk/models/shared/servicestate.md
 docs/sdk/models/shared/serviceenablementresponse.md
 docs/sdk/models/shared/serviceenablementupdate.md
+docs/sdk/models/shared/security.md
 docs/sdks/benefits/README.md
+docs/sdks/benefitsenrollment/README.md
+docs/sdks/benefitsservice/README.md
 .gitattributes

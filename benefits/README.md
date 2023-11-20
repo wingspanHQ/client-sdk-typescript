@@ -30,9 +30,11 @@ yarn add @wingspan/benefits
 import { Benefits } from "@wingspan/benefits";
 
 (async () => {
-    const sdk = new Benefits();
+    const sdk = new Benefits({
+        bearerAuth: "",
+    });
 
-    const res = await sdk.getBenefitsEnrollmentId({
+    const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
         id: "<ID>",
     });
 
@@ -47,13 +49,17 @@ import { Benefits } from "@wingspan/benefits";
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### [Benefits SDK](docs/sdks/benefits/README.md)
 
-* [getBenefitsEnrollmentId](docs/sdks/benefits/README.md#getbenefitsenrollmentid) - Retrieve Enrollment Details for a Specific Member
-* [getBenefitsPlanEnrollment](docs/sdks/benefits/README.md#getbenefitsplanenrollment) - List all plan enrollments
-* [getBenefitsPlanEnrollmentId](docs/sdks/benefits/README.md#getbenefitsplanenrollmentid) - Get a particular plan enrollment by ID
-* [getBenefitsService](docs/sdks/benefits/README.md#getbenefitsservice) - Retrieve Current Benefits Service Status
-* [patchBenefitsServiceId](docs/sdks/benefits/README.md#patchbenefitsserviceid) - Modify Benefits Service Status
+### [benefitsEnrollment](docs/sdks/benefitsenrollment/README.md)
+
+* [getBenefitsEnrollmentId](docs/sdks/benefitsenrollment/README.md#getbenefitsenrollmentid) - Retrieve Enrollment Details for a Specific Member
+* [getBenefitsPlanEnrollment](docs/sdks/benefitsenrollment/README.md#getbenefitsplanenrollment) - List all plan enrollments
+* [getBenefitsPlanEnrollmentId](docs/sdks/benefitsenrollment/README.md#getbenefitsplanenrollmentid) - Get a particular plan enrollment by ID
+
+### [benefitsService](docs/sdks/benefitsservice/README.md)
+
+* [getBenefitsService](docs/sdks/benefitsservice/README.md#getbenefitsservice) - Retrieve Current Benefits Service Status
+* [patchBenefitsServiceId](docs/sdks/benefitsservice/README.md#patchbenefitsserviceid) - Modify Benefits Service Status
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
@@ -77,11 +83,13 @@ Example
 import { Benefits } from "@wingspan/benefits";
 
 (async () => {
-    const sdk = new Benefits();
+    const sdk = new Benefits({
+        bearerAuth: "",
+    });
 
     let res;
     try {
-        res = await sdk.getBenefitsEnrollmentId({
+        res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
             id: "<ID>",
         });
     } catch (e) {}
@@ -116,9 +124,10 @@ import { Benefits } from "@wingspan/benefits";
 (async () => {
     const sdk = new Benefits({
         serverIdx: 1,
+        bearerAuth: "",
     });
 
-    const res = await sdk.getBenefitsEnrollmentId({
+    const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
         id: "<ID>",
     });
 
@@ -139,9 +148,10 @@ import { Benefits } from "@wingspan/benefits";
 (async () => {
     const sdk = new Benefits({
         serverURL: "https://api.wingspan.app/benefits",
+        bearerAuth: "",
     });
 
-    const res = await sdk.getBenefitsEnrollmentId({
+    const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
         id: "<ID>",
     });
 
@@ -173,6 +183,41 @@ const httpClient = axios.create({
 const sdk = new Benefits({defaultClient: httpClient});
 ```
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name         | Type         | Scheme       |
+| ------------ | ------------ | ------------ |
+| `bearerAuth` | http         | HTTP Bearer  |
+
+To authenticate with the API the `bearerAuth` parameter must be set when initializing the SDK client instance. For example:
+```typescript
+import { Benefits } from "@wingspan/benefits";
+
+(async () => {
+    const sdk = new Benefits({
+        bearerAuth: "",
+    });
+
+    const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<ID>",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

@@ -3,9 +3,11 @@
 import { Benefits } from "@wingspan/benefits";
 
 (async () => {
-    const sdk = new Benefits();
+    const sdk = new Benefits({
+        bearerAuth: "",
+    });
 
-    const res = await sdk.getBenefitsEnrollmentId({
+    const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
         id: "<ID>",
     });
 
