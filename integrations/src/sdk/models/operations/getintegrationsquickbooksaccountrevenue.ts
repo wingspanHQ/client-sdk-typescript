@@ -23,7 +23,7 @@ export class GetIntegrationsQuickbooksAccountRevenueResponse extends SpeakeasyBa
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * a list of qbo accounts
