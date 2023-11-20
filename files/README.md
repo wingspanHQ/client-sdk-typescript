@@ -201,7 +201,6 @@ const sdk = new Files({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-
 ## Authentication
 
 ### Per-Client Security Schemes
