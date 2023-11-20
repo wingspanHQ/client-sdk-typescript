@@ -40,5 +40,5 @@ export class PatchPaymentsBulkCalculation1099BatchBatchIdResponse extends Speake
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }

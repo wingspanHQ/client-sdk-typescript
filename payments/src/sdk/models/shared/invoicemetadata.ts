@@ -21,6 +21,7 @@ export enum PayoutPendingReason {
     InstantPayoutMethodNotSelected = "InstantPayoutMethodNotSelected",
     PlatformErrorInstantPayout = "PlatformErrorInstantPayout",
     InstantPayoutNotEligibleYet = "InstantPayoutNotEligibleYet",
+    PlatformErrorCurrencyCloud = "PlatformErrorCurrencyCloud",
     LessThanNilGreaterThan = "<nil>",
 }
 

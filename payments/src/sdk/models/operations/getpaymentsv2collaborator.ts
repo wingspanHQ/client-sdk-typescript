@@ -23,7 +23,7 @@ export class GetPaymentsV2CollaboratorResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * List of V2 Collaborators

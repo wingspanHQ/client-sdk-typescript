@@ -23,7 +23,7 @@ export class GetPaymentsBulkCalculation1099BatchResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * A list of bulk calculation 1099 batches

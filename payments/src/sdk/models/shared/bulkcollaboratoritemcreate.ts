@@ -50,4 +50,8 @@ export class BulkCollaboratorItemCreate extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "labels" })
     labels?: Record<string, string>;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "orgSubAccountId" })
+    orgSubAccountId?: string;
 }

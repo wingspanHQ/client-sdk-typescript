@@ -20,4 +20,5 @@
 | `InstantPayoutMethodNotSelected` | InstantPayoutMethodNotSelected   |
 | `PlatformErrorInstantPayout`     | PlatformErrorInstantPayout       |
 | `InstantPayoutNotEligibleYet`    | InstantPayoutNotEligibleYet      |
+| `PlatformErrorCurrencyCloud`     | PlatformErrorCurrencyCloud       |
 | `LessThanNilGreaterThan`         | <nil>                            |

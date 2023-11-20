@@ -143,6 +143,10 @@ export class MemberClient extends SpeakeasyBase {
     parentMemberClientId: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "payerPayeeId" })
+    payerPayeeId: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "status" })
     status: MemberClientStatus;
 

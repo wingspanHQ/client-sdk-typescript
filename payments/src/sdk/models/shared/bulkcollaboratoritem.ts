@@ -90,6 +90,10 @@ export class BulkCollaboratorItem extends SpeakeasyBase {
     metadata?: Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "orgSubAccountId" })
+    orgSubAccountId?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "status" })
     status: BulkCollaboratorItemStatus;
 

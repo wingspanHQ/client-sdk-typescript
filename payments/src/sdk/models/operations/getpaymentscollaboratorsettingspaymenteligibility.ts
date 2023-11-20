@@ -23,7 +23,7 @@ export class GetPaymentsCollaboratorSettingsPaymentEligibilityResponse extends S
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * See payment eligibility requirements on member

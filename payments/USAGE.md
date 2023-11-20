@@ -3,9 +3,11 @@
 import { Payments } from "@wingspan/payments";
 
 (async () => {
-    const sdk = new Payments();
+    const sdk = new Payments({
+        bearerAuth: "",
+    });
 
-    const res = await sdk.deletePaymentsBankingCardId({
+    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
         id: "<ID>",
     });
 

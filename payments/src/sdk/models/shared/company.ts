@@ -36,6 +36,10 @@ export class Company extends SpeakeasyBase {
     description?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "disregardedEntityName" })
+    disregardedEntityName?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "legalBusinessName" })
     legalBusinessName?: string;
 

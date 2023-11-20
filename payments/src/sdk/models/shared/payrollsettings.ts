@@ -9,6 +9,12 @@ import { FundingSource } from "./fundingsource";
 import { ScheduleDate } from "./scheduledate";
 import { Expose, Type } from "class-transformer";
 
+export enum InternationalPayroll {
+    All = "All",
+    None = "None",
+    LessThanNilGreaterThan = "<nil>",
+}
+
 export enum PayrollSettingsStatus {
     Active = "Active",
     Draft = "Draft",
@@ -45,6 +51,10 @@ export class PayrollSettings extends SpeakeasyBase {
     @Expose({ name: "fundingSource" })
     @Type(() => FundingSource)
     fundingSource?: FundingSource;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "internationalPayroll" })
+    internationalPayroll?: InternationalPayroll;
 
     @SpeakeasyMetadata()
     @Expose({ name: "issue1099s" })

@@ -25,4 +25,8 @@ export class ExternalIdsQuickbooksData extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "syncToken" })
     syncToken: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "updatedAt" })
+    updatedAt?: string;
 }
