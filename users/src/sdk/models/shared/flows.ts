@@ -78,6 +78,11 @@ export class Flows extends SpeakeasyBase {
     taxWithholdingsSetup?: FlowProgress;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "w9Confirmation" })
+    @Type(() => FlowProgress)
+    w9Confirmation?: FlowProgress;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "walletSetup" })
     @Type(() => FlowProgress)
     walletSetup?: FlowProgress;

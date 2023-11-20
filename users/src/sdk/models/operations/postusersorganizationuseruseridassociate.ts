@@ -40,5 +40,5 @@ export class PostUsersOrganizationUserUserIdAssociateResponse extends SpeakeasyB
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }

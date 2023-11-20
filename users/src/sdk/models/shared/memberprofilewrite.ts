@@ -5,9 +5,11 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Address } from "./address";
 import { CompanyWrite } from "./companywrite";
+import { MemberFormW9Options } from "./memberformw9options";
 import { MemberProfileVisibilityMap } from "./memberprofilevisibilitymap";
 import { MemberTaxInfo } from "./membertaxinfo";
 import { MemberWithholdings } from "./memberwithholdings";
+import { TinVerification } from "./tinverification";
 import { Expose, Type } from "class-transformer";
 
 export enum MemberProfileWriteBookkeepingProductsUsed {
@@ -128,6 +130,11 @@ export class MemberProfileWrite extends SpeakeasyBase {
     foreignTaxId?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "formW9Options" })
+    @Type(() => MemberFormW9Options)
+    formW9Options?: MemberFormW9Options;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "freelanceDuration" })
     freelanceDuration?: MemberProfileWriteFreelanceDuration;
 
@@ -200,6 +207,11 @@ export class MemberProfileWrite extends SpeakeasyBase {
     @Expose({ name: "taxInfo" })
     @Type(() => MemberTaxInfo)
     taxInfo?: MemberTaxInfo;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "tinVerification" })
+    @Type(() => TinVerification)
+    tinVerification?: TinVerification;
 
     @SpeakeasyMetadata()
     @Expose({ name: "verificationDocumentBack" })

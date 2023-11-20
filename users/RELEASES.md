@@ -19,3 +19,13 @@ Based on:
 - [typescript v2.0.0] users
 ### Releases
 - [NPM v2.0.0] https://www.npmjs.com/package/@wingspan/users/v/2.0.0 - users
+
+## 2023-11-20 01:30:45
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 https://docs.wingspan.app/openapi/6470eea6a7577e003be20a26
+- Speakeasy CLI 1.121.1 (2.194.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v2.0.1] users
+### Releases
+- [NPM v2.0.1] https://www.npmjs.com/package/@wingspan/users/v/2.0.1 - users

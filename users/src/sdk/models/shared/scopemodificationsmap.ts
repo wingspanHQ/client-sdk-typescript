@@ -3,6 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import { A24fdd81435ed05a57123a87880fde150a3466e9cd38875e4ecd540139f5e47d } from "./a24fdd81435ed05a57123a87880fde150a3466e9cd38875e4ecd540139f5e47d";
 import { Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1 } from "./bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1";
 import { Expose, Type } from "class-transformer";
 
@@ -11,4 +12,9 @@ export class ScopeModificationsMap extends SpeakeasyBase {
     @Expose({ name: "payments" })
     @Type(() => Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1)
     payments?: Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "users" })
+    @Type(() => A24fdd81435ed05a57123a87880fde150a3466e9cd38875e4ecd540139f5e47d)
+    users?: A24fdd81435ed05a57123a87880fde150a3466e9cd38875e4ecd540139f5e47d;
 }

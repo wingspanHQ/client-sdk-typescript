@@ -36,6 +36,10 @@ export class CompanyWrite extends SpeakeasyBase {
     description?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "disregardedEntityName" })
+    disregardedEntityName?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "legalBusinessName" })
     legalBusinessName?: string;
 
@@ -55,6 +59,10 @@ export class CompanyWrite extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "structure" })
     structure?: CompanyWriteStructure;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "supportEmail" })
+    supportEmail?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "taxId" })
