@@ -10,10 +10,10 @@ export class TinVerification extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ein" })
     @Type(() => VerificationState)
-    ein: VerificationState;
+    ein?: VerificationState;
 
     @SpeakeasyMetadata()
     @Expose({ name: "ssn" })
     @Type(() => VerificationState)
-    ssn: VerificationState;
+    ssn?: VerificationState;
 }

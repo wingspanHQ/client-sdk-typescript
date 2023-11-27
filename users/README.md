@@ -290,7 +290,6 @@ const sdk = new Users({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-
 ## Authentication
 
 ### Per-Client Security Schemes
