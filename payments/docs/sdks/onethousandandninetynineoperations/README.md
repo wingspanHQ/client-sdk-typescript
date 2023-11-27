@@ -13,6 +13,8 @@ Includes endpoints for managing 1099 forms.
 * [getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](#getpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Fetch details of a specific item from a calculation 1099 batch
 * [getPaymentsCollaboratorIdDownload1099YearIndex](#getpaymentscollaboratoriddownload1099yearindex) - Retrieve Form 1099 PDF for a Collaborator by Year and Index
 * [getPaymentsCollaboratorIdDownloadW9](#getpaymentscollaboratoriddownloadw9) - Retrieve Form W9 PDF for a Collaborator
+* [getPaymentsTaxForm](#getpaymentstaxform) - Fetch 1099 tax forms.
+* [getPaymentsTaxFormTaxFormId](#getpaymentstaxformtaxformid) - Fetch tax form.
 * [patchPaymentsBulkCalculation1099BatchBatchId](#patchpaymentsbulkcalculation1099batchbatchid) - Modify the details of a specific bulk calculation 1099 batch
 * [patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](#patchpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Revise the attributes of an item in a calculation 1099 batch
 * [postPaymentsBulkCalculation1099Batch](#postpaymentsbulkcalculation1099batch) - Initialize a new batch for bulk calculation 1099
@@ -20,6 +22,9 @@ Includes endpoints for managing 1099 forms.
 * [postPaymentsCollaborator1099Calculate](#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxFormSubmitW9](#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
+* [postPaymentsTaxFormVerifyTin](#postpaymentstaxformverifytin) - Submit Payee TIN for verification
+* [postPaymentsTaxFormTaxFormIdVerifyIdentity](#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
 
 ## getPaymentsBulkCalculation1099Batch
 
@@ -261,6 +266,85 @@ import { Payments } from "@wingspan/payments";
 ### Response
 
 **Promise<[operations.GetPaymentsCollaboratorIdDownloadW9Response](../../sdk/models/operations/getpaymentscollaboratoriddownloadw9response.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## getPaymentsTaxForm
+
+Fetch tax forms for a payee or a payer and specified year.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsTaxForm();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.GetPaymentsTaxFormResponse](../../sdk/models/operations/getpaymentstaxformresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## getPaymentsTaxFormTaxFormId
+
+Fetches the specified tax form if it exists
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsTaxFormTaxFormId({
+    taxFormId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetPaymentsTaxFormTaxFormIdRequest](../../sdk/models/operations/getpaymentstaxformtaxformidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+
+
+### Response
+
+**Promise<[operations.GetPaymentsTaxFormTaxFormIdResponse](../../sdk/models/operations/getpaymentstaxformtaxformidresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -581,6 +665,123 @@ import { Payments } from "@wingspan/payments";
 ### Response
 
 **Promise<[operations.PostPaymentsCollaborator1099RemailResponse](../../sdk/models/operations/postpaymentscollaborator1099remailresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## postPaymentsTaxFormSubmitW9
+
+Updates 1099 tax forms for the current year with W9 information wherever W9 sharing is enabled.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormSubmitW9();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormSubmitW9Response](../../sdk/models/operations/postpaymentstaxformsubmitw9response.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## postPaymentsTaxFormVerifyTin
+
+Asynchronously verifies the TIN on file with the IRS. May return a pending status if waiting on IRS response.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormVerifyTin();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormVerifyTinResponse](../../sdk/models/operations/postpaymentstaxformverifytinresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## postPaymentsTaxFormTaxFormIdVerifyIdentity
+
+Allows recipient of a tax form to verify their identity in order to access a non-redacted tax form.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormTaxFormIdVerifyIdentity({
+    taxFormId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.PostPaymentsTaxFormTaxFormIdVerifyIdentityRequest](../../sdk/models/operations/postpaymentstaxformtaxformidverifyidentityrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormTaxFormIdVerifyIdentityResponse](../../sdk/models/operations/postpaymentstaxformtaxformidverifyidentityresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -7,9 +7,7 @@ These endpoints cater to fetching, storing, and managing documents related to el
 
 ### Available Operations
 
-* [deletePaymentsBankingInstantPayout](#deletepaymentsbankinginstantpayout) - Deprecated Remove Instant Payout Configuration
 * [deletePaymentsPayoutSettingsMemberIdDebitCardId](#deletepaymentspayoutsettingsmemberiddebitcardid) - Unlink and delete a specific payout debit card from a member's profile
-* [getPaymentsBankingInstantPayout](#getpaymentsbankinginstantpayout) - Deprecated Retrieve Instant Payout Information
 * [getPaymentsBankingInstitutionRoutingNumber](#getpaymentsbankinginstitutionroutingnumber) - Retrieve banking institution details by its routing number
 * [getPaymentsBankingStatement](#getpaymentsbankingstatement) - Retrieve All Bank Statements
 * [getPaymentsBankingStatementId](#getpaymentsbankingstatementid) - Retrieve Specific Bank Statement
@@ -19,46 +17,7 @@ These endpoints cater to fetching, storing, and managing documents related to el
 * [getPaymentsPayoutSettingsMemberIdDebitCardId](#getpaymentspayoutsettingsmemberiddebitcardid) - Retrieve a specific payout debit card linked to a member
 * [getPaymentsServiceBankingMemberIdApplication](#getpaymentsservicebankingmemberidapplication) - Fetch the application link for setting up a clearing bank account
 * [patchPaymentsPayoutSettingsId](#patchpaymentspayoutsettingsid) - Modify and update payout settings for a specific member
-* [postPaymentsBankingInstantPayout](#postpaymentsbankinginstantpayout) - Deprecated Set Up Instant Payout Configuration
 * [postPaymentsPayoutSettingsMemberIdDebitCard](#postpaymentspayoutsettingsmemberiddebitcard) - Register a new payout debit card for a member
-
-## deletePaymentsBankingInstantPayout
-
-Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
-
-### Example Usage
-
-```typescript
-import { Payments } from "@wingspan/payments";
-
-(async() => {
-  const sdk = new Payments({
-    bearerAuth: "",
-  });
-
-  const res = await sdk.bankingManagement.deletePaymentsBankingInstantPayout();
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
-})();
-```
-
-### Parameters
-
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
-
-
-### Response
-
-**Promise<[operations.DeletePaymentsBankingInstantPayoutResponse](../../sdk/models/operations/deletepaymentsbankinginstantpayoutresponse.md)>**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
 
 ## deletePaymentsPayoutSettingsMemberIdDebitCardId
 
@@ -96,44 +55,6 @@ import { Payments } from "@wingspan/payments";
 ### Response
 
 **Promise<[operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse](../../sdk/models/operations/deletepaymentspayoutsettingsmemberiddebitcardidresponse.md)>**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
-
-## getPaymentsBankingInstantPayout
-
-Fetch detailed information about the current status and details of instant payouts configured in the system.
-
-### Example Usage
-
-```typescript
-import { Payments } from "@wingspan/payments";
-
-(async() => {
-  const sdk = new Payments({
-    bearerAuth: "",
-  });
-
-  const res = await sdk.bankingManagement.getPaymentsBankingInstantPayout();
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
-})();
-```
-
-### Parameters
-
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
-
-
-### Response
-
-**Promise<[operations.GetPaymentsBankingInstantPayoutResponse](../../sdk/models/operations/getpaymentsbankinginstantpayoutresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -511,47 +432,6 @@ import {
 ### Response
 
 **Promise<[operations.PatchPaymentsPayoutSettingsIdResponse](../../sdk/models/operations/patchpaymentspayoutsettingsidresponse.md)>**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
-
-## postPaymentsBankingInstantPayout
-
-Configure a new instant payout setting, specifying details like amount, frequency, and destination.
-
-### Example Usage
-
-```typescript
-import { Payments } from "@wingspan/payments";
-
-(async() => {
-  const sdk = new Payments({
-    bearerAuth: "",
-  });
-
-  const res = await sdk.bankingManagement.postPaymentsBankingInstantPayout({
-    externalPayoutAccountToken: "string",
-  });
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
-})();
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.InstantPayoutRequest](../../sdk/models/shared/instantpayoutrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
-
-
-### Response
-
-**Promise<[operations.PostPaymentsBankingInstantPayoutResponse](../../sdk/models/operations/postpaymentsbankinginstantpayoutresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -10,10 +10,10 @@ import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 /**
- * These endpoints cater to fetching, storing, and managing documents related to electronic signatures, including retrieval of signing URLs and saving e-signed documents.
+ * Deprecated Endpoints.
  */
 
-export class BankingManagement {
+export class Deprecated {
     private sdkConfiguration: SDKConfiguration;
 
     constructor(sdkConfig: SDKConfiguration) {
@@ -21,17 +21,91 @@ export class BankingManagement {
     }
 
     /**
-     * Unlink and delete a specific payout debit card from a member's profile
+     * Deprecated Remove Instant Payout Configuration
      *
      * @remarks
-     * Initiates a process to remove and permanently delete a specific debit card from a member's payout settings.
+     * Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
      */
-    async deletePaymentsPayoutSettingsMemberIdDebitCardId(
-        req: operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdRequest,
+    async deletePaymentsBankingInstantPayout(
         config?: AxiosRequestConfig
-    ): Promise<operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse> {
+    ): Promise<operations.DeletePaymentsBankingInstantPayoutResponse> {
+        const baseURL: string = utils.templateUrl(
+            this.sdkConfiguration.serverURL,
+            this.sdkConfiguration.serverDefaults
+        );
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/banking/instant-payout";
+        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
+        headers["Accept"] = "application/json";
+
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
+
+        const httpRes: AxiosResponse = await client.request({
+            validateStatus: () => true,
+            url: operationUrl,
+            method: "delete",
+            headers: headers,
+            responseType: "arraybuffer",
+            ...config,
+        });
+
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) {
+            throw new Error(`status code not found in response: ${httpRes}`);
+        }
+
+        const res: operations.DeletePaymentsBankingInstantPayoutResponse =
+            new operations.DeletePaymentsBankingInstantPayoutResponse({
+                statusCode: httpRes.status,
+                contentType: responseContentType,
+                rawResponse: httpRes,
+            });
+        const decodedRes = new TextDecoder().decode(httpRes?.data);
+        switch (true) {
+            case httpRes?.status == 200:
+                if (utils.matchContentType(responseContentType, `application/json`)) {
+                    res.instantPayoutResponse = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.InstantPayoutResponse
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + responseContentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
+                }
+                break;
+        }
+
+        return res;
+    }
+
+    /**
+     * Erase a Specific Collaborator-Member Custom Data
+     *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Remove a specific custom data point, eliminating the additional details provided about a collaborator-member relationship.
+     *
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    async deletePaymentsCollaboratorSettingsAdditionalDataId(
+        req: operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdRequest,
+        config?: AxiosRequestConfig
+    ): Promise<operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdRequest(req);
+            req = new operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
@@ -40,7 +114,7 @@ export class BankingManagement {
         );
         const operationUrl: string = utils.generateURL(
             baseURL,
-            "/payments/payout-settings/{memberId}/debit-card/{id}",
+            "/payments/collaborator-settings/additional-data/{id}",
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
@@ -72,8 +146,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse =
-            new operations.DeletePaymentsPayoutSettingsMemberIdDebitCardIdResponse({
+        const res: operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdResponse =
+            new operations.DeletePaymentsCollaboratorSettingsAdditionalDataIdResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -82,9 +156,9 @@ export class BankingManagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.checkbookCard = utils.objectToClass(
+                    res.additionalData = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.CheckbookCard
+                        shared.AdditionalData
                     );
                 } else {
                     throw new errors.SDKError(
@@ -101,28 +175,20 @@ export class BankingManagement {
     }
 
     /**
-     * Retrieve banking institution details by its routing number
+     * Deprecated Retrieve Instant Payout Information
      *
      * @remarks
-     * Fetches comprehensive information about a banking institution based on the provided routing number.
+     * Fetch detailed information about the current status and details of instant payouts configured in the system.
      */
-    async getPaymentsBankingInstitutionRoutingNumber(
-        req: operations.GetPaymentsBankingInstitutionRoutingNumberRequest,
+    async getPaymentsBankingInstantPayout(
         config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsBankingInstitutionRoutingNumberResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsBankingInstitutionRoutingNumberRequest(req);
-        }
-
+    ): Promise<operations.GetPaymentsBankingInstantPayoutResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/banking/institution/{routingNumber}",
-            req
-        );
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/banking/instant-payout";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -152,8 +218,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.GetPaymentsBankingInstitutionRoutingNumberResponse =
-            new operations.GetPaymentsBankingInstitutionRoutingNumberResponse({
+        const res: operations.GetPaymentsBankingInstantPayoutResponse =
+            new operations.GetPaymentsBankingInstantPayoutResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -162,9 +228,9 @@ export class BankingManagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.institutionResponse = utils.objectToClass(
+                    res.instantPayoutResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.InstitutionResponse
+                        shared.InstantPayoutResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -181,19 +247,22 @@ export class BankingManagement {
     }
 
     /**
-     * Retrieve All Bank Statements
+     * Retrieve All Collaborator-Member Custom Data Points
      *
      * @remarks
-     * Fetch a comprehensive list of all bank statements available in the system, providing an overview of financial transactions.
+     * [Deprecated - use /payments/custom-fields] Fetch all custom data fields that are associated with the memberClient objects, giving insight into additional details between collaborators and members.
+     *
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
-    async getPaymentsBankingStatement(
+    async getPaymentsCollaboratorSettingsAdditionalData(
         config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsBankingStatementResponse> {
+    ): Promise<operations.GetPaymentsCollaboratorSettingsAdditionalDataResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const operationUrl: string = baseURL.replace(/\/$/, "") + "/payments/banking/statement";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/collaborator-settings/additional-data";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -223,8 +292,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.GetPaymentsBankingStatementResponse =
-            new operations.GetPaymentsBankingStatementResponse({
+        const res: operations.GetPaymentsCollaboratorSettingsAdditionalDataResponse =
+            new operations.GetPaymentsCollaboratorSettingsAdditionalDataResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -237,7 +306,7 @@ export class BankingManagement {
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.classes = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.BankStatement,
+                        shared.AdditionalData,
                         resFieldDepth
                     );
                 } else {
@@ -255,17 +324,19 @@ export class BankingManagement {
     }
 
     /**
-     * Retrieve Specific Bank Statement
+     * Retrieve Specific Collaborator Custom Data
      *
      * @remarks
-     * Fetch details of a specific bank statement using its unique identifier, providing a detailed view of its transactions.
+     * Deprecated - use /payments/custom-fields/:id
+     *
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
-    async getPaymentsBankingStatementId(
-        req: operations.GetPaymentsBankingStatementIdRequest,
+    async getPaymentsCollaboratorSettingsAdditionalDataId(
+        req: operations.GetPaymentsCollaboratorSettingsAdditionalDataIdRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsBankingStatementIdResponse> {
+    ): Promise<operations.GetPaymentsCollaboratorSettingsAdditionalDataIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsBankingStatementIdRequest(req);
+            req = new operations.GetPaymentsCollaboratorSettingsAdditionalDataIdRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
@@ -274,7 +345,7 @@ export class BankingManagement {
         );
         const operationUrl: string = utils.generateURL(
             baseURL,
-            "/payments/banking/statement/{id}",
+            "/payments/collaborator-settings/additional-data/{id}",
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
@@ -306,8 +377,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.GetPaymentsBankingStatementIdResponse =
-            new operations.GetPaymentsBankingStatementIdResponse({
+        const res: operations.GetPaymentsCollaboratorSettingsAdditionalDataIdResponse =
+            new operations.GetPaymentsCollaboratorSettingsAdditionalDataIdResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -316,12 +387,9 @@ export class BankingManagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.classes = [];
-                    const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.classes = utils.objectToClass(
+                    res.additionalData = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.BankStatement,
-                        resFieldDepth
+                        shared.AdditionalData
                     );
                 } else {
                     throw new errors.SDKError(
@@ -338,17 +406,19 @@ export class BankingManagement {
     }
 
     /**
-     * Download a specific bank statement as a PDF
+     * Modify a Specific Collaborator-Member Custom Data
      *
      * @remarks
-     * Retrieve and download the specified bank statement in PDF format using the provided unique identifier.
+     * [Deprecated - use /payments/custom-fields] Update details or attributes of an existing custom data point associated with the relationship between a collaborator and a member.
+     *
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
-    async getPaymentsBankingStatementIdDownload(
-        req: operations.GetPaymentsBankingStatementIdDownloadRequest,
+    async patchPaymentsCollaboratorSettingsAdditionalDataId(
+        req: operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsBankingStatementIdDownloadResponse> {
+    ): Promise<operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsBankingStatementIdDownloadRequest(req);
+            req = new operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
@@ -357,396 +427,7 @@ export class BankingManagement {
         );
         const operationUrl: string = utils.generateURL(
             baseURL,
-            "/payments/banking/statement/{id}/download",
-            req
-        );
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
-        headers["Accept"] = "*/*";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: operationUrl,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
-
-        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.GetPaymentsBankingStatementIdDownloadResponse =
-            new operations.GetPaymentsBankingStatementIdDownloadResponse({
-                statusCode: httpRes.status,
-                contentType: responseContentType,
-                rawResponse: httpRes,
-            });
-        switch (true) {
-            case httpRes?.status == 204:
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve payout settings for a specific member
-     *
-     * @remarks
-     * Fetches the payout configuration, including linked debit cards and payout preferences, for a specific member.
-     */
-    async getPaymentsPayoutSettingsId(
-        req: operations.GetPaymentsPayoutSettingsIdRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsPayoutSettingsIdResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsPayoutSettingsIdRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/payout-settings/{id}",
-            req
-        );
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: operationUrl,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
-
-        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.GetPaymentsPayoutSettingsIdResponse =
-            new operations.GetPaymentsPayoutSettingsIdResponse({
-                statusCode: httpRes.status,
-                contentType: responseContentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.payoutSettingsResponse = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.PayoutSettingsResponse
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + responseContentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Fetch all registered payout debit cards for a member
-     *
-     * @remarks
-     * Retrieves a list of all debit cards linked to a member's profile for payout purposes.
-     */
-    async getPaymentsPayoutSettingsMemberIdDebitCard(
-        req: operations.GetPaymentsPayoutSettingsMemberIdDebitCardRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsPayoutSettingsMemberIdDebitCardResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsPayoutSettingsMemberIdDebitCardRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/payout-settings/{memberId}/debit-card",
-            req
-        );
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: operationUrl,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
-
-        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.GetPaymentsPayoutSettingsMemberIdDebitCardResponse =
-            new operations.GetPaymentsPayoutSettingsMemberIdDebitCardResponse({
-                statusCode: httpRes.status,
-                contentType: responseContentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.classes = [];
-                    const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.classes = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.CheckbookCard,
-                        resFieldDepth
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + responseContentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a specific payout debit card linked to a member
-     *
-     * @remarks
-     * Fetches detailed information of a specific debit card linked to a member's profile for payout purposes.
-     */
-    async getPaymentsPayoutSettingsMemberIdDebitCardId(
-        req: operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/payout-settings/{memberId}/debit-card/{id}",
-            req
-        );
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: operationUrl,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
-
-        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdResponse =
-            new operations.GetPaymentsPayoutSettingsMemberIdDebitCardIdResponse({
-                statusCode: httpRes.status,
-                contentType: responseContentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.checkbookCard = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.CheckbookCard
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + responseContentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Fetch the application link for setting up a clearing bank account
-     *
-     * @remarks
-     * Get the application link required for a member to initiate the creation of a clearing bank account.
-     */
-    async getPaymentsServiceBankingMemberIdApplication(
-        req: operations.GetPaymentsServiceBankingMemberIdApplicationRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetPaymentsServiceBankingMemberIdApplicationResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetPaymentsServiceBankingMemberIdApplicationRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/service/banking/{memberId}/application",
-            req
-        );
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: operationUrl,
-            method: "get",
-            headers: headers,
-            responseType: "arraybuffer",
-            ...config,
-        });
-
-        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.GetPaymentsServiceBankingMemberIdApplicationResponse =
-            new operations.GetPaymentsServiceBankingMemberIdApplicationResponse({
-                statusCode: httpRes.status,
-                contentType: responseContentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.bankingApplicationForm = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.BankingApplicationForm
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + responseContentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Modify and update payout settings for a specific member
-     *
-     * @remarks
-     * Allows adjustments and updates to a member's payout configuration, including changing linked debit cards and adjusting payout preferences.
-     */
-    async patchPaymentsPayoutSettingsId(
-        req: operations.PatchPaymentsPayoutSettingsIdRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.PatchPaymentsPayoutSettingsIdResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PatchPaymentsPayoutSettingsIdRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/payout-settings/{id}",
+            "/payments/collaborator-settings/additional-data/{id}",
             req
         );
 
@@ -755,7 +436,7 @@ export class BankingManagement {
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
                 req,
-                "payoutSettingsUpdate",
+                "additionalDataUpdateRequest",
                 "json"
             );
         } catch (e: unknown) {
@@ -797,8 +478,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.PatchPaymentsPayoutSettingsIdResponse =
-            new operations.PatchPaymentsPayoutSettingsIdResponse({
+        const res: operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdResponse =
+            new operations.PatchPaymentsCollaboratorSettingsAdditionalDataIdResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -807,9 +488,9 @@ export class BankingManagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.payoutSettingsResponse = utils.objectToClass(
+                    res.additionalData = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PayoutSettingsResponse
+                        shared.AdditionalData
                     );
                 } else {
                     throw new errors.SDKError(
@@ -826,37 +507,30 @@ export class BankingManagement {
     }
 
     /**
-     * Register a new payout debit card for a member
+     * Deprecated Set Up Instant Payout Configuration
      *
      * @remarks
-     * Allows the addition of a new debit card to a member's profile for payout transactions.
+     * Configure a new instant payout setting, specifying details like amount, frequency, and destination.
      */
-    async postPaymentsPayoutSettingsMemberIdDebitCard(
-        req: operations.PostPaymentsPayoutSettingsMemberIdDebitCardRequest,
+    async postPaymentsBankingInstantPayout(
+        req: shared.InstantPayoutRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.PostPaymentsPayoutSettingsMemberIdDebitCardResponse> {
+    ): Promise<operations.PostPaymentsBankingInstantPayoutResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PostPaymentsPayoutSettingsMemberIdDebitCardRequest(req);
+            req = new shared.InstantPayoutRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const operationUrl: string = utils.generateURL(
-            baseURL,
-            "/payments/payout-settings/{memberId}/debit-card",
-            req
-        );
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/banking/instant-payout";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "checkbookCardCreate",
-                "json"
-            );
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -896,8 +570,8 @@ export class BankingManagement {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.PostPaymentsPayoutSettingsMemberIdDebitCardResponse =
-            new operations.PostPaymentsPayoutSettingsMemberIdDebitCardResponse({
+        const res: operations.PostPaymentsBankingInstantPayoutResponse =
+            new operations.PostPaymentsBankingInstantPayoutResponse({
                 statusCode: httpRes.status,
                 contentType: responseContentType,
                 rawResponse: httpRes,
@@ -906,9 +580,103 @@ export class BankingManagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.checkbookCard = utils.objectToClass(
+                    res.instantPayoutResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.CheckbookCard
+                        shared.InstantPayoutResponse
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + responseContentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
+                }
+                break;
+        }
+
+        return res;
+    }
+
+    /**
+     * Register New Custom Data for Collaborator-Member Relationship
+     *
+     * @remarks
+     * [Deprecated - use /payments/custom-fields] Create custom fields that can be associated with the memberClient object to provide extra details about the relationship between a collaborator and a member.
+     *
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    async postPaymentsCollaboratorSettingsAdditionalData(
+        req: shared.AdditionalData,
+        config?: AxiosRequestConfig
+    ): Promise<operations.PostPaymentsCollaboratorSettingsAdditionalDataResponse> {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new shared.AdditionalData(req);
+        }
+
+        const baseURL: string = utils.templateUrl(
+            this.sdkConfiguration.serverURL,
+            this.sdkConfiguration.serverDefaults
+        );
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/collaborator-settings/additional-data";
+
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
+
+        try {
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
+        } catch (e: unknown) {
+            if (e instanceof Error) {
+                throw new Error(`Error serializing request body, cause: ${e.message}`);
+            }
+        }
+        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
+        headers["Accept"] = "application/json";
+
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
+
+        const httpRes: AxiosResponse = await client.request({
+            validateStatus: () => true,
+            url: operationUrl,
+            method: "post",
+            headers: headers,
+            responseType: "arraybuffer",
+            data: reqBody,
+            ...config,
+        });
+
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) {
+            throw new Error(`status code not found in response: ${httpRes}`);
+        }
+
+        const res: operations.PostPaymentsCollaboratorSettingsAdditionalDataResponse =
+            new operations.PostPaymentsCollaboratorSettingsAdditionalDataResponse({
+                statusCode: httpRes.status,
+                contentType: responseContentType,
+                rawResponse: httpRes,
+            });
+        const decodedRes = new TextDecoder().decode(httpRes?.data);
+        switch (true) {
+            case httpRes?.status == 200:
+                if (utils.matchContentType(responseContentType, `application/json`)) {
+                    res.additionalData = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.AdditionalData
                     );
                 } else {
                     throw new errors.SDKError(

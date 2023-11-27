@@ -61,6 +61,10 @@ export class Company extends SpeakeasyBase {
     structure?: Structure;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "supportEmail" })
+    supportEmail?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "taxId" })
     taxId?: string;
 

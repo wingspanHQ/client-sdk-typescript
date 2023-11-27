@@ -7,9 +7,7 @@ import { Payments } from "@wingspan/payments";
         bearerAuth: "",
     });
 
-    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-        id: "<ID>",
-    });
+    const res = await sdk.serviceSettings.getPayments();
 
     if (res.statusCode == 200) {
         // handle response

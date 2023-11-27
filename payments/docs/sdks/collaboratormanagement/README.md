@@ -15,6 +15,8 @@ This category includes endpoints that manage relationships and interactions with
 * [getPaymentsCollaboratorGroup](#getpaymentscollaboratorgroup) - Retrieve All Collaborator Groups
 * [getPaymentsCollaboratorId](#getpaymentscollaboratorid) - Retrieve Details of a Specific Collaborator
 * [getPaymentsCollaboratorIdEvents](#getpaymentscollaboratoridevents) - Retrieve Events Associated with a Collaborator
+* [getPaymentsV2Collaborator](#getpaymentsv2collaborator) - Retrieve All Collaborators (Version 2)
+* [getPaymentsV2CollaboratorMemberId](#getpaymentsv2collaboratormemberid) - Retrieve Specific Collaborator Details (Version 2)
 * [patchPaymentsCollaboratorDeductionId](#patchpaymentscollaboratordeductionid) - Modify Details of a Specific Deduction
 * [patchPaymentsCollaboratorId](#patchpaymentscollaboratorid) - Modify Collaborator Details
 * [patchPaymentsCollaboratorIdAddGroupGroupId](#patchpaymentscollaboratoridaddgroupgroupid) - Associate Collaborator with a Specific Group
@@ -336,6 +338,85 @@ import { Payments } from "@wingspan/payments";
 ### Response
 
 **Promise<[operations.GetPaymentsCollaboratorIdEventsResponse](../../sdk/models/operations/getpaymentscollaboratorideventsresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## getPaymentsV2Collaborator
+
+Fetches a comprehensive list of collaborators formatted in the V2 standard, providing an overview of all collaborator data.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.collaboratorManagement.getPaymentsV2Collaborator();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.GetPaymentsV2CollaboratorResponse](../../sdk/models/operations/getpaymentsv2collaboratorresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## getPaymentsV2CollaboratorMemberId
+
+Fetches detailed information of a specific collaborator, identified by the memberId, in the V2 format.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+(async() => {
+  const sdk = new Payments({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.collaboratorManagement.getPaymentsV2CollaboratorMemberId({
+    memberId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.GetPaymentsV2CollaboratorMemberIdRequest](../../sdk/models/operations/getpaymentsv2collaboratormemberidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+
+
+### Response
+
+**Promise<[operations.GetPaymentsV2CollaboratorMemberIdResponse](../../sdk/models/operations/getpaymentsv2collaboratormemberidresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

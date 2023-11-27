@@ -207,6 +207,7 @@ export * from "./testinvoicecreate";
 export * from "./thirtysixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2";
 export * from "./threebilliononehundredandninetymillionsixhundredandeightyfivethousandeighthundredandthirtytwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461";
 export * from "./threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f";
+export * from "./tinverificationresponse";
 export * from "./twentysixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4";
 export * from "./twentythreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb";
 export * from "./userroles";

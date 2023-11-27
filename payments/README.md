@@ -34,9 +34,7 @@ import { Payments } from "@wingspan/payments";
         bearerAuth: "",
     });
 
-    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-        id: "<ID>",
-    });
+    const res = await sdk.serviceSettings.getPayments();
 
     if (res.statusCode == 200) {
         // handle response
@@ -49,18 +47,6 @@ import { Payments } from "@wingspan/payments";
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### [Payments SDK](docs/sdks/payments/README.md)
-
-* [~~deletePaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/payments/README.md#deletepaymentscollaboratorsettingsadditionaldataid) - Erase a Specific Collaborator-Member Custom Data :warning: **Deprecated**
-* [~~getPaymentsCollaboratorSettingsAdditionalData~~](docs/sdks/payments/README.md#getpaymentscollaboratorsettingsadditionaldata) - Retrieve All Collaborator-Member Custom Data Points :warning: **Deprecated**
-* [~~getPaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/payments/README.md#getpaymentscollaboratorsettingsadditionaldataid) - Retrieve Specific Collaborator Custom Data :warning: **Deprecated**
-* [getPaymentsMcc](docs/sdks/payments/README.md#getpaymentsmcc) - Retrieve Merchant Category Codes (MCC)
-* [getPaymentsV2Client](docs/sdks/payments/README.md#getpaymentsv2client) - Retrieve All Clients (Version 2)
-* [getPaymentsV2ClientClientId](docs/sdks/payments/README.md#getpaymentsv2clientclientid) - Retrieve Specific Client Details (Version 2)
-* [getPaymentsV2Collaborator](docs/sdks/payments/README.md#getpaymentsv2collaborator) - Retrieve All Collaborators (Version 2)
-* [getPaymentsV2CollaboratorMemberId](docs/sdks/payments/README.md#getpaymentsv2collaboratormemberid) - Retrieve Specific Collaborator Details (Version 2)
-* [~~patchPaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/payments/README.md#patchpaymentscollaboratorsettingsadditionaldataid) - Modify a Specific Collaborator-Member Custom Data :warning: **Deprecated**
-* [~~postPaymentsCollaboratorSettingsAdditionalData~~](docs/sdks/payments/README.md#postpaymentscollaboratorsettingsadditionaldata) - Register New Custom Data for Collaborator-Member Relationship :warning: **Deprecated**
 
 ### [serviceSettings](docs/sdks/servicesettings/README.md)
 
@@ -76,11 +62,20 @@ import { Payments } from "@wingspan/payments";
 * [postPaymentsBankingCard](docs/sdks/wingspanwallet/README.md#postpaymentsbankingcard) - Register a New  Wingspan Wallet Card
 * [postPaymentsBankingCardIdToken](docs/sdks/wingspanwallet/README.md#postpaymentsbankingcardidtoken) - Request a verification code for card authentication
 
+### [deprecated](docs/sdks/deprecated/README.md)
+
+* [deletePaymentsBankingInstantPayout](docs/sdks/deprecated/README.md#deletepaymentsbankinginstantpayout) - Deprecated Remove Instant Payout Configuration
+* [~~deletePaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/deprecated/README.md#deletepaymentscollaboratorsettingsadditionaldataid) - Erase a Specific Collaborator-Member Custom Data :warning: **Deprecated**
+* [getPaymentsBankingInstantPayout](docs/sdks/deprecated/README.md#getpaymentsbankinginstantpayout) - Deprecated Retrieve Instant Payout Information
+* [~~getPaymentsCollaboratorSettingsAdditionalData~~](docs/sdks/deprecated/README.md#getpaymentscollaboratorsettingsadditionaldata) - Retrieve All Collaborator-Member Custom Data Points :warning: **Deprecated**
+* [~~getPaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/deprecated/README.md#getpaymentscollaboratorsettingsadditionaldataid) - Retrieve Specific Collaborator Custom Data :warning: **Deprecated**
+* [~~patchPaymentsCollaboratorSettingsAdditionalDataId~~](docs/sdks/deprecated/README.md#patchpaymentscollaboratorsettingsadditionaldataid) - Modify a Specific Collaborator-Member Custom Data :warning: **Deprecated**
+* [postPaymentsBankingInstantPayout](docs/sdks/deprecated/README.md#postpaymentsbankinginstantpayout) - Deprecated Set Up Instant Payout Configuration
+* [~~postPaymentsCollaboratorSettingsAdditionalData~~](docs/sdks/deprecated/README.md#postpaymentscollaboratorsettingsadditionaldata) - Register New Custom Data for Collaborator-Member Relationship :warning: **Deprecated**
+
 ### [bankingManagement](docs/sdks/bankingmanagement/README.md)
 
-* [deletePaymentsBankingInstantPayout](docs/sdks/bankingmanagement/README.md#deletepaymentsbankinginstantpayout) - Deprecated Remove Instant Payout Configuration
 * [deletePaymentsPayoutSettingsMemberIdDebitCardId](docs/sdks/bankingmanagement/README.md#deletepaymentspayoutsettingsmemberiddebitcardid) - Unlink and delete a specific payout debit card from a member's profile
-* [getPaymentsBankingInstantPayout](docs/sdks/bankingmanagement/README.md#getpaymentsbankinginstantpayout) - Deprecated Retrieve Instant Payout Information
 * [getPaymentsBankingInstitutionRoutingNumber](docs/sdks/bankingmanagement/README.md#getpaymentsbankinginstitutionroutingnumber) - Retrieve banking institution details by its routing number
 * [getPaymentsBankingStatement](docs/sdks/bankingmanagement/README.md#getpaymentsbankingstatement) - Retrieve All Bank Statements
 * [getPaymentsBankingStatementId](docs/sdks/bankingmanagement/README.md#getpaymentsbankingstatementid) - Retrieve Specific Bank Statement
@@ -90,7 +85,6 @@ import { Payments } from "@wingspan/payments";
 * [getPaymentsPayoutSettingsMemberIdDebitCardId](docs/sdks/bankingmanagement/README.md#getpaymentspayoutsettingsmemberiddebitcardid) - Retrieve a specific payout debit card linked to a member
 * [getPaymentsServiceBankingMemberIdApplication](docs/sdks/bankingmanagement/README.md#getpaymentsservicebankingmemberidapplication) - Fetch the application link for setting up a clearing bank account
 * [patchPaymentsPayoutSettingsId](docs/sdks/bankingmanagement/README.md#patchpaymentspayoutsettingsid) - Modify and update payout settings for a specific member
-* [postPaymentsBankingInstantPayout](docs/sdks/bankingmanagement/README.md#postpaymentsbankinginstantpayout) - Deprecated Set Up Instant Payout Configuration
 * [postPaymentsPayoutSettingsMemberIdDebitCard](docs/sdks/bankingmanagement/README.md#postpaymentspayoutsettingsmemberiddebitcard) - Register a new payout debit card for a member
 
 ### [oneThousandAndNinetyNineOperations](docs/sdks/onethousandandninetynineoperations/README.md)
@@ -101,6 +95,8 @@ import { Payments } from "@wingspan/payments";
 * [getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Fetch details of a specific item from a calculation 1099 batch
 * [getPaymentsCollaboratorIdDownload1099YearIndex](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentscollaboratoriddownload1099yearindex) - Retrieve Form 1099 PDF for a Collaborator by Year and Index
 * [getPaymentsCollaboratorIdDownloadW9](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentscollaboratoriddownloadw9) - Retrieve Form W9 PDF for a Collaborator
+* [getPaymentsTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentstaxform) - Fetch 1099 tax forms.
+* [getPaymentsTaxFormTaxFormId](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentstaxformtaxformid) - Fetch tax form.
 * [patchPaymentsBulkCalculation1099BatchBatchId](docs/sdks/onethousandandninetynineoperations/README.md#patchpaymentsbulkcalculation1099batchbatchid) - Modify the details of a specific bulk calculation 1099 batch
 * [patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](docs/sdks/onethousandandninetynineoperations/README.md#patchpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Revise the attributes of an item in a calculation 1099 batch
 * [postPaymentsBulkCalculation1099Batch](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentsbulkcalculation1099batch) - Initialize a new batch for bulk calculation 1099
@@ -108,6 +104,9 @@ import { Payments } from "@wingspan/payments";
 * [postPaymentsCollaborator1099Calculate](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxFormSubmitW9](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
+* [postPaymentsTaxFormVerifyTin](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformverifytin) - Submit Payee TIN for verification
+* [postPaymentsTaxFormTaxFormIdVerifyIdentity](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
 
 ### [bulkOperations](docs/sdks/bulkoperations/README.md)
 
@@ -155,6 +154,8 @@ import { Payments } from "@wingspan/payments";
 * [getPaymentsClientDeductionId](docs/sdks/clientmanagement/README.md#getpaymentsclientdeductionid) - Fetch Specific Client Deduction Details
 * [getPaymentsMemberClient](docs/sdks/clientmanagement/README.md#getpaymentsmemberclient) - Fetch a list of member and client associations
 * [getPaymentsMemberClientId](docs/sdks/clientmanagement/README.md#getpaymentsmemberclientid) - Retrieve detailed information of a specific member-client relationship
+* [getPaymentsV2Client](docs/sdks/clientmanagement/README.md#getpaymentsv2client) - Retrieve All Clients (Version 2)
+* [getPaymentsV2ClientClientId](docs/sdks/clientmanagement/README.md#getpaymentsv2clientclientid) - Retrieve Specific Client Details (Version 2)
 * [patchPaymentsClientDeductionId](docs/sdks/clientmanagement/README.md#patchpaymentsclientdeductionid) - Modify a Client Deduction
 * [patchPaymentsMemberClientId](docs/sdks/clientmanagement/README.md#patchpaymentsmemberclientid) - Update information of a specific member-client relationship
 * [postPaymentsClientDeduction](docs/sdks/clientmanagement/README.md#postpaymentsclientdeduction) - Register a New Client Deduction
@@ -196,6 +197,8 @@ import { Payments } from "@wingspan/payments";
 * [getPaymentsCollaboratorGroup](docs/sdks/collaboratormanagement/README.md#getpaymentscollaboratorgroup) - Retrieve All Collaborator Groups
 * [getPaymentsCollaboratorId](docs/sdks/collaboratormanagement/README.md#getpaymentscollaboratorid) - Retrieve Details of a Specific Collaborator
 * [getPaymentsCollaboratorIdEvents](docs/sdks/collaboratormanagement/README.md#getpaymentscollaboratoridevents) - Retrieve Events Associated with a Collaborator
+* [getPaymentsV2Collaborator](docs/sdks/collaboratormanagement/README.md#getpaymentsv2collaborator) - Retrieve All Collaborators (Version 2)
+* [getPaymentsV2CollaboratorMemberId](docs/sdks/collaboratormanagement/README.md#getpaymentsv2collaboratormemberid) - Retrieve Specific Collaborator Details (Version 2)
 * [patchPaymentsCollaboratorDeductionId](docs/sdks/collaboratormanagement/README.md#patchpaymentscollaboratordeductionid) - Modify Details of a Specific Deduction
 * [patchPaymentsCollaboratorId](docs/sdks/collaboratormanagement/README.md#patchpaymentscollaboratorid) - Modify Collaborator Details
 * [patchPaymentsCollaboratorIdAddGroupGroupId](docs/sdks/collaboratormanagement/README.md#patchpaymentscollaboratoridaddgroupgroupid) - Associate Collaborator with a Specific Group
@@ -228,6 +231,10 @@ import { Payments } from "@wingspan/payments";
 * [getPaymentsCustomFieldsId](docs/sdks/customfieldmanagement/README.md#getpaymentscustomfieldsid) - Fetch Details of a Specific Custom Field
 * [patchPaymentsCustomFieldsId](docs/sdks/customfieldmanagement/README.md#patchpaymentscustomfieldsid) - Modify Details of a Specific Custom Field
 * [postPaymentsCustomFields](docs/sdks/customfieldmanagement/README.md#postpaymentscustomfields) - Add a New Custom Field
+
+### [merchantCategoryCodes](docs/sdks/merchantcategorycodes/README.md)
+
+* [getPaymentsMcc](docs/sdks/merchantcategorycodes/README.md#getpaymentsmcc) - Retrieve Merchant Category Codes (MCC)
 
 ### [payablesManagement](docs/sdks/payablesmanagement/README.md)
 
@@ -281,9 +288,7 @@ import { Payments } from "@wingspan/payments";
 
     let res;
     try {
-        res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-            id: "<ID>",
-        });
+        res = await sdk.serviceSettings.getPayments();
     } catch (e) {}
 
     if (res.statusCode == 200) {
@@ -319,9 +324,7 @@ import { Payments } from "@wingspan/payments";
         bearerAuth: "",
     });
 
-    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-        id: "<ID>",
-    });
+    const res = await sdk.serviceSettings.getPayments();
 
     if (res.statusCode == 200) {
         // handle response
@@ -343,9 +346,7 @@ import { Payments } from "@wingspan/payments";
         bearerAuth: "",
     });
 
-    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-        id: "<ID>",
-    });
+    const res = await sdk.serviceSettings.getPayments();
 
     if (res.statusCode == 200) {
         // handle response
@@ -379,7 +380,6 @@ const sdk = new Payments({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-
 ## Authentication
 
 ### Per-Client Security Schemes
@@ -399,9 +399,7 @@ import { Payments } from "@wingspan/payments";
         bearerAuth: "",
     });
 
-    const res = await sdk.deletePaymentsCollaboratorSettingsAdditionalDataId({
-        id: "<ID>",
-    });
+    const res = await sdk.serviceSettings.getPayments();
 
     if (res.statusCode == 200) {
         // handle response
