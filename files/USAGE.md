@@ -1,20 +1,20 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Files } from "@wingspan/files";
 
-(async () => {
-    const sdk = new Files();
-
-    const res = await sdk.files.deleteFilesMemberPrivateId({
-        id: "<ID>",
+async function run() {
+    const sdk = new Files({
+        bearerAuth: "",
     });
+
+    const res = await sdk.documentManagementForESignatures.getFilesDocument();
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

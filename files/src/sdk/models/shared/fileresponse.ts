@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
-export enum FileResponseFileAccessScope {
+export enum FileAccessScope {
     Private = "Private",
     Public = "Public",
     Internal = "Internal",
@@ -27,7 +27,7 @@ export class FileResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "fileAccessScope" })
-    fileAccessScope: FileResponseFileAccessScope;
+    fileAccessScope: FileAccessScope;
 
     @SpeakeasyMetadata()
     @Expose({ name: "fileId" })

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetFilesMemberPrivateResponse extends SpeakeasyBase {
@@ -12,12 +12,6 @@ export class GetFilesMemberPrivateResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * Describes a list of files
-     */
-    @SpeakeasyMetadata({ elemType: shared.FileResponse })
-    fileResponses?: shared.FileResponse[];
 
     /**
      * HTTP response status code for this operation
@@ -29,5 +23,11 @@ export class GetFilesMemberPrivateResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
+
+    /**
+     * Describes a list of files
+     */
+    @SpeakeasyMetadata({ elemType: shared.FileResponse })
+    classes?: shared.FileResponse[];
 }
