@@ -27,7 +27,7 @@ Delete a specific eligibility requirement from the designated collaborator group
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -40,7 +40,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,7 +71,7 @@ Delete an eligibility requirement from the system based on its unique identifier
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -81,7 +83,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -110,7 +114,7 @@ Delete an existing payment eligibility requirement based on its unique identifie
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -122,7 +126,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -151,7 +157,7 @@ Fetch detailed configuration and attributes associated with a specific collabora
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -163,7 +169,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -192,7 +200,7 @@ List and display all the set eligibility requirements for collaborators.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -202,7 +210,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -230,7 +240,7 @@ Fetch details for a given eligibility requirement based on its unique identifier
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -242,7 +252,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -271,7 +283,7 @@ Obtain a list of all payment eligibility requirements configured for collaborato
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -281,7 +293,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -309,7 +323,7 @@ Fetch detailed information about a particular payment eligibility requirement us
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -321,7 +335,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -350,7 +366,7 @@ Update specific attributes or configuration details of an existing collaborator 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -370,7 +386,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -399,7 +417,7 @@ Update details or attributes of a specific eligibility requirement linked to a c
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -415,7 +433,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -445,7 +465,7 @@ Update specific details or attributes of an existing eligibility requirement.
 import { Payments } from "@wingspan/payments";
 import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -460,7 +480,9 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -489,7 +511,7 @@ Update attributes or criteria of an existing payment eligibility requirement usi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -504,7 +526,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -534,7 +558,7 @@ Define and create a new eligibility requirement for collaborators.
 import { Payments } from "@wingspan/payments";
 import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -546,7 +570,9 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -575,7 +601,7 @@ Define a new payment eligibility requirement for collaborators in the system.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -588,7 +614,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

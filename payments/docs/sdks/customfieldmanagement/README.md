@@ -22,7 +22,7 @@ Permanently delete a custom field from the system based on its unique identifier
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -34,7 +34,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -63,7 +65,7 @@ Obtain a list of all user-defined custom fields associated with payments.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -73,7 +75,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -101,7 +105,7 @@ Retrieve detailed information for a custom field based on its unique identifier.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -113,7 +117,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -143,7 +149,7 @@ Update specific attributes or data for an existing custom field.
 import { Payments } from "@wingspan/payments";
 import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -156,7 +162,9 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -186,7 +194,7 @@ Define a new custom field for payments using additional data provided.
 import { Payments } from "@wingspan/payments";
 import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -202,7 +210,9 @@ import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

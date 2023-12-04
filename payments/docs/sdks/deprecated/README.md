@@ -25,7 +25,7 @@ Delete the existing instant payout configuration, preventing any further instant
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -35,7 +35,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -65,7 +67,7 @@ import { Payments } from "@wingspan/payments";
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -77,7 +79,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -106,7 +110,7 @@ Fetch detailed information about the current status and details of instant payou
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -116,7 +120,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -146,7 +152,7 @@ import { Payments } from "@wingspan/payments";
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -156,7 +162,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -186,7 +194,7 @@ Deprecated - use /payments/custom-fields/:id
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -198,7 +206,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -230,7 +240,7 @@ import { Payments } from "@wingspan/payments";
 import { Payments } from "@wingspan/payments";
 import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -243,7 +253,9 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -272,7 +284,7 @@ Configure a new instant payout setting, specifying details like amount, frequenc
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -284,7 +296,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -316,7 +330,7 @@ import { Payments } from "@wingspan/payments";
 import { Payments } from "@wingspan/payments";
 import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -332,7 +346,9 @@ import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

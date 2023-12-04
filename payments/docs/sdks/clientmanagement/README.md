@@ -29,7 +29,7 @@ Allows for the deletion of a client deduction based on its unique identifier, re
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -41,7 +41,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -70,7 +72,7 @@ Deletes the association between a member and a client using the provided unique 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -82,7 +84,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -111,7 +115,7 @@ Fetches a comprehensive list of all client deductions present in the system.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -121,7 +125,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -149,7 +155,7 @@ Provides detailed information for a client deduction based on its unique identif
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -161,7 +167,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -190,7 +198,7 @@ Retrieve a detailed list showcasing all the existing associations between member
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -200,7 +208,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -228,7 +238,7 @@ Fetches comprehensive details of the association between a member and a client u
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -240,7 +250,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -269,7 +281,7 @@ Fetches a comprehensive list of clients formatted in the V2 standard, providing 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -279,7 +291,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -307,7 +321,7 @@ Fetches detailed information of a specific client, identified by the clientId, i
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -319,7 +333,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -349,7 +365,7 @@ Allows for updating specific details or attributes of an existing client deducti
 import { Payments } from "@wingspan/payments";
 import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -362,7 +378,9 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -402,7 +420,7 @@ import {
   VerificationStratgy,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -444,7 +462,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -474,7 +494,7 @@ Allows for the creation of a new client deduction based on the provided details.
 import { Payments } from "@wingspan/payments";
 import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -491,7 +511,9 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -521,7 +543,7 @@ Use this endpoint to create a new linkage between a member and client in the sys
 import { Payments } from "@wingspan/payments";
 import { AutoPayRequirement, MemberClientCreateRequestStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -542,7 +564,9 @@ import { AutoPayRequirement, MemberClientCreateRequestStatus, ShareTaxDocument }
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

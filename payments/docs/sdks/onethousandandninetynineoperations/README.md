@@ -35,7 +35,7 @@ Fetches a comprehensive list of all batches created for bulk 1099 calculations.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -45,7 +45,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -73,7 +75,7 @@ Fetches detailed information about a specific batch meant for bulk 1099 calculat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -85,7 +87,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -114,7 +118,7 @@ Access a comprehensive list of items contained within a specified calculation 10
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -126,7 +130,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -155,7 +161,7 @@ Gain insights into a particular item's attributes and data stored within a calcu
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -168,7 +174,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -197,7 +205,7 @@ Facilitates downloading of the specified 1099 form for a given collaborator, cor
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -211,7 +219,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -240,7 +250,7 @@ Enables the downloading of the W9 form for the specified collaborator, ensuring 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -252,7 +262,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -281,7 +293,7 @@ Fetch tax forms for a payee or a payer and specified year.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -291,7 +303,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -319,7 +333,7 @@ Fetches the specified tax form if it exists
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -331,7 +345,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -361,7 +377,7 @@ Provides the ability to update or alter attributes of a given batch for bulk 109
 import { Payments } from "@wingspan/payments";
 import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -378,7 +394,9 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -408,7 +426,7 @@ Make alterations or updates to a specific item within the calculation 1099 batch
 import { Payments } from "@wingspan/payments";
 import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -426,7 +444,9 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -455,7 +475,7 @@ Allows users to create a new batch for facilitating bulk 1099 calculations by pr
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -469,7 +489,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -499,7 +521,7 @@ Facilitates the incorporation of a new item into the specified calculation 1099 
 import { Payments } from "@wingspan/payments";
 import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -518,7 +540,9 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -547,7 +571,7 @@ Analyzes and calculates the appropriate 1099 amounts for collaborators based on 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -560,7 +584,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -589,7 +615,7 @@ Mark a specific 1099 submission for a collaborator as undelivered, typically due
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -603,7 +629,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -632,7 +660,7 @@ Initiates a process to resend the 1099 form to a collaborator in the event of a 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -651,7 +679,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -680,7 +710,7 @@ Updates 1099 tax forms for the current year with W9 information wherever W9 shar
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -690,7 +720,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -718,7 +750,7 @@ Asynchronously verifies the TIN on file with the IRS. May return a pending statu
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -728,7 +760,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -756,7 +790,7 @@ Allows recipient of a tax form to verify their identity in order to access a non
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -768,7 +802,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -11,6 +11,11 @@ import { Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f } 
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
 
+export enum MemberClientSchemaClientUserAccountType {
+    Member = "member",
+    Enterprise = "enterprise",
+}
+
 export enum MemberClientSchemaStatus {
     Active = "Active",
     Inactive = "Inactive",
@@ -31,6 +36,10 @@ export class MemberClientSchema extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "clientId" })
     clientId: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "clientUserAccountType" })
+    clientUserAccountType: MemberClientSchemaClientUserAccountType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "collaboratorGroupIds" })

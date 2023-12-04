@@ -91,6 +91,10 @@ export class InvoiceEvents extends SpeakeasyBase {
     paidAt?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "payAfterAccountVerified" })
+    payAfterAccountVerified?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "paymentFailedAt" })
     paymentFailedAt?: string[];
 

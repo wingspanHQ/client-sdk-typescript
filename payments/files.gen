@@ -412,7 +412,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/getpaymentsresponse.md
 docs/sdk/models/operations/deletepaymentsbankingcardidrequest.md
 docs/sdk/models/operations/deletepaymentsbankingcardidresponse.md
@@ -753,6 +752,7 @@ docs/sdk/models/shared/bulkbatchcreate.md
 docs/sdk/models/shared/bulkcalculation1099itemcreatecalculationtype.md
 docs/sdk/models/shared/bulkcalculation1099itemcreate.md
 docs/sdk/models/shared/calculate1099response.md
+docs/sdk/models/shared/clientuseraccounttype.md
 docs/sdk/models/shared/memberclientstatus.md
 docs/sdk/models/shared/memberclienttaxstatus.md
 docs/sdk/models/shared/memberclient.md
@@ -870,6 +870,7 @@ docs/sdk/models/shared/deductionresponsetype.md
 docs/sdk/models/shared/deductionresponse.md
 docs/sdk/models/shared/postpaymentdeductiondisbursement.md
 docs/sdk/models/shared/deductionapplication.md
+docs/sdk/models/shared/memberclientschemaclientuseraccounttype.md
 docs/sdk/models/shared/memberclientschemastatus.md
 docs/sdk/models/shared/memberclientschema.md
 docs/sdk/models/shared/collaboratorv2status.md
@@ -1098,4 +1099,5 @@ docs/sdks/merchantcategorycodes/README.md
 docs/sdks/payablesmanagement/README.md
 docs/sdks/payrollsettings/README.md
 docs/sdks/reportingandanalytics/README.md
+USAGE.md
 .gitattributes

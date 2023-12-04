@@ -52,7 +52,7 @@ Deletes a specific bulk collaborator batch using its unique identifier. Once del
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -64,7 +64,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -93,7 +95,7 @@ Deletes a specific batch for bulk payables, using the provided batch ID, prevent
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -105,7 +107,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -134,7 +138,7 @@ Provides an overview of all existing bulk client batches, allowing users to quic
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -144,7 +148,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -172,7 +178,7 @@ Retrieves the detailed information of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -184,7 +190,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -213,7 +221,7 @@ Fetches all items present in the specified bulk client batch, providing a compre
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -225,7 +233,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -254,7 +264,7 @@ Retrieves the detailed information of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -267,7 +277,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -296,7 +308,7 @@ Provides a list of all existing bulk collaborator batches, allowing users to vie
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -306,7 +318,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -334,7 +348,7 @@ Fetches detailed information of a specific bulk collaborator batch, using the pr
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -346,7 +360,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -375,7 +391,7 @@ Provides a comprehensive list of items present within a specified batch of colla
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -387,7 +403,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -416,7 +434,7 @@ Enables fetching of detailed information about an individual item from a specifi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -429,7 +447,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -458,7 +478,7 @@ Fetches a list of all the batches created for bulk invoices, providing an overvi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -468,7 +488,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -496,7 +518,7 @@ Allows for the retrieval of a specified batch of bulk invoices by providing its 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -508,7 +530,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -537,7 +561,7 @@ Provides a list of all the items within a specified batch of bulk invoices, iden
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -549,7 +573,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -578,7 +604,7 @@ Fetches detailed information about a specific item located within a designated b
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -591,7 +617,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -620,7 +648,7 @@ Fetches a list of all the batches created for bulk payables, providing an overvi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -630,7 +658,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -658,7 +688,7 @@ Fetches detailed information of a specific batch created for bulk payables, usin
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -670,7 +700,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -699,7 +731,7 @@ Provides an overview and summary of the import process for a given bulk payable 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -711,7 +743,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -740,7 +774,7 @@ Fetches and lists all individual payable items associated with a specified bulk 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -752,7 +786,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -781,7 +817,7 @@ Fetches detailed information of a specific item within a bulk payable batch, usi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -794,7 +830,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -824,7 +862,7 @@ Allows modification of the details of a specific item within the bulk client bat
 import { Payments } from "@wingspan/payments";
 import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -841,7 +879,9 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -871,7 +911,7 @@ Allows modification of the details of a specific item within the bulk client bat
 import { Payments } from "@wingspan/payments";
 import { AutoPayRequirement, BulkClientItemUpdateClientStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -893,7 +933,9 @@ import { AutoPayRequirement, BulkClientItemUpdateClientStatus, ShareTaxDocument 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -923,7 +965,7 @@ Allows for updating or altering the details and items within a specific bulk col
 import { Payments } from "@wingspan/payments";
 import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -940,7 +982,9 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -973,7 +1017,7 @@ import {
   MemberClientFormW9InfoCompanyStructure,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -999,7 +1043,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1029,7 +1075,7 @@ Enables the user to update or modify the attributes of a given batch of bulk inv
 import { Payments } from "@wingspan/payments";
 import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1046,7 +1092,9 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1076,7 +1124,7 @@ Allows for updates or edits to be made to a specific items details within an exi
 import { Payments } from "@wingspan/payments";
 import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoiceStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1098,7 +1146,9 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1128,7 +1178,7 @@ Updates the information or items of a specific bulk payable batch, given its uni
 import { Payments } from "@wingspan/payments";
 import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1145,7 +1195,9 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1175,7 +1227,7 @@ Updates the details or status of a specific item within a bulk payable batch, gi
 import { Payments } from "@wingspan/payments";
 import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1193,7 +1245,9 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1222,7 +1276,7 @@ Initiates the creation of a fresh bulk client batch, streamlining the process of
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1236,7 +1290,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1266,7 +1322,7 @@ Inserts a new item into the specified bulk client batch, allowing for further ex
 import { Payments } from "@wingspan/payments";
 import { AutoPayRequirement, BulkClientItemCreateClientStatus, ShareTaxDocument } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1287,7 +1343,9 @@ import { AutoPayRequirement, BulkClientItemCreateClientStatus, ShareTaxDocument 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1316,7 +1374,7 @@ Enables the creation of a new bulk collaborator batch, facilitating the bulk man
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1330,7 +1388,9 @@ import { Payments } from "@wingspan/payments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1363,7 +1423,7 @@ import {
   MemberClientFormW9InfoCompanyStructure,
 } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1388,7 +1448,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1418,7 +1480,7 @@ Creates a new batch for importing multiple invoices at once, streamlining the bu
 import { Payments } from "@wingspan/payments";
 import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1433,7 +1495,9 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1463,7 +1527,7 @@ Allows users to append a new item to a given batch of bulk invoices by supplying
 import { Payments } from "@wingspan/payments";
 import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1489,7 +1553,9 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1519,7 +1585,7 @@ Creates a new batch for importing multiple payables at once, streamlining the bu
 import { Payments } from "@wingspan/payments";
 import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1534,7 +1600,9 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1564,7 +1632,7 @@ Allows for the creation and addition of a new individual payable item into an ex
 import { Payments } from "@wingspan/payments";
 import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubStatus } from "@wingspan/payments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Payments({
     bearerAuth: "",
   });
@@ -1586,7 +1654,9 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

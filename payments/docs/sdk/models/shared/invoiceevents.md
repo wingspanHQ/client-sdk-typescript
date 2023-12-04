@@ -26,6 +26,7 @@
 | `memberResubmittedAt`              | *string*                           | :heavy_minus_sign:                 | N/A                                |
 | `openedAt`                         | *string*                           | :heavy_minus_sign:                 | N/A                                |
 | `paidAt`                           | *string*                           | :heavy_minus_sign:                 | N/A                                |
+| `payAfterAccountVerified`          | *string*                           | :heavy_minus_sign:                 | N/A                                |
 | `paymentFailedAt`                  | *string*[]                         | :heavy_minus_sign:                 | N/A                                |
 | `paymentInTransitAt`               | *string*                           | :heavy_minus_sign:                 | N/A                                |
 | `paymentRetriedAt`                 | *string*[]                         | :heavy_minus_sign:                 | N/A                                |
