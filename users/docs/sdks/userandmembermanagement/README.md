@@ -36,7 +36,7 @@ Verifies the connectivity and health status of the User Service by sending a pin
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -46,7 +46,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -74,7 +76,7 @@ Fetches the comprehensive details of a specific client using the given unique id
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -86,7 +88,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -115,7 +119,7 @@ Fetches user details based on the provided email address. Useful for situations 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -127,7 +131,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -156,7 +162,7 @@ Fetches the geographical location information associated with the user, such as 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -166,7 +172,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -194,7 +202,7 @@ Fetches a history of payments made for the user's membership subscription.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -204,7 +212,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -232,7 +242,7 @@ Fetches the details of the subscription associated with the specified member.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -244,7 +254,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -273,7 +285,7 @@ Fetches the advocate details associated with the specified member. An advocate o
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -285,7 +297,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -314,7 +328,7 @@ Fetches a comprehensive list of occupations that users can associate with their 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -324,7 +338,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -352,7 +368,7 @@ Obtains the public profile details of a user using their unique identifier. This
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -364,7 +380,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -393,7 +411,7 @@ Fetches the user details associated with a specific tag identifier. Useful for q
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -405,7 +423,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -434,7 +454,7 @@ Retrieves comprehensive details of a user account using the provided unique user
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -446,7 +466,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -476,7 +498,7 @@ Updates the details of an existing client using the given unique identifier base
 import { Users } from "@wingspan/users";
 import { Structure } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -509,7 +531,9 @@ import { Structure } from "@wingspan/users/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -555,7 +579,7 @@ import {
   VerificationStateStatus,
 } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -602,13 +626,11 @@ import {
         },
         tinVerification: {
           ein: {
-            externalTinFingerprint: "string",
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
           },
           ssn: {
-            externalTinFingerprint: "string",
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
@@ -626,7 +648,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -656,7 +680,7 @@ Enables modifications to the existing user account information using the specifi
 import { Users } from "@wingspan/users";
 import { Gender } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -672,7 +696,9 @@ import { Gender } from "@wingspan/users/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -702,7 +728,7 @@ Allows the creation of a new user with a "pending" status. This can be utilized 
 import { Users } from "@wingspan/users";
 import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -717,7 +743,9 @@ import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/user
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -747,7 +775,7 @@ Allows the creation of a new user account by providing necessary details.
 import { Users } from "@wingspan/users";
 import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -762,7 +790,9 @@ import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/user
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -792,7 +822,7 @@ Creates a new client entry using the provided details and the specified identifi
 import { Users } from "@wingspan/users";
 import { Structure } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -825,7 +855,9 @@ import { Structure } from "@wingspan/users/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -871,7 +903,7 @@ import {
   VerificationStateStatus,
 } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -917,13 +949,11 @@ import {
         },
         tinVerification: {
           ein: {
-            externalTinFingerprint: "string",
             requestedAt: "string",
             status: VerificationStateStatus.Verified,
             tinFingerprint: "string",
           },
           ssn: {
-            externalTinFingerprint: "string",
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
@@ -942,7 +972,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -972,7 +1004,7 @@ Request to start the password reset process for a user. Upon successful request,
 import { Users } from "@wingspan/users";
 import { UserType } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -985,7 +1017,9 @@ import { UserType } from "@wingspan/users/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

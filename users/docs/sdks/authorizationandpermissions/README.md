@@ -28,7 +28,7 @@ Completely removes an authorization, effectively revoking all its associated per
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -40,7 +40,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,7 +71,7 @@ Lists all the authorizations and permissions that have been granted to a user, p
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -79,7 +81,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -107,7 +111,7 @@ Fetches the list of accounts or services that the specified user has granted aut
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -119,7 +123,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -148,7 +154,7 @@ Fetch the detailed information and scope of a specific authorization using its u
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -160,7 +166,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -189,7 +197,7 @@ Provides an overview of all scope-groups which define a set of permissions withi
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -199,7 +207,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -227,7 +237,7 @@ Fetches authorized scope-groups that are assigned or relevant to a particular us
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -239,7 +249,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -268,7 +280,7 @@ Fetches a comprehensive list of all authorized scopes available in the system.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -278,7 +290,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -306,7 +320,7 @@ Fetches the distinct authorized scopes assigned or relevant to a particular user
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -318,7 +332,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -348,7 +364,7 @@ Update the details or scopes of a specific authorization using its unique identi
 import { Users } from "@wingspan/users";
 import { AuthorizationUpdateRequestAllowedAction } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -361,7 +377,9 @@ import { AuthorizationUpdateRequestAllowedAction } from "@wingspan/users/dist/sd
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -391,7 +409,7 @@ Grants or verifies specific permissions (scopes) for a user based on the provide
 import { Users } from "@wingspan/users";
 import { Action, AllowedAction, Comparator } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -433,7 +451,9 @@ import { Action, AllowedAction, Comparator } from "@wingspan/users/dist/sdk/mode
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -462,7 +482,7 @@ Request an authentication token required to access Flatfile services and feature
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -474,7 +494,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

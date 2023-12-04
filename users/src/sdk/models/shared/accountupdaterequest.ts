@@ -4,6 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AccountPurpose } from "./accountpurpose";
+import { AccountVerificationRequest } from "./accountverificationrequest";
 import { SixHundredAndSixtyTwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d } from "./sixhundredandsixtytwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d";
 import { Expose, Type } from "class-transformer";
 
@@ -24,6 +25,11 @@ export enum AccountUpdateRequestUsage {
 }
 
 export class AccountUpdateRequest extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "accountVerification" })
+    @Type(() => AccountVerificationRequest)
+    accountVerification?: AccountVerificationRequest;
+
     @SpeakeasyMetadata()
     @Expose({ name: "integration" })
     @Type(() => SixHundredAndSixtyTwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d)

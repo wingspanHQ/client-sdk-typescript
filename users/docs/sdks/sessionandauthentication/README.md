@@ -38,7 +38,7 @@ Deletes a specific API session, ending its validity and associated permissions.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -50,7 +50,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -79,7 +81,7 @@ Safely terminates the active user session associated with the provided session t
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -91,7 +93,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -120,7 +124,7 @@ Fetches a list of subscription grants associated with a specific granted subscri
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -130,7 +134,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -158,7 +164,7 @@ Lists all API sessions that were initiated by the authenticated user, aiding in 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -168,7 +174,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -196,7 +204,7 @@ Retrieves the details of an API session using its unique identifier.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -208,7 +216,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -237,7 +247,7 @@ Fetches details of an active user session using the provided unique session toke
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -249,7 +259,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -278,7 +290,7 @@ Updates the properties of an existing API session based on provided input.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -295,7 +307,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -324,7 +338,7 @@ Validates and completes the OTP/2FA verification process by checking the provide
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -336,7 +350,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -365,7 +381,7 @@ Validates the email verification for the specified user using the received verif
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -380,7 +396,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -409,7 +427,7 @@ Confirms the phone verification for the specified user using the received OTP or
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -424,7 +442,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -453,7 +473,7 @@ Processes the user's credentials and generates a response indicating the authent
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -465,7 +485,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -494,7 +516,7 @@ Creates a new user session that's initialized with a "pending" status. This can 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -504,7 +526,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -533,7 +557,7 @@ Creates a new user session based on the provided credentials or token, allowing 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -543,7 +567,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -572,7 +598,7 @@ Initiates a session specifically for API interactions, providing the necessary c
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -586,7 +612,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -616,7 +644,7 @@ Begins the One-Time Password (OTP) or Two-Factor Authentication (2FA) verificati
 import { Users } from "@wingspan/users";
 import { OtpSessionCreateRequestChannel } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -626,7 +654,9 @@ import { OtpSessionCreateRequestChannel } from "@wingspan/users/dist/sdk/models/
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -655,7 +685,7 @@ Allows an authorized user (e.g., admin) to create a session by signing in as ano
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -665,7 +695,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -694,7 +726,7 @@ Initiates a Single Sign-On (SSO) session for a user, allowing seamless integrati
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -706,7 +738,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -735,7 +769,7 @@ Allows users to sign in using their Google account. The client must provide a va
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -747,7 +781,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -776,7 +812,7 @@ Starts the email verification procedure for the specified user by sending a veri
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -791,7 +827,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -820,7 +858,7 @@ Starts the process of verifying an existing email address associated with the us
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -833,7 +871,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -863,7 +903,7 @@ Initiates the phone verification procedure by sending an OTP or verification cod
 import { Users } from "@wingspan/users";
 import { Channel } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -878,7 +918,9 @@ import { Channel } from "@wingspan/users/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

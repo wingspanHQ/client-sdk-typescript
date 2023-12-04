@@ -22,7 +22,7 @@ Safely deletes the subscription grant associated with the provided unique identi
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -34,7 +34,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -63,7 +65,7 @@ Deletes the specified subscription associated with the member, removing any rela
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -75,7 +77,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -104,7 +108,7 @@ Lists all the subscription grants in the system, helping administrators or manag
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -114,7 +118,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,7 +148,7 @@ Fetches the details of a specific subscription grant for a user using the provid
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -154,7 +160,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -183,7 +191,7 @@ Fetches the details of the subscription associated with the specified member.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -195,7 +203,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -225,7 +235,7 @@ Updates specific details of a users subscription grant using the provided unique
 import { Users } from "@wingspan/users";
 import { SubscriptionGrantUpdateRequestPackage, SubscriptionGrantUpdateRequestPackageTier } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -238,7 +248,9 @@ import { SubscriptionGrantUpdateRequestPackage, SubscriptionGrantUpdateRequestPa
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -272,7 +284,7 @@ import {
   SubscriptionUpdateRequestTerm,
 } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -285,7 +297,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -315,7 +329,7 @@ Create a new subscription grant to a user. Useful for promoting and providing sp
 import { Users } from "@wingspan/users";
 import { SubscriptionGrantCreateRequestPackage, SubscriptionGrantCreateRequestPackageTier } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -329,7 +343,9 @@ import { SubscriptionGrantCreateRequestPackage, SubscriptionGrantCreateRequestPa
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -363,7 +379,7 @@ import {
   SubscriptionCreateRequestTerm,
 } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -376,7 +392,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

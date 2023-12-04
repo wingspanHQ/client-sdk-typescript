@@ -1,6 +1,6 @@
 {
   "name": "@wingspan/users",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Wingspan Networks, Inc.",
   "scripts": {
     "prepare": "tsc --build",

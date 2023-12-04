@@ -22,7 +22,7 @@ Deletes a specific activity record associated with a member, ensuring that its d
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -34,7 +34,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -63,7 +65,7 @@ Lists all activities associated with a member, providing a comprehensive view of
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -73,7 +75,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -101,7 +105,7 @@ Fetches detailed information about a specific activity associated with a member 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -113,7 +117,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,7 +148,7 @@ Updates the details of a specific activity record associated with a member.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -159,7 +165,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -188,7 +196,7 @@ Records a new activity for a member, detailing their recent actions or interacti
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -200,7 +208,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

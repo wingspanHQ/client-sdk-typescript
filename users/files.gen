@@ -53,6 +53,7 @@ src/sdk/models/operations/patchusersaccountid.ts
 src/sdk/models/operations/postusersaccount.ts
 src/sdk/models/operations/postusersaccountlink.ts
 src/sdk/models/operations/postusersaccountrequirements.ts
+src/sdk/models/operations/postusersaccountaccountidverify.ts
 src/sdk/models/operations/postusersguestaccountnumbers.ts
 src/sdk/models/operations/deleteusersactivityid.ts
 src/sdk/models/operations/getusersactivity.ts
@@ -187,13 +188,17 @@ src/sdk/models/shared/f8c6f82160a6fdfd5126819f1852fc694cb8161367b6d0441310414664
 src/sdk/models/shared/plaidexternalids.ts
 src/sdk/models/shared/quickbooksaccountexternalids.ts
 src/sdk/models/shared/accountevents.ts
+src/sdk/models/shared/accountverification.ts
 src/sdk/models/shared/accountupdaterequest.ts
+src/sdk/models/shared/accountverificationrequest.ts
 src/sdk/models/shared/accountcreaterequest.ts
 src/sdk/models/shared/linktokenresponse.ts
 src/sdk/models/shared/linktokenrequest.ts
 src/sdk/models/shared/accountrequirementsresponse.ts
 src/sdk/models/shared/nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62.ts
 src/sdk/models/shared/accountrequirementsrequest.ts
+src/sdk/models/shared/accountverifyrequest.ts
+src/sdk/models/shared/sevena01613108052d8f7b4782efc42c1c6198c318ddee48446943e5402df03118c4.ts
 src/sdk/models/shared/guestaccountrequest.ts
 src/sdk/models/shared/activity.ts
 src/sdk/models/shared/flows.ts
@@ -254,7 +259,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/getusersresponse.md
 docs/sdk/models/operations/getusersuserclientidrequest.md
 docs/sdk/models/operations/getusersuserclientidresponse.md
@@ -296,6 +300,8 @@ docs/sdk/models/operations/patchusersaccountidresponse.md
 docs/sdk/models/operations/postusersaccountresponse.md
 docs/sdk/models/operations/postusersaccountlinkresponse.md
 docs/sdk/models/operations/postusersaccountrequirementsresponse.md
+docs/sdk/models/operations/postusersaccountaccountidverifyrequest.md
+docs/sdk/models/operations/postusersaccountaccountidverifyresponse.md
 docs/sdk/models/operations/postusersguestaccountnumbersresponse.md
 docs/sdk/models/operations/deleteusersactivityidrequest.md
 docs/sdk/models/operations/deleteusersactivityidresponse.md
@@ -519,9 +525,14 @@ docs/sdk/models/shared/f8c6f82160a6fdfd5126819f1852fc694cb8161367b6d044131041466
 docs/sdk/models/shared/plaidexternalids.md
 docs/sdk/models/shared/quickbooksaccountexternalids.md
 docs/sdk/models/shared/accountevents.md
+docs/sdk/models/shared/accountverificationstatus.md
+docs/sdk/models/shared/accountverificationtype.md
+docs/sdk/models/shared/accountverification.md
 docs/sdk/models/shared/accountupdaterequeststatus.md
 docs/sdk/models/shared/accountupdaterequestusage.md
 docs/sdk/models/shared/accountupdaterequest.md
+docs/sdk/models/shared/accountverificationrequesttype.md
+docs/sdk/models/shared/accountverificationrequest.md
 docs/sdk/models/shared/accountcreaterequeststatus.md
 docs/sdk/models/shared/accountcreaterequestsubtype.md
 docs/sdk/models/shared/accountcreaterequesttype.md
@@ -532,6 +543,9 @@ docs/sdk/models/shared/linktokenrequest.md
 docs/sdk/models/shared/accountrequirementsresponse.md
 docs/sdk/models/shared/nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62.md
 docs/sdk/models/shared/accountrequirementsrequest.md
+docs/sdk/models/shared/accountverifyrequesttype.md
+docs/sdk/models/shared/accountverifyrequest.md
+docs/sdk/models/shared/sevena01613108052d8f7b4782efc42c1c6198c318ddee48446943e5402df03118c4.md
 docs/sdk/models/shared/guestaccountrequest.md
 docs/sdk/models/shared/activity.md
 docs/sdk/models/shared/flows.md
@@ -653,4 +667,5 @@ docs/sdks/organizationaccountmanagement/README.md
 docs/sdks/subscriptionandgrantsmanagement/README.md
 docs/sdks/deprecated/README.md
 docs/sdks/subscriptionmanagement/README.md
+USAGE.md
 .gitattributes

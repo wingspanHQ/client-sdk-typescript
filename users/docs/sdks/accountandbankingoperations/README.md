@@ -14,6 +14,7 @@ Endpoints for handling account linkages, bank account information, and related f
 * [postUsersAccount](#postusersaccount) - Add New Bank Account
 * [postUsersAccountLink](#postusersaccountlink) - Generate Plaid Link Token for Account Integration
 * [postUsersAccountRequirements](#postusersaccountrequirements) - Fetch Necessary Account Details
+* [postUsersAccountAccountIdVerify](#postusersaccountaccountidverify) - Verify an account for payments
 * [postUsersGuestAccountNumbers](#postusersguestaccountnumbers) - Retrieve Account Numbers for Guests
 
 ## deleteUsersAccountId
@@ -25,7 +26,7 @@ Allows members to securely remove a linked bank account from their profile.
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -37,7 +38,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -66,7 +69,7 @@ Fetches a list of all bank accounts associated with the member, providing an ove
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -76,7 +79,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -104,7 +109,7 @@ Retrieves comprehensive details for a specified bank account linked to the membe
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -116,7 +121,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -144,15 +151,22 @@ Enables members to make modifications to the details of their linked bank accoun
 
 ```typescript
 import { Users } from "@wingspan/users";
-import { AccountUpdateRequestStatus, AccountUpdateRequestUsage } from "@wingspan/users/dist/sdk/models/shared";
+import {
+  AccountUpdateRequestStatus,
+  AccountUpdateRequestUsage,
+  AccountVerificationRequestType,
+} from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
 
   const res = await sdk.accountAndBankingOperations.patchUsersAccountId({
     accountUpdateRequest: {
+      accountVerification: {
+        type: AccountVerificationRequestType.MicroDeposit,
+      },
       integration: {
         quickbooks: {},
       },
@@ -164,7 +178,9 @@ import { AccountUpdateRequestStatus, AccountUpdateRequestUsage } from "@wingspan
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -197,14 +213,18 @@ import {
   AccountCreateRequestSubType,
   AccountCreateRequestType,
   AccountCreateRequestUsage,
+  AccountVerificationRequestType,
 } from "@wingspan/users/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
 
   const res = await sdk.accountAndBankingOperations.postUsersAccount({
+    accountVerification: {
+      type: AccountVerificationRequestType.MicroDeposit,
+    },
     canBeUsedFor: {},
     numbers: {
       account: "31307069",
@@ -218,7 +238,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -247,7 +269,7 @@ Initiates the process to generate a token for integrating with Plaid Link or con
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -257,7 +279,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -286,7 +310,7 @@ Obtains the specific details and information required for the user to set up or 
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -299,7 +323,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -319,6 +345,54 @@ import { Users } from "@wingspan/users";
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## postUsersAccountAccountIdVerify
+
+Verify an account through micro deposits to be used as a payment method
+
+### Example Usage
+
+```typescript
+import { Users } from "@wingspan/users";
+import { AccountVerifyRequestType } from "@wingspan/users/dist/sdk/models/shared";
+
+async function run() {
+  const sdk = new Users({
+    bearerAuth: "",
+  });
+
+  const res = await sdk.accountAndBankingOperations.postUsersAccountAccountIdVerify({
+    accountVerifyRequest: {
+      type: AccountVerifyRequestType.MicroDeposit,
+      verifications: {},
+    },
+    accountId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PostUsersAccountAccountIdVerifyRequest](../../sdk/models/operations/postusersaccountaccountidverifyrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+
+
+### Response
+
+**Promise<[operations.PostUsersAccountAccountIdVerifyResponse](../../sdk/models/operations/postusersaccountaccountidverifyresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## postUsersGuestAccountNumbers
 
 Allows guest users to fetch their associated bank account numbers based on the provided request details.
@@ -328,7 +402,7 @@ Allows guest users to fetch their associated bank account numbers based on the p
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async() => {
+async function run() {
   const sdk = new Users({
     bearerAuth: "",
   });
@@ -341,7 +415,9 @@ import { Users } from "@wingspan/users";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

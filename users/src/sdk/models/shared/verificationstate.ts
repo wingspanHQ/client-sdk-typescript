@@ -15,7 +15,11 @@ export enum VerificationStateStatus {
 export class VerificationState extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "externalTinFingerprint" })
-    externalTinFingerprint: string;
+    externalTinFingerprint?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "finalizedAt" })
+    finalizedAt?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "requestedAt" })

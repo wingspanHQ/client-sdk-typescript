@@ -6,6 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AccountEvents } from "./accountevents";
 import { AccountNumbers } from "./accountnumbers";
 import { AccountPurpose } from "./accountpurpose";
+import { AccountVerification } from "./accountverification";
 import { PlaidExternalIds } from "./plaidexternalids";
 import { SixHundredAndSixtyTwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d } from "./sixhundredandsixtytwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d";
 import { UserRoles } from "./userroles";
@@ -43,6 +44,11 @@ export class Account extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "accountId" })
     accountId: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "accountVerification" })
+    @Type(() => AccountVerification)
+    accountVerification?: AccountVerification;
 
     @SpeakeasyMetadata()
     @Expose({ name: "canBeUsedFor" })

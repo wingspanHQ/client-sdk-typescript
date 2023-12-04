@@ -5,6 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AccountNumbers } from "./accountnumbers";
 import { AccountPurpose } from "./accountpurpose";
+import { AccountVerificationRequest } from "./accountverificationrequest";
 import { Expose, Type } from "class-transformer";
 
 export enum AccountCreateRequestStatus {
@@ -38,6 +39,11 @@ export enum AccountCreateRequestUsage {
 }
 
 export class AccountCreateRequest extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "accountVerification" })
+    @Type(() => AccountVerificationRequest)
+    accountVerification?: AccountVerificationRequest;
+
     @SpeakeasyMetadata()
     @Expose({ name: "canBeUsedFor" })
     @Type(() => AccountPurpose)
