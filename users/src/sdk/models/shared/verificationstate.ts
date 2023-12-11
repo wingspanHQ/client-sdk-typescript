@@ -22,6 +22,10 @@ export class VerificationState extends SpeakeasyBase {
     finalizedAt?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "manuallyVerified" })
+    manuallyVerified: boolean;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "requestedAt" })
     requestedAt: string;
 

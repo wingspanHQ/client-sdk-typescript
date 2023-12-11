@@ -626,11 +626,13 @@ async function run() {
         },
         tinVerification: {
           ein: {
+            manuallyVerified: false,
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
           },
           ssn: {
+            manuallyVerified: false,
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
@@ -949,11 +951,13 @@ async function run() {
         },
         tinVerification: {
           ein: {
+            manuallyVerified: false,
             requestedAt: "string",
             status: VerificationStateStatus.Verified,
             tinFingerprint: "string",
           },
           ssn: {
+            manuallyVerified: false,
             requestedAt: "string",
             status: VerificationStateStatus.Failed,
             tinFingerprint: "string",
