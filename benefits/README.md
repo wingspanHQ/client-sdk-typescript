@@ -6,7 +6,7 @@
     
 </div>
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -20,16 +20,17 @@ npm add @wingspan/benefits
 ```bash
 yarn add @wingspan/benefits
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         bearerAuth: "",
     });
@@ -41,14 +42,15 @@ import { Benefits } from "@wingspan/benefits";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [benefitsEnrollment](docs/sdks/benefitsenrollment/README.md)
 
@@ -60,15 +62,11 @@ import { Benefits } from "@wingspan/benefits";
 
 * [getBenefitsService](docs/sdks/benefitsservice/README.md#getbenefitsservice) - Retrieve Current Benefits Service Status
 * [patchBenefitsServiceId](docs/sdks/benefitsservice/README.md#patchbenefitsserviceid) - Modify Benefits Service Status
-<!-- End SDK Available Operations -->
-
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Error Handling -->
+<!-- Start Error Handling [errors] -->
 ## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
@@ -82,7 +80,7 @@ Example
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         bearerAuth: "",
     });
@@ -92,19 +90,26 @@ import { Benefits } from "@wingspan/benefits";
         res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
             id: "<ID>",
         });
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Error Handling -->
+<!-- End Error Handling [errors] -->
 
 
 
-<!-- Start Server Selection -->
+<!-- Start Server Selection [server] -->
 ## Server Selection
 
 ### Select Server by Index
@@ -113,15 +118,15 @@ You can override the default server globally by passing a server index to the `s
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `https://api.wingspan.app/benefits` | None |
-| 1 | `https://stagingapi.wingspan.app/benefits` | None |
+| 0 | `https://api.wingspan.app` | None |
+| 1 | `https://stagingapi.wingspan.app` | None |
 
 #### Example
 
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         serverIdx: 1,
         bearerAuth: "",
@@ -134,7 +139,9 @@ import { Benefits } from "@wingspan/benefits";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -145,9 +152,9 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
-        serverURL: "https://api.wingspan.app/benefits",
+        serverURL: "https://api.wingspan.app",
         bearerAuth: "",
     });
 
@@ -158,23 +165,25 @@ import { Benefits } from "@wingspan/benefits";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
 
 
-<!-- Start Custom HTTP Client -->
+<!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from @wingspan/benefits import Benefits;
-import axios;
+import { @wingspan/benefits } from "Benefits";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -182,12 +191,11 @@ const httpClient = axios.create({
 
 const sdk = new Benefits({defaultClient: httpClient});
 ```
-<!-- End Custom HTTP Client -->
+<!-- End Custom HTTP Client [http-client] -->
 
 
 
-<!-- Start Authentication -->
-
+<!-- Start Authentication [security] -->
 ## Authentication
 
 ### Per-Client Security Schemes
@@ -202,7 +210,7 @@ To authenticate with the API the `bearerAuth` parameter must be set when initial
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         bearerAuth: "",
     });
@@ -214,10 +222,12 @@ import { Benefits } from "@wingspan/benefits";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Authentication -->
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

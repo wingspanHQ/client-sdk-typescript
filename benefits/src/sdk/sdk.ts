@@ -16,11 +16,11 @@ export const ServerList = [
     /**
      * Wingspan's Benefits API in Production
      */
-    "https://api.wingspan.app/benefits",
+    "https://api.wingspan.app",
     /**
      * Wingspan's Benefits API in Staging
      */
-    "https://stagingapi.wingspan.app/benefits",
+    "https://stagingapi.wingspan.app",
 ] as const;
 
 /**
@@ -56,9 +56,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "2.0.1";
-    genVersion = "2.194.1";
-    userAgent = "speakeasy-sdk/typescript 2.0.1 2.194.1 1.0.0 @wingspan/benefits";
+    sdkVersion = "2.0.2";
+    genVersion = "2.210.6";
+    userAgent = "speakeasy-sdk/typescript 2.0.2 2.210.6 1.0.0 @wingspan/benefits";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);

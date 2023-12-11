@@ -37,7 +37,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/getbenefitsenrollmentidrequest.md
 docs/sdk/models/operations/getbenefitsenrollmentidresponse.md
 docs/sdk/models/operations/getbenefitsplanenrollmentresponse.md
@@ -63,4 +62,5 @@ docs/sdk/models/shared/security.md
 docs/sdks/benefits/README.md
 docs/sdks/benefitsenrollment/README.md
 docs/sdks/benefitsservice/README.md
+USAGE.md
 .gitattributes

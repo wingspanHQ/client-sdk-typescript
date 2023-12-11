@@ -20,7 +20,7 @@ Fetches the enrollment status and details for a member identified by the provide
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async() => {
+async function run() {
   const sdk = new Benefits({
     bearerAuth: "",
   });
@@ -32,7 +32,9 @@ import { Benefits } from "@wingspan/benefits";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,7 +63,7 @@ List all plan enrollments
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async() => {
+async function run() {
   const sdk = new Benefits({
     bearerAuth: "",
   });
@@ -71,7 +73,9 @@ import { Benefits } from "@wingspan/benefits";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -99,7 +103,7 @@ Get a particular plan enrollment by ID
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async() => {
+async function run() {
   const sdk = new Benefits({
     bearerAuth: "",
   });
@@ -111,7 +115,9 @@ import { Benefits } from "@wingspan/benefits";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

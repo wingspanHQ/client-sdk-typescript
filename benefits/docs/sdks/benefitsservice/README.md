@@ -19,7 +19,7 @@ Fetches the current status indicating whether the benefits service is enabled or
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async() => {
+async function run() {
   const sdk = new Benefits({
     bearerAuth: "",
   });
@@ -29,7 +29,9 @@ import { Benefits } from "@wingspan/benefits";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -57,7 +59,7 @@ Allows users to change the enablement status of a specified benefits service.
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async() => {
+async function run() {
   const sdk = new Benefits({
     bearerAuth: "",
   });
@@ -72,7 +74,9 @@ import { Benefits } from "@wingspan/benefits";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

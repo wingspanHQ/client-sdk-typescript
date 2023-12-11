@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         bearerAuth: "",
     });
@@ -14,7 +14,9 @@ import { Benefits } from "@wingspan/benefits";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
