@@ -18,6 +18,7 @@ import { InvoiceIntegrations } from "./invoiceintegrations";
 import { InvoiceLineItem } from "./invoicelineitem";
 import { InvoiceMetadata } from "./invoicemetadata";
 import { InvoiceNotificationPreferences } from "./invoicenotificationpreferences";
+import { InvoicePayment } from "./invoicepayment";
 import { InvoicePayoutDestination } from "./invoicepayoutdestination";
 import { InvoiceRefundDestination } from "./invoicerefunddestination";
 import { InvoiceWithholdings } from "./invoicewithholdings";
@@ -217,6 +218,11 @@ export class Invoice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodId" })
     paymentMethodId?: string;
+
+    @SpeakeasyMetadata({ elemType: InvoicePayment })
+    @Expose({ name: "payments" })
+    @Type(() => InvoicePayment)
+    payments: InvoicePayment[];
 
     @SpeakeasyMetadata({ elemType: InvoicePayoutDestination })
     @Expose({ name: "payoutDestinations" })

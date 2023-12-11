@@ -16,12 +16,13 @@ export enum MemberClientFormW9InfoCompanyStructure {
     LLCPartnership = "LLCPartnership",
     CorporationC = "CorporationC",
     Partnership = "Partnership",
+    LessThanNilGreaterThan = "<nil>",
 }
 
 export class MemberClientFormW9Info extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "addressLine1" })
-    addressLine1: string;
+    addressLine1?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "addressLine2" })
@@ -29,15 +30,15 @@ export class MemberClientFormW9Info extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "city" })
-    city: string;
+    city?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "companyStructure" })
-    companyStructure: MemberClientFormW9InfoCompanyStructure;
+    companyStructure?: MemberClientFormW9InfoCompanyStructure;
 
     @SpeakeasyMetadata()
     @Expose({ name: "country" })
-    country: string;
+    country?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "dob" })
@@ -61,7 +62,7 @@ export class MemberClientFormW9Info extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "postalCode" })
-    postalCode: string;
+    postalCode?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "ssn" })
@@ -69,5 +70,5 @@ export class MemberClientFormW9Info extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "state" })
-    state: string;
+    state?: string;
 }

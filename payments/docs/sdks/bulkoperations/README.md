@@ -1024,14 +1024,7 @@ async function run() {
 
   const res = await sdk.bulkOperations.patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
     bulkCollaboratorItemUpdate: {
-      formW9Data: {
-        addressLine1: "string",
-        city: "Port Pat",
-        companyStructure: MemberClientFormW9InfoCompanyStructure.LlcMultiMember,
-        country: "Bolivia",
-        postalCode: "48036",
-        state: "string",
-      },
+      formW9Data: {},
       labels: {
         "key": "string",
       },
@@ -1430,14 +1423,7 @@ async function run() {
 
   const res = await sdk.bulkOperations.postPaymentsBulkCollaboratorBatchBatchIdItem({
     bulkCollaboratorItemCreate: {
-      formW9Data: {
-        addressLine1: "string",
-        city: "West Kaleb",
-        companyStructure: MemberClientFormW9InfoCompanyStructure.Partnership,
-        country: "Gambia",
-        postalCode: "85065",
-        state: "string",
-      },
+      formW9Data: {},
       labels: {
         "key": "string",
       },

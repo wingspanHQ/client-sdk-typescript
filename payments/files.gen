@@ -329,6 +329,9 @@ src/sdk/models/shared/invoicerefundevents.ts
 src/sdk/models/shared/processingfees.ts
 src/sdk/models/shared/fee.ts
 src/sdk/models/shared/invoicepayoutdestination.ts
+src/sdk/models/shared/invoicepayment.ts
+src/sdk/models/shared/fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4.ts
+src/sdk/models/shared/fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9.ts
 src/sdk/models/shared/paymentinfo.ts
 src/sdk/models/shared/invoicenotificationpreferences.ts
 src/sdk/models/shared/invoicemetadata.ts
@@ -921,6 +924,12 @@ docs/sdk/models/shared/fee.md
 docs/sdk/models/shared/destinationtype.md
 docs/sdk/models/shared/payoutmethod.md
 docs/sdk/models/shared/invoicepayoutdestination.md
+docs/sdk/models/shared/sourcetype.md
+docs/sdk/models/shared/invoicepaymentstatus.md
+docs/sdk/models/shared/statusreason.md
+docs/sdk/models/shared/invoicepayment.md
+docs/sdk/models/shared/fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4.md
+docs/sdk/models/shared/fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9.md
 docs/sdk/models/shared/meanstype.md
 docs/sdk/models/shared/paymentinfo.md
 docs/sdk/models/shared/invoicenotificationpreferences.md

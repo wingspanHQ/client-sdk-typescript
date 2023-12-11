@@ -677,14 +677,7 @@ async function run() {
   const res = await sdk.collaboratorManagement.postPaymentsCollaborator({
     clientData: {},
     clientId: "string",
-    formW9Data: {
-      addressLine1: "string",
-      city: "Silver Spring",
-      companyStructure: MemberClientFormW9InfoCompanyStructure.LLCCorporationC,
-      country: "Saudi Arabia",
-      postalCode: "93152-2756",
-      state: "string",
-    },
+    formW9Data: {},
     integration: {
       quickbooks: {},
     },

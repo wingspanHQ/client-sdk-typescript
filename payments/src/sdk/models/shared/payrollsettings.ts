@@ -64,6 +64,10 @@ export class PayrollSettings extends SpeakeasyBase {
     @Expose({ name: "processDaysBeforeDue" })
     processDaysBeforeDue?: number;
 
+    @SpeakeasyMetadata()
+    @Expose({ name: "runsPayroll" })
+    runsPayroll?: boolean;
+
     @SpeakeasyMetadata({ elemType: ScheduleDate })
     @Expose({ name: "scheduleDates" })
     @Type(() => ScheduleDate)

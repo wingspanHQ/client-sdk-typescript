@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 6de53b27630c996c30774a47cccc3dc7
+  docChecksum: 3784eb29cbdfce5637c305a906cadf88
   docVersion: 1.0.0
-  speakeasyVersion: 1.125.0
-  generationVersion: 2.209.0
+  speakeasyVersion: 1.125.2
+  generationVersion: 2.210.6
 generation:
   comments: {}
   sdkClassName: payments
@@ -18,7 +18,7 @@ features:
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.1
 typescript:
-  version: 2.0.3
+  version: 2.0.4
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
