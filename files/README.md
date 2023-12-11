@@ -138,8 +138,8 @@ You can override the default server globally by passing a server index to the `s
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `https://api.wingspan.app/files` | None |
-| 1 | `https://stagingapi.wingspan.app/files` | None |
+| 0 | `https://api.wingspan.app` | None |
+| 1 | `https://stagingapi.wingspan.app` | None |
 
 #### Example
 
@@ -172,7 +172,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
     const sdk = new Files({
-        serverURL: "https://api.wingspan.app/files",
+        serverURL: "https://api.wingspan.app",
         bearerAuth: "",
     });
 
