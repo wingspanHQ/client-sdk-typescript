@@ -4,7 +4,7 @@ import { Benefits } from "@wingspan/benefits";
 
 async function run() {
     const sdk = new Benefits({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({

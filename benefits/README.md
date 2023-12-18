@@ -32,7 +32,7 @@ import { Benefits } from "@wingspan/benefits";
 
 async function run() {
     const sdk = new Benefits({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
@@ -82,7 +82,7 @@ import { Benefits } from "@wingspan/benefits";
 
 async function run() {
     const sdk = new Benefits({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     let res;
@@ -129,7 +129,7 @@ import { Benefits } from "@wingspan/benefits";
 async function run() {
     const sdk = new Benefits({
         serverIdx: 1,
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
@@ -155,7 +155,7 @@ import { Benefits } from "@wingspan/benefits";
 async function run() {
     const sdk = new Benefits({
         serverURL: "https://api.wingspan.app",
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
@@ -212,7 +212,7 @@ import { Benefits } from "@wingspan/benefits";
 
 async function run() {
     const sdk = new Benefits({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
