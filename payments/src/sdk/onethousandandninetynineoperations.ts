@@ -1309,6 +1309,78 @@ export class OneThousandAndNinetyNineOperations {
     }
 
     /**
+     * Request a new 1099 invite email.
+     *
+     * @remarks
+     * Requests a new 1099 invite email to be sent to the recipient. Only sends if the email exists and the user has tax forms.
+     */
+    async postPaymentsTaxFormResendInvite(
+        config?: AxiosRequestConfig
+    ): Promise<operations.PostPaymentsTaxFormResendInviteResponse> {
+        const baseURL: string = utils.templateUrl(
+            this.sdkConfiguration.serverURL,
+            this.sdkConfiguration.serverDefaults
+        );
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/payments/tax-form/resend-invite";
+        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
+        headers["Accept"] = "application/json";
+
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
+
+        const httpRes: AxiosResponse = await client.request({
+            validateStatus: () => true,
+            url: operationUrl,
+            method: "post",
+            headers: headers,
+            responseType: "arraybuffer",
+            ...config,
+        });
+
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) {
+            throw new Error(`status code not found in response: ${httpRes}`);
+        }
+
+        const res: operations.PostPaymentsTaxFormResendInviteResponse =
+            new operations.PostPaymentsTaxFormResendInviteResponse({
+                statusCode: httpRes.status,
+                contentType: responseContentType,
+                rawResponse: httpRes,
+            });
+        const decodedRes = new TextDecoder().decode(httpRes?.data);
+        switch (true) {
+            case httpRes?.status == 200:
+                if (utils.matchContentType(responseContentType, `application/json`)) {
+                    res.taxFormInviteResponse = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.TaxFormInviteResponse
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + responseContentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
+                }
+                break;
+        }
+
+        return res;
+    }
+
+    /**
      * Submit Payee W9 Information.
      *
      * @remarks

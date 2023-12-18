@@ -31,7 +31,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.deletePaymentsClientDeductionId({
@@ -74,7 +74,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.deletePaymentsMemberClientId({
@@ -117,7 +117,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsClientDeduction();
@@ -157,7 +157,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsClientDeductionId({
@@ -200,7 +200,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsMemberClient();
@@ -240,7 +240,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsMemberClientId({
@@ -283,7 +283,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsV2Client();
@@ -323,7 +323,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.getPaymentsV2ClientClientId({
@@ -367,7 +367,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.patchPaymentsClientDeductionId({
@@ -422,7 +422,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.patchPaymentsMemberClientId({
@@ -496,7 +496,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.postPaymentsClientDeduction({
@@ -545,7 +545,7 @@ import { AutoPayRequirement, MemberClientCreateRequestStatus, ShareTaxDocument }
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.clientManagement.postPaymentsMemberClient({

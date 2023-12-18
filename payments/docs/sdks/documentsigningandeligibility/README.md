@@ -29,7 +29,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.deletePaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
@@ -73,7 +73,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.deletePaymentsCollaboratorSettingsEligibilityRequirementId({
@@ -116,7 +116,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.deletePaymentsCollaboratorSettingsPaymentEligibilityId({
@@ -159,7 +159,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.getPaymentsCollaboratorGroupId({
@@ -202,7 +202,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.getPaymentsCollaboratorSettingsEligibilityRequirement();
@@ -242,7 +242,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.getPaymentsCollaboratorSettingsEligibilityRequirementId({
@@ -285,7 +285,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.getPaymentsCollaboratorSettingsPaymentEligibility();
@@ -325,7 +325,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.getPaymentsCollaboratorSettingsPaymentEligibilityId({
@@ -368,7 +368,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.patchPaymentsCollaboratorGroupId({
@@ -419,7 +419,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.patchPaymentsCollaboratorGroupIdEligibilityRequirementEligibilityRequirementId({
@@ -467,7 +467,7 @@ import { EligibilityRequirementUpdateRequestRequirementType } from "@wingspan/pa
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.patchPaymentsCollaboratorSettingsEligibilityRequirementId({
@@ -513,7 +513,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.patchPaymentsCollaboratorSettingsPaymentEligibilityId({
@@ -560,7 +560,7 @@ import { EligibilityRequirementCreateRequestRequirementType } from "@wingspan/pa
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.postPaymentsCollaboratorSettingsEligibilityRequirement({
@@ -603,7 +603,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.documentSigningAndEligibility.postPaymentsCollaboratorSettingsPaymentEligibility({

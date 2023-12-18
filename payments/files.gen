@@ -75,6 +75,7 @@ src/sdk/models/operations/postpaymentsbulkcalculation1099batchbatchiditem.ts
 src/sdk/models/operations/postpaymentscollaborator1099calculate.ts
 src/sdk/models/operations/postpaymentscollaborator1099markundelivered.ts
 src/sdk/models/operations/postpaymentscollaborator1099remail.ts
+src/sdk/models/operations/postpaymentstaxformresendinvite.ts
 src/sdk/models/operations/postpaymentstaxformsubmitw9.ts
 src/sdk/models/operations/postpaymentstaxformverifytin.ts
 src/sdk/models/operations/postpaymentstaxformtaxformidverifyidentity.ts
@@ -245,6 +246,7 @@ src/sdk/models/shared/memberclient.ts
 src/sdk/models/shared/memberdata.ts
 src/sdk/models/shared/redactedmember.ts
 src/sdk/models/shared/redacteduser.ts
+src/sdk/models/shared/ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b.ts
 src/sdk/models/shared/f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef.ts
 src/sdk/models/shared/seventhousandninehundredandninetysixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051.ts
 src/sdk/models/shared/twentythreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.ts
@@ -275,6 +277,7 @@ src/sdk/models/shared/mark1099asundeliveredrequest.ts
 src/sdk/models/shared/remail1099response.ts
 src/sdk/models/shared/remail1099request.ts
 src/sdk/models/shared/sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56.ts
+src/sdk/models/shared/taxforminviteresponse.ts
 src/sdk/models/shared/tinverificationresponse.ts
 src/sdk/models/shared/bulkcollaboratorbatch.ts
 src/sdk/models/shared/bulkpayablebatch.ts
@@ -484,6 +487,7 @@ docs/sdk/models/operations/postpaymentsbulkcalculation1099batchbatchiditemrespon
 docs/sdk/models/operations/postpaymentscollaborator1099calculateresponse.md
 docs/sdk/models/operations/postpaymentscollaborator1099markundeliveredresponse.md
 docs/sdk/models/operations/postpaymentscollaborator1099remailresponse.md
+docs/sdk/models/operations/postpaymentstaxformresendinviteresponse.md
 docs/sdk/models/operations/postpaymentstaxformsubmitw9response.md
 docs/sdk/models/operations/postpaymentstaxformverifytinresponse.md
 docs/sdk/models/operations/postpaymentstaxformtaxformidverifyidentityrequest.md
@@ -765,6 +769,8 @@ docs/sdk/models/shared/memberdata.md
 docs/sdk/models/shared/redactedmember.md
 docs/sdk/models/shared/redacteduserstatus.md
 docs/sdk/models/shared/redacteduser.md
+docs/sdk/models/shared/useraccounttype.md
+docs/sdk/models/shared/ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b.md
 docs/sdk/models/shared/f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef.md
 docs/sdk/models/shared/seventhousandninehundredandninetysixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051.md
 docs/sdk/models/shared/twentythreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb.md
@@ -810,6 +816,7 @@ docs/sdk/models/shared/mark1099asundeliveredrequest.md
 docs/sdk/models/shared/remail1099response.md
 docs/sdk/models/shared/remail1099request.md
 docs/sdk/models/shared/sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56.md
+docs/sdk/models/shared/taxforminviteresponse.md
 docs/sdk/models/shared/verificationstatus.md
 docs/sdk/models/shared/tinverificationresponse.md
 docs/sdk/models/shared/bulkcollaboratorbatchstatus.md

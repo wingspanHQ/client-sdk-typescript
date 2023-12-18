@@ -4,7 +4,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
     const sdk = new Payments({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.serviceSettings.getPayments();

@@ -166,6 +166,7 @@ export * from "./postpaymentsmemberclient";
 export * from "./postpaymentspayable";
 export * from "./postpaymentspayapproved";
 export * from "./postpaymentspayoutsettingsmemberiddebitcard";
+export * from "./postpaymentstaxformresendinvite";
 export * from "./postpaymentstaxformsubmitw9";
 export * from "./postpaymentstaxformtaxformidverifyidentity";
 export * from "./postpaymentstaxformverifytin";

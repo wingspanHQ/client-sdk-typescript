@@ -1,8 +1,8 @@
-# Security
+# TaxFormInviteResponse
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `bearerAuth`       | *string*           | :heavy_check_mark: | N/A                |
+| `success`          | *any*              | :heavy_check_mark: | N/A                |

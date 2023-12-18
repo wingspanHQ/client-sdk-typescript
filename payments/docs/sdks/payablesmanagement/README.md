@@ -27,7 +27,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.deletePaymentsPayableId({
@@ -70,7 +70,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.getPaymentsPayable();
@@ -110,7 +110,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.getPaymentsPayableId({
@@ -153,7 +153,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.getPaymentsPayrollImmediatePayable();
@@ -193,7 +193,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.getPaymentsSummaryPayables();
@@ -241,7 +241,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.patchPaymentsPayableId({
@@ -335,7 +335,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.postPaymentsPayApproved();
@@ -383,7 +383,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.payablesManagement.postPaymentsPayable({

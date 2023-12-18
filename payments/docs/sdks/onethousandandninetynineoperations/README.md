@@ -22,6 +22,7 @@ Includes endpoints for managing 1099 forms.
 * [postPaymentsCollaborator1099Calculate](#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxFormResendInvite](#postpaymentstaxformresendinvite) - Request a new 1099 invite email.
 * [postPaymentsTaxFormSubmitW9](#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
 * [postPaymentsTaxFormVerifyTin](#postpaymentstaxformverifytin) - Submit Payee TIN for verification
 * [postPaymentsTaxFormTaxFormIdVerifyIdentity](#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
@@ -37,7 +38,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsBulkCalculation1099Batch();
@@ -77,7 +78,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsBulkCalculation1099BatchBatchId({
@@ -120,7 +121,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsBulkCalculation1099BatchBatchIdItem({
@@ -163,7 +164,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
@@ -207,7 +208,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsCollaboratorIdDownload1099YearIndex({
@@ -252,7 +253,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsCollaboratorIdDownloadW9({
@@ -295,7 +296,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsTaxForm();
@@ -335,7 +336,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.getPaymentsTaxFormTaxFormId({
@@ -379,7 +380,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.patchPaymentsBulkCalculation1099BatchBatchId({
@@ -428,7 +429,7 @@ import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId({
@@ -477,7 +478,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsBulkCalculation1099Batch({
@@ -523,7 +524,7 @@ import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsBulkCalculation1099BatchBatchIdItem({
@@ -573,7 +574,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsCollaborator1099Calculate({
@@ -617,7 +618,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsCollaborator1099MarkUndelivered({
@@ -662,7 +663,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsCollaborator1099Remail({
@@ -701,6 +702,46 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## postPaymentsTaxFormResendInvite
+
+Requests a new 1099 invite email to be sent to the recipient. Only sends if the email exists and the user has tax forms.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+  const sdk = new Payments({
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormResendInvite();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormResendInviteResponse](../../sdk/models/operations/postpaymentstaxformresendinviteresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## postPaymentsTaxFormSubmitW9
 
 Updates 1099 tax forms for the current year with W9 information wherever W9 sharing is enabled.
@@ -712,7 +753,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormSubmitW9();
@@ -752,7 +793,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormVerifyTin();
@@ -792,7 +833,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormTaxFormIdVerifyIdentity({

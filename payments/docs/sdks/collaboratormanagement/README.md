@@ -36,7 +36,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.deletePaymentsCollaboratorDeductionId({
@@ -79,7 +79,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.deletePaymentsCollaboratorId({
@@ -122,7 +122,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaborator();
@@ -162,7 +162,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaboratorDeduction();
@@ -202,7 +202,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaboratorDeductionId({
@@ -245,7 +245,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaboratorGroup();
@@ -285,7 +285,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaboratorId({
@@ -328,7 +328,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsCollaboratorIdEvents({
@@ -371,7 +371,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsV2Collaborator();
@@ -411,7 +411,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.getPaymentsV2CollaboratorMemberId({
@@ -455,7 +455,7 @@ import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@win
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.patchPaymentsCollaboratorDeductionId({
@@ -508,7 +508,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.patchPaymentsCollaboratorId({
@@ -577,7 +577,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.patchPaymentsCollaboratorIdAddGroupGroupId({
@@ -621,7 +621,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.patchPaymentsCollaboratorIdRemoveGroupGroupId({
@@ -671,7 +671,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.postPaymentsCollaborator({
@@ -723,7 +723,7 @@ import { DeductionCreateRequestCurrency, DeductionCreateRequestType } from "@win
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.postPaymentsCollaboratorDeduction({
@@ -771,7 +771,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.collaboratorManagement.postPaymentsCollaboratorGroup({

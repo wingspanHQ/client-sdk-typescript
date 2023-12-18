@@ -24,7 +24,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.customFieldManagement.deletePaymentsCustomFieldsId({
@@ -67,7 +67,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.customFieldManagement.getPaymentsCustomFields();
@@ -107,7 +107,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.customFieldManagement.getPaymentsCustomFieldsId({
@@ -151,7 +151,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.customFieldManagement.patchPaymentsCustomFieldsId({
@@ -196,7 +196,7 @@ import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.customFieldManagement.postPaymentsCustomFields({

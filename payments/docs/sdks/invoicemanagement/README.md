@@ -42,7 +42,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.deletePaymentsInvoiceTemplateId({
@@ -85,7 +85,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.deletePaymentsInvoiceId({
@@ -128,7 +128,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsClientInvoice();
@@ -168,7 +168,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsClientInvoiceTemplate();
@@ -208,7 +208,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsClientInvoiceTemplateId({
@@ -251,7 +251,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsClientInvoiceId({
@@ -294,7 +294,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsClientInvoiceInvoiceIdFees({
@@ -337,7 +337,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsInvoice();
@@ -377,7 +377,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsInvoiceTemplate();
@@ -417,7 +417,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsInvoiceTemplateId({
@@ -460,7 +460,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.getPaymentsInvoiceId({
@@ -503,7 +503,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.patchPaymentsClientInvoiceTemplateId({
@@ -550,7 +550,7 @@ import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/dist/sdk/mo
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.patchPaymentsClientInvoiceId({
@@ -605,7 +605,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.patchPaymentsInvoiceTemplateId({
@@ -712,7 +712,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.patchPaymentsInvoiceId({
@@ -804,7 +804,7 @@ import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/dist/sdk/
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsClientInvoice({
@@ -870,7 +870,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsClientInvoiceTemplate({
@@ -941,7 +941,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsClientInvoiceInvoiceIdPay({
@@ -994,7 +994,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsInvoice({
@@ -1090,7 +1090,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsInvoiceTemplate({
@@ -1187,7 +1187,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsInvoiceTestCreate({
@@ -1231,7 +1231,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsInvoiceInvoiceIdGenerate({
@@ -1274,7 +1274,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.invoiceManagement.postPaymentsInvoiceInvoiceIdSend({

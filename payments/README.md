@@ -32,7 +32,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
     const sdk = new Payments({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.serviceSettings.getPayments();
@@ -106,6 +106,7 @@ run();
 * [postPaymentsCollaborator1099Calculate](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxFormResendInvite](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformresendinvite) - Request a new 1099 invite email.
 * [postPaymentsTaxFormSubmitW9](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
 * [postPaymentsTaxFormVerifyTin](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformverifytin) - Submit Payee TIN for verification
 * [postPaymentsTaxFormTaxFormIdVerifyIdentity](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
@@ -281,7 +282,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
     const sdk = new Payments({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     let res;
@@ -326,7 +327,7 @@ import { Payments } from "@wingspan/payments";
 async function run() {
     const sdk = new Payments({
         serverIdx: 1,
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.serviceSettings.getPayments();
@@ -350,7 +351,7 @@ import { Payments } from "@wingspan/payments";
 async function run() {
     const sdk = new Payments({
         serverURL: "https://api.wingspan.app",
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.serviceSettings.getPayments();
@@ -405,7 +406,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
     const sdk = new Payments({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.serviceSettings.getPayments();

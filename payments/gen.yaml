@@ -1,24 +1,26 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 3784eb29cbdfce5637c305a906cadf88
+  docChecksum: 7537dfeb5eded06970b9875be4dd16ae
   docVersion: 1.0.0
-  speakeasyVersion: 1.125.2
-  generationVersion: 2.210.6
+  speakeasyVersion: 1.126.4
+  generationVersion: 2.214.10
 generation:
   comments: {}
   sdkClassName: payments
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
   telemetryEnabled: false
 features:
   typescript:
-    core: 3.1.4
+    core: 3.3.8
     deprecations: 2.81.1
-    globalSecurity: 2.82.0
+    globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 2.0.4
+  version: 2.1.0
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
@@ -37,3 +39,4 @@ typescript:
   packageName: '@wingspan/payments'
   published: true
   repoSubDirectory: payments
+  templateVersion: v1

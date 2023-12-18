@@ -54,7 +54,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.deletePaymentsBulkCollaboratorBatchBatchId({
@@ -97,7 +97,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.deletePaymentsBulkPayableBatchBatchId({
@@ -140,7 +140,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkClientBatch();
@@ -180,7 +180,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkClientBatchBatchId({
@@ -223,7 +223,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkClientBatchBatchIdItem({
@@ -266,7 +266,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkClientBatchBatchIdItemBatchItemId({
@@ -310,7 +310,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkCollaboratorBatch();
@@ -350,7 +350,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkCollaboratorBatchBatchId({
@@ -393,7 +393,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkCollaboratorBatchBatchIdItem({
@@ -436,7 +436,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
@@ -480,7 +480,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkInvoiceBatch();
@@ -520,7 +520,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkInvoiceBatchBatchId({
@@ -563,7 +563,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkInvoiceBatchBatchIdItem({
@@ -606,7 +606,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
@@ -650,7 +650,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkPayableBatch();
@@ -690,7 +690,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkPayableBatchBatchId({
@@ -733,7 +733,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkPayableBatchBatchIdImportSummary({
@@ -776,7 +776,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkPayableBatchBatchIdItem({
@@ -819,7 +819,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.getPaymentsBulkPayableBatchBatchIdItemBatchItemId({
@@ -864,7 +864,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkClientBatchBatchId({
@@ -913,7 +913,7 @@ import { AutoPayRequirement, BulkClientItemUpdateClientStatus, ShareTaxDocument 
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkClientBatchBatchIdItemBatchItemId({
@@ -967,7 +967,7 @@ import { BulkBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models/shared
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkCollaboratorBatchBatchId({
@@ -1019,7 +1019,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkCollaboratorBatchBatchIdItemBatchItemId({
@@ -1070,7 +1070,7 @@ import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkInvoiceBatchBatchId({
@@ -1119,7 +1119,7 @@ import { BulkInvoiceItemUpdateAcceptedPaymentMethods, BulkInvoiceItemUpdateInvoi
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkInvoiceBatchBatchIdItemBatchItemId({
@@ -1173,7 +1173,7 @@ import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/dist/sdk/models
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkPayableBatchBatchId({
@@ -1222,7 +1222,7 @@ import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubSta
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.patchPaymentsBulkPayableBatchBatchIdItemBatchItemId({
@@ -1271,7 +1271,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkClientBatch({
@@ -1317,7 +1317,7 @@ import { AutoPayRequirement, BulkClientItemCreateClientStatus, ShareTaxDocument 
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkClientBatchBatchIdItem({
@@ -1369,7 +1369,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkCollaboratorBatch({
@@ -1418,7 +1418,7 @@ import {
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkCollaboratorBatchBatchIdItem({
@@ -1468,7 +1468,7 @@ import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkInvoiceBatch({
@@ -1515,7 +1515,7 @@ import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoi
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkInvoiceBatchBatchIdItem({
@@ -1573,7 +1573,7 @@ import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/dis
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkPayableBatch({
@@ -1620,7 +1620,7 @@ import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubSta
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.bulkOperations.postPaymentsBulkPayableBatchBatchIdItem({

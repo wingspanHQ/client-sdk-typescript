@@ -27,7 +27,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.deletePaymentsBankingInstantPayout();
@@ -69,7 +69,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.deletePaymentsCollaboratorSettingsAdditionalDataId({
@@ -112,7 +112,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getPaymentsBankingInstantPayout();
@@ -154,7 +154,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getPaymentsCollaboratorSettingsAdditionalData();
@@ -196,7 +196,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getPaymentsCollaboratorSettingsAdditionalDataId({
@@ -242,7 +242,7 @@ import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestTyp
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.patchPaymentsCollaboratorSettingsAdditionalDataId({
@@ -286,7 +286,7 @@ import { Payments } from "@wingspan/payments";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.postPaymentsBankingInstantPayout({
@@ -332,7 +332,7 @@ import { ResourceType, TypeT } from "@wingspan/payments/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.postPaymentsCollaboratorSettingsAdditionalData({
