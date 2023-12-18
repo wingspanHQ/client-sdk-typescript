@@ -26,7 +26,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.deleteFilesMemberPrivateId({
@@ -69,7 +69,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.getFilesMemberPrivate();
@@ -109,7 +109,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.getFilesMemberPrivateId({
@@ -152,7 +152,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.getFilesMemberPrivateIdDownload({
@@ -195,7 +195,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.patchFilesMemberPrivateId({
@@ -241,7 +241,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.postFilesMemberPrivate();
@@ -281,7 +281,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.privateFileManagement.postFilesMemberPrivateUpload();

@@ -4,7 +4,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
     const sdk = new Files({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.documentManagementForESignatures.getFilesDocument();

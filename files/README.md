@@ -32,7 +32,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
     const sdk = new Files({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.documentManagementForESignatures.getFilesDocument();
@@ -104,7 +104,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
     const sdk = new Files({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     let res;
@@ -149,7 +149,7 @@ import { Files } from "@wingspan/files";
 async function run() {
     const sdk = new Files({
         serverIdx: 1,
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.documentManagementForESignatures.getFilesDocument();
@@ -173,7 +173,7 @@ import { Files } from "@wingspan/files";
 async function run() {
     const sdk = new Files({
         serverURL: "https://api.wingspan.app",
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.documentManagementForESignatures.getFilesDocument();
@@ -226,7 +226,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
     const sdk = new Files({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.documentManagementForESignatures.getFilesDocument();

@@ -23,7 +23,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.eSignatureDocumentTemplates.deleteFilesTemplateId({
@@ -66,7 +66,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.eSignatureDocumentTemplates.getFilesTemplate();
@@ -106,7 +106,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.eSignatureDocumentTemplates.getFilesTemplateId({
@@ -150,7 +150,7 @@ import { Purpose, Roles } from "@wingspan/files/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.eSignatureDocumentTemplates.postFilesTemplate({

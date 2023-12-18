@@ -27,7 +27,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.deleteFilesMemberPublicId({
@@ -70,7 +70,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.getFilesMemberPublic();
@@ -110,7 +110,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.getFilesMemberPublicId({
@@ -153,7 +153,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.getFilesMemberPublicIdDownload({
@@ -196,7 +196,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.getFilesMemberPublicIdSummary({
@@ -239,7 +239,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.patchFilesMemberPublicId({
@@ -285,7 +285,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.postFilesMemberPublic();
@@ -325,7 +325,7 @@ import { Files } from "@wingspan/files";
 
 async function run() {
   const sdk = new Files({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.publicFileManagement.postFilesMemberPublicUpload();
