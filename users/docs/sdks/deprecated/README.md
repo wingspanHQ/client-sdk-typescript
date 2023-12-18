@@ -27,7 +27,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.deleteUsersUserMemberSubscriptionId({
@@ -70,7 +70,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getUsersUserMemberSubscriptionPaymentMethod();
@@ -110,7 +110,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getUsersUserMemberSubscriptionPlan();
@@ -150,7 +150,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getUsersUserMemberSubscriptionPlanId({
@@ -193,7 +193,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.getUsersUserMemberSubscriptionId({
@@ -236,7 +236,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.patchUsersUserMemberSubscriptionPaymentMethod({});
@@ -282,7 +282,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.patchUsersUserMemberSubscriptionId({
@@ -326,7 +326,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.deprecated.postUsersUserMemberSubscriptionPaymentMethod({});

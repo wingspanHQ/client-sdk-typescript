@@ -26,7 +26,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.deleteUsersUserMemberMemberIdNextgenSubscriptionId({
@@ -70,7 +70,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.getUsersUserMemberMemberIdNextgenSubscription({
@@ -113,7 +113,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.getUsersUserMemberMemberIdNextgenSubscriptionPlan({
@@ -156,7 +156,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.getUsersUserMemberMemberIdNextgenSubscriptionPlanId({
@@ -200,7 +200,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.getUsersUserMemberMemberIdNextgenSubscriptionId({
@@ -249,7 +249,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.patchUsersUserMemberMemberIdNextgenSubscriptionId({
@@ -299,7 +299,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionManagement.postUsersUserMemberMemberIdNextgenSubscription({

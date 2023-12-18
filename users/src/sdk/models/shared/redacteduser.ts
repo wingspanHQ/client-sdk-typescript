@@ -4,6 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef } from "./f6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef";
+import { Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b } from "./ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b";
 import { SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 } from "./seventhousandninehundredandninetysixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051";
 import { Expose, Type } from "class-transformer";
 
@@ -31,6 +32,11 @@ export class RedactedUser extends SpeakeasyBase {
     @Expose({ name: "profile" })
     @Type(() => F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef)
     profile?: F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "settings" })
+    @Type(() => Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b)
+    settings?: Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b;
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })

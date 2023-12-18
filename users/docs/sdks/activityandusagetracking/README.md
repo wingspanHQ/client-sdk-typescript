@@ -24,7 +24,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.activityAndUsageTracking.deleteUsersActivityId({
@@ -67,7 +67,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.activityAndUsageTracking.getUsersActivity();
@@ -107,7 +107,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.activityAndUsageTracking.getUsersActivityId({
@@ -150,7 +150,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.activityAndUsageTracking.patchUsersActivityId({
@@ -198,7 +198,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.activityAndUsageTracking.postUsersActivity({

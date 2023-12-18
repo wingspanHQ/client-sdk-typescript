@@ -32,7 +32,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
     const sdk = new Users({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.userAndMemberManagement.getUsers();
@@ -192,7 +192,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
     const sdk = new Users({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     let res;
@@ -237,7 +237,7 @@ import { Users } from "@wingspan/users";
 async function run() {
     const sdk = new Users({
         serverIdx: 1,
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.userAndMemberManagement.getUsers();
@@ -261,7 +261,7 @@ import { Users } from "@wingspan/users";
 async function run() {
     const sdk = new Users({
         serverURL: "https://api.wingspan.app",
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.userAndMemberManagement.getUsers();
@@ -316,7 +316,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
     const sdk = new Users({
-        bearerAuth: "",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
     const res = await sdk.userAndMemberManagement.getUsers();

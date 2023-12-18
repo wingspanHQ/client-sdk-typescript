@@ -26,7 +26,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.getUsersOrganizationUser();
@@ -66,7 +66,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.getUsersOrganizationUserUserId({
@@ -109,7 +109,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.getUsersOrganizationUserUserIdSession({
@@ -152,7 +152,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.patchUsersOrganizationUserUserId({
@@ -202,7 +202,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.patchUsersOrganizationUserUserIdAssociate({
@@ -251,11 +251,11 @@ Enables the creation of a new user account that will be linked to the organizati
 
 ```typescript
 import { Users } from "@wingspan/users";
-import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
+import { Gender, NewUserSettingsUserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.postUsersOrganizationUser({
@@ -308,7 +308,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.organizationAccountManagement.postUsersOrganizationUserUserIdAssociate({

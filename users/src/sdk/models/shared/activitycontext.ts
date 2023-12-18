@@ -17,6 +17,11 @@ export enum GrowthSource {
     LessThanNilGreaterThan = "<nil>",
 }
 
+export enum ActivityContextType {
+    Form1099 = "Form1099",
+    LessThanNilGreaterThan = "<nil>",
+}
+
 export class ActivityContext extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "growthSource" })
@@ -25,4 +30,8 @@ export class ActivityContext extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "growthSourceName" })
     growthSourceName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: ActivityContextType;
 }

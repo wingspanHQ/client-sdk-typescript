@@ -38,7 +38,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsers();
@@ -78,7 +78,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserClientId({
@@ -121,7 +121,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserEmailEmail({
@@ -164,7 +164,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserLocation();
@@ -204,7 +204,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserMemberSubscriptionPaymentHistory();
@@ -244,7 +244,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserMemberId({
@@ -287,7 +287,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserMemberIdAdvocate({
@@ -330,7 +330,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserOccupation();
@@ -370,7 +370,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserPublicId({
@@ -413,7 +413,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserTagId({
@@ -456,7 +456,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.getUsersUserId({
@@ -500,7 +500,7 @@ import { Structure } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.patchUsersUserClientId({
@@ -581,7 +581,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.patchUsersUserMemberId({
@@ -684,7 +684,7 @@ import { Gender } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.patchUsersUserId({
@@ -728,11 +728,11 @@ Allows the creation of a new user with a "pending" status. This can be utilized 
 
 ```typescript
 import { Users } from "@wingspan/users";
-import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
+import { Gender, NewUserSettingsUserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.postUsersPendingUser({
@@ -775,11 +775,11 @@ Allows the creation of a new user account by providing necessary details.
 
 ```typescript
 import { Users } from "@wingspan/users";
-import { Gender, UserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
+import { Gender, NewUserSettingsUserAccountType, UserCreateRequestStatus } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.postUsersUser({
@@ -826,7 +826,7 @@ import { Structure } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.postUsersUserClientId({
@@ -907,7 +907,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.postUsersUserMemberId({
@@ -1010,7 +1010,7 @@ import { UserType } from "@wingspan/users/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.userAndMemberManagement.postUsersUserPasswordReset({

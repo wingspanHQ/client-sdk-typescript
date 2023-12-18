@@ -30,7 +30,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.deleteUsersAuthorizationAuthorizationId({
@@ -73,7 +73,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorization();
@@ -113,7 +113,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizationAccountsUserId({
@@ -156,7 +156,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizationAuthorizationId({
@@ -199,7 +199,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizedScopeGroups();
@@ -239,7 +239,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizedScopeGroupsRequestingUserId({
@@ -282,7 +282,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizedScopes();
@@ -322,7 +322,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.getUsersAuthorizedScopesRequestingUserId({
@@ -366,7 +366,7 @@ import { AuthorizationUpdateRequestAllowedAction } from "@wingspan/users/dist/sd
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.patchUsersAuthorizationAuthorizationId({
@@ -411,7 +411,7 @@ import { Action, AllowedAction, Comparator } from "@wingspan/users/dist/sdk/mode
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.postUsersAuthorization({
@@ -484,7 +484,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.authorizationAndPermissions.postUsersFlatfileAuthToken({

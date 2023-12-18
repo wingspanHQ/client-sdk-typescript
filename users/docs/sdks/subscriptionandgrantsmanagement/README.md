@@ -24,7 +24,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.deleteUsersSubscriptionGrantId({
@@ -67,7 +67,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.deleteUsersUserMemberIdSubscription({
@@ -110,7 +110,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.getUsersSubscriptionGrant();
@@ -150,7 +150,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.getUsersSubscriptionGrantId({
@@ -193,7 +193,7 @@ import { Users } from "@wingspan/users";
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.getUsersUserMemberIdSubscription({
@@ -237,7 +237,7 @@ import { SubscriptionGrantUpdateRequestPackage, SubscriptionGrantUpdateRequestPa
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.patchUsersSubscriptionGrantId({
@@ -286,7 +286,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.patchUsersUserMemberIdSubscription({
@@ -331,7 +331,7 @@ import { SubscriptionGrantCreateRequestPackage, SubscriptionGrantCreateRequestPa
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.postUsersSubscriptionGrant({
@@ -381,7 +381,7 @@ import {
 
 async function run() {
   const sdk = new Users({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.subscriptionAndGrantsManagement.postUsersUserMemberIdSubscription({
