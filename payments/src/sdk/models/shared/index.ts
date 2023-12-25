@@ -207,7 +207,9 @@ export * from "./sixb94b58d661f3eabc1444a7a43ac4b99580f0d050123b7bf38184e2f0d7bd
 export * from "./sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11";
 export * from "./sixtyfourmillioneighthundredandfortysixthousandonehundredandthirtysixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc";
 export * from "./sixtysixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d";
+export * from "./taxformcreaterequest";
 export * from "./taxforminviteresponse";
+export * from "./taxformupdaterequest";
 export * from "./testinvoicecreate";
 export * from "./thirtysixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2";
 export * from "./threebilliononehundredandninetymillionsixhundredandeightyfivethousandeighthundredandthirtytwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461";

@@ -101,14 +101,17 @@ run();
 * [getPaymentsTaxFormTaxFormId](docs/sdks/onethousandandninetynineoperations/README.md#getpaymentstaxformtaxformid) - Fetch tax form.
 * [patchPaymentsBulkCalculation1099BatchBatchId](docs/sdks/onethousandandninetynineoperations/README.md#patchpaymentsbulkcalculation1099batchbatchid) - Modify the details of a specific bulk calculation 1099 batch
 * [patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](docs/sdks/onethousandandninetynineoperations/README.md#patchpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Revise the attributes of an item in a calculation 1099 batch
+* [patchPaymentsTaxFormTaxFormId](docs/sdks/onethousandandninetynineoperations/README.md#patchpaymentstaxformtaxformid) - Update a tax form.
 * [postPaymentsBulkCalculation1099Batch](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentsbulkcalculation1099batch) - Initialize a new batch for bulk calculation 1099
 * [postPaymentsBulkCalculation1099BatchBatchIdItem](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentsbulkcalculation1099batchbatchiditem) - Add a new item to a calculation 1099 batch
 * [postPaymentsCollaborator1099Calculate](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxform) - Create a new tax form.
 * [postPaymentsTaxFormResendInvite](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformresendinvite) - Request a new 1099 invite email.
 * [postPaymentsTaxFormSubmitW9](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
 * [postPaymentsTaxFormVerifyTin](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformverifytin) - Submit Payee TIN for verification
+* [postPaymentsTaxFormTaxFormIdResync](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformtaxformidresync) - Re-enable recipient sync on a tax form.
 * [postPaymentsTaxFormTaxFormIdVerifyIdentity](docs/sdks/onethousandandninetynineoperations/README.md#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
 
 ### [bulkOperations](docs/sdks/bulkoperations/README.md)
@@ -273,7 +276,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 Example
 

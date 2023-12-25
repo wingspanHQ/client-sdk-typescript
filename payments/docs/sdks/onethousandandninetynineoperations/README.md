@@ -17,14 +17,17 @@ Includes endpoints for managing 1099 forms.
 * [getPaymentsTaxFormTaxFormId](#getpaymentstaxformtaxformid) - Fetch tax form.
 * [patchPaymentsBulkCalculation1099BatchBatchId](#patchpaymentsbulkcalculation1099batchbatchid) - Modify the details of a specific bulk calculation 1099 batch
 * [patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId](#patchpaymentsbulkcalculation1099batchbatchiditembatchitemid) - Revise the attributes of an item in a calculation 1099 batch
+* [patchPaymentsTaxFormTaxFormId](#patchpaymentstaxformtaxformid) - Update a tax form.
 * [postPaymentsBulkCalculation1099Batch](#postpaymentsbulkcalculation1099batch) - Initialize a new batch for bulk calculation 1099
 * [postPaymentsBulkCalculation1099BatchBatchIdItem](#postpaymentsbulkcalculation1099batchbatchiditem) - Add a new item to a calculation 1099 batch
 * [postPaymentsCollaborator1099Calculate](#postpaymentscollaborator1099calculate) - Determine 1099 Amounts for Collaborators
 * [postPaymentsCollaborator1099MarkUndelivered](#postpaymentscollaborator1099markundelivered) - Indicate a collaborator's 1099 form was returned undelivered
 * [postPaymentsCollaborator1099Remail](#postpaymentscollaborator1099remail) - Request a new mailing of the 1099 form for a collaborator
+* [postPaymentsTaxForm](#postpaymentstaxform) - Create a new tax form.
 * [postPaymentsTaxFormResendInvite](#postpaymentstaxformresendinvite) - Request a new 1099 invite email.
 * [postPaymentsTaxFormSubmitW9](#postpaymentstaxformsubmitw9) - Submit Payee W9 Information.
 * [postPaymentsTaxFormVerifyTin](#postpaymentstaxformverifytin) - Submit Payee TIN for verification
+* [postPaymentsTaxFormTaxFormIdResync](#postpaymentstaxformtaxformidresync) - Re-enable recipient sync on a tax form.
 * [postPaymentsTaxFormTaxFormIdVerifyIdentity](#postpaymentstaxformtaxformidverifyidentity) - Provide Recipient Proof of Identity
 
 ## getPaymentsBulkCalculation1099Batch
@@ -65,7 +68,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchId
 
@@ -108,7 +111,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItem
 
@@ -151,7 +154,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
@@ -195,7 +198,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsCollaboratorIdDownload1099YearIndex
 
@@ -240,7 +243,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsCollaboratorIdDownloadW9
 
@@ -283,7 +286,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsTaxForm
 
@@ -323,7 +326,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPaymentsTaxFormTaxFormId
 
@@ -366,7 +369,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## patchPaymentsBulkCalculation1099BatchBatchId
 
@@ -415,7 +418,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## patchPaymentsBulkCalculation1099BatchBatchIdItemBatchItemId
 
@@ -465,7 +468,54 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## patchPaymentsTaxFormTaxFormId
+
+Updates a tax form with provided information.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+import { TaxFormUpdateRequestStatus } from "@wingspan/payments/dist/sdk/models/shared";
+
+async function run() {
+  const sdk = new Payments({
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.patchPaymentsTaxFormTaxFormId({
+    taxFormUpdateRequest: {
+      data: {},
+    },
+    taxFormId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.PatchPaymentsTaxFormTaxFormIdRequest](../../sdk/models/operations/patchpaymentstaxformtaxformidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+
+
+### Response
+
+**Promise<[operations.PatchPaymentsTaxFormTaxFormIdResponse](../../sdk/models/operations/patchpaymentstaxformtaxformidresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsBulkCalculation1099Batch
 
@@ -510,7 +560,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsBulkCalculation1099BatchBatchIdItem
 
@@ -561,7 +611,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsCollaborator1099Calculate
 
@@ -605,7 +655,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsCollaborator1099MarkUndelivered
 
@@ -650,7 +700,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsCollaborator1099Remail
 
@@ -700,7 +750,52 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## postPaymentsTaxForm
+
+Create a tax form for a new recipient
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+  const sdk = new Payments({
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxForm({
+    clientId: "string",
+    data: {},
+    memberId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [shared.TaxFormCreateRequest](../../sdk/models/shared/taxformcreaterequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormResponse](../../sdk/models/operations/postpaymentstaxformresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsTaxFormResendInvite
 
@@ -740,7 +835,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsTaxFormSubmitW9
 
@@ -780,7 +875,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsTaxFormVerifyTin
 
@@ -820,7 +915,50 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## postPaymentsTaxFormTaxFormIdResync
+
+Re-enables recipient sync for a tax form. Reverts to last provided recipient data and triggers payable calculations. Does nothing if sync is already enabled.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+  const sdk = new Payments({
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  });
+
+  const res = await sdk.oneThousandAndNinetyNineOperations.postPaymentsTaxFormTaxFormIdResync({
+    taxFormId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.PostPaymentsTaxFormTaxFormIdResyncRequest](../../sdk/models/operations/postpaymentstaxformtaxformidresyncrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsTaxFormTaxFormIdResyncResponse](../../sdk/models/operations/postpaymentstaxformtaxformidresyncresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPaymentsTaxFormTaxFormIdVerifyIdentity
 
@@ -863,4 +1001,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
