@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 0de556d1c2dbd2ed989cc3cfa530242c
   docVersion: 1.0.0
-  speakeasyVersion: 1.126.4
-  generationVersion: 2.214.10
+  speakeasyVersion: 1.129.1
+  generationVersion: 2.223.3
 generation:
   comments: {}
   sdkClassName: users
@@ -15,11 +15,11 @@ generation:
   telemetryEnabled: false
 features:
   typescript:
-    core: 3.3.8
+    core: 3.3.12
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 2.1.0
+  version: 2.1.1
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
