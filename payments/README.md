@@ -191,6 +191,7 @@ run();
 * [postPaymentsInvoiceTemplate](docs/sdks/invoicemanagement/README.md#postpaymentsinvoicetemplate) - Create a new invoice template
 * [postPaymentsInvoiceTestCreate](docs/sdks/invoicemanagement/README.md#postpaymentsinvoicetestcreate) - Generate Test Invoice for a Client
 * [postPaymentsInvoiceInvoiceIdGenerate](docs/sdks/invoicemanagement/README.md#postpaymentsinvoiceinvoiceidgenerate) - Generate a PDF for a specific invoice
+* [postPaymentsInvoiceInvoiceIdRefund](docs/sdks/invoicemanagement/README.md#postpaymentsinvoiceinvoiceidrefund) - Refund a deposited invoice
 * [postPaymentsInvoiceInvoiceIdSend](docs/sdks/invoicemanagement/README.md#postpaymentsinvoiceinvoiceidsend) - Send an invoice by email
 
 ### [collaboratorManagement](docs/sdks/collaboratormanagement/README.md)

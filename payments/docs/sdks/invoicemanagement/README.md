@@ -29,6 +29,7 @@ Covers endpoints related to invoice creation, retrieval, and management. This in
 * [postPaymentsInvoiceTemplate](#postpaymentsinvoicetemplate) - Create a new invoice template
 * [postPaymentsInvoiceTestCreate](#postpaymentsinvoicetestcreate) - Generate Test Invoice for a Client
 * [postPaymentsInvoiceInvoiceIdGenerate](#postpaymentsinvoiceinvoiceidgenerate) - Generate a PDF for a specific invoice
+* [postPaymentsInvoiceInvoiceIdRefund](#postpaymentsinvoiceinvoiceidrefund) - Refund a deposited invoice
 * [postPaymentsInvoiceInvoiceIdSend](#postpaymentsinvoiceinvoiceidsend) - Send an invoice by email
 
 ## deletePaymentsInvoiceTemplateId
@@ -1257,6 +1258,52 @@ run();
 ### Response
 
 **Promise<[operations.PostPaymentsInvoiceInvoiceIdGenerateResponse](../../sdk/models/operations/postpaymentsinvoiceinvoiceidgenerateresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## postPaymentsInvoiceInvoiceIdRefund
+
+Use this endpoint to refund a specific amount of a deposited invoice.
+
+### Example Usage
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+  const sdk = new Payments({
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  });
+
+  const res = await sdk.invoiceManagement.postPaymentsInvoiceInvoiceIdRefund({
+    invoiceRefundRequest: {
+      amount: 9231.07,
+    },
+    invoiceId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.PostPaymentsInvoiceInvoiceIdRefundRequest](../../sdk/models/operations/postpaymentsinvoiceinvoiceidrefundrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+
+
+### Response
+
+**Promise<[operations.PostPaymentsInvoiceInvoiceIdRefundResponse](../../sdk/models/operations/postpaymentsinvoiceinvoiceidrefundresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

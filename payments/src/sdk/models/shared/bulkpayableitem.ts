@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14 } from "./a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14";
+import { Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb } from "./ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb";
 import { InvoiceIntegrations } from "./invoiceintegrations";
 import { UserRoles } from "./userroles";
 import { Expose, Type } from "class-transformer";
@@ -101,8 +101,8 @@ export class BulkPayableItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "metadata" })
-    @Type(() => A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14)
-    metadata?: A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14;
+    @Type(() => Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb)
+    metadata?: Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb;
 
     @SpeakeasyMetadata()
     @Expose({ name: "paidDate" })

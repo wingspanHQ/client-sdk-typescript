@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: b50547f428d6b9107152c0581945d58b
+  docChecksum: 6a7ae86d4e3e09995117df37c7ecd8c1
   docVersion: 1.0.0
   speakeasyVersion: 1.129.1
   generationVersion: 2.223.3
@@ -20,7 +20,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 2.1.1
+  version: 2.1.2
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true

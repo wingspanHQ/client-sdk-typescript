@@ -3,6 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import { Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c } from "./fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c";
 import { PayrollReportLineItem } from "./payrollreportlineitem";
 import { RedactedMember } from "./redactedmember";
 import { Expose, Type } from "class-transformer";
@@ -39,6 +40,11 @@ export class PayrollReportInvoice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "dueDate" })
     dueDate: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "eventActors" })
+    @Type(() => Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c)
+    eventActors?: Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c;
 
     @SpeakeasyMetadata()
     @Expose({ name: "invoiceId" })

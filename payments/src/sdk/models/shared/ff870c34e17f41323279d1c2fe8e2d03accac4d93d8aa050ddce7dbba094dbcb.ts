@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export class A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14 extends SpeakeasyBase {
+export class Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "deductionId" })
     deductionId?: string;
@@ -17,6 +17,10 @@ export class A7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14 ex
     @SpeakeasyMetadata()
     @Expose({ name: "payableId" })
     payableId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "resolvedClientId" })
+    resolvedClientId?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "resolvedCollaboratorId" })

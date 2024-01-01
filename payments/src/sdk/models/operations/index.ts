@@ -160,6 +160,7 @@ export * from "./postpaymentscollaboratorsettingspaymenteligibility";
 export * from "./postpaymentscustomfields";
 export * from "./postpaymentsinvoice";
 export * from "./postpaymentsinvoiceinvoiceidgenerate";
+export * from "./postpaymentsinvoiceinvoiceidrefund";
 export * from "./postpaymentsinvoiceinvoiceidsend";
 export * from "./postpaymentsinvoicetemplate";
 export * from "./postpaymentsinvoicetestcreate";

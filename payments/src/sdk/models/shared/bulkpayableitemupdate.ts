@@ -41,6 +41,10 @@ export class BulkPayableItemUpdate extends SpeakeasyBase {
     bulkPayableItemReference?: string;
 
     @SpeakeasyMetadata()
+    @Expose({ name: "clientId" })
+    clientId?: string;
+
+    @SpeakeasyMetadata()
     @Expose({ name: "collaboratorEmail" })
     collaboratorEmail?: string;
 

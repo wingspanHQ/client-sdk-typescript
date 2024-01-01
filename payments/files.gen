@@ -151,6 +151,7 @@ src/sdk/models/operations/postpaymentsinvoice.ts
 src/sdk/models/operations/postpaymentsinvoicetemplate.ts
 src/sdk/models/operations/postpaymentsinvoicetestcreate.ts
 src/sdk/models/operations/postpaymentsinvoiceinvoiceidgenerate.ts
+src/sdk/models/operations/postpaymentsinvoiceinvoiceidrefund.ts
 src/sdk/models/operations/postpaymentsinvoiceinvoiceidsend.ts
 src/sdk/models/operations/deletepaymentscollaboratordeductionid.ts
 src/sdk/models/operations/deletepaymentscollaboratorid.ts
@@ -238,7 +239,7 @@ src/sdk/models/shared/download1099response.ts
 src/sdk/models/shared/downloadw9response.ts
 src/sdk/models/shared/bulkbatchupdate.ts
 src/sdk/models/shared/bulkpayableitem.ts
-src/sdk/models/shared/a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.ts
+src/sdk/models/shared/ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb.ts
 src/sdk/models/shared/invoiceintegrations.ts
 src/sdk/models/shared/sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11.ts
 src/sdk/models/shared/bulkcalculation1099itemupdate.ts
@@ -382,6 +383,7 @@ src/sdk/models/shared/invoicetemplatecreaterequest.ts
 src/sdk/models/shared/invoicedatacreaterequest.ts
 src/sdk/models/shared/testinvoicecreate.ts
 src/sdk/models/shared/invoicepdfgenerationresponse.ts
+src/sdk/models/shared/invoicerefundrequest.ts
 src/sdk/models/shared/collaboratorschema.ts
 src/sdk/models/shared/collaboratorgroupresponse.ts
 src/sdk/models/shared/eligibilityrequirement.ts
@@ -419,6 +421,7 @@ src/sdk/models/shared/payrollreportresponse.ts
 src/sdk/models/shared/fortytwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07.ts
 src/sdk/models/shared/payrollreportinvoice.ts
 src/sdk/models/shared/payrollreportlineitem.ts
+src/sdk/models/shared/fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c.ts
 src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
@@ -618,6 +621,8 @@ docs/sdk/models/operations/postpaymentsinvoicetemplateresponse.md
 docs/sdk/models/operations/postpaymentsinvoicetestcreateresponse.md
 docs/sdk/models/operations/postpaymentsinvoiceinvoiceidgeneraterequest.md
 docs/sdk/models/operations/postpaymentsinvoiceinvoiceidgenerateresponse.md
+docs/sdk/models/operations/postpaymentsinvoiceinvoiceidrefundrequest.md
+docs/sdk/models/operations/postpaymentsinvoiceinvoiceidrefundresponse.md
 docs/sdk/models/operations/postpaymentsinvoiceinvoiceidsendrequest.md
 docs/sdk/models/operations/postpaymentsinvoiceinvoiceidsendresponse.md
 docs/sdk/models/operations/deletepaymentscollaboratordeductionidrequest.md
@@ -760,7 +765,7 @@ docs/sdk/models/shared/payablestatus.md
 docs/sdk/models/shared/bulkpayableitemstatus.md
 docs/sdk/models/shared/workflowsubstatus.md
 docs/sdk/models/shared/bulkpayableitem.md
-docs/sdk/models/shared/a7a1067d6f9d1831e4782756623a7bf61cb630a037de1ac86f003bc5c4cb7c14.md
+docs/sdk/models/shared/ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb.md
 docs/sdk/models/shared/invoiceintegrations.md
 docs/sdk/models/shared/sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11.md
 docs/sdk/models/shared/bulkcalculation1099itemupdatecalculationtype.md
@@ -1029,6 +1034,7 @@ docs/sdk/models/shared/invoicedatacreaterequeststatus.md
 docs/sdk/models/shared/invoicedatacreaterequest.md
 docs/sdk/models/shared/testinvoicecreate.md
 docs/sdk/models/shared/invoicepdfgenerationresponse.md
+docs/sdk/models/shared/invoicerefundrequest.md
 docs/sdk/models/shared/collaboratorschemastatus.md
 docs/sdk/models/shared/taxstatus.md
 docs/sdk/models/shared/collaboratorschema.md
@@ -1113,6 +1119,7 @@ docs/sdk/models/shared/payrollreportinvoicelabels.md
 docs/sdk/models/shared/payrollreportinvoicestatus.md
 docs/sdk/models/shared/payrollreportinvoice.md
 docs/sdk/models/shared/payrollreportlineitem.md
+docs/sdk/models/shared/fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c.md
 docs/sdk/models/shared/security.md
 docs/sdks/payments/README.md
 docs/sdks/servicesettings/README.md
