@@ -19,7 +19,7 @@ typescript:
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
-  maxMethodParams: "0"
+  maxMethodParams: 0
   packageName: '@wingspan/payments'
   published: true
   repoSubDirectory: payments
