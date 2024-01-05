@@ -12,7 +12,7 @@ jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-generation.yaml@v14
     with:
-      openapi_doc_location: ./openapi/payments_speakeasy_edit.yaml
+      openapi_doc_location: ./openapi/payment_speakeasy_edit.yaml
       speakeasy_version: latest
       languages: |-
         - typescript: ./payments
