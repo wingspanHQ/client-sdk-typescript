@@ -1,9 +1,0 @@
-# PatchPaymentsCollaboratorGroupIdRequest
-
-
-## Fields
-
-| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `collaboratorGroupUpdateRequest`                                                               | [shared.CollaboratorGroupUpdateRequest](../../models/shared/collaboratorgroupupdaterequest.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
-| `id`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | Unique identifier                                                                              |
