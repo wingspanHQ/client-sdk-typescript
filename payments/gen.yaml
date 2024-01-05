@@ -23,3 +23,4 @@ typescript:
   packageName: '@wingspan/payments'
   published: true
   repoSubDirectory: payments
+  templateVersion: v2
