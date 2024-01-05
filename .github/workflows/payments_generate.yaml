@@ -12,7 +12,7 @@ jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-generation.yaml@v14
     with:
-      openapi_doc_location: "https://docs.wingspan.app/openapi/${{ vars.README_OPENAPI_ID_PAYMENTS }}"
+      openapi_doc_location: ./openapi/payments_speakeasy_edit.yaml
       speakeasy_version: latest
       languages: |-
         - typescript: ./payments
