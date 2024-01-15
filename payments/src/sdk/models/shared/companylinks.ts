@@ -24,11 +24,11 @@ export namespace CompanyLinks$ {
 
     export const inboundSchema: z.ZodType<CompanyLinks, z.ZodTypeDef, Inbound> = z
         .object({
-            instagramUrl: z.string().nullable().optional(),
-            linkedInUrl: z.string().nullable().optional(),
-            otherUrl: z.string().nullable().optional(),
-            twitterUrl: z.string().nullable().optional(),
-            websiteUrl: z.string().nullable().optional(),
+            instagramUrl: z.nullable(z.string()).optional(),
+            linkedInUrl: z.nullable(z.string()).optional(),
+            otherUrl: z.nullable(z.string()).optional(),
+            twitterUrl: z.nullable(z.string()).optional(),
+            websiteUrl: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -50,11 +50,11 @@ export namespace CompanyLinks$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CompanyLinks> = z
         .object({
-            instagramUrl: z.string().nullable().optional(),
-            linkedInUrl: z.string().nullable().optional(),
-            otherUrl: z.string().nullable().optional(),
-            twitterUrl: z.string().nullable().optional(),
-            websiteUrl: z.string().nullable().optional(),
+            instagramUrl: z.nullable(z.string()).optional(),
+            linkedInUrl: z.nullable(z.string()).optional(),
+            otherUrl: z.nullable(z.string()).optional(),
+            twitterUrl: z.nullable(z.string()).optional(),
+            websiteUrl: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

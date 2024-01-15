@@ -101,20 +101,19 @@ export namespace CollaboratorsReportResponse$ {
                 SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d$.inboundSchema
             ),
             createdAt: z.string(),
-            externalId: z.string().nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
             inviteEmail: z.string(),
             labels: z
-                .lazy(() => CollaboratorsReportResponseLabels$.inboundSchema)
-                .nullable()
+                .nullable(z.lazy(() => CollaboratorsReportResponseLabels$.inboundSchema))
                 .optional(),
             member: RedactedMember$.inboundSchema,
             memberClientId: z.string(),
-            memberEvents: CollaboratorEvents$.inboundSchema.nullable().optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.inboundSchema).optional(),
             memberId: z.string(),
             servicesStatus:
                 B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$.inboundSchema,
             status: CollaboratorsReportResponseStatus$,
-            taxDocumentStared: z.boolean().nullable().optional(),
+            taxDocumentStared: z.nullable(z.boolean()).optional(),
             taxStatus: CollaboratorsReportResponseTaxStatus$,
             updatedAt: z.string(),
         })
@@ -165,20 +164,19 @@ export namespace CollaboratorsReportResponse$ {
                 SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d$.outboundSchema
             ),
             createdAt: z.string(),
-            externalId: z.string().nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
             inviteEmail: z.string(),
             labels: z
-                .lazy(() => CollaboratorsReportResponseLabels$.outboundSchema)
-                .nullable()
+                .nullable(z.lazy(() => CollaboratorsReportResponseLabels$.outboundSchema))
                 .optional(),
             member: RedactedMember$.outboundSchema,
             memberClientId: z.string(),
-            memberEvents: CollaboratorEvents$.outboundSchema.nullable().optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.outboundSchema).optional(),
             memberId: z.string(),
             servicesStatus:
                 B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$.outboundSchema,
             status: CollaboratorsReportResponseStatus$,
-            taxDocumentStared: z.boolean().nullable().optional(),
+            taxDocumentStared: z.nullable(z.boolean()).optional(),
             taxStatus: CollaboratorsReportResponseTaxStatus$,
             updatedAt: z.string(),
         })

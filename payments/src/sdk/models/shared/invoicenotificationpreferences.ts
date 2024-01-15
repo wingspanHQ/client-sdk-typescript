@@ -20,8 +20,8 @@ export namespace InvoiceNotificationPreferences$ {
 
     export const inboundSchema: z.ZodType<InvoiceNotificationPreferences, z.ZodTypeDef, Inbound> = z
         .object({
-            sendInvoice: z.boolean().nullable().optional(),
-            sendReceipt: z.boolean().nullable().optional(),
+            sendInvoice: z.nullable(z.boolean()).optional(),
+            sendReceipt: z.nullable(z.boolean()).optional(),
             sendReminders: z.boolean(),
         })
         .transform((v) => {
@@ -41,8 +41,8 @@ export namespace InvoiceNotificationPreferences$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceNotificationPreferences> =
         z
             .object({
-                sendInvoice: z.boolean().nullable().optional(),
-                sendReceipt: z.boolean().nullable().optional(),
+                sendInvoice: z.nullable(z.boolean()).optional(),
+                sendReceipt: z.nullable(z.boolean()).optional(),
                 sendReminders: z.boolean(),
             })
             .transform((v) => {

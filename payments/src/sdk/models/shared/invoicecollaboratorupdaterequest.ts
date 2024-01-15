@@ -19,8 +19,8 @@ export namespace InvoiceCollaboratorUpdateRequest$ {
     export const inboundSchema: z.ZodType<InvoiceCollaboratorUpdateRequest, z.ZodTypeDef, Inbound> =
         z
             .object({
-                amount: z.number().nullable().optional(),
-                description: z.string().nullable().optional(),
+                amount: z.nullable(z.number()).optional(),
+                description: z.nullable(z.string()).optional(),
             })
             .transform((v) => {
                 return {
@@ -40,8 +40,8 @@ export namespace InvoiceCollaboratorUpdateRequest$ {
         InvoiceCollaboratorUpdateRequest
     > = z
         .object({
-            amount: z.number().nullable().optional(),
-            description: z.string().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            description: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

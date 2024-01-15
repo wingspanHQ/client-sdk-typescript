@@ -52,7 +52,7 @@ export namespace PayoutDestinationResponse$ {
         .object({
             destinationId: z.string(),
             destinationType: PayoutDestinationResponseDestinationType$,
-            last4: z.string().nullable().optional(),
+            last4: z.nullable(z.string()).optional(),
             name: z.string(),
             payoutMethod: PayoutDestinationResponsePayoutMethod$,
             percentage: z.number(),
@@ -81,7 +81,7 @@ export namespace PayoutDestinationResponse$ {
         .object({
             destinationId: z.string(),
             destinationType: PayoutDestinationResponseDestinationType$,
-            last4: z.string().nullable().optional(),
+            last4: z.nullable(z.string()).optional(),
             name: z.string(),
             payoutMethod: PayoutDestinationResponsePayoutMethod$,
             percentage: z.number(),

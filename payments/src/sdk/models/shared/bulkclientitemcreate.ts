@@ -51,17 +51,18 @@ export namespace BulkClientItemCreate$ {
 
     export const inboundSchema: z.ZodType<BulkClientItemCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            clientStatus: BulkClientItemCreateClientStatus$.nullable().optional(),
-            company: z.string().nullable().optional(),
-            email: z.string().nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.inboundSchema.nullable().optional(),
+            clientStatus: z.nullable(BulkClientItemCreateClientStatus$).optional(),
+            company: z.nullable(z.string()).optional(),
+            email: z.nullable(z.string()).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -92,17 +93,18 @@ export namespace BulkClientItemCreate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkClientItemCreate> = z
         .object({
-            clientStatus: BulkClientItemCreateClientStatus$.nullable().optional(),
-            company: z.string().nullable().optional(),
-            email: z.string().nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.outboundSchema.nullable().optional(),
+            clientStatus: z.nullable(BulkClientItemCreateClientStatus$).optional(),
+            company: z.nullable(z.string()).optional(),
+            email: z.nullable(z.string()).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
         })
         .transform((v) => {
             return {

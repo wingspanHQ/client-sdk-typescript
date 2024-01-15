@@ -51,22 +51,24 @@ export namespace InvoiceLineItemsCreateRequest$ {
 
     export const inboundSchema: z.ZodType<InvoiceLineItemsCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            costPerUnit: z.number().nullable().optional(),
-            description: z.string().nullable().optional(),
-            detail: z.string().nullable().optional(),
-            discount:
-                Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
-                    .nullable()
-                    .optional(),
-            integration:
-                ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            quantity: z.number().nullable().optional(),
-            reimbursableExpense: z.boolean().nullable().optional(),
-            totalCost: z.number().nullable().optional(),
-            unit: z.string().nullable().optional(),
+            costPerUnit: z.nullable(z.number()).optional(),
+            description: z.nullable(z.string()).optional(),
+            detail: z.nullable(z.string()).optional(),
+            discount: z
+                .nullable(
+                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
+                )
+                .optional(),
+            integration: z
+                .nullable(
+                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            quantity: z.nullable(z.number()).optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
+            totalCost: z.nullable(z.number()).optional(),
+            unit: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -107,22 +109,24 @@ export namespace InvoiceLineItemsCreateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceLineItemsCreateRequest> =
         z
             .object({
-                costPerUnit: z.number().nullable().optional(),
-                description: z.string().nullable().optional(),
-                detail: z.string().nullable().optional(),
-                discount:
-                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
-                        .nullable()
-                        .optional(),
-                integration:
-                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
-                        .nullable()
-                        .optional(),
-                labels: z.record(z.string()).nullable().optional(),
-                quantity: z.number().nullable().optional(),
-                reimbursableExpense: z.boolean().nullable().optional(),
-                totalCost: z.number().nullable().optional(),
-                unit: z.string().nullable().optional(),
+                costPerUnit: z.nullable(z.number()).optional(),
+                description: z.nullable(z.string()).optional(),
+                detail: z.nullable(z.string()).optional(),
+                discount: z
+                    .nullable(
+                        Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
+                    )
+                    .optional(),
+                integration: z
+                    .nullable(
+                        ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
+                    )
+                    .optional(),
+                labels: z.nullable(z.record(z.string())).optional(),
+                quantity: z.nullable(z.number()).optional(),
+                reimbursableExpense: z.nullable(z.boolean()).optional(),
+                totalCost: z.nullable(z.number()).optional(),
+                unit: z.nullable(z.string()).optional(),
             })
             .transform((v) => {
                 return {

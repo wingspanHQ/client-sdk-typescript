@@ -22,8 +22,8 @@ export namespace Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663
         Inbound
     > = z
         .object({
-            expenseAccountId: z.string().nullable().optional(),
-            vendorId: z.string().nullable().optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            vendorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -45,8 +45,8 @@ export namespace Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663
         Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4
     > = z
         .object({
-            expenseAccountId: z.string().nullable().optional(),
-            vendorId: z.string().nullable().optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            vendorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

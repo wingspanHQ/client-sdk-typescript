@@ -59,19 +59,19 @@ export namespace Company$ {
 
     export const inboundSchema: z.ZodType<Company, z.ZodTypeDef, Inbound> = z
         .object({
-            banking: z.boolean().nullable().optional(),
-            companyOwners: z.array(CompanyPerson$.inboundSchema).nullable().optional(),
-            description: z.string().nullable().optional(),
-            disregardedEntityName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            links: CompanyLinks$.inboundSchema.nullable().optional(),
-            name: z.string().nullable().optional(),
-            stateOfIncorporation: z.string().nullable().optional(),
-            structure: Structure$.nullable().optional(),
-            supportEmail: z.string().nullable().optional(),
-            taxId: z.string().nullable().optional(),
-            website: z.string().nullable().optional(),
-            yearOfIncorporation: z.string().nullable().optional(),
+            banking: z.nullable(z.boolean()).optional(),
+            companyOwners: z.nullable(z.array(CompanyPerson$.inboundSchema)).optional(),
+            description: z.nullable(z.string()).optional(),
+            disregardedEntityName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            links: z.nullable(CompanyLinks$.inboundSchema).optional(),
+            name: z.nullable(z.string()).optional(),
+            stateOfIncorporation: z.nullable(z.string()).optional(),
+            structure: z.nullable(Structure$).optional(),
+            supportEmail: z.nullable(z.string()).optional(),
+            taxId: z.nullable(z.string()).optional(),
+            website: z.nullable(z.string()).optional(),
+            yearOfIncorporation: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -117,19 +117,19 @@ export namespace Company$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Company> = z
         .object({
-            banking: z.boolean().nullable().optional(),
-            companyOwners: z.array(CompanyPerson$.outboundSchema).nullable().optional(),
-            description: z.string().nullable().optional(),
-            disregardedEntityName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            links: CompanyLinks$.outboundSchema.nullable().optional(),
-            name: z.string().nullable().optional(),
-            stateOfIncorporation: z.string().nullable().optional(),
-            structure: Structure$.nullable().optional(),
-            supportEmail: z.string().nullable().optional(),
-            taxId: z.string().nullable().optional(),
-            website: z.string().nullable().optional(),
-            yearOfIncorporation: z.string().nullable().optional(),
+            banking: z.nullable(z.boolean()).optional(),
+            companyOwners: z.nullable(z.array(CompanyPerson$.outboundSchema)).optional(),
+            description: z.nullable(z.string()).optional(),
+            disregardedEntityName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            links: z.nullable(CompanyLinks$.outboundSchema).optional(),
+            name: z.nullable(z.string()).optional(),
+            stateOfIncorporation: z.nullable(z.string()).optional(),
+            structure: z.nullable(Structure$).optional(),
+            supportEmail: z.nullable(z.string()).optional(),
+            taxId: z.nullable(z.string()).optional(),
+            website: z.nullable(z.string()).optional(),
+            yearOfIncorporation: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

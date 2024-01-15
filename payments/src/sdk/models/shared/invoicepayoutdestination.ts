@@ -55,11 +55,11 @@ export namespace InvoicePayoutDestination$ {
     export const inboundSchema: z.ZodType<InvoicePayoutDestination, z.ZodTypeDef, Inbound> = z
         .object({
             amount: z.number(),
-            brand: z.string().nullable().optional(),
+            brand: z.nullable(z.string()).optional(),
             description: z.string(),
-            destinationId: z.string().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
             destinationType: DestinationType$,
-            last4: z.string().nullable().optional(),
+            last4: z.nullable(z.string()).optional(),
             payoutMethod: PayoutMethod$,
             percentage: z.number(),
             transferId: z.string(),
@@ -93,11 +93,11 @@ export namespace InvoicePayoutDestination$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoicePayoutDestination> = z
         .object({
             amount: z.number(),
-            brand: z.string().nullable().optional(),
+            brand: z.nullable(z.string()).optional(),
             description: z.string(),
-            destinationId: z.string().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
             destinationType: DestinationType$,
-            last4: z.string().nullable().optional(),
+            last4: z.nullable(z.string()).optional(),
             payoutMethod: PayoutMethod$,
             percentage: z.number(),
             transferId: z.string(),

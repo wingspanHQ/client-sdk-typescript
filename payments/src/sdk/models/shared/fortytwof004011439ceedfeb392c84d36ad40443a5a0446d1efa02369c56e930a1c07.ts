@@ -50,12 +50,12 @@ export namespace FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e9
     > = z
         .object({
             createdAt: z.string(),
-            depositedDate: z.string().nullable().optional(),
+            depositedDate: z.nullable(z.string()).optional(),
             dueDate: z.string(),
             invoiceId: z.string(),
             invoiceNumber: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
             status: Status$,
             updatedAt: z.string(),
         })
@@ -92,12 +92,12 @@ export namespace FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e9
     > = z
         .object({
             createdAt: z.string(),
-            depositedDate: z.string().nullable().optional(),
+            depositedDate: z.nullable(z.string()).optional(),
             dueDate: z.string(),
             invoiceId: z.string(),
             invoiceNumber: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
             status: Status$,
             updatedAt: z.string(),
         })

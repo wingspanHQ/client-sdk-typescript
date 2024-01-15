@@ -51,8 +51,8 @@ export namespace TaxFormUpdateRequest$ {
     export const inboundSchema: z.ZodType<TaxFormUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
             data: z.lazy(() => TaxFormUpdateRequestData$.inboundSchema),
-            payerConfirmedW9Info: z.boolean().nullable().optional(),
-            status: TaxFormUpdateRequestStatus$.nullable().optional(),
+            payerConfirmedW9Info: z.nullable(z.boolean()).optional(),
+            status: z.nullable(TaxFormUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -73,8 +73,8 @@ export namespace TaxFormUpdateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, TaxFormUpdateRequest> = z
         .object({
             data: z.lazy(() => TaxFormUpdateRequestData$.outboundSchema),
-            payerConfirmedW9Info: z.boolean().nullable().optional(),
-            status: TaxFormUpdateRequestStatus$.nullable().optional(),
+            payerConfirmedW9Info: z.nullable(z.boolean()).optional(),
+            status: z.nullable(TaxFormUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

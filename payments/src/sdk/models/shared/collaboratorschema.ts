@@ -101,27 +101,27 @@ export namespace CollaboratorSchema$ {
     export const inboundSchema: z.ZodType<CollaboratorSchema, z.ZodTypeDef, Inbound> = z
         .object({
             achCreditAccount: MemberClientWireAccount$.inboundSchema,
-            clientData: ClientData$.inboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
             clientId: z.string(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
             collaboratorId: z.string(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.inboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.inboundSchema))
                 .optional(),
             eventActors: z.record(z.string()),
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.inboundSchema,
-            formW9Data: MemberClientFormW9Info$.inboundSchema.nullable().optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
-                    .nullable()
-                    .optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.inboundSchema).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.inboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.inboundSchema,
-            memberData: MemberData$.inboundSchema.nullable().optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
             memberId: z.string(),
             status: CollaboratorSchemaStatus$,
             taxStatus: TaxStatus$,
@@ -189,27 +189,27 @@ export namespace CollaboratorSchema$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorSchema> = z
         .object({
             achCreditAccount: MemberClientWireAccount$.outboundSchema,
-            clientData: ClientData$.outboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
             clientId: z.string(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
             collaboratorId: z.string(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.outboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.outboundSchema))
                 .optional(),
             eventActors: z.record(z.string()),
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.outboundSchema,
-            formW9Data: MemberClientFormW9Info$.outboundSchema.nullable().optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
-                    .nullable()
-                    .optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.outboundSchema).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.outboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.outboundSchema,
-            memberData: MemberData$.outboundSchema.nullable().optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
             memberId: z.string(),
             status: CollaboratorSchemaStatus$,
             taxStatus: TaxStatus$,

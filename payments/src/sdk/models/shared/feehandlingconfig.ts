@@ -20,9 +20,9 @@ export namespace FeeHandlingConfig$ {
 
     export const inboundSchema: z.ZodType<FeeHandlingConfig, z.ZodTypeDef, Inbound> = z
         .object({
-            clientAbsolutePercentage: z.number().nullable().optional(),
-            clientPays: z.number().nullable().optional(),
-            memberPays: z.number().nullable().optional(),
+            clientAbsolutePercentage: z.nullable(z.number()).optional(),
+            clientPays: z.nullable(z.number()).optional(),
+            memberPays: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -42,9 +42,9 @@ export namespace FeeHandlingConfig$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, FeeHandlingConfig> = z
         .object({
-            clientAbsolutePercentage: z.number().nullable().optional(),
-            clientPays: z.number().nullable().optional(),
-            memberPays: z.number().nullable().optional(),
+            clientAbsolutePercentage: z.nullable(z.number()).optional(),
+            clientPays: z.nullable(z.number()).optional(),
+            memberPays: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

@@ -28,11 +28,11 @@ export namespace Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a
         Inbound
     > = z
         .object({
-            clearedAt: z.string().nullable().optional(),
-            failedAt: z.string().nullable().optional(),
-            pendingAt: z.string().nullable().optional(),
-            returnedAt: z.string().nullable().optional(),
-            sentAt: z.string().nullable().optional(),
+            clearedAt: z.nullable(z.string()).optional(),
+            failedAt: z.nullable(z.string()).optional(),
+            pendingAt: z.nullable(z.string()).optional(),
+            returnedAt: z.nullable(z.string()).optional(),
+            sentAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -58,11 +58,11 @@ export namespace Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a
         Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9
     > = z
         .object({
-            clearedAt: z.string().nullable().optional(),
-            failedAt: z.string().nullable().optional(),
-            pendingAt: z.string().nullable().optional(),
-            returnedAt: z.string().nullable().optional(),
-            sentAt: z.string().nullable().optional(),
+            clearedAt: z.nullable(z.string()).optional(),
+            failedAt: z.nullable(z.string()).optional(),
+            pendingAt: z.nullable(z.string()).optional(),
+            returnedAt: z.nullable(z.string()).optional(),
+            sentAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

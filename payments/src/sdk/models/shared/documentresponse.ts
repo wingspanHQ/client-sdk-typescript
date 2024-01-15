@@ -49,8 +49,8 @@ export namespace DocumentResponse$ {
         .object({
             clientId: z.string(),
             documentId: z.string(),
-            events: DocumentEvents$.inboundSchema.nullable().optional(),
-            files: DocumentFiles$.inboundSchema.nullable().optional(),
+            events: z.nullable(DocumentEvents$.inboundSchema).optional(),
+            files: z.nullable(DocumentFiles$.inboundSchema).optional(),
             memberId: z.string(),
             status: DocumentResponseStatus$,
             templateId: z.string(),
@@ -87,8 +87,8 @@ export namespace DocumentResponse$ {
         .object({
             clientId: z.string(),
             documentId: z.string(),
-            events: DocumentEvents$.outboundSchema.nullable().optional(),
-            files: DocumentFiles$.outboundSchema.nullable().optional(),
+            events: z.nullable(DocumentEvents$.outboundSchema).optional(),
+            files: z.nullable(DocumentFiles$.outboundSchema).optional(),
             memberId: z.string(),
             status: DocumentResponseStatus$,
             templateId: z.string(),

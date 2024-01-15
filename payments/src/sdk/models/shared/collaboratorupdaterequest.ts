@@ -70,21 +70,20 @@ export namespace CollaboratorUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<CollaboratorUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            clientData: ClientData$.inboundSchema.nullable().optional(),
-            form1099Balances:
-                Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.inboundSchema
-                    .nullable()
-                    .optional(),
-            formW9Data: z
-                .lazy(() => FormW9Data$.inboundSchema)
-                .nullable()
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
+            form1099Balances: z
+                .nullable(
+                    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.inboundSchema
+                )
                 .optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            status: CollaboratorUpdateRequestStatus$.nullable().optional(),
+            formW9Data: z.nullable(z.lazy(() => FormW9Data$.inboundSchema)).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            status: z.nullable(CollaboratorUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -116,21 +115,20 @@ export namespace CollaboratorUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorUpdateRequest> = z
         .object({
-            clientData: ClientData$.outboundSchema.nullable().optional(),
-            form1099Balances:
-                Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.outboundSchema
-                    .nullable()
-                    .optional(),
-            formW9Data: z
-                .lazy(() => FormW9Data$.outboundSchema)
-                .nullable()
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
+            form1099Balances: z
+                .nullable(
+                    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.outboundSchema
+                )
                 .optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            status: CollaboratorUpdateRequestStatus$.nullable().optional(),
+            formW9Data: z.nullable(z.lazy(() => FormW9Data$.outboundSchema)).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            status: z.nullable(CollaboratorUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

@@ -28,7 +28,7 @@ export namespace Remail1099Request$ {
         .object({
             address:
                 Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$.inboundSchema,
-            documentIndex: z.number().nullable().optional(),
+            documentIndex: z.nullable(z.number()).optional(),
             memberId: z.string(),
             year: z.number(),
         })
@@ -52,7 +52,7 @@ export namespace Remail1099Request$ {
         .object({
             address:
                 Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$.outboundSchema,
-            documentIndex: z.number().nullable().optional(),
+            documentIndex: z.nullable(z.number()).optional(),
             memberId: z.string(),
             year: z.number(),
         })

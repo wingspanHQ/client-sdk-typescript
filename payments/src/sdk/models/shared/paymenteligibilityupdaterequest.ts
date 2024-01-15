@@ -32,11 +32,8 @@ export namespace PaymentEligibilityUpdateRequest$ {
     export const inboundSchema: z.ZodType<PaymentEligibilityUpdateRequest, z.ZodTypeDef, Inbound> =
         z
             .object({
-                field: z.string().nullable().optional(),
-                value: z
-                    .lazy(() => Value$.inboundSchema)
-                    .nullable()
-                    .optional(),
+                field: z.nullable(z.string()).optional(),
+                value: z.nullable(z.lazy(() => Value$.inboundSchema)).optional(),
             })
             .transform((v) => {
                 return {
@@ -56,11 +53,8 @@ export namespace PaymentEligibilityUpdateRequest$ {
         PaymentEligibilityUpdateRequest
     > = z
         .object({
-            field: z.string().nullable().optional(),
-            value: z
-                .lazy(() => Value$.outboundSchema)
-                .nullable()
-                .optional(),
+            field: z.nullable(z.string()).optional(),
+            value: z.nullable(z.lazy(() => Value$.outboundSchema)).optional(),
         })
         .transform((v) => {
             return {

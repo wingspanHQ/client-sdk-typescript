@@ -34,10 +34,10 @@ export namespace ScheduleDate$ {
 
     export const inboundSchema: z.ZodType<ScheduleDate, z.ZodTypeDef, Inbound> = z
         .object({
-            cutOffDate: z.string().nullable().optional(),
+            cutOffDate: z.nullable(z.string()).optional(),
             date: z.string(),
-            invoiceId: z.string().nullable().optional(),
-            invoiceTemplateId: z.string().nullable().optional(),
+            invoiceId: z.nullable(z.string()).optional(),
+            invoiceTemplateId: z.nullable(z.string()).optional(),
             status: ScheduleDateStatus$,
         })
         .transform((v) => {
@@ -62,10 +62,10 @@ export namespace ScheduleDate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ScheduleDate> = z
         .object({
-            cutOffDate: z.string().nullable().optional(),
+            cutOffDate: z.nullable(z.string()).optional(),
             date: z.string(),
-            invoiceId: z.string().nullable().optional(),
-            invoiceTemplateId: z.string().nullable().optional(),
+            invoiceId: z.nullable(z.string()).optional(),
+            invoiceTemplateId: z.nullable(z.string()).optional(),
             status: ScheduleDateStatus$,
         })
         .transform((v) => {

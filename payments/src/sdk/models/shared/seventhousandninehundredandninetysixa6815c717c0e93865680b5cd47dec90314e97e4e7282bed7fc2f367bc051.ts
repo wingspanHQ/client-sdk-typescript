@@ -21,7 +21,7 @@ export namespace SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47d
         Inbound
     > = z
         .object({
-            number: z.string().nullable().optional(),
+            number: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -39,7 +39,7 @@ export namespace SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47d
         SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051
     > = z
         .object({
-            number: z.string().nullable().optional(),
+            number: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

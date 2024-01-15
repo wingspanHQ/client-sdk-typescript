@@ -89,21 +89,20 @@ export namespace CollaboratorForm1099BalancesUpdateRequest$ {
         Inbound
     > = z
         .object({
-            adjustments: z.number().nullable().optional(),
-            correction:
-                Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$.inboundSchema
-                    .nullable()
-                    .optional(),
-            deliveryMethod: DeliveryMethod$.nullable().optional(),
-            dispute:
-                Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.inboundSchema
-                    .nullable()
-                    .optional(),
-            events: z
-                .lazy(() => Events$.inboundSchema)
-                .nullable()
+            adjustments: z.nullable(z.number()).optional(),
+            correction: z
+                .nullable(
+                    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$.inboundSchema
+                )
                 .optional(),
-            status: CollaboratorForm1099BalancesUpdateRequestStatus$.nullable().optional(),
+            deliveryMethod: z.nullable(DeliveryMethod$).optional(),
+            dispute: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.inboundSchema
+                )
+                .optional(),
+            events: z.nullable(z.lazy(() => Events$.inboundSchema)).optional(),
+            status: z.nullable(CollaboratorForm1099BalancesUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -137,21 +136,20 @@ export namespace CollaboratorForm1099BalancesUpdateRequest$ {
         CollaboratorForm1099BalancesUpdateRequest
     > = z
         .object({
-            adjustments: z.number().nullable().optional(),
-            correction:
-                Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$.outboundSchema
-                    .nullable()
-                    .optional(),
-            deliveryMethod: DeliveryMethod$.nullable().optional(),
-            dispute:
-                Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.outboundSchema
-                    .nullable()
-                    .optional(),
-            events: z
-                .lazy(() => Events$.outboundSchema)
-                .nullable()
+            adjustments: z.nullable(z.number()).optional(),
+            correction: z
+                .nullable(
+                    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$.outboundSchema
+                )
                 .optional(),
-            status: CollaboratorForm1099BalancesUpdateRequestStatus$.nullable().optional(),
+            deliveryMethod: z.nullable(DeliveryMethod$).optional(),
+            dispute: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.outboundSchema
+                )
+                .optional(),
+            events: z.nullable(z.lazy(() => Events$.outboundSchema)).optional(),
+            status: z.nullable(CollaboratorForm1099BalancesUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

@@ -28,10 +28,10 @@ export namespace TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c
         Inbound
     > = z
         .object({
-            address: Address$.inboundSchema.nullable().optional(),
-            company: Company$.inboundSchema.nullable().optional(),
-            logoUrl: z.string().nullable().optional(),
-            ssnLastFour: z.string().nullable().optional(),
+            address: z.nullable(Address$.inboundSchema).optional(),
+            company: z.nullable(Company$.inboundSchema).optional(),
+            logoUrl: z.nullable(z.string()).optional(),
+            ssnLastFour: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -55,10 +55,10 @@ export namespace TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c
         TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb
     > = z
         .object({
-            address: Address$.outboundSchema.nullable().optional(),
-            company: Company$.outboundSchema.nullable().optional(),
-            logoUrl: z.string().nullable().optional(),
-            ssnLastFour: z.string().nullable().optional(),
+            address: z.nullable(Address$.outboundSchema).optional(),
+            company: z.nullable(Company$.outboundSchema).optional(),
+            logoUrl: z.nullable(z.string()).optional(),
+            ssnLastFour: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

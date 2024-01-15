@@ -26,8 +26,8 @@ export namespace Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0b
         Inbound
     > = z
         .object({
-            "2021": CollaboratorForm1099BalancesUpdateRequest$.inboundSchema.nullable().optional(),
-            "2022": CollaboratorForm1099BalancesUpdateRequest$.inboundSchema.nullable().optional(),
+            "2021": z.nullable(CollaboratorForm1099BalancesUpdateRequest$.inboundSchema).optional(),
+            "2022": z.nullable(CollaboratorForm1099BalancesUpdateRequest$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -47,11 +47,11 @@ export namespace Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0b
         Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7
     > = z
         .object({
-            twoThousandAndTwentyOne: CollaboratorForm1099BalancesUpdateRequest$.outboundSchema
-                .nullable()
+            twoThousandAndTwentyOne: z
+                .nullable(CollaboratorForm1099BalancesUpdateRequest$.outboundSchema)
                 .optional(),
-            twoThousandAndTwentyTwo: CollaboratorForm1099BalancesUpdateRequest$.outboundSchema
-                .nullable()
+            twoThousandAndTwentyTwo: z
+                .nullable(CollaboratorForm1099BalancesUpdateRequest$.outboundSchema)
                 .optional(),
         })
         .transform((v) => {

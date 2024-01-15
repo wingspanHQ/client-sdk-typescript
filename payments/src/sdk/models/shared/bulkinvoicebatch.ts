@@ -70,10 +70,11 @@ export namespace BulkInvoiceBatch$ {
             labels: z.record(z.string()),
             memberId: z.string(),
             processingStrategy: ProcessingStrategy$,
-            statistics:
-                SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.inboundSchema
-                    .nullable()
-                    .optional(),
+            statistics: z
+                .nullable(
+                    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.inboundSchema
+                )
+                .optional(),
             status: BulkInvoiceBatchStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -117,10 +118,11 @@ export namespace BulkInvoiceBatch$ {
             labels: z.record(z.string()),
             memberId: z.string(),
             processingStrategy: ProcessingStrategy$,
-            statistics:
-                SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.outboundSchema
-                    .nullable()
-                    .optional(),
+            statistics: z
+                .nullable(
+                    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.outboundSchema
+                )
+                .optional(),
             status: BulkInvoiceBatchStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

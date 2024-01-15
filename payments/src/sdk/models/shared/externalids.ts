@@ -22,9 +22,9 @@ export namespace ExternalIds$ {
 
     export const inboundSchema: z.ZodType<ExternalIds, z.ZodTypeDef, Inbound> = z
         .object({
-            bulk: ExternalIdsBulkImport$.inboundSchema.nullable().optional(),
-            quickbooks: z.record(ExternalIdsQuickbooksData$.inboundSchema).nullable().optional(),
-            stripe: z.string().nullable().optional(),
+            bulk: z.nullable(ExternalIdsBulkImport$.inboundSchema).optional(),
+            quickbooks: z.nullable(z.record(ExternalIdsQuickbooksData$.inboundSchema)).optional(),
+            stripe: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -42,9 +42,9 @@ export namespace ExternalIds$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ExternalIds> = z
         .object({
-            bulk: ExternalIdsBulkImport$.outboundSchema.nullable().optional(),
-            quickbooks: z.record(ExternalIdsQuickbooksData$.outboundSchema).nullable().optional(),
-            stripe: z.string().nullable().optional(),
+            bulk: z.nullable(ExternalIdsBulkImport$.outboundSchema).optional(),
+            quickbooks: z.nullable(z.record(ExternalIdsQuickbooksData$.outboundSchema)).optional(),
+            stripe: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -53,9 +53,9 @@ export namespace DeductionCreateRequest$ {
             currency: DeductionCreateRequestCurrency$,
             memberId: z.string(),
             name: z.string(),
-            priority: z.number().nullable().optional(),
-            sourceInvoiceId: z.string().nullable().optional(),
-            startDate: z.string().nullable().optional(),
+            priority: z.nullable(z.number()).optional(),
+            sourceInvoiceId: z.nullable(z.string()).optional(),
+            startDate: z.nullable(z.string()).optional(),
             type: DeductionCreateRequestType$,
         })
         .transform((v) => {
@@ -93,9 +93,9 @@ export namespace DeductionCreateRequest$ {
             currency: DeductionCreateRequestCurrency$,
             memberId: z.string(),
             name: z.string(),
-            priority: z.number().nullable().optional(),
-            sourceInvoiceId: z.string().nullable().optional(),
-            startDate: z.string().nullable().optional(),
+            priority: z.nullable(z.number()).optional(),
+            sourceInvoiceId: z.nullable(z.string()).optional(),
+            startDate: z.nullable(z.string()).optional(),
             type: DeductionCreateRequestType$,
         })
         .transform((v) => {

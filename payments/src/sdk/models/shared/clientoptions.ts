@@ -43,10 +43,10 @@ export namespace ClientOptions$ {
 
     export const inboundSchema: z.ZodType<ClientOptions, z.ZodTypeDef, Inbound> = z
         .object({
-            comment: z.string().nullable().optional(),
-            payDate: z.string().nullable().optional(),
-            workflowStatus: WorkflowStatus$.nullable().optional(),
-            workflowSubStatus: ClientOptionsWorkflowSubStatus$.nullable().optional(),
+            comment: z.nullable(z.string()).optional(),
+            payDate: z.nullable(z.string()).optional(),
+            workflowStatus: z.nullable(WorkflowStatus$).optional(),
+            workflowSubStatus: z.nullable(ClientOptionsWorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -68,10 +68,10 @@ export namespace ClientOptions$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ClientOptions> = z
         .object({
-            comment: z.string().nullable().optional(),
-            payDate: z.string().nullable().optional(),
-            workflowStatus: WorkflowStatus$.nullable().optional(),
-            workflowSubStatus: ClientOptionsWorkflowSubStatus$.nullable().optional(),
+            comment: z.nullable(z.string()).optional(),
+            payDate: z.nullable(z.string()).optional(),
+            workflowStatus: z.nullable(WorkflowStatus$).optional(),
+            workflowSubStatus: z.nullable(ClientOptionsWorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {

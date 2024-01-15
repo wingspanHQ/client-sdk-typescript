@@ -54,7 +54,7 @@ export namespace FundsTransferAccount$ {
             numbers:
                 EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f$.inboundSchema,
             type: FundsTransferAccountType$,
-            userId: z.string().nullable().optional(),
+            userId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -84,7 +84,7 @@ export namespace FundsTransferAccount$ {
             numbers:
                 EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f$.outboundSchema,
             type: FundsTransferAccountType$,
-            userId: z.string().nullable().optional(),
+            userId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -26,11 +26,10 @@ export namespace CollaboratorGroupCreateRequest$ {
 
     export const inboundSchema: z.ZodType<CollaboratorGroupCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            collaboratorSettings: z.record(z.string()).nullable().optional(),
+            collaboratorSettings: z.nullable(z.record(z.string())).optional(),
             description: z.string(),
             eligibilityRequirements: z
-                .array(CollaboratorGroupRequirement$.inboundSchema)
-                .nullable()
+                .nullable(z.array(CollaboratorGroupRequirement$.inboundSchema))
                 .optional(),
             name: z.string(),
         })
@@ -57,11 +56,10 @@ export namespace CollaboratorGroupCreateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorGroupCreateRequest> =
         z
             .object({
-                collaboratorSettings: z.record(z.string()).nullable().optional(),
+                collaboratorSettings: z.nullable(z.record(z.string())).optional(),
                 description: z.string(),
                 eligibilityRequirements: z
-                    .array(CollaboratorGroupRequirement$.outboundSchema)
-                    .nullable()
+                    .nullable(z.array(CollaboratorGroupRequirement$.outboundSchema))
                     .optional(),
                 name: z.string(),
             })

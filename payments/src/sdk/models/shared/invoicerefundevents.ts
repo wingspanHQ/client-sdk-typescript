@@ -20,9 +20,9 @@ export namespace InvoiceRefundEvents$ {
 
     export const inboundSchema: z.ZodType<InvoiceRefundEvents, z.ZodTypeDef, Inbound> = z
         .object({
-            refundFailedAt: z.string().nullable().optional(),
-            refundStartedAt: z.string().nullable().optional(),
-            refundSuccessfulAt: z.string().nullable().optional(),
+            refundFailedAt: z.nullable(z.string()).optional(),
+            refundStartedAt: z.nullable(z.string()).optional(),
+            refundSuccessfulAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -44,9 +44,9 @@ export namespace InvoiceRefundEvents$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceRefundEvents> = z
         .object({
-            refundFailedAt: z.string().nullable().optional(),
-            refundStartedAt: z.string().nullable().optional(),
-            refundSuccessfulAt: z.string().nullable().optional(),
+            refundFailedAt: z.nullable(z.string()).optional(),
+            refundStartedAt: z.nullable(z.string()).optional(),
+            refundSuccessfulAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

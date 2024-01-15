@@ -29,7 +29,7 @@ export namespace Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830
     > = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             postalCode: z.string(),
             state: z.string(),
@@ -59,7 +59,7 @@ export namespace Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830
     > = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             postalCode: z.string(),
             state: z.string(),

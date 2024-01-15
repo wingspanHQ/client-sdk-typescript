@@ -28,11 +28,11 @@ export namespace Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbc
         Inbound
     > = z
         .object({
-            deductionId: z.string().nullable().optional(),
-            errorMessage: z.string().nullable().optional(),
-            payableId: z.string().nullable().optional(),
-            resolvedClientId: z.string().nullable().optional(),
-            resolvedCollaboratorId: z.string().nullable().optional(),
+            deductionId: z.nullable(z.string()).optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            payableId: z.nullable(z.string()).optional(),
+            resolvedClientId: z.nullable(z.string()).optional(),
+            resolvedCollaboratorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -62,11 +62,11 @@ export namespace Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbc
         Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb
     > = z
         .object({
-            deductionId: z.string().nullable().optional(),
-            errorMessage: z.string().nullable().optional(),
-            payableId: z.string().nullable().optional(),
-            resolvedClientId: z.string().nullable().optional(),
-            resolvedCollaboratorId: z.string().nullable().optional(),
+            deductionId: z.nullable(z.string()).optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            payableId: z.nullable(z.string()).optional(),
+            resolvedClientId: z.nullable(z.string()).optional(),
+            resolvedCollaboratorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

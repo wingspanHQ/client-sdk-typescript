@@ -31,10 +31,11 @@ export namespace ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveTh
         Inbound
     > = z
         .object({
-            quickbooks:
-                Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$.inboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$.inboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {
@@ -55,10 +56,11 @@ export namespace ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveTh
         ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461
     > = z
         .object({
-            quickbooks:
-                Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$.outboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$.outboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {

@@ -34,10 +34,9 @@ export namespace PayoutSettingsUpdate$ {
     export const inboundSchema: z.ZodType<PayoutSettingsUpdate, z.ZodTypeDef, Inbound> = z
         .object({
             payoutDestinations: z
-                .array(PayoutDestinationUpdate$.inboundSchema)
-                .nullable()
+                .nullable(z.array(PayoutDestinationUpdate$.inboundSchema))
                 .optional(),
-            payoutPreferences: PayoutSettingsUpdatePayoutPreferences$.nullable().optional(),
+            payoutPreferences: z.nullable(PayoutSettingsUpdatePayoutPreferences$).optional(),
         })
         .transform((v) => {
             return {
@@ -58,10 +57,9 @@ export namespace PayoutSettingsUpdate$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayoutSettingsUpdate> = z
         .object({
             payoutDestinations: z
-                .array(PayoutDestinationUpdate$.outboundSchema)
-                .nullable()
+                .nullable(z.array(PayoutDestinationUpdate$.outboundSchema))
                 .optional(),
-            payoutPreferences: PayoutSettingsUpdatePayoutPreferences$.nullable().optional(),
+            payoutPreferences: z.nullable(PayoutSettingsUpdatePayoutPreferences$).optional(),
         })
         .transform((v) => {
             return {

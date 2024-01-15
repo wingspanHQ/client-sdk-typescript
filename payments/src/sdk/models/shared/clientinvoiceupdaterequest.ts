@@ -33,8 +33,8 @@ export namespace ClientInvoiceUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<ClientInvoiceUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
-            status: ClientInvoiceUpdateRequestStatus$.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
+            status: z.nullable(ClientInvoiceUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -52,8 +52,8 @@ export namespace ClientInvoiceUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ClientInvoiceUpdateRequest> = z
         .object({
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
-            status: ClientInvoiceUpdateRequestStatus$.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
+            status: z.nullable(ClientInvoiceUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

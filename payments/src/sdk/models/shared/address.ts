@@ -25,7 +25,7 @@ export namespace Address$ {
     export const inboundSchema: z.ZodType<Address, z.ZodTypeDef, Inbound> = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             postalCode: z.string(),
             state: z.string(),
@@ -51,7 +51,7 @@ export namespace Address$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Address> = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             postalCode: z.string(),
             state: z.string(),

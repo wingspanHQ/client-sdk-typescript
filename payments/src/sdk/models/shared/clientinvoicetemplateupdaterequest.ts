@@ -24,9 +24,9 @@ export namespace ClientInvoiceTemplateUpdateRequest$ {
         Inbound
     > = z
         .object({
-            accountId: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
             clientId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -50,9 +50,9 @@ export namespace ClientInvoiceTemplateUpdateRequest$ {
         ClientInvoiceTemplateUpdateRequest
     > = z
         .object({
-            accountId: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
             clientId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

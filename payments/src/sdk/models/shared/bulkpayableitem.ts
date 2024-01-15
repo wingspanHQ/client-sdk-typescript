@@ -106,34 +106,35 @@ export namespace BulkPayableItem$ {
     export const inboundSchema: z.ZodType<BulkPayableItem, z.ZodTypeDef, Inbound> = z
         .object({
             amount: z.number(),
-            attachmentId: z.string().nullable().optional(),
+            attachmentId: z.nullable(z.string()).optional(),
             bulkPayableBatchId: z.string(),
             bulkPayableItemId: z.string(),
-            bulkPayableItemMergeKey: z.string().nullable().optional(),
-            bulkPayableItemReference: z.string().nullable().optional(),
+            bulkPayableItemMergeKey: z.nullable(z.string()).optional(),
+            bulkPayableItemReference: z.nullable(z.string()).optional(),
             clientId: z.string(),
-            collaboratorEmail: z.string().nullable().optional(),
-            collaboratorExternalId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
+            collaboratorEmail: z.nullable(z.string()).optional(),
+            collaboratorExternalId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
-            integration: InvoiceIntegrations$.inboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.inboundSchema).optional(),
             labels: z.record(z.string()),
             lineItemDescription: z.string(),
-            lineItemDetail: z.string().nullable().optional(),
-            metadata:
-                Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$.inboundSchema
-                    .nullable()
-                    .optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            metadata: z
+                .nullable(
+                    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$.inboundSchema
+                )
+                .optional(),
             paidDate: z.string(),
-            payableNotes: z.string().nullable().optional(),
+            payableNotes: z.nullable(z.string()).optional(),
             payableStatus: PayableStatus$,
-            reimbursableExpense: z.boolean().nullable().optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
             status: BulkPayableItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
-            workflowSubStatus: WorkflowSubStatus$.nullable().optional(),
+            workflowSubStatus: z.nullable(WorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -213,34 +214,35 @@ export namespace BulkPayableItem$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkPayableItem> = z
         .object({
             amount: z.number(),
-            attachmentId: z.string().nullable().optional(),
+            attachmentId: z.nullable(z.string()).optional(),
             bulkPayableBatchId: z.string(),
             bulkPayableItemId: z.string(),
-            bulkPayableItemMergeKey: z.string().nullable().optional(),
-            bulkPayableItemReference: z.string().nullable().optional(),
+            bulkPayableItemMergeKey: z.nullable(z.string()).optional(),
+            bulkPayableItemReference: z.nullable(z.string()).optional(),
             clientId: z.string(),
-            collaboratorEmail: z.string().nullable().optional(),
-            collaboratorExternalId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
+            collaboratorEmail: z.nullable(z.string()).optional(),
+            collaboratorExternalId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
-            integration: InvoiceIntegrations$.outboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.outboundSchema).optional(),
             labels: z.record(z.string()),
             lineItemDescription: z.string(),
-            lineItemDetail: z.string().nullable().optional(),
-            metadata:
-                Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$.outboundSchema
-                    .nullable()
-                    .optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            metadata: z
+                .nullable(
+                    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$.outboundSchema
+                )
+                .optional(),
             paidDate: z.string(),
-            payableNotes: z.string().nullable().optional(),
+            payableNotes: z.nullable(z.string()).optional(),
             payableStatus: PayableStatus$,
-            reimbursableExpense: z.boolean().nullable().optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
             status: BulkPayableItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,
-            workflowSubStatus: WorkflowSubStatus$.nullable().optional(),
+            workflowSubStatus: z.nullable(WorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {

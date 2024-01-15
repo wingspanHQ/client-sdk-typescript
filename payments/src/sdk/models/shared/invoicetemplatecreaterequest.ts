@@ -43,13 +43,13 @@ export namespace InvoiceTemplateCreateRequest$ {
 
     export const inboundSchema: z.ZodType<InvoiceTemplateCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            dueInDays: z.number().nullable().optional(),
-            frequency: Frequency$.inboundSchema.nullable().optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(Frequency$.inboundSchema).optional(),
             invoiceData: InvoiceDataCreateRequest$.inboundSchema,
-            isSchedulingOnly: z.boolean().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.inboundSchema).nullable().optional(),
-            sendEmails: z.boolean().nullable().optional(),
+            isSchedulingOnly: z.nullable(z.boolean()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.inboundSchema)).optional(),
+            sendEmails: z.nullable(z.boolean()).optional(),
             status: InvoiceTemplateCreateRequestStatus$,
         })
         .transform((v) => {
@@ -80,13 +80,13 @@ export namespace InvoiceTemplateCreateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceTemplateCreateRequest> = z
         .object({
-            dueInDays: z.number().nullable().optional(),
-            frequency: Frequency$.outboundSchema.nullable().optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(Frequency$.outboundSchema).optional(),
             invoiceData: InvoiceDataCreateRequest$.outboundSchema,
-            isSchedulingOnly: z.boolean().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.outboundSchema).nullable().optional(),
-            sendEmails: z.boolean().nullable().optional(),
+            isSchedulingOnly: z.nullable(z.boolean()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.outboundSchema)).optional(),
+            sendEmails: z.nullable(z.boolean()).optional(),
             status: InvoiceTemplateCreateRequestStatus$,
         })
         .transform((v) => {

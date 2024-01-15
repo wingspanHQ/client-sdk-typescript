@@ -23,8 +23,10 @@ export namespace InvoiceWithholdings$ {
 
     export const inboundSchema: z.ZodType<InvoiceWithholdings, z.ZodTypeDef, Inbound> = z
         .object({
-            tax: Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$.inboundSchema
-                .nullable()
+            tax: z
+                .nullable(
+                    Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$.inboundSchema
+                )
                 .optional(),
         })
         .transform((v) => {
@@ -42,8 +44,10 @@ export namespace InvoiceWithholdings$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceWithholdings> = z
         .object({
-            tax: Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$.outboundSchema
-                .nullable()
+            tax: z
+                .nullable(
+                    Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$.outboundSchema
+                )
                 .optional(),
         })
         .transform((v) => {

@@ -23,8 +23,8 @@ export namespace SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThi
         Inbound
     > = z
         .object({
-            customerId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
+            customerId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -44,8 +44,8 @@ export namespace SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThi
         SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc
     > = z
         .object({
-            customerId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
+            customerId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

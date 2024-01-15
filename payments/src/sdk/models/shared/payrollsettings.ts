@@ -70,18 +70,18 @@ export namespace PayrollSettings$ {
 
     export const inboundSchema: z.ZodType<PayrollSettings, z.ZodTypeDef, Inbound> = z
         .object({
-            calculationSettings1099: CalculationSettings1099$.inboundSchema.nullable().optional(),
-            enablePlannedPayroll: z.boolean().nullable().optional(),
-            enableProcessDaysBeforeDue: z.boolean().nullable().optional(),
-            frequency: Frequency$.inboundSchema.nullable().optional(),
-            fundingSource: FundingSource$.inboundSchema.nullable().optional(),
-            internationalPayroll: InternationalPayroll$.nullable().optional(),
-            issue1099s: z.boolean().nullable().optional(),
-            processDaysBeforeDue: z.number().nullable().optional(),
-            runsPayroll: z.boolean().nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.inboundSchema).nullable().optional(),
+            calculationSettings1099: z.nullable(CalculationSettings1099$.inboundSchema).optional(),
+            enablePlannedPayroll: z.nullable(z.boolean()).optional(),
+            enableProcessDaysBeforeDue: z.nullable(z.boolean()).optional(),
+            frequency: z.nullable(Frequency$.inboundSchema).optional(),
+            fundingSource: z.nullable(FundingSource$.inboundSchema).optional(),
+            internationalPayroll: z.nullable(InternationalPayroll$).optional(),
+            issue1099s: z.nullable(z.boolean()).optional(),
+            processDaysBeforeDue: z.nullable(z.number()).optional(),
+            runsPayroll: z.nullable(z.boolean()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.inboundSchema)).optional(),
             status: PayrollSettingsStatus$,
-            workflow: Workflow$.nullable().optional(),
+            workflow: z.nullable(Workflow$).optional(),
         })
         .transform((v) => {
             return {
@@ -127,18 +127,18 @@ export namespace PayrollSettings$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayrollSettings> = z
         .object({
-            calculationSettings1099: CalculationSettings1099$.outboundSchema.nullable().optional(),
-            enablePlannedPayroll: z.boolean().nullable().optional(),
-            enableProcessDaysBeforeDue: z.boolean().nullable().optional(),
-            frequency: Frequency$.outboundSchema.nullable().optional(),
-            fundingSource: FundingSource$.outboundSchema.nullable().optional(),
-            internationalPayroll: InternationalPayroll$.nullable().optional(),
-            issue1099s: z.boolean().nullable().optional(),
-            processDaysBeforeDue: z.number().nullable().optional(),
-            runsPayroll: z.boolean().nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.outboundSchema).nullable().optional(),
+            calculationSettings1099: z.nullable(CalculationSettings1099$.outboundSchema).optional(),
+            enablePlannedPayroll: z.nullable(z.boolean()).optional(),
+            enableProcessDaysBeforeDue: z.nullable(z.boolean()).optional(),
+            frequency: z.nullable(Frequency$.outboundSchema).optional(),
+            fundingSource: z.nullable(FundingSource$.outboundSchema).optional(),
+            internationalPayroll: z.nullable(InternationalPayroll$).optional(),
+            issue1099s: z.nullable(z.boolean()).optional(),
+            processDaysBeforeDue: z.nullable(z.number()).optional(),
+            runsPayroll: z.nullable(z.boolean()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.outboundSchema)).optional(),
             status: PayrollSettingsStatus$,
-            workflow: Workflow$.nullable().optional(),
+            workflow: z.nullable(Workflow$).optional(),
         })
         .transform((v) => {
             return {

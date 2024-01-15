@@ -19,7 +19,7 @@ export namespace InvoiceRefundRequest$ {
     export const inboundSchema: z.ZodType<InvoiceRefundRequest, z.ZodTypeDef, Inbound> = z
         .object({
             amount: z.number(),
-            description: z.string().nullable().optional(),
+            description: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -36,7 +36,7 @@ export namespace InvoiceRefundRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceRefundRequest> = z
         .object({
             amount: z.number(),
-            description: z.string().nullable().optional(),
+            description: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

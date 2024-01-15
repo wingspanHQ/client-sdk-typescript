@@ -22,8 +22,8 @@ export namespace F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5ce
         Inbound
     > = z
         .object({
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -43,8 +43,8 @@ export namespace F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5ce
         F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef
     > = z
         .object({
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -19,7 +19,7 @@ export namespace CompanyPerson$ {
     export const inboundSchema: z.ZodType<CompanyPerson, z.ZodTypeDef, Inbound> = z
         .object({
             memberId: z.string(),
-            ownershipPercentage: z.number().nullable().optional(),
+            ownershipPercentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -38,7 +38,7 @@ export namespace CompanyPerson$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CompanyPerson> = z
         .object({
             memberId: z.string(),
-            ownershipPercentage: z.number().nullable().optional(),
+            ownershipPercentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

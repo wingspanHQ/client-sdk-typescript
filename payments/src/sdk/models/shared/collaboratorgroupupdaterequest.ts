@@ -26,13 +26,12 @@ export namespace CollaboratorGroupUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<CollaboratorGroupUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            collaboratorSettings: z.record(z.string()).nullable().optional(),
-            description: z.string().nullable().optional(),
+            collaboratorSettings: z.nullable(z.record(z.string())).optional(),
+            description: z.nullable(z.string()).optional(),
             eligibilityRequirements: z
-                .array(CollaboratorGroupRequirement$.inboundSchema)
-                .nullable()
+                .nullable(z.array(CollaboratorGroupRequirement$.inboundSchema))
                 .optional(),
-            name: z.string().nullable().optional(),
+            name: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -57,13 +56,12 @@ export namespace CollaboratorGroupUpdateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorGroupUpdateRequest> =
         z
             .object({
-                collaboratorSettings: z.record(z.string()).nullable().optional(),
-                description: z.string().nullable().optional(),
+                collaboratorSettings: z.nullable(z.record(z.string())).optional(),
+                description: z.nullable(z.string()).optional(),
                 eligibilityRequirements: z
-                    .array(CollaboratorGroupRequirement$.outboundSchema)
-                    .nullable()
+                    .nullable(z.array(CollaboratorGroupRequirement$.outboundSchema))
                     .optional(),
-                name: z.string().nullable().optional(),
+                name: z.nullable(z.string()).optional(),
             })
             .transform((v) => {
                 return {

@@ -58,16 +58,16 @@ export namespace PayrollSettingsUpdate$ {
 
     export const inboundSchema: z.ZodType<PayrollSettingsUpdate, z.ZodTypeDef, Inbound> = z
         .object({
-            calculationSettings1099: CalculationSettings1099$.inboundSchema.nullable().optional(),
-            enablePlannedPayroll: z.boolean().nullable().optional(),
-            enableProcessDaysBeforeDue: z.boolean().nullable().optional(),
-            frequency: FrequencyUpdate$.inboundSchema.nullable().optional(),
-            fundingSource: FundingSource$.inboundSchema.nullable().optional(),
-            issue1099s: z.boolean().nullable().optional(),
-            processDaysBeforeDue: z.number().nullable().optional(),
-            scheduleDates: z.array(ScheduleDateUpdate$.inboundSchema).nullable().optional(),
-            status: PayrollSettingsUpdateStatus$.nullable().optional(),
-            workflow: PayrollSettingsUpdateWorkflow$.nullable().optional(),
+            calculationSettings1099: z.nullable(CalculationSettings1099$.inboundSchema).optional(),
+            enablePlannedPayroll: z.nullable(z.boolean()).optional(),
+            enableProcessDaysBeforeDue: z.nullable(z.boolean()).optional(),
+            frequency: z.nullable(FrequencyUpdate$.inboundSchema).optional(),
+            fundingSource: z.nullable(FundingSource$.inboundSchema).optional(),
+            issue1099s: z.nullable(z.boolean()).optional(),
+            processDaysBeforeDue: z.nullable(z.number()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDateUpdate$.inboundSchema)).optional(),
+            status: z.nullable(PayrollSettingsUpdateStatus$).optional(),
+            workflow: z.nullable(PayrollSettingsUpdateWorkflow$).optional(),
         })
         .transform((v) => {
             return {
@@ -107,16 +107,16 @@ export namespace PayrollSettingsUpdate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayrollSettingsUpdate> = z
         .object({
-            calculationSettings1099: CalculationSettings1099$.outboundSchema.nullable().optional(),
-            enablePlannedPayroll: z.boolean().nullable().optional(),
-            enableProcessDaysBeforeDue: z.boolean().nullable().optional(),
-            frequency: FrequencyUpdate$.outboundSchema.nullable().optional(),
-            fundingSource: FundingSource$.outboundSchema.nullable().optional(),
-            issue1099s: z.boolean().nullable().optional(),
-            processDaysBeforeDue: z.number().nullable().optional(),
-            scheduleDates: z.array(ScheduleDateUpdate$.outboundSchema).nullable().optional(),
-            status: PayrollSettingsUpdateStatus$.nullable().optional(),
-            workflow: PayrollSettingsUpdateWorkflow$.nullable().optional(),
+            calculationSettings1099: z.nullable(CalculationSettings1099$.outboundSchema).optional(),
+            enablePlannedPayroll: z.nullable(z.boolean()).optional(),
+            enableProcessDaysBeforeDue: z.nullable(z.boolean()).optional(),
+            frequency: z.nullable(FrequencyUpdate$.outboundSchema).optional(),
+            fundingSource: z.nullable(FundingSource$.outboundSchema).optional(),
+            issue1099s: z.nullable(z.boolean()).optional(),
+            processDaysBeforeDue: z.nullable(z.number()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDateUpdate$.outboundSchema)).optional(),
+            status: z.nullable(PayrollSettingsUpdateStatus$).optional(),
+            workflow: z.nullable(PayrollSettingsUpdateWorkflow$).optional(),
         })
         .transform((v) => {
             return {

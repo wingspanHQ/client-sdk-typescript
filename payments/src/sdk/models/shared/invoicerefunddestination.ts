@@ -62,14 +62,14 @@ export namespace InvoiceRefundDestination$ {
         .object({
             amount: z.number(),
             createdAt: z.string(),
-            destinationId: z.string().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
             destinationType: InvoiceRefundDestinationDestinationType$,
             events: InvoiceRefundEvents$.inboundSchema,
             labels: z.record(z.string()),
             refundType: RefundType$,
-            stripeTransferId: z.string().nullable().optional(),
-            transactionId: z.string().nullable().optional(),
-            transferId: z.string().nullable().optional(),
+            stripeTransferId: z.nullable(z.string()).optional(),
+            transactionId: z.nullable(z.string()).optional(),
+            transferId: z.nullable(z.string()).optional(),
             updatedAt: z.string(),
         })
         .transform((v) => {
@@ -108,14 +108,14 @@ export namespace InvoiceRefundDestination$ {
         .object({
             amount: z.number(),
             createdAt: z.string(),
-            destinationId: z.string().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
             destinationType: InvoiceRefundDestinationDestinationType$,
             events: InvoiceRefundEvents$.outboundSchema,
             labels: z.record(z.string()),
             refundType: RefundType$,
-            stripeTransferId: z.string().nullable().optional(),
-            transactionId: z.string().nullable().optional(),
-            transferId: z.string().nullable().optional(),
+            stripeTransferId: z.nullable(z.string()).optional(),
+            transactionId: z.nullable(z.string()).optional(),
+            transferId: z.nullable(z.string()).optional(),
             updatedAt: z.string(),
         })
         .transform((v) => {

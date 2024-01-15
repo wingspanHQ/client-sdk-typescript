@@ -25,14 +25,13 @@ export namespace InvoiceAttachments$ {
 
     export const inboundSchema: z.ZodType<InvoiceAttachments, z.ZodTypeDef, Inbound> = z
         .object({
-            customAttachmentIds: z.array(z.string()).nullable().optional(),
+            customAttachmentIds: z.nullable(z.array(z.string())).optional(),
             customAttachmentInfo: z
-                .array(InvoiceAttachmentFile$.inboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceAttachmentFile$.inboundSchema))
                 .optional(),
-            invoiceLink: z.string().nullable().optional(),
-            invoicePdf: z.string().nullable().optional(),
-            receiptPdf: z.string().nullable().optional(),
+            invoiceLink: z.nullable(z.string()).optional(),
+            invoicePdf: z.nullable(z.string()).optional(),
+            receiptPdf: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -58,14 +57,13 @@ export namespace InvoiceAttachments$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceAttachments> = z
         .object({
-            customAttachmentIds: z.array(z.string()).nullable().optional(),
+            customAttachmentIds: z.nullable(z.array(z.string())).optional(),
             customAttachmentInfo: z
-                .array(InvoiceAttachmentFile$.outboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceAttachmentFile$.outboundSchema))
                 .optional(),
-            invoiceLink: z.string().nullable().optional(),
-            invoicePdf: z.string().nullable().optional(),
-            receiptPdf: z.string().nullable().optional(),
+            invoiceLink: z.nullable(z.string()).optional(),
+            invoicePdf: z.nullable(z.string()).optional(),
+            receiptPdf: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

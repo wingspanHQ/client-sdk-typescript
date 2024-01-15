@@ -30,10 +30,11 @@ export namespace D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a
         Inbound
     > = z
         .object({
-            quickbooks:
-                SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$.inboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$.inboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {
@@ -54,10 +55,11 @@ export namespace D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a
         D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0
     > = z
         .object({
-            quickbooks:
-                SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$.outboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$.outboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {

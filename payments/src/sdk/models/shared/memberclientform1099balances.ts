@@ -105,23 +105,21 @@ export namespace MemberClientForm1099Balances$ {
     export const inboundSchema: z.ZodType<MemberClientForm1099Balances, z.ZodTypeDef, Inbound> = z
         .object({
             adjustments: z.number(),
-            correction: Form1099Correction$.inboundSchema.nullable().optional(),
+            correction: z.nullable(Form1099Correction$.inboundSchema).optional(),
             deliveryMethod: MemberClientForm1099BalancesDeliveryMethod$,
-            dispute:
-                Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.inboundSchema
-                    .nullable()
-                    .optional(),
-            events: Form1099Events$.inboundSchema.nullable().optional(),
+            dispute: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.inboundSchema
+                )
+                .optional(),
+            events: z.nullable(Form1099Events$.inboundSchema).optional(),
             exclusionReason: ExclusionReason$,
             form1099Generated: z.boolean(),
             paymentProcessingFees: z.number(),
             platformIncome: z.number(),
             status: MemberClientForm1099BalancesStatus$,
-            taxForm: z
-                .lazy(() => TaxForm$.inboundSchema)
-                .nullable()
-                .optional(),
-            taxFormId: z.string().nullable().optional(),
+            taxForm: z.nullable(z.lazy(() => TaxForm$.inboundSchema)).optional(),
+            taxFormId: z.nullable(z.string()).optional(),
             type: MemberClientForm1099BalancesType$,
         })
         .transform((v) => {
@@ -164,23 +162,21 @@ export namespace MemberClientForm1099Balances$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberClientForm1099Balances> = z
         .object({
             adjustments: z.number(),
-            correction: Form1099Correction$.outboundSchema.nullable().optional(),
+            correction: z.nullable(Form1099Correction$.outboundSchema).optional(),
             deliveryMethod: MemberClientForm1099BalancesDeliveryMethod$,
-            dispute:
-                Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.outboundSchema
-                    .nullable()
-                    .optional(),
-            events: Form1099Events$.outboundSchema.nullable().optional(),
+            dispute: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$.outboundSchema
+                )
+                .optional(),
+            events: z.nullable(Form1099Events$.outboundSchema).optional(),
             exclusionReason: ExclusionReason$,
             form1099Generated: z.boolean(),
             paymentProcessingFees: z.number(),
             platformIncome: z.number(),
             status: MemberClientForm1099BalancesStatus$,
-            taxForm: z
-                .lazy(() => TaxForm$.outboundSchema)
-                .nullable()
-                .optional(),
-            taxFormId: z.string().nullable().optional(),
+            taxForm: z.nullable(z.lazy(() => TaxForm$.outboundSchema)).optional(),
+            taxFormId: z.nullable(z.string()).optional(),
             type: MemberClientForm1099BalancesType$,
         })
         .transform((v) => {

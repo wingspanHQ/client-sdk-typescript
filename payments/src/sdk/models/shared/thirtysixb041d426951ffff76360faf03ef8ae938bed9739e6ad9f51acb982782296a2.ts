@@ -20,7 +20,7 @@ export namespace ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982
         Inbound
     > = z
         .object({
-            customAttachmentIds: z.array(z.string()).nullable().optional(),
+            customAttachmentIds: z.nullable(z.array(z.string())).optional(),
         })
         .transform((v) => {
             return {
@@ -40,7 +40,7 @@ export namespace ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982
         ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
     > = z
         .object({
-            customAttachmentIds: z.array(z.string()).nullable().optional(),
+            customAttachmentIds: z.nullable(z.array(z.string())).optional(),
         })
         .transform((v) => {
             return {

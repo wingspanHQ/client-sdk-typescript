@@ -156,43 +156,37 @@ export namespace PayableUpdateRequest$ {
     export const inboundSchema: z.ZodType<PayableUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableUpdateRequestAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableUpdateRequestAcceptedPaymentMethods$))
                 .optional(),
-            attachments:
-                ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.inboundSchema
-                    .nullable()
-                    .optional(),
-            chargedFees: Fees$.inboundSchema.nullable().optional(),
-            client: z
-                .lazy(() => PayableUpdateRequestClient$.inboundSchema)
-                .nullable()
+            attachments: z
+                .nullable(
+                    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.inboundSchema
+                )
                 .optional(),
+            chargedFees: z.nullable(Fees$.inboundSchema).optional(),
+            client: z.nullable(z.lazy(() => PayableUpdateRequestClient$.inboundSchema)).optional(),
             collaborators: z
-                .array(InvoiceCollaboratorUpdateRequest$.inboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceCollaboratorUpdateRequest$.inboundSchema))
                 .optional(),
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
-            dueDate: z.string().nullable().optional(),
-            integration:
-                ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
-                    .nullable()
-                    .optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lateFeeHandling: LateFeeConfigUpdate$.inboundSchema.nullable().optional(),
-            lineItems: z.array(InvoiceLineItemsCreateRequest$.inboundSchema).nullable().optional(),
-            member: z
-                .lazy(() => PayableUpdateRequestMember$.inboundSchema)
-                .nullable()
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
+            dueDate: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
+                )
                 .optional(),
-            memberClientId: z.string().nullable().optional(),
-            metadata: InvoiceMetadata$.inboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.inboundSchema
-                .nullable()
+            invoiceNotes: z.nullable(z.string()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lateFeeHandling: z.nullable(LateFeeConfigUpdate$.inboundSchema).optional(),
+            lineItems: z.nullable(z.array(InvoiceLineItemsCreateRequest$.inboundSchema)).optional(),
+            member: z.nullable(z.lazy(() => PayableUpdateRequestMember$.inboundSchema)).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            metadata: z.nullable(InvoiceMetadata$.inboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.inboundSchema)
                 .optional(),
-            paymentMethods: z.array(PaymentMethods$).nullable().optional(),
-            status: PayableUpdateRequestStatus$.nullable().optional(),
+            paymentMethods: z.nullable(z.array(PaymentMethods$)).optional(),
+            status: z.nullable(PayableUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -258,43 +252,39 @@ export namespace PayableUpdateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayableUpdateRequest> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableUpdateRequestAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableUpdateRequestAcceptedPaymentMethods$))
                 .optional(),
-            attachments:
-                ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.outboundSchema
-                    .nullable()
-                    .optional(),
-            chargedFees: Fees$.outboundSchema.nullable().optional(),
-            client: z
-                .lazy(() => PayableUpdateRequestClient$.outboundSchema)
-                .nullable()
+            attachments: z
+                .nullable(
+                    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.outboundSchema
+                )
                 .optional(),
+            chargedFees: z.nullable(Fees$.outboundSchema).optional(),
+            client: z.nullable(z.lazy(() => PayableUpdateRequestClient$.outboundSchema)).optional(),
             collaborators: z
-                .array(InvoiceCollaboratorUpdateRequest$.outboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceCollaboratorUpdateRequest$.outboundSchema))
                 .optional(),
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
-            dueDate: z.string().nullable().optional(),
-            integration:
-                ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
-                    .nullable()
-                    .optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lateFeeHandling: LateFeeConfigUpdate$.outboundSchema.nullable().optional(),
-            lineItems: z.array(InvoiceLineItemsCreateRequest$.outboundSchema).nullable().optional(),
-            member: z
-                .lazy(() => PayableUpdateRequestMember$.outboundSchema)
-                .nullable()
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
+            dueDate: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
+                )
                 .optional(),
-            memberClientId: z.string().nullable().optional(),
-            metadata: InvoiceMetadata$.outboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.outboundSchema
-                .nullable()
+            invoiceNotes: z.nullable(z.string()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lateFeeHandling: z.nullable(LateFeeConfigUpdate$.outboundSchema).optional(),
+            lineItems: z
+                .nullable(z.array(InvoiceLineItemsCreateRequest$.outboundSchema))
                 .optional(),
-            paymentMethods: z.array(PaymentMethods$).nullable().optional(),
-            status: PayableUpdateRequestStatus$.nullable().optional(),
+            member: z.nullable(z.lazy(() => PayableUpdateRequestMember$.outboundSchema)).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            metadata: z.nullable(InvoiceMetadata$.outboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.outboundSchema)
+                .optional(),
+            paymentMethods: z.nullable(z.array(PaymentMethods$)).optional(),
+            status: z.nullable(PayableUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

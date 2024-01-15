@@ -24,7 +24,7 @@ export namespace CollaboratorEvents$ {
         .object({
             knowYourCustomerVerifiedAt: z.string(),
             payoutMethodFirstAddedAt: z.string(),
-            signedUpAt: z.string().nullable().optional(),
+            signedUpAt: z.nullable(z.string()).optional(),
             taxDocumentationVerifiedAt: z.string(),
         })
         .transform((v) => {
@@ -47,7 +47,7 @@ export namespace CollaboratorEvents$ {
         .object({
             knowYourCustomerVerifiedAt: z.string(),
             payoutMethodFirstAddedAt: z.string(),
-            signedUpAt: z.string().nullable().optional(),
+            signedUpAt: z.nullable(z.string()).optional(),
             taxDocumentationVerifiedAt: z.string(),
         })
         .transform((v) => {

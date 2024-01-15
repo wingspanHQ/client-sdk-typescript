@@ -81,27 +81,26 @@ export namespace BulkInvoiceItemUpdate$ {
     export const inboundSchema: z.ZodType<BulkInvoiceItemUpdate, z.ZodTypeDef, Inbound> = z
         .object({
             acceptedPaymentMethods: z
-                .array(BulkInvoiceItemUpdateAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(BulkInvoiceItemUpdateAcceptedPaymentMethods$))
                 .optional(),
-            amount: z.number().nullable().optional(),
-            bulkInvoiceBatchId: z.string().nullable().optional(),
-            bulkInvoiceItemMergeKey: z.string().nullable().optional(),
-            bulkInvoiceItemReference: z.string().nullable().optional(),
-            clientEmail: z.string().nullable().optional(),
-            clientExternalId: z.string().nullable().optional(),
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
-            dueDate: z.string().nullable().optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            invoiceStatus: BulkInvoiceItemUpdateInvoiceStatus$.nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lineItemDescription: z.string().nullable().optional(),
-            lineItemDetail: z.string().nullable().optional(),
-            memberClientId: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            reimbursableExpense: z.boolean().nullable().optional(),
-            sendDate: z.string().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            bulkInvoiceBatchId: z.nullable(z.string()).optional(),
+            bulkInvoiceItemMergeKey: z.nullable(z.string()).optional(),
+            bulkInvoiceItemReference: z.nullable(z.string()).optional(),
+            clientEmail: z.nullable(z.string()).optional(),
+            clientExternalId: z.nullable(z.string()).optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
+            dueDate: z.nullable(z.string()).optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
+            invoiceStatus: z.nullable(BulkInvoiceItemUpdateInvoiceStatus$).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lineItemDescription: z.nullable(z.string()).optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
+            sendDate: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -171,27 +170,26 @@ export namespace BulkInvoiceItemUpdate$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkInvoiceItemUpdate> = z
         .object({
             acceptedPaymentMethods: z
-                .array(BulkInvoiceItemUpdateAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(BulkInvoiceItemUpdateAcceptedPaymentMethods$))
                 .optional(),
-            amount: z.number().nullable().optional(),
-            bulkInvoiceBatchId: z.string().nullable().optional(),
-            bulkInvoiceItemMergeKey: z.string().nullable().optional(),
-            bulkInvoiceItemReference: z.string().nullable().optional(),
-            clientEmail: z.string().nullable().optional(),
-            clientExternalId: z.string().nullable().optional(),
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
-            dueDate: z.string().nullable().optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            invoiceStatus: BulkInvoiceItemUpdateInvoiceStatus$.nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lineItemDescription: z.string().nullable().optional(),
-            lineItemDetail: z.string().nullable().optional(),
-            memberClientId: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            reimbursableExpense: z.boolean().nullable().optional(),
-            sendDate: z.string().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            bulkInvoiceBatchId: z.nullable(z.string()).optional(),
+            bulkInvoiceItemMergeKey: z.nullable(z.string()).optional(),
+            bulkInvoiceItemReference: z.nullable(z.string()).optional(),
+            clientEmail: z.nullable(z.string()).optional(),
+            clientExternalId: z.nullable(z.string()).optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
+            dueDate: z.nullable(z.string()).optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
+            invoiceStatus: z.nullable(BulkInvoiceItemUpdateInvoiceStatus$).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lineItemDescription: z.nullable(z.string()).optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
+            sendDate: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

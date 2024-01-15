@@ -48,13 +48,13 @@ export namespace ClientInvoiceCreateRequest$ {
 
     export const inboundSchema: z.ZodType<ClientInvoiceCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            clientCompany: z.string().nullable().optional(),
+            clientCompany: z.nullable(z.string()).optional(),
             clientEmail: z.string(),
-            clientEmailCC: z.array(z.string()).nullable().optional(),
-            clientFirstName: z.string().nullable().optional(),
-            clientLastName: z.string().nullable().optional(),
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
-            currency: ClientInvoiceCreateRequestCurrency$.nullable().optional(),
+            clientEmailCC: z.nullable(z.array(z.string())).optional(),
+            clientFirstName: z.nullable(z.string()).optional(),
+            clientLastName: z.nullable(z.string()).optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
+            currency: z.nullable(ClientInvoiceCreateRequestCurrency$).optional(),
             dueDate: z.string(),
             lineItems: z.array(InvoiceLineItemsCreateRequest$.inboundSchema),
             memberId: z.string(),
@@ -93,13 +93,13 @@ export namespace ClientInvoiceCreateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ClientInvoiceCreateRequest> = z
         .object({
-            clientCompany: z.string().nullable().optional(),
+            clientCompany: z.nullable(z.string()).optional(),
             clientEmail: z.string(),
-            clientEmailCC: z.array(z.string()).nullable().optional(),
-            clientFirstName: z.string().nullable().optional(),
-            clientLastName: z.string().nullable().optional(),
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
-            currency: ClientInvoiceCreateRequestCurrency$.nullable().optional(),
+            clientEmailCC: z.nullable(z.array(z.string())).optional(),
+            clientFirstName: z.nullable(z.string()).optional(),
+            clientLastName: z.nullable(z.string()).optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
+            currency: z.nullable(ClientInvoiceCreateRequestCurrency$).optional(),
             dueDate: z.string(),
             lineItems: z.array(InvoiceLineItemsCreateRequest$.outboundSchema),
             memberId: z.string(),

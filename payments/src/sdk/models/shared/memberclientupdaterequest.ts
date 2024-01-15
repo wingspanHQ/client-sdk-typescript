@@ -91,27 +91,28 @@ export namespace MemberClientUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<MemberClientUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            clientData: ClientData$.inboundSchema.nullable().optional(),
-            clientId: z.string().nullable().optional(),
-            company: z.string().nullable().optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
-            emailTo: z.string().nullable().optional(),
-            form1099Balances:
-                Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.inboundSchema
-                    .nullable()
-                    .optional(),
-            formW9Data: z
-                .lazy(() => MemberClientUpdateRequestFormW9Data$.inboundSchema)
-                .nullable()
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
+            clientId: z.nullable(z.string()).optional(),
+            company: z.nullable(z.string()).optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
+            emailTo: z.nullable(z.string()).optional(),
+            form1099Balances: z
+                .nullable(
+                    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.inboundSchema
+                )
                 .optional(),
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.inboundSchema.nullable().optional(),
-            name: z.string().nullable().optional(),
-            status: MemberClientUpdateRequestStatus$.nullable().optional(),
+            formW9Data: z
+                .nullable(z.lazy(() => MemberClientUpdateRequestFormW9Data$.inboundSchema))
+                .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
+            name: z.nullable(z.string()).optional(),
+            status: z.nullable(MemberClientUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -155,27 +156,28 @@ export namespace MemberClientUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberClientUpdateRequest> = z
         .object({
-            clientData: ClientData$.outboundSchema.nullable().optional(),
-            clientId: z.string().nullable().optional(),
-            company: z.string().nullable().optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
-            emailTo: z.string().nullable().optional(),
-            form1099Balances:
-                Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.outboundSchema
-                    .nullable()
-                    .optional(),
-            formW9Data: z
-                .lazy(() => MemberClientUpdateRequestFormW9Data$.outboundSchema)
-                .nullable()
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
+            clientId: z.nullable(z.string()).optional(),
+            company: z.nullable(z.string()).optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
+            emailTo: z.nullable(z.string()).optional(),
+            form1099Balances: z
+                .nullable(
+                    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$.outboundSchema
+                )
                 .optional(),
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.outboundSchema.nullable().optional(),
-            name: z.string().nullable().optional(),
-            status: MemberClientUpdateRequestStatus$.nullable().optional(),
+            formW9Data: z
+                .nullable(z.lazy(() => MemberClientUpdateRequestFormW9Data$.outboundSchema))
+                .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
+            name: z.nullable(z.string()).optional(),
+            status: z.nullable(MemberClientUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

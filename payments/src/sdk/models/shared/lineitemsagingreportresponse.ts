@@ -103,7 +103,7 @@ export namespace LineItemsAgingReportResponse$ {
         .object({
             ageGroup: z.string(),
             amount: z.number(),
-            approverName: z.string().nullable().optional(),
+            approverName: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             currency: z.string(),
             dueDate: z.string(),
@@ -111,21 +111,20 @@ export namespace LineItemsAgingReportResponse$ {
             invoiceNumber: z.string(),
             invoicePdf: z.string(),
             labels: z
-                .lazy(() => LineItemsAgingReportResponseLabels$.inboundSchema)
-                .nullable()
+                .nullable(z.lazy(() => LineItemsAgingReportResponseLabels$.inboundSchema))
                 .optional(),
             lineItems: z.array(LineItemsAgingReportLineItem$.inboundSchema),
             member: RedactedMember$.inboundSchema,
             memberClientId: z.string(),
-            memberExternalId: z.number().nullable().optional(),
+            memberExternalId: z.nullable(z.number()).optional(),
             memberId: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            payoutDestination: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            payoutDestination: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
             receiptPdf: z.string(),
-            sentDate: z.string().nullable().optional(),
+            sentDate: z.nullable(z.string()).optional(),
             status: LineItemsAgingReportResponseStatus$,
             updatedAt: z.string(),
         })
@@ -195,7 +194,7 @@ export namespace LineItemsAgingReportResponse$ {
         .object({
             ageGroup: z.string(),
             amount: z.number(),
-            approverName: z.string().nullable().optional(),
+            approverName: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             currency: z.string(),
             dueDate: z.string(),
@@ -203,21 +202,20 @@ export namespace LineItemsAgingReportResponse$ {
             invoiceNumber: z.string(),
             invoicePdf: z.string(),
             labels: z
-                .lazy(() => LineItemsAgingReportResponseLabels$.outboundSchema)
-                .nullable()
+                .nullable(z.lazy(() => LineItemsAgingReportResponseLabels$.outboundSchema))
                 .optional(),
             lineItems: z.array(LineItemsAgingReportLineItem$.outboundSchema),
             member: RedactedMember$.outboundSchema,
             memberClientId: z.string(),
-            memberExternalId: z.number().nullable().optional(),
+            memberExternalId: z.nullable(z.number()).optional(),
             memberId: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            payoutDestination: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            payoutDestination: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
             receiptPdf: z.string(),
-            sentDate: z.string().nullable().optional(),
+            sentDate: z.nullable(z.string()).optional(),
             status: LineItemsAgingReportResponseStatus$,
             updatedAt: z.string(),
         })

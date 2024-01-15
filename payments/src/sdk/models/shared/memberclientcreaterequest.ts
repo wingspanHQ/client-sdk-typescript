@@ -55,19 +55,20 @@ export namespace MemberClientCreateRequest$ {
 
     export const inboundSchema: z.ZodType<MemberClientCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            clientId: z.string().nullable().optional(),
-            company: z.string().nullable().optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
-            emailTo: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.inboundSchema.nullable().optional(),
-            memberId: z.string().nullable().optional(),
-            name: z.string().nullable().optional(),
-            status: MemberClientCreateRequestStatus$.nullable().optional(),
+            clientId: z.nullable(z.string()).optional(),
+            company: z.nullable(z.string()).optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
+            emailTo: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
+            memberId: z.nullable(z.string()).optional(),
+            name: z.nullable(z.string()).optional(),
+            status: z.nullable(MemberClientCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -102,19 +103,20 @@ export namespace MemberClientCreateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberClientCreateRequest> = z
         .object({
-            clientId: z.string().nullable().optional(),
-            company: z.string().nullable().optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
-            emailTo: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberData: MemberData$.outboundSchema.nullable().optional(),
-            memberId: z.string().nullable().optional(),
-            name: z.string().nullable().optional(),
-            status: MemberClientCreateRequestStatus$.nullable().optional(),
+            clientId: z.nullable(z.string()).optional(),
+            company: z.nullable(z.string()).optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
+            emailTo: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
+            memberId: z.nullable(z.string()).optional(),
+            name: z.nullable(z.string()).optional(),
+            status: z.nullable(MemberClientCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

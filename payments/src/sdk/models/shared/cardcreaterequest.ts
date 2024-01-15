@@ -19,8 +19,8 @@ export namespace CardCreateRequest$ {
 
     export const inboundSchema: z.ZodType<CardCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            requestPhysicalCard: z.boolean().nullable().optional(),
-            shippingAddress: Address$.inboundSchema.nullable().optional(),
+            requestPhysicalCard: z.nullable(z.boolean()).optional(),
+            shippingAddress: z.nullable(Address$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -40,8 +40,8 @@ export namespace CardCreateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CardCreateRequest> = z
         .object({
-            requestPhysicalCard: z.boolean().nullable().optional(),
-            shippingAddress: Address$.outboundSchema.nullable().optional(),
+            requestPhysicalCard: z.nullable(z.boolean()).optional(),
+            shippingAddress: z.nullable(Address$.outboundSchema).optional(),
         })
         .transform((v) => {
             return {

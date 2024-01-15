@@ -51,11 +51,11 @@ export namespace CalculationSettings1099$ {
 
     export const inboundSchema: z.ZodType<CalculationSettings1099, z.ZodTypeDef, Inbound> = z
         .object({
-            cardProcessingFees: CardProcessingFees$.nullable().optional(),
-            offPlatformPayments: OffPlatformPayments$.nullable().optional(),
-            reimbursableExpenses: ReimbursableExpenses$.nullable().optional(),
-            stateTaxId: z.record(z.string()).nullable().optional(),
-            thresholdAmount: z.number().nullable().optional(),
+            cardProcessingFees: z.nullable(CardProcessingFees$).optional(),
+            offPlatformPayments: z.nullable(OffPlatformPayments$).optional(),
+            reimbursableExpenses: z.nullable(ReimbursableExpenses$).optional(),
+            stateTaxId: z.nullable(z.record(z.string())).optional(),
+            thresholdAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -85,11 +85,11 @@ export namespace CalculationSettings1099$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CalculationSettings1099> = z
         .object({
-            cardProcessingFees: CardProcessingFees$.nullable().optional(),
-            offPlatformPayments: OffPlatformPayments$.nullable().optional(),
-            reimbursableExpenses: ReimbursableExpenses$.nullable().optional(),
-            stateTaxId: z.record(z.string()).nullable().optional(),
-            thresholdAmount: z.number().nullable().optional(),
+            cardProcessingFees: z.nullable(CardProcessingFees$).optional(),
+            offPlatformPayments: z.nullable(OffPlatformPayments$).optional(),
+            reimbursableExpenses: z.nullable(ReimbursableExpenses$).optional(),
+            stateTaxId: z.nullable(z.record(z.string())).optional(),
+            thresholdAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

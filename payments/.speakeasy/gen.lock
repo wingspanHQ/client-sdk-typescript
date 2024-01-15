@@ -4,16 +4,16 @@ management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 1.0.0
-  configChecksum: 92a710d2e68cb681f614d8be8743062b
+  generationVersion: 2.231.0
+  releaseVersion: 1.0.1
+  configChecksum: d8dd810fd5b43bbfb307be6ff023f50d
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
   published: true
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.5
     deprecations: 2.81.1
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1

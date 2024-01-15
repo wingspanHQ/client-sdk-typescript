@@ -105,21 +105,18 @@ export namespace CollaboratorsPayoutsSummaryReportResponse$ {
                 SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d$.inboundSchema
             ),
             createdAt: z.string(),
-            externalId: z.string().nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
             inviteEmail: z.string(),
-            labels: z
-                .lazy(() => Labels$.inboundSchema)
-                .nullable()
-                .optional(),
+            labels: z.nullable(z.lazy(() => Labels$.inboundSchema)).optional(),
             member: RedactedMember$.inboundSchema,
             memberClientId: z.string(),
-            memberEvents: CollaboratorEvents$.inboundSchema.nullable().optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.inboundSchema).optional(),
             memberId: z.string(),
             payoutsSummary: CollaboratorPayoutsSummary$.inboundSchema,
             servicesStatus:
                 B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$.inboundSchema,
             status: CollaboratorsPayoutsSummaryReportResponseStatus$,
-            taxDocumentStared: z.boolean().nullable().optional(),
+            taxDocumentStared: z.nullable(z.boolean()).optional(),
             taxStatus: CollaboratorsPayoutsSummaryReportResponseTaxStatus$,
             updatedAt: z.string(),
         })
@@ -176,21 +173,18 @@ export namespace CollaboratorsPayoutsSummaryReportResponse$ {
                 SixtySixad6f986038e3285c36e0faa5c61b52a02882d1460acb116b601a30abfb6c1d$.outboundSchema
             ),
             createdAt: z.string(),
-            externalId: z.string().nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
             inviteEmail: z.string(),
-            labels: z
-                .lazy(() => Labels$.outboundSchema)
-                .nullable()
-                .optional(),
+            labels: z.nullable(z.lazy(() => Labels$.outboundSchema)).optional(),
             member: RedactedMember$.outboundSchema,
             memberClientId: z.string(),
-            memberEvents: CollaboratorEvents$.outboundSchema.nullable().optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.outboundSchema).optional(),
             memberId: z.string(),
             payoutsSummary: CollaboratorPayoutsSummary$.outboundSchema,
             servicesStatus:
                 B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$.outboundSchema,
             status: CollaboratorsPayoutsSummaryReportResponseStatus$,
-            taxDocumentStared: z.boolean().nullable().optional(),
+            taxDocumentStared: z.nullable(z.boolean()).optional(),
             taxStatus: CollaboratorsPayoutsSummaryReportResponseTaxStatus$,
             updatedAt: z.string(),
         })

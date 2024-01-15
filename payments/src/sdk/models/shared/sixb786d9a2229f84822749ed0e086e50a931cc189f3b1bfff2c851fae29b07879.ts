@@ -20,7 +20,7 @@ export namespace Sixb786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07
         Inbound
     > = z
         .object({
-            expenseAccountId: z.string().nullable().optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -40,7 +40,7 @@ export namespace Sixb786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07
         Sixb786d9a2229f84822749ed0e086e50a931cc189f3b1bfff2c851fae29b07879
     > = z
         .object({
-            expenseAccountId: z.string().nullable().optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

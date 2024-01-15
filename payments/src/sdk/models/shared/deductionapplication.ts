@@ -21,7 +21,7 @@ export namespace DeductionApplication$ {
     export const inboundSchema: z.ZodType<DeductionApplication, z.ZodTypeDef, Inbound> = z
         .object({
             amountDeducted: z.number(),
-            disbursementId: z.string().nullable().optional(),
+            disbursementId: z.nullable(z.string()).optional(),
             payableId: z.string(),
         })
         .transform((v) => {
@@ -41,7 +41,7 @@ export namespace DeductionApplication$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, DeductionApplication> = z
         .object({
             amountDeducted: z.number(),
-            disbursementId: z.string().nullable().optional(),
+            disbursementId: z.nullable(z.string()).optional(),
             payableId: z.string(),
         })
         .transform((v) => {

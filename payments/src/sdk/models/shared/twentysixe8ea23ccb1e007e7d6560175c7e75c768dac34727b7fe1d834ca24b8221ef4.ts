@@ -30,10 +30,11 @@ export namespace TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24
         Inbound
     > = z
         .object({
-            quickbooks:
-                Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$.inboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$.inboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {
@@ -54,10 +55,11 @@ export namespace TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24
         TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4
     > = z
         .object({
-            quickbooks:
-                Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$.outboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$.outboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {

@@ -22,8 +22,8 @@ export namespace Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f
         Inbound
     > = z
         .object({
-            institution: z.string().nullable().optional(),
-            mask: z.string().nullable().optional(),
+            institution: z.nullable(z.string()).optional(),
+            mask: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -43,8 +43,8 @@ export namespace Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f
         Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4
     > = z
         .object({
-            institution: z.string().nullable().optional(),
-            mask: z.string().nullable().optional(),
+            institution: z.nullable(z.string()).optional(),
+            mask: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

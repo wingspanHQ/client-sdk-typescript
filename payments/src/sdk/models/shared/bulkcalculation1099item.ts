@@ -75,10 +75,11 @@ export namespace BulkCalculation1099Item$ {
             createdAt: z.string(),
             eventActors: z.record(z.string()),
             labels: z.record(z.string()),
-            metadata:
-                EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$.inboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$.inboundSchema
+                )
+                .optional(),
             status: BulkCalculation1099ItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -128,10 +129,11 @@ export namespace BulkCalculation1099Item$ {
             createdAt: z.string(),
             eventActors: z.record(z.string()),
             labels: z.record(z.string()),
-            metadata:
-                EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$.outboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$.outboundSchema
+                )
+                .optional(),
             status: BulkCalculation1099ItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

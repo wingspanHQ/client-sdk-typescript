@@ -148,39 +148,34 @@ export namespace PayableCreateRequest$ {
     export const inboundSchema: z.ZodType<PayableCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableCreateRequestAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableCreateRequestAcceptedPaymentMethods$))
                 .optional(),
-            attachments:
-                ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.inboundSchema
-                    .nullable()
-                    .optional(),
-            client: z
-                .lazy(() => PayableCreateRequestClient$.inboundSchema)
-                .nullable()
+            attachments: z
+                .nullable(
+                    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.inboundSchema
+                )
                 .optional(),
+            client: z.nullable(z.lazy(() => PayableCreateRequestClient$.inboundSchema)).optional(),
             collaboratorId: z.string(),
             creditFeeHandling: FeeHandlingConfig$.inboundSchema,
-            currency: PayableCreateRequestCurrency$.nullable().optional(),
+            currency: z.nullable(PayableCreateRequestCurrency$).optional(),
             dueDate: z.string(),
-            integration:
-                ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
-                    .nullable()
-                    .optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lateFeeHandling: LateFeeConfigUpdate$.inboundSchema.nullable().optional(),
+            integration: z
+                .nullable(
+                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.inboundSchema
+                )
+                .optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lateFeeHandling: z.nullable(LateFeeConfigUpdate$.inboundSchema).optional(),
             lineItems: z.array(InvoiceLineItemsCreateRequest$.inboundSchema),
-            member: z
-                .lazy(() => PayableCreateRequestMember$.inboundSchema)
-                .nullable()
+            member: z.nullable(z.lazy(() => PayableCreateRequestMember$.inboundSchema)).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            metadata: z.nullable(InvoiceMetadata$.inboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.inboundSchema)
                 .optional(),
-            memberClientId: z.string().nullable().optional(),
-            metadata: InvoiceMetadata$.inboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.inboundSchema
-                .nullable()
-                .optional(),
-            status: PayableCreateRequestStatus$.nullable().optional(),
+            status: z.nullable(PayableCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -242,39 +237,34 @@ export namespace PayableCreateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayableCreateRequest> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableCreateRequestAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableCreateRequestAcceptedPaymentMethods$))
                 .optional(),
-            attachments:
-                ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.outboundSchema
-                    .nullable()
-                    .optional(),
-            client: z
-                .lazy(() => PayableCreateRequestClient$.outboundSchema)
-                .nullable()
+            attachments: z
+                .nullable(
+                    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$.outboundSchema
+                )
                 .optional(),
+            client: z.nullable(z.lazy(() => PayableCreateRequestClient$.outboundSchema)).optional(),
             collaboratorId: z.string(),
             creditFeeHandling: FeeHandlingConfig$.outboundSchema,
-            currency: PayableCreateRequestCurrency$.nullable().optional(),
+            currency: z.nullable(PayableCreateRequestCurrency$).optional(),
             dueDate: z.string(),
-            integration:
-                ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
-                    .nullable()
-                    .optional(),
-            invoiceNotes: z.string().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            lateFeeHandling: LateFeeConfigUpdate$.outboundSchema.nullable().optional(),
+            integration: z
+                .nullable(
+                    ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461$.outboundSchema
+                )
+                .optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            lateFeeHandling: z.nullable(LateFeeConfigUpdate$.outboundSchema).optional(),
             lineItems: z.array(InvoiceLineItemsCreateRequest$.outboundSchema),
-            member: z
-                .lazy(() => PayableCreateRequestMember$.outboundSchema)
-                .nullable()
+            member: z.nullable(z.lazy(() => PayableCreateRequestMember$.outboundSchema)).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            metadata: z.nullable(InvoiceMetadata$.outboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.outboundSchema)
                 .optional(),
-            memberClientId: z.string().nullable().optional(),
-            metadata: InvoiceMetadata$.outboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.outboundSchema
-                .nullable()
-                .optional(),
-            status: PayableCreateRequestStatus$.nullable().optional(),
+            status: z.nullable(PayableCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

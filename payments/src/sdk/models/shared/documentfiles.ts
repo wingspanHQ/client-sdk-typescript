@@ -18,8 +18,8 @@ export namespace DocumentFiles$ {
 
     export const inboundSchema: z.ZodType<DocumentFiles, z.ZodTypeDef, Inbound> = z
         .object({
-            client: z.string().nullable().optional(),
-            member: z.string().nullable().optional(),
+            client: z.nullable(z.string()).optional(),
+            member: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -35,8 +35,8 @@ export namespace DocumentFiles$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, DocumentFiles> = z
         .object({
-            client: z.string().nullable().optional(),
-            member: z.string().nullable().optional(),
+            client: z.nullable(z.string()).optional(),
+            member: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

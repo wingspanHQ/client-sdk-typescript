@@ -95,24 +95,26 @@ export namespace BulkClientItem$ {
             bulkClientBatchId: z.string(),
             bulkClientItemId: z.string(),
             clientStatus: ClientStatus$,
-            company: z.string().nullable().optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            email: z.string().nullable().optional(),
+            email: z.nullable(z.string()).optional(),
             eventActors: z.record(z.string()),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
-                    .nullable()
-                    .optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.inboundSchema
+                )
+                .optional(),
             labels: z.record(z.string()),
-            memberClientId: z.string().nullable().optional(),
-            memberData: MemberData$.inboundSchema.nullable().optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
             memberId: z.string(),
-            metadata:
-                FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$.inboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$.inboundSchema
+                )
+                .optional(),
             status: BulkClientItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -172,24 +174,26 @@ export namespace BulkClientItem$ {
             bulkClientBatchId: z.string(),
             bulkClientItemId: z.string(),
             clientStatus: ClientStatus$,
-            company: z.string().nullable().optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            email: z.string().nullable().optional(),
+            email: z.nullable(z.string()).optional(),
             eventActors: z.record(z.string()),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            integration:
-                D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
-                    .nullable()
-                    .optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            integration: z
+                .nullable(
+                    D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$.outboundSchema
+                )
+                .optional(),
             labels: z.record(z.string()),
-            memberClientId: z.string().nullable().optional(),
-            memberData: MemberData$.outboundSchema.nullable().optional(),
+            memberClientId: z.nullable(z.string()).optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
             memberId: z.string(),
-            metadata:
-                FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$.outboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$.outboundSchema
+                )
+                .optional(),
             status: BulkClientItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

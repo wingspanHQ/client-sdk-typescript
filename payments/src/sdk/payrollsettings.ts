@@ -57,7 +57,7 @@ export class PayrollSettings extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -122,7 +122,7 @@ export class PayrollSettings extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "patch",
+                method: "PATCH",
                 path: path$,
                 headers: headers$,
                 body: body$,

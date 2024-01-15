@@ -62,17 +62,14 @@ export namespace Form1099Correction$ {
 
     export const inboundSchema: z.ZodType<Form1099Correction, z.ZodTypeDef, Inbound> = z
         .object({
-            address: z
-                .lazy(() => Form1099CorrectionAddress$.inboundSchema)
-                .nullable()
-                .optional(),
-            companyStructure: Form1099CorrectionCompanyStructure$.nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            totalAmount: z.number().nullable().optional(),
+            address: z.nullable(z.lazy(() => Form1099CorrectionAddress$.inboundSchema)).optional(),
+            companyStructure: z.nullable(Form1099CorrectionCompanyStructure$).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            totalAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -104,17 +101,14 @@ export namespace Form1099Correction$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Form1099Correction> = z
         .object({
-            address: z
-                .lazy(() => Form1099CorrectionAddress$.outboundSchema)
-                .nullable()
-                .optional(),
-            companyStructure: Form1099CorrectionCompanyStructure$.nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            totalAmount: z.number().nullable().optional(),
+            address: z.nullable(z.lazy(() => Form1099CorrectionAddress$.outboundSchema)).optional(),
+            companyStructure: z.nullable(Form1099CorrectionCompanyStructure$).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            totalAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

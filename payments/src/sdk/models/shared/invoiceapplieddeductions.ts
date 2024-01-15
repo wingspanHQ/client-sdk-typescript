@@ -25,7 +25,7 @@ export namespace InvoiceAppliedDeductions$ {
             amount: z.number(),
             deductionId: z.string(),
             name: z.string(),
-            transferId: z.string().nullable().optional(),
+            transferId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -48,7 +48,7 @@ export namespace InvoiceAppliedDeductions$ {
             amount: z.number(),
             deductionId: z.string(),
             name: z.string(),
-            transferId: z.string().nullable().optional(),
+            transferId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -31,12 +31,11 @@ export namespace CollaboratorGroupResponse$ {
         .object({
             clientId: z.string(),
             collaboratorGroupId: z.string(),
-            collaboratorSettings: z.record(z.string()).nullable().optional(),
+            collaboratorSettings: z.nullable(z.record(z.string())).optional(),
             defaultGroup: z.boolean(),
             description: z.string(),
             eligibilityRequirements: z
-                .array(EligibilityRequirement$.inboundSchema)
-                .nullable()
+                .nullable(z.array(EligibilityRequirement$.inboundSchema))
                 .optional(),
             name: z.string(),
         })
@@ -70,12 +69,11 @@ export namespace CollaboratorGroupResponse$ {
         .object({
             clientId: z.string(),
             collaboratorGroupId: z.string(),
-            collaboratorSettings: z.record(z.string()).nullable().optional(),
+            collaboratorSettings: z.nullable(z.record(z.string())).optional(),
             defaultGroup: z.boolean(),
             description: z.string(),
             eligibilityRequirements: z
-                .array(EligibilityRequirement$.outboundSchema)
-                .nullable()
+                .nullable(z.array(EligibilityRequirement$.outboundSchema))
                 .optional(),
             name: z.string(),
         })

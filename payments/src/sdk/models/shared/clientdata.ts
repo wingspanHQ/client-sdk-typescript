@@ -38,9 +38,9 @@ export namespace ClientData$ {
 
     export const inboundSchema: z.ZodType<ClientData, z.ZodTypeDef, Inbound> = z
         .object({
-            autoPayStrategy: AutoPayStrategy$.nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            verificationStratgy: VerificationStratgy$.nullable().optional(),
+            autoPayStrategy: z.nullable(AutoPayStrategy$).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            verificationStratgy: z.nullable(VerificationStratgy$).optional(),
         })
         .transform((v) => {
             return {
@@ -62,9 +62,9 @@ export namespace ClientData$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ClientData> = z
         .object({
-            autoPayStrategy: AutoPayStrategy$.nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            verificationStratgy: VerificationStratgy$.nullable().optional(),
+            autoPayStrategy: z.nullable(AutoPayStrategy$).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            verificationStratgy: z.nullable(VerificationStratgy$).optional(),
         })
         .transform((v) => {
             return {

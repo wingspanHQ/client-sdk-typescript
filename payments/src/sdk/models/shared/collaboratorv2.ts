@@ -86,7 +86,7 @@ export namespace CollaboratorV2$ {
     export const inboundSchema: z.ZodType<CollaboratorV2, z.ZodTypeDef, Inbound> = z
         .object({
             achCreditAccount: MemberClientWireAccount$.inboundSchema,
-            clientData: ClientData$.inboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
             clientId: z.string(),
             collaborations: z.array(Collaboration$.inboundSchema),
             createdAt: z.string(),
@@ -98,8 +98,8 @@ export namespace CollaboratorV2$ {
             internationalWireAccount: MemberClientWireAccount$.inboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.inboundSchema,
-            memberData: MemberData$.inboundSchema.nullable().optional(),
-            memberEvents: CollaboratorEvents$.inboundSchema.nullable().optional(),
+            memberData: z.nullable(MemberData$.inboundSchema).optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.inboundSchema).optional(),
             memberId: z.string(),
             primaryCollaborationId: z.string(),
             status: CollaboratorV2Status$,
@@ -158,7 +158,7 @@ export namespace CollaboratorV2$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorV2> = z
         .object({
             achCreditAccount: MemberClientWireAccount$.outboundSchema,
-            clientData: ClientData$.outboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
             clientId: z.string(),
             collaborations: z.array(Collaboration$.outboundSchema),
             createdAt: z.string(),
@@ -170,8 +170,8 @@ export namespace CollaboratorV2$ {
             internationalWireAccount: MemberClientWireAccount$.outboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.outboundSchema,
-            memberData: MemberData$.outboundSchema.nullable().optional(),
-            memberEvents: CollaboratorEvents$.outboundSchema.nullable().optional(),
+            memberData: z.nullable(MemberData$.outboundSchema).optional(),
+            memberEvents: z.nullable(CollaboratorEvents$.outboundSchema).optional(),
             memberId: z.string(),
             primaryCollaborationId: z.string(),
             status: CollaboratorV2Status$,

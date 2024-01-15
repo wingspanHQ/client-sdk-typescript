@@ -44,7 +44,7 @@ export class ServiceSettings extends ClientSDK {
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
+            { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
             options
         );
 

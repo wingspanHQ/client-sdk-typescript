@@ -33,9 +33,9 @@ export namespace BulkCalculation1099ItemCreate$ {
 
     export const inboundSchema: z.ZodType<BulkCalculation1099ItemCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            calculationType: BulkCalculation1099ItemCreateCalculationType$.nullable().optional(),
+            calculationType: z.nullable(BulkCalculation1099ItemCreateCalculationType$).optional(),
             clientId: z.string(),
-            labels: z.record(z.string()).nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
             year: z.number(),
         })
         .transform((v) => {
@@ -59,10 +59,11 @@ export namespace BulkCalculation1099ItemCreate$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkCalculation1099ItemCreate> =
         z
             .object({
-                calculationType:
-                    BulkCalculation1099ItemCreateCalculationType$.nullable().optional(),
+                calculationType: z
+                    .nullable(BulkCalculation1099ItemCreateCalculationType$)
+                    .optional(),
                 clientId: z.string(),
-                labels: z.record(z.string()).nullable().optional(),
+                labels: z.nullable(z.record(z.string())).optional(),
                 year: z.number(),
             })
             .transform((v) => {

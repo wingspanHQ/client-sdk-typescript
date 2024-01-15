@@ -38,9 +38,9 @@ export namespace ClientInvoiceDataCreateRequest$ {
 
     export const inboundSchema: z.ZodType<ClientInvoiceDataCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
-            currency: ClientInvoiceDataCreateRequestCurrency$.nullable().optional(),
-            dueDate: z.string().nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
+            currency: z.nullable(ClientInvoiceDataCreateRequestCurrency$).optional(),
+            dueDate: z.nullable(z.string()).optional(),
             lineItems: z.array(InvoiceLineItemsCreateRequest$.inboundSchema),
         })
         .transform((v) => {
@@ -64,9 +64,9 @@ export namespace ClientInvoiceDataCreateRequest$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ClientInvoiceDataCreateRequest> =
         z
             .object({
-                creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
-                currency: ClientInvoiceDataCreateRequestCurrency$.nullable().optional(),
-                dueDate: z.string().nullable().optional(),
+                creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
+                currency: z.nullable(ClientInvoiceDataCreateRequestCurrency$).optional(),
+                dueDate: z.nullable(z.string()).optional(),
                 lineItems: z.array(InvoiceLineItemsCreateRequest$.outboundSchema),
             })
             .transform((v) => {

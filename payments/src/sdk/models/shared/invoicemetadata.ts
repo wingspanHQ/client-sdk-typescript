@@ -58,11 +58,11 @@ export namespace InvoiceMetadata$ {
 
     export const inboundSchema: z.ZodType<InvoiceMetadata, z.ZodTypeDef, Inbound> = z
         .object({
-            depositNote: z.string().nullable().optional(),
-            invoiceDate: z.string().nullable().optional(),
-            payoutPendingReason: PayoutPendingReason$.nullable().optional(),
-            pendingStatusReason: PendingStatusReason$.nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            depositNote: z.nullable(z.string()).optional(),
+            invoiceDate: z.nullable(z.string()).optional(),
+            payoutPendingReason: z.nullable(PayoutPendingReason$).optional(),
+            pendingStatusReason: z.nullable(PendingStatusReason$).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -90,11 +90,11 @@ export namespace InvoiceMetadata$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceMetadata> = z
         .object({
-            depositNote: z.string().nullable().optional(),
-            invoiceDate: z.string().nullable().optional(),
-            payoutPendingReason: PayoutPendingReason$.nullable().optional(),
-            pendingStatusReason: PendingStatusReason$.nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            depositNote: z.nullable(z.string()).optional(),
+            invoiceDate: z.nullable(z.string()).optional(),
+            payoutPendingReason: z.nullable(PayoutPendingReason$).optional(),
+            pendingStatusReason: z.nullable(PendingStatusReason$).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

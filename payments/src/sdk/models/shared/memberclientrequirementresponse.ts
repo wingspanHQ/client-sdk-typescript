@@ -58,13 +58,13 @@ export namespace MemberClientRequirementResponse$ {
             .object({
                 clientId: z.string(),
                 collaboratorGroupId: z.string(),
-                document: DocumentResponse$.inboundSchema.nullable().optional(),
-                documentId: z.string().nullable().optional(),
+                document: z.nullable(DocumentResponse$.inboundSchema).optional(),
+                documentId: z.nullable(z.string()).optional(),
                 eligibilityRequirementId: z.string(),
                 requirementType: MemberClientRequirementResponseRequirementType$,
-                status: MemberClientRequirementResponseStatus$.nullable().optional(),
-                templateId: z.string().nullable().optional(),
-                validFor: z.number().nullable().optional(),
+                status: z.nullable(MemberClientRequirementResponseStatus$).optional(),
+                templateId: z.nullable(z.string()).optional(),
+                validFor: z.nullable(z.number()).optional(),
             })
             .transform((v) => {
                 return {
@@ -100,13 +100,13 @@ export namespace MemberClientRequirementResponse$ {
         .object({
             clientId: z.string(),
             collaboratorGroupId: z.string(),
-            document: DocumentResponse$.outboundSchema.nullable().optional(),
-            documentId: z.string().nullable().optional(),
+            document: z.nullable(DocumentResponse$.outboundSchema).optional(),
+            documentId: z.nullable(z.string()).optional(),
             eligibilityRequirementId: z.string(),
             requirementType: MemberClientRequirementResponseRequirementType$,
-            status: MemberClientRequirementResponseStatus$.nullable().optional(),
-            templateId: z.string().nullable().optional(),
-            validFor: z.number().nullable().optional(),
+            status: z.nullable(MemberClientRequirementResponseStatus$).optional(),
+            templateId: z.nullable(z.string()).optional(),
+            validFor: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

@@ -29,10 +29,11 @@ export namespace RedactedMember$ {
 
     export const inboundSchema: z.ZodType<RedactedMember, z.ZodTypeDef, Inbound> = z
         .object({
-            profile:
-                TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb$.inboundSchema
-                    .nullable()
-                    .optional(),
+            profile: z
+                .nullable(
+                    TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb$.inboundSchema
+                )
+                .optional(),
             user: RedactedUser$.inboundSchema,
         })
         .transform((v) => {
@@ -52,10 +53,11 @@ export namespace RedactedMember$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, RedactedMember> = z
         .object({
-            profile:
-                TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb$.outboundSchema
-                    .nullable()
-                    .optional(),
+            profile: z
+                .nullable(
+                    TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb$.outboundSchema
+                )
+                .optional(),
             user: RedactedUser$.outboundSchema,
         })
         .transform((v) => {

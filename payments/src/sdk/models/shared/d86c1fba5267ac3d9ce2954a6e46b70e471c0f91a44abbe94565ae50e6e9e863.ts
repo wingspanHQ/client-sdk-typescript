@@ -26,10 +26,10 @@ export namespace D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e86
         Inbound
     > = z
         .object({
-            customerId: z.string().nullable().optional(),
-            expenseAccountId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
-            vendorId: z.string().nullable().optional(),
+            customerId: z.nullable(z.string()).optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
+            vendorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -55,10 +55,10 @@ export namespace D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e86
         D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863
     > = z
         .object({
-            customerId: z.string().nullable().optional(),
-            expenseAccountId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
-            vendorId: z.string().nullable().optional(),
+            customerId: z.nullable(z.string()).optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
+            vendorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -33,7 +33,7 @@ export namespace InvoiceAmountDetails$ {
     export const inboundSchema: z.ZodType<InvoiceAmountDetails, z.ZodTypeDef, Inbound> = z
         .object({
             clientPaid: z.number(),
-            clientRefunded: z.number().nullable().optional(),
+            clientRefunded: z.nullable(z.number()).optional(),
             collaboratorPayments: z.number(),
             deductions: z.number(),
             memberGross: z.number(),
@@ -71,7 +71,7 @@ export namespace InvoiceAmountDetails$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceAmountDetails> = z
         .object({
             clientPaid: z.number(),
-            clientRefunded: z.number().nullable().optional(),
+            clientRefunded: z.nullable(z.number()).optional(),
             collaboratorPayments: z.number(),
             deductions: z.number(),
             memberGross: z.number(),

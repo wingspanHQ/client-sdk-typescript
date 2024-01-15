@@ -47,16 +47,18 @@ export namespace BulkCollaboratorItemCreate$ {
 
     export const inboundSchema: z.ZodType<BulkCollaboratorItemCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
-            collaboratorStatus: BulkCollaboratorItemCreateCollaboratorStatus$.nullable().optional(),
-            company: z.string().nullable().optional(),
-            email: z.string().nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.inboundSchema.nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            orgSubAccountId: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
+            collaboratorStatus: z
+                .nullable(BulkCollaboratorItemCreateCollaboratorStatus$)
+                .optional(),
+            company: z.nullable(z.string()).optional(),
+            email: z.nullable(z.string()).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.inboundSchema).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            orgSubAccountId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -94,16 +96,18 @@ export namespace BulkCollaboratorItemCreate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkCollaboratorItemCreate> = z
         .object({
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
-            collaboratorStatus: BulkCollaboratorItemCreateCollaboratorStatus$.nullable().optional(),
-            company: z.string().nullable().optional(),
-            email: z.string().nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.outboundSchema.nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            orgSubAccountId: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
+            collaboratorStatus: z
+                .nullable(BulkCollaboratorItemCreateCollaboratorStatus$)
+                .optional(),
+            company: z.nullable(z.string()).optional(),
+            email: z.nullable(z.string()).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.outboundSchema).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            orgSubAccountId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

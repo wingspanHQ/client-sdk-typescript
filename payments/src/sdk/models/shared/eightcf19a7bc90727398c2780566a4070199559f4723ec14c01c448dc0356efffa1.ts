@@ -22,8 +22,8 @@ export namespace Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356e
         Inbound
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            resolvedCollaboratorId: z.string().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            resolvedCollaboratorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -45,8 +45,8 @@ export namespace Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356e
         Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            resolvedCollaboratorId: z.string().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            resolvedCollaboratorId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

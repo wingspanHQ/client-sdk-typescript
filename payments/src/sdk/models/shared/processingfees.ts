@@ -19,8 +19,8 @@ export namespace ProcessingFees$ {
 
     export const inboundSchema: z.ZodType<ProcessingFees, z.ZodTypeDef, Inbound> = z
         .object({
-            creditCardFee: Fee$.inboundSchema.nullable().optional(),
-            instantPayoutFee: Fee$.inboundSchema.nullable().optional(),
+            creditCardFee: z.nullable(Fee$.inboundSchema).optional(),
+            instantPayoutFee: z.nullable(Fee$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -38,8 +38,8 @@ export namespace ProcessingFees$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ProcessingFees> = z
         .object({
-            creditCardFee: Fee$.outboundSchema.nullable().optional(),
-            instantPayoutFee: Fee$.outboundSchema.nullable().optional(),
+            creditCardFee: z.nullable(Fee$.outboundSchema).optional(),
+            instantPayoutFee: z.nullable(Fee$.outboundSchema).optional(),
         })
         .transform((v) => {
             return {

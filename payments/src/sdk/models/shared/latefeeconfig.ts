@@ -22,8 +22,8 @@ export namespace LateFeeConfig$ {
     export const inboundSchema: z.ZodType<LateFeeConfig, z.ZodTypeDef, Inbound> = z
         .object({
             frequency: Frequency$.inboundSchema,
-            lateFeeAmount: z.number().nullable().optional(),
-            lateFeePercentage: z.number().nullable().optional(),
+            lateFeeAmount: z.nullable(z.number()).optional(),
+            lateFeePercentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -44,8 +44,8 @@ export namespace LateFeeConfig$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, LateFeeConfig> = z
         .object({
             frequency: Frequency$.outboundSchema,
-            lateFeeAmount: z.number().nullable().optional(),
-            lateFeePercentage: z.number().nullable().optional(),
+            lateFeeAmount: z.nullable(z.number()).optional(),
+            lateFeePercentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

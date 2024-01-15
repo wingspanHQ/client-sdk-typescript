@@ -30,8 +30,8 @@ export namespace BulkPayableBatchUpdate$ {
 
     export const inboundSchema: z.ZodType<BulkPayableBatchUpdate, z.ZodTypeDef, Inbound> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
-            status: BulkPayableBatchUpdateStatus$.nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            status: z.nullable(BulkPayableBatchUpdateStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -47,8 +47,8 @@ export namespace BulkPayableBatchUpdate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkPayableBatchUpdate> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
-            status: BulkPayableBatchUpdateStatus$.nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            status: z.nullable(BulkPayableBatchUpdateStatus$).optional(),
         })
         .transform((v) => {
             return {

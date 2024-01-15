@@ -27,8 +27,8 @@ export namespace CollaboratorPayoutsSummary$ {
     export const inboundSchema: z.ZodType<CollaboratorPayoutsSummary, z.ZodTypeDef, Inbound> = z
         .object({
             deductionsCount: z.number(),
-            firstPaidDate: z.string().nullable().optional(),
-            lastPaidDate: z.string().nullable().optional(),
+            firstPaidDate: z.nullable(z.string()).optional(),
+            lastPaidDate: z.nullable(z.string()).optional(),
             payablesCount: z.number(),
             totalDeducted: z.number(),
             totalPaid: z.number(),
@@ -56,8 +56,8 @@ export namespace CollaboratorPayoutsSummary$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorPayoutsSummary> = z
         .object({
             deductionsCount: z.number(),
-            firstPaidDate: z.string().nullable().optional(),
-            lastPaidDate: z.string().nullable().optional(),
+            firstPaidDate: z.nullable(z.string()).optional(),
+            lastPaidDate: z.nullable(z.string()).optional(),
             payablesCount: z.number(),
             totalDeducted: z.number(),
             totalPaid: z.number(),

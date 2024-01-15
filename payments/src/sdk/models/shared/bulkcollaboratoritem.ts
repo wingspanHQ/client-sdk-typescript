@@ -89,23 +89,24 @@ export namespace BulkCollaboratorItem$ {
             bulkCollaboratorBatchId: z.string(),
             bulkCollaboratorItemId: z.string(),
             clientId: z.string(),
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
             collaboratorStatus: CollaboratorStatus$,
-            company: z.string().nullable().optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            email: z.string().nullable().optional(),
+            email: z.nullable(z.string()).optional(),
             eventActors: z.record(z.string()),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.inboundSchema.nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.inboundSchema).optional(),
             labels: z.record(z.string()),
-            memberId: z.string().nullable().optional(),
-            metadata:
-                Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$.inboundSchema
-                    .nullable()
-                    .optional(),
-            orgSubAccountId: z.string().nullable().optional(),
+            memberId: z.nullable(z.string()).optional(),
+            metadata: z
+                .nullable(
+                    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$.inboundSchema
+                )
+                .optional(),
+            orgSubAccountId: z.nullable(z.string()).optional(),
             status: BulkCollaboratorItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -170,23 +171,24 @@ export namespace BulkCollaboratorItem$ {
             bulkCollaboratorBatchId: z.string(),
             bulkCollaboratorItemId: z.string(),
             clientId: z.string(),
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorId: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorId: z.nullable(z.string()).optional(),
             collaboratorStatus: CollaboratorStatus$,
-            company: z.string().nullable().optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            email: z.string().nullable().optional(),
+            email: z.nullable(z.string()).optional(),
             eventActors: z.record(z.string()),
-            externalId: z.string().nullable().optional(),
-            firstLastName: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.outboundSchema.nullable().optional(),
+            externalId: z.nullable(z.string()).optional(),
+            firstLastName: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.outboundSchema).optional(),
             labels: z.record(z.string()),
-            memberId: z.string().nullable().optional(),
-            metadata:
-                Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$.outboundSchema
-                    .nullable()
-                    .optional(),
-            orgSubAccountId: z.string().nullable().optional(),
+            memberId: z.nullable(z.string()).optional(),
+            metadata: z
+                .nullable(
+                    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$.outboundSchema
+                )
+                .optional(),
+            orgSubAccountId: z.nullable(z.string()).optional(),
             status: BulkCollaboratorItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

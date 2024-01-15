@@ -58,20 +58,21 @@ export namespace CollaboratorCreateRequest$ {
 
     export const inboundSchema: z.ZodType<CollaboratorCreateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            clientData: ClientData$.inboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
             clientId: z.string(),
-            collaboratorGroupId: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.inboundSchema.nullable().optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberCompany: z.string().nullable().optional(),
-            memberEmail: z.string().nullable().optional(),
-            memberId: z.string().nullable().optional(),
-            memberName: z.string().nullable().optional(),
-            status: CollaboratorCreateRequestStatus$.nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.inboundSchema).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberCompany: z.nullable(z.string()).optional(),
+            memberEmail: z.nullable(z.string()).optional(),
+            memberId: z.nullable(z.string()).optional(),
+            memberName: z.nullable(z.string()).optional(),
+            status: z.nullable(CollaboratorCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -110,20 +111,21 @@ export namespace CollaboratorCreateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorCreateRequest> = z
         .object({
-            clientData: ClientData$.outboundSchema.nullable().optional(),
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
             clientId: z.string(),
-            collaboratorGroupId: z.string().nullable().optional(),
-            formW9Data: MemberClientFormW9Info$.outboundSchema.nullable().optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
-                    .nullable()
-                    .optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            memberCompany: z.string().nullable().optional(),
-            memberEmail: z.string().nullable().optional(),
-            memberId: z.string().nullable().optional(),
-            memberName: z.string().nullable().optional(),
-            status: CollaboratorCreateRequestStatus$.nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            formW9Data: z.nullable(MemberClientFormW9Info$.outboundSchema).optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
+                )
+                .optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            memberCompany: z.nullable(z.string()).optional(),
+            memberEmail: z.nullable(z.string()).optional(),
+            memberId: z.nullable(z.string()).optional(),
+            memberName: z.nullable(z.string()).optional(),
+            status: z.nullable(CollaboratorCreateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

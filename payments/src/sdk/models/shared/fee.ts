@@ -19,7 +19,7 @@ export namespace Fee$ {
     export const inboundSchema: z.ZodType<Fee, z.ZodTypeDef, Inbound> = z
         .object({
             amount: z.number(),
-            calculatedAt: z.string().nullable().optional(),
+            calculatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -36,7 +36,7 @@ export namespace Fee$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Fee> = z
         .object({
             amount: z.number(),
-            calculatedAt: z.string().nullable().optional(),
+            calculatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

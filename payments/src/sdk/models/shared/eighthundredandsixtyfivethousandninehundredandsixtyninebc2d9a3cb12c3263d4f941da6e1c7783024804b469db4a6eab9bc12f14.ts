@@ -25,9 +25,9 @@ export namespace EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3c
         Inbound
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            failedMemberClients: z.number().nullable().optional(),
-            processedMemberClients: z.number().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            failedMemberClients: z.nullable(z.number()).optional(),
+            processedMemberClients: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -53,9 +53,9 @@ export namespace EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3c
         EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            failedMemberClients: z.number().nullable().optional(),
-            processedMemberClients: z.number().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            failedMemberClients: z.nullable(z.number()).optional(),
+            processedMemberClients: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

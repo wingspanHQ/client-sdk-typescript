@@ -22,8 +22,8 @@ export namespace FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902c
         Inbound
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            resolvedMemberClientId: z.string().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            resolvedMemberClientId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -45,8 +45,8 @@ export namespace FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902c
         FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac
     > = z
         .object({
-            errorMessage: z.string().nullable().optional(),
-            resolvedMemberClientId: z.string().nullable().optional(),
+            errorMessage: z.nullable(z.string()).optional(),
+            resolvedMemberClientId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

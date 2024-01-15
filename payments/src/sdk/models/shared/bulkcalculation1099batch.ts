@@ -59,10 +59,11 @@ export namespace BulkCalculation1099Batch$ {
             createdAt: z.string(),
             eventActors: z.record(z.string()),
             labels: z.record(z.string()),
-            statistics:
-                SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.inboundSchema
-                    .nullable()
-                    .optional(),
+            statistics: z
+                .nullable(
+                    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.inboundSchema
+                )
+                .optional(),
             status: BulkCalculation1099BatchStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -103,10 +104,11 @@ export namespace BulkCalculation1099Batch$ {
             createdAt: z.string(),
             eventActors: z.record(z.string()),
             labels: z.record(z.string()),
-            statistics:
-                SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.outboundSchema
-                    .nullable()
-                    .optional(),
+            statistics: z
+                .nullable(
+                    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$.outboundSchema
+                )
+                .optional(),
             status: BulkCalculation1099BatchStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

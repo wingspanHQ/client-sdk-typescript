@@ -101,26 +101,26 @@ export namespace MemberClientSchema$ {
             client: RedactedMember$.inboundSchema,
             clientId: z.string(),
             clientUserAccountType: MemberClientSchemaClientUserAccountType$,
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
-            company: z.string().nullable().optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.inboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.inboundSchema))
                 .optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
             emailTo: z.string(),
             eventActors: z.record(z.string()),
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.inboundSchema,
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.inboundSchema,
             labels: z.record(z.string()),
             memberClientId: z.string(),
-            name: z.string().nullable().optional(),
+            name: z.nullable(z.string()).optional(),
             status: MemberClientSchemaStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -189,26 +189,26 @@ export namespace MemberClientSchema$ {
             client: RedactedMember$.outboundSchema,
             clientId: z.string(),
             clientUserAccountType: MemberClientSchemaClientUserAccountType$,
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
-            company: z.string().nullable().optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.outboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.outboundSchema))
                 .optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
             emailTo: z.string(),
             eventActors: z.record(z.string()),
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.outboundSchema,
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.outboundSchema,
             labels: z.record(z.string()),
             memberClientId: z.string(),
-            name: z.string().nullable().optional(),
+            name: z.nullable(z.string()).optional(),
             status: MemberClientSchemaStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

@@ -35,7 +35,7 @@ export namespace InvoiceCollaborator$ {
             amount: z.number(),
             currency: InvoiceCollaboratorCurrency$,
             description: z.string(),
-            invoiceId: z.string().nullable().optional(),
+            invoiceId: z.nullable(z.string()).optional(),
             memberClientId: z.string(),
         })
         .transform((v) => {
@@ -61,7 +61,7 @@ export namespace InvoiceCollaborator$ {
             amount: z.number(),
             currency: InvoiceCollaboratorCurrency$,
             description: z.string(),
-            invoiceId: z.string().nullable().optional(),
+            invoiceId: z.nullable(z.string()).optional(),
             memberClientId: z.string(),
         })
         .transform((v) => {

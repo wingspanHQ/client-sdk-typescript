@@ -62,18 +62,18 @@ export namespace ClientInvoiceTemplateCreateRequest$ {
         Inbound
     > = z
         .object({
-            accountId: z.string().nullable().optional(),
-            clientCompany: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            clientCompany: z.nullable(z.string()).optional(),
             clientEmail: z.string(),
-            clientEmailCC: z.array(z.string()).nullable().optional(),
-            clientFirstName: z.string().nullable().optional(),
-            clientLastName: z.string().nullable().optional(),
-            dueInDays: z.number().nullable().optional(),
-            frequency: Frequency$.inboundSchema.nullable().optional(),
+            clientEmailCC: z.nullable(z.array(z.string())).optional(),
+            clientFirstName: z.nullable(z.string()).optional(),
+            clientLastName: z.nullable(z.string()).optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(Frequency$.inboundSchema).optional(),
             invoiceData: ClientInvoiceDataCreateRequest$.inboundSchema,
             memberId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.inboundSchema).nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.inboundSchema)).optional(),
             status: ClientInvoiceTemplateCreateRequestStatus$,
         })
         .transform((v) => {
@@ -120,18 +120,18 @@ export namespace ClientInvoiceTemplateCreateRequest$ {
         ClientInvoiceTemplateCreateRequest
     > = z
         .object({
-            accountId: z.string().nullable().optional(),
-            clientCompany: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            clientCompany: z.nullable(z.string()).optional(),
             clientEmail: z.string(),
-            clientEmailCC: z.array(z.string()).nullable().optional(),
-            clientFirstName: z.string().nullable().optional(),
-            clientLastName: z.string().nullable().optional(),
-            dueInDays: z.number().nullable().optional(),
-            frequency: Frequency$.outboundSchema.nullable().optional(),
+            clientEmailCC: z.nullable(z.array(z.string())).optional(),
+            clientFirstName: z.nullable(z.string()).optional(),
+            clientLastName: z.nullable(z.string()).optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(Frequency$.outboundSchema).optional(),
             invoiceData: ClientInvoiceDataCreateRequest$.outboundSchema,
             memberId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
-            scheduleDates: z.array(ScheduleDate$.outboundSchema).nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDate$.outboundSchema)).optional(),
             status: ClientInvoiceTemplateCreateRequestStatus$,
         })
         .transform((v) => {

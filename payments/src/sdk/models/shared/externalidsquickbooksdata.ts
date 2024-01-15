@@ -26,12 +26,12 @@ export namespace ExternalIdsQuickbooksData$ {
 
     export const inboundSchema: z.ZodType<ExternalIdsQuickbooksData, z.ZodTypeDef, Inbound> = z
         .object({
-            doCreate: z.boolean().nullable().optional(),
-            doDelete: z.boolean().nullable().optional(),
-            doUpdate: z.boolean().nullable().optional(),
+            doCreate: z.nullable(z.boolean()).optional(),
+            doDelete: z.nullable(z.boolean()).optional(),
+            doUpdate: z.nullable(z.boolean()).optional(),
             id: z.string(),
             syncToken: z.string(),
-            updatedAt: z.string().nullable().optional(),
+            updatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -55,12 +55,12 @@ export namespace ExternalIdsQuickbooksData$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ExternalIdsQuickbooksData> = z
         .object({
-            doCreate: z.boolean().nullable().optional(),
-            doDelete: z.boolean().nullable().optional(),
-            doUpdate: z.boolean().nullable().optional(),
+            doCreate: z.nullable(z.boolean()).optional(),
+            doDelete: z.nullable(z.boolean()).optional(),
+            doUpdate: z.nullable(z.boolean()).optional(),
             id: z.string(),
             syncToken: z.string(),
-            updatedAt: z.string().nullable().optional(),
+            updatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -16,7 +16,7 @@ export namespace CollaboratorGroupRequirement$ {
 
     export const inboundSchema: z.ZodType<CollaboratorGroupRequirement, z.ZodTypeDef, Inbound> = z
         .object({
-            eligibilityRequirementId: z.string().nullable().optional(),
+            eligibilityRequirementId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -32,7 +32,7 @@ export namespace CollaboratorGroupRequirement$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorGroupRequirement> = z
         .object({
-            eligibilityRequirementId: z.string().nullable().optional(),
+            eligibilityRequirementId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -20,9 +20,9 @@ export namespace PayRequest$ {
 
     export const inboundSchema: z.ZodType<PayRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            accountId: z.string().nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
-            plaidPublicToken: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            plaidPublicToken: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -44,9 +44,9 @@ export namespace PayRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayRequest> = z
         .object({
-            accountId: z.string().nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
-            plaidPublicToken: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            plaidPublicToken: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

@@ -38,9 +38,9 @@ export namespace MemberData$ {
 
     export const inboundSchema: z.ZodType<MemberData, z.ZodTypeDef, Inbound> = z
         .object({
-            autoPayRequirement: AutoPayRequirement$.nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            shareTaxDocument: ShareTaxDocument$.nullable().optional(),
+            autoPayRequirement: z.nullable(AutoPayRequirement$).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            shareTaxDocument: z.nullable(ShareTaxDocument$).optional(),
         })
         .transform((v) => {
             return {
@@ -62,9 +62,9 @@ export namespace MemberData$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberData> = z
         .object({
-            autoPayRequirement: AutoPayRequirement$.nullable().optional(),
-            externalId: z.string().nullable().optional(),
-            shareTaxDocument: ShareTaxDocument$.nullable().optional(),
+            autoPayRequirement: z.nullable(AutoPayRequirement$).optional(),
+            externalId: z.nullable(z.string()).optional(),
+            shareTaxDocument: z.nullable(ShareTaxDocument$).optional(),
         })
         .transform((v) => {
             return {

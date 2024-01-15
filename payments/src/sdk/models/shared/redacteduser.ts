@@ -63,19 +63,24 @@ export namespace RedactedUser$ {
 
     export const inboundSchema: z.ZodType<RedactedUser, z.ZodTypeDef, Inbound> = z
         .object({
-            email: z.string().nullable().optional(),
-            phone: SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$.inboundSchema
-                .nullable()
+            email: z.nullable(z.string()).optional(),
+            phone: z
+                .nullable(
+                    SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$.inboundSchema
+                )
                 .optional(),
-            profile: F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$.inboundSchema
-                .nullable()
+            profile: z
+                .nullable(
+                    F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$.inboundSchema
+                )
                 .optional(),
-            settings:
-                Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$.inboundSchema
-                    .nullable()
-                    .optional(),
-            status: RedactedUserStatus$.nullable().optional(),
-            tag: z.string().nullable().optional(),
+            settings: z
+                .nullable(
+                    Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$.inboundSchema
+                )
+                .optional(),
+            status: z.nullable(RedactedUserStatus$).optional(),
+            tag: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -108,20 +113,24 @@ export namespace RedactedUser$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, RedactedUser> = z
         .object({
-            email: z.string().nullable().optional(),
-            phone: SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$.outboundSchema
-                .nullable()
+            email: z.nullable(z.string()).optional(),
+            phone: z
+                .nullable(
+                    SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$.outboundSchema
+                )
                 .optional(),
-            profile:
-                F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$.outboundSchema
-                    .nullable()
-                    .optional(),
-            settings:
-                Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$.outboundSchema
-                    .nullable()
-                    .optional(),
-            status: RedactedUserStatus$.nullable().optional(),
-            tag: z.string().nullable().optional(),
+            profile: z
+                .nullable(
+                    F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$.outboundSchema
+                )
+                .optional(),
+            settings: z
+                .nullable(
+                    Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$.outboundSchema
+                )
+                .optional(),
+            status: z.nullable(RedactedUserStatus$).optional(),
+            tag: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

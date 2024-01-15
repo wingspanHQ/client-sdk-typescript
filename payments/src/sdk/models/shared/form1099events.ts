@@ -30,14 +30,14 @@ export namespace Form1099Events$ {
 
     export const inboundSchema: z.ZodType<Form1099Events, z.ZodTypeDef, Inbound> = z
         .object({
-            acceptedByCollaboratorAt: z.string().nullable().optional(),
-            createdAt: z.string().nullable().optional(),
-            postFilingSuggestionMadeAt: z.string().nullable().optional(),
-            postFilingSuggestionResolvedAt: z.string().nullable().optional(),
-            submittedForCollaboratorReviewAt: z.string().nullable().optional(),
-            suggestionMadeAt: z.string().nullable().optional(),
-            suggestionResolvedAt: z.string().nullable().optional(),
-            updatedAt: z.string().nullable().optional(),
+            acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
+            createdAt: z.nullable(z.string()).optional(),
+            postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
+            postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
+            submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
+            suggestionMadeAt: z.nullable(z.string()).optional(),
+            suggestionResolvedAt: z.nullable(z.string()).optional(),
+            updatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -77,14 +77,14 @@ export namespace Form1099Events$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Form1099Events> = z
         .object({
-            acceptedByCollaboratorAt: z.string().nullable().optional(),
-            createdAt: z.string().nullable().optional(),
-            postFilingSuggestionMadeAt: z.string().nullable().optional(),
-            postFilingSuggestionResolvedAt: z.string().nullable().optional(),
-            submittedForCollaboratorReviewAt: z.string().nullable().optional(),
-            suggestionMadeAt: z.string().nullable().optional(),
-            suggestionResolvedAt: z.string().nullable().optional(),
-            updatedAt: z.string().nullable().optional(),
+            acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
+            createdAt: z.nullable(z.string()).optional(),
+            postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
+            postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
+            submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
+            suggestionMadeAt: z.nullable(z.string()).optional(),
+            suggestionResolvedAt: z.nullable(z.string()).optional(),
+            updatedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

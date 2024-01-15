@@ -86,20 +86,24 @@ export namespace Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a48
     > = z
         .object({
             address: z
-                .lazy(
-                    () =>
-                        Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$.inboundSchema
+                .nullable(
+                    z.lazy(
+                        () =>
+                            Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$.inboundSchema
+                    )
                 )
-                .nullable()
                 .optional(),
-            companyStructure:
-                Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure$.nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            totalAmount: z.number().nullable().optional(),
+            companyStructure: z
+                .nullable(
+                    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure$
+                )
+                .optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            totalAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -142,20 +146,24 @@ export namespace Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a48
     > = z
         .object({
             address: z
-                .lazy(
-                    () =>
-                        Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$.outboundSchema
+                .nullable(
+                    z.lazy(
+                        () =>
+                            Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$.outboundSchema
+                    )
                 )
-                .nullable()
                 .optional(),
-            companyStructure:
-                Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure$.nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            totalAmount: z.number().nullable().optional(),
+            companyStructure: z
+                .nullable(
+                    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure$
+                )
+                .optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            totalAmount: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

@@ -33,13 +33,13 @@ export namespace EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b355
         Inbound
     > = z
         .object({
-            IBAN: z.string().nullable().optional(),
-            accountNumber: z.string().nullable().optional(),
-            accountRouting: z.string().nullable().optional(),
-            brand: z.string().nullable().optional(),
-            expiryMonth: z.string().nullable().optional(),
-            expiryYear: z.string().nullable().optional(),
-            last4: z.string().nullable().optional(),
+            IBAN: z.nullable(z.string()).optional(),
+            accountNumber: z.nullable(z.string()).optional(),
+            accountRouting: z.nullable(z.string()).optional(),
+            brand: z.nullable(z.string()).optional(),
+            expiryMonth: z.nullable(z.string()).optional(),
+            expiryYear: z.nullable(z.string()).optional(),
+            last4: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -69,13 +69,13 @@ export namespace EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b355
         EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f
     > = z
         .object({
-            iban: z.string().nullable().optional(),
-            accountNumber: z.string().nullable().optional(),
-            accountRouting: z.string().nullable().optional(),
-            brand: z.string().nullable().optional(),
-            expiryMonth: z.string().nullable().optional(),
-            expiryYear: z.string().nullable().optional(),
-            last4: z.string().nullable().optional(),
+            iban: z.nullable(z.string()).optional(),
+            accountNumber: z.nullable(z.string()).optional(),
+            accountRouting: z.nullable(z.string()).optional(),
+            brand: z.nullable(z.string()).optional(),
+            expiryMonth: z.nullable(z.string()).optional(),
+            expiryYear: z.nullable(z.string()).optional(),
+            last4: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

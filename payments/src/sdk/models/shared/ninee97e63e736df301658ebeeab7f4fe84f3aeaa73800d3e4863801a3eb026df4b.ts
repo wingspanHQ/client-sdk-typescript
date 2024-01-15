@@ -29,7 +29,7 @@ export namespace Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026
         Inbound
     > = z
         .object({
-            userAccountType: UserAccountType$.nullable().optional(),
+            userAccountType: z.nullable(UserAccountType$).optional(),
         })
         .transform((v) => {
             return {
@@ -49,7 +49,7 @@ export namespace Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026
         Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b
     > = z
         .object({
-            userAccountType: UserAccountType$.nullable().optional(),
+            userAccountType: z.nullable(UserAccountType$).optional(),
         })
         .transform((v) => {
             return {

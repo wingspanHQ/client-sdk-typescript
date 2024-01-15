@@ -28,11 +28,11 @@ export namespace Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9
         Inbound
     > = z
         .object({
-            billClassId: z.string().nullable().optional(),
-            billCustomerId: z.string().nullable().optional(),
-            expenseAccountId: z.string().nullable().optional(),
-            invoiceClassId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
+            billClassId: z.nullable(z.string()).optional(),
+            billCustomerId: z.nullable(z.string()).optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            invoiceClassId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -60,11 +60,11 @@ export namespace Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9
         Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11
     > = z
         .object({
-            billClassId: z.string().nullable().optional(),
-            billCustomerId: z.string().nullable().optional(),
-            expenseAccountId: z.string().nullable().optional(),
-            invoiceClassId: z.string().nullable().optional(),
-            itemId: z.string().nullable().optional(),
+            billClassId: z.nullable(z.string()).optional(),
+            billCustomerId: z.nullable(z.string()).optional(),
+            expenseAccountId: z.nullable(z.string()).optional(),
+            invoiceClassId: z.nullable(z.string()).optional(),
+            itemId: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

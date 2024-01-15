@@ -27,9 +27,9 @@ export namespace CheckbookCardCreate$ {
 
     export const inboundSchema: z.ZodType<CheckbookCardCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            address: Address$.inboundSchema.nullable().optional(),
+            address: z.nullable(Address$.inboundSchema).optional(),
             cardNumber: z.string(),
-            cvv: z.string().nullable().optional(),
+            cvv: z.nullable(z.string()).optional(),
             expMM: z.string(),
             expYYYY: z.string(),
             name: z.string(),
@@ -56,9 +56,9 @@ export namespace CheckbookCardCreate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CheckbookCardCreate> = z
         .object({
-            address: Address$.outboundSchema.nullable().optional(),
+            address: z.nullable(Address$.outboundSchema).optional(),
             cardNumber: z.string(),
-            cvv: z.string().nullable().optional(),
+            cvv: z.nullable(z.string()).optional(),
             expMM: z.string(),
             expYYYY: z.string(),
             name: z.string(),

@@ -37,13 +37,13 @@ export namespace Frequency$ {
 
     export const inboundSchema: z.ZodType<Frequency, z.ZodTypeDef, Inbound> = z
         .object({
-            daily: z.boolean().nullable().optional(),
-            dayInInterval: z.number().nullable().optional(),
-            endDate: z.string().nullable().optional(),
-            every: z.number().nullable().optional(),
-            interval: Interval$.nullable().optional(),
+            daily: z.nullable(z.boolean()).optional(),
+            dayInInterval: z.nullable(z.number()).optional(),
+            endDate: z.nullable(z.string()).optional(),
+            every: z.nullable(z.number()).optional(),
+            interval: z.nullable(Interval$).optional(),
             startDate: z.string(),
-            twicePerMonth: z.boolean().nullable().optional(),
+            twicePerMonth: z.nullable(z.boolean()).optional(),
         })
         .transform((v) => {
             return {
@@ -69,13 +69,13 @@ export namespace Frequency$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Frequency> = z
         .object({
-            daily: z.boolean().nullable().optional(),
-            dayInInterval: z.number().nullable().optional(),
-            endDate: z.string().nullable().optional(),
-            every: z.number().nullable().optional(),
-            interval: Interval$.nullable().optional(),
+            daily: z.nullable(z.boolean()).optional(),
+            dayInInterval: z.nullable(z.number()).optional(),
+            endDate: z.nullable(z.string()).optional(),
+            every: z.nullable(z.number()).optional(),
+            interval: z.nullable(Interval$).optional(),
             startDate: z.string(),
-            twicePerMonth: z.boolean().nullable().optional(),
+            twicePerMonth: z.nullable(z.boolean()).optional(),
         })
         .transform((v) => {
             return {

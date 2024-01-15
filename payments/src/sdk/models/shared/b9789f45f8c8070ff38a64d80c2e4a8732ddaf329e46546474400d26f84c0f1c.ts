@@ -26,8 +26,8 @@ export namespace B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1
         Inbound
     > = z
         .object({
-            "2021": MemberClientForm1099Balances$.inboundSchema.nullable().optional(),
-            "2022": MemberClientForm1099Balances$.inboundSchema.nullable().optional(),
+            "2021": z.nullable(MemberClientForm1099Balances$.inboundSchema).optional(),
+            "2022": z.nullable(MemberClientForm1099Balances$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -47,11 +47,11 @@ export namespace B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1
         B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c
     > = z
         .object({
-            twoThousandAndTwentyOne: MemberClientForm1099Balances$.outboundSchema
-                .nullable()
+            twoThousandAndTwentyOne: z
+                .nullable(MemberClientForm1099Balances$.outboundSchema)
                 .optional(),
-            twoThousandAndTwentyTwo: MemberClientForm1099Balances$.outboundSchema
-                .nullable()
+            twoThousandAndTwentyTwo: z
+                .nullable(MemberClientForm1099Balances$.outboundSchema)
                 .optional(),
         })
         .transform((v) => {

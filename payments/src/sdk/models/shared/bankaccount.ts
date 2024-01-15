@@ -24,8 +24,8 @@ export namespace BankAccount$ {
         .object({
             accountNumber: z.string(),
             bankName: z.string(),
-            routingNumber: z.string().nullable().optional(),
-            swiftCode: z.string().nullable().optional(),
+            routingNumber: z.nullable(z.string()).optional(),
+            swiftCode: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -47,8 +47,8 @@ export namespace BankAccount$ {
         .object({
             accountNumber: z.string(),
             bankName: z.string(),
-            routingNumber: z.string().nullable().optional(),
-            swiftCode: z.string().nullable().optional(),
+            routingNumber: z.nullable(z.string()).optional(),
+            swiftCode: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

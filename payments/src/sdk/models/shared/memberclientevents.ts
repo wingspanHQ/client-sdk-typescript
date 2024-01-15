@@ -18,8 +18,8 @@ export namespace MemberClientEvents$ {
 
     export const inboundSchema: z.ZodType<MemberClientEvents, z.ZodTypeDef, Inbound> = z
         .object({
-            activeAt: z.string().nullable().optional(),
-            pendingAt: z.string().nullable().optional(),
+            activeAt: z.nullable(z.string()).optional(),
+            pendingAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -35,8 +35,8 @@ export namespace MemberClientEvents$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberClientEvents> = z
         .object({
-            activeAt: z.string().nullable().optional(),
-            pendingAt: z.string().nullable().optional(),
+            activeAt: z.nullable(z.string()).optional(),
+            pendingAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

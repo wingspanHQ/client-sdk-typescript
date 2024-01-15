@@ -103,33 +103,31 @@ export namespace PayrollReportInvoice$ {
     export const inboundSchema: z.ZodType<PayrollReportInvoice, z.ZodTypeDef, Inbound> = z
         .object({
             amount: z.number(),
-            approverName: z.string().nullable().optional(),
+            approverName: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             currency: z.string(),
             dueDate: z.string(),
-            eventActors:
-                Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c$.inboundSchema
-                    .nullable()
-                    .optional(),
+            eventActors: z
+                .nullable(
+                    Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c$.inboundSchema
+                )
+                .optional(),
             invoiceId: z.string(),
             invoiceNumber: z.string(),
             invoicePdf: z.string(),
-            labels: z
-                .lazy(() => PayrollReportInvoiceLabels$.inboundSchema)
-                .nullable()
-                .optional(),
+            labels: z.nullable(z.lazy(() => PayrollReportInvoiceLabels$.inboundSchema)).optional(),
             lineItems: z.array(PayrollReportLineItem$.inboundSchema),
             member: RedactedMember$.inboundSchema,
             memberClientId: z.string(),
-            memberExternalId: z.number().nullable().optional(),
+            memberExternalId: z.nullable(z.number()).optional(),
             memberId: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            payoutDestination: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            payoutDestination: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
             receiptPdf: z.string(),
-            sentDate: z.string().nullable().optional(),
+            sentDate: z.nullable(z.string()).optional(),
             status: PayrollReportInvoiceStatus$,
             updatedAt: z.string(),
         })
@@ -201,33 +199,31 @@ export namespace PayrollReportInvoice$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayrollReportInvoice> = z
         .object({
             amount: z.number(),
-            approverName: z.string().nullable().optional(),
+            approverName: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             currency: z.string(),
             dueDate: z.string(),
-            eventActors:
-                Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c$.outboundSchema
-                    .nullable()
-                    .optional(),
+            eventActors: z
+                .nullable(
+                    Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c$.outboundSchema
+                )
+                .optional(),
             invoiceId: z.string(),
             invoiceNumber: z.string(),
             invoicePdf: z.string(),
-            labels: z
-                .lazy(() => PayrollReportInvoiceLabels$.outboundSchema)
-                .nullable()
-                .optional(),
+            labels: z.nullable(z.lazy(() => PayrollReportInvoiceLabels$.outboundSchema)).optional(),
             lineItems: z.array(PayrollReportLineItem$.outboundSchema),
             member: RedactedMember$.outboundSchema,
             memberClientId: z.string(),
-            memberExternalId: z.number().nullable().optional(),
+            memberExternalId: z.nullable(z.number()).optional(),
             memberId: z.string(),
-            notes: z.string().nullable().optional(),
-            paidDate: z.string().nullable().optional(),
-            payoutDestination: z.string().nullable().optional(),
-            projectName: z.string().nullable().optional(),
-            purchaseOrderNumber: z.string().nullable().optional(),
+            notes: z.nullable(z.string()).optional(),
+            paidDate: z.nullable(z.string()).optional(),
+            payoutDestination: z.nullable(z.string()).optional(),
+            projectName: z.nullable(z.string()).optional(),
+            purchaseOrderNumber: z.nullable(z.string()).optional(),
             receiptPdf: z.string(),
-            sentDate: z.string().nullable().optional(),
+            sentDate: z.nullable(z.string()).optional(),
             status: PayrollReportInvoiceStatus$,
             updatedAt: z.string(),
         })

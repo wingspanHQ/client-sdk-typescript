@@ -16,7 +16,7 @@ export namespace BulkBatchCreate$ {
 
     export const inboundSchema: z.ZodType<BulkBatchCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
         })
         .transform((v) => {
             return {
@@ -30,7 +30,7 @@ export namespace BulkBatchCreate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkBatchCreate> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
         })
         .transform((v) => {
             return {

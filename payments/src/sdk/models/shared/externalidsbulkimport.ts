@@ -16,7 +16,7 @@ export namespace ExternalIdsBulkImport$ {
 
     export const inboundSchema: z.ZodType<ExternalIdsBulkImport, z.ZodTypeDef, Inbound> = z
         .object({
-            bulkItemMergeKey: z.string().nullable().optional(),
+            bulkItemMergeKey: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -32,7 +32,7 @@ export namespace ExternalIdsBulkImport$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ExternalIdsBulkImport> = z
         .object({
-            bulkItemMergeKey: z.string().nullable().optional(),
+            bulkItemMergeKey: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

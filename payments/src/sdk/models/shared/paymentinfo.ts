@@ -33,10 +33,10 @@ export namespace PaymentInfo$ {
 
     export const inboundSchema: z.ZodType<PaymentInfo, z.ZodTypeDef, Inbound> = z
         .object({
-            brandImageUrl: z.string().nullable().optional(),
-            cardBrand: z.string().nullable().optional(),
-            meansDescription: z.string().nullable().optional(),
-            meansLast4: z.string().nullable().optional(),
+            brandImageUrl: z.nullable(z.string()).optional(),
+            cardBrand: z.nullable(z.string()).optional(),
+            meansDescription: z.nullable(z.string()).optional(),
+            meansLast4: z.nullable(z.string()).optional(),
             meansType: MeansType$,
         })
         .transform((v) => {
@@ -61,10 +61,10 @@ export namespace PaymentInfo$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PaymentInfo> = z
         .object({
-            brandImageUrl: z.string().nullable().optional(),
-            cardBrand: z.string().nullable().optional(),
-            meansDescription: z.string().nullable().optional(),
-            meansLast4: z.string().nullable().optional(),
+            brandImageUrl: z.nullable(z.string()).optional(),
+            cardBrand: z.nullable(z.string()).optional(),
+            meansDescription: z.nullable(z.string()).optional(),
+            meansLast4: z.nullable(z.string()).optional(),
             meansType: MeansType$,
         })
         .transform((v) => {

@@ -62,7 +62,7 @@ export namespace CardDetails$ {
             expirationDate: z.string(),
             last4Digits: z.string(),
             name: z.string(),
-            pinSet: z.boolean().nullable().optional(),
+            pinSet: z.nullable(z.boolean()).optional(),
             status: CardDetailsStatus$,
             type: CardDetailsType$,
         })
@@ -100,7 +100,7 @@ export namespace CardDetails$ {
             expirationDate: z.string(),
             last4Digits: z.string(),
             name: z.string(),
-            pinSet: z.boolean().nullable().optional(),
+            pinSet: z.nullable(z.boolean()).optional(),
             status: CardDetailsStatus$,
             type: CardDetailsType$,
         })

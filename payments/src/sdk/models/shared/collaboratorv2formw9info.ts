@@ -57,17 +57,17 @@ export namespace CollaboratorV2FormW9Info$ {
     export const inboundSchema: z.ZodType<CollaboratorV2FormW9Info, z.ZodTypeDef, Inbound> = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             companyStructure: CompanyStructure$,
             country: z.string(),
-            dob: z.string().nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
+            dob: z.nullable(z.string()).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
             postalCode: z.string(),
-            ssnLastFour: z.string().nullable().optional(),
+            ssnLastFour: z.nullable(z.string()).optional(),
             state: z.string(),
         })
         .transform((v) => {
@@ -109,17 +109,17 @@ export namespace CollaboratorV2FormW9Info$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CollaboratorV2FormW9Info> = z
         .object({
             addressLine1: z.string(),
-            addressLine2: z.string().nullable().optional(),
+            addressLine2: z.nullable(z.string()).optional(),
             city: z.string(),
             companyStructure: CompanyStructure$,
             country: z.string(),
-            dob: z.string().nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
+            dob: z.nullable(z.string()).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
             postalCode: z.string(),
-            ssnLastFour: z.string().nullable().optional(),
+            ssnLastFour: z.nullable(z.string()).optional(),
             state: z.string(),
         })
         .transform((v) => {

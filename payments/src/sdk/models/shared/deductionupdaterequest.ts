@@ -46,13 +46,13 @@ export namespace DeductionUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<DeductionUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            amount: z.number().nullable().optional(),
-            currency: DeductionUpdateRequestCurrency$.nullable().optional(),
-            name: z.string().nullable().optional(),
-            priority: z.number().nullable().optional(),
-            sourceInvoiceId: z.string().nullable().optional(),
-            startDate: z.string().nullable().optional(),
-            type: DeductionUpdateRequestType$.nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            currency: z.nullable(DeductionUpdateRequestCurrency$).optional(),
+            name: z.nullable(z.string()).optional(),
+            priority: z.nullable(z.number()).optional(),
+            sourceInvoiceId: z.nullable(z.string()).optional(),
+            startDate: z.nullable(z.string()).optional(),
+            type: z.nullable(DeductionUpdateRequestType$).optional(),
         })
         .transform((v) => {
             return {
@@ -80,13 +80,13 @@ export namespace DeductionUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, DeductionUpdateRequest> = z
         .object({
-            amount: z.number().nullable().optional(),
-            currency: DeductionUpdateRequestCurrency$.nullable().optional(),
-            name: z.string().nullable().optional(),
-            priority: z.number().nullable().optional(),
-            sourceInvoiceId: z.string().nullable().optional(),
-            startDate: z.string().nullable().optional(),
-            type: DeductionUpdateRequestType$.nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            currency: z.nullable(DeductionUpdateRequestCurrency$).optional(),
+            name: z.nullable(z.string()).optional(),
+            priority: z.nullable(z.number()).optional(),
+            sourceInvoiceId: z.nullable(z.string()).optional(),
+            startDate: z.nullable(z.string()).optional(),
+            type: z.nullable(DeductionUpdateRequestType$).optional(),
         })
         .transform((v) => {
             return {

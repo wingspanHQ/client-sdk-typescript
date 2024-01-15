@@ -90,7 +90,7 @@ export namespace InvoicePayment$ {
                 Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$.inboundSchema,
             sourceType: SourceType$,
             status: InvoicePaymentStatus$,
-            statusReason: StatusReason$.nullable().optional(),
+            statusReason: z.nullable(StatusReason$).optional(),
             updatedAt: z.string(),
         })
         .transform((v) => {
@@ -135,7 +135,7 @@ export namespace InvoicePayment$ {
                 Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$.outboundSchema,
             sourceType: SourceType$,
             status: InvoicePaymentStatus$,
-            statusReason: StatusReason$.nullable().optional(),
+            statusReason: z.nullable(StatusReason$).optional(),
             updatedAt: z.string(),
         })
         .transform((v) => {

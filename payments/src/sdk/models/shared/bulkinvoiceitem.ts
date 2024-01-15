@@ -114,35 +114,36 @@ export namespace BulkInvoiceItem$ {
 
     export const inboundSchema: z.ZodType<BulkInvoiceItem, z.ZodTypeDef, Inbound> = z
         .object({
-            acceptedPaymentMethods: z.array(AcceptedPaymentMethods$).nullable().optional(),
+            acceptedPaymentMethods: z.nullable(z.array(AcceptedPaymentMethods$)).optional(),
             amount: z.number(),
             bulkInvoiceBatchId: z.string(),
             bulkInvoiceItemId: z.string(),
-            bulkInvoiceItemMergeKey: z.string().nullable().optional(),
-            bulkInvoiceItemReference: z.string().nullable().optional(),
-            clientEmail: z.string().nullable().optional(),
-            clientExternalId: z.string().nullable().optional(),
+            bulkInvoiceItemMergeKey: z.nullable(z.string()).optional(),
+            bulkInvoiceItemReference: z.nullable(z.string()).optional(),
+            clientEmail: z.nullable(z.string()).optional(),
+            clientExternalId: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
-            integration: InvoiceIntegrations$.inboundSchema.nullable().optional(),
-            invoiceDate: z.string().nullable().optional(),
-            invoiceNotes: z.string().nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.inboundSchema).optional(),
+            invoiceDate: z.nullable(z.string()).optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
             invoiceStatus: InvoiceStatus$,
             labels: z.record(z.string()),
             lineItemDescription: z.string(),
-            lineItemDetail: z.string().nullable().optional(),
-            memberClientId: z.string().nullable().optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
             memberId: z.string(),
-            metadata:
-                C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a$.inboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a$.inboundSchema
+                )
+                .optional(),
             paidDate: z.string(),
-            projectName: z.string().nullable().optional(),
-            reimbursableExpense: z.boolean().nullable().optional(),
-            sendDate: z.string().nullable().optional(),
+            projectName: z.nullable(z.string()).optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
+            sendDate: z.nullable(z.string()).optional(),
             status: BulkInvoiceItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -230,35 +231,36 @@ export namespace BulkInvoiceItem$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkInvoiceItem> = z
         .object({
-            acceptedPaymentMethods: z.array(AcceptedPaymentMethods$).nullable().optional(),
+            acceptedPaymentMethods: z.nullable(z.array(AcceptedPaymentMethods$)).optional(),
             amount: z.number(),
             bulkInvoiceBatchId: z.string(),
             bulkInvoiceItemId: z.string(),
-            bulkInvoiceItemMergeKey: z.string().nullable().optional(),
-            bulkInvoiceItemReference: z.string().nullable().optional(),
-            clientEmail: z.string().nullable().optional(),
-            clientExternalId: z.string().nullable().optional(),
+            bulkInvoiceItemMergeKey: z.nullable(z.string()).optional(),
+            bulkInvoiceItemReference: z.nullable(z.string()).optional(),
+            clientEmail: z.nullable(z.string()).optional(),
+            clientExternalId: z.nullable(z.string()).optional(),
             createdAt: z.string(),
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
-            integration: InvoiceIntegrations$.outboundSchema.nullable().optional(),
-            invoiceDate: z.string().nullable().optional(),
-            invoiceNotes: z.string().nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.outboundSchema).optional(),
+            invoiceDate: z.nullable(z.string()).optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
             invoiceStatus: InvoiceStatus$,
             labels: z.record(z.string()),
             lineItemDescription: z.string(),
-            lineItemDetail: z.string().nullable().optional(),
-            memberClientId: z.string().nullable().optional(),
+            lineItemDetail: z.nullable(z.string()).optional(),
+            memberClientId: z.nullable(z.string()).optional(),
             memberId: z.string(),
-            metadata:
-                C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a$.outboundSchema
-                    .nullable()
-                    .optional(),
+            metadata: z
+                .nullable(
+                    C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a$.outboundSchema
+                )
+                .optional(),
             paidDate: z.string(),
-            projectName: z.string().nullable().optional(),
-            reimbursableExpense: z.boolean().nullable().optional(),
-            sendDate: z.string().nullable().optional(),
+            projectName: z.nullable(z.string()).optional(),
+            reimbursableExpense: z.nullable(z.boolean()).optional(),
+            sendDate: z.nullable(z.string()).optional(),
             status: BulkInvoiceItemStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

@@ -24,9 +24,9 @@ export namespace Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2
         Inbound
     > = z
         .object({
-            amount: z.number().nullable().optional(),
-            description: z.string().nullable().optional(),
-            percentage: z.number().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            description: z.nullable(z.string()).optional(),
+            percentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -48,9 +48,9 @@ export namespace Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2
         Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
     > = z
         .object({
-            amount: z.number().nullable().optional(),
-            description: z.string().nullable().optional(),
-            percentage: z.number().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            description: z.nullable(z.string()).optional(),
+            percentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

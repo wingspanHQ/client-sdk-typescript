@@ -50,17 +50,17 @@ export namespace InvoiceTemplateUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<InvoiceTemplateUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            accountId: z.string().nullable().optional(),
-            autoPaymentRequired: z.boolean().nullable().optional(),
-            dueInDays: z.number().nullable().optional(),
-            frequency: FrequencyUpdate$.inboundSchema.nullable().optional(),
-            invoiceData: InvoiceUpdateRequest$.inboundSchema.nullable().optional(),
-            isSchedulingOnly: z.boolean().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
-            scheduleDates: z.array(ScheduleDateUpdate$.inboundSchema).nullable().optional(),
-            sendEmails: z.boolean().nullable().optional(),
-            status: InvoiceTemplateUpdateRequestStatus$.nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            autoPaymentRequired: z.nullable(z.boolean()).optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(FrequencyUpdate$.inboundSchema).optional(),
+            invoiceData: z.nullable(InvoiceUpdateRequest$.inboundSchema).optional(),
+            isSchedulingOnly: z.nullable(z.boolean()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDateUpdate$.inboundSchema)).optional(),
+            sendEmails: z.nullable(z.boolean()).optional(),
+            status: z.nullable(InvoiceTemplateUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -100,17 +100,17 @@ export namespace InvoiceTemplateUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceTemplateUpdateRequest> = z
         .object({
-            accountId: z.string().nullable().optional(),
-            autoPaymentRequired: z.boolean().nullable().optional(),
-            dueInDays: z.number().nullable().optional(),
-            frequency: FrequencyUpdate$.outboundSchema.nullable().optional(),
-            invoiceData: InvoiceUpdateRequest$.outboundSchema.nullable().optional(),
-            isSchedulingOnly: z.boolean().nullable().optional(),
-            labels: z.record(z.string()).nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
-            scheduleDates: z.array(ScheduleDateUpdate$.outboundSchema).nullable().optional(),
-            sendEmails: z.boolean().nullable().optional(),
-            status: InvoiceTemplateUpdateRequestStatus$.nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
+            autoPaymentRequired: z.nullable(z.boolean()).optional(),
+            dueInDays: z.nullable(z.number()).optional(),
+            frequency: z.nullable(FrequencyUpdate$.outboundSchema).optional(),
+            invoiceData: z.nullable(InvoiceUpdateRequest$.outboundSchema).optional(),
+            isSchedulingOnly: z.nullable(z.boolean()).optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            scheduleDates: z.nullable(z.array(ScheduleDateUpdate$.outboundSchema)).optional(),
+            sendEmails: z.nullable(z.boolean()).optional(),
+            status: z.nullable(InvoiceTemplateUpdateRequestStatus$).optional(),
         })
         .transform((v) => {
             return {

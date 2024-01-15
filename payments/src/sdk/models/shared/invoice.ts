@@ -164,60 +164,58 @@ export namespace Invoice$ {
 
     export const inboundSchema: z.ZodType<Invoice, z.ZodTypeDef, Inbound> = z
         .object({
-            acceptedPaymentMethods: z.array(InvoiceAcceptedPaymentMethods$).nullable().optional(),
-            accountId: z.string().nullable().optional(),
+            acceptedPaymentMethods: z.nullable(z.array(InvoiceAcceptedPaymentMethods$)).optional(),
+            accountId: z.nullable(z.string()).optional(),
             amount: z.number(),
-            amountDetails: InvoiceAmountDetails$.inboundSchema.nullable().optional(),
-            attachments: InvoiceAttachments$.inboundSchema.nullable().optional(),
-            bankTransferInfo: BankAccount$.inboundSchema.nullable().optional(),
-            chargedFees: Fees$.inboundSchema.nullable().optional(),
+            amountDetails: z.nullable(InvoiceAmountDetails$.inboundSchema).optional(),
+            attachments: z.nullable(InvoiceAttachments$.inboundSchema).optional(),
+            bankTransferInfo: z.nullable(BankAccount$.inboundSchema).optional(),
+            chargedFees: z.nullable(Fees$.inboundSchema).optional(),
             client: ClientOptions$.inboundSchema,
-            clientId: z.string().nullable().optional(),
-            collaborators: z.array(InvoiceCollaborator$.inboundSchema).nullable().optional(),
+            clientId: z.nullable(z.string()).optional(),
+            collaborators: z.nullable(z.array(InvoiceCollaborator$.inboundSchema)).optional(),
             createdAt: z.string(),
-            creditFeeHandling: FeeHandlingConfig$.inboundSchema.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.inboundSchema).optional(),
             currency: InvoiceCurrency$,
-            deductions: z.array(InvoiceAppliedDeductions$.inboundSchema).nullable().optional(),
+            deductions: z.nullable(z.array(InvoiceAppliedDeductions$.inboundSchema)).optional(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
             events: InvoiceEvents$.inboundSchema,
             externalIds: ExternalIds$.inboundSchema,
-            integration: InvoiceIntegrations$.inboundSchema.nullable().optional(),
-            internationalBankTransferInfo: BankAccount$.inboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.inboundSchema).optional(),
+            internationalBankTransferInfo: z.nullable(BankAccount$.inboundSchema).optional(),
             invoiceId: z.string(),
-            invoiceNotes: z.string().nullable().optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
             invoiceNumber: z.string(),
-            invoiceTemplateId: z.string().nullable().optional(),
+            invoiceTemplateId: z.nullable(z.string()).optional(),
             labels: z.record(z.string()),
-            lateFeeHandling: LateFeeConfig$.inboundSchema.nullable().optional(),
+            lateFeeHandling: z.nullable(LateFeeConfig$.inboundSchema).optional(),
             lineItems: z.array(InvoiceLineItem$.inboundSchema),
             member: MemberOptions$.inboundSchema,
             memberAddress: Address$.inboundSchema,
             memberClientId: z.string(),
-            memberFormattedAddressLines: z.array(z.string()).nullable().optional(),
+            memberFormattedAddressLines: z.nullable(z.array(z.string())).optional(),
             memberId: z.string(),
-            metadata: InvoiceMetadata$.inboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.inboundSchema
-                .nullable()
+            metadata: z.nullable(InvoiceMetadata$.inboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.inboundSchema)
                 .optional(),
-            parentInvoiceId: z.string().nullable().optional(),
-            paymentInfo: PaymentInfo$.inboundSchema.nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
+            parentInvoiceId: z.nullable(z.string()).optional(),
+            paymentInfo: z.nullable(PaymentInfo$.inboundSchema).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
             payments: z.array(InvoicePayment$.inboundSchema),
             payoutDestinations: z
-                .array(InvoicePayoutDestination$.inboundSchema)
-                .nullable()
+                .nullable(z.array(InvoicePayoutDestination$.inboundSchema))
                 .optional(),
-            processingFees: ProcessingFees$.inboundSchema.nullable().optional(),
+            processingFees: z.nullable(ProcessingFees$.inboundSchema).optional(),
             refundDestinations: z
-                .array(InvoiceRefundDestination$.inboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceRefundDestination$.inboundSchema))
                 .optional(),
-            sourceId: z.string().nullable().optional(),
+            sourceId: z.nullable(z.string()).optional(),
             status: InvoiceSchemasStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
-            withholdings: InvoiceWithholdings$.inboundSchema.nullable().optional(),
+            withholdings: z.nullable(InvoiceWithholdings$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -345,60 +343,58 @@ export namespace Invoice$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Invoice> = z
         .object({
-            acceptedPaymentMethods: z.array(InvoiceAcceptedPaymentMethods$).nullable().optional(),
-            accountId: z.string().nullable().optional(),
+            acceptedPaymentMethods: z.nullable(z.array(InvoiceAcceptedPaymentMethods$)).optional(),
+            accountId: z.nullable(z.string()).optional(),
             amount: z.number(),
-            amountDetails: InvoiceAmountDetails$.outboundSchema.nullable().optional(),
-            attachments: InvoiceAttachments$.outboundSchema.nullable().optional(),
-            bankTransferInfo: BankAccount$.outboundSchema.nullable().optional(),
-            chargedFees: Fees$.outboundSchema.nullable().optional(),
+            amountDetails: z.nullable(InvoiceAmountDetails$.outboundSchema).optional(),
+            attachments: z.nullable(InvoiceAttachments$.outboundSchema).optional(),
+            bankTransferInfo: z.nullable(BankAccount$.outboundSchema).optional(),
+            chargedFees: z.nullable(Fees$.outboundSchema).optional(),
             client: ClientOptions$.outboundSchema,
-            clientId: z.string().nullable().optional(),
-            collaborators: z.array(InvoiceCollaborator$.outboundSchema).nullable().optional(),
+            clientId: z.nullable(z.string()).optional(),
+            collaborators: z.nullable(z.array(InvoiceCollaborator$.outboundSchema)).optional(),
             createdAt: z.string(),
-            creditFeeHandling: FeeHandlingConfig$.outboundSchema.nullable().optional(),
+            creditFeeHandling: z.nullable(FeeHandlingConfig$.outboundSchema).optional(),
             currency: InvoiceCurrency$,
-            deductions: z.array(InvoiceAppliedDeductions$.outboundSchema).nullable().optional(),
+            deductions: z.nullable(z.array(InvoiceAppliedDeductions$.outboundSchema)).optional(),
             dueDate: z.string(),
             eventActors: z.record(z.string()),
             events: InvoiceEvents$.outboundSchema,
             externalIds: ExternalIds$.outboundSchema,
-            integration: InvoiceIntegrations$.outboundSchema.nullable().optional(),
-            internationalBankTransferInfo: BankAccount$.outboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.outboundSchema).optional(),
+            internationalBankTransferInfo: z.nullable(BankAccount$.outboundSchema).optional(),
             invoiceId: z.string(),
-            invoiceNotes: z.string().nullable().optional(),
+            invoiceNotes: z.nullable(z.string()).optional(),
             invoiceNumber: z.string(),
-            invoiceTemplateId: z.string().nullable().optional(),
+            invoiceTemplateId: z.nullable(z.string()).optional(),
             labels: z.record(z.string()),
-            lateFeeHandling: LateFeeConfig$.outboundSchema.nullable().optional(),
+            lateFeeHandling: z.nullable(LateFeeConfig$.outboundSchema).optional(),
             lineItems: z.array(InvoiceLineItem$.outboundSchema),
             member: MemberOptions$.outboundSchema,
             memberAddress: Address$.outboundSchema,
             memberClientId: z.string(),
-            memberFormattedAddressLines: z.array(z.string()).nullable().optional(),
+            memberFormattedAddressLines: z.nullable(z.array(z.string())).optional(),
             memberId: z.string(),
-            metadata: InvoiceMetadata$.outboundSchema.nullable().optional(),
-            notificationPreferences: InvoiceNotificationPreferences$.outboundSchema
-                .nullable()
+            metadata: z.nullable(InvoiceMetadata$.outboundSchema).optional(),
+            notificationPreferences: z
+                .nullable(InvoiceNotificationPreferences$.outboundSchema)
                 .optional(),
-            parentInvoiceId: z.string().nullable().optional(),
-            paymentInfo: PaymentInfo$.outboundSchema.nullable().optional(),
-            paymentMethodId: z.string().nullable().optional(),
+            parentInvoiceId: z.nullable(z.string()).optional(),
+            paymentInfo: z.nullable(PaymentInfo$.outboundSchema).optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
             payments: z.array(InvoicePayment$.outboundSchema),
             payoutDestinations: z
-                .array(InvoicePayoutDestination$.outboundSchema)
-                .nullable()
+                .nullable(z.array(InvoicePayoutDestination$.outboundSchema))
                 .optional(),
-            processingFees: ProcessingFees$.outboundSchema.nullable().optional(),
+            processingFees: z.nullable(ProcessingFees$.outboundSchema).optional(),
             refundDestinations: z
-                .array(InvoiceRefundDestination$.outboundSchema)
-                .nullable()
+                .nullable(z.array(InvoiceRefundDestination$.outboundSchema))
                 .optional(),
-            sourceId: z.string().nullable().optional(),
+            sourceId: z.nullable(z.string()).optional(),
             status: InvoiceSchemasStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,
-            withholdings: InvoiceWithholdings$.outboundSchema.nullable().optional(),
+            withholdings: z.nullable(InvoiceWithholdings$.outboundSchema).optional(),
         })
         .transform((v) => {
             return {

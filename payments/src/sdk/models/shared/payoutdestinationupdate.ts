@@ -48,10 +48,10 @@ export namespace PayoutDestinationUpdate$ {
 
     export const inboundSchema: z.ZodType<PayoutDestinationUpdate, z.ZodTypeDef, Inbound> = z
         .object({
-            destinationId: z.string().nullable().optional(),
-            destinationType: PayoutDestinationUpdateDestinationType$.nullable().optional(),
-            payoutMethod: PayoutDestinationUpdatePayoutMethod$.nullable().optional(),
-            percentage: z.number().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
+            destinationType: z.nullable(PayoutDestinationUpdateDestinationType$).optional(),
+            payoutMethod: z.nullable(PayoutDestinationUpdatePayoutMethod$).optional(),
+            percentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -73,10 +73,10 @@ export namespace PayoutDestinationUpdate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayoutDestinationUpdate> = z
         .object({
-            destinationId: z.string().nullable().optional(),
-            destinationType: PayoutDestinationUpdateDestinationType$.nullable().optional(),
-            payoutMethod: PayoutDestinationUpdatePayoutMethod$.nullable().optional(),
-            percentage: z.number().nullable().optional(),
+            destinationId: z.nullable(z.string()).optional(),
+            destinationType: z.nullable(PayoutDestinationUpdateDestinationType$).optional(),
+            payoutMethod: z.nullable(PayoutDestinationUpdatePayoutMethod$).optional(),
+            percentage: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

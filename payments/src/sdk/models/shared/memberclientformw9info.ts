@@ -59,19 +59,19 @@ export namespace MemberClientFormW9Info$ {
 
     export const inboundSchema: z.ZodType<MemberClientFormW9Info, z.ZodTypeDef, Inbound> = z
         .object({
-            addressLine1: z.string().nullable().optional(),
-            addressLine2: z.string().nullable().optional(),
-            city: z.string().nullable().optional(),
-            companyStructure: MemberClientFormW9InfoCompanyStructure$.nullable().optional(),
-            country: z.string().nullable().optional(),
-            dob: z.string().nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            postalCode: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            state: z.string().nullable().optional(),
+            addressLine1: z.nullable(z.string()).optional(),
+            addressLine2: z.nullable(z.string()).optional(),
+            city: z.nullable(z.string()).optional(),
+            companyStructure: z.nullable(MemberClientFormW9InfoCompanyStructure$).optional(),
+            country: z.nullable(z.string()).optional(),
+            dob: z.nullable(z.string()).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            postalCode: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            state: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -113,19 +113,19 @@ export namespace MemberClientFormW9Info$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberClientFormW9Info> = z
         .object({
-            addressLine1: z.string().nullable().optional(),
-            addressLine2: z.string().nullable().optional(),
-            city: z.string().nullable().optional(),
-            companyStructure: MemberClientFormW9InfoCompanyStructure$.nullable().optional(),
-            country: z.string().nullable().optional(),
-            dob: z.string().nullable().optional(),
-            ein: z.string().nullable().optional(),
-            firstName: z.string().nullable().optional(),
-            lastName: z.string().nullable().optional(),
-            legalBusinessName: z.string().nullable().optional(),
-            postalCode: z.string().nullable().optional(),
-            ssn: z.string().nullable().optional(),
-            state: z.string().nullable().optional(),
+            addressLine1: z.nullable(z.string()).optional(),
+            addressLine2: z.nullable(z.string()).optional(),
+            city: z.nullable(z.string()).optional(),
+            companyStructure: z.nullable(MemberClientFormW9InfoCompanyStructure$).optional(),
+            country: z.nullable(z.string()).optional(),
+            dob: z.nullable(z.string()).optional(),
+            ein: z.nullable(z.string()).optional(),
+            firstName: z.nullable(z.string()).optional(),
+            lastName: z.nullable(z.string()).optional(),
+            legalBusinessName: z.nullable(z.string()).optional(),
+            postalCode: z.nullable(z.string()).optional(),
+            ssn: z.nullable(z.string()).optional(),
+            state: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

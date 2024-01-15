@@ -41,9 +41,13 @@ export namespace Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96
         Inbound
     > = z
         .object({
-            amount: z.number().nullable().optional(),
-            comment: z.string().nullable().optional(),
-            status: Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status$.nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            comment: z.nullable(z.string()).optional(),
+            status: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status$
+                )
+                .optional(),
         })
         .transform((v) => {
             return {
@@ -68,9 +72,13 @@ export namespace Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96
         Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5
     > = z
         .object({
-            amount: z.number().nullable().optional(),
-            comment: z.string().nullable().optional(),
-            status: Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status$.nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
+            comment: z.nullable(z.string()).optional(),
+            status: z
+                .nullable(
+                    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status$
+                )
+                .optional(),
         })
         .transform((v) => {
             return {

@@ -50,13 +50,14 @@ export namespace InvoiceLineItem$ {
         .object({
             costPerUnit: z.number(),
             createdAt: z.string(),
-            description: z.string().nullable().optional(),
-            detail: z.string().nullable().optional(),
-            discount:
-                Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
-                    .nullable()
-                    .optional(),
-            integration: InvoiceIntegrations$.inboundSchema.nullable().optional(),
+            description: z.nullable(z.string()).optional(),
+            detail: z.nullable(z.string()).optional(),
+            discount: z
+                .nullable(
+                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
+                )
+                .optional(),
+            integration: z.nullable(InvoiceIntegrations$.inboundSchema).optional(),
             labels: z.record(z.string()),
             labelsBak2: z.record(z.string()),
             quantity: z.number(),
@@ -106,13 +107,14 @@ export namespace InvoiceLineItem$ {
         .object({
             costPerUnit: z.number(),
             createdAt: z.string(),
-            description: z.string().nullable().optional(),
-            detail: z.string().nullable().optional(),
-            discount:
-                Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
-                    .nullable()
-                    .optional(),
-            integration: InvoiceIntegrations$.outboundSchema.nullable().optional(),
+            description: z.nullable(z.string()).optional(),
+            detail: z.nullable(z.string()).optional(),
+            discount: z
+                .nullable(
+                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
+                )
+                .optional(),
+            integration: z.nullable(InvoiceIntegrations$.outboundSchema).optional(),
             labels: z.record(z.string()),
             labelsBak2: z.record(z.string()),
             quantity: z.number(),

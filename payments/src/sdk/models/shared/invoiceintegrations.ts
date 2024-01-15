@@ -26,10 +26,11 @@ export namespace InvoiceIntegrations$ {
 
     export const inboundSchema: z.ZodType<InvoiceIntegrations, z.ZodTypeDef, Inbound> = z
         .object({
-            quickbooks:
-                Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$.inboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$.inboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {
@@ -46,10 +47,11 @@ export namespace InvoiceIntegrations$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, InvoiceIntegrations> = z
         .object({
-            quickbooks:
-                Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$.outboundSchema
-                    .nullable()
-                    .optional(),
+            quickbooks: z
+                .nullable(
+                    Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$.outboundSchema
+                )
+                .optional(),
         })
         .transform((v) => {
             return {

@@ -34,8 +34,8 @@ export namespace EligibilityRequirementUpdateRequest$ {
     > = z
         .object({
             requirementType: EligibilityRequirementUpdateRequestRequirementType$,
-            templateId: z.string().nullable().optional(),
-            validFor: z.number().nullable().optional(),
+            templateId: z.nullable(z.string()).optional(),
+            validFor: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {
@@ -58,8 +58,8 @@ export namespace EligibilityRequirementUpdateRequest$ {
     > = z
         .object({
             requirementType: EligibilityRequirementUpdateRequestRequirementType$,
-            templateId: z.string().nullable().optional(),
-            validFor: z.number().nullable().optional(),
+            templateId: z.nullable(z.string()).optional(),
+            validFor: z.nullable(z.number()).optional(),
         })
         .transform((v) => {
             return {

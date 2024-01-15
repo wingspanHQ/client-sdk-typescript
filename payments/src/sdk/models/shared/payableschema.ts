@@ -141,14 +141,13 @@ export namespace PayableSchema$ {
     export const inboundSchema: z.ZodType<PayableSchema, z.ZodTypeDef, Inbound> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableSchemaAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableSchemaAcceptedPaymentMethods$))
                 .optional(),
-            accountId: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
             amount: z.number(),
             attachments: InvoiceAttachments$.inboundSchema,
-            bankTransferInfo: BankAccount$.inboundSchema.nullable().optional(),
-            chargedFees: Fees$.inboundSchema.nullable().optional(),
+            bankTransferInfo: z.nullable(BankAccount$.inboundSchema).optional(),
+            chargedFees: z.nullable(Fees$.inboundSchema).optional(),
             client: ClientOptions$.inboundSchema,
             clientId: z.string(),
             collaboratorId: z.string(),
@@ -160,7 +159,7 @@ export namespace PayableSchema$ {
             events: InvoiceEvents$.inboundSchema,
             integration:
                 Sixb94b58d661f3eabc1444a7a43ac4b99580f0d050123b7bf38184e2f0d7bd66e$.inboundSchema,
-            internationalBankTransferInfo: BankAccount$.inboundSchema.nullable().optional(),
+            internationalBankTransferInfo: z.nullable(BankAccount$.inboundSchema).optional(),
             invoiceNotes: z.string(),
             invoiceNumber: z.string(),
             invoiceTemplateId: z.string(),
@@ -169,14 +168,14 @@ export namespace PayableSchema$ {
             lineItems: z.array(InvoiceLineItem$.inboundSchema),
             member: MemberOptions$.inboundSchema,
             memberAddress: Address$.inboundSchema,
-            memberFormattedAddressLines: z.array(z.string()).nullable().optional(),
+            memberFormattedAddressLines: z.nullable(z.array(z.string())).optional(),
             memberId: z.string(),
-            metadata: InvoiceMetadata$.inboundSchema.nullable().optional(),
-            nextPayrollExecutionDate: ScheduleDate$.inboundSchema.nullable().optional(),
+            metadata: z.nullable(InvoiceMetadata$.inboundSchema).optional(),
+            nextPayrollExecutionDate: z.nullable(ScheduleDate$.inboundSchema).optional(),
             notificationPreferences: InvoiceNotificationPreferences$.inboundSchema,
             payableId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
-            sourceId: z.string().nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            sourceId: z.nullable(z.string()).optional(),
             status: PayableSchemaStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -276,14 +275,13 @@ export namespace PayableSchema$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, PayableSchema> = z
         .object({
             acceptedPaymentMethods: z
-                .array(PayableSchemaAcceptedPaymentMethods$)
-                .nullable()
+                .nullable(z.array(PayableSchemaAcceptedPaymentMethods$))
                 .optional(),
-            accountId: z.string().nullable().optional(),
+            accountId: z.nullable(z.string()).optional(),
             amount: z.number(),
             attachments: InvoiceAttachments$.outboundSchema,
-            bankTransferInfo: BankAccount$.outboundSchema.nullable().optional(),
-            chargedFees: Fees$.outboundSchema.nullable().optional(),
+            bankTransferInfo: z.nullable(BankAccount$.outboundSchema).optional(),
+            chargedFees: z.nullable(Fees$.outboundSchema).optional(),
             client: ClientOptions$.outboundSchema,
             clientId: z.string(),
             collaboratorId: z.string(),
@@ -295,7 +293,7 @@ export namespace PayableSchema$ {
             events: InvoiceEvents$.outboundSchema,
             integration:
                 Sixb94b58d661f3eabc1444a7a43ac4b99580f0d050123b7bf38184e2f0d7bd66e$.outboundSchema,
-            internationalBankTransferInfo: BankAccount$.outboundSchema.nullable().optional(),
+            internationalBankTransferInfo: z.nullable(BankAccount$.outboundSchema).optional(),
             invoiceNotes: z.string(),
             invoiceNumber: z.string(),
             invoiceTemplateId: z.string(),
@@ -304,14 +302,14 @@ export namespace PayableSchema$ {
             lineItems: z.array(InvoiceLineItem$.outboundSchema),
             member: MemberOptions$.outboundSchema,
             memberAddress: Address$.outboundSchema,
-            memberFormattedAddressLines: z.array(z.string()).nullable().optional(),
+            memberFormattedAddressLines: z.nullable(z.array(z.string())).optional(),
             memberId: z.string(),
-            metadata: InvoiceMetadata$.outboundSchema.nullable().optional(),
-            nextPayrollExecutionDate: ScheduleDate$.outboundSchema.nullable().optional(),
+            metadata: z.nullable(InvoiceMetadata$.outboundSchema).optional(),
+            nextPayrollExecutionDate: z.nullable(ScheduleDate$.outboundSchema).optional(),
             notificationPreferences: InvoiceNotificationPreferences$.outboundSchema,
             payableId: z.string(),
-            paymentMethodId: z.string().nullable().optional(),
-            sourceId: z.string().nullable().optional(),
+            paymentMethodId: z.nullable(z.string()).optional(),
+            sourceId: z.nullable(z.string()).optional(),
             status: PayableSchemaStatus$,
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,

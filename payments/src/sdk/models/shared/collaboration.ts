@@ -53,17 +53,17 @@ export namespace Collaboration$ {
 
     export const inboundSchema: z.ZodType<Collaboration, z.ZodTypeDef, Inbound> = z
         .object({
-            clientData: ClientData$.inboundSchema.nullable().optional(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
+            clientData: z.nullable(ClientData$.inboundSchema).optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
             collaboratorId: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.inboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.inboundSchema))
                 .optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.inboundSchema
+                )
+                .optional(),
             status: CollaborationStatus$,
         })
         .transform((v) => {
@@ -98,17 +98,17 @@ export namespace Collaboration$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Collaboration> = z
         .object({
-            clientData: ClientData$.outboundSchema.nullable().optional(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
+            clientData: z.nullable(ClientData$.outboundSchema).optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
             collaboratorId: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.outboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.outboundSchema))
                 .optional(),
-            integration:
-                TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$.outboundSchema
+                )
+                .optional(),
             status: CollaborationStatus$,
         })
         .transform((v) => {

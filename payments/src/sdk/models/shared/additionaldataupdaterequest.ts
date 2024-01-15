@@ -44,11 +44,11 @@ export namespace AdditionalDataUpdateRequest$ {
 
     export const inboundSchema: z.ZodType<AdditionalDataUpdateRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            key: z.string().nullable().optional(),
-            name: z.string().nullable().optional(),
-            required: z.boolean().nullable().optional(),
-            resourceType: AdditionalDataUpdateRequestResourceType$.nullable().optional(),
-            type: AdditionalDataUpdateRequestType$.nullable().optional(),
+            key: z.nullable(z.string()).optional(),
+            name: z.nullable(z.string()).optional(),
+            required: z.nullable(z.boolean()).optional(),
+            resourceType: z.nullable(AdditionalDataUpdateRequestResourceType$).optional(),
+            type: z.nullable(AdditionalDataUpdateRequestType$).optional(),
         })
         .transform((v) => {
             return {
@@ -70,11 +70,11 @@ export namespace AdditionalDataUpdateRequest$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, AdditionalDataUpdateRequest> = z
         .object({
-            key: z.string().nullable().optional(),
-            name: z.string().nullable().optional(),
-            required: z.boolean().nullable().optional(),
-            resourceType: AdditionalDataUpdateRequestResourceType$.nullable().optional(),
-            type: AdditionalDataUpdateRequestType$.nullable().optional(),
+            key: z.nullable(z.string()).optional(),
+            name: z.nullable(z.string()).optional(),
+            required: z.nullable(z.boolean()).optional(),
+            resourceType: z.nullable(AdditionalDataUpdateRequestResourceType$).optional(),
+            type: z.nullable(AdditionalDataUpdateRequestType$).optional(),
         })
         .transform((v) => {
             return {

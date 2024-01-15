@@ -54,18 +54,19 @@ export namespace LineItemsAgingReportLineItem$ {
 
     export const inboundSchema: z.ZodType<LineItemsAgingReportLineItem, z.ZodTypeDef, Inbound> = z
         .object({
-            amount: z.number().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
             costPerUnit: z.number(),
             createdAt: z.string(),
-            description: z.string().nullable().optional(),
-            detail: z.string().nullable().optional(),
-            discount:
-                Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
-                    .nullable()
-                    .optional(),
-            discountTotal: z.number().nullable().optional(),
+            description: z.nullable(z.string()).optional(),
+            detail: z.nullable(z.string()).optional(),
+            discount: z
+                .nullable(
+                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.inboundSchema
+                )
+                .optional(),
+            discountTotal: z.nullable(z.number()).optional(),
             index: z.number(),
-            integration: InvoiceIntegrations$.inboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.inboundSchema).optional(),
             labels: z.record(z.string()),
             labelsBak2: z.record(z.string()),
             quantity: z.number(),
@@ -119,18 +120,19 @@ export namespace LineItemsAgingReportLineItem$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, LineItemsAgingReportLineItem> = z
         .object({
-            amount: z.number().nullable().optional(),
+            amount: z.nullable(z.number()).optional(),
             costPerUnit: z.number(),
             createdAt: z.string(),
-            description: z.string().nullable().optional(),
-            detail: z.string().nullable().optional(),
-            discount:
-                Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
-                    .nullable()
-                    .optional(),
-            discountTotal: z.number().nullable().optional(),
+            description: z.nullable(z.string()).optional(),
+            detail: z.nullable(z.string()).optional(),
+            discount: z
+                .nullable(
+                    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$.outboundSchema
+                )
+                .optional(),
+            discountTotal: z.nullable(z.number()).optional(),
             index: z.number(),
-            integration: InvoiceIntegrations$.outboundSchema.nullable().optional(),
+            integration: z.nullable(InvoiceIntegrations$.outboundSchema).optional(),
             labels: z.record(z.string()),
             labelsBak2: z.record(z.string()),
             quantity: z.number(),

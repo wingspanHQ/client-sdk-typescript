@@ -52,10 +52,10 @@ export namespace MemberOptions$ {
 
     export const inboundSchema: z.ZodType<MemberOptions, z.ZodTypeDef, Inbound> = z
         .object({
-            comment: z.string().nullable().optional(),
-            payoutPreferences: PayoutPreferences$.nullable().optional(),
-            workflowStatus: MemberOptionsWorkflowStatus$.nullable().optional(),
-            workflowSubStatus: MemberOptionsWorkflowSubStatus$.nullable().optional(),
+            comment: z.nullable(z.string()).optional(),
+            payoutPreferences: z.nullable(PayoutPreferences$).optional(),
+            workflowStatus: z.nullable(MemberOptionsWorkflowStatus$).optional(),
+            workflowSubStatus: z.nullable(MemberOptionsWorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {
@@ -79,10 +79,10 @@ export namespace MemberOptions$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, MemberOptions> = z
         .object({
-            comment: z.string().nullable().optional(),
-            payoutPreferences: PayoutPreferences$.nullable().optional(),
-            workflowStatus: MemberOptionsWorkflowStatus$.nullable().optional(),
-            workflowSubStatus: MemberOptionsWorkflowSubStatus$.nullable().optional(),
+            comment: z.nullable(z.string()).optional(),
+            payoutPreferences: z.nullable(PayoutPreferences$).optional(),
+            workflowStatus: z.nullable(MemberOptionsWorkflowStatus$).optional(),
+            workflowSubStatus: z.nullable(MemberOptionsWorkflowSubStatus$).optional(),
         })
         .transform((v) => {
             return {

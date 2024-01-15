@@ -137,15 +137,14 @@ export namespace MemberClient$ {
             clientData: ClientData$.inboundSchema,
             clientId: z.string(),
             clientUserAccountType: ClientUserAccountType$,
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
-            company: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.inboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.inboundSchema))
                 .optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
             emailTo: z.string(),
             eventActors: z.record(z.string()),
             events: MemberClientEvents$.inboundSchema,
@@ -153,17 +152,18 @@ export namespace MemberClient$ {
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.inboundSchema,
             formW9Data: MemberClientFormW9Info$.inboundSchema,
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.inboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.inboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.inboundSchema,
             memberClientId: z.string(),
             memberData: MemberData$.inboundSchema,
             memberId: z.string(),
-            name: z.string().nullable().optional(),
+            name: z.nullable(z.string()).optional(),
             parentMemberClientId: z.string(),
             payerPayeeId: z.string(),
             status: MemberClientStatus$,
@@ -260,15 +260,14 @@ export namespace MemberClient$ {
             clientData: ClientData$.outboundSchema,
             clientId: z.string(),
             clientUserAccountType: ClientUserAccountType$,
-            collaboratorGroupId: z.string().nullable().optional(),
-            collaboratorGroupIds: z.array(z.string()).nullable().optional(),
-            company: z.string().nullable().optional(),
+            collaboratorGroupId: z.nullable(z.string()).optional(),
+            collaboratorGroupIds: z.nullable(z.array(z.string())).optional(),
+            company: z.nullable(z.string()).optional(),
             createdAt: z.string(),
             eligibilityRequirements: z
-                .array(MemberClientRequirementResponse$.outboundSchema)
-                .nullable()
+                .nullable(z.array(MemberClientRequirementResponse$.outboundSchema))
                 .optional(),
-            emailCC: z.array(z.string()).nullable().optional(),
+            emailCC: z.nullable(z.array(z.string())).optional(),
             emailTo: z.string(),
             eventActors: z.record(z.string()),
             events: MemberClientEvents$.outboundSchema,
@@ -276,17 +275,18 @@ export namespace MemberClient$ {
             form1099Balances:
                 B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$.outboundSchema,
             formW9Data: MemberClientFormW9Info$.outboundSchema,
-            integration:
-                Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
-                    .nullable()
-                    .optional(),
+            integration: z
+                .nullable(
+                    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$.outboundSchema
+                )
+                .optional(),
             internationalWireAccount: MemberClientWireAccount$.outboundSchema,
             labels: z.record(z.string()),
             member: RedactedMember$.outboundSchema,
             memberClientId: z.string(),
             memberData: MemberData$.outboundSchema,
             memberId: z.string(),
-            name: z.string().nullable().optional(),
+            name: z.nullable(z.string()).optional(),
             parentMemberClientId: z.string(),
             payerPayeeId: z.string(),
             status: MemberClientStatus$,

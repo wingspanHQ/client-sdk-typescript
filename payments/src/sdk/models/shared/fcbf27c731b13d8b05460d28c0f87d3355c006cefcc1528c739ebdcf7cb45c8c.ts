@@ -23,8 +23,8 @@ export namespace Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8
         Inbound
     > = z
         .object({
-            approvedBy: RedactedMember$.inboundSchema.nullable().optional(),
-            preApprovedBy: RedactedMember$.inboundSchema.nullable().optional(),
+            approvedBy: z.nullable(RedactedMember$.inboundSchema).optional(),
+            preApprovedBy: z.nullable(RedactedMember$.inboundSchema).optional(),
         })
         .transform((v) => {
             return {
@@ -44,8 +44,8 @@ export namespace Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8
         Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c
     > = z
         .object({
-            approvedBy: RedactedMember$.outboundSchema.nullable().optional(),
-            preApprovedBy: RedactedMember$.outboundSchema.nullable().optional(),
+            approvedBy: z.nullable(RedactedMember$.outboundSchema).optional(),
+            preApprovedBy: z.nullable(RedactedMember$.outboundSchema).optional(),
         })
         .transform((v) => {
             return {

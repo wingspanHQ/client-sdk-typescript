@@ -28,7 +28,7 @@ export namespace BulkPayableBatchCreate$ {
 
     export const inboundSchema: z.ZodType<BulkPayableBatchCreate, z.ZodTypeDef, Inbound> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
             processingStrategy: BulkPayableBatchCreateProcessingStrategy$,
         })
         .transform((v) => {
@@ -45,7 +45,7 @@ export namespace BulkPayableBatchCreate$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, BulkPayableBatchCreate> = z
         .object({
-            labels: z.record(z.string()).nullable().optional(),
+            labels: z.nullable(z.record(z.string())).optional(),
             processingStrategy: BulkPayableBatchCreateProcessingStrategy$,
         })
         .transform((v) => {

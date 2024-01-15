@@ -18,8 +18,8 @@ export namespace DocumentEvents$ {
 
     export const inboundSchema: z.ZodType<DocumentEvents, z.ZodTypeDef, Inbound> = z
         .object({
-            clientSignedAt: z.string().nullable().optional(),
-            memberSignedAt: z.string().nullable().optional(),
+            clientSignedAt: z.nullable(z.string()).optional(),
+            memberSignedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -35,8 +35,8 @@ export namespace DocumentEvents$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, DocumentEvents> = z
         .object({
-            clientSignedAt: z.string().nullable().optional(),
-            memberSignedAt: z.string().nullable().optional(),
+            clientSignedAt: z.nullable(z.string()).optional(),
+            memberSignedAt: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
