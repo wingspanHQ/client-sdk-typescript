@@ -4,21 +4,22 @@ management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
   speakeasyVersion: internal
-  generationVersion: 2.231.0
-  releaseVersion: 1.0.1
-  configChecksum: d8dd810fd5b43bbfb307be6ff023f50d
+  generationVersion: 2.237.3
+  releaseVersion: 1.1.0
+  configChecksum: 835d2ec8f7d3df8d058bb2ae9ff7d4fe
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
   published: true
 features:
   typescript:
-    core: 3.4.5
+    core: 3.4.7
     deprecations: 2.81.1
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
     serverIDs: 2.81.2
+    unions: 2.85.0
 generatedFiles:
   - src/sdk/servicesettings.ts
   - src/sdk/wingspanwallet.ts
@@ -38,12 +39,14 @@ generatedFiles:
   - src/sdk/sdk.ts
   - .eslintrc.js
   - .npmignore
+  - RUNTIMES.md
   - package-lock.json
   - package.json
   - src/index.ts
   - src/lib/base64.ts
   - src/lib/config.ts
   - src/lib/encodings.ts
+  - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
   - src/lib/sdks.ts
@@ -286,6 +289,21 @@ generatedFiles:
   - src/sdk/models/shared/documentevents.ts
   - src/sdk/models/shared/clientdata.ts
   - src/sdk/models/shared/calculate1099request.ts
+  - src/sdk/models/shared/taxformresponse.ts
+  - src/sdk/models/shared/payertaxformresponse.ts
+  - src/sdk/models/shared/taxformredactedsubmissiondata.ts
+  - src/sdk/models/shared/redactedtaxformw9info.ts
+  - src/sdk/models/shared/tinverification.ts
+  - src/sdk/models/shared/taxformsubmission.ts
+  - src/sdk/models/shared/taxformsubmissiondata.ts
+  - src/sdk/models/shared/taxformw9info.ts
+  - src/sdk/models/shared/taxformsubmissionevents.ts
+  - src/sdk/models/shared/recipientverification.ts
+  - src/sdk/models/shared/eightd013dd0cdafb98addfde478aafc44fc8914592071f79bc8d2aa0096744c099f.ts
+  - src/sdk/models/shared/fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193.ts
+  - src/sdk/models/shared/a0c9e6ffe8bb5721b33f3c5938cd400a6967bc933f64c5c77038ac40045e9412.ts
+  - src/sdk/models/shared/taxformevents.ts
+  - src/sdk/models/shared/taxformredactedevent.ts
   - src/sdk/models/shared/bulkcalculation1099batch.ts
   - src/sdk/models/shared/sevenhundredandfiftysevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2.ts
   - src/sdk/models/shared/bulkbatchcreate.ts
@@ -827,6 +845,42 @@ generatedFiles:
   - docs/sdk/models/shared/verificationstratgy.md
   - docs/sdk/models/shared/clientdata.md
   - docs/sdk/models/shared/calculate1099request.md
+  - docs/sdk/models/shared/taxformresponse.md
+  - docs/sdk/models/shared/payertaxformresponsedeliverymethod.md
+  - docs/sdk/models/shared/deprecatedtaxform.md
+  - docs/sdk/models/shared/payertaxformresponsestatus.md
+  - docs/sdk/models/shared/payertaxformresponsetype.md
+  - docs/sdk/models/shared/payertaxformresponse.md
+  - docs/sdk/models/shared/taxformredactedsubmissiondatadeliverymethod.md
+  - docs/sdk/models/shared/taxformredactedsubmissiondata.md
+  - docs/sdk/models/shared/redactedtaxformw9infocompanystructure.md
+  - docs/sdk/models/shared/redactedtaxformw9infotintype.md
+  - docs/sdk/models/shared/redactedtaxformw9info.md
+  - docs/sdk/models/shared/tinverificationstatus.md
+  - docs/sdk/models/shared/tinverification.md
+  - docs/sdk/models/shared/correctiontype.md
+  - docs/sdk/models/shared/taxformsubmissiondeliverymethod.md
+  - docs/sdk/models/shared/taxformsubmissionstatus.md
+  - docs/sdk/models/shared/taxformsubmission.md
+  - docs/sdk/models/shared/taxformsubmissiondatadeliverymethod.md
+  - docs/sdk/models/shared/taxformsubmissiondata.md
+  - docs/sdk/models/shared/taxformw9infocompanystructure.md
+  - docs/sdk/models/shared/taxformw9infotintype.md
+  - docs/sdk/models/shared/taxformw9info.md
+  - docs/sdk/models/shared/taxformsubmissionevents.md
+  - docs/sdk/models/shared/tintype.md
+  - docs/sdk/models/shared/recipientverification.md
+  - docs/sdk/models/shared/eightd013dd0cdafb98addfde478aafc44fc8914592071f79bc8d2aa0096744c099f.md
+  - docs/sdk/models/shared/fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193.md
+  - docs/sdk/models/shared/a0c9e6ffe8bb5721b33f3c5938cd400a6967bc933f64c5c77038ac40045e9412sharetaxdocument.md
+  - docs/sdk/models/shared/a0c9e6ffe8bb5721b33f3c5938cd400a6967bc933f64c5c77038ac40045e9412.md
+  - docs/sdk/models/shared/taxformevents.md
+  - docs/sdk/models/shared/taxformredactedeventdata.md
+  - docs/sdk/models/shared/eventtype.md
+  - docs/sdk/models/shared/previousdata.md
+  - docs/sdk/models/shared/recipientsynctoggled.md
+  - docs/sdk/models/shared/triggeredby.md
+  - docs/sdk/models/shared/taxformredactedevent.md
   - docs/sdk/models/shared/bulkcalculation1099batchstatus.md
   - docs/sdk/models/shared/bulkcalculation1099batch.md
   - docs/sdk/models/shared/sevenhundredandfiftysevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2.md

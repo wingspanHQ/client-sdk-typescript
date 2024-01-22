@@ -27,13 +27,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.reportingAndAnalytics.get();
+  const result = await sdk.reportingAndAnalytics.get();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -70,15 +67,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.reportingAndAnalytics.getPayrollReport({
+  const result = await sdk.reportingAndAnalytics.getPayrollReport({
     payrollId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -116,13 +110,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.reportingAndAnalytics.listDetailedCollaborator();
+  const result = await sdk.reportingAndAnalytics.listDetailedCollaborator();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -159,13 +150,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.reportingAndAnalytics.listLineItem();
+  const result = await sdk.reportingAndAnalytics.listLineItem();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -202,13 +190,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.reportingAndAnalytics.listPayable();
+  const result = await sdk.reportingAndAnalytics.listPayable();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

@@ -29,7 +29,7 @@ export type UpdateTaxFormResponse = {
     /**
      * 1099 Tax form object
      */
-    taxFormResponse?: any | undefined;
+    taxFormResponse?: shared.TaxFormResponse | undefined;
 };
 
 /** @internal */
@@ -79,7 +79,7 @@ export namespace UpdateTaxFormResponse$ {
         ContentType: string;
         StatusCode: number;
         RawResponse: Response;
-        TaxFormResponse?: any | undefined;
+        TaxFormResponse?: shared.TaxFormResponse$.Inbound | undefined;
     };
 
     export const inboundSchema: z.ZodType<UpdateTaxFormResponse, z.ZodTypeDef, Inbound> = z
@@ -87,7 +87,7 @@ export namespace UpdateTaxFormResponse$ {
             ContentType: z.string(),
             StatusCode: z.number().int(),
             RawResponse: z.instanceof(Response),
-            TaxFormResponse: z.any().optional(),
+            TaxFormResponse: shared.TaxFormResponse$.inboundSchema.optional(),
         })
         .transform((v) => {
             return {
@@ -104,7 +104,7 @@ export namespace UpdateTaxFormResponse$ {
         ContentType: string;
         StatusCode: number;
         RawResponse: never;
-        TaxFormResponse?: any | undefined;
+        TaxFormResponse?: shared.TaxFormResponse$.Outbound | undefined;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, UpdateTaxFormResponse> = z
@@ -114,7 +114,7 @@ export namespace UpdateTaxFormResponse$ {
             rawResponse: z.instanceof(Response).transform(() => {
                 throw new Error("Response cannot be serialized");
             }),
-            taxFormResponse: z.any().optional(),
+            taxFormResponse: shared.TaxFormResponse$.outboundSchema.optional(),
         })
         .transform((v) => {
             return {

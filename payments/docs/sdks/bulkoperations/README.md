@@ -58,18 +58,15 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.create({
+  const result = await sdk.bulkOperations.create({
     labels: {
       "key": "string",
     },
     processingStrategy: BulkInvoiceBatchCreateProcessingStrategy.Merge,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -108,7 +105,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createBatchItem({
+  const result = await sdk.bulkOperations.createBatchItem({
     bulkPayableItemCreate: {
       amount: 1194.43,
       bulkPayableBatchId: "string",
@@ -122,11 +119,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -164,17 +158,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createClient({
+  const result = await sdk.bulkOperations.createClient({
     labels: {
       "key": "string",
     },
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -213,7 +204,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createClientItem({
+  const result = await sdk.bulkOperations.createClientItem({
     bulkClientItemCreate: {
       integration: {
         quickbooks: {},
@@ -226,11 +217,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -268,17 +256,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createCollaborator({
+  const result = await sdk.bulkOperations.createCollaborator({
     labels: {
       "key": "string",
     },
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -317,18 +302,15 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createPayable({
+  const result = await sdk.bulkOperations.createPayable({
     labels: {
       "key": "string",
     },
     processingStrategy: BulkPayableBatchCreateProcessingStrategy.Merge,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -370,7 +352,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createSpecificCollaboratorItem({
+  const result = await sdk.bulkOperations.createSpecificCollaboratorItem({
     bulkCollaboratorItemCreate: {
       formW9Data: {},
       labels: {
@@ -380,11 +362,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -424,7 +403,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.createSpecificInvoice({
+  const result = await sdk.bulkOperations.createSpecificInvoice({
     bulkInvoiceItemCreate: {
       acceptedPaymentMethods: [
         BulkInvoiceItemCreateAcceptedPaymentMethods.Ach,
@@ -442,11 +421,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -484,15 +460,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.deleteCollaborator({
+  const result = await sdk.bulkOperations.deleteCollaborator({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -530,15 +503,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.deletePayable({
+  const result = await sdk.bulkOperations.deletePayable({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -576,15 +546,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.get({
+  const result = await sdk.bulkOperations.get({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -622,15 +589,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getBatchItem({
+  const result = await sdk.bulkOperations.getBatchItem({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -668,15 +632,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getClient({
+  const result = await sdk.bulkOperations.getClient({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -714,16 +675,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getClientItem({
+  const result = await sdk.bulkOperations.getClientItem({
     batchId: "string",
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -761,15 +719,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getCollaborator({
+  const result = await sdk.bulkOperations.getCollaborator({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -807,15 +762,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getPayable({
+  const result = await sdk.bulkOperations.getPayable({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -853,16 +805,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getSpecific({
+  const result = await sdk.bulkOperations.getSpecific({
     batchId: "string",
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -900,16 +849,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getSpecificCollaboratorItem({
+  const result = await sdk.bulkOperations.getSpecificCollaboratorItem({
     batchId: "string",
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -947,16 +893,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.getSpecificInvoice({
+  const result = await sdk.bulkOperations.getSpecificInvoice({
     batchId: "string",
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -994,13 +937,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.list();
+  const result = await sdk.bulkOperations.list();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1037,15 +977,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listBatchItem({
+  const result = await sdk.bulkOperations.listBatchItem({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1083,13 +1020,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listClient();
+  const result = await sdk.bulkOperations.listClient();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1126,15 +1060,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listClientItem({
+  const result = await sdk.bulkOperations.listClientItem({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1172,13 +1103,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listCollaborator();
+  const result = await sdk.bulkOperations.listCollaborator();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1215,13 +1143,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listPayable();
+  const result = await sdk.bulkOperations.listPayable();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1258,15 +1183,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listSpecificCollaboratorItem({
+  const result = await sdk.bulkOperations.listSpecificCollaboratorItem({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1304,15 +1226,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.listSpecificInvoice({
+  const result = await sdk.bulkOperations.listSpecificInvoice({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1351,7 +1270,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.update({
+  const result = await sdk.bulkOperations.update({
     bulkInvoiceBatchUpdate: {
       labels: {
         "key": "string",
@@ -1360,11 +1279,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1403,7 +1319,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateClient({
+  const result = await sdk.bulkOperations.updateClient({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -1412,11 +1328,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1455,7 +1368,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateClientItem({
+  const result = await sdk.bulkOperations.updateClientItem({
     bulkClientItemUpdate: {
       integration: {
         quickbooks: {},
@@ -1469,11 +1382,8 @@ async function run() {
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1512,7 +1422,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateCollaborator({
+  const result = await sdk.bulkOperations.updateCollaborator({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -1521,11 +1431,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1564,7 +1471,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updatePayable({
+  const result = await sdk.bulkOperations.updatePayable({
     bulkPayableBatchUpdate: {
       labels: {
         "key": "string",
@@ -1573,11 +1480,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1616,7 +1520,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateSpecific({
+  const result = await sdk.bulkOperations.updateSpecific({
     bulkPayableItemUpdate: {
       labels: {
         "key": "string",
@@ -1626,11 +1530,8 @@ async function run() {
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1672,7 +1573,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateSpecificCollaboratorItem({
+  const result = await sdk.bulkOperations.updateSpecificCollaboratorItem({
     bulkCollaboratorItemUpdate: {
       formW9Data: {},
       labels: {
@@ -1683,11 +1584,8 @@ async function run() {
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1727,7 +1625,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.bulkOperations.updateSpecificInvoice({
+  const result = await sdk.bulkOperations.updateSpecificInvoice({
     bulkInvoiceItemUpdate: {
       acceptedPaymentMethods: [
         BulkInvoiceItemUpdateAcceptedPaymentMethods.Ach,
@@ -1741,11 +1639,8 @@ async function run() {
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

@@ -38,7 +38,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.create({
+  const result = await sdk.payablesManagement.create({
     acceptedPaymentMethods: [
       PayableCreateRequestAcceptedPaymentMethods.Ach,
     ],
@@ -78,11 +78,8 @@ async function run() {
     },
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -120,15 +117,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.delete({
+  const result = await sdk.payablesManagement.delete({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -166,13 +160,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.execute();
+  const result = await sdk.payablesManagement.execute();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -209,15 +200,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.get({
+  const result = await sdk.payablesManagement.get({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -255,13 +243,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.getApproved();
+  const result = await sdk.payablesManagement.getApproved();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -298,13 +283,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.list();
+  const result = await sdk.payablesManagement.list();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -341,13 +323,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.listSummary();
+  const result = await sdk.payablesManagement.listSummary();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -391,7 +370,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.payablesManagement.update({
+  const result = await sdk.payablesManagement.update({
     payableUpdateRequest: {
       acceptedPaymentMethods: [
         PayableUpdateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
@@ -446,11 +425,8 @@ async function run() {
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

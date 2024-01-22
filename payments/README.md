@@ -35,13 +35,10 @@ async function run() {
         bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    const res = await sdk.serviceSettings.get();
+    const result = await sdk.serviceSettings.get();
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -291,15 +288,16 @@ async function run() {
         bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    const res = await sdk.serviceSettings.get().catch((err) => {
+    let result;
+    try {
+        result = await sdk.serviceSettings.get();
+    } catch (err) {
+        // Handle errors here
         throw err;
-    });
-
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
     }
 
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -314,18 +312,55 @@ run();
 
 ### Select Server by Name
 
-You can override the default server globally by passing a server name to the `server: string` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
+You can override the default server globally by passing a server name to the `server` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
 
 | Name | Server | Variables |
 | ----- | ------ | --------- |
 | `prod` | `https://api.wingspan.app` | None |
 | `staging` | `https://stagingapi.wingspan.app` | None |
 
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+    const sdk = new Payments({
+        server: "staging",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    });
+
+    const result = await sdk.serviceSettings.get();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+async function run() {
+    const sdk = new Payments({
+        serverURL: "https://api.wingspan.app",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    });
+
+    const result = await sdk.serviceSettings.get();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 <!-- End Server Selection [server] -->
 
 
@@ -399,19 +434,22 @@ async function run() {
         bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    const res = await sdk.serviceSettings.get();
+    const result = await sdk.serviceSettings.get();
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
 
 ```
 <!-- End Authentication [security] -->
+
+<!-- Start Requirements [requirements] -->
+## Requirements
+
+For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
+<!-- End Requirements [requirements] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

@@ -36,16 +36,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.create({
+  const result = await sdk.documentSigningAndEligibility.create({
     field: "string",
     value: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -83,15 +80,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.delete({
+  const result = await sdk.documentSigningAndEligibility.delete({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -129,16 +123,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.deleteCollaboratorGroup({
+  const result = await sdk.documentSigningAndEligibility.deleteCollaboratorGroup({
     eligibilityRequirementId: "string",
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -176,15 +167,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.deletePayment({
+  const result = await sdk.documentSigningAndEligibility.deletePayment({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -223,15 +211,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.establish({
+  const result = await sdk.documentSigningAndEligibility.establish({
     requirementType: EligibilityRequirementCreateRequestRequirementType.Signature,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -269,15 +254,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.get({
+  const result = await sdk.documentSigningAndEligibility.get({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -315,15 +297,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.getGroupConfiguration({
+  const result = await sdk.documentSigningAndEligibility.getGroupConfiguration({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -361,15 +340,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.getPayment({
+  const result = await sdk.documentSigningAndEligibility.getPayment({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -407,13 +383,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.list();
+  const result = await sdk.documentSigningAndEligibility.list();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -450,13 +423,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.listPayment();
+  const result = await sdk.documentSigningAndEligibility.listPayment();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -494,18 +464,15 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.update({
+  const result = await sdk.documentSigningAndEligibility.update({
     eligibilityRequirementUpdateRequest: {
       requirementType: EligibilityRequirementUpdateRequestRequirementType.Signature,
     },
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -543,7 +510,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.updateCollaboratorGroup({
+  const result = await sdk.documentSigningAndEligibility.updateCollaboratorGroup({
     collaboratorGroupRequirementUpdate: {
       newEligibilityRequirementId: "string",
     },
@@ -551,11 +518,8 @@ async function run() {
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -593,7 +557,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.updateGroupConfiguration({
+  const result = await sdk.documentSigningAndEligibility.updateGroupConfiguration({
     collaboratorGroupUpdateRequest: {
       collaboratorSettings: {
         "key": "string",
@@ -605,11 +569,8 @@ async function run() {
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -647,18 +608,15 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.documentSigningAndEligibility.updatePayment({
+  const result = await sdk.documentSigningAndEligibility.updatePayment({
     paymentEligibilityUpdateRequest: {
       value: {},
     },
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

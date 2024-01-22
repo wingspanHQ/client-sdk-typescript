@@ -44,16 +44,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.calculate({
+  const result = await sdk.oneThousandAndNinetyNineOperations.calculate({
     memberClientId: "string",
     year: 6611.96,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -91,15 +88,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.create({
+  const result = await sdk.oneThousandAndNinetyNineOperations.create({
     taxFormId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -137,17 +131,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.createBatchCalculation({
+  const result = await sdk.oneThousandAndNinetyNineOperations.createBatchCalculation({
     labels: {
       "key": "string",
     },
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -186,7 +177,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.createItem({
+  const result = await sdk.oneThousandAndNinetyNineOperations.createItem({
     bulkCalculation1099ItemCreate: {
       clientId: "string",
       labels: {
@@ -197,11 +188,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -239,15 +227,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.createProof({
+  const result = await sdk.oneThousandAndNinetyNineOperations.createProof({
     taxFormId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -285,17 +270,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.createTaxForm({
+  const result = await sdk.oneThousandAndNinetyNineOperations.createTaxForm({
     clientId: "string",
     data: {},
     memberId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -333,15 +315,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.get({
+  const result = await sdk.oneThousandAndNinetyNineOperations.get({
     taxFormId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -379,15 +358,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.getBatchCalculation({
+  const result = await sdk.oneThousandAndNinetyNineOperations.getBatchCalculation({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -425,17 +401,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.getForm1099({
+  const result = await sdk.oneThousandAndNinetyNineOperations.getForm1099({
     id: "<ID>",
     index: "string",
     year: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -473,15 +446,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.getFormW9({
+  const result = await sdk.oneThousandAndNinetyNineOperations.getFormW9({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -519,16 +489,13 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.getItem({
+  const result = await sdk.oneThousandAndNinetyNineOperations.getItem({
     batchId: "string",
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -566,13 +533,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.listBatchCalculation();
+  const result = await sdk.oneThousandAndNinetyNineOperations.listBatchCalculation();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -609,15 +573,12 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.listItem({
+  const result = await sdk.oneThousandAndNinetyNineOperations.listItem({
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -655,13 +616,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.listTaxForm();
+  const result = await sdk.oneThousandAndNinetyNineOperations.listTaxForm();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -698,17 +656,14 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.mark({
+  const result = await sdk.oneThousandAndNinetyNineOperations.mark({
     memberId: "string",
     submissionIndex: 2694.09,
     year: 735.52,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -746,7 +701,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.remail({
+  const result = await sdk.oneThousandAndNinetyNineOperations.remail({
     address: {
       addressLine1: "string",
       city: "Port Cara",
@@ -757,11 +712,8 @@ async function run() {
     year: 3145.26,
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -799,13 +751,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.request();
+  const result = await sdk.oneThousandAndNinetyNineOperations.request();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -842,13 +791,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.submit();
+  const result = await sdk.oneThousandAndNinetyNineOperations.submit();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -886,18 +832,15 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.update({
+  const result = await sdk.oneThousandAndNinetyNineOperations.update({
     taxFormUpdateRequest: {
       data: {},
     },
     taxFormId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -936,7 +879,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.updateBatchCalculation({
+  const result = await sdk.oneThousandAndNinetyNineOperations.updateBatchCalculation({
     bulkBatchUpdate: {
       labels: {
         "key": "string",
@@ -945,11 +888,8 @@ async function run() {
     batchId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -988,7 +928,7 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.updateItem({
+  const result = await sdk.oneThousandAndNinetyNineOperations.updateItem({
     bulkCalculation1099ItemUpdate: {
       labels: {
         "key": "string",
@@ -998,11 +938,8 @@ async function run() {
     batchItemId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1040,13 +977,10 @@ async function run() {
     bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
-  const res = await sdk.oneThousandAndNinetyNineOperations.updateW9();
+  const result = await sdk.oneThousandAndNinetyNineOperations.updateW9();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

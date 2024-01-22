@@ -914,7 +914,7 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
             const responseBody = await response.json();
             const result = operations.List1099TaxFormsResponse$.inboundSchema.parse({
                 ...responseFields$,
-                anies: responseBody,
+                unions: responseBody,
             });
             return result;
         } else {
@@ -1394,7 +1394,7 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
             const responseBody = await response.json();
             const result = operations.UpdatePayeeW9InformationResponse$.inboundSchema.parse({
                 ...responseFields$,
-                anies: responseBody,
+                unions: responseBody,
             });
             return result;
         } else {
