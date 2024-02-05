@@ -26,7 +26,7 @@ Deprecated Endpoints.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { ResourceType, TypeT } from "@wingspan/payments/sdk/models/shared";
+import { ResourceType, Type } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -38,7 +38,7 @@ async function run() {
     name: "string",
     required: false,
     resourceType: ResourceType.Collaborator,
-    type: TypeT.Boolean,
+    type: Type.Boolean,
   });
 
   // Handle the result

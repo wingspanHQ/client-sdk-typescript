@@ -9,7 +9,7 @@ export enum ResourceType {
     LineItem = "LineItem",
 }
 
-export enum TypeT {
+export enum Type {
     Boolean = "Boolean",
     String = "String",
 }
@@ -19,14 +19,14 @@ export type AdditionalData = {
     name: string;
     required: boolean;
     resourceType: ResourceType;
-    type: TypeT;
+    type: Type;
 };
 
 /** @internal */
 export const ResourceType$ = z.nativeEnum(ResourceType);
 
 /** @internal */
-export const TypeT$ = z.nativeEnum(TypeT);
+export const Type$ = z.nativeEnum(Type);
 
 /** @internal */
 export namespace AdditionalData$ {
@@ -35,7 +35,7 @@ export namespace AdditionalData$ {
         name: string;
         required: boolean;
         resourceType: ResourceType;
-        type: TypeT;
+        type: Type;
     };
 
     export const inboundSchema: z.ZodType<AdditionalData, z.ZodTypeDef, Inbound> = z
@@ -44,7 +44,7 @@ export namespace AdditionalData$ {
             name: z.string(),
             required: z.boolean(),
             resourceType: ResourceType$,
-            type: TypeT$,
+            type: Type$,
         })
         .transform((v) => {
             return {
@@ -61,7 +61,7 @@ export namespace AdditionalData$ {
         name: string;
         required: boolean;
         resourceType: ResourceType;
-        type: TypeT;
+        type: Type;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, AdditionalData> = z
@@ -70,7 +70,7 @@ export namespace AdditionalData$ {
             name: z.string(),
             required: z.boolean(),
             resourceType: ResourceType$,
-            type: TypeT$,
+            type: Type$,
         })
         .transform((v) => {
             return {
