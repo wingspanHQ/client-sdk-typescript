@@ -7,13 +7,11 @@ import { z } from "zod";
 export enum AutoPayRequirement {
     All = "All",
     None = "None",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum ShareTaxDocument {
     Allow = "Allow",
     Decline = "Decline",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type MemberData = {

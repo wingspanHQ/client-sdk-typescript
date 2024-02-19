@@ -31,7 +31,6 @@ export enum InvoiceCreateRequestAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type Client = {};
@@ -39,7 +38,6 @@ export type Client = {};
 export enum InvoiceCreateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type Member = {};
@@ -52,7 +50,6 @@ export enum InvoiceCreateRequestStatus {
     Pending = "Pending",
     PaymentInTransit = "PaymentInTransit",
     Paid = "Paid",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type InvoiceCreateRequest = {

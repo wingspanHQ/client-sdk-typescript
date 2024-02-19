@@ -10,7 +10,6 @@ export enum BulkInvoiceBatchUpdateStatus {
     Processing = "Processing",
     Complete = "Complete",
     Failed = "Failed",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkInvoiceBatchUpdate = {

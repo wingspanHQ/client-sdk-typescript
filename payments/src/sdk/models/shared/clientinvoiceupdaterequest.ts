@@ -13,7 +13,6 @@ export enum ClientInvoiceUpdateRequestStatus {
     Pending = "Pending",
     PaymentInTransit = "PaymentInTransit",
     Paid = "Paid",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type ClientInvoiceUpdateRequest = {

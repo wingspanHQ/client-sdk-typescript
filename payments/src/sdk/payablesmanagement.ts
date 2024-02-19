@@ -22,6 +22,7 @@ export class PayablesManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Create a New Payable for a Member on Behalf of a Client
      *
@@ -103,7 +104,6 @@ export class PayablesManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payable/{id}")(pathParams$);
 
         let security$;
@@ -216,7 +216,6 @@ export class PayablesManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payable/{id}")(pathParams$);
 
         let security$;
@@ -422,7 +421,6 @@ export class PayablesManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payable/{id}")(pathParams$);
 
         let security$;

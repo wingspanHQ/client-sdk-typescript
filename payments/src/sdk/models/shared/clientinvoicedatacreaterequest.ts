@@ -12,7 +12,6 @@ import { z } from "zod";
 export enum ClientInvoiceDataCreateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type ClientInvoiceDataCreateRequest = {

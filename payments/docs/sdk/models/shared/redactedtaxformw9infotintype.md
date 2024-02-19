@@ -3,8 +3,7 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `Individual`             | Individual               |
-| `Business`               | Business                 |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name         | Value        |
+| ------------ | ------------ |
+| `Individual` | Individual   |
+| `Business`   | Business     |

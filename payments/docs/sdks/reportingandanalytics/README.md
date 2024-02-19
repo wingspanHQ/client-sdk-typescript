@@ -68,7 +68,7 @@ async function run() {
   });
 
   const result = await sdk.reportingAndAnalytics.getPayrollReport({
-    payrollId: "string",
+    payrollId: "<value>",
   });
 
   // Handle the result

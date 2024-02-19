@@ -22,6 +22,7 @@ export class BulkOperations extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Initiate a New Bulk Invoice Batch
      *
@@ -108,7 +109,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/payable/batch/{batchId}/item")(
             pathParams$
         );
@@ -239,7 +239,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/client/batch/{batchId}/item")(
             pathParams$
         );
@@ -434,7 +433,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/collaborator/batch/{batchId}/item")(
             pathParams$
         );
@@ -505,7 +503,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/invoice/batch/{batchId}/item")(
             pathParams$
         );
@@ -573,7 +570,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/collaborator/batch/{batchId}")(
             pathParams$
         );
@@ -641,7 +637,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/payable/batch/{batchId}")(
             pathParams$
         );
@@ -709,7 +704,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/invoice/batch/{batchId}")(
             pathParams$
         );
@@ -777,7 +771,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/payable/batch/{batchId}/import-summary"
         )(pathParams$);
@@ -845,7 +838,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/client/batch/{batchId}")(
             pathParams$
         );
@@ -917,7 +909,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/client/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -985,7 +976,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/collaborator/batch/{batchId}")(
             pathParams$
         );
@@ -1053,7 +1043,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/payable/batch/{batchId}")(
             pathParams$
         );
@@ -1125,7 +1114,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/payable/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -1198,7 +1186,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/collaborator/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -1272,7 +1259,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/invoice/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -1387,7 +1373,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/payable/batch/{batchId}/item")(
             pathParams$
         );
@@ -1502,7 +1487,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/client/batch/{batchId}/item")(
             pathParams$
         );
@@ -1667,7 +1651,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/collaborator/batch/{batchId}/item")(
             pathParams$
         );
@@ -1736,7 +1719,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/invoice/batch/{batchId}/item")(
             pathParams$
         );
@@ -1806,7 +1788,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/invoice/batch/{batchId}")(
             pathParams$
         );
@@ -1876,7 +1857,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/client/batch/{batchId}")(
             pathParams$
         );
@@ -1950,7 +1930,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/client/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -2020,7 +1999,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/collaborator/batch/{batchId}")(
             pathParams$
         );
@@ -2090,7 +2068,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/payable/batch/{batchId}")(
             pathParams$
         );
@@ -2165,7 +2142,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/payable/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -2242,7 +2218,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/collaborator/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -2317,7 +2292,6 @@ export class BulkOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/invoice/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);

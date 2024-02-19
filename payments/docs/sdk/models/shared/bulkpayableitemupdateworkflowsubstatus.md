@@ -3,7 +3,6 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `Submitted`              | Submitted                |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name        | Value       |
+| ----------- | ----------- |
+| `Submitted` | Submitted   |

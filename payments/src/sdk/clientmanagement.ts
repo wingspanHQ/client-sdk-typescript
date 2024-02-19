@@ -22,6 +22,7 @@ export class ClientManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Register a New Client Deduction
      *
@@ -104,7 +105,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/memberClient/{id}")(pathParams$);
 
         let security$;
@@ -167,7 +167,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client-deduction/{id}")(pathParams$);
 
         let security$;
@@ -293,7 +292,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/memberClient/{id}")(pathParams$);
 
         let security$;
@@ -356,7 +354,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client-deduction/{id}")(pathParams$);
 
         let security$;
@@ -567,7 +564,6 @@ export class ClientManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/v2/client/{clientId}")(pathParams$);
 
         let security$;
@@ -635,7 +631,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/memberClient/{id}")(pathParams$);
 
         let security$;
@@ -700,7 +695,6 @@ export class ClientManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client-deduction/{id}")(pathParams$);
 
         let security$;

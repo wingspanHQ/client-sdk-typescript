@@ -3,8 +3,7 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `PrePayment`             | PrePayment               |
-| `PostPayment`            | PostPayment              |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name          | Value         |
+| ------------- | ------------- |
+| `PrePayment`  | PrePayment    |
+| `PostPayment` | PostPayment   |

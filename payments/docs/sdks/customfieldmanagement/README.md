@@ -30,7 +30,7 @@ async function run() {
 
   const result = await sdk.customFieldManagement.create({
     key: "<key>",
-    name: "string",
+    name: "<value>",
     required: false,
     resourceType: ResourceType.Collaborator,
     type: Type.Boolean,
@@ -76,7 +76,7 @@ async function run() {
   });
 
   const result = await sdk.customFieldManagement.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -119,7 +119,7 @@ async function run() {
   });
 
   const result = await sdk.customFieldManagement.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -195,7 +195,6 @@ Update specific attributes or data for an existing custom field.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -204,7 +203,7 @@ async function run() {
 
   const result = await sdk.customFieldManagement.update({
     additionalDataUpdateRequest: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

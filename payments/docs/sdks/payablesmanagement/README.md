@@ -24,14 +24,7 @@ Allows for the generation of a new Payables for a specific member on behalf of a
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import {
-  FrequencyUpdateInterval,
-  PayableCreateRequestCurrency,
-  PayableCreateRequestStatus,
-  PayoutPendingReason,
-  PendingStatusReason,
-} from "@wingspan/payments/sdk/models/shared";
+import { PayableCreateRequestAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -44,18 +37,18 @@ async function run() {
     ],
     attachments: {
       customAttachmentIds: [
-        "string",
+        "<value>",
       ],
     },
     client: {},
-    collaboratorId: "string",
+    collaboratorId: "<value>",
     creditFeeHandling: {},
-    dueDate: "string",
+    dueDate: "<value>",
     integration: {
       quickbooks: {},
     },
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     lateFeeHandling: {
       frequency: {},
@@ -67,7 +60,7 @@ async function run() {
           quickbooks: {},
         },
         labels: {
-          "key": "string",
+          "key": "<value>",
         },
       },
     ],
@@ -118,7 +111,7 @@ async function run() {
   });
 
   const result = await sdk.payablesManagement.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -201,7 +194,7 @@ async function run() {
   });
 
   const result = await sdk.payablesManagement.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -357,13 +350,7 @@ This API endpoint facilitates the updating of existing payable details related t
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import {
-  FrequencyUpdateInterval,
-  PayableUpdateRequestStatus,
-  PayoutPendingReason,
-  PendingStatusReason,
-} from "@wingspan/payments/sdk/models/shared";
+import { PayableUpdateRequestAcceptedPaymentMethods, PaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -373,11 +360,11 @@ async function run() {
   const result = await sdk.payablesManagement.update({
     payableUpdateRequest: {
       acceptedPaymentMethods: [
-        PayableUpdateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
+        PayableUpdateRequestAcceptedPaymentMethods.Manual,
       ],
       attachments: {
         customAttachmentIds: [
-          "string",
+          "<value>",
         ],
       },
       chargedFees: {
@@ -397,7 +384,7 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       lateFeeHandling: {
         frequency: {},
@@ -409,7 +396,7 @@ async function run() {
             quickbooks: {},
           },
           labels: {
-            "key": "string",
+            "key": "<value>",
           },
         },
       ],
@@ -422,7 +409,7 @@ async function run() {
         PaymentMethods.Credit,
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

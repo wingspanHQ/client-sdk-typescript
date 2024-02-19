@@ -7,7 +7,6 @@ import { z } from "zod";
 export enum BulkCalculation1099ItemCreateCalculationType {
     Balances = "Balances",
     Submissions = "Submissions",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkCalculation1099ItemCreate = {

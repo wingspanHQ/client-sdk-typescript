@@ -31,10 +31,10 @@ async function run() {
 
   const result = await sdk.wingspanWallet.create({
     shippingAddress: {
-      addressLine1: "string",
-      city: "Jenafurt",
-      postalCode: "42170-9739",
-      state: "string",
+      addressLine1: "4684 Bria Shores",
+      city: "Fort Peytonbury",
+      postalCode: "80413-0778",
+      state: "South Dakota",
     },
   });
 
@@ -78,7 +78,7 @@ async function run() {
   });
 
   const result = await sdk.wingspanWallet.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -121,7 +121,7 @@ async function run() {
   });
 
   const result = await sdk.wingspanWallet.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -205,9 +205,9 @@ async function run() {
 
   const result = await sdk.wingspanWallet.request({
     cardCodeRequest: {
-      channel: "string",
+      channel: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -254,7 +254,7 @@ async function run() {
     cardUpdateRequest: {
       status: CardUpdateRequestStatus.ClosedByCustomer,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -298,10 +298,10 @@ async function run() {
 
   const result = await sdk.wingspanWallet.validate({
     cardTokenRequest: {
-      verificationCode: "string",
-      verificationToken: "string",
+      verificationCode: "<value>",
+      verificationToken: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

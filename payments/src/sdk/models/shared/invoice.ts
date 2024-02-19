@@ -35,7 +35,6 @@ export enum InvoiceAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum InvoiceCurrency {

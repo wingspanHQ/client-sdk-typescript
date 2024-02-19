@@ -22,6 +22,7 @@ export class Deprecated extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Register New Custom Data for Collaborator-Member Relationship
      *
@@ -111,7 +112,6 @@ export class Deprecated extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/additional-data/{id}"
         )(pathParams$);
@@ -229,7 +229,6 @@ export class Deprecated extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/additional-data/{id}"
         )(pathParams$);
@@ -404,7 +403,6 @@ export class Deprecated extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/additional-data/{id}"
         )(pathParams$);

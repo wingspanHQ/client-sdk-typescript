@@ -3,8 +3,7 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `None`                   | None                     |
-| `All`                    | All                      |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name   | Value  |
+| ------ | ------ |
+| `None` | None   |
+| `All`  | All    |

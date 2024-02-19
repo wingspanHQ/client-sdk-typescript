@@ -16,7 +16,6 @@ export enum DeliveryMethod {
     Electronic = "Electronic",
     Mail = "Mail",
     Both = "Both",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type Events = {};
@@ -29,7 +28,6 @@ export enum CollaboratorForm1099BalancesUpdateRequestStatus {
     Rejected = "Rejected",
     Accepted = "Accepted",
     Excluded = "Excluded",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type CollaboratorForm1099BalancesUpdateRequest = {

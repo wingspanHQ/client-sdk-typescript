@@ -15,7 +15,6 @@ export enum TaxFormUpdateRequestStatus {
     PendingCorrection = "PendingCorrection",
     Excluded = "Excluded",
     Ineligible = "Ineligible",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type TaxFormUpdateRequest = {

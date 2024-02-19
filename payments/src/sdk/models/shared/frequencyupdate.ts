@@ -7,7 +7,6 @@ import { z } from "zod";
 export enum FrequencyUpdateInterval {
     Week = "Week",
     Month = "Month",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type FrequencyUpdate = {

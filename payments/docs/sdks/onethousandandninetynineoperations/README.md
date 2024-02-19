@@ -45,7 +45,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.calculate({
-    memberClientId: "string",
+    memberClientId: "<value>",
     year: 6611.96,
   });
 
@@ -89,7 +89,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.create({
-    taxFormId: "string",
+    taxFormId: "<value>",
   });
 
   // Handle the result
@@ -133,7 +133,7 @@ async function run() {
 
   const result = await sdk.oneThousandAndNinetyNineOperations.createBatchCalculation({
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
   });
 
@@ -170,7 +170,6 @@ Facilitates the incorporation of a new item into the specified calculation 1099 
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkCalculation1099ItemCreateCalculationType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -179,13 +178,13 @@ async function run() {
 
   const result = await sdk.oneThousandAndNinetyNineOperations.createItem({
     bulkCalculation1099ItemCreate: {
-      clientId: "string",
+      clientId: "<value>",
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       year: 4617.27,
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -228,7 +227,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.createProof({
-    taxFormId: "string",
+    taxFormId: "<value>",
   });
 
   // Handle the result
@@ -271,9 +270,9 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.createTaxForm({
-    clientId: "string",
+    clientId: "<value>",
     data: {},
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -316,7 +315,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.get({
-    taxFormId: "string",
+    taxFormId: "<value>",
   });
 
   // Handle the result
@@ -359,7 +358,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.getBatchCalculation({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -402,9 +401,9 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.getForm1099({
-    id: "<ID>",
-    index: "string",
-    year: "string",
+    id: "<id>",
+    index: "<value>",
+    year: "<value>",
   });
 
   // Handle the result
@@ -447,7 +446,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.getFormW9({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -490,8 +489,8 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.getItem({
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -574,7 +573,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.listItem({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -657,7 +656,7 @@ async function run() {
   });
 
   const result = await sdk.oneThousandAndNinetyNineOperations.mark({
-    memberId: "string",
+    memberId: "<value>",
     submissionIndex: 2694.09,
     year: 735.52,
   });
@@ -703,13 +702,13 @@ async function run() {
 
   const result = await sdk.oneThousandAndNinetyNineOperations.remail({
     address: {
-      addressLine1: "string",
-      city: "Port Cara",
-      postalCode: "13281-2223",
-      state: "string",
+      addressLine1: "71613 Rene Curve",
+      city: "West Edd",
+      postalCode: "30290",
+      state: "Maine",
     },
-    memberId: "string",
-    year: 3145.26,
+    memberId: "<value>",
+    year: 1008.29,
   });
 
   // Handle the result
@@ -825,7 +824,6 @@ Updates a tax form with provided information.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { TaxFormUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -836,7 +834,7 @@ async function run() {
     taxFormUpdateRequest: {
       data: {},
     },
-    taxFormId: "string",
+    taxFormId: "<value>",
   });
 
   // Handle the result
@@ -872,7 +870,6 @@ Provides the ability to update or alter attributes of a given batch for bulk 109
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -882,10 +879,10 @@ async function run() {
   const result = await sdk.oneThousandAndNinetyNineOperations.updateBatchCalculation({
     bulkBatchUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -921,7 +918,6 @@ Make alterations or updates to a specific item within the calculation 1099 batch
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -931,11 +927,11 @@ async function run() {
   const result = await sdk.oneThousandAndNinetyNineOperations.updateItem({
     bulkCalculation1099ItemUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result

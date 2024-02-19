@@ -22,6 +22,7 @@ export class CustomFieldManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Add a New Custom Field
      *
@@ -103,7 +104,6 @@ export class CustomFieldManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/custom-fields/{id}")(pathParams$);
 
         let security$;
@@ -166,7 +166,6 @@ export class CustomFieldManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/custom-fields/{id}")(pathParams$);
 
         let security$;
@@ -280,7 +279,6 @@ export class CustomFieldManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/custom-fields/{id}")(pathParams$);
 
         let security$;

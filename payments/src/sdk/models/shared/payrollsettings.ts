@@ -11,7 +11,6 @@ import { z } from "zod";
 export enum InternationalPayroll {
     All = "All",
     None = "None",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PayrollSettingsStatus {
@@ -24,7 +23,6 @@ export enum PayrollSettingsStatus {
 export enum Workflow {
     SingleStage = "SingleStage",
     DualStage = "DualStage",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayrollSettings = {

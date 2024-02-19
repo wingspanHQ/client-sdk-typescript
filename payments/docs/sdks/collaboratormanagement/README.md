@@ -40,8 +40,8 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.associate({
-    groupId: "string",
-    id: "<ID>",
+    groupId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -77,12 +77,6 @@ Add a new collaborator to the system, allowing them to be eligible for payments.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  AutoPayStrategy,
-  CollaboratorCreateRequestStatus,
-  MemberClientFormW9InfoCompanyStructure,
-  VerificationStratgy,
-} from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -91,13 +85,13 @@ async function run() {
 
   const result = await sdk.collaboratorManagement.create({
     clientData: {},
-    clientId: "string",
+    clientId: "<value>",
     formW9Data: {},
     integration: {
       quickbooks: {},
     },
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
   });
 
@@ -143,10 +137,10 @@ async function run() {
 
   const result = await sdk.collaboratorManagement.createCollaboratorDeduction({
     amount: 5570.68,
-    clientId: "string",
+    clientId: "<value>",
     currency: DeductionCreateRequestCurrency.Usd,
-    memberId: "string",
-    name: "string",
+    memberId: "<value>",
+    name: "<value>",
     type: DeductionCreateRequestType.PostPayment,
   });
 
@@ -191,13 +185,13 @@ async function run() {
 
   const result = await sdk.collaboratorManagement.createCollaboratorGroup({
     collaboratorSettings: {
-      "key": "string",
+      "key": "<value>",
     },
     description: "Self-enabling 6th generation support",
     eligibilityRequirements: [
       {},
     ],
-    name: "string",
+    name: "<value>",
   });
 
   // Handle the result
@@ -240,7 +234,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -283,7 +277,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.deleteCollaboratorDeduction({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -326,8 +320,8 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.disassociate({
-    groupId: "string",
-    id: "<ID>",
+    groupId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -370,7 +364,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -413,7 +407,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.getCollaboratorDeduction({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -456,7 +450,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.getEventAssociated({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -659,7 +653,7 @@ async function run() {
   });
 
   const result = await sdk.collaboratorManagement.listSpecificCollaboratorDetail({
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -695,15 +689,6 @@ Update specific details or attributes related to an existing collaborator.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  AutoPayStrategy,
-  Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure,
-  CollaboratorForm1099BalancesUpdateRequestStatus,
-  CollaboratorUpdateRequestStatus,
-  DeliveryMethod,
-  Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status,
-  VerificationStratgy,
-} from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -734,10 +719,10 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -773,7 +758,6 @@ Update attributes or data related to an existing deduction entry for a collabora
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -782,7 +766,7 @@ async function run() {
 
   const result = await sdk.collaboratorManagement.updateCollaboratorDeduction({
     deductionUpdateRequest: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

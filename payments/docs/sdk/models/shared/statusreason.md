@@ -13,4 +13,3 @@
 | `CardCurrencyNotSupported` | CardCurrencyNotSupported   |
 | `CardExpired`              | CardExpired                |
 | `CardInputInvalid`         | CardInputInvalid           |
-| `LessThanNilGreaterThan`   | <nil>                      |

@@ -9,7 +9,6 @@ export enum BulkInvoiceItemUpdateAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum BulkInvoiceItemUpdateInvoiceStatus {
@@ -18,7 +17,6 @@ export enum BulkInvoiceItemUpdateInvoiceStatus {
     Approved = "Approved",
     Paid = "Paid",
     Cancelled = "Cancelled",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkInvoiceItemUpdate = {

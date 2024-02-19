@@ -22,6 +22,7 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Determine 1099 Amounts for Collaborators
      *
@@ -106,7 +107,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/tax-form/{taxFormId}/resync")(
             pathParams$
         );
@@ -240,7 +240,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/calculation1099/batch/{batchId}/item"
         )(pathParams$);
@@ -308,7 +307,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/tax-form/{taxFormId}/verify-identity")(
             pathParams$
         );
@@ -437,7 +435,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/tax-form/{taxFormId}")(pathParams$);
 
         let security$;
@@ -503,7 +500,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/calculation1099/batch/{batchId}")(
             pathParams$
         );
@@ -576,7 +572,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator/{id}/download-1099/{year}/{index}"
         )(pathParams$);
@@ -641,7 +636,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}/download-w9")(
             pathParams$
         );
@@ -713,7 +707,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/calculation1099/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);
@@ -831,7 +824,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/calculation1099/batch/{batchId}/item"
         )(pathParams$);
@@ -1166,7 +1158,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/tax-form/{taxFormId}")(pathParams$);
 
         let security$;
@@ -1234,7 +1225,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/bulk/calculation1099/batch/{batchId}")(
             pathParams$
         );
@@ -1311,7 +1301,6 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/bulk/calculation1099/batch/{batchId}/item/{batchItemId}"
         )(pathParams$);

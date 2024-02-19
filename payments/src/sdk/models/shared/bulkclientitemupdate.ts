@@ -13,7 +13,6 @@ export enum BulkClientItemUpdateClientStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkClientItemUpdate = {

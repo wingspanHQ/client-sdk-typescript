@@ -22,6 +22,7 @@ export class InvoiceManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Initiate New Invoice for a Member
      *
@@ -290,7 +291,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{id}")(pathParams$);
 
         let security$;
@@ -353,7 +353,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice-template/{id}")(pathParams$);
 
         let security$;
@@ -421,7 +420,6 @@ export class InvoiceManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice/{invoice_id}/pay")(
             pathParams$
         );
@@ -489,7 +487,6 @@ export class InvoiceManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{invoice_id}/generate")(
             pathParams$
         );
@@ -615,7 +612,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{id}")(pathParams$);
 
         let security$;
@@ -678,7 +674,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice-template/{id}")(
             pathParams$
         );
@@ -746,7 +741,6 @@ export class InvoiceManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice/{invoice_id}/fees")(
             pathParams$
         );
@@ -811,7 +805,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice/{id}")(pathParams$);
 
         let security$;
@@ -921,7 +914,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice-template/{id}")(pathParams$);
 
         let security$;
@@ -1134,7 +1126,6 @@ export class InvoiceManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{invoice_id}/refund")(
             pathParams$
         );
@@ -1202,7 +1193,6 @@ export class InvoiceManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{invoice_id}/send")(pathParams$);
 
         let security$;
@@ -1267,7 +1257,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice/{id}")(pathParams$);
 
         let security$;
@@ -1334,7 +1323,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice-template/{id}")(
             pathParams$
         );
@@ -1403,7 +1391,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/client/invoice/{id}")(pathParams$);
 
         let security$;
@@ -1470,7 +1457,6 @@ export class InvoiceManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/invoice-template/{id}")(pathParams$);
 
         let security$;

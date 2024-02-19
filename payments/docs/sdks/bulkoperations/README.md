@@ -60,7 +60,7 @@ async function run() {
 
   const result = await sdk.bulkOperations.create({
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     processingStrategy: BulkInvoiceBatchCreateProcessingStrategy.Merge,
   });
@@ -98,7 +98,7 @@ Allows for the creation and addition of a new individual payable item into an ex
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkPayableItemCreatePayableStatus, BulkPayableItemCreateWorkflowSubStatus } from "@wingspan/payments/sdk/models/shared";
+import { BulkPayableItemCreatePayableStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -108,15 +108,15 @@ async function run() {
   const result = await sdk.bulkOperations.createBatchItem({
     bulkPayableItemCreate: {
       amount: 1194.43,
-      bulkPayableBatchId: "string",
-      dueDate: "string",
+      bulkPayableBatchId: "<value>",
+      dueDate: "<value>",
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
-      lineItemDescription: "string",
+      lineItemDescription: "<value>",
       payableStatus: BulkPayableItemCreatePayableStatus.Draft,
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -160,7 +160,7 @@ async function run() {
 
   const result = await sdk.bulkOperations.createClient({
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
   });
 
@@ -197,7 +197,6 @@ Inserts a new item into the specified bulk client batch, allowing for further ex
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AutoPayRequirement, BulkClientItemCreateClientStatus, ShareTaxDocument } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -210,11 +209,11 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       memberData: {},
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -258,7 +257,7 @@ async function run() {
 
   const result = await sdk.bulkOperations.createCollaborator({
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
   });
 
@@ -304,7 +303,7 @@ async function run() {
 
   const result = await sdk.bulkOperations.createPayable({
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     processingStrategy: BulkPayableBatchCreateProcessingStrategy.Merge,
   });
@@ -342,10 +341,6 @@ Allows for the addition of a new item to an existing batch of collaborators by p
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  BulkCollaboratorItemCreateCollaboratorStatus,
-  MemberClientFormW9InfoCompanyStructure,
-} from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -356,10 +351,10 @@ async function run() {
     bulkCollaboratorItemCreate: {
       formW9Data: {},
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -395,8 +390,7 @@ Allows users to append a new item to a given batch of bulk invoices by supplying
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import { BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
+import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -406,19 +400,19 @@ async function run() {
   const result = await sdk.bulkOperations.createSpecificInvoice({
     bulkInvoiceItemCreate: {
       acceptedPaymentMethods: [
-        BulkInvoiceItemCreateAcceptedPaymentMethods.Ach,
+        BulkInvoiceItemCreateAcceptedPaymentMethods.Credit,
       ],
       amount: 7164.89,
-      bulkInvoiceBatchId: "string",
+      bulkInvoiceBatchId: "<value>",
       creditFeeHandling: {},
-      dueDate: "string",
+      dueDate: "<value>",
       invoiceStatus: BulkInvoiceItemCreateInvoiceStatus.Paid,
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
-      lineItemDescription: "string",
+      lineItemDescription: "<value>",
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -461,7 +455,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.deleteCollaborator({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -504,7 +498,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.deletePayable({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -547,7 +541,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.get({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -590,7 +584,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getBatchItem({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -633,7 +627,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getClient({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -676,8 +670,8 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getClientItem({
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -720,7 +714,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getCollaborator({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -763,7 +757,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getPayable({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -806,8 +800,8 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getSpecific({
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -850,8 +844,8 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getSpecificCollaboratorItem({
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -894,8 +888,8 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.getSpecificInvoice({
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -978,7 +972,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.listBatchItem({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1061,7 +1055,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.listClientItem({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1184,7 +1178,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.listSpecificCollaboratorItem({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1227,7 +1221,7 @@ async function run() {
   });
 
   const result = await sdk.bulkOperations.listSpecificInvoice({
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1263,7 +1257,6 @@ Enables the user to update or modify the attributes of a given batch of bulk inv
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkInvoiceBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1273,10 +1266,10 @@ async function run() {
   const result = await sdk.bulkOperations.update({
     bulkInvoiceBatchUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1312,7 +1305,6 @@ Allows modification of the details of a specific item within the bulk client bat
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1322,10 +1314,10 @@ async function run() {
   const result = await sdk.bulkOperations.updateClient({
     bulkBatchUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1361,7 +1353,6 @@ Allows modification of the details of a specific item within the bulk client bat
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AutoPayRequirement, BulkClientItemUpdateClientStatus, ShareTaxDocument } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1374,12 +1365,12 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       memberData: {},
     },
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -1415,7 +1406,6 @@ Allows for updating or altering the details and items within a specific bulk col
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1425,10 +1415,10 @@ async function run() {
   const result = await sdk.bulkOperations.updateCollaborator({
     bulkBatchUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1464,7 +1454,6 @@ Updates the information or items of a specific bulk payable batch, given its uni
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1474,10 +1463,10 @@ async function run() {
   const result = await sdk.bulkOperations.updatePayable({
     bulkPayableBatchUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
+    batchId: "<value>",
   });
 
   // Handle the result
@@ -1513,7 +1502,6 @@ Updates the details or status of a specific item within a bulk payable batch, gi
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkPayableItemUpdatePayableStatus, BulkPayableItemUpdateWorkflowSubStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1523,11 +1511,11 @@ async function run() {
   const result = await sdk.bulkOperations.updateSpecific({
     bulkPayableItemUpdate: {
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -1563,10 +1551,6 @@ Provides the functionality to update or alter the attributes of an item present 
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  BulkCollaboratorItemUpdateCollaboratorStatus,
-  MemberClientFormW9InfoCompanyStructure,
-} from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1577,11 +1561,11 @@ async function run() {
     bulkCollaboratorItemUpdate: {
       formW9Data: {},
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result
@@ -1617,8 +1601,7 @@ Allows for updates or edits to be made to a specific items details within an exi
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import { BulkInvoiceItemUpdateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
+import { BulkInvoiceItemUpdateAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1632,11 +1615,11 @@ async function run() {
       ],
       creditFeeHandling: {},
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
     },
-    batchId: "string",
-    batchItemId: "string",
+    batchId: "<value>",
+    batchItemId: "<value>",
   });
 
   // Handle the result

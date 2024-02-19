@@ -8,7 +8,6 @@ export enum PayoutDestinationUpdateDestinationType {
     Account = "Account",
     Card = "Card",
     WeGift = "WeGift",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PayoutDestinationUpdatePayoutMethod {
@@ -17,7 +16,6 @@ export enum PayoutDestinationUpdatePayoutMethod {
     Expedited = "Expedited",
     Check = "Check",
     ECheck = "ECheck",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayoutDestinationUpdate = {

@@ -40,13 +40,9 @@ Facilitates the creation of a new invoice for a member using the provided invoic
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
 import {
-  FrequencyUpdateInterval,
-  InvoiceCreateRequestCurrency,
-  InvoiceCreateRequestStatus,
-  PayoutPendingReason,
-  PendingStatusReason,
+  InvoiceCollaboratorCreateRequestCurrency,
+  InvoiceCreateRequestAcceptedPaymentMethods,
 } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
@@ -60,7 +56,7 @@ async function run() {
     ],
     attachments: {
       customAttachmentIds: [
-        "string",
+        "<value>",
       ],
     },
     client: {},
@@ -69,16 +65,16 @@ async function run() {
         amount: 4893.82,
         currency: InvoiceCollaboratorCreateRequestCurrency.Cad,
         description: "Synchronised full-range emulation",
-        memberClientId: "string",
+        memberClientId: "<value>",
       },
     ],
     creditFeeHandling: {},
-    dueDate: "string",
+    dueDate: "<value>",
     integration: {
       quickbooks: {},
     },
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     lateFeeHandling: {
       frequency: {},
@@ -90,12 +86,12 @@ async function run() {
           quickbooks: {},
         },
         labels: {
-          "key": "string",
+          "key": "<value>",
         },
       },
     ],
     member: {},
-    memberClientId: "string",
+    memberClientId: "<value>",
     metadata: {},
     notificationPreferences: {
       sendReminders: false,
@@ -135,11 +131,7 @@ Allows clients to create a new invoice template based on the provided details.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  ClientInvoiceDataCreateRequestCurrency,
-  ClientInvoiceTemplateCreateRequestStatus,
-  Interval,
-} from "@wingspan/payments/sdk/models/shared";
+import { ClientInvoiceTemplateCreateRequestStatus, ScheduleDateStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -147,12 +139,12 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.createClient({
-    clientEmail: "string",
+    clientEmail: "<value>",
     clientEmailCC: [
-      "string",
+      "<value>",
     ],
     frequency: {
-      startDate: "string",
+      startDate: "<value>",
     },
     invoiceData: {
       creditFeeHandling: {},
@@ -163,15 +155,15 @@ async function run() {
             quickbooks: {},
           },
           labels: {
-            "key": "string",
+            "key": "<value>",
           },
         },
       ],
     },
-    memberId: "string",
+    memberId: "<value>",
     scheduleDates: [
       {
-        date: "string",
+        date: "<value>",
         status: ScheduleDateStatus.Skipped,
       },
     ],
@@ -211,7 +203,6 @@ Enables the creation of a new invoice on behalf of a client using the provided d
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { ClientInvoiceCreateRequestCurrency } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -219,12 +210,12 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.createGenerated({
-    clientEmail: "string",
+    clientEmail: "<value>",
     clientEmailCC: [
-      "string",
+      "<value>",
     ],
     creditFeeHandling: {},
-    dueDate: "string",
+    dueDate: "<value>",
     lineItems: [
       {
         discount: {},
@@ -232,11 +223,11 @@ async function run() {
           quickbooks: {},
         },
         labels: {
-          "key": "string",
+          "key": "<value>",
         },
       },
     ],
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -272,12 +263,11 @@ Creates a new invoice template based on the provided details.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
 import {
-  Interval,
-  InvoiceDataCreateRequestCurrency,
-  InvoiceDataCreateRequestStatus,
+  InvoiceCollaboratorCreateRequestCurrency,
+  InvoiceDataCreateRequestAcceptedPaymentMethods,
   InvoiceTemplateCreateRequestStatus,
+  ScheduleDateStatus,
 } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
@@ -287,15 +277,15 @@ async function run() {
 
   const result = await sdk.invoiceManagement.createTemplate({
     frequency: {
-      startDate: "string",
+      startDate: "<value>",
     },
     invoiceData: {
       acceptedPaymentMethods: [
-        InvoiceDataCreateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
+        InvoiceDataCreateRequestAcceptedPaymentMethods.Manual,
       ],
       attachments: {
         customAttachmentIds: [
-          "string",
+          "<value>",
         ],
       },
       collaborators: [
@@ -303,16 +293,16 @@ async function run() {
           amount: 753.46,
           currency: InvoiceCollaboratorCreateRequestCurrency.Cad,
           description: "Managed foreground frame",
-          memberClientId: "string",
+          memberClientId: "<value>",
         },
       ],
       creditFeeHandling: {},
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       lateFeeHandling: {
         frequency: {
-          startDate: "string",
+          startDate: "<value>",
         },
       },
       lineItems: [
@@ -322,21 +312,21 @@ async function run() {
             quickbooks: {},
           },
           labels: {
-            "key": "string",
+            "key": "<value>",
           },
         },
       ],
-      memberClientId: "string",
+      memberClientId: "<value>",
       notificationPreferences: {
         sendReminders: false,
       },
     },
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     scheduleDates: [
       {
-        date: "string",
+        date: "<value>",
         status: ScheduleDateStatus.Skipped,
       },
     ],
@@ -383,7 +373,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -426,7 +416,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.deleteTemplate({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -470,7 +460,7 @@ async function run() {
 
   const result = await sdk.invoiceManagement.execute({
     payRequest: {},
-    invoiceId: "string",
+    invoiceId: "<value>",
   });
 
   // Handle the result
@@ -513,7 +503,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.generate({
-    invoiceId: "string",
+    invoiceId: "<value>",
   });
 
   // Handle the result
@@ -556,7 +546,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.generateTest({
-    contactName: "string",
+    contactName: "<value>",
     email: "Domenick.Moen@yahoo.com",
   });
 
@@ -600,7 +590,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -643,7 +633,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.getClient({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -686,7 +676,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.getFees({
-    invoiceId: "string",
+    invoiceId: "<value>",
   });
 
   // Handle the result
@@ -729,7 +719,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.getGenerated({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -812,7 +802,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.getTemplate({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -978,7 +968,7 @@ async function run() {
     invoiceRefundRequest: {
       amount: 6111.95,
     },
-    invoiceId: "string",
+    invoiceId: "<value>",
   });
 
   // Handle the result
@@ -1021,7 +1011,7 @@ async function run() {
   });
 
   const result = await sdk.invoiceManagement.send({
-    invoiceId: "string",
+    invoiceId: "<value>",
   });
 
   // Handle the result
@@ -1057,13 +1047,7 @@ Allows updates to the details of an existing member invoice using its unique ID.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import {
-  FrequencyUpdateInterval,
-  InvoiceUpdateRequestStatus,
-  PayoutPendingReason,
-  PendingStatusReason,
-} from "@wingspan/payments/sdk/models/shared";
+import { InvoiceUpdateRequestAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1073,11 +1057,11 @@ async function run() {
   const result = await sdk.invoiceManagement.update({
     invoiceUpdateRequest: {
       acceptedPaymentMethods: [
-        InvoiceUpdateRequestAcceptedPaymentMethods.LessThanNilGreaterThan,
+        InvoiceUpdateRequestAcceptedPaymentMethods.Manual,
       ],
       attachments: {
         customAttachmentIds: [
-          "string",
+          "<value>",
         ],
       },
       chargedFees: {
@@ -1097,7 +1081,7 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       lateFeeHandling: {
         frequency: {},
@@ -1109,7 +1093,7 @@ async function run() {
             quickbooks: {},
           },
           labels: {
-            "key": "string",
+            "key": "<value>",
           },
         },
       ],
@@ -1119,7 +1103,7 @@ async function run() {
         sendReminders: false,
       },
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1163,9 +1147,9 @@ async function run() {
 
   const result = await sdk.invoiceManagement.updateClient({
     clientInvoiceTemplateUpdateRequest: {
-      clientId: "string",
+      clientId: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1201,7 +1185,6 @@ Allows for modifications to a client-generated invoice using its unique ID, ensu
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { ClientInvoiceUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1212,7 +1195,7 @@ async function run() {
     clientInvoiceUpdateRequest: {
       creditFeeHandling: {},
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1248,14 +1231,7 @@ Updates details of the specified invoice template based on the provided informat
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {  } from "@wingspan/payments/models";
-import {
-  FrequencyUpdateInterval,
-  InvoiceTemplateUpdateRequestStatus,
-  InvoiceUpdateRequestStatus,
-  PayoutPendingReason,
-  PendingStatusReason,
-} from "@wingspan/payments/sdk/models/shared";
+import { InvoiceUpdateRequestAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -1271,7 +1247,7 @@ async function run() {
         ],
         attachments: {
           customAttachmentIds: [
-            "string",
+            "<value>",
           ],
         },
         chargedFees: {
@@ -1291,7 +1267,7 @@ async function run() {
           quickbooks: {},
         },
         labels: {
-          "key": "string",
+          "key": "<value>",
         },
         lateFeeHandling: {
           frequency: {},
@@ -1303,7 +1279,7 @@ async function run() {
               quickbooks: {},
             },
             labels: {
-              "key": "string",
+              "key": "<value>",
             },
           },
         ],
@@ -1314,13 +1290,13 @@ async function run() {
         },
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       scheduleDates: [
         {},
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

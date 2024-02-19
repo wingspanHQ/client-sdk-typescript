@@ -3,8 +3,7 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `Usd`                    | USD                      |
-| `Cad`                    | CAD                      |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name  | Value |
+| ----- | ----- |
+| `Usd` | USD   |
+| `Cad` | CAD   |

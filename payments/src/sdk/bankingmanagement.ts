@@ -21,6 +21,7 @@ export class BankingManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Register a new payout debit card for a member
      *
@@ -46,7 +47,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/payout-settings/{memberId}/debit-card")(
             pathParams$
         );
@@ -115,7 +115,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/payout-settings/{memberId}/debit-card/{id}"
         )(pathParams$);
@@ -180,7 +179,6 @@ export class BankingManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/statement/{id}/download")(
             pathParams$
         );
@@ -242,7 +240,6 @@ export class BankingManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/statement/{id}")(pathParams$);
 
         let security$;
@@ -308,7 +305,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/service/banking/{memberId}/application")(
             pathParams$
         );
@@ -377,7 +373,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/payout-settings/{memberId}/debit-card/{id}"
         )(pathParams$);
@@ -445,7 +440,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/institution/{routingNumber}")(
             pathParams$
         );
@@ -510,7 +504,6 @@ export class BankingManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payout-settings/{id}")(pathParams$);
 
         let security$;
@@ -576,7 +569,6 @@ export class BankingManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/payout-settings/{memberId}/debit-card")(
             pathParams$
         );
@@ -690,7 +682,6 @@ export class BankingManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payout-settings/{id}")(pathParams$);
 
         let security$;

@@ -7,19 +7,16 @@ import { z } from "zod";
 export enum CardProcessingFees {
     Include = "Include",
     Exclude = "Exclude",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum OffPlatformPayments {
     Include = "Include",
     Exclude = "Exclude",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum ReimbursableExpenses {
     Include = "Include",
     Exclude = "Exclude",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type CalculationSettings1099 = {

@@ -17,7 +17,6 @@ export enum Form1099CorrectionCompanyStructure {
     LLCPartnership = "LLCPartnership",
     CorporationC = "CorporationC",
     Partnership = "Partnership",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type Form1099Correction = {

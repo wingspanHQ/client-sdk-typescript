@@ -12,7 +12,6 @@ export enum InvoiceTemplateUpdateRequestStatus {
     Draft = "Draft",
     Expired = "Expired",
     Cancelled = "Cancelled",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type InvoiceTemplateUpdateRequest = {

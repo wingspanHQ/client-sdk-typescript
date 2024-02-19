@@ -37,8 +37,8 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.create({
-    field: "string",
-    value: "string",
+    field: "<value>",
+    value: "<value>",
   });
 
   // Handle the result
@@ -81,7 +81,7 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -124,8 +124,8 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.deleteCollaboratorGroup({
-    eligibilityRequirementId: "string",
-    id: "<ID>",
+    eligibilityRequirementId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -168,7 +168,7 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.deletePayment({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -255,7 +255,7 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -298,7 +298,7 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.getGroupConfiguration({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -341,7 +341,7 @@ async function run() {
   });
 
   const result = await sdk.documentSigningAndEligibility.getPayment({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -468,7 +468,7 @@ async function run() {
     eligibilityRequirementUpdateRequest: {
       requirementType: EligibilityRequirementUpdateRequestRequirementType.Signature,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -512,10 +512,10 @@ async function run() {
 
   const result = await sdk.documentSigningAndEligibility.updateCollaboratorGroup({
     collaboratorGroupRequirementUpdate: {
-      newEligibilityRequirementId: "string",
+      newEligibilityRequirementId: "<value>",
     },
-    eligibilityRequirementId: "string",
-    id: "<ID>",
+    eligibilityRequirementId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -560,13 +560,13 @@ async function run() {
   const result = await sdk.documentSigningAndEligibility.updateGroupConfiguration({
     collaboratorGroupUpdateRequest: {
       collaboratorSettings: {
-        "key": "string",
+        "key": "<value>",
       },
       eligibilityRequirements: [
         {},
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -612,7 +612,7 @@ async function run() {
     paymentEligibilityUpdateRequest: {
       value: {},
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

@@ -36,7 +36,6 @@ export enum StatusReason {
     CardCurrencyNotSupported = "CardCurrencyNotSupported",
     CardExpired = "CardExpired",
     CardInputInvalid = "CardInputInvalid",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type InvoicePayment = {

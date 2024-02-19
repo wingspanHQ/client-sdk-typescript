@@ -25,7 +25,7 @@ async function run() {
   });
 
   const result = await sdk.payrollSettings.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -61,16 +61,7 @@ Update certain attributes or details of payroll settings associated with the pro
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  CardProcessingFees,
-  FrequencyUpdateInterval,
-  FundingSourceCurrency,
-  FundingSourceType,
-  OffPlatformPayments,
-  PayrollSettingsUpdateStatus,
-  PayrollSettingsUpdateWorkflow,
-  ReimbursableExpenses,
-} from "@wingspan/payments/sdk/models/shared";
+import { FundingSourceCurrency, FundingSourceType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -81,20 +72,20 @@ async function run() {
     payrollSettingsUpdate: {
       calculationSettings1099: {
         stateTaxId: {
-          "key": "string",
+          "key": "<value>",
         },
       },
       frequency: {},
       fundingSource: {
         fundingSourceCurrency: FundingSourceCurrency.Cad,
-        fundingSourceId: "string",
+        fundingSourceId: "<value>",
         fundingSourceType: FundingSourceType.InternalAccount,
       },
       scheduleDates: [
         {},
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

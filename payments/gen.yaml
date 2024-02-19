@@ -9,7 +9,7 @@ generation:
     requestResponseComponentNamesFeb2024: false
   telemetryEnabled: false
 typescript:
-  version: 2.0.1
+  version: 2.0.2
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true

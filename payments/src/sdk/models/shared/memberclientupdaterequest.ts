@@ -20,7 +20,6 @@ export enum MemberClientUpdateRequestStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type MemberClientUpdateRequest = {

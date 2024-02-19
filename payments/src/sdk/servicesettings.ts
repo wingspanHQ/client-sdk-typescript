@@ -20,6 +20,7 @@ export class ServiceSettings extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Check Service Status
      *

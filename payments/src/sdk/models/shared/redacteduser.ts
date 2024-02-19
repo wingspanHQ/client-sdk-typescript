@@ -20,7 +20,6 @@ export enum RedactedUserStatus {
     Pending = "Pending",
     Active = "Active",
     Disabled = "Disabled",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type RedactedUser = {

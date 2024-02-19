@@ -7,7 +7,6 @@ import { z } from "zod";
 export enum Interval {
     Week = "Week",
     Month = "Month",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type Frequency = {

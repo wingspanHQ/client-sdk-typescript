@@ -14,7 +14,6 @@ export enum MemberClientRequirementResponseStatus {
     Sent = "Sent",
     Pending = "Pending",
     Complete = "Complete",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type MemberClientRequirementResponse = {

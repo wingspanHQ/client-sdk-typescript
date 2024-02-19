@@ -9,7 +9,6 @@ export enum BulkCollaboratorItemUpdateCollaboratorStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkCollaboratorItemUpdate = {

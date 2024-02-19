@@ -15,13 +15,11 @@ export enum TaxFormW9InfoCompanyStructure {
     LLCPartnership = "LLCPartnership",
     CorporationC = "CorporationC",
     Partnership = "Partnership",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum TaxFormW9InfoTinType {
     Individual = "Individual",
     Business = "Business",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type TaxFormW9Info = {

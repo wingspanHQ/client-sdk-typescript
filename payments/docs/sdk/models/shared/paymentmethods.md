@@ -3,9 +3,8 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `Credit`                 | Credit                   |
-| `Ach`                    | ACH                      |
-| `Manual`                 | Manual                   |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name     | Value    |
+| -------- | -------- |
+| `Credit` | Credit   |
+| `Ach`    | ACH      |
+| `Manual` | Manual   |

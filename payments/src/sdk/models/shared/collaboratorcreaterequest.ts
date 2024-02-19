@@ -14,7 +14,6 @@ export enum CollaboratorCreateRequestStatus {
     Active = "Active",
     Inactive = "Inactive",
     Pending = "Pending",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type CollaboratorCreateRequest = {

@@ -22,6 +22,7 @@ export class WingspanWallet extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Register a New  Wingspan Wallet Card
      *
@@ -104,7 +105,6 @@ export class WingspanWallet extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/card/{id}")(pathParams$);
 
         let security$;
@@ -167,7 +167,6 @@ export class WingspanWallet extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/card/{id}")(pathParams$);
 
         let security$;
@@ -281,7 +280,6 @@ export class WingspanWallet extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/card/{id}/token")(pathParams$);
 
         let security$;
@@ -347,7 +345,6 @@ export class WingspanWallet extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/card/{id}")(pathParams$);
 
         let security$;
@@ -412,7 +409,6 @@ export class WingspanWallet extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/banking/card/{id}/token")(pathParams$);
 
         let security$;

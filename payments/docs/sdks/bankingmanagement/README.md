@@ -36,17 +36,17 @@ async function run() {
   const result = await sdk.bankingManagement.create({
     checkbookCardCreate: {
       address: {
-        addressLine1: "string",
-        city: "Jenafurt",
-        postalCode: "42170-9739",
-        state: "string",
+        addressLine1: "4684 Bria Shores",
+        city: "Fort Peytonbury",
+        postalCode: "80413-0778",
+        state: "South Dakota",
       },
-      cardNumber: "string",
-      expMM: "string",
-      expYYYY: "string",
-      name: "string",
+      cardNumber: "<value>",
+      expMM: "<value>",
+      expYYYY: "<value>",
+      name: "<value>",
     },
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -89,8 +89,8 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.delete({
-    id: "<ID>",
-    memberId: "string",
+    id: "<id>",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -133,7 +133,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.download({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -176,7 +176,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -219,7 +219,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.getApplicationLink({
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -262,8 +262,8 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.getDebitCard({
-    id: "<ID>",
-    memberId: "string",
+    id: "<id>",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -306,7 +306,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.getInstitution({
-    routingNumber: "string",
+    routingNumber: "<value>",
   });
 
   // Handle the result
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.getPayoutSetting({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -392,7 +392,7 @@ async function run() {
   });
 
   const result = await sdk.bankingManagement.list({
-    memberId: "string",
+    memberId: "<value>",
   });
 
   // Handle the result
@@ -468,7 +468,6 @@ Allows adjustments and updates to a member's payout configuration, including cha
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { PayoutSettingsUpdatePayoutPreferences } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -481,7 +480,7 @@ async function run() {
         {},
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

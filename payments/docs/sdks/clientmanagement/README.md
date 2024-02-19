@@ -37,10 +37,10 @@ async function run() {
 
   const result = await sdk.clientManagement.create({
     amount: 4865.89,
-    clientId: "string",
+    clientId: "<value>",
     currency: DeductionCreateRequestCurrency.Usd,
-    memberId: "string",
-    name: "string",
+    memberId: "<value>",
+    name: "<value>",
     type: DeductionCreateRequestType.PostPayment,
   });
 
@@ -84,7 +84,7 @@ async function run() {
   });
 
   const result = await sdk.clientManagement.deleteAssociation({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -127,7 +127,7 @@ async function run() {
   });
 
   const result = await sdk.clientManagement.deleteClientDeduction({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -163,7 +163,6 @@ Use this endpoint to create a new linkage between a member and client in the sys
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AutoPayRequirement, MemberClientCreateRequestStatus, ShareTaxDocument } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -172,13 +171,13 @@ async function run() {
 
   const result = await sdk.clientManagement.establish({
     emailCC: [
-      "string",
+      "<value>",
     ],
     integration: {
       quickbooks: {},
     },
     labels: {
-      "key": "string",
+      "key": "<value>",
     },
     memberData: {},
   });
@@ -223,7 +222,7 @@ async function run() {
   });
 
   const result = await sdk.clientManagement.getAssociation({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -266,7 +265,7 @@ async function run() {
   });
 
   const result = await sdk.clientManagement.getClientDeduction({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -429,7 +428,7 @@ async function run() {
   });
 
   const result = await sdk.clientManagement.listSpecificClientDetail({
-    clientId: "string",
+    clientId: "<value>",
   });
 
   // Handle the result
@@ -465,17 +464,6 @@ Modifies details of the association between a member and a client based on the p
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import {
-  AutoPayRequirement,
-  AutoPayStrategy,
-  Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481CompanyStructure,
-  CollaboratorForm1099BalancesUpdateRequestStatus,
-  DeliveryMethod,
-  Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status,
-  MemberClientUpdateRequestStatus,
-  ShareTaxDocument,
-  VerificationStratgy,
-} from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -486,7 +474,7 @@ async function run() {
     memberClientUpdateRequest: {
       clientData: {},
       emailCC: [
-        "string",
+        "<value>",
       ],
       form1099Balances: {
         twoThousandAndTwentyOne: {
@@ -509,11 +497,11 @@ async function run() {
         quickbooks: {},
       },
       labels: {
-        "key": "string",
+        "key": "<value>",
       },
       memberData: {},
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -549,7 +537,6 @@ Allows for updating specific details or attributes of an existing client deducti
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { DeductionUpdateRequestCurrency, DeductionUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -558,7 +545,7 @@ async function run() {
 
   const result = await sdk.clientManagement.updateClientDeduction({
     deductionUpdateRequest: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

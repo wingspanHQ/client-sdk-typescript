@@ -21,7 +21,6 @@ export enum PayoutPendingReason {
     PlatformErrorInstantPayout = "PlatformErrorInstantPayout",
     InstantPayoutNotEligibleYet = "InstantPayoutNotEligibleYet",
     PlatformErrorCurrencyCloud = "PlatformErrorCurrencyCloud",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PendingStatusReason {
@@ -29,7 +28,6 @@ export enum PendingStatusReason {
     CollaboratorMissingEligibilityRequirement = "CollaboratorMissingEligibilityRequirement",
     MemberPayoutMethodNotSelected = "MemberPayoutMethodNotSelected",
     MemberTaxDocumentationNotVerified = "MemberTaxDocumentationNotVerified",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type InvoiceMetadata = {

@@ -7,13 +7,11 @@ import { z } from "zod";
 export enum DeductionUpdateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum DeductionUpdateRequestType {
     PrePayment = "PrePayment",
     PostPayment = "PostPayment",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type DeductionUpdateRequest = {

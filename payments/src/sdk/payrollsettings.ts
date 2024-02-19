@@ -21,6 +21,7 @@ export class PayrollSettings extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Retrieve Individual Payroll Settings
      *
@@ -41,7 +42,6 @@ export class PayrollSettings extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payroll-settings/{id}")(pathParams$);
 
         let security$;
@@ -106,7 +106,6 @@ export class PayrollSettings extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/payroll-settings/{id}")(pathParams$);
 
         let security$;

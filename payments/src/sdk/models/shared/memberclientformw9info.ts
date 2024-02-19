@@ -15,7 +15,6 @@ export enum MemberClientFormW9InfoCompanyStructure {
     LLCPartnership = "LLCPartnership",
     CorporationC = "CorporationC",
     Partnership = "Partnership",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type MemberClientFormW9Info = {

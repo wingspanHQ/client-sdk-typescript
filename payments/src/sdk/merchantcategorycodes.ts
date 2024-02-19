@@ -20,6 +20,7 @@ export class MerchantCategoryCodes extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Retrieve Merchant Category Codes (MCC)
      *

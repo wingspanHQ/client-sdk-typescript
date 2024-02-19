@@ -21,6 +21,7 @@ export class ReportingAndAnalytics extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Obtain a summarized report of payable amounts for each collaborator
      *
@@ -93,7 +94,6 @@ export class ReportingAndAnalytics extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/reports/payroll/{payrollId}")(
             pathParams$
         );

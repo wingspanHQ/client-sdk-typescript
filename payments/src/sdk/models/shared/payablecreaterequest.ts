@@ -27,7 +27,6 @@ export enum PayableCreateRequestAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayableCreateRequestClient = {};
@@ -35,7 +34,6 @@ export type PayableCreateRequestClient = {};
 export enum PayableCreateRequestCurrency {
     Usd = "USD",
     Cad = "CAD",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayableCreateRequestMember = {};
@@ -48,7 +46,6 @@ export enum PayableCreateRequestStatus {
     Pending = "Pending",
     PaymentInTransit = "PaymentInTransit",
     Paid = "Paid",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayableCreateRequest = {

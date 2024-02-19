@@ -7,13 +7,11 @@ import { z } from "zod";
 export enum AutoPayStrategy {
     All = "All",
     None = "None",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum VerificationStratgy {
     None = "None",
     All = "All",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type ClientData = {

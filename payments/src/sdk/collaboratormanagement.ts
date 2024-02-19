@@ -22,6 +22,7 @@ export class CollaboratorManagement extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Associate Collaborator with a Specific Group
      *
@@ -47,7 +48,6 @@ export class CollaboratorManagement extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}/add-group/{groupId}")(
             pathParams$
         );
@@ -297,7 +297,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}")(pathParams$);
 
         let security$;
@@ -360,7 +359,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator-deduction/{id}")(
             pathParams$
         );
@@ -430,7 +428,6 @@ export class CollaboratorManagement extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator/{id}/remove-group/{groupId}"
         )(pathParams$);
@@ -496,7 +493,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}")(pathParams$);
 
         let security$;
@@ -559,7 +555,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator-deduction/{id}")(
             pathParams$
         );
@@ -625,7 +620,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}/events")(pathParams$);
 
         let security$;
@@ -886,7 +880,6 @@ export class CollaboratorManagement extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/payments/v2/collaborator/{memberId}")(
             pathParams$
         );
@@ -955,7 +948,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator/{id}")(pathParams$);
 
         let security$;
@@ -1020,7 +1012,6 @@ export class CollaboratorManagement extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator-deduction/{id}")(
             pathParams$
         );

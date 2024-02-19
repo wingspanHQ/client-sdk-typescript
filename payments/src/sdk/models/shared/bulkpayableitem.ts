@@ -28,7 +28,6 @@ export enum BulkPayableItemStatus {
 
 export enum WorkflowSubStatus {
     Submitted = "Submitted",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type BulkPayableItem = {

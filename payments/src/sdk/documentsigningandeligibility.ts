@@ -22,6 +22,7 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Add a New Payment Eligibility Requirement
      *
@@ -107,7 +108,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/eligibility-requirement/{id}"
         )(pathParams$);
@@ -180,7 +180,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
             ),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-group/{id}/eligibility-requirement/{eligibilityRequirementId}"
         )(pathParams$);
@@ -249,7 +248,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/payment-eligibility/{id}"
         )(pathParams$);
@@ -380,7 +378,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/eligibility-requirement/{id}"
         )(pathParams$);
@@ -446,7 +443,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator-group/{id}")(pathParams$);
 
         let security$;
@@ -511,7 +507,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/payment-eligibility/{id}"
         )(pathParams$);
@@ -684,7 +679,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/eligibility-requirement/{id}"
         )(pathParams$);
@@ -761,7 +755,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
             ),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-group/{id}/eligibility-requirement/{eligibilityRequirementId}"
         )(pathParams$);
@@ -834,7 +827,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/payments/collaborator-group/{id}")(pathParams$);
 
         let security$;
@@ -903,7 +895,6 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent(
             "/payments/collaborator-settings/payment-eligibility/{id}"
         )(pathParams$);

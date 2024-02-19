@@ -35,7 +35,7 @@ async function run() {
 
   const result = await sdk.deprecated.create({
     key: "<key>",
-    name: "string",
+    name: "<value>",
     required: false,
     resourceType: ResourceType.Collaborator,
     type: Type.Boolean,
@@ -83,7 +83,7 @@ async function run() {
   });
 
   const result = await sdk.deprecated.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -168,7 +168,7 @@ async function run() {
   });
 
   const result = await sdk.deprecated.get({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -288,7 +288,6 @@ run();
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { AdditionalDataUpdateRequestResourceType, AdditionalDataUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
 
 async function run() {
   const sdk = new Payments({
@@ -297,7 +296,7 @@ async function run() {
 
   const result = await sdk.deprecated.update({
     additionalDataUpdateRequest: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -340,7 +339,7 @@ async function run() {
   });
 
   const result = await sdk.deprecated.updateInstantPayout({
-    externalPayoutAccountToken: "string",
+    externalPayoutAccountToken: "<value>",
   });
 
   // Handle the result

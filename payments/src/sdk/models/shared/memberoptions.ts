@@ -10,19 +10,16 @@ export enum PayoutPreferences {
     Expedited = "Expedited",
     Check = "Check",
     ECheck = "ECheck",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum MemberOptionsWorkflowStatus {
     Disputed = "Disputed",
     Accepted = "Accepted",
     Resubmitted = "Resubmitted",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum MemberOptionsWorkflowSubStatus {
     Submitted = "Submitted",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type MemberOptions = {

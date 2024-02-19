@@ -32,7 +32,6 @@ export enum PayableUpdateRequestAcceptedPaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayableUpdateRequestClient = {};
@@ -43,7 +42,6 @@ export enum PaymentMethods {
     Credit = "Credit",
     Ach = "ACH",
     Manual = "Manual",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum PayableUpdateRequestStatus {
@@ -54,7 +52,6 @@ export enum PayableUpdateRequestStatus {
     Pending = "Pending",
     PaymentInTransit = "PaymentInTransit",
     Paid = "Paid",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayableUpdateRequest = {

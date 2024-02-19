@@ -11,7 +11,6 @@ export enum PayoutSettingsUpdatePayoutPreferences {
     Expedited = "Expedited",
     Check = "Check",
     ECheck = "ECheck",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type PayoutSettingsUpdate = {

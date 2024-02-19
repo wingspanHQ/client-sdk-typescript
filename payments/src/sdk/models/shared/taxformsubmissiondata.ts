@@ -8,7 +8,6 @@ import { z } from "zod";
 export enum TaxFormSubmissionDataDeliveryMethod {
     Electronic = "Electronic",
     Mail = "Mail",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type TaxFormSubmissionData = {

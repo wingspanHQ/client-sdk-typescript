@@ -7,13 +7,11 @@ import { z } from "zod";
 export enum AdditionalDataUpdateRequestResourceType {
     Collaborator = "Collaborator",
     LineItem = "LineItem",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum AdditionalDataUpdateRequestType {
     Boolean = "Boolean",
     String = "String",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export type AdditionalDataUpdateRequest = {

@@ -38,7 +38,6 @@ export type PreviousData = {};
 export enum RecipientSyncToggled {
     Enabled = "Enabled",
     Disabled = "Disabled",
-    LessThanNilGreaterThan = "<nil>",
 }
 
 export enum TriggeredBy {

@@ -3,8 +3,7 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `Include`                | Include                  |
-| `Exclude`                | Exclude                  |
-| `LessThanNilGreaterThan` | <nil>                    |
+| Name      | Value     |
+| --------- | --------- |
+| `Include` | Include   |
+| `Exclude` | Exclude   |

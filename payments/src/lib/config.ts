@@ -3,8 +3,8 @@
  */
 
 import { HTTPClient } from "./http";
-import { pathToFunc } from "./url";
 import { RetryConfig } from "./retries";
+import { pathToFunc } from "./url";
 
 /**
  * Wingspan's Payments API in Production
@@ -57,7 +57,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = Object.freeze({
     language: "typescript",
     openapiDocVersion: "1.0.0-oas3.1",
-    sdkVersion: "2.0.1",
-    genVersion: "2.252.2",
-    userAgent: "speakeasy-sdk/typescript 2.0.1 2.252.2 1.0.0-oas3.1 @wingspan/payments",
+    sdkVersion: "2.0.2",
+    genVersion: "2.262.2",
+    userAgent: "speakeasy-sdk/typescript 2.0.2 2.262.2 1.0.0-oas3.1 @wingspan/payments",
 });
