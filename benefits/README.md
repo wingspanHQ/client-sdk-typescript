@@ -6,7 +6,7 @@
     
 </div>
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -20,140 +20,252 @@ npm add @wingspan/benefits
 ```bash
 yarn add @wingspan/benefits
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
+### Example
+
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
-    const sdk = new Benefits();
-
-    const res = await sdk.benefits.getBenefitsEnrollmentId({
-        id: "<ID>",
+async function run() {
+    const sdk = new Benefits({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    const result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<id>",
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
-### [Benefits SDK](docs/sdks/benefits/README.md)
+### [benefitsEnrollment](docs/sdks/benefitsenrollment/README.md)
 
-* [getBenefitsEnrollmentId](docs/sdks/benefits/README.md#getbenefitsenrollmentid) - Retrieve Enrollment Details for a Specific Member
-* [getBenefitsPlanEnrollment](docs/sdks/benefits/README.md#getbenefitsplanenrollment) - List all plan enrollments
-* [getBenefitsPlanEnrollmentId](docs/sdks/benefits/README.md#getbenefitsplanenrollmentid) - Get a particular plan enrollment by ID
-* [getBenefitsService](docs/sdks/benefits/README.md#getbenefitsservice) - Retrieve Current Benefits Service Status
-* [patchBenefitsServiceId](docs/sdks/benefits/README.md#patchbenefitsserviceid) - Modify Benefits Service Status
-<!-- End SDK Available Operations -->
+* [getBenefitsEnrollmentId](docs/sdks/benefitsenrollment/README.md#getbenefitsenrollmentid) - Retrieve Enrollment Details for a Specific Member
+* [getBenefitsPlanEnrollment](docs/sdks/benefitsenrollment/README.md#getbenefitsplanenrollment) - List all plan enrollments
+* [getBenefitsPlanEnrollmentId](docs/sdks/benefitsenrollment/README.md#getbenefitsplanenrollmentid) - Get a particular plan enrollment by ID
 
-<!-- Start Dev Containers -->
+### [benefitsService](docs/sdks/benefitsservice/README.md)
 
-<!-- End Dev Containers -->
-
-
-
-<!-- Start Error Handling -->
-# Error Handling
-
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
-
-
-<!-- End Error Handling -->
+* [getBenefitsService](docs/sdks/benefitsservice/README.md#getbenefitsservice) - Retrieve Current Benefits Service Status
+* [patchBenefitsServiceId](docs/sdks/benefitsservice/README.md#patchbenefitsserviceid) - Modify Benefits Service Status
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Server Selection -->
-# Server Selection
+<!-- Start Error Handling [errors] -->
+## Error Handling
 
-## Select Server by Index
+All SDK methods return a response object or throw an error. If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
 
-You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted string since validation errors can list many issues and the plain error string may be difficult read when debugging. 
+
+
+```typescript
+import { Benefits } from "@wingspan/benefits";
+import * as errors from "@wingspan/benefits/sdk/models/errors";
+
+async function run() {
+    const sdk = new Benefits({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    });
+
+    let result;
+    try {
+        result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+            id: "<id>",
+        });
+    } catch (err) {
+        switch (true) {
+            case err instanceof errors.SDKValidationError: {
+                // Validation errors can be pretty-printed
+                console.error(err.pretty());
+                // Raw value may also be inspected
+                console.error(err.rawValue);
+                return;
+            }
+            default: {
+                throw err;
+            }
+        }
+    }
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
+<!-- End Error Handling [errors] -->
+
+
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `https://api.wingspan.app/benefits` | None |
-| 1 | `https://stagingapi.wingspan.app/benefits` | None |
-
-For example:
-
+| 0 | `https://api.wingspan.app` | None |
+| 1 | `https://stagingapi.wingspan.app` | None |
 
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
         serverIdx: 1,
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    const res = await sdk.benefits.getBenefitsEnrollmentId({
-        id: "<ID>",
+    const result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<id>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
 
 
-## Override Server URL Per-Client
+### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
-
+The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
+async function run() {
     const sdk = new Benefits({
-        serverURL: "https://api.wingspan.app/benefits",
+        serverURL: "https://api.wingspan.app",
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    const res = await sdk.benefits.getBenefitsEnrollmentId({
-        id: "<ID>",
+    const result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<id>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
 
 
-<!-- Start Custom HTTP Client -->
-# Custom HTTP Client
+<!-- Start Custom HTTP Client [http-client] -->
+## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The TypeScript SDK makes API calls using an `HTTPClient` that wraps the native
+[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This
+client is a thin wrapper around `fetch` and provides the ability to attach hooks
+around the request lifecycle that can be used to modify the request or handle
+errors and response.
 
+The `HTTPClient` constructor takes an optional `fetcher` argument that can be
+used to integrate a third-party HTTP client or when writing tests to mock out
+the HTTP client and feed in fixtures.
 
-For example, you could specify a header for every request that your sdk makes as follows:
+The following example shows how to use the `"beforeRequest"` hook to to add a
+custom header and a timeout to requests and how to use the `"requestError"` hook
+to log errors:
 
 ```typescript
-from @wingspan/benefits import Benefits;
-import axios;
+import { Benefits } from "@wingspan/benefits";
+import { HTTPClient } from "@wingspan/benefits/lib/http";
 
-const httpClient = axios.create({
-    headers: {'x-custom-header': 'someValue'}
-})
+const httpClient = new HTTPClient({
+  // fetcher takes a function that has the same signature as native `fetch`.
+  fetcher: (request) => {
+    return fetch(request);
+  }
+});
 
+httpClient.addHook("beforeRequest", (request) => {
+  const nextRequest = new Request(request, {
+    signal: request.signal || AbortSignal.timeout(5000);
+  });
 
-const sdk = new Benefits({defaultClient: httpClient});
+  nextRequest.headers.set("x-custom-header", "custom value");
+
+  return nextRequest;
+});
+
+httpClient.addHook("requestError", (error, request) => {
+  console.group("Request Error");
+  console.log("Reason:", `${error}`);
+  console.log("Endpoint:", `${request.method} ${request.url}`);
+  console.groupEnd();
+});
+
+const sdk = new Benefits({ httpClient });
 ```
+<!-- End Custom HTTP Client [http-client] -->
 
+<!-- Start Requirements [requirements] -->
+## Requirements
 
-<!-- End Custom HTTP Client -->
+For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
+<!-- End Requirements [requirements] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name         | Type         | Scheme       |
+| ------------ | ------------ | ------------ |
+| `bearerAuth` | http         | HTTP Bearer  |
+
+To authenticate with the API the `bearerAuth` parameter must be set when initializing the SDK client instance. For example:
+```typescript
+import { Benefits } from "@wingspan/benefits";
+
+async function run() {
+    const sdk = new Benefits({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    });
+
+    const result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<id>",
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

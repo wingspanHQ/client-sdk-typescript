@@ -1,20 +1,21 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Benefits } from "@wingspan/benefits";
 
-(async () => {
-    const sdk = new Benefits();
-
-    const res = await sdk.benefits.getBenefitsEnrollmentId({
-        id: "<ID>",
+async function run() {
+    const sdk = new Benefits({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    const result = await sdk.benefitsEnrollment.getBenefitsEnrollmentId({
+        id: "<id>",
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
