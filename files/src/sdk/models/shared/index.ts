@@ -13,6 +13,7 @@ export * from "./fileresponse";
 export * from "./fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6";
 export * from "./memberfilesummaryresponse";
 export * from "./memberpublicfileresponse";
+export * from "./security";
 export * from "./templatecreaterequest";
 export * from "./templateresponse";
 export * from "./userroles";
