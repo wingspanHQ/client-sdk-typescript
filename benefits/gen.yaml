@@ -18,7 +18,8 @@ typescript:
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/benefits
-  maxMethodParams: "0"
+  maxMethodParams: 0
   packageName: '@wingspan/benefits'
   published: true
   repoSubDirectory: benefits
+  templateVersion: v2
