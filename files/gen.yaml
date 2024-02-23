@@ -18,7 +18,8 @@ typescript:
   author: Wingspan Networks, Inc.
   flattenGlobalSecurity: true
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/files
-  maxMethodParams: "0"
+  maxMethodParams: 0
   packageName: '@wingspan/files'
   published: true
   repoSubDirectory: files
+  templateVersion: v2
