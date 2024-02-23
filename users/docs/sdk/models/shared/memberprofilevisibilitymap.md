@@ -1,0 +1,9 @@
+# MemberProfileVisibilityMap
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `address`                                                                                                   | [shared.MemberProfileVisibilityMapAddress](../../../sdk/models/shared/memberprofilevisibilitymapaddress.md) | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
+| `phone`                                                                                                     | [shared.MemberProfileVisibilityMapPhone](../../../sdk/models/shared/memberprofilevisibilitymapphone.md)     | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |

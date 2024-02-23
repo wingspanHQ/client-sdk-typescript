@@ -1,20 +1,19 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Users } from "@wingspan/users";
 
-(async () => {
-    const sdk = new Users();
-
-    const res = await sdk.users.deleteUsersAccountId({
-        id: "<ID>",
+async function run() {
+    const sdk = new Users({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    const result = await sdk.userAndMemberManagement.getUsers();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

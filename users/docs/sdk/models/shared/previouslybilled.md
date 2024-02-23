@@ -1,0 +1,10 @@
+# PreviouslyBilled
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `package`                                                                                       | [shared.PreviouslyBilledPackage](../../../sdk/models/shared/previouslybilledpackage.md)         | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `packageTier`                                                                                   | [shared.PreviouslyBilledPackageTier](../../../sdk/models/shared/previouslybilledpackagetier.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `term`                                                                                          | [shared.PreviouslyBilledTerm](../../../sdk/models/shared/previouslybilledterm.md)               | :heavy_minus_sign:                                                                              | N/A                                                                                             |

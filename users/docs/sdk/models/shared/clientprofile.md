@@ -1,0 +1,13 @@
+# ClientProfile
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `address`                                                                         | [shared.Address](../../../sdk/models/shared/address.md)                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `company`                                                                         | [shared.Company](../../../sdk/models/shared/company.md)                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `defaultPaymentMethod`                                                            | [shared.DefaultPaymentMethod](../../../sdk/models/shared/defaultpaymentmethod.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| `phone`                                                                           | *string*                                                                          | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `savedPaymentMethods`                                                             | [shared.CreditCard](../../../sdk/models/shared/creditcard.md)[]                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `subscriptionPaymentMethod`                                                       | [shared.DefaultPaymentMethod](../../../sdk/models/shared/defaultpaymentmethod.md) | :heavy_check_mark:                                                                | N/A                                                                               |

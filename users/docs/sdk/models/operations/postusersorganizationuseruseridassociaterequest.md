@@ -1,0 +1,9 @@
+# PostUsersOrganizationUserUserIdAssociateRequest
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `organizationUserAssociation`                                                                   | [shared.OrganizationUserAssociation](../../../sdk/models/shared/organizationuserassociation.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `userId`                                                                                        | *string*                                                                                        | :heavy_check_mark:                                                                              | User Id                                                                                         |
