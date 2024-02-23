@@ -7,9 +7,15 @@ generation:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
   telemetryEnabled: false
 typescript:
-  version: 2.0.2
+  version: 2.1.0
+  additionalDependencies:
+    dependencies: {}
+    devDependencies: {}
+    peerDependencies: {}
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
@@ -25,4 +31,5 @@ typescript:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: '@wingspan/payments'
+  responseFormat: envelope
   templateVersion: v2

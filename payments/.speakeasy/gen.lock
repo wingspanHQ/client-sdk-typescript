@@ -4,20 +4,21 @@ management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
   speakeasyVersion: internal
-  generationVersion: 2.262.2
-  releaseVersion: 2.0.2
-  configChecksum: d1a73b7050ffb683d8ea96cf0b2d248e
+  generationVersion: 2.272.1
+  releaseVersion: 2.1.0
+  configChecksum: 8703ca05e614426477a63c92af3a5beb
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
   published: true
 features:
   typescript:
-    core: 3.4.10
+    core: 3.6.0
     deprecations: 2.81.1
-    globalSecurity: 2.82.2
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.3
     nameOverrides: 2.81.1
+    responseFormat: 0.1.0
     serverIDs: 2.81.2
     unions: 2.85.2
 generatedFiles:
@@ -40,7 +41,6 @@ generatedFiles:
   - .eslintrc.js
   - .npmignore
   - RUNTIMES.md
-  - package-lock.json
   - package.json
   - src/index.ts
   - src/lib/base64.ts
@@ -49,11 +49,13 @@ generatedFiles:
   - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
+  - src/lib/schemas.ts
   - src/lib/sdks.ts
   - src/lib/security.ts
   - src/lib/url.ts
   - src/sdk/index.ts
   - src/sdk/models/errors/sdkerror.ts
+  - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
   - src/sdk/types/decimal.ts
   - src/sdk/types/index.ts
@@ -1217,3 +1219,6 @@ generatedFiles:
   - docs/sdks/reportingandanalytics/README.md
   - USAGE.md
   - .gitattributes
+  - src/hooks/hooks.ts
+  - src/hooks/types.ts
+  - src/hooks/index.ts
