@@ -7,6 +7,7 @@ export * from "./e974d9e9e5676123cf56d2fd858ece1c24be8be15b96a100963b7cb1afada32
 export * from "./enrollment";
 export * from "./planenrollment";
 export * from "./planenrollmentcoveragemonth";
+export * from "./security";
 export * from "./serviceenablementresponse";
 export * from "./serviceenablementupdate";
 export * from "./userroles";

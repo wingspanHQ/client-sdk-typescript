@@ -1,25 +1,35 @@
-configVersion: 1.0.0
-management:
-  docChecksum: e377727f5ba4f1205fcadb3246757bab
-  docVersion: 1.0.0
-  speakeasyVersion: 1.109.0
-  generationVersion: 2.173.0
+configVersion: 2.0.0
 generation:
-  repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: benefits
-  singleTagPerOp: false
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
   telemetryEnabled: false
-features:
-  typescript:
-    core: 2.94.0
-    globalServerURLs: 2.82.0
 typescript:
-  version: 1.0.0
+  version: 2.0.0
+  additionalDependencies:
+    dependencies: {}
+    devDependencies: {}
+    peerDependencies: {}
   author: Wingspan Networks, Inc.
+  clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
-  installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/benefits
+  imports:
+    option: openapi
+    paths:
+      callbacks: sdk/models/callbacks
+      errors: sdk/models/errors
+      operations: sdk/models/operations
+      shared: sdk/models/shared
+      webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: '@wingspan/benefits'
-  published: true
-  repoSubDirectory: benefits
+  responseFormat: envelope
   templateVersion: v2
