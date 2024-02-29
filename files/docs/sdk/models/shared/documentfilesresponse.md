@@ -1,0 +1,16 @@
+# DocumentFilesResponse
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `clientId`                                                            | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `documentId`                                                          | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `events`                                                              | [shared.DocumentEvents](../../../sdk/models/shared/documentevents.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `files`                                                               | [shared.DocumentFiles](../../../sdk/models/shared/documentfiles.md)   | :heavy_check_mark:                                                    | N/A                                                                   |
+| `memberId`                                                            | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `status`                                                              | [shared.Status](../../../sdk/models/shared/status.md)                 | :heavy_check_mark:                                                    | N/A                                                                   |
+| `templateId`                                                          | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `title`                                                               | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `userRoles`                                                           | [shared.UserRoles](../../../sdk/models/shared/userroles.md)           | :heavy_check_mark:                                                    | N/A                                                                   |
