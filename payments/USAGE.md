@@ -1,20 +1,19 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-(async () => {
-    const sdk = new Payments();
-
-    const res = await sdk.payments.deletePaymentsBankingCardId({
-        id: "<ID>",
+async function run() {
+    const sdk = new Payments({
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     });
 
-    if (res.statusCode == 200) {
-        // handle response
-    }
-})();
+    const result = await sdk.serviceSettings.get();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

@@ -1,26 +1,35 @@
-configVersion: 1.0.0
-management:
-  docChecksum: fa77d73add0ab59e24d238f1aa303a0b
-  docVersion: 1.0.0
-  speakeasyVersion: 1.109.0
-  generationVersion: 2.173.0
+configVersion: 2.0.0
 generation:
-  repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   sdkClassName: payments
-  singleTagPerOp: false
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
   telemetryEnabled: false
-features:
-  typescript:
-    core: 2.94.0
-    deprecations: 2.81.1
-    globalServerURLs: 2.82.0
 typescript:
-  version: 1.0.0
+  version: 2.1.0
+  additionalDependencies:
+    dependencies: {}
+    devDependencies: {}
+    peerDependencies: {}
   author: Wingspan Networks, Inc.
+  clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
-  installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
+  imports:
+    option: openapi
+    paths:
+      callbacks: sdk/models/callbacks
+      errors: sdk/models/errors
+      operations: sdk/models/operations
+      shared: sdk/models/shared
+      webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: '@wingspan/payments'
-  published: true
-  repoSubDirectory: payments
+  responseFormat: envelope
   templateVersion: v2
