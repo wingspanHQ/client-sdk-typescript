@@ -1,0 +1,10 @@
+# ActivityUpdateRequest
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `context`                                                                                     | [shared.Context](../../../sdk/models/shared/context.md)                                       | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `events`                                                                                      | [shared.Events](../../../sdk/models/shared/events.md)                                         | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `flows`                                                                                       | [shared.ActivityUpdateRequestFlows](../../../sdk/models/shared/activityupdaterequestflows.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |

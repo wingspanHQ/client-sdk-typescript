@@ -1,0 +1,14 @@
+# MemberTaxInfo
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `expensesEstimateForYear`                                                   | *number*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `filingCode`                                                                | [shared.FilingCode](../../../sdk/models/shared/filingcode.md)               | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `filingType`                                                                | [shared.FilingType](../../../sdk/models/shared/filingtype.md)               | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `incomeEstimateForYear`                                                     | *number*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `numExemptions`                                                             | *number*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `occupations`                                                               | [shared.MemberOccupation](../../../sdk/models/shared/memberoccupation.md)[] | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `stateOfResidence`                                                          | *string*                                                                    | :heavy_minus_sign:                                                          | N/A                                                                         |

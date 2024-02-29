@@ -1,9 +1,0 @@
-# PatchUsersOrganizationUserUserIdAssociateRequest
-
-
-## Fields
-
-| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `organizationUserAssociationUpdate`                                                                  | [shared.OrganizationUserAssociationUpdate](../../models/shared/organizationuserassociationupdate.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
-| `userId`                                                                                             | *string*                                                                                             | :heavy_check_mark:                                                                                   | User Id                                                                                              |

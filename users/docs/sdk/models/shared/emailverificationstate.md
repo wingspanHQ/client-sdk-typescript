@@ -1,0 +1,9 @@
+# EmailVerificationState
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `emailPendingVerification`                                                                        | *string*                                                                                          | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `status`                                                                                          | [shared.EmailVerificationStateStatus](../../../sdk/models/shared/emailverificationstatestatus.md) | :heavy_minus_sign:                                                                                | N/A                                                                                               |

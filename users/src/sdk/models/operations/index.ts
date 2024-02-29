@@ -69,6 +69,7 @@ export * from "./patchusersusermembermemberidnextgensubscriptionid";
 export * from "./patchusersusermembersubscriptionid";
 export * from "./patchusersusermembersubscriptionpaymentmethod";
 export * from "./postusersaccount";
+export * from "./postusersaccountaccountidverify";
 export * from "./postusersaccountlink";
 export * from "./postusersaccountrequirements";
 export * from "./postusersactivity";
