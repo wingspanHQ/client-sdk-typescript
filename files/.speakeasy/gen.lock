@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: c19f2e69-3fc7-4bf7-931e-1899c796a58e
 management:
-  docChecksum: 8be5141fe24c2562c1c76280a9b444e6
+  docChecksum: 164558877013fa58df98587438cfd1e0
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.272.1
-  releaseVersion: 2.0.0
-  configChecksum: 273e2bf8d0a4ae38ff2e0991f06b2dcf
+  generationVersion: 2.275.2
+  releaseVersion: 2.0.1
+  configChecksum: e02e2a4b66bec80e63e77cf581fe9c17
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: files
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/files
   published: true
 features:
   typescript:
-    core: 3.6.0
-    globalSecurity: 2.82.3
+    core: 3.6.1
+    globalSecurity: 2.82.4
     globalServerURLs: 2.82.3
     responseFormat: 0.1.0
 generatedFiles:
@@ -80,6 +80,7 @@ generatedFiles:
   - src/sdk/models/shared/fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6.ts
   - src/sdk/models/shared/fileresponse.ts
   - src/sdk/models/shared/filerequest.ts
+  - src/sdk/models/shared/dfd8f315b764d3bf459f8459cd5f444c6ac6656c1b8ec561168ce998df37955c.ts
   - src/sdk/models/shared/memberpublicfileresponse.ts
   - src/sdk/models/shared/memberfilesummaryresponse.ts
   - src/sdk/models/shared/templateresponse.ts
@@ -139,6 +140,7 @@ generatedFiles:
   - docs/sdk/models/shared/fileaccessscope.md
   - docs/sdk/models/shared/fileresponse.md
   - docs/sdk/models/shared/filerequest.md
+  - docs/sdk/models/shared/dfd8f315b764d3bf459f8459cd5f444c6ac6656c1b8ec561168ce998df37955c.md
   - docs/sdk/models/shared/memberpublicfileresponsefileaccessscope.md
   - docs/sdk/models/shared/memberpublicfileresponse.md
   - docs/sdk/models/shared/memberfilesummaryresponse.md

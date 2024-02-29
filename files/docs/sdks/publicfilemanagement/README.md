@@ -245,6 +245,7 @@ async function run() {
   const result = await sdk.publicFileManagement.patchFilesMemberPublicId({
     fileRequest: {
       filename: "global_leverage.mpg",
+      userRoles: {},
     },
     id: "<id>",
   });
