@@ -22,6 +22,7 @@ export type FileResponse = {
     hidden: boolean;
     labels: Record<string, string>;
     mimetype?: string | null | undefined;
+    tags?: any | null | undefined;
     updatedAt: string;
     userRoles: UserRoles;
 };
@@ -42,6 +43,7 @@ export namespace FileResponse$ {
         hidden: boolean;
         labels: Record<string, string>;
         mimetype?: string | null | undefined;
+        tags?: any | null | undefined;
         updatedAt: string;
         userRoles: UserRoles$.Inbound;
     };
@@ -58,6 +60,7 @@ export namespace FileResponse$ {
             hidden: z.boolean(),
             labels: z.record(z.string()),
             mimetype: z.nullable(z.string()).optional(),
+            tags: z.nullable(z.any()).optional(),
             updatedAt: z.string(),
             userRoles: UserRoles$.inboundSchema,
         })
@@ -73,6 +76,7 @@ export namespace FileResponse$ {
                 hidden: v.hidden,
                 labels: v.labels,
                 ...(v.mimetype === undefined ? null : { mimetype: v.mimetype }),
+                ...(v.tags === undefined ? null : { tags: v.tags }),
                 updatedAt: v.updatedAt,
                 userRoles: v.userRoles,
             };
@@ -89,6 +93,7 @@ export namespace FileResponse$ {
         hidden: boolean;
         labels: Record<string, string>;
         mimetype?: string | null | undefined;
+        tags?: any | null | undefined;
         updatedAt: string;
         userRoles: UserRoles$.Outbound;
     };
@@ -105,6 +110,7 @@ export namespace FileResponse$ {
             hidden: z.boolean(),
             labels: z.record(z.string()),
             mimetype: z.nullable(z.string()).optional(),
+            tags: z.nullable(z.any()).optional(),
             updatedAt: z.string(),
             userRoles: UserRoles$.outboundSchema,
         })
@@ -120,6 +126,7 @@ export namespace FileResponse$ {
                 hidden: v.hidden,
                 labels: v.labels,
                 ...(v.mimetype === undefined ? null : { mimetype: v.mimetype }),
+                ...(v.tags === undefined ? null : { tags: v.tags }),
                 updatedAt: v.updatedAt,
                 userRoles: v.userRoles,
             };

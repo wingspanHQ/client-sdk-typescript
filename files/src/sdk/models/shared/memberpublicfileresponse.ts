@@ -23,6 +23,7 @@ export type MemberPublicFileResponse = {
     labels: Record<string, string>;
     memberId: string;
     mimetype?: string | null | undefined;
+    tags?: any | null | undefined;
     updatedAt: string;
     url: string;
     userRoles: UserRoles;
@@ -47,6 +48,7 @@ export namespace MemberPublicFileResponse$ {
         labels: Record<string, string>;
         memberId: string;
         mimetype?: string | null | undefined;
+        tags?: any | null | undefined;
         updatedAt: string;
         url: string;
         userRoles: UserRoles$.Inbound;
@@ -65,6 +67,7 @@ export namespace MemberPublicFileResponse$ {
             labels: z.record(z.string()),
             memberId: z.string(),
             mimetype: z.nullable(z.string()).optional(),
+            tags: z.nullable(z.any()).optional(),
             updatedAt: z.string(),
             url: z.string(),
             userRoles: UserRoles$.inboundSchema,
@@ -82,6 +85,7 @@ export namespace MemberPublicFileResponse$ {
                 labels: v.labels,
                 memberId: v.memberId,
                 ...(v.mimetype === undefined ? null : { mimetype: v.mimetype }),
+                ...(v.tags === undefined ? null : { tags: v.tags }),
                 updatedAt: v.updatedAt,
                 url: v.url,
                 userRoles: v.userRoles,
@@ -100,6 +104,7 @@ export namespace MemberPublicFileResponse$ {
         labels: Record<string, string>;
         memberId: string;
         mimetype?: string | null | undefined;
+        tags?: any | null | undefined;
         updatedAt: string;
         url: string;
         userRoles: UserRoles$.Outbound;
@@ -118,6 +123,7 @@ export namespace MemberPublicFileResponse$ {
             labels: z.record(z.string()),
             memberId: z.string(),
             mimetype: z.nullable(z.string()).optional(),
+            tags: z.nullable(z.any()).optional(),
             updatedAt: z.string(),
             url: z.string(),
             userRoles: UserRoles$.outboundSchema,
@@ -135,6 +141,7 @@ export namespace MemberPublicFileResponse$ {
                 labels: v.labels,
                 memberId: v.memberId,
                 ...(v.mimetype === undefined ? null : { mimetype: v.mimetype }),
+                ...(v.tags === undefined ? null : { tags: v.tags }),
                 updatedAt: v.updatedAt,
                 url: v.url,
                 userRoles: v.userRoles,

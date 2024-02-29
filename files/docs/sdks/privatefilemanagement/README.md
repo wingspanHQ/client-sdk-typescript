@@ -201,6 +201,7 @@ async function run() {
   const result = await sdk.privateFileManagement.patchFilesMemberPrivateId({
     fileRequest: {
       filename: "borders_protocol.html",
+      userRoles: {},
     },
     id: "<id>",
   });
