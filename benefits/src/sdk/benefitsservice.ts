@@ -63,9 +63,13 @@ export class BenefitsService extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/benefits/service",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/benefits/service" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -142,9 +146,13 @@ export class BenefitsService extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/benefits/service/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/benefits/service/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
