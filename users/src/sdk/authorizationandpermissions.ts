@@ -83,9 +83,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/authorization/{authorizationId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/authorization/{authorizationId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -153,9 +157,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorization",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorization" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -237,9 +245,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorization/accounts/{userId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorization/accounts/{userId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -326,9 +338,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorization/{authorizationId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorization/{authorizationId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -396,9 +412,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorized-scope-groups",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorized-scope-groups" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -482,9 +502,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorized-scope-groups/{requestingUserId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorized-scope-groups/{requestingUserId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -552,9 +576,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorized-scopes",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorized-scopes" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -638,9 +666,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/authorized-scopes/{requestingUserId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/authorized-scopes/{requestingUserId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -730,9 +762,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/authorization/{authorizationId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/authorization/{authorizationId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -810,9 +846,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/authorization",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/authorization" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -888,9 +928,13 @@ export class AuthorizationAndPermissions extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/flatfile-auth-token",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/flatfile-auth-token" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

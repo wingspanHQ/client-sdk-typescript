@@ -75,9 +75,13 @@ export class ActivityAndUsageTracking extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/activity/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/activity/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -141,9 +145,13 @@ export class ActivityAndUsageTracking extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/activity",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/activity" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -219,9 +227,13 @@ export class ActivityAndUsageTracking extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/activity/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/activity/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -299,9 +311,13 @@ export class ActivityAndUsageTracking extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/activity/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/activity/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -377,9 +393,13 @@ export class ActivityAndUsageTracking extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/activity",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/activity" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

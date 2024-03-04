@@ -64,9 +64,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/organization/user",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/organization/user" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -146,9 +150,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/organization/user/{userId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/organization/user/{userId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -233,9 +241,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/organization/user/{userId}/session",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/organization/user/{userId}/session" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -318,9 +330,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/organization/user/{userId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/organization/user/{userId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -410,9 +426,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/organization/user/{userId}/associate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/organization/user/{userId}/associate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -490,9 +510,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/organization/user",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/organization/user" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -580,9 +604,13 @@ export class OrganizationAccountManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/organization/user/{userId}/associate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/organization/user/{userId}/associate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

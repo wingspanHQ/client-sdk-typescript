@@ -75,9 +75,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/user/member/subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/user/member/subscription/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -142,9 +146,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/subscription/payment/method",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/subscription/payment/method" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -208,9 +216,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/subscription/plan",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/subscription/plan" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -290,9 +302,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/subscription/plan/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/subscription/plan/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -371,9 +387,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/subscription/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -448,9 +468,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/user/member/subscription/payment/method",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/user/member/subscription/payment/method" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -532,9 +556,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/user/member/subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/user/member/subscription/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -609,9 +637,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/member/subscription/payment/method",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/member/subscription/payment/method" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

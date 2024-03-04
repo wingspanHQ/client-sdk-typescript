@@ -75,9 +75,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/session/api/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/session/api/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +158,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/session/token/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/session/token/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -218,9 +226,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/granted-subscriber/subscription-grant",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/granted-subscriber/subscription-grant" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -287,9 +299,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/session/api",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/session/api" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -365,9 +381,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/session/api/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/session/api/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -444,9 +464,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/session/token/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/session/token/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -519,9 +543,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/session/api/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/session/api/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -598,9 +626,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/session/otp",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/session/otp" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -676,9 +708,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/user/{id}/verification/email",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/user/{id}/verification/email" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -761,9 +797,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/user/{id}/verification/phone",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/user/{id}/verification/phone" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -841,9 +881,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/authentication",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/authentication" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -919,9 +963,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/pending/session",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/pending/session" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -992,9 +1040,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1065,9 +1117,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session/api",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session/api" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1143,9 +1199,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session/otp",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session/otp" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1216,9 +1276,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session/requesting-user",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session/requesting-user" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1292,9 +1356,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session/single-sign-on",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session/single-sign-on" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1370,9 +1438,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/session/social-auth/google",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/session/social-auth/google" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1455,9 +1527,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/{id}/verification/email",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/{id}/verification/email" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1544,9 +1620,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/{id}/verification/existing-email",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/{id}/verification/existing-email" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1629,9 +1709,13 @@ export class SessionAndAuthentication extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/{id}/verification/phone",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/{id}/verification/phone" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

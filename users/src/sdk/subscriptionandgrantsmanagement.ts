@@ -76,9 +76,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/subscription-grant/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/subscription-grant/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -158,9 +162,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/user/member/{id}/subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/user/member/{id}/subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -228,9 +236,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/subscription-grant",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/subscription-grant" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -306,9 +318,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/subscription-grant/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/subscription-grant/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -388,9 +404,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/{id}/subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/{id}/subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -473,9 +493,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/subscription-grant/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/subscription-grant/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -558,9 +582,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/user/member/{id}/subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/user/member/{id}/subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -639,9 +667,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/subscription-grant",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/subscription-grant" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -724,9 +756,13 @@ export class SubscriptionAndGrantsManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/member/{id}/subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/member/{id}/subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
