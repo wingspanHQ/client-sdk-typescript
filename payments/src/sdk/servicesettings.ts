@@ -60,9 +60,13 @@ export class ServiceSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getServiceStatus",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getServiceStatus" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

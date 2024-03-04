@@ -74,9 +74,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createClientDeduction",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createClientDeduction" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +158,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteMemberClientAssociation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteMemberClientAssociation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -233,9 +241,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteClientDeduction",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteClientDeduction" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -311,9 +323,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "establishMemberClientAssociation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "establishMemberClientAssociation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -392,9 +408,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getMemberClientAssociation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getMemberClientAssociation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -471,9 +491,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getClientDeduction",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getClientDeduction" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -537,9 +561,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listClients",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listClients" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -604,9 +632,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listMemberClientAssociations",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listMemberClientAssociations" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -671,9 +703,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listClientDeductions",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listClientDeductions" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -752,9 +788,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listSpecificClientDetails",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listSpecificClientDetails" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -835,9 +875,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateMemberClientAssociation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateMemberClientAssociation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -915,9 +959,13 @@ export class ClientManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateClientDeduction",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateClientDeduction" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

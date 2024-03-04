@@ -74,9 +74,13 @@ export class PayrollSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayrollSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayrollSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +158,13 @@ export class PayrollSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePayrollSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePayrollSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

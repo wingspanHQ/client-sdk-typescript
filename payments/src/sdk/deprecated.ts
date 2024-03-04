@@ -78,9 +78,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCustomDataCollaboratorMember",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCustomDataCollaboratorMember" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -164,9 +168,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteCustomDataCollaboratorMember",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteCustomDataCollaboratorMember" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -234,9 +242,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteInstantPayoutInformation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteInstantPayoutInformation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -317,9 +329,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCustomDataCollaboratorMember",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCustomDataCollaboratorMember" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -385,9 +401,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getInstantPayoutInformation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getInstantPayoutInformation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -456,9 +476,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCustomDataCollaboratorMembers",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCustomDataCollaboratorMembers" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -544,9 +568,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCustomDataCollaboratorMember",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCustomDataCollaboratorMember" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -624,9 +652,13 @@ export class Deprecated extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateInstantPayoutInformation",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateInstantPayoutInformation" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

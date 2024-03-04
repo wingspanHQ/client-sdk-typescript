@@ -60,9 +60,13 @@ export class MerchantCategoryCodes extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getMerchantCategoryCodes",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getMerchantCategoryCodes" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

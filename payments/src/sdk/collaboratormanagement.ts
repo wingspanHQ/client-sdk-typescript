@@ -82,9 +82,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "associateCollaboratorWithGroup",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "associateCollaboratorWithGroup" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -160,9 +164,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -238,9 +246,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createDeductionCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createDeductionCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -317,9 +329,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCollaboratorGroup",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCollaboratorGroup" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -396,9 +412,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -477,9 +497,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteDeductionCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteDeductionCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -563,9 +587,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "disassociateCollaboratorWithGroup",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "disassociateCollaboratorWithGroup" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -644,9 +672,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -725,9 +757,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getDeductionCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getDeductionCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -805,9 +841,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getEventAssociatedCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getEventAssociatedCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -871,9 +911,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCollaborators",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCollaborators" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -938,9 +982,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listDeductionCollaborators",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listDeductionCollaborators" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1005,9 +1053,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCollaboratorGroups",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCollaboratorGroups" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1072,9 +1124,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listRegisteredCollaborators",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listRegisteredCollaborators" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1156,9 +1212,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listSpecificCollaboratorDetails",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listSpecificCollaboratorDetails" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1238,9 +1298,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1320,9 +1384,13 @@ export class CollaboratorManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateDeductionCollaborator",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateDeductionCollaborator" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
