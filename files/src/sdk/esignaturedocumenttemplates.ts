@@ -75,9 +75,13 @@ export class ESignatureDocumentTemplates extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/files/template/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/files/template/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -141,9 +145,13 @@ export class ESignatureDocumentTemplates extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/template",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/template" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -219,9 +227,13 @@ export class ESignatureDocumentTemplates extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/template/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/template/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -297,9 +309,13 @@ export class ESignatureDocumentTemplates extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/files/template",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/files/template" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

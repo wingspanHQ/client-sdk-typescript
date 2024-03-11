@@ -74,9 +74,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/files/member/private/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/files/member/private/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -142,9 +146,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/private",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/private" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -220,9 +228,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/private/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/private/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -300,9 +312,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/private/{id}/download",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/private/{id}/download" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -378,9 +394,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/files/member/private/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/files/member/private/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -442,9 +462,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/files/member/private",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/files/member/private" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -504,9 +528,13 @@ export class PrivateFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/files/member/private/upload",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/files/member/private/upload" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
