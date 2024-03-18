@@ -7,7 +7,7 @@ import {
     SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$,
 } from "./sevenhundredandfiftysevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum BulkCalculation1099BatchStatus {
     Open = "Open",

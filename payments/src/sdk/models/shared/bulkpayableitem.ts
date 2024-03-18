@@ -8,7 +8,7 @@ import {
 } from "./ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb";
 import { InvoiceIntegrations, InvoiceIntegrations$ } from "./invoiceintegrations";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PayableStatus {
     Draft = "Draft",

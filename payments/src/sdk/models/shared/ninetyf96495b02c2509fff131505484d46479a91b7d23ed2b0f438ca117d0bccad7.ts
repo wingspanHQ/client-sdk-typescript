@@ -6,7 +6,7 @@ import {
     CollaboratorForm1099BalancesUpdateRequest,
     CollaboratorForm1099BalancesUpdateRequest$,
 } from "./collaboratorform1099balancesupdaterequest";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7 = {
     twoThousandAndTwentyOne?: CollaboratorForm1099BalancesUpdateRequest | null | undefined;

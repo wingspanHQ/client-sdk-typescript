@@ -10,7 +10,7 @@ import {
     Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5,
     Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$,
 } from "./eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum DeliveryMethod {
     Electronic = "Electronic",

@@ -9,7 +9,7 @@ import {
 import { FeeHandlingConfig, FeeHandlingConfig$ } from "./feehandlingconfig";
 import { InvoiceIntegrations, InvoiceIntegrations$ } from "./invoiceintegrations";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AcceptedPaymentMethods {
     Credit = "Credit",

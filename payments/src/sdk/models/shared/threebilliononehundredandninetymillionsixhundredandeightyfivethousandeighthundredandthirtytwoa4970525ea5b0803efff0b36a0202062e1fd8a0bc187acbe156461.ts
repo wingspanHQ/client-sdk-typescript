@@ -6,7 +6,7 @@ import {
     Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d,
     Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$,
 } from "./sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ThreeBillionOneHundredAndNinetyMillionSixHundredAndEightyFiveThousandEightHundredAndThirtyTwoa4970525ea5b0803efff0b36a0202062e1fd8a0bc187acbe156461 =
     {

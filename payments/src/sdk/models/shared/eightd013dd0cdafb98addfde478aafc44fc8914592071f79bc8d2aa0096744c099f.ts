@@ -10,7 +10,7 @@ import {
     Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193,
     Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193$,
 } from "./fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Eightd013dd0cdafb98addfde478aafc44fc8914592071f79bc8d2aa0096744c099f = {
     id: string;

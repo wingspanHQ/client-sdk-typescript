@@ -8,7 +8,7 @@ import {
 } from "./eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1";
 import { MemberClientFormW9Info, MemberClientFormW9Info$ } from "./memberclientformw9info";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum CollaboratorStatus {
     Active = "Active",

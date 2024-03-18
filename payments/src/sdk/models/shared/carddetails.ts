@@ -3,7 +3,7 @@
  */
 
 import { Address, Address$ } from "./address";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum CardDetailsStatus {
     Active = "Active",

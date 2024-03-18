@@ -17,7 +17,7 @@ import { MemberClient, MemberClient$ } from "./memberclient";
 import { MemberOptions, MemberOptions$ } from "./memberoptions";
 import { PaymentInfo, PaymentInfo$ } from "./paymentinfo";
 import { ProcessingFees, ProcessingFees$ } from "./processingfees";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientInvoiceAcceptedPaymentMethods {
     Credit = "Credit",

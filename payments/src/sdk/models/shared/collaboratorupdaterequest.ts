@@ -11,7 +11,7 @@ import {
     TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4,
     TwentySixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4$,
 } from "./twentysixe8ea23ccb1e007e7d6560175c7e75c768dac34727b7fe1d834ca24b8221ef4";
-import { z } from "zod";
+import * as z from "zod";
 
 export type FormW9Data = {};
 

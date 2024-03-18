@@ -3,7 +3,7 @@
  */
 
 import { PayoutDestinationUpdate, PayoutDestinationUpdate$ } from "./payoutdestinationupdate";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PayoutSettingsUpdatePayoutPreferences {
     Standard = "Standard",

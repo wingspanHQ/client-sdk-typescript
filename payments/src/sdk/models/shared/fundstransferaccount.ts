@@ -6,7 +6,7 @@ import {
     EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f,
     EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f$,
 } from "./eightthousandtwohundredandtwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum FundsTransferAccountCurrency {
     Usd = "USD",

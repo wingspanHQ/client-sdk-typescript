@@ -3,7 +3,7 @@
  */
 
 import { PayoutDestinationResponse, PayoutDestinationResponse$ } from "./payoutdestinationresponse";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PayoutSettingsResponsePayoutPreferences {
     Standard = "Standard",

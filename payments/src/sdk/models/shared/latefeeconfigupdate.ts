@@ -3,7 +3,7 @@
  */
 
 import { FrequencyUpdate, FrequencyUpdate$ } from "./frequencyupdate";
-import { z } from "zod";
+import * as z from "zod";
 
 export type LateFeeConfigUpdate = {
     frequency?: FrequencyUpdate | null | undefined;

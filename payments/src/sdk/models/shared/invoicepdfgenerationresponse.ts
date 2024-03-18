@@ -3,7 +3,7 @@
  */
 
 import { InvoiceAttachments, InvoiceAttachments$ } from "./invoiceattachments";
-import { z } from "zod";
+import * as z from "zod";
 
 export type InvoicePdfGenerationResponse = {
     attachments: InvoiceAttachments;

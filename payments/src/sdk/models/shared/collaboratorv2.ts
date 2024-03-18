@@ -14,7 +14,7 @@ import { MemberClientWireAccount, MemberClientWireAccount$ } from "./memberclien
 import { MemberData, MemberData$ } from "./memberdata";
 import { RedactedMember, RedactedMember$ } from "./redactedmember";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum CollaboratorV2Status {
     Active = "Active",

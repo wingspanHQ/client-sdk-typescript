@@ -6,7 +6,7 @@ import {
     Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01,
     Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$,
 } from "./fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01";
-import { z } from "zod";
+import * as z from "zod";
 
 export type InvoiceWithholdings = {
     tax?: Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01 | null | undefined;
