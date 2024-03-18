@@ -6,7 +6,7 @@ import {
     E974d9e9e5676123cf56d2fd858ece1c24be8be15b96a100963b7cb1afada329,
     E974d9e9e5676123cf56d2fd858ece1c24be8be15b96a100963b7cb1afada329$,
 } from "./e974d9e9e5676123cf56d2fd858ece1c24be8be15b96a100963b7cb1afada329";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Enrollment = {
     memberId: string;

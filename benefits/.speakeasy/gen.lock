@@ -3,10 +3,10 @@ id: a9a9fc37-234f-419a-95d4-ec7537fec14b
 management:
   docChecksum: a394825e1c1bc4930882a784d6d637e8
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.277.0
-  releaseVersion: 2.0.1
-  configChecksum: 6ea2804628e7aed2eab51097aade45d4
+  speakeasyVersion: 1.209.3
+  generationVersion: 2.281.2
+  releaseVersion: 2.1.0
+  configChecksum: ff3125ee60eed9520301b4f2f638f86a
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: benefits
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/benefits
@@ -14,9 +14,9 @@ management:
 features:
   typescript:
     core: 3.6.1
-    globalSecurity: 2.82.4
-    globalServerURLs: 2.82.3
-    responseFormat: 0.1.0
+    globalSecurity: 2.82.6
+    globalServerURLs: 2.82.4
+    responseFormat: 0.2.2
 generatedFiles:
   - src/sdk/benefitsenrollment.ts
   - src/sdk/benefitsservice.ts
@@ -29,7 +29,6 @@ generatedFiles:
   - src/lib/base64.ts
   - src/lib/config.ts
   - src/lib/encodings.ts
-  - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
   - src/lib/schemas.ts
@@ -40,7 +39,6 @@ generatedFiles:
   - src/sdk/models/errors/sdkerror.ts
   - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
-  - src/sdk/types/decimal.ts
   - src/sdk/types/index.ts
   - src/sdk/types/operations.ts
   - src/sdk/types/rfcdate.ts
