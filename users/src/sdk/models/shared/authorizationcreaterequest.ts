@@ -3,7 +3,7 @@
  */
 
 import { ScopeModificationsMap, ScopeModificationsMap$ } from "./scopemodificationsmap";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AllowedAction {
     Read = "Read",

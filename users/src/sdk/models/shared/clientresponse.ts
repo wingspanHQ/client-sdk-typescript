@@ -5,7 +5,7 @@
 import { ClientProfile, ClientProfile$ } from "./clientprofile";
 import { NewUser, NewUser$ } from "./newuser";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ClientResponse = {
     clientId: string;

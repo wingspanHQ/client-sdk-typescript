@@ -4,7 +4,7 @@
 
 import { CompanyLinks, CompanyLinks$ } from "./companylinks";
 import { CompanyPerson, CompanyPerson$ } from "./companyperson";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum Structure {
     None = "None",

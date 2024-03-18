@@ -6,7 +6,7 @@ import {
     Nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62,
     Nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62$,
 } from "./nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62";
-import { z } from "zod";
+import * as z from "zod";
 
 export type AccountRequirementsResponse = {
     accountNumber: Nineebbbc3cd350921a45b309ded4e5f141c39010cff4692acdd754cd0084136a62;

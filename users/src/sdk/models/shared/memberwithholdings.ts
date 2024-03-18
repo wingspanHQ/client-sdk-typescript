@@ -6,7 +6,7 @@ import {
     SixHundredAndSeventeenceb0bc24fcf187ab7e6b13633442b8671de98ff04917ce2c41034e5482b5f,
     SixHundredAndSeventeenceb0bc24fcf187ab7e6b13633442b8671de98ff04917ce2c41034e5482b5f$,
 } from "./sixhundredandseventeenceb0bc24fcf187ab7e6b13633442b8671de98ff04917ce2c41034e5482b5f";
-import { z } from "zod";
+import * as z from "zod";
 
 export type MemberWithholdings = {
     tax?:

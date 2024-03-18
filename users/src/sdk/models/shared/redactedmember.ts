@@ -7,7 +7,7 @@ import {
     TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb,
     TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb$,
 } from "./twentythreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb";
-import { z } from "zod";
+import * as z from "zod";
 
 export type RedactedMember = {
     profile?:

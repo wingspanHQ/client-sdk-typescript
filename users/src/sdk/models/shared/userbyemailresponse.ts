@@ -3,7 +3,7 @@
  */
 
 import { RedactedUser, RedactedUser$ } from "./redacteduser";
-import { z } from "zod";
+import * as z from "zod";
 
 export type UserByEmailResponse = {
     user: RedactedUser;

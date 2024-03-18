@@ -5,7 +5,7 @@
 import { PreviouslyBilled, PreviouslyBilled$ } from "./previouslybilled";
 import { ScheduledChange, ScheduledChange$ } from "./scheduledchange";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum LatestPaymentStatus {
     Failed = "Failed",

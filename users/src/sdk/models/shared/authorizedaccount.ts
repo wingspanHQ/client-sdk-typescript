@@ -4,7 +4,7 @@
 
 import { RedactedMember, RedactedMember$ } from "./redactedmember";
 import { RedactedUser, RedactedUser$ } from "./redacteduser";
-import { z } from "zod";
+import * as z from "zod";
 
 export type AuthorizedAccount = {
     accessibleMember: RedactedMember;
