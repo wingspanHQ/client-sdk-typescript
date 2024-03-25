@@ -1,6 +1,6 @@
 {
   "name": "@wingspan/benefits",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Wingspan Networks, Inc.",
   "main": "./index.js",
   "sideEffects": false,
