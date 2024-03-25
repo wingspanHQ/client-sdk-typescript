@@ -9,7 +9,7 @@ import { Phone, Phone$ } from "./phone";
 import { UserNotificationSettings, UserNotificationSettings$ } from "./usernotificationsettings";
 import { UserProfile, UserProfile$ } from "./userprofile";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum NewUserStatus {
     Pending = "Pending",

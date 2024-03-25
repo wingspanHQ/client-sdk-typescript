@@ -6,7 +6,7 @@ import { RedactedMember, RedactedMember$ } from "./redactedmember";
 import { RedactedUser, RedactedUser$ } from "./redacteduser";
 import { ScopeModificationsMap, ScopeModificationsMap$ } from "./scopemodificationsmap";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AuthorizationResponseAllowedAction {
     Read = "Read",

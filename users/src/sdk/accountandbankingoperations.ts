@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class AccountAndBankingOperations extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -75,9 +75,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/users/account/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/users/account/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -141,9 +145,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/account",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/account" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -219,9 +227,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/account/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/account/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -299,9 +311,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/users/account/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/users/account/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -377,9 +393,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/account",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/account" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -447,9 +467,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/account-link",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/account-link" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -524,9 +548,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/account-requirements",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/account-requirements" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -608,9 +636,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/account/{accountId}/verify",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/account/{accountId}/verify" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -686,9 +718,13 @@ export class AccountAndBankingOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/guest/account-numbers",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/guest/account-numbers" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

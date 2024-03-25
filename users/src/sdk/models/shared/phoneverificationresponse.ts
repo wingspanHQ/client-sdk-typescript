@@ -3,7 +3,7 @@
  */
 
 import { SessionResponse, SessionResponse$ } from "./sessionresponse";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PhoneVerificationResponseStatus {
     Pending = "Pending",

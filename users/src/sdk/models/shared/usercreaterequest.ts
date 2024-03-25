@@ -5,7 +5,7 @@
 import { NewUserSettings, NewUserSettings$ } from "./newusersettings";
 import { UserNotificationSettings, UserNotificationSettings$ } from "./usernotificationsettings";
 import { UserProfile, UserProfile$ } from "./userprofile";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum UserCreateRequestStatus {
     Pending = "Pending",

@@ -3,7 +3,7 @@
  */
 
 import { ScopeModification, ScopeModification$ } from "./scopemodification";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1 = {
     memberClient?: Array<ScopeModification> | null | undefined;

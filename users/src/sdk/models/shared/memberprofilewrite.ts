@@ -12,7 +12,7 @@ import {
 import { MemberTaxInfo, MemberTaxInfo$ } from "./membertaxinfo";
 import { MemberWithholdings, MemberWithholdings$ } from "./memberwithholdings";
 import { TinVerification, TinVerification$ } from "./tinverification";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum MemberProfileWriteBookkeepingProductsUsed {
     AccountingSoftware = "AccountingSoftware",

@@ -8,7 +8,7 @@ import {
     AccountVerificationRequest,
     AccountVerificationRequest$,
 } from "./accountverificationrequest";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AccountCreateRequestStatus {
     Active = "Active",

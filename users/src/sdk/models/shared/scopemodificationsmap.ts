@@ -10,7 +10,7 @@ import {
     Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1,
     Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1$,
 } from "./bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ScopeModificationsMap = {
     payments?: Bf168ad7d016496dfd65f4d4bc3208501a96ad4f4048d001e6ebdb3a4b8311b1 | null | undefined;

@@ -5,7 +5,7 @@
 import { ActivityContext, ActivityContext$ } from "./activitycontext";
 import { ActivityEvents, ActivityEvents$ } from "./activityevents";
 import { Flows, Flows$ } from "./flows";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Activity = {
     context?: ActivityContext | null | undefined;

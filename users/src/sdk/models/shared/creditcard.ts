@@ -7,7 +7,7 @@ import {
     Oneec70b8932527ff4790394003fff4dc0129da172d7ffa7d79fdfb7db427d1746,
     Oneec70b8932527ff4790394003fff4dc0129da172d7ffa7d79fdfb7db427d1746$,
 } from "./oneec70b8932527ff4790394003fff4dc0129da172d7ffa7d79fdfb7db427d1746";
-import { z } from "zod";
+import * as z from "zod";
 
 export type CreditCard = {
     cardBrand?: string | null | undefined;

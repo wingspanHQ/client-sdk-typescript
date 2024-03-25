@@ -6,7 +6,7 @@ import { Address, Address$ } from "./address";
 import { Company, Company$ } from "./company";
 import { CreditCard, CreditCard$ } from "./creditcard";
 import { DefaultPaymentMethod, DefaultPaymentMethod$ } from "./defaultpaymentmethod";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ClientProfile = {
     address?: Address | null | undefined;

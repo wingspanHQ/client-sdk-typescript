@@ -6,7 +6,7 @@ import {
     OrganizationInheritanceStrategy,
     OrganizationInheritanceStrategy$,
 } from "./organizationinheritancestrategy";
-import { z } from "zod";
+import * as z from "zod";
 
 export type OrganizationUserAssociation = {
     inheritanceStrategy?: OrganizationInheritanceStrategy | null | undefined;
