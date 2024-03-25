@@ -1,6 +1,6 @@
 {
   "name": "@wingspan/files",
-  "version": "2.0.1",
+  "version": "2.1.2",
   "author": "Wingspan Networks, Inc.",
   "main": "./index.js",
   "sideEffects": false,
@@ -29,7 +29,6 @@
     "zod": "^3.22.4"
   },
   "dependencies": {
-    "decimal.js": "^10.4.3",
-    "jsonpath": "^1.1.1"
+    
   }
 }

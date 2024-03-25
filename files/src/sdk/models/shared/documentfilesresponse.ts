@@ -5,7 +5,7 @@
 import { DocumentEvents, DocumentEvents$ } from "./documentevents";
 import { DocumentFiles, DocumentFiles$ } from "./documentfiles";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum Status {
     New = "New",

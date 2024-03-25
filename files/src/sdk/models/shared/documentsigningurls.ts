@@ -6,7 +6,7 @@ import {
     Fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6,
     Fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6$,
 } from "./fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6";
-import { z } from "zod";
+import * as z from "zod";
 
 export type DocumentSigningUrls = {
     client?: Fourc638629a9ab57d496147964335fd74ca94b1bb4ca82380d39ab39d0d4b3c1c6 | null | undefined;
