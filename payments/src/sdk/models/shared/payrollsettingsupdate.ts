@@ -6,7 +6,7 @@ import { CalculationSettings1099, CalculationSettings1099$ } from "./calculation
 import { FrequencyUpdate, FrequencyUpdate$ } from "./frequencyupdate";
 import { FundingSource, FundingSource$ } from "./fundingsource";
 import { ScheduleDateUpdate, ScheduleDateUpdate$ } from "./scheduledateupdate";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PayrollSettingsUpdateStatus {
     Active = "Active",

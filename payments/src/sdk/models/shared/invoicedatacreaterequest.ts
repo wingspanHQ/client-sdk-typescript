@@ -20,7 +20,7 @@ import {
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2,
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$,
 } from "./thirtysixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceDataCreateRequestAcceptedPaymentMethods {
     Credit = "Credit",

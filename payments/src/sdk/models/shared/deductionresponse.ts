@@ -8,7 +8,7 @@ import {
     PostPaymentDeductionDisbursement$,
 } from "./postpaymentdeductiondisbursement";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum DeductionResponseCurrency {
     Usd = "USD",

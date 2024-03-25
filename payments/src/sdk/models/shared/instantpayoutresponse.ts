@@ -3,7 +3,7 @@
  */
 
 import { FundsTransferAccount, FundsTransferAccount$ } from "./fundstransferaccount";
-import { z } from "zod";
+import * as z from "zod";
 
 export type InstantPayoutResponse = {
     instantPayoutAccount: FundsTransferAccount;

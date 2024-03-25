@@ -18,7 +18,7 @@ import {
 import { TaxFormSubmission, TaxFormSubmission$ } from "./taxformsubmission";
 import { TinVerification, TinVerification$ } from "./tinverification";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum PayerTaxFormResponseDeliveryMethod {
     Electronic = "Electronic",

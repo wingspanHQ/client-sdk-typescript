@@ -3,7 +3,7 @@
  */
 
 import { PayerTaxFormResponse, PayerTaxFormResponse$ } from "./payertaxformresponse";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TaxFormResponse = PayerTaxFormResponse | Array<PayerTaxFormResponse>;
 
@@ -12,12 +12,10 @@ export namespace TaxFormResponse$ {
     export type Inbound = PayerTaxFormResponse$.Inbound | Array<PayerTaxFormResponse$.Inbound>;
 
     export type Outbound = PayerTaxFormResponse$.Outbound | Array<PayerTaxFormResponse$.Outbound>;
-
     export const inboundSchema: z.ZodType<TaxFormResponse, z.ZodTypeDef, Inbound> = z.union([
         PayerTaxFormResponse$.inboundSchema,
         z.array(PayerTaxFormResponse$.inboundSchema),
     ]);
-
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, TaxFormResponse> = z.union([
         PayerTaxFormResponse$.outboundSchema,
         z.array(PayerTaxFormResponse$.outboundSchema),

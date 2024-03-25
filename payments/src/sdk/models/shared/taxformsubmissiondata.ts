@@ -3,7 +3,7 @@
  */
 
 import { TaxFormW9Info, TaxFormW9Info$ } from "./taxformw9info";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum TaxFormSubmissionDataDeliveryMethod {
     Electronic = "Electronic",

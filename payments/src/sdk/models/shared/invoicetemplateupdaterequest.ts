@@ -5,7 +5,7 @@
 import { FrequencyUpdate, FrequencyUpdate$ } from "./frequencyupdate";
 import { InvoiceUpdateRequest, InvoiceUpdateRequest$ } from "./invoiceupdaterequest";
 import { ScheduleDateUpdate, ScheduleDateUpdate$ } from "./scheduledateupdate";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceTemplateUpdateRequestStatus {
     Active = "Active",

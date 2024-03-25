@@ -6,7 +6,7 @@ import {
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863,
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$,
 } from "./d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f = {
     quickbooks?:

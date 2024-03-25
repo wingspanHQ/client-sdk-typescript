@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class ReportingAndAnalytics extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -63,9 +63,13 @@ export class ReportingAndAnalytics extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getSummarizedReport",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getSummarizedReport" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -146,9 +150,13 @@ export class ReportingAndAnalytics extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayrollDetailedReport",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayrollDetailedReport" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -214,9 +222,13 @@ export class ReportingAndAnalytics extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listDetailedInformationCollaborators",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listDetailedInformationCollaborators" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -283,9 +295,13 @@ export class ReportingAndAnalytics extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listAgingReportLineItems",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listAgingReportLineItems" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -350,9 +366,13 @@ export class ReportingAndAnalytics extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listAgingReportPayables",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listAgingReportPayables" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

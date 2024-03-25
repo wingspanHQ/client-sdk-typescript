@@ -8,7 +8,7 @@ import {
 } from "./eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5";
 import { Form1099Correction, Form1099Correction$ } from "./form1099correction";
 import { Form1099Events, Form1099Events$ } from "./form1099events";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum MemberClientForm1099BalancesDeliveryMethod {
     Electronic = "Electronic",

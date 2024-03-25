@@ -6,7 +6,7 @@ import { CalculationSettings1099, CalculationSettings1099$ } from "./calculation
 import { Frequency, Frequency$ } from "./frequency";
 import { FundingSource, FundingSource$ } from "./fundingsource";
 import { ScheduleDate, ScheduleDate$ } from "./scheduledate";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InternationalPayroll {
     All = "All",

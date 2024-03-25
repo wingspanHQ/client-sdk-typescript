@@ -29,7 +29,7 @@ import { MemberOptions, MemberOptions$ } from "./memberoptions";
 import { PaymentInfo, PaymentInfo$ } from "./paymentinfo";
 import { ProcessingFees, ProcessingFees$ } from "./processingfees";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceAcceptedPaymentMethods {
     Credit = "Credit",

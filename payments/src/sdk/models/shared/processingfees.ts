@@ -3,7 +3,7 @@
  */
 
 import { Fee, Fee$ } from "./fee";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ProcessingFees = {
     creditCardFee?: Fee | null | undefined;

@@ -4,7 +4,7 @@
 
 import { ExternalIdsBulkImport, ExternalIdsBulkImport$ } from "./externalidsbulkimport";
 import { ExternalIdsQuickbooksData, ExternalIdsQuickbooksData$ } from "./externalidsquickbooksdata";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ExternalIds = {
     bulk?: ExternalIdsBulkImport | null | undefined;

@@ -22,7 +22,7 @@ import {
     Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$,
 } from "./threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientUserAccountType {
     Member = "member",

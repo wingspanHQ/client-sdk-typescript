@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class OneThousandAndNinetyNineOperations extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "calculate1099Amounts",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "calculate1099Amounts" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -158,9 +162,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createRecipientSync",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createRecipientSync" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -236,9 +244,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCalculation1099Batch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCalculation1099Batch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -324,9 +336,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCalculation1099BatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCalculation1099BatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -408,9 +424,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createRecipientProof",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createRecipientProof" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -486,9 +506,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "create1099TaxForm",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "create1099TaxForm" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -568,9 +592,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getTaxForm",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getTaxForm" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -652,9 +680,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCalculation1099Batch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCalculation1099Batch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -741,9 +773,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getForm1099PDF",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getForm1099PDF" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -822,9 +858,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getFormW9PDF",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getFormW9PDF" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -910,9 +950,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCalculation1099BatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCalculation1099BatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -978,9 +1022,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCalculation1099Batches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCalculation1099Batches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1062,9 +1110,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCalculation1099BatchItems",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCalculation1099BatchItems" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1128,9 +1180,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "list1099TaxForms",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "list1099TaxForms" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1206,9 +1262,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "markUndelivered1099Form",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "markUndelivered1099Form" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1284,9 +1344,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "remail1099Form",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "remail1099Form" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1350,9 +1414,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "request1099InviteEmail",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "request1099InviteEmail" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1415,9 +1483,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "submitPayeeTIN",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "submitPayeeTIN" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1497,9 +1569,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateTaxForm",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateTaxForm" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1582,9 +1658,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCalculation1099Batch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCalculation1099Batch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1674,9 +1754,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCalculation1099BatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCalculation1099BatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1740,9 +1824,13 @@ export class OneThousandAndNinetyNineOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePayeeW9Information",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePayeeW9Information" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

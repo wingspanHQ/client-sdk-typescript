@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class PayrollSettings extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class PayrollSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayrollSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayrollSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +158,13 @@ export class PayrollSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePayrollSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePayrollSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

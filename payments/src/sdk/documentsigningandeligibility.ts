@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class DocumentSigningAndEligibility extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -76,9 +76,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createPaymentEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createPaymentEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -160,9 +164,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -249,9 +257,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteEligibilityRequirementCollaboratorGroup",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteEligibilityRequirementCollaboratorGroup" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -333,9 +345,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deletePaymentEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deletePaymentEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -416,9 +432,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "establishEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "establishEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -497,9 +517,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -577,9 +601,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCollaboratorGroupConfiguration",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCollaboratorGroupConfiguration" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -661,9 +689,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPaymentEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPaymentEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -731,9 +763,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listEligibilityRequirements",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listEligibilityRequirements" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -800,9 +836,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listPaymentEligibilityRequirements",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listPaymentEligibilityRequirements" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -886,9 +926,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -978,9 +1022,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateEligibilityRequirementCollaboratorGroup",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateEligibilityRequirementCollaboratorGroup" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1065,9 +1113,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCollaboratorGroupConfiguration",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCollaboratorGroupConfiguration" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1152,9 +1204,13 @@ export class DocumentSigningAndEligibility extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePaymentEligibilityRequirement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePaymentEligibilityRequirement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

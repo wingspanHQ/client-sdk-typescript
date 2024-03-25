@@ -3,7 +3,7 @@
  */
 
 import { MemberClientFormW9Info, MemberClientFormW9Info$ } from "./memberclientformw9info";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum BulkCollaboratorItemCreateCollaboratorStatus {
     Active = "Active",

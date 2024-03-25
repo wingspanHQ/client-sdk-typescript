@@ -3,7 +3,7 @@
  */
 
 import { FeeHandlingConfig, FeeHandlingConfig$ } from "./feehandlingconfig";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientInvoiceUpdateRequestStatus {
     Draft = "Draft",

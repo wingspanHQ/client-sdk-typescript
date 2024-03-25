@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class CustomFieldManagement extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class CustomFieldManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCustomField",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCustomField" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -153,9 +157,13 @@ export class CustomFieldManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteCustomField",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteCustomField" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -232,9 +240,13 @@ export class CustomFieldManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCustomField",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCustomField" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -298,9 +310,13 @@ export class CustomFieldManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCustomFields",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCustomFields" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -379,9 +395,13 @@ export class CustomFieldManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCustomField",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCustomField" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

@@ -3,7 +3,7 @@
  */
 
 import { InvoiceRefundEvents, InvoiceRefundEvents$ } from "./invoicerefundevents";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceRefundDestinationDestinationType {
     Account = "Account",

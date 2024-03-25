@@ -7,7 +7,7 @@ import {
     FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$,
 } from "./fortytwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07";
 import { PayrollReportInvoice, PayrollReportInvoice$ } from "./payrollreportinvoice";
-import { z } from "zod";
+import * as z from "zod";
 
 export type PayrollReportResponse = {
     invoices: Array<PayrollReportInvoice>;

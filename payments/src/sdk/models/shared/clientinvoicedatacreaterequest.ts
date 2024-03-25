@@ -7,7 +7,7 @@ import {
     InvoiceLineItemsCreateRequest,
     InvoiceLineItemsCreateRequest$,
 } from "./invoicelineitemscreaterequest";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientInvoiceDataCreateRequestCurrency {
     Usd = "USD",

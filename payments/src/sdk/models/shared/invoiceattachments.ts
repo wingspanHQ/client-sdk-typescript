@@ -3,7 +3,7 @@
  */
 
 import { InvoiceAttachmentFile, InvoiceAttachmentFile$ } from "./invoiceattachmentfile";
-import { z } from "zod";
+import * as z from "zod";
 
 export type InvoiceAttachments = {
     customAttachmentIds?: Array<string> | null | undefined;

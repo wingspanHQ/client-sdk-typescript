@@ -3,7 +3,7 @@
  */
 
 import { RedactedMember, RedactedMember$ } from "./redactedmember";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TaxFormRedactedEventData = {};
 

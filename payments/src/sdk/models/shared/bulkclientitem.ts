@@ -12,7 +12,7 @@ import {
 } from "./fourthousandandninetyonec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac";
 import { MemberData, MemberData$ } from "./memberdata";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientStatus {
     Active = "Active",

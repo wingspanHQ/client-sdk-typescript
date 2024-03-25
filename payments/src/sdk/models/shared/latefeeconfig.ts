@@ -3,7 +3,7 @@
  */
 
 import { Frequency, Frequency$ } from "./frequency";
-import { z } from "zod";
+import * as z from "zod";
 
 export type LateFeeConfig = {
     frequency: Frequency;

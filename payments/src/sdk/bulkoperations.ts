@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class BulkOperations extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -159,9 +163,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createPayableBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createPayableBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -237,9 +245,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createClientBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createClientBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -322,9 +334,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createClientBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createClientBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -400,9 +416,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createCollaboratorBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createCollaboratorBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -478,9 +498,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createPayableBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createPayableBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -566,9 +590,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createSpecificCollaboratorBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createSpecificCollaboratorBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -653,9 +681,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createSpecificInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createSpecificInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -737,9 +769,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteCollaboratorBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteCollaboratorBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -821,9 +857,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deletePayableBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deletePayableBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -905,9 +945,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -989,9 +1033,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayableBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayableBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1073,9 +1121,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getClientBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getClientBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1161,9 +1213,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getClientBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getClientBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1245,9 +1301,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getCollaboratorBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getCollaboratorBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1329,9 +1389,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayableBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayableBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1417,9 +1481,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getSpecificPayableBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getSpecificPayableBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1506,9 +1574,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getSpecificCollaboratorBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getSpecificCollaboratorBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1596,9 +1668,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getSpecificInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getSpecificInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1662,9 +1738,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listInvoiceBatches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listInvoiceBatches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1745,9 +1825,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listPayableBatchItems",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listPayableBatchItems" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1811,9 +1895,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listClientBatches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listClientBatches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1894,9 +1982,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listClientBatchItems",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listClientBatchItems" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1962,9 +2054,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listCollaboratorBatches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listCollaboratorBatches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2027,9 +2123,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listPayableBatches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listPayableBatches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2111,9 +2211,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listSpecificCollaboratorBatchItems",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listSpecificCollaboratorBatchItems" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2197,9 +2301,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listSpecificInvoiceBatches",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listSpecificInvoiceBatches" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2282,9 +2390,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2367,9 +2479,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateClientBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateClientBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2456,9 +2572,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateClientBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateClientBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2541,9 +2661,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateCollaboratorBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateCollaboratorBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2626,9 +2750,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePayableBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePayableBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2716,9 +2844,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateSpecificPayableBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateSpecificPayableBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2808,9 +2940,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateSpecificCollaboratorBatchItem",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateSpecificCollaboratorBatchItem" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2899,9 +3035,13 @@ export class BulkOperations extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateSpecificInvoiceBatch",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateSpecificInvoiceBatch" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

@@ -6,7 +6,7 @@ import {
     Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11,
     Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$,
 } from "./sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11";
-import { z } from "zod";
+import * as z from "zod";
 
 export type InvoiceIntegrations = {
     quickbooks?:

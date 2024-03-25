@@ -8,7 +8,7 @@ import {
 } from "./clientinvoicedatacreaterequest";
 import { Frequency, Frequency$ } from "./frequency";
 import { ScheduleDate, ScheduleDate$ } from "./scheduledate";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum ClientInvoiceTemplateCreateRequestStatus {
     Active = "Active",

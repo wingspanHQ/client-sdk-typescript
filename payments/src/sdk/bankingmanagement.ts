@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class BankingManagement extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -80,9 +80,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createDebitCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createDebitCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -165,9 +169,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteDebitCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteDebitCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -246,9 +254,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "downloadBankStatementAsPDF",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "downloadBankStatementAsPDF" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -321,9 +333,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getBankStatement",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getBankStatement" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -405,9 +421,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getApplicationLink",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getApplicationLink" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -490,9 +510,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getDebitCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getDebitCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -574,9 +598,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getBankingInstitution",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getBankingInstitution" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -653,9 +681,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getPayoutSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getPayoutSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -737,9 +769,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listDebitCards",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listDebitCards" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -803,9 +839,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listBankStatements",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listBankStatements" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -882,9 +922,13 @@ export class BankingManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updatePayoutSetting",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updatePayoutSetting" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

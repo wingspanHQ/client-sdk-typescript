@@ -4,7 +4,7 @@
 
 import { TaxFormSubmissionData, TaxFormSubmissionData$ } from "./taxformsubmissiondata";
 import { TaxFormSubmissionEvents, TaxFormSubmissionEvents$ } from "./taxformsubmissionevents";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum CorrectionType {
     None = "None",

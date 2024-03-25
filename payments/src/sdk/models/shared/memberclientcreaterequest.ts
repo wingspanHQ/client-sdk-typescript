@@ -7,7 +7,7 @@ import {
     D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$,
 } from "./d750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0";
 import { MemberData, MemberData$ } from "./memberdata";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum MemberClientCreateRequestStatus {
     Active = "Active",

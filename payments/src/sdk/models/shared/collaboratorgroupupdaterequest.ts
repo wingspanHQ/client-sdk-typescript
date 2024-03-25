@@ -6,7 +6,7 @@ import {
     CollaboratorGroupRequirement,
     CollaboratorGroupRequirement$,
 } from "./collaboratorgrouprequirement";
-import { z } from "zod";
+import * as z from "zod";
 
 export type CollaboratorGroupUpdateRequest = {
     collaboratorSettings?: Record<string, string> | null | undefined;

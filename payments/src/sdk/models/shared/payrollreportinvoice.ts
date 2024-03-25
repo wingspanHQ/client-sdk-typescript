@@ -8,7 +8,7 @@ import {
 } from "./fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c";
 import { PayrollReportLineItem, PayrollReportLineItem$ } from "./payrollreportlineitem";
 import { RedactedMember, RedactedMember$ } from "./redactedmember";
-import { z } from "zod";
+import * as z from "zod";
 
 export type PayrollReportInvoiceLabels = {};
 

@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class WingspanWallet extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createStoredWingspanWalletCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createStoredWingspanWalletCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +158,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteStoredWingspanWalletCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteStoredWingspanWalletCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -233,9 +241,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getStoredWingspanWalletCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getStoredWingspanWalletCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -301,9 +313,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listStoredWingspanWalletCards",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listStoredWingspanWalletCards" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -380,9 +396,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "requestCardAuthentication",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "requestCardAuthentication" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -461,9 +481,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateStoredWingspanWalletCard",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateStoredWingspanWalletCard" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -541,9 +565,13 @@ export class WingspanWallet extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "validateReceiveToken",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "validateReceiveToken" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

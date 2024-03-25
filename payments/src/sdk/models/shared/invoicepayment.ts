@@ -10,7 +10,7 @@ import {
     Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9,
     Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$,
 } from "./fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum SourceType {
     Account = "Account",

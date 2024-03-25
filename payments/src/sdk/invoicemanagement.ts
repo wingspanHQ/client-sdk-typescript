@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class InvoiceManagement extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -153,9 +157,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createClientInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createClientInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -231,9 +239,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createGeneratedInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createGeneratedInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -310,9 +322,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "createInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "createInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -389,9 +405,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -468,9 +488,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "deleteInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "deleteInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -553,9 +577,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "executeClientInvoicePayment",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "executeClientInvoicePayment" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -637,9 +665,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "generateSpecificInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "generateSpecificInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -715,9 +747,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "generateTestInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "generateTestInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -794,9 +830,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -875,9 +915,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getClientInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getClientInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -959,9 +1003,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getInvoiceFees",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getInvoiceFees" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1038,9 +1086,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getGeneratedInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getGeneratedInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1104,9 +1156,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getMemberInvoices",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getMemberInvoices" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1182,9 +1238,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1248,9 +1308,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listGeneratedInvoices",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listGeneratedInvoices" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1315,9 +1379,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listClientInvoiceTemplates",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listClientInvoiceTemplates" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1382,9 +1450,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "listInvoiceTemplates",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "listInvoiceTemplates" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1466,9 +1538,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "refundDepositedInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "refundDepositedInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1548,9 +1624,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "sendInvoiceEmail",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "sendInvoiceEmail" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1628,9 +1708,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1712,9 +1796,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateClientInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateClientInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1794,9 +1882,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateGeneratedInvoice",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateGeneratedInvoice" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1876,9 +1968,13 @@ export class InvoiceManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "updateInvoiceTemplate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "updateInvoiceTemplate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

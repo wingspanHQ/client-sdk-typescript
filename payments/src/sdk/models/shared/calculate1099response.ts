@@ -3,7 +3,7 @@
  */
 
 import { MemberClient, MemberClient$ } from "./memberclient";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Calculate1099Response = {
     memberClient: MemberClient;

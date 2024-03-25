@@ -6,7 +6,7 @@ import { Frequency, Frequency$ } from "./frequency";
 import { Invoice, Invoice$ } from "./invoice";
 import { ScheduleDate, ScheduleDate$ } from "./scheduledate";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceTemplateStatus {
     Active = "Active",

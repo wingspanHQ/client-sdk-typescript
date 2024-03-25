@@ -7,8 +7,8 @@ import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class ServiceSettings extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -60,9 +60,13 @@ export class ServiceSettings extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "getServiceStatus",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "getServiceStatus" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
