@@ -3,18 +3,18 @@ id: 9dc5c2ac-9a6c-42e2-aa68-24b245224cec
 management:
   docChecksum: 0de556d1c2dbd2ed989cc3cfa530242c
   docVersion: 1.0.0
-  speakeasyVersion: 1.209.3
-  generationVersion: 2.281.2
-  releaseVersion: 2.1.0
-  configChecksum: a1e1cba421ac463b5f33cf5db9d6f88c
+  speakeasyVersion: 1.221.0
+  generationVersion: 2.287.0
+  releaseVersion: 2.1.1
+  configChecksum: 673b3437c19427fdad9f926b10c36f37
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: users
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/users
   published: true
 features:
   typescript:
-    core: 3.6.1
-    globalSecurity: 2.82.6
+    core: 3.6.3
+    globalSecurity: 2.82.8
     globalServerURLs: 2.82.4
     responseFormat: 0.2.2
     unions: 2.85.3
