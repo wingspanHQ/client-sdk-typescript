@@ -21,20 +21,13 @@ Define a new custom field for payments using additional data provided.
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { ResourceType, Type } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.customFieldManagement.create({
-    key: "<key>",
-    name: "<value>",
-    required: false,
-    resourceType: ResourceType.Collaborator,
-    type: Type.Boolean,
-  });
+  const result = await payments.customFieldManagement.create();
 
   // Handle the result
   console.log(result)
@@ -50,11 +43,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.AdditionalData](../../sdk/models/shared/additionaldata.md)                                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.CreateCustomFieldResponse](../../sdk/models/operations/createcustomfieldresponse.md)>**
+**Promise\<[operations.CreateCustomFieldResponse](../../sdk/models/operations/createcustomfieldresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -70,12 +64,12 @@ Permanently delete a custom field from the system based on its unique identifier
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.customFieldManagement.delete({
+async function run() {
+  const result = await payments.customFieldManagement.delete({
     id: "<id>",
   });
 
@@ -93,11 +87,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.DeleteCustomFieldRequest](../../sdk/models/operations/deletecustomfieldrequest.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.DeleteCustomFieldResponse](../../sdk/models/operations/deletecustomfieldresponse.md)>**
+**Promise\<[operations.DeleteCustomFieldResponse](../../sdk/models/operations/deletecustomfieldresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -113,12 +108,12 @@ Retrieve detailed information for a custom field based on its unique identifier.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.customFieldManagement.get({
+async function run() {
+  const result = await payments.customFieldManagement.get({
     id: "<id>",
   });
 
@@ -136,11 +131,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetCustomFieldRequest](../../sdk/models/operations/getcustomfieldrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetCustomFieldResponse](../../sdk/models/operations/getcustomfieldresponse.md)>**
+**Promise\<[operations.GetCustomFieldResponse](../../sdk/models/operations/getcustomfieldresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -156,12 +152,12 @@ Obtain a list of all user-defined custom fields associated with payments.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.customFieldManagement.list();
+async function run() {
+  const result = await payments.customFieldManagement.list();
 
   // Handle the result
   console.log(result)
@@ -176,11 +172,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListCustomFieldsResponse](../../sdk/models/operations/listcustomfieldsresponse.md)>**
+**Promise\<[operations.ListCustomFieldsResponse](../../sdk/models/operations/listcustomfieldsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -196,13 +193,12 @@ Update specific attributes or data for an existing custom field.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.customFieldManagement.update({
-    additionalDataUpdateRequest: {},
+async function run() {
+  const result = await payments.customFieldManagement.update({
     id: "<id>",
   });
 
@@ -220,11 +216,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateCustomFieldRequest](../../sdk/models/operations/updatecustomfieldrequest.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.UpdateCustomFieldResponse](../../sdk/models/operations/updatecustomfieldresponse.md)>**
+**Promise\<[operations.UpdateCustomFieldResponse](../../sdk/models/operations/updatecustomfieldresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

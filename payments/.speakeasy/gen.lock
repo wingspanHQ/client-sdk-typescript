@@ -3,24 +3,32 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: internal
-  generationVersion: 2.272.1
-  releaseVersion: 2.1.0
-  configChecksum: 8703ca05e614426477a63c92af3a5beb
+  speakeasyVersion: 1.352.1
+  generationVersion: 2.385.1
+  releaseVersion: 2.2.0
+  configChecksum: a5c172cc751ad9e586651662fe655e2d
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
   published: true
 features:
   typescript:
-    core: 3.6.0
+    additionalDependencies: 0.1.0
+    core: 3.11.13
+    defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
-    globalSecurity: 2.82.3
-    globalServerURLs: 2.82.3
-    nameOverrides: 2.81.1
-    responseFormat: 0.1.0
+    envVarSecurityUsage: 0.1.1
+    globalSecurity: 2.82.9
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.4
+    nameOverrides: 2.81.2
+    nullables: 0.1.0
+    responseFormat: 0.2.3
+    retries: 2.83.0
+    sdkHooks: 0.1.0
     serverIDs: 2.81.2
-    unions: 2.85.2
+    unions: 2.85.6
 generatedFiles:
   - src/sdk/servicesettings.ts
   - src/sdk/wingspanwallet.ts
@@ -38,26 +46,32 @@ generatedFiles:
   - src/sdk/payrollsettings.ts
   - src/sdk/reportingandanalytics.ts
   - src/sdk/sdk.ts
-  - .eslintrc.js
+  - .eslintrc.cjs
   - .npmignore
   - RUNTIMES.md
+  - jsr.json
   - package.json
   - src/index.ts
   - src/lib/base64.ts
   - src/lib/config.ts
+  - src/lib/dlv.ts
   - src/lib/encodings.ts
-  - src/lib/event-streams.ts
   - src/lib/http.ts
+  - src/lib/is-plain-object.ts
+  - src/lib/matchers.ts
+  - src/lib/primitives.ts
   - src/lib/retries.ts
   - src/lib/schemas.ts
   - src/lib/sdks.ts
   - src/lib/security.ts
   - src/lib/url.ts
   - src/sdk/index.ts
+  - src/sdk/models/errors/httpclienterrors.ts
   - src/sdk/models/errors/sdkerror.ts
   - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
-  - src/sdk/types/decimal.ts
+  - src/sdk/types/enums.ts
+  - src/sdk/types/fp.ts
   - src/sdk/types/index.ts
   - src/sdk/types/operations.ts
   - src/sdk/types/rfcdate.ts
@@ -1202,6 +1216,7 @@ generatedFiles:
   - docs/sdk/models/shared/payableagingreportresponse.md
   - docs/sdk/models/shared/security.md
   - docs/sdks/payments/README.md
+  - docs/lib/utils/retryconfig.md
   - docs/sdks/servicesettings/README.md
   - docs/sdks/wingspanwallet/README.md
   - docs/sdks/deprecated/README.md
@@ -1222,3 +1237,4 @@ generatedFiles:
   - src/hooks/hooks.ts
   - src/hooks/types.ts
   - src/hooks/index.ts
+  - CONTRIBUTING.md

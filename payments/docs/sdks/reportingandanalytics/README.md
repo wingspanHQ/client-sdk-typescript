@@ -22,12 +22,12 @@ Gathers and presents a concise summary showcasing the payable amounts due to eac
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.reportingAndAnalytics.get();
+async function run() {
+  const result = await payments.reportingAndAnalytics.get();
 
   // Handle the result
   console.log(result)
@@ -42,11 +42,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetSummarizedReportResponse](../../sdk/models/operations/getsummarizedreportresponse.md)>**
+**Promise\<[operations.GetSummarizedReportResponse](../../sdk/models/operations/getsummarizedreportresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -62,12 +63,12 @@ Offers a deep dive into the payables connected to a specific payroll run, facili
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.reportingAndAnalytics.getPayrollReport({
+async function run() {
+  const result = await payments.reportingAndAnalytics.getPayrollReport({
     payrollId: "<value>",
   });
 
@@ -85,11 +86,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetPayrollDetailedReportRequest](../../sdk/models/operations/getpayrolldetailedreportrequest.md)                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetPayrollDetailedReportResponse](../../sdk/models/operations/getpayrolldetailedreportresponse.md)>**
+**Promise\<[operations.GetPayrollDetailedReportResponse](../../sdk/models/operations/getpayrolldetailedreportresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -105,12 +107,12 @@ Fetches comprehensive data on all collaborators, including their activities and 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.reportingAndAnalytics.listDetailedCollaborator();
+async function run() {
+  const result = await payments.reportingAndAnalytics.listDetailedCollaborator();
 
   // Handle the result
   console.log(result)
@@ -125,11 +127,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListDetailedInformationCollaboratorsResponse](../../sdk/models/operations/listdetailedinformationcollaboratorsresponse.md)>**
+**Promise\<[operations.ListDetailedInformationCollaboratorsResponse](../../sdk/models/operations/listdetailedinformationcollaboratorsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -145,12 +148,12 @@ Retrieve a comprehensive report detailing line items that have been open for a s
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.reportingAndAnalytics.listLineItem();
+async function run() {
+  const result = await payments.reportingAndAnalytics.listLineItem();
 
   // Handle the result
   console.log(result)
@@ -165,11 +168,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListAgingReportLineItemsResponse](../../sdk/models/operations/listagingreportlineitemsresponse.md)>**
+**Promise\<[operations.ListAgingReportLineItemsResponse](../../sdk/models/operations/listagingreportlineitemsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -185,12 +189,12 @@ Access a detailed report that showcases the list of payables categorized by age.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.reportingAndAnalytics.listPayable();
+async function run() {
+  const result = await payments.reportingAndAnalytics.listPayable();
 
   // Handle the result
   console.log(result)
@@ -205,11 +209,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListAgingReportPayablesResponse](../../sdk/models/operations/listagingreportpayablesresponse.md)>**
+**Promise\<[operations.ListAgingReportPayablesResponse](../../sdk/models/operations/listagingreportpayablesresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

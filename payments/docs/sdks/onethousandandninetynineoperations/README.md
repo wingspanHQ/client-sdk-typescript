@@ -39,15 +39,12 @@ Analyzes and calculates the appropriate 1099 amounts for collaborators based on 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.calculate({
-    memberClientId: "<value>",
-    year: 6611.96,
-  });
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.calculate();
 
   // Handle the result
   console.log(result)
@@ -63,11 +60,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.Calculate1099Request](../../sdk/models/shared/calculate1099request.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.Calculate1099AmountsResponse](../../sdk/models/operations/calculate1099amountsresponse.md)>**
+**Promise\<[operations.Calculate1099AmountsResponse](../../sdk/models/operations/calculate1099amountsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -83,12 +81,12 @@ Re-enables recipient sync for a tax form. Reverts to last provided recipient dat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.create({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.create({
     taxFormId: "<value>",
   });
 
@@ -106,11 +104,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateRecipientSyncRequest](../../sdk/models/operations/createrecipientsyncrequest.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.CreateRecipientSyncResponse](../../sdk/models/operations/createrecipientsyncresponse.md)>**
+**Promise\<[operations.CreateRecipientSyncResponse](../../sdk/models/operations/createrecipientsyncresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -126,16 +125,12 @@ Allows users to create a new batch for facilitating bulk 1099 calculations by pr
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.createBatchCalculation({
-    labels: {
-      "key": "<value>",
-    },
-  });
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.createBatchCalculation();
 
   // Handle the result
   console.log(result)
@@ -151,11 +146,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md)                                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.CreateCalculation1099BatchResponse](../../sdk/models/operations/createcalculation1099batchresponse.md)>**
+**Promise\<[operations.CreateCalculation1099BatchResponse](../../sdk/models/operations/createcalculation1099batchresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -171,19 +167,12 @@ Facilitates the incorporation of a new item into the specified calculation 1099 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.createItem({
-    bulkCalculation1099ItemCreate: {
-      clientId: "<value>",
-      labels: {
-        "key": "<value>",
-      },
-      year: 4617.27,
-    },
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.createItem({
     batchId: "<value>",
   });
 
@@ -201,11 +190,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateCalculation1099BatchItemRequest](../../sdk/models/operations/createcalculation1099batchitemrequest.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.CreateCalculation1099BatchItemResponse](../../sdk/models/operations/createcalculation1099batchitemresponse.md)>**
+**Promise\<[operations.CreateCalculation1099BatchItemResponse](../../sdk/models/operations/createcalculation1099batchitemresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -221,12 +211,12 @@ Allows recipient of a tax form to verify their identity in order to access a non
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.createProof({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.createProof({
     taxFormId: "<value>",
   });
 
@@ -244,11 +234,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateRecipientProofRequest](../../sdk/models/operations/createrecipientproofrequest.md)                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.CreateRecipientProofResponse](../../sdk/models/operations/createrecipientproofresponse.md)>**
+**Promise\<[operations.CreateRecipientProofResponse](../../sdk/models/operations/createrecipientproofresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -264,16 +255,12 @@ Create a tax form for a new recipient
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.createTaxForm({
-    clientId: "<value>",
-    data: {},
-    memberId: "<value>",
-  });
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.createTaxForm();
 
   // Handle the result
   console.log(result)
@@ -289,11 +276,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.TaxFormCreateRequest](../../sdk/models/shared/taxformcreaterequest.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.Create1099TaxFormResponse](../../sdk/models/operations/create1099taxformresponse.md)>**
+**Promise\<[operations.Create1099TaxFormResponse](../../sdk/models/operations/create1099taxformresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -309,12 +297,12 @@ Fetches the specified tax form if it exists
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.get({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.get({
     taxFormId: "<value>",
   });
 
@@ -332,11 +320,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetTaxFormRequest](../../sdk/models/operations/gettaxformrequest.md)                                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetTaxFormResponse](../../sdk/models/operations/gettaxformresponse.md)>**
+**Promise\<[operations.GetTaxFormResponse](../../sdk/models/operations/gettaxformresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -352,12 +341,12 @@ Fetches detailed information about a specific batch meant for bulk 1099 calculat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.getBatchCalculation({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.getBatchCalculation({
     batchId: "<value>",
   });
 
@@ -375,11 +364,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetCalculation1099BatchRequest](../../sdk/models/operations/getcalculation1099batchrequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetCalculation1099BatchResponse](../../sdk/models/operations/getcalculation1099batchresponse.md)>**
+**Promise\<[operations.GetCalculation1099BatchResponse](../../sdk/models/operations/getcalculation1099batchresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -395,12 +385,12 @@ Facilitates downloading of the specified 1099 form for a given collaborator, cor
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.getForm1099({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.getForm1099({
     id: "<id>",
     index: "<value>",
     year: "<value>",
@@ -420,11 +410,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetForm1099PDFRequest](../../sdk/models/operations/getform1099pdfrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetForm1099PDFResponse](../../sdk/models/operations/getform1099pdfresponse.md)>**
+**Promise\<[operations.GetForm1099PDFResponse](../../sdk/models/operations/getform1099pdfresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -440,12 +431,12 @@ Enables the downloading of the W9 form for the specified collaborator, ensuring 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.getFormW9({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.getFormW9({
     id: "<id>",
   });
 
@@ -463,11 +454,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetFormW9PDFRequest](../../sdk/models/operations/getformw9pdfrequest.md)                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetFormW9PDFResponse](../../sdk/models/operations/getformw9pdfresponse.md)>**
+**Promise\<[operations.GetFormW9PDFResponse](../../sdk/models/operations/getformw9pdfresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -483,12 +475,12 @@ Gain insights into a particular item's attributes and data stored within a calcu
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.getItem({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.getItem({
     batchId: "<value>",
     batchItemId: "<value>",
   });
@@ -507,11 +499,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetCalculation1099BatchItemRequest](../../sdk/models/operations/getcalculation1099batchitemrequest.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.GetCalculation1099BatchItemResponse](../../sdk/models/operations/getcalculation1099batchitemresponse.md)>**
+**Promise\<[operations.GetCalculation1099BatchItemResponse](../../sdk/models/operations/getcalculation1099batchitemresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -527,12 +520,12 @@ Fetches a comprehensive list of all batches created for bulk 1099 calculations.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.listBatchCalculation();
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.listBatchCalculation();
 
   // Handle the result
   console.log(result)
@@ -547,11 +540,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListCalculation1099BatchesResponse](../../sdk/models/operations/listcalculation1099batchesresponse.md)>**
+**Promise\<[operations.ListCalculation1099BatchesResponse](../../sdk/models/operations/listcalculation1099batchesresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -567,12 +561,12 @@ Access a comprehensive list of items contained within a specified calculation 10
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.listItem({
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.listItem({
     batchId: "<value>",
   });
 
@@ -590,11 +584,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListCalculation1099BatchItemsRequest](../../sdk/models/operations/listcalculation1099batchitemsrequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.ListCalculation1099BatchItemsResponse](../../sdk/models/operations/listcalculation1099batchitemsresponse.md)>**
+**Promise\<[operations.ListCalculation1099BatchItemsResponse](../../sdk/models/operations/listcalculation1099batchitemsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -610,12 +605,12 @@ Fetch tax forms for a payee or a payer and specified year.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.listTaxForm();
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.listTaxForm();
 
   // Handle the result
   console.log(result)
@@ -630,11 +625,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.List1099TaxFormsResponse](../../sdk/models/operations/list1099taxformsresponse.md)>**
+**Promise\<[operations.List1099TaxFormsResponse](../../sdk/models/operations/list1099taxformsresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -650,16 +646,12 @@ Mark a specific 1099 submission for a collaborator as undelivered, typically due
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.mark({
-    memberId: "<value>",
-    submissionIndex: 2694.09,
-    year: 735.52,
-  });
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.mark();
 
   // Handle the result
   console.log(result)
@@ -675,11 +667,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.Mark1099AsUndeliveredRequest](../../sdk/models/shared/mark1099asundeliveredrequest.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.MarkUndelivered1099FormResponse](../../sdk/models/operations/markundelivered1099formresponse.md)>**
+**Promise\<[operations.MarkUndelivered1099FormResponse](../../sdk/models/operations/markundelivered1099formresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -695,21 +688,12 @@ Initiates a process to resend the 1099 form to a collaborator in the event of a 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.remail({
-    address: {
-      addressLine1: "71613 Rene Curve",
-      city: "West Edd",
-      postalCode: "30290",
-      state: "Maine",
-    },
-    memberId: "<value>",
-    year: 1008.29,
-  });
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.remail();
 
   // Handle the result
   console.log(result)
@@ -725,11 +709,12 @@ run();
 | `request`                                                                                                                                                                      | [shared.Remail1099Request](../../sdk/models/shared/remail1099request.md)                                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.Remail1099FormResponse](../../sdk/models/operations/remail1099formresponse.md)>**
+**Promise\<[operations.Remail1099FormResponse](../../sdk/models/operations/remail1099formresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -745,12 +730,12 @@ Requests a new 1099 invite email to be sent to the recipient. Only sends if the 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.request();
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.request();
 
   // Handle the result
   console.log(result)
@@ -765,11 +750,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.Request1099InviteEmailResponse](../../sdk/models/operations/request1099inviteemailresponse.md)>**
+**Promise\<[operations.Request1099InviteEmailResponse](../../sdk/models/operations/request1099inviteemailresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -785,12 +771,12 @@ Asynchronously verifies the TIN on file with the IRS. May return a pending statu
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.submit();
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.submit();
 
   // Handle the result
   console.log(result)
@@ -805,11 +791,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.SubmitPayeeTINResponse](../../sdk/models/operations/submitpayeetinresponse.md)>**
+**Promise\<[operations.SubmitPayeeTINResponse](../../sdk/models/operations/submitpayeetinresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -825,15 +812,12 @@ Updates a tax form with provided information.
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.update({
-    taxFormUpdateRequest: {
-      data: {},
-    },
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.update({
     taxFormId: "<value>",
   });
 
@@ -851,11 +835,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateTaxFormRequest](../../sdk/models/operations/updatetaxformrequest.md)                                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.UpdateTaxFormResponse](../../sdk/models/operations/updatetaxformresponse.md)>**
+**Promise\<[operations.UpdateTaxFormResponse](../../sdk/models/operations/updatetaxformresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -871,17 +856,12 @@ Provides the ability to update or alter attributes of a given batch for bulk 109
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.updateBatchCalculation({
-    bulkBatchUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.updateBatchCalculation({
     batchId: "<value>",
   });
 
@@ -899,11 +879,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateCalculation1099BatchRequest](../../sdk/models/operations/updatecalculation1099batchrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.UpdateCalculation1099BatchResponse](../../sdk/models/operations/updatecalculation1099batchresponse.md)>**
+**Promise\<[operations.UpdateCalculation1099BatchResponse](../../sdk/models/operations/updatecalculation1099batchresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -919,17 +900,12 @@ Make alterations or updates to a specific item within the calculation 1099 batch
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.updateItem({
-    bulkCalculation1099ItemUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.updateItem({
     batchId: "<value>",
     batchItemId: "<value>",
   });
@@ -948,11 +924,12 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateCalculation1099BatchItemRequest](../../sdk/models/operations/updatecalculation1099batchitemrequest.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.UpdateCalculation1099BatchItemResponse](../../sdk/models/operations/updatecalculation1099batchitemresponse.md)>**
+**Promise\<[operations.UpdateCalculation1099BatchItemResponse](../../sdk/models/operations/updatecalculation1099batchitemresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -968,12 +945,12 @@ Updates 1099 tax forms for the current year with W9 information wherever W9 shar
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: process.env.BEARER_AUTH,
+});
 
-  const result = await sdk.oneThousandAndNinetyNineOperations.updateW9();
+async function run() {
+  const result = await payments.oneThousandAndNinetyNineOperations.updateW9();
 
   // Handle the result
   console.log(result)
@@ -988,11 +965,12 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 
 ### Response
 
-**Promise<[operations.UpdatePayeeW9InformationResponse](../../sdk/models/operations/updatepayeew9informationresponse.md)>**
+**Promise\<[operations.UpdatePayeeW9InformationResponse](../../sdk/models/operations/updatepayeew9informationresponse.md)\>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

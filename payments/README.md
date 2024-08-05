@@ -15,10 +15,25 @@
 npm add @wingspan/payments
 ```
 
+### PNPM
+
+```bash
+pnpm add @wingspan/payments
+```
+
+### Bun
+
+```bash
+bun add @wingspan/payments
+```
+
 ### Yarn
 
 ```bash
-yarn add @wingspan/payments
+yarn add @wingspan/payments zod
+
+# Note that Yarn does not install peer dependencies automatically. You will need
+# to install zod as shown above.
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -30,12 +45,12 @@ yarn add @wingspan/payments
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-    const sdk = new Payments({
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
+const payments = new Payments({
+    bearerAuth: process.env.BEARER_AUTH,
+});
 
-    const result = await sdk.serviceSettings.get();
+async function run() {
+    const result = await payments.serviceSettings.get();
 
     // Handle the result
     console.log(result);
@@ -283,19 +298,19 @@ Validation errors can also occur when either method arguments or data returned f
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import * as errors from "@wingspan/payments/sdk/models/errors";
+import { SDKValidationError } from "@wingspan/payments/sdk/models/errors";
+
+const payments = new Payments({
+    bearerAuth: process.env.BEARER_AUTH,
+});
 
 async function run() {
-    const sdk = new Payments({
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
-
     let result;
     try {
-        result = await sdk.serviceSettings.get();
+        result = await payments.serviceSettings.get();
     } catch (err) {
         switch (true) {
-            case err instanceof errors.SDKValidationError: {
+            case err instanceof SDKValidationError: {
                 // Validation errors can be pretty-printed
                 console.error(err.pretty());
                 // Raw value may also be inspected
@@ -334,13 +349,13 @@ You can override the default server globally by passing a server name to the `se
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-    const sdk = new Payments({
-        server: "staging",
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
+const payments = new Payments({
+    server: "staging",
+    bearerAuth: process.env.BEARER_AUTH,
+});
 
-    const result = await sdk.serviceSettings.get();
+async function run() {
+    const result = await payments.serviceSettings.get();
 
     // Handle the result
     console.log(result);
@@ -358,13 +373,13 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-    const sdk = new Payments({
-        serverURL: "https://api.wingspan.app",
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
+const payments = new Payments({
+    serverURL: "https://api.wingspan.app",
+    bearerAuth: process.env.BEARER_AUTH,
+});
 
-    const result = await sdk.serviceSettings.get();
+async function run() {
+    const result = await payments.serviceSettings.get();
 
     // Handle the result
     console.log(result);
@@ -407,7 +422,7 @@ const httpClient = new HTTPClient({
 
 httpClient.addHook("beforeRequest", (request) => {
   const nextRequest = new Request(request, {
-    signal: request.signal || AbortSignal.timeout(5000);
+    signal: request.signal || AbortSignal.timeout(5000)
   });
 
   nextRequest.headers.set("x-custom-header", "custom value");
@@ -441,12 +456,12 @@ To authenticate with the API the `bearerAuth` parameter must be set when initial
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-    const sdk = new Payments({
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
+const payments = new Payments({
+    bearerAuth: process.env.BEARER_AUTH,
+});
 
-    const result = await sdk.serviceSettings.get();
+async function run() {
+    const result = await payments.serviceSettings.get();
 
     // Handle the result
     console.log(result);
@@ -462,6 +477,71 @@ run();
 
 For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 <!-- End Requirements [requirements] -->
+
+<!-- Start Retries [retries] -->
+## Retries
+
+Some of the endpoints in this SDK support retries.  If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API.  However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
+```typescript
+import { Payments } from "@wingspan/payments";
+
+const payments = new Payments({
+    bearerAuth: process.env.BEARER_AUTH,
+});
+
+async function run() {
+    const result = await payments.serviceSettings.get({
+        retries: {
+            strategy: "backoff",
+            backoff: {
+                initialInterval: 1,
+                maxInterval: 50,
+                exponent: 1.1,
+                maxElapsedTime: 100,
+            },
+            retryConnectionErrors: false,
+        },
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
+```typescript
+import { Payments } from "@wingspan/payments";
+
+const payments = new Payments({
+    retryConfig: {
+        strategy: "backoff",
+        backoff: {
+            initialInterval: 1,
+            maxInterval: 50,
+            exponent: 1.1,
+            maxElapsedTime: 100,
+        },
+        retryConnectionErrors: false,
+    },
+    bearerAuth: process.env.BEARER_AUTH,
+});
+
+async function run() {
+    const result = await payments.serviceSettings.get();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
+<!-- End Retries [retries] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
