@@ -40,7 +40,7 @@ Analyzes and calculates the appropriate 1099 amounts for collaborators based on 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -82,7 +82,7 @@ Re-enables recipient sync for a tax form. Reverts to last provided recipient dat
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -126,7 +126,7 @@ Allows users to create a new batch for facilitating bulk 1099 calculations by pr
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -168,7 +168,7 @@ Facilitates the incorporation of a new item into the specified calculation 1099 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -212,7 +212,7 @@ Allows recipient of a tax form to verify their identity in order to access a non
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -256,7 +256,7 @@ Create a tax form for a new recipient
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -298,7 +298,7 @@ Fetches the specified tax form if it exists
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -342,7 +342,7 @@ Fetches detailed information about a specific batch meant for bulk 1099 calculat
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -386,7 +386,7 @@ Facilitates downloading of the specified 1099 form for a given collaborator, cor
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -432,7 +432,7 @@ Enables the downloading of the W9 form for the specified collaborator, ensuring 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -476,7 +476,7 @@ Gain insights into a particular item's attributes and data stored within a calcu
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -521,7 +521,7 @@ Fetches a comprehensive list of all batches created for bulk 1099 calculations.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -562,7 +562,7 @@ Access a comprehensive list of items contained within a specified calculation 10
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -606,7 +606,7 @@ Fetch tax forms for a payee or a payer and specified year.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -647,7 +647,7 @@ Mark a specific 1099 submission for a collaborator as undelivered, typically due
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -689,7 +689,7 @@ Initiates a process to resend the 1099 form to a collaborator in the event of a 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -731,7 +731,7 @@ Requests a new 1099 invite email to be sent to the recipient. Only sends if the 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -772,7 +772,7 @@ Asynchronously verifies the TIN on file with the IRS. May return a pending statu
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -813,7 +813,7 @@ Updates a tax form with provided information.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -857,7 +857,7 @@ Provides the ability to update or alter attributes of a given batch for bulk 109
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -901,7 +901,7 @@ Make alterations or updates to a specific item within the calculation 1099 batch
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -946,7 +946,7 @@ Updates 1099 tax forms for the current year with W9 information wherever W9 shar
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {

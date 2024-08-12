@@ -19,7 +19,7 @@ Use this endpoint to determine the operational status of the payment service by 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {

@@ -20,7 +20,7 @@ Fetch the detailed payroll settings associated with the provided unique identifi
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -64,7 +64,7 @@ Update certain attributes or details of payroll settings associated with the pro
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {

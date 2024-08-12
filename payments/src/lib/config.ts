@@ -3,6 +3,7 @@
  */
 
 import { HTTPClient } from "./http.js";
+import { Logger } from "./logger.js";
 import { RetryConfig } from "./retries.js";
 import { Params, pathToFunc } from "./url.js";
 
@@ -39,6 +40,7 @@ export type SDKOptions = {
      */
     retryConfig?: RetryConfig;
     timeoutMs?: number;
+    debugLogger?: Logger;
 };
 
 export function serverURLFromOptions(options: SDKOptions): URL | null {
@@ -58,7 +60,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
     language: "typescript",
     openapiDocVersion: "1.0.0-oas3.1",
-    sdkVersion: "2.2.0",
-    genVersion: "2.385.1",
-    userAgent: "speakeasy-sdk/typescript 2.2.0 2.385.1 1.0.0-oas3.1 @wingspan/payments",
+    sdkVersion: "2.3.0",
+    genVersion: "2.393.4",
+    userAgent: "speakeasy-sdk/typescript 2.3.0 2.393.4 1.0.0-oas3.1 @wingspan/payments",
 } as const;

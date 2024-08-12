@@ -23,7 +23,7 @@ Define a new custom field for payments using additional data provided.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -65,7 +65,7 @@ Permanently delete a custom field from the system based on its unique identifier
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -109,7 +109,7 @@ Retrieve detailed information for a custom field based on its unique identifier.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -153,7 +153,7 @@ Obtain a list of all user-defined custom fields associated with payments.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -194,7 +194,7 @@ Update specific attributes or data for an existing custom field.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {

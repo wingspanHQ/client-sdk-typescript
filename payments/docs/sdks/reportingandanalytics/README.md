@@ -23,7 +23,7 @@ Gathers and presents a concise summary showcasing the payable amounts due to eac
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -64,7 +64,7 @@ Offers a deep dive into the payables connected to a specific payroll run, facili
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -108,7 +108,7 @@ Fetches comprehensive data on all collaborators, including their activities and 
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -149,7 +149,7 @@ Retrieve a comprehensive report detailing line items that have been open for a s
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -190,7 +190,7 @@ Access a detailed report that showcases the list of payables categorized by age.
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-  bearerAuth: process.env.BEARER_AUTH,
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {

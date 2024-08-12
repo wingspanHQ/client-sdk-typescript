@@ -3,10 +3,10 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: 1.352.1
-  generationVersion: 2.385.1
-  releaseVersion: 2.2.0
-  configChecksum: a5c172cc751ad9e586651662fe655e2d
+  speakeasyVersion: 1.361.1
+  generationVersion: 2.393.4
+  releaseVersion: 2.3.0
+  configChecksum: 0d7f2a2da2d35645468a0a5c5ba9a91b
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
@@ -14,11 +14,11 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.11.13
+    core: 3.13.1
     defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
     envVarSecurityUsage: 0.1.1
-    globalSecurity: 2.82.9
+    globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
@@ -28,8 +28,180 @@ features:
     retries: 2.83.0
     sdkHooks: 0.1.0
     serverIDs: 2.81.2
-    unions: 2.85.6
+    unions: 2.85.7
 generatedFiles:
+  - src/funcs/serviceSettingsGet.ts
+  - src/funcs/wingspanWalletCreate.ts
+  - src/funcs/wingspanWalletDelete.ts
+  - src/funcs/wingspanWalletGet.ts
+  - src/funcs/wingspanWalletList.ts
+  - src/funcs/wingspanWalletRequest.ts
+  - src/funcs/wingspanWalletUpdate.ts
+  - src/funcs/wingspanWalletValidate.ts
+  - src/funcs/deprecatedCreate.ts
+  - src/funcs/deprecatedDelete.ts
+  - src/funcs/deprecatedDeleteInstantPayout.ts
+  - src/funcs/deprecatedGet.ts
+  - src/funcs/deprecatedGetInstantPayout.ts
+  - src/funcs/deprecatedList.ts
+  - src/funcs/deprecatedUpdate.ts
+  - src/funcs/deprecatedUpdateInstantPayout.ts
+  - src/funcs/bankingManagementCreate.ts
+  - src/funcs/bankingManagementDelete.ts
+  - src/funcs/bankingManagementDownload.ts
+  - src/funcs/bankingManagementGet.ts
+  - src/funcs/bankingManagementGetApplicationLink.ts
+  - src/funcs/bankingManagementGetDebitCard.ts
+  - src/funcs/bankingManagementGetInstitution.ts
+  - src/funcs/bankingManagementGetPayoutSetting.ts
+  - src/funcs/bankingManagementList.ts
+  - src/funcs/bankingManagementListStatements.ts
+  - src/funcs/bankingManagementUpdate.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCalculate.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCreate.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCreateBatchCalculation.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCreateItem.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCreateProof.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsCreateTaxForm.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsGet.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsGetBatchCalculation.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsGetForm1099.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsGetFormW9.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsGetItem.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsListBatchCalculation.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsListItem.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsListTaxForm.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsMark.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsRemail.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsRequest.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsSubmit.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsUpdate.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsUpdateBatchCalculation.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsUpdateItem.ts
+  - src/funcs/oneThousandAndNinetyNineOperationsUpdateW9.ts
+  - src/funcs/bulkOperationsCreate.ts
+  - src/funcs/bulkOperationsCreateBatchItem.ts
+  - src/funcs/bulkOperationsCreateClient.ts
+  - src/funcs/bulkOperationsCreateClientItem.ts
+  - src/funcs/bulkOperationsCreateCollaborator.ts
+  - src/funcs/bulkOperationsCreatePayable.ts
+  - src/funcs/bulkOperationsCreateSpecificCollaboratorItem.ts
+  - src/funcs/bulkOperationsCreateSpecificInvoice.ts
+  - src/funcs/bulkOperationsDeleteCollaborator.ts
+  - src/funcs/bulkOperationsDeletePayable.ts
+  - src/funcs/bulkOperationsGet.ts
+  - src/funcs/bulkOperationsGetBatchItem.ts
+  - src/funcs/bulkOperationsGetClient.ts
+  - src/funcs/bulkOperationsGetClientItem.ts
+  - src/funcs/bulkOperationsGetCollaborator.ts
+  - src/funcs/bulkOperationsGetPayable.ts
+  - src/funcs/bulkOperationsGetSpecific.ts
+  - src/funcs/bulkOperationsGetSpecificCollaboratorItem.ts
+  - src/funcs/bulkOperationsGetSpecificInvoice.ts
+  - src/funcs/bulkOperationsList.ts
+  - src/funcs/bulkOperationsListBatchItem.ts
+  - src/funcs/bulkOperationsListClient.ts
+  - src/funcs/bulkOperationsListClientItem.ts
+  - src/funcs/bulkOperationsListCollaborator.ts
+  - src/funcs/bulkOperationsListPayable.ts
+  - src/funcs/bulkOperationsListSpecificCollaboratorItem.ts
+  - src/funcs/bulkOperationsListSpecificInvoice.ts
+  - src/funcs/bulkOperationsUpdate.ts
+  - src/funcs/bulkOperationsUpdateClient.ts
+  - src/funcs/bulkOperationsUpdateClientItem.ts
+  - src/funcs/bulkOperationsUpdateCollaborator.ts
+  - src/funcs/bulkOperationsUpdatePayable.ts
+  - src/funcs/bulkOperationsUpdateSpecific.ts
+  - src/funcs/bulkOperationsUpdateSpecificCollaboratorItem.ts
+  - src/funcs/bulkOperationsUpdateSpecificInvoice.ts
+  - src/funcs/clientManagementCreate.ts
+  - src/funcs/clientManagementDeleteAssociation.ts
+  - src/funcs/clientManagementDeleteClientDeduction.ts
+  - src/funcs/clientManagementEstablish.ts
+  - src/funcs/clientManagementGetAssociation.ts
+  - src/funcs/clientManagementGetClientDeduction.ts
+  - src/funcs/clientManagementList.ts
+  - src/funcs/clientManagementListAssociations.ts
+  - src/funcs/clientManagementListClientDeduction.ts
+  - src/funcs/clientManagementListSpecificClientDetail.ts
+  - src/funcs/clientManagementUpdateAssociation.ts
+  - src/funcs/clientManagementUpdateClientDeduction.ts
+  - src/funcs/invoiceManagementCreate.ts
+  - src/funcs/invoiceManagementCreateClient.ts
+  - src/funcs/invoiceManagementCreateGenerated.ts
+  - src/funcs/invoiceManagementCreateTemplate.ts
+  - src/funcs/invoiceManagementDelete.ts
+  - src/funcs/invoiceManagementDeleteTemplate.ts
+  - src/funcs/invoiceManagementExecute.ts
+  - src/funcs/invoiceManagementGenerate.ts
+  - src/funcs/invoiceManagementGenerateTest.ts
+  - src/funcs/invoiceManagementGet.ts
+  - src/funcs/invoiceManagementGetClient.ts
+  - src/funcs/invoiceManagementGetFees.ts
+  - src/funcs/invoiceManagementGetGenerated.ts
+  - src/funcs/invoiceManagementGetMember.ts
+  - src/funcs/invoiceManagementGetTemplate.ts
+  - src/funcs/invoiceManagementList.ts
+  - src/funcs/invoiceManagementListClient.ts
+  - src/funcs/invoiceManagementListTemplates.ts
+  - src/funcs/invoiceManagementRefund.ts
+  - src/funcs/invoiceManagementSend.ts
+  - src/funcs/invoiceManagementUpdate.ts
+  - src/funcs/invoiceManagementUpdateClient.ts
+  - src/funcs/invoiceManagementUpdateGenerated.ts
+  - src/funcs/invoiceManagementUpdateTemplate.ts
+  - src/funcs/collaboratorManagementAssociate.ts
+  - src/funcs/collaboratorManagementCreate.ts
+  - src/funcs/collaboratorManagementCreateCollaboratorDeduction.ts
+  - src/funcs/collaboratorManagementCreateCollaboratorGroup.ts
+  - src/funcs/collaboratorManagementDelete.ts
+  - src/funcs/collaboratorManagementDeleteCollaboratorDeduction.ts
+  - src/funcs/collaboratorManagementDisassociate.ts
+  - src/funcs/collaboratorManagementGet.ts
+  - src/funcs/collaboratorManagementGetCollaboratorDeduction.ts
+  - src/funcs/collaboratorManagementGetEventAssociated.ts
+  - src/funcs/collaboratorManagementList.ts
+  - src/funcs/collaboratorManagementListCollaboratorDeduction.ts
+  - src/funcs/collaboratorManagementListCollaboratorGroups.ts
+  - src/funcs/collaboratorManagementListRegistered.ts
+  - src/funcs/collaboratorManagementListSpecificCollaboratorDetail.ts
+  - src/funcs/collaboratorManagementUpdate.ts
+  - src/funcs/collaboratorManagementUpdateCollaboratorDeduction.ts
+  - src/funcs/documentSigningAndEligibilityCreate.ts
+  - src/funcs/documentSigningAndEligibilityDelete.ts
+  - src/funcs/documentSigningAndEligibilityDeleteCollaboratorGroup.ts
+  - src/funcs/documentSigningAndEligibilityDeletePayment.ts
+  - src/funcs/documentSigningAndEligibilityEstablish.ts
+  - src/funcs/documentSigningAndEligibilityGet.ts
+  - src/funcs/documentSigningAndEligibilityGetGroupConfiguration.ts
+  - src/funcs/documentSigningAndEligibilityGetPayment.ts
+  - src/funcs/documentSigningAndEligibilityList.ts
+  - src/funcs/documentSigningAndEligibilityListPayment.ts
+  - src/funcs/documentSigningAndEligibilityUpdate.ts
+  - src/funcs/documentSigningAndEligibilityUpdateCollaboratorGroup.ts
+  - src/funcs/documentSigningAndEligibilityUpdateGroupConfiguration.ts
+  - src/funcs/documentSigningAndEligibilityUpdatePayment.ts
+  - src/funcs/customFieldManagementCreate.ts
+  - src/funcs/customFieldManagementDelete.ts
+  - src/funcs/customFieldManagementGet.ts
+  - src/funcs/customFieldManagementList.ts
+  - src/funcs/customFieldManagementUpdate.ts
+  - src/funcs/merchantCategoryCodesGet.ts
+  - src/funcs/payablesManagementCreate.ts
+  - src/funcs/payablesManagementDelete.ts
+  - src/funcs/payablesManagementExecute.ts
+  - src/funcs/payablesManagementGet.ts
+  - src/funcs/payablesManagementGetApproved.ts
+  - src/funcs/payablesManagementList.ts
+  - src/funcs/payablesManagementListSummary.ts
+  - src/funcs/payablesManagementUpdate.ts
+  - src/funcs/payrollSettingsGet.ts
+  - src/funcs/payrollSettingsUpdate.ts
+  - src/funcs/reportingAndAnalyticsGet.ts
+  - src/funcs/reportingAndAnalyticsGetPayrollReport.ts
+  - src/funcs/reportingAndAnalyticsListDetailedCollaborator.ts
+  - src/funcs/reportingAndAnalyticsListLineItem.ts
+  - src/funcs/reportingAndAnalyticsListPayable.ts
   - src/sdk/servicesettings.ts
   - src/sdk/wingspanwallet.ts
   - src/sdk/deprecated.ts
@@ -51,6 +223,7 @@ generatedFiles:
   - RUNTIMES.md
   - jsr.json
   - package.json
+  - src/core.ts
   - src/index.ts
   - src/lib/base64.ts
   - src/lib/config.ts
@@ -58,6 +231,7 @@ generatedFiles:
   - src/lib/encodings.ts
   - src/lib/http.ts
   - src/lib/is-plain-object.ts
+  - src/lib/logger.ts
   - src/lib/matchers.ts
   - src/lib/primitives.ts
   - src/lib/retries.ts
@@ -70,6 +244,7 @@ generatedFiles:
   - src/sdk/models/errors/sdkerror.ts
   - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
+  - src/sdk/types/constdatetime.ts
   - src/sdk/types/enums.ts
   - src/sdk/types/fp.ts
   - src/sdk/types/index.ts

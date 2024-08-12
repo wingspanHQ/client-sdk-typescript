@@ -46,7 +46,7 @@ yarn add @wingspan/payments zod
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -301,7 +301,7 @@ import { Payments } from "@wingspan/payments";
 import { SDKValidationError } from "@wingspan/payments/sdk/models/errors";
 
 const payments = new Payments({
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -351,7 +351,7 @@ import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
     server: "staging",
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -375,7 +375,7 @@ import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
     serverURL: "https://api.wingspan.app",
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -457,7 +457,7 @@ To authenticate with the API the `bearerAuth` parameter must be set when initial
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -488,7 +488,7 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -528,7 +528,7 @@ const payments = new Payments({
         },
         retryConnectionErrors: false,
     },
-    bearerAuth: process.env.BEARER_AUTH,
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
@@ -542,6 +542,21 @@ run();
 
 ```
 <!-- End Retries [retries] -->
+
+<!-- Start Debugging [debug] -->
+## Debugging
+
+To log HTTP requests and responses, you can pass a logger that matches `console`'s interface as an SDK option.
+
+> [!WARNING]
+> Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
+
+```typescript
+import { Payments } from "@wingspan/payments";
+
+const sdk = new Payments({ debugLogger: console });
+```
+<!-- End Debugging [debug] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
