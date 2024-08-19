@@ -1,14 +1,15 @@
 # InvoiceSchemasStatus
 
+## Example Usage
+
+```typescript
+import { InvoiceSchemasStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceSchemasStatus = "Draft";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Draft`            | Draft              |
-| `Open`             | Open               |
-| `Overdue`          | Overdue            |
-| `Cancelled`        | Cancelled          |
-| `Pending`          | Pending            |
-| `PaymentInTransit` | PaymentInTransit   |
-| `Paid`             | Paid               |
+```typescript
+"Draft" | "Open" | "Overdue" | "Cancelled" | "Pending" | "PaymentInTransit" | "Paid"
+```

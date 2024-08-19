@@ -1,5 +1,14 @@
 # UpdateDeductionCollaboratorRequest
 
+## Example Usage
+
+```typescript
+import { UpdateDeductionCollaboratorRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateDeductionCollaboratorRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,11 +1,15 @@
 # CollaboratorsReportResponseTaxStatus
 
+## Example Usage
+
+```typescript
+import { CollaboratorsReportResponseTaxStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorsReportResponseTaxStatus = "Failed";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Complete`   | Complete     |
-| `Failed`     | Failed       |
-| `Pending`    | Pending      |
-| `Incomplete` | Incomplete   |
+```typescript
+"Complete" | "Failed" | "Pending" | "Incomplete"
+```

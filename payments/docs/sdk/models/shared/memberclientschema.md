@@ -1,5 +1,42 @@
 # MemberClientSchema
 
+## Example Usage
+
+```typescript
+import { MemberClientSchema } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientSchema = {
+    achCreditAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+    },
+    client: {
+        user: {},
+    },
+    clientId: "<value>",
+    clientUserAccountType: "member",
+    createdAt: "<value>",
+    emailTo: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    form1099Balances: {},
+    internationalWireAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    memberClientId: "<value>",
+    status: "Pending",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

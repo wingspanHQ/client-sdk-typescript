@@ -1,11 +1,15 @@
 # FundsTransferAccountType
 
+## Example Usage
+
+```typescript
+import { FundsTransferAccountType } from "@wingspan/payments/sdk/models/shared";
+
+let value: FundsTransferAccountType = "Card";
+```
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `Card`            | Card              |
-| `BankAccount`     | BankAccount       |
-| `InternalAccount` | InternalAccount   |
-| `StripeAccount`   | StripeAccount     |
+```typescript
+"Card" | "BankAccount" | "InternalAccount" | "StripeAccount"
+```

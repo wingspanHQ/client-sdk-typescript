@@ -1,5 +1,18 @@
 # CreateStoredWingspanWalletCardResponse
 
+## Example Usage
+
+```typescript
+import { CreateStoredWingspanWalletCardResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateStoredWingspanWalletCardResponse = {
+    contentType: "<value>",
+    statusCode: 592845,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

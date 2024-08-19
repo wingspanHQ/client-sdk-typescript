@@ -1,5 +1,14 @@
 # UpdateClientBatchRequest
 
+## Example Usage
+
+```typescript
+import { UpdateClientBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateClientBatchRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

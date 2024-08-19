@@ -1,10 +1,15 @@
 # MemberClientSchemaStatus
 
+## Example Usage
+
+```typescript
+import { MemberClientSchemaStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientSchemaStatus = "Active";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Active`   | Active     |
-| `Inactive` | Inactive   |
-| `Pending`  | Pending    |
+```typescript
+"Active" | "Inactive" | "Pending"
+```

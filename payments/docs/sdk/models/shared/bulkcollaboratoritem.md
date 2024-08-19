@@ -1,5 +1,30 @@
 # BulkCollaboratorItem
 
+## Example Usage
+
+```typescript
+import { BulkCollaboratorItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCollaboratorItem = {
+    bulkCollaboratorBatchId: "<value>",
+    bulkCollaboratorItemId: "<value>",
+    clientId: "<value>",
+    collaboratorStatus: "Pending",
+    createdAt: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    status: "Processing",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

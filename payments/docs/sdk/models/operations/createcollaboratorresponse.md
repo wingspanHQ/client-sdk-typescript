@@ -1,5 +1,18 @@
 # CreateCollaboratorResponse
 
+## Example Usage
+
+```typescript
+import { CreateCollaboratorResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateCollaboratorResponse = {
+    contentType: "<value>",
+    statusCode: 338007,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

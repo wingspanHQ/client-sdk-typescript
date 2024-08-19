@@ -36,6 +36,37 @@ async function run() {
 run();
 ```
 
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { reportingAndAnalyticsGet } from "@wingspan/payments/funcs/reportingAndAnalyticsGet.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await reportingAndAnalyticsGet(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -71,6 +102,39 @@ async function run() {
   const result = await payments.reportingAndAnalytics.getPayrollReport({
     payrollId: "<value>",
   });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { reportingAndAnalyticsGetPayrollReport } from "@wingspan/payments/funcs/reportingAndAnalyticsGetPayrollReport.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await reportingAndAnalyticsGetPayrollReport(payments, {
+    payrollId: "<value>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
 
   // Handle the result
   console.log(result)
@@ -121,6 +185,37 @@ async function run() {
 run();
 ```
 
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { reportingAndAnalyticsListDetailedCollaborator } from "@wingspan/payments/funcs/reportingAndAnalyticsListDetailedCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await reportingAndAnalyticsListDetailedCollaborator(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -162,6 +257,37 @@ async function run() {
 run();
 ```
 
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { reportingAndAnalyticsListLineItem } from "@wingspan/payments/funcs/reportingAndAnalyticsListLineItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await reportingAndAnalyticsListLineItem(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -195,6 +321,37 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listPayable();
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { reportingAndAnalyticsListPayable } from "@wingspan/payments/funcs/reportingAndAnalyticsListPayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await reportingAndAnalyticsListPayable(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
 
   // Handle the result
   console.log(result)

@@ -1,5 +1,16 @@
 # LateFeeConfig
 
+## Example Usage
+
+```typescript
+import { LateFeeConfig } from "@wingspan/payments/sdk/models/shared";
+
+let value: LateFeeConfig = {
+    frequency: {
+        startDate: "<value>",
+    },
+};
+```
 
 ## Fields
 

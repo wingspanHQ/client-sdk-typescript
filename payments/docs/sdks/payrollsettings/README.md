@@ -35,6 +35,39 @@ async function run() {
 run();
 ```
 
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { payrollSettingsGet } from "@wingspan/payments/funcs/payrollSettingsGet.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await payrollSettingsGet(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -71,6 +104,39 @@ async function run() {
   const result = await payments.payrollSettings.update({
     id: "<id>",
   });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { payrollSettingsUpdate } from "@wingspan/payments/funcs/payrollSettingsUpdate.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await payrollSettingsUpdate(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
 
   // Handle the result
   console.log(result)

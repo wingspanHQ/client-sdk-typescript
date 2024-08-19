@@ -1,12 +1,15 @@
 # BulkCalculation1099BatchStatus
 
+## Example Usage
+
+```typescript
+import { BulkCalculation1099BatchStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCalculation1099BatchStatus = "Failed";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Open`       | Open         |
-| `Pending`    | Pending      |
-| `Processing` | Processing   |
-| `Complete`   | Complete     |
-| `Failed`     | Failed       |
+```typescript
+"Open" | "Pending" | "Processing" | "Complete" | "Failed"
+```

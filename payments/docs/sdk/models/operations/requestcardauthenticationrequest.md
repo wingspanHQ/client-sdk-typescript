@@ -1,5 +1,14 @@
 # RequestCardAuthenticationRequest
 
+## Example Usage
+
+```typescript
+import { RequestCardAuthenticationRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: RequestCardAuthenticationRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

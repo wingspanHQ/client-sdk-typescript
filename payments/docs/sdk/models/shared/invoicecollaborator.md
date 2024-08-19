@@ -1,5 +1,17 @@
 # InvoiceCollaborator
 
+## Example Usage
+
+```typescript
+import { InvoiceCollaborator } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCollaborator = {
+    amount: 2703.28,
+    currency: "USD",
+    description: "Customer-focused maximized analyzer",
+    memberClientId: "<value>",
+};
+```
 
 ## Fields
 

@@ -1,5 +1,16 @@
 # FundingSource
 
+## Example Usage
+
+```typescript
+import { FundingSource } from "@wingspan/payments/sdk/models/shared";
+
+let value: FundingSource = {
+    fundingSourceCurrency: "CAD",
+    fundingSourceId: "<value>",
+    fundingSourceType: "Account",
+};
+```
 
 ## Fields
 

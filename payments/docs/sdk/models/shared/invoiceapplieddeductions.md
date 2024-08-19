@@ -1,5 +1,16 @@
 # InvoiceAppliedDeductions
 
+## Example Usage
+
+```typescript
+import { InvoiceAppliedDeductions } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceAppliedDeductions = {
+    amount: 7270.44,
+    deductionId: "<value>",
+    name: "<value>",
+};
+```
 
 ## Fields
 

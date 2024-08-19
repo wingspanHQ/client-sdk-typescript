@@ -1,10 +1,15 @@
 # InvoiceAcceptedPaymentMethods
 
+## Example Usage
+
+```typescript
+import { InvoiceAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceAcceptedPaymentMethods = "Manual";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Credit` | Credit   |
-| `Ach`    | ACH      |
-| `Manual` | Manual   |
+```typescript
+"Credit" | "ACH" | "Manual"
+```

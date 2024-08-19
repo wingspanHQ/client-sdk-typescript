@@ -1,5 +1,22 @@
 # InvoiceRefundDestination
 
+## Example Usage
+
+```typescript
+import { InvoiceRefundDestination } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceRefundDestination = {
+    amount: 4072.41,
+    createdAt: "<value>",
+    destinationType: "PaperCheck",
+    events: {},
+    labels: {
+        key: "<value>",
+    },
+    refundType: "Account",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

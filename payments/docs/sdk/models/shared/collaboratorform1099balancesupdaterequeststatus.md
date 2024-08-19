@@ -1,14 +1,15 @@
 # CollaboratorForm1099BalancesUpdateRequestStatus
 
+## Example Usage
+
+```typescript
+import { CollaboratorForm1099BalancesUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorForm1099BalancesUpdateRequestStatus = "Accepted";
+```
 
 ## Values
 
-| Name                 | Value                |
-| -------------------- | -------------------- |
-| `Ready`              | Ready                |
-| `NeedsActionInfo`    | NeedsActionInfo      |
-| `NeedsActionDispute` | NeedsActionDispute   |
-| `Submitted`          | Submitted            |
-| `Rejected`           | Rejected             |
-| `Accepted`           | Accepted             |
-| `Excluded`           | Excluded             |
+```typescript
+"Ready" | "NeedsActionInfo" | "NeedsActionDispute" | "Submitted" | "Rejected" | "Accepted" | "Excluded"
+```

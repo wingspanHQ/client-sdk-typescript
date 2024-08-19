@@ -1,9 +1,15 @@
 # OffPlatformPayments
 
+## Example Usage
+
+```typescript
+import { OffPlatformPayments } from "@wingspan/payments/sdk/models/shared";
+
+let value: OffPlatformPayments = "Include";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Include` | Include   |
-| `Exclude` | Exclude   |
+```typescript
+"Include" | "Exclude"
+```

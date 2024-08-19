@@ -1,5 +1,18 @@
 # GetClientBatchItemResponse
 
+## Example Usage
+
+```typescript
+import { GetClientBatchItemResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetClientBatchItemResponse = {
+    contentType: "<value>",
+    statusCode: 774234,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

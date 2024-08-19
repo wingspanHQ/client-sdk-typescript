@@ -1,5 +1,18 @@
 # GetCustomDataCollaboratorMemberResponse
 
+## Example Usage
+
+```typescript
+import { GetCustomDataCollaboratorMemberResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCustomDataCollaboratorMemberResponse = {
+    contentType: "<value>",
+    statusCode: 384382,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

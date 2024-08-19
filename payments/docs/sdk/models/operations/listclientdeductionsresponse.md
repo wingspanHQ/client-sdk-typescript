@@ -1,5 +1,18 @@
 # ListClientDeductionsResponse
 
+## Example Usage
+
+```typescript
+import { ListClientDeductionsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListClientDeductionsResponse = {
+    contentType: "<value>",
+    statusCode: 210382,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

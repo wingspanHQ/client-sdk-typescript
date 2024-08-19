@@ -1,11 +1,15 @@
 # VerificationStatus
 
+## Example Usage
+
+```typescript
+import { VerificationStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: VerificationStatus = "None";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `None`     | None       |
-| `Pending`  | Pending    |
-| `Failed`   | Failed     |
-| `Verified` | Verified   |
+```typescript
+"None" | "Pending" | "Failed" | "Verified"
+```

@@ -1,5 +1,15 @@
 # BankAccount
 
+## Example Usage
+
+```typescript
+import { BankAccount } from "@wingspan/payments/sdk/models/shared";
+
+let value: BankAccount = {
+    accountNumber: "<value>",
+    bankName: "<value>",
+};
+```
 
 ## Fields
 

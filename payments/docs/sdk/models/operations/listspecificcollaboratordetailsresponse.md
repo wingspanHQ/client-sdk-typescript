@@ -1,5 +1,18 @@
 # ListSpecificCollaboratorDetailsResponse
 
+## Example Usage
+
+```typescript
+import { ListSpecificCollaboratorDetailsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSpecificCollaboratorDetailsResponse = {
+    contentType: "<value>",
+    statusCode: 97101,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

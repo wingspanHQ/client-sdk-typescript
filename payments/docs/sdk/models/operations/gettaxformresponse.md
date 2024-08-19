@@ -1,5 +1,18 @@
 # GetTaxFormResponse
 
+## Example Usage
+
+```typescript
+import { GetTaxFormResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetTaxFormResponse = {
+    contentType: "<value>",
+    statusCode: 368241,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

@@ -1,5 +1,73 @@
 # PayableSchema
 
+## Example Usage
+
+```typescript
+import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableSchema = {
+    amount: 996.15,
+    attachments: {},
+    client: {},
+    clientId: "<value>",
+    collaboratorId: "<value>",
+    createdAt: "<value>",
+    creditFeeHandling: {},
+    currency: "CAD",
+    dueDate: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    events: {},
+    integration: {},
+    invoiceNotes: "<value>",
+    invoiceNumber: "<value>",
+    invoiceTemplateId: "<value>",
+    labels: {
+        key: "<value>",
+    },
+    lateFeeHandling: {
+        frequency: {
+            startDate: "<value>",
+        },
+    },
+    lineItems: [
+        {
+            costPerUnit: 9453.02,
+            createdAt: "<value>",
+            labels: {
+                key: "<value>",
+            },
+            labelsBak2: {
+                key: "<value>",
+            },
+            quantity: 984.78,
+            reimbursableExpense: false,
+            totalCost: 8694.89,
+            unit: "mole",
+            updatedAt: "<value>",
+        },
+    ],
+    member: {},
+    memberAddress: {
+        addressLine1: "0302 Leta Stream",
+        city: "New Adriennemouth",
+        postalCode: "60520",
+        state: "Idaho",
+    },
+    memberId: "<value>",
+    notificationPreferences: {
+        sendReminders: false,
+    },
+    payableId: "<value>",
+    status: "Pending",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

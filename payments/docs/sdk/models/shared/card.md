@@ -1,5 +1,19 @@
 # Card
 
+## Example Usage
+
+```typescript
+import { Card } from "@wingspan/payments/sdk/models/shared";
+
+let value: Card = {
+    brand: "<value>",
+    createdAt: "<value>",
+    expirationDate: "<value>",
+    last4Digits: "<value>",
+    status: "SuspectedFraud",
+    type: "individualVirtualDebitCard",
+};
+```
 
 ## Fields
 

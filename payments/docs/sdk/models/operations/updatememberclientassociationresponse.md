@@ -1,5 +1,18 @@
 # UpdateMemberClientAssociationResponse
 
+## Example Usage
+
+```typescript
+import { UpdateMemberClientAssociationResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateMemberClientAssociationResponse = {
+    contentType: "<value>",
+    statusCode: 128926,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

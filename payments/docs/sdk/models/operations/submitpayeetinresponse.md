@@ -1,5 +1,18 @@
 # SubmitPayeeTINResponse
 
+## Example Usage
+
+```typescript
+import { SubmitPayeeTINResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: SubmitPayeeTINResponse = {
+    contentType: "<value>",
+    statusCode: 461479,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

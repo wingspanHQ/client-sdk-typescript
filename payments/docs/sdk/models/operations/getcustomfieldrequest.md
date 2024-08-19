@@ -1,5 +1,14 @@
 # GetCustomFieldRequest
 
+## Example Usage
+
+```typescript
+import { GetCustomFieldRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCustomFieldRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

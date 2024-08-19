@@ -1,5 +1,14 @@
 # GetCollaboratorBatchRequest
 
+## Example Usage
+
+```typescript
+import { GetCollaboratorBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCollaboratorBatchRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

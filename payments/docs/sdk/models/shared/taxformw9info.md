@@ -1,5 +1,12 @@
 # TaxFormW9Info
 
+## Example Usage
+
+```typescript
+import { TaxFormW9Info } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormW9Info = {};
+```
 
 ## Fields
 

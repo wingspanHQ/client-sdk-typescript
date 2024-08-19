@@ -1,5 +1,28 @@
 # BulkCalculation1099Batch
 
+## Example Usage
+
+```typescript
+import { BulkCalculation1099Batch } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCalculation1099Batch = {
+    bulkCalculation1099BatchId: "<value>",
+    clientId: "<value>",
+    createdAt: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    status: "Failed",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

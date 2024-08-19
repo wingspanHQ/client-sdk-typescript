@@ -1,5 +1,18 @@
 # Create1099TaxFormResponse
 
+## Example Usage
+
+```typescript
+import { Create1099TaxFormResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: Create1099TaxFormResponse = {
+    contentType: "<value>",
+    statusCode: 20218,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

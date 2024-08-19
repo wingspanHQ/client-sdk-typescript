@@ -1,5 +1,14 @@
 # DeleteCustomDataCollaboratorMemberRequest
 
+## Example Usage
+
+```typescript
+import { DeleteCustomDataCollaboratorMemberRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCustomDataCollaboratorMemberRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,14 +1,15 @@
 # PayableCreateRequestStatus
 
+## Example Usage
+
+```typescript
+import { PayableCreateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableCreateRequestStatus = "Draft";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Draft`            | Draft              |
-| `Open`             | Open               |
-| `Overdue`          | Overdue            |
-| `Cancelled`        | Cancelled          |
-| `Pending`          | Pending            |
-| `PaymentInTransit` | PaymentInTransit   |
-| `Paid`             | Paid               |
+```typescript
+"Draft" | "Open" | "Overdue" | "Cancelled" | "Pending" | "PaymentInTransit" | "Paid"
+```

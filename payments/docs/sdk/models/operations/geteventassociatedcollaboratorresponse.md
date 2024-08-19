@@ -1,5 +1,18 @@
 # GetEventAssociatedCollaboratorResponse
 
+## Example Usage
+
+```typescript
+import { GetEventAssociatedCollaboratorResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetEventAssociatedCollaboratorResponse = {
+    contentType: "<value>",
+    statusCode: 949572,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

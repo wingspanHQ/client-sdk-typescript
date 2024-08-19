@@ -1,14 +1,15 @@
 # MemberClientForm1099BalancesStatus
 
+## Example Usage
+
+```typescript
+import { MemberClientForm1099BalancesStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientForm1099BalancesStatus = "NeedsActionInfo";
+```
 
 ## Values
 
-| Name                 | Value                |
-| -------------------- | -------------------- |
-| `Ready`              | Ready                |
-| `NeedsActionInfo`    | NeedsActionInfo      |
-| `NeedsActionDispute` | NeedsActionDispute   |
-| `Submitted`          | Submitted            |
-| `Rejected`           | Rejected             |
-| `Accepted`           | Accepted             |
-| `Excluded`           | Excluded             |
+```typescript
+"Ready" | "NeedsActionInfo" | "NeedsActionDispute" | "Submitted" | "Rejected" | "Accepted" | "Excluded"
+```

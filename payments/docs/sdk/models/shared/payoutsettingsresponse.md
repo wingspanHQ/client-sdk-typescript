@@ -1,5 +1,23 @@
 # PayoutSettingsResponse
 
+## Example Usage
+
+```typescript
+import { PayoutSettingsResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayoutSettingsResponse = {
+    payoutDestinations: [
+        {
+            destinationId: "<value>",
+            destinationType: "Card",
+            name: "<value>",
+            payoutMethod: "Expedited",
+            percentage: 336.25,
+        },
+    ],
+    payoutPreferences: "Check",
+};
+```
 
 ## Fields
 

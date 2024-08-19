@@ -1,5 +1,18 @@
 # EstablishMemberClientAssociationResponse
 
+## Example Usage
+
+```typescript
+import { EstablishMemberClientAssociationResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: EstablishMemberClientAssociationResponse = {
+    contentType: "<value>",
+    statusCode: 969810,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

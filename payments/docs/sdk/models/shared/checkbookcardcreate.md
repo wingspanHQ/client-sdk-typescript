@@ -1,5 +1,17 @@
 # CheckbookCardCreate
 
+## Example Usage
+
+```typescript
+import { CheckbookCardCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: CheckbookCardCreate = {
+    cardNumber: "<value>",
+    expMM: "<value>",
+    expYYYY: "<value>",
+    name: "<value>",
+};
+```
 
 ## Fields
 

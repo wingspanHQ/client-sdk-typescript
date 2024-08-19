@@ -1,5 +1,14 @@
 # GenerateSpecificInvoiceRequest
 
+## Example Usage
+
+```typescript
+import { GenerateSpecificInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GenerateSpecificInvoiceRequest = {
+    invoiceId: "<value>",
+};
+```
 
 ## Fields
 

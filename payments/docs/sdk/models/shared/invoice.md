@@ -1,5 +1,76 @@
 # Invoice
 
+## Example Usage
+
+```typescript
+import { Invoice } from "@wingspan/payments/sdk/models/shared";
+
+let value: Invoice = {
+    amount: 6394.73,
+    client: {},
+    createdAt: "<value>",
+    currency: "USD",
+    dueDate: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    events: {},
+    externalIds: {},
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    labels: {
+        key: "<value>",
+    },
+    lineItems: [
+        {
+            costPerUnit: 3685.84,
+            createdAt: "<value>",
+            labels: {
+                key: "<value>",
+            },
+            labelsBak2: {
+                key: "<value>",
+            },
+            quantity: 4104.92,
+            reimbursableExpense: false,
+            totalCost: 1369,
+            unit: "watt",
+            updatedAt: "<value>",
+        },
+    ],
+    member: {},
+    memberAddress: {
+        addressLine1: "214 Cartwright Extensions",
+        city: "Bothell",
+        postalCode: "85939",
+        state: "South Carolina",
+    },
+    memberClientId: "<value>",
+    memberId: "<value>",
+    payments: [
+        {
+            amount: 9065.56,
+            createdAt: "<value>",
+            events: {},
+            labels: {
+                key: "<value>",
+            },
+            paymentId: "<value>",
+            sourceId: "<value>",
+            sourceMetadata: {},
+            sourceType: "Card",
+            status: "Cleared",
+            updatedAt: "<value>",
+        },
+    ],
+    status: "Overdue",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

@@ -1,13 +1,15 @@
 # InvoicePaymentStatus
 
+## Example Usage
+
+```typescript
+import { InvoicePaymentStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoicePaymentStatus = "Created";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Created`  | Created    |
-| `Failed`   | Failed     |
-| `Pending`  | Pending    |
-| `Sent`     | Sent       |
-| `Cleared`  | Cleared    |
-| `Returned` | Returned   |
+```typescript
+"Created" | "Failed" | "Pending" | "Sent" | "Cleared" | "Returned"
+```

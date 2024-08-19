@@ -1,5 +1,15 @@
 # CollaboratorGroupCreateRequest
 
+## Example Usage
+
+```typescript
+import { CollaboratorGroupCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorGroupCreateRequest = {
+    description: "Monitored executive functionalities",
+    name: "<value>",
+};
+```
 
 ## Fields
 

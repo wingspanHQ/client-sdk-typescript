@@ -1,5 +1,19 @@
 # DeductionCreateRequest
 
+## Example Usage
+
+```typescript
+import { DeductionCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionCreateRequest = {
+    amount: 7469.94,
+    clientId: "<value>",
+    currency: "CAD",
+    memberId: "<value>",
+    name: "<value>",
+    type: "PrePayment",
+};
+```
 
 ## Fields
 

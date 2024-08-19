@@ -1,5 +1,14 @@
 # DeleteClientDeductionRequest
 
+## Example Usage
+
+```typescript
+import { DeleteClientDeductionRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteClientDeductionRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

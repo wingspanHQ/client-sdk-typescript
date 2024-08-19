@@ -1,5 +1,28 @@
 # BulkClientBatch
 
+## Example Usage
+
+```typescript
+import { BulkClientBatch } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkClientBatch = {
+    bulkClientBatchId: "<value>",
+    createdAt: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    memberId: "<value>",
+    status: "Failed",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

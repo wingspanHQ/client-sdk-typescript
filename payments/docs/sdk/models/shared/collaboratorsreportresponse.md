@@ -1,5 +1,35 @@
 # CollaboratorsReportResponse
 
+## Example Usage
+
+```typescript
+import { CollaboratorsReportResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorsReportResponse = {
+    clientId: "<value>",
+    collaboratorGroups: [
+        {
+            collaboratorGroupId: "<value>",
+            description: "Versatile neutral support",
+            name: "<value>",
+        },
+    ],
+    createdAt: "<value>",
+    inviteEmail: "<value>",
+    member: {
+        user: {},
+    },
+    memberClientId: "<value>",
+    memberId: "<value>",
+    servicesStatus: {
+        incomeAndExpenses: false,
+        taxWithholdings: false,
+    },
+    status: "Pending",
+    taxStatus: "Failed",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

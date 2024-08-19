@@ -1,5 +1,18 @@
 # DisassociateCollaboratorWithGroupResponse
 
+## Example Usage
+
+```typescript
+import { DisassociateCollaboratorWithGroupResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DisassociateCollaboratorWithGroupResponse = {
+    contentType: "<value>",
+    statusCode: 138183,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

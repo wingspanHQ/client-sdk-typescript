@@ -1,9 +1,15 @@
 # MemberClientSchemaClientUserAccountType
 
+## Example Usage
+
+```typescript
+import { MemberClientSchemaClientUserAccountType } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientSchemaClientUserAccountType = "enterprise";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Member`     | member       |
-| `Enterprise` | enterprise   |
+```typescript
+"member" | "enterprise"
+```

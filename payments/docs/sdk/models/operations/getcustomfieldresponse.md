@@ -1,5 +1,18 @@
 # GetCustomFieldResponse
 
+## Example Usage
+
+```typescript
+import { GetCustomFieldResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCustomFieldResponse = {
+    contentType: "<value>",
+    statusCode: 979587,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

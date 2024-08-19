@@ -1,5 +1,18 @@
 # InvoiceTemplateCreateRequest
 
+## Example Usage
+
+```typescript
+import { InvoiceTemplateCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceTemplateCreateRequest = {
+    invoiceData: {
+        lineItems: [{}],
+        memberClientId: "<value>",
+    },
+    status: "Active",
+};
+```
 
 ## Fields
 

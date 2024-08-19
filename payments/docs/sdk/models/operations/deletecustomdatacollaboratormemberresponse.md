@@ -1,5 +1,18 @@
 # DeleteCustomDataCollaboratorMemberResponse
 
+## Example Usage
+
+```typescript
+import { DeleteCustomDataCollaboratorMemberResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCustomDataCollaboratorMemberResponse = {
+    contentType: "<value>",
+    statusCode: 623564,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

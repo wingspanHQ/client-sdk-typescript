@@ -1,13 +1,15 @@
 # WorkflowStatus
 
+## Example Usage
+
+```typescript
+import { WorkflowStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: WorkflowStatus = "Approved";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Pending`          | Pending            |
-| `PreApproved`      | PreApproved        |
-| `Approved`         | Approved           |
-| `PaymentInitiated` | PaymentInitiated   |
-| `Funded`           | Funded             |
-| `Declined`         | Declined           |
+```typescript
+"Pending" | "PreApproved" | "Approved" | "PaymentInitiated" | "Funded" | "Declined"
+```

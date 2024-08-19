@@ -1,11 +1,15 @@
 # ClientInvoiceTemplateStatus
 
+## Example Usage
+
+```typescript
+import { ClientInvoiceTemplateStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientInvoiceTemplateStatus = "Active";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Active`    | Active      |
-| `Draft`     | Draft       |
-| `Expired`   | Expired     |
-| `Cancelled` | Cancelled   |
+```typescript
+"Active" | "Draft" | "Expired" | "Cancelled"
+```

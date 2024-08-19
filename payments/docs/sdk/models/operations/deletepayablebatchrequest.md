@@ -1,5 +1,14 @@
 # DeletePayableBatchRequest
 
+## Example Usage
+
+```typescript
+import { DeletePayableBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeletePayableBatchRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

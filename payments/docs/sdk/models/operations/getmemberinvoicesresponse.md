@@ -1,5 +1,18 @@
 # GetMemberInvoicesResponse
 
+## Example Usage
+
+```typescript
+import { GetMemberInvoicesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetMemberInvoicesResponse = {
+    contentType: "<value>",
+    statusCode: 635059,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

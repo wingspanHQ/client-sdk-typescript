@@ -1,5 +1,47 @@
 # LineItemsAgingReportResponse
 
+## Example Usage
+
+```typescript
+import { LineItemsAgingReportResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: LineItemsAgingReportResponse = {
+    ageGroup: "<value>",
+    amount: 9920.12,
+    createdAt: "<value>",
+    currency: "Nakfa",
+    dueDate: "<value>",
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    invoicePdf: "<value>",
+    lineItems: [
+        {
+            costPerUnit: 2494.2,
+            createdAt: "<value>",
+            index: 2282.63,
+            labels: {
+                key: "<value>",
+            },
+            labelsBak2: {
+                key: "<value>",
+            },
+            quantity: 1059.06,
+            reimbursableExpense: false,
+            totalCost: 4895.09,
+            unit: "lux",
+            updatedAt: "<value>",
+        },
+    ],
+    member: {
+        user: {},
+    },
+    memberClientId: "<value>",
+    memberId: "<value>",
+    receiptPdf: "<value>",
+    status: "Paid",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

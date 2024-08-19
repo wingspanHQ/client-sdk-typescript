@@ -1,5 +1,18 @@
 # UpdatePaymentEligibilityRequirementResponse
 
+## Example Usage
+
+```typescript
+import { UpdatePaymentEligibilityRequirementResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdatePaymentEligibilityRequirementResponse = {
+    contentType: "<value>",
+    statusCode: 39187,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

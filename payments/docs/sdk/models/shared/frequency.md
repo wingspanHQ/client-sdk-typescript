@@ -1,5 +1,14 @@
 # Frequency
 
+## Example Usage
+
+```typescript
+import { Frequency } from "@wingspan/payments/sdk/models/shared";
+
+let value: Frequency = {
+    startDate: "<value>",
+};
+```
 
 ## Fields
 

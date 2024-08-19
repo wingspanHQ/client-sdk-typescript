@@ -1,5 +1,12 @@
 # DocumentFiles
 
+## Example Usage
+
+```typescript
+import { DocumentFiles } from "@wingspan/payments/sdk/models/shared";
+
+let value: DocumentFiles = {};
+```
 
 ## Fields
 

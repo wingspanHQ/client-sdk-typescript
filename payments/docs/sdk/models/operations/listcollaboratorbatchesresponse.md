@@ -1,5 +1,18 @@
 # ListCollaboratorBatchesResponse
 
+## Example Usage
+
+```typescript
+import { ListCollaboratorBatchesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListCollaboratorBatchesResponse = {
+    contentType: "<value>",
+    statusCode: 612096,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

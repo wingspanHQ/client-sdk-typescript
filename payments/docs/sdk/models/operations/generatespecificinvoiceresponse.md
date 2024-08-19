@@ -1,5 +1,18 @@
 # GenerateSpecificInvoiceResponse
 
+## Example Usage
+
+```typescript
+import { GenerateSpecificInvoiceResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GenerateSpecificInvoiceResponse = {
+    contentType: "<value>",
+    statusCode: 634274,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

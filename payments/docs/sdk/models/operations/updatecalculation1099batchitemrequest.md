@@ -1,5 +1,15 @@
 # UpdateCalculation1099BatchItemRequest
 
+## Example Usage
+
+```typescript
+import { UpdateCalculation1099BatchItemRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCalculation1099BatchItemRequest = {
+    batchId: "<value>",
+    batchItemId: "<value>",
+};
+```
 
 ## Fields
 

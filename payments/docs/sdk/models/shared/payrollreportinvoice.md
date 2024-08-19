@@ -1,5 +1,46 @@
 # PayrollReportInvoice
 
+## Example Usage
+
+```typescript
+import { PayrollReportInvoice } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayrollReportInvoice = {
+    amount: 9689.04,
+    createdAt: "<value>",
+    currency: "Hryvnia",
+    dueDate: "<value>",
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    invoicePdf: "<value>",
+    lineItems: [
+        {
+            costPerUnit: 3631.61,
+            createdAt: "<value>",
+            index: 9249.67,
+            labels: {
+                key: "<value>",
+            },
+            labelsBak2: {
+                key: "<value>",
+            },
+            quantity: 3975.33,
+            reimbursableExpense: false,
+            totalCost: 460.07,
+            unit: "sievert",
+            updatedAt: "<value>",
+        },
+    ],
+    member: {
+        user: {},
+    },
+    memberClientId: "<value>",
+    memberId: "<value>",
+    receiptPdf: "<value>",
+    status: "Open",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

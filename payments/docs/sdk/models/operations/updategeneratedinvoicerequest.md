@@ -1,5 +1,14 @@
 # UpdateGeneratedInvoiceRequest
 
+## Example Usage
+
+```typescript
+import { UpdateGeneratedInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateGeneratedInvoiceRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

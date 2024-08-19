@@ -1,5 +1,14 @@
 # EligibilityRequirementCreateRequest
 
+## Example Usage
+
+```typescript
+import { EligibilityRequirementCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: EligibilityRequirementCreateRequest = {
+    requirementType: "Signature",
+};
+```
 
 ## Fields
 

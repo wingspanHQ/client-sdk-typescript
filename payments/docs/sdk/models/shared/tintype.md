@@ -1,9 +1,15 @@
 # TinType
 
+## Example Usage
+
+```typescript
+import { TinType } from "@wingspan/payments/sdk/models/shared";
+
+let value: TinType = "Business";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Individual` | Individual   |
-| `Business`   | Business     |
+```typescript
+"Individual" | "Business"
+```

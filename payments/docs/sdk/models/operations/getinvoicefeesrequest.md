@@ -1,5 +1,14 @@
 # GetInvoiceFeesRequest
 
+## Example Usage
+
+```typescript
+import { GetInvoiceFeesRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetInvoiceFeesRequest = {
+    invoiceId: "<value>",
+};
+```
 
 ## Fields
 

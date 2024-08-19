@@ -1,5 +1,61 @@
 # PayerTaxFormResponse
 
+## Example Usage
+
+```typescript
+import { PayerTaxFormResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayerTaxFormResponse = {
+    activeSubmissionId: "<value>",
+    adjustments: 166.27,
+    clientId: "<value>",
+    createdAt: "<value>",
+    data: {},
+    deliveryMethod: "Mail",
+    deprecatedTaxForm: {},
+    eventActors: {
+        key: "<value>",
+    },
+    eventHistory: [
+        {
+            eventType: "InvitationOpened",
+            timestamp: "<value>",
+            triggeredBy: "Payer",
+        },
+    ],
+    filingStateCode: "<value>",
+    labels: {
+        key: "<value>",
+    },
+    memberId: "<value>",
+    payerPayeeId: "<value>",
+    paymentProcessingFees: 7649.12,
+    platformIncome: 3599.78,
+    recipientConfirmedW9Info: false,
+    recipientReadyToSubmitW9: false,
+    recipientSyncEnabled: false,
+    status: "Ineligible",
+    submissions: [
+        {
+            correctionType: "Type2",
+            deliveryMethod: "Mail",
+            externalDocumentId: "<value>",
+            isCorrected: false,
+            status: "ReadyToSubmitToIrs",
+            submissionData: {},
+            submissionId: "<value>",
+        },
+    ],
+    taxFormId: "<value>",
+    type: "Form1099Nec",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+    year: 3394.04,
+};
+```
 
 ## Fields
 

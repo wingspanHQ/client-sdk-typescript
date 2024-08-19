@@ -1,5 +1,15 @@
 # InvoiceAttachmentFile
 
+## Example Usage
+
+```typescript
+import { InvoiceAttachmentFile } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceAttachmentFile = {
+    fileName: "your_file_here",
+    fileUrl: "<value>",
+};
+```
 
 ## Fields
 

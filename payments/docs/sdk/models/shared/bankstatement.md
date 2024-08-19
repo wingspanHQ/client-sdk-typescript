@@ -1,5 +1,17 @@
 # BankStatement
 
+## Example Usage
+
+```typescript
+import { BankStatement } from "@wingspan/payments/sdk/models/shared";
+
+let value: BankStatement = {
+    accountId: "<value>",
+    date: "<value>",
+    id: "<id>",
+    name: "<value>",
+};
+```
 
 ## Fields
 

@@ -1,5 +1,15 @@
 # CardCodeResponse
 
+## Example Usage
+
+```typescript
+import { CardCodeResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardCodeResponse = {
+    phoneNumber: "<value>",
+    verificationToken: "<value>",
+};
+```
 
 ## Fields
 

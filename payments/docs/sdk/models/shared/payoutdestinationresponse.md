@@ -1,5 +1,18 @@
 # PayoutDestinationResponse
 
+## Example Usage
+
+```typescript
+import { PayoutDestinationResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayoutDestinationResponse = {
+    destinationId: "<value>",
+    destinationType: "Account",
+    name: "<value>",
+    payoutMethod: "Expedited",
+    percentage: 2212.62,
+};
+```
 
 ## Fields
 

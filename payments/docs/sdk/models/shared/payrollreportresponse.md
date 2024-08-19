@@ -1,5 +1,22 @@
 # PayrollReportResponse
 
+## Example Usage
+
+```typescript
+import { PayrollReportResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayrollReportResponse = {
+    invoices: [],
+    parentInvoice: {
+        createdAt: "<value>",
+        dueDate: "<value>",
+        invoiceId: "<value>",
+        invoiceNumber: "<value>",
+        status: "PaymentInTransit",
+        updatedAt: "<value>",
+    },
+};
+```
 
 ## Fields
 

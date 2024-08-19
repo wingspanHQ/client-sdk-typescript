@@ -1,5 +1,18 @@
 # DeleteCustomFieldResponse
 
+## Example Usage
+
+```typescript
+import { DeleteCustomFieldResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCustomFieldResponse = {
+    contentType: "<value>",
+    statusCode: 282807,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

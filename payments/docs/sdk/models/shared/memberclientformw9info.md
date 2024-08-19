@@ -1,5 +1,12 @@
 # MemberClientFormW9Info
 
+## Example Usage
+
+```typescript
+import { MemberClientFormW9Info } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientFormW9Info = {};
+```
 
 ## Fields
 

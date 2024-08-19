@@ -1,5 +1,14 @@
 # ValidateReceiveTokenRequest
 
+## Example Usage
+
+```typescript
+import { ValidateReceiveTokenRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ValidateReceiveTokenRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

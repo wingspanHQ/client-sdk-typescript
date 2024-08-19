@@ -1,5 +1,23 @@
 # DocumentResponse
 
+## Example Usage
+
+```typescript
+import { DocumentResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: DocumentResponse = {
+    clientId: "<value>",
+    documentId: "<value>",
+    memberId: "<value>",
+    status: "PendingReview",
+    templateId: "<value>",
+    title: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

@@ -1,14 +1,15 @@
 # PayableAgingReportResponseStatus
 
+## Example Usage
+
+```typescript
+import { PayableAgingReportResponseStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableAgingReportResponseStatus = "Paid";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Draft`            | Draft              |
-| `Open`             | Open               |
-| `Overdue`          | Overdue            |
-| `Cancelled`        | Cancelled          |
-| `Pending`          | Pending            |
-| `PaymentInTransit` | PaymentInTransit   |
-| `Paid`             | Paid               |
+```typescript
+"Draft" | "Open" | "Overdue" | "Cancelled" | "Pending" | "PaymentInTransit" | "Paid"
+```

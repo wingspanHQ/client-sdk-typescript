@@ -1,5 +1,14 @@
 # GetInvoiceBatchRequest
 
+## Example Usage
+
+```typescript
+import { GetInvoiceBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetInvoiceBatchRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

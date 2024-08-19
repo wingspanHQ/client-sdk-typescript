@@ -1,5 +1,16 @@
 # Mark1099AsUndeliveredRequest
 
+## Example Usage
+
+```typescript
+import { Mark1099AsUndeliveredRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: Mark1099AsUndeliveredRequest = {
+    memberId: "<value>",
+    submissionIndex: 5542.42,
+    year: 3982.21,
+};
+```
 
 ## Fields
 

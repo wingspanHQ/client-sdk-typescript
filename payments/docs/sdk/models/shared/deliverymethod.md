@@ -1,10 +1,15 @@
 # DeliveryMethod
 
+## Example Usage
+
+```typescript
+import { DeliveryMethod } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeliveryMethod = "Electronic";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Electronic` | Electronic   |
-| `Mail`       | Mail         |
-| `Both`       | Both         |
+```typescript
+"Electronic" | "Mail" | "Both"
+```

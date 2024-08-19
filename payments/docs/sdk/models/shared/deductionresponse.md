@@ -1,5 +1,41 @@
 # DeductionResponse
 
+## Example Usage
+
+```typescript
+import { DeductionResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionResponse = {
+    amount: 1448.47,
+    application: [
+        {
+            amountDeducted: 1649.59,
+            payableId: "<value>",
+        },
+    ],
+    clientId: "<value>",
+    createdAt: "<value>",
+    currency: "USD",
+    deductionId: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    memberId: "<value>",
+    name: "<value>",
+    priority: 1248.33,
+    startDate: "<value>",
+    status: "PartiallyApplied",
+    type: "PostPayment",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

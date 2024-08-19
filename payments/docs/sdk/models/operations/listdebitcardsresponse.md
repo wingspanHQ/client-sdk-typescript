@@ -1,5 +1,18 @@
 # ListDebitCardsResponse
 
+## Example Usage
+
+```typescript
+import { ListDebitCardsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListDebitCardsResponse = {
+    contentType: "<value>",
+    statusCode: 568045,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

@@ -1,5 +1,19 @@
 # InvoicePayoutDestination
 
+## Example Usage
+
+```typescript
+import { InvoicePayoutDestination } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoicePayoutDestination = {
+    amount: 534.27,
+    description: "User-friendly object-oriented access",
+    destinationType: "Account",
+    payoutMethod: "Expedited",
+    percentage: 7705.81,
+    transferId: "<value>",
+};
+```
 
 ## Fields
 

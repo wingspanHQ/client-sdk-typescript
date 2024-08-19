@@ -1,5 +1,14 @@
 # DeletePayableRequest
 
+## Example Usage
+
+```typescript
+import { DeletePayableRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeletePayableRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

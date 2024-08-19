@@ -1,5 +1,14 @@
 # CreateClientBatchItemRequest
 
+## Example Usage
+
+```typescript
+import { CreateClientBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateClientBatchItemRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

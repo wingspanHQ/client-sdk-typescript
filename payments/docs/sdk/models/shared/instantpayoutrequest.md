@@ -1,5 +1,14 @@
 # InstantPayoutRequest
 
+## Example Usage
+
+```typescript
+import { InstantPayoutRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InstantPayoutRequest = {
+    externalPayoutAccountToken: "<value>",
+};
+```
 
 ## Fields
 

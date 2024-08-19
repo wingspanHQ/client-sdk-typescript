@@ -1,5 +1,31 @@
 # BulkCalculation1099Item
 
+## Example Usage
+
+```typescript
+import { BulkCalculation1099Item } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCalculation1099Item = {
+    bulkCalculation1099BatchId: "<value>",
+    bulkCalculation1099ItemId: "<value>",
+    calculationType: "Submissions",
+    clientId: "<value>",
+    createdAt: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    status: "Complete",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+    year: 7301.22,
+};
+```
 
 ## Fields
 

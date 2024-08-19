@@ -1,5 +1,15 @@
 # DeleteEligibilityRequirementCollaboratorGroupRequest
 
+## Example Usage
+
+```typescript
+import { DeleteEligibilityRequirementCollaboratorGroupRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteEligibilityRequirementCollaboratorGroupRequest = {
+    eligibilityRequirementId: "<value>",
+    id: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,14 +1,15 @@
 # InvoiceCreateRequestStatus
 
+## Example Usage
+
+```typescript
+import { InvoiceCreateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCreateRequestStatus = "Open";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Draft`            | Draft              |
-| `Open`             | Open               |
-| `Overdue`          | Overdue            |
-| `Cancelled`        | Cancelled          |
-| `Pending`          | Pending            |
-| `PaymentInTransit` | PaymentInTransit   |
-| `Paid`             | Paid               |
+```typescript
+"Draft" | "Open" | "Overdue" | "Cancelled" | "Pending" | "PaymentInTransit" | "Paid"
+```

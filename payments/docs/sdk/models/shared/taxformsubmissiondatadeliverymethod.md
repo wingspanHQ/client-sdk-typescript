@@ -1,9 +1,15 @@
 # TaxFormSubmissionDataDeliveryMethod
 
+## Example Usage
+
+```typescript
+import { TaxFormSubmissionDataDeliveryMethod } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormSubmissionDataDeliveryMethod = "Mail";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Electronic` | Electronic   |
-| `Mail`       | Mail         |
+```typescript
+"Electronic" | "Mail"
+```

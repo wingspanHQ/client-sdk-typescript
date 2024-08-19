@@ -1,5 +1,21 @@
 # MemberClientForm1099Balances
 
+## Example Usage
+
+```typescript
+import { MemberClientForm1099Balances } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientForm1099Balances = {
+    adjustments: 9046.48,
+    deliveryMethod: "Mail",
+    exclusionReason: "BelowThreshold",
+    form1099Generated: false,
+    paymentProcessingFees: 1624.93,
+    platformIncome: 5083.15,
+    status: "Rejected",
+    type: "NEC",
+};
+```
 
 ## Fields
 

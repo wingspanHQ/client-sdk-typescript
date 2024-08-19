@@ -1,5 +1,12 @@
 # RedactedTaxFormW9Info
 
+## Example Usage
+
+```typescript
+import { RedactedTaxFormW9Info } from "@wingspan/payments/sdk/models/shared";
+
+let value: RedactedTaxFormW9Info = {};
+```
 
 ## Fields
 

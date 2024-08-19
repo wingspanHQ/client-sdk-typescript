@@ -1,5 +1,18 @@
 # GetPayrollDetailedReportResponse
 
+## Example Usage
+
+```typescript
+import { GetPayrollDetailedReportResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetPayrollDetailedReportResponse = {
+    contentType: "<value>",
+    statusCode: 566602,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

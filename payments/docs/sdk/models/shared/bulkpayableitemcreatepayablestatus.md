@@ -1,12 +1,15 @@
 # BulkPayableItemCreatePayableStatus
 
+## Example Usage
+
+```typescript
+import { BulkPayableItemCreatePayableStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableItemCreatePayableStatus = "Open";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Draft`     | Draft       |
-| `Open`      | Open        |
-| `Approved`  | Approved    |
-| `Paid`      | Paid        |
-| `Cancelled` | Cancelled   |
+```typescript
+"Draft" | "Open" | "Approved" | "Paid" | "Cancelled"
+```

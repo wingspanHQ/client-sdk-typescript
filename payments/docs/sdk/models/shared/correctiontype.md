@@ -1,10 +1,15 @@
 # CorrectionType
 
+## Example Usage
+
+```typescript
+import { CorrectionType } from "@wingspan/payments/sdk/models/shared";
+
+let value: CorrectionType = "None";
+```
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `None`  | None    |
-| `Type1` | Type1   |
-| `Type2` | Type2   |
+```typescript
+"None" | "Type1" | "Type2"
+```

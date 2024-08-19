@@ -1,5 +1,14 @@
 # GetTaxFormRequest
 
+## Example Usage
+
+```typescript
+import { GetTaxFormRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetTaxFormRequest = {
+    taxFormId: "<value>",
+};
+```
 
 ## Fields
 

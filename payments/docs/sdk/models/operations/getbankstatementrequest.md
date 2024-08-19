@@ -1,5 +1,14 @@
 # GetBankStatementRequest
 
+## Example Usage
+
+```typescript
+import { GetBankStatementRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetBankStatementRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

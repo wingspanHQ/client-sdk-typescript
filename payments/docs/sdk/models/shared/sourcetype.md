@@ -1,10 +1,15 @@
 # SourceType
 
+## Example Usage
+
+```typescript
+import { SourceType } from "@wingspan/payments/sdk/models/shared";
+
+let value: SourceType = "Account";
+```
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `Account`         | Account           |
-| `Card`            | Card              |
-| `InternalAccount` | InternalAccount   |
+```typescript
+"Account" | "Card" | "InternalAccount"
+```

@@ -1,5 +1,18 @@
 # DeleteInvoiceTemplateResponse
 
+## Example Usage
+
+```typescript
+import { DeleteInvoiceTemplateResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteInvoiceTemplateResponse = {
+    contentType: "<value>",
+    statusCode: 38425,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

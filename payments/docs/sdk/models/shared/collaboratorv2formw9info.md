@@ -1,5 +1,19 @@
 # CollaboratorV2FormW9Info
 
+## Example Usage
+
+```typescript
+import { CollaboratorV2FormW9Info } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorV2FormW9Info = {
+    addressLine1: "3294 Shana Villages",
+    city: "Troycester",
+    companyStructure: "LLCPartnership",
+    country: "Latvia",
+    postalCode: "78428-8167",
+    state: "Alabama",
+};
+```
 
 ## Fields
 

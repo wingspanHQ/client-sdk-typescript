@@ -1,11 +1,15 @@
 # MemberClientRequirementResponseStatus
 
+## Example Usage
+
+```typescript
+import { MemberClientRequirementResponseStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientRequirementResponseStatus = "Complete";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `New`      | New        |
-| `Sent`     | Sent       |
-| `Pending`  | Pending    |
-| `Complete` | Complete   |
+```typescript
+"New" | "Sent" | "Pending" | "Complete"
+```

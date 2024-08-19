@@ -1,5 +1,16 @@
 # CollaboratorEvents
 
+## Example Usage
+
+```typescript
+import { CollaboratorEvents } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorEvents = {
+    knowYourCustomerVerifiedAt: "<value>",
+    payoutMethodFirstAddedAt: "<value>",
+    taxDocumentationVerifiedAt: "<value>",
+};
+```
 
 ## Fields
 

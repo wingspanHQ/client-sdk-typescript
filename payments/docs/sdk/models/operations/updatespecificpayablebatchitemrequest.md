@@ -1,5 +1,15 @@
 # UpdateSpecificPayableBatchItemRequest
 
+## Example Usage
+
+```typescript
+import { UpdateSpecificPayableBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateSpecificPayableBatchItemRequest = {
+    batchId: "<value>",
+    batchItemId: "<value>",
+};
+```
 
 ## Fields
 

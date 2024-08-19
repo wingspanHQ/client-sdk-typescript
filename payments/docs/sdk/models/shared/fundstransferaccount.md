@@ -1,5 +1,18 @@
 # FundsTransferAccount
 
+## Example Usage
+
+```typescript
+import { FundsTransferAccount } from "@wingspan/payments/sdk/models/shared";
+
+let value: FundsTransferAccount = {
+    country: "Moldova",
+    currency: "USD",
+    holderName: "<value>",
+    numbers: {},
+    type: "StripeAccount",
+};
+```
 
 ## Fields
 

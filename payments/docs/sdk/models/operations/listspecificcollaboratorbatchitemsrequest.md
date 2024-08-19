@@ -1,5 +1,14 @@
 # ListSpecificCollaboratorBatchItemsRequest
 
+## Example Usage
+
+```typescript
+import { ListSpecificCollaboratorBatchItemsRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSpecificCollaboratorBatchItemsRequest = {
+    batchId: "<value>",
+};
+```
 
 ## Fields
 

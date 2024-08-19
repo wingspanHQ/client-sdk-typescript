@@ -1,5 +1,18 @@
 # CreateRecipientSyncResponse
 
+## Example Usage
+
+```typescript
+import { CreateRecipientSyncResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateRecipientSyncResponse = {
+    contentType: "<value>",
+    statusCode: 71036,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

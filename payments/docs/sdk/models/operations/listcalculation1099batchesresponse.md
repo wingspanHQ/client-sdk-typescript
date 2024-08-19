@@ -1,5 +1,18 @@
 # ListCalculation1099BatchesResponse
 
+## Example Usage
+
+```typescript
+import { ListCalculation1099BatchesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListCalculation1099BatchesResponse = {
+    contentType: "<value>",
+    statusCode: 870013,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

@@ -1,5 +1,57 @@
 # CollaboratorV2
 
+## Example Usage
+
+```typescript
+import { CollaboratorV2 } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorV2 = {
+    achCreditAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+    },
+    clientId: "<value>",
+    collaborations: [
+        {
+            collaboratorId: "<value>",
+            status: "Active",
+        },
+    ],
+    createdAt: "<value>",
+    eventActors: {
+        key: "<value>",
+    },
+    firstCollaborationId: "<value>",
+    form1099Balances: {},
+    formW9Data: {
+        addressLine1: "222 Marianne Club",
+        city: "North Kayleighshire",
+        companyStructure: "None",
+        country: "Oman",
+        postalCode: "79275-1054",
+        state: "New Jersey",
+    },
+    internationalWireAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+    },
+    labels: {
+        key: "<value>",
+    },
+    member: {
+        user: {},
+    },
+    memberId: "<value>",
+    primaryCollaborationId: "<value>",
+    status: "Pending",
+    taxStatus: "Incomplete",
+    updatedAt: "<value>",
+    userRoles: {
+        ownerIds: ["<value>"],
+        viewerIds: ["<value>"],
+    },
+};
+```
 
 ## Fields
 

@@ -1,12 +1,15 @@
 # PayoutDestinationUpdatePayoutMethod
 
+## Example Usage
+
+```typescript
+import { PayoutDestinationUpdatePayoutMethod } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayoutDestinationUpdatePayoutMethod = "Instant";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Standard`  | Standard    |
-| `Instant`   | Instant     |
-| `Expedited` | Expedited   |
-| `Check`     | Check       |
-| `ECheck`    | ECheck      |
+```typescript
+"Standard" | "Instant" | "Expedited" | "Check" | "ECheck"
+```

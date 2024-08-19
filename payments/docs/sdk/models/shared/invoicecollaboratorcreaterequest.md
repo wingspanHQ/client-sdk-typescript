@@ -1,5 +1,17 @@
 # InvoiceCollaboratorCreateRequest
 
+## Example Usage
+
+```typescript
+import { InvoiceCollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCollaboratorCreateRequest = {
+    amount: 8268.71,
+    currency: "USD",
+    description: "Object-based regional architecture",
+    memberClientId: "<value>",
+};
+```
 
 ## Fields
 

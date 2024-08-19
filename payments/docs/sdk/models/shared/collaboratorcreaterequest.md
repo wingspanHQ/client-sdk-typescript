@@ -1,5 +1,14 @@
 # CollaboratorCreateRequest
 
+## Example Usage
+
+```typescript
+import { CollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorCreateRequest = {
+    clientId: "<value>",
+};
+```
 
 ## Fields
 

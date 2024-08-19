@@ -1,5 +1,26 @@
 # InvoiceLineItem
 
+## Example Usage
+
+```typescript
+import { InvoiceLineItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceLineItem = {
+    costPerUnit: 7521.35,
+    createdAt: "<value>",
+    labels: {
+        key: "<value>",
+    },
+    labelsBak2: {
+        key: "<value>",
+    },
+    quantity: 5573.69,
+    reimbursableExpense: false,
+    totalCost: 8296.03,
+    unit: "siemens",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

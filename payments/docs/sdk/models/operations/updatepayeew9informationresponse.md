@@ -1,5 +1,18 @@
 # UpdatePayeeW9InformationResponse
 
+## Example Usage
+
+```typescript
+import { UpdatePayeeW9InformationResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdatePayeeW9InformationResponse = {
+    contentType: "<value>",
+    statusCode: 118274,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 

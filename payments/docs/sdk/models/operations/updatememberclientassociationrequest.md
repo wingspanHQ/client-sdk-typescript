@@ -1,5 +1,14 @@
 # UpdateMemberClientAssociationRequest
 
+## Example Usage
+
+```typescript
+import { UpdateMemberClientAssociationRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateMemberClientAssociationRequest = {
+    id: "<id>",
+};
+```
 
 ## Fields
 

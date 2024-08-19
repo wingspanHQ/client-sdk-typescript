@@ -1,10 +1,15 @@
 # BulkInvoiceItemUpdateAcceptedPaymentMethods
 
+## Example Usage
+
+```typescript
+import { BulkInvoiceItemUpdateAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkInvoiceItemUpdateAcceptedPaymentMethods = "ACH";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Credit` | Credit   |
-| `Ach`    | ACH      |
-| `Manual` | Manual   |
+```typescript
+"Credit" | "ACH" | "Manual"
+```

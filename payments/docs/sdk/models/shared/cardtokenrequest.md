@@ -1,5 +1,15 @@
 # CardTokenRequest
 
+## Example Usage
+
+```typescript
+import { CardTokenRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardTokenRequest = {
+    verificationCode: "<value>",
+    verificationToken: "<value>",
+};
+```
 
 ## Fields
 

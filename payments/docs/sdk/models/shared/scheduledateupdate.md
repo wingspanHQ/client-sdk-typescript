@@ -1,5 +1,12 @@
 # ScheduleDateUpdate
 
+## Example Usage
+
+```typescript
+import { ScheduleDateUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: ScheduleDateUpdate = {};
+```
 
 ## Fields
 

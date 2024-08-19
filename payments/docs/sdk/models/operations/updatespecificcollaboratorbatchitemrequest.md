@@ -1,5 +1,15 @@
 # UpdateSpecificCollaboratorBatchItemRequest
 
+## Example Usage
+
+```typescript
+import { UpdateSpecificCollaboratorBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateSpecificCollaboratorBatchItemRequest = {
+    batchId: "<value>",
+    batchItemId: "<value>",
+};
+```
 
 ## Fields
 

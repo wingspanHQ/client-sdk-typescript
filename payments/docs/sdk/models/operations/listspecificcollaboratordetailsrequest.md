@@ -1,5 +1,14 @@
 # ListSpecificCollaboratorDetailsRequest
 
+## Example Usage
+
+```typescript
+import { ListSpecificCollaboratorDetailsRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSpecificCollaboratorDetailsRequest = {
+    memberId: "<value>",
+};
+```
 
 ## Fields
 

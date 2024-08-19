@@ -1,5 +1,17 @@
 # CollaboratorPayoutsSummary
 
+## Example Usage
+
+```typescript
+import { CollaboratorPayoutsSummary } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorPayoutsSummary = {
+    deductionsCount: 4240.89,
+    payablesCount: 4976.78,
+    totalDeducted: 5546.88,
+    totalPaid: 4278.34,
+};
+```
 
 ## Fields
 

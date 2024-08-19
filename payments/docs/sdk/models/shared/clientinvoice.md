@@ -1,5 +1,99 @@
 # ClientInvoice
 
+## Example Usage
+
+```typescript
+import { ClientInvoice } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientInvoice = {
+    additionalRecipientEmails: ["<value>"],
+    amount: 6455.7,
+    client: {},
+    createdAt: "<value>",
+    currency: "USD",
+    dueDate: "<value>",
+    events: {},
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    lineItems: [
+        {
+            costPerUnit: 353.62,
+            createdAt: "<value>",
+            labels: {
+                key: "<value>",
+            },
+            labelsBak2: {
+                key: "<value>",
+            },
+            quantity: 7836.48,
+            reimbursableExpense: false,
+            totalCost: 4304.02,
+            unit: "tesla",
+            updatedAt: "<value>",
+        },
+    ],
+    member: {},
+    memberAcceptsPayments: false,
+    memberAddress: {
+        addressLine1: "1516 Gottlieb Mill",
+        city: "West Gladysville",
+        postalCode: "11195-5049",
+        state: "Vermont",
+    },
+    memberClient: {
+        achCreditAccount: {
+            accountNumber: "<value>",
+            bankName: "<value>",
+        },
+        client: {
+            user: {},
+        },
+        clientData: {},
+        clientId: "<value>",
+        clientUserAccountType: "member",
+        createdAt: "<value>",
+        emailTo: "<value>",
+        eventActors: {
+            key: "<value>",
+        },
+        events: {},
+        externalIds: {},
+        form1099Balances: {},
+        formW9Data: {},
+        internationalWireAccount: {
+            accountNumber: "<value>",
+            bankName: "<value>",
+        },
+        labels: {
+            key: "<value>",
+        },
+        member: {
+            user: {},
+        },
+        memberClientId: "<value>",
+        memberData: {},
+        memberId: "<value>",
+        parentMemberClientId: "<value>",
+        payerPayeeId: "<value>",
+        status: "Inactive",
+        taxStatus: "Incomplete",
+        updatedAt: "<value>",
+        userRoles: {
+            ownerIds: ["<value>"],
+            viewerIds: ["<value>"],
+        },
+    },
+    memberCompany: "<value>",
+    memberEmail: "<value>",
+    memberLogoUrl: "<value>",
+    memberName: "<value>",
+    memberPaymentsVersion: 7241.68,
+    memberStripeAccountId: "<value>",
+    projectName: "<value>",
+    status: "Paid",
+    updatedAt: "<value>",
+};
+```
 
 ## Fields
 

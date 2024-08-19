@@ -1,5 +1,18 @@
 # UpdateClientBatchResponse
 
+## Example Usage
+
+```typescript
+import { UpdateClientBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateClientBatchResponse = {
+    contentType: "<value>",
+    statusCode: 902599,
+    rawResponse: new Response('{"message": "hello world"}', {
+        headers: { "Content-Type": "application/json" },
+    }),
+};
+```
 
 ## Fields
 
