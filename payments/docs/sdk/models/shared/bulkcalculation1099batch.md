@@ -15,7 +15,7 @@ let value: BulkCalculation1099Batch = {
     labels: {
         key: "<value>",
     },
-    status: "Failed",
+    status: "Open",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

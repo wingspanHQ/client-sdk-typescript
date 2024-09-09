@@ -5,7 +5,7 @@
 ```typescript
 import { CustomFieldResourceType } from "@wingspan/payments/sdk/models/shared";
 
-let value: CustomFieldResourceType = "LineItem";
+let value: CustomFieldResourceType = "Collaborator";
 ```
 
 ## Values

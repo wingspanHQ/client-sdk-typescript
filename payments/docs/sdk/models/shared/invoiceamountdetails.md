@@ -6,14 +6,14 @@
 import { InvoiceAmountDetails } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceAmountDetails = {
-    clientPaid: 3015.98,
-    collaboratorPayments: 4879.35,
-    deductions: 2621.18,
-    memberGross: 4585.15,
-    memberNet: 4561.41,
-    memberTaxWithheld: 5245.93,
-    processingFee: 6832.82,
-    wingspanTopUp: 4420.15,
+    clientPaid: 4334.39,
+    collaboratorPayments: 3799.27,
+    deductions: 8268.71,
+    memberGross: 1811.51,
+    memberNet: 5093.42,
+    memberTaxWithheld: 7885.46,
+    processingFee: 863.77,
+    wingspanTopUp: 568.48,
 };
 ```
 

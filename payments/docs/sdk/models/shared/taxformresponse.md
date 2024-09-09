@@ -7,18 +7,18 @@ import { TaxFormResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormResponse = {
     activeSubmissionId: "<value>",
-    adjustments: 4071.83,
+    adjustments: 117.14,
     clientId: "<value>",
     createdAt: "<value>",
     data: {},
-    deliveryMethod: "Electronic",
+    deliveryMethod: "Mail",
     deprecatedTaxForm: {},
     eventActors: {
         key: "<value>",
     },
     eventHistory: [
         {
-            eventType: "PayerManuallyUpdatedStatus",
+            eventType: "TINVerificationRequested",
             timestamp: "<value>",
             triggeredBy: "System",
         },
@@ -29,19 +29,19 @@ let value: TaxFormResponse = {
     },
     memberId: "<value>",
     payerPayeeId: "<value>",
-    paymentProcessingFees: 6974.29,
-    platformIncome: 3732.91,
+    paymentProcessingFees: 7299.91,
+    platformIncome: 7499.99,
     recipientConfirmedW9Info: false,
     recipientReadyToSubmitW9: false,
     recipientSyncEnabled: false,
-    status: "AcceptedByIrs",
+    status: "ReadyToSubmitToIrs",
     submissions: [
         {
             correctionType: "Type1",
             deliveryMethod: "Mail",
             externalDocumentId: "<value>",
             isCorrected: false,
-            status: "Pending",
+            status: "AcceptedByIrs",
             submissionData: {},
             submissionId: "<value>",
         },
@@ -53,7 +53,7 @@ let value: TaxFormResponse = {
         ownerIds: ["<value>"],
         viewerIds: ["<value>"],
     },
-    year: 8663.83,
+    year: 543.38,
 };
 ```
 

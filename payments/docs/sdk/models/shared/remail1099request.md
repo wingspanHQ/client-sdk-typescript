@@ -7,13 +7,13 @@ import { Remail1099Request } from "@wingspan/payments/sdk/models/shared";
 
 let value: Remail1099Request = {
     address: {
-        addressLine1: "22129 Ritchie Lakes",
-        city: "Waldoburgh",
-        postalCode: "20004-4386",
-        state: "Wisconsin",
+        addressLine1: "44386 Hodkiewicz Pass",
+        city: "New Albinhaven",
+        postalCode: "76446",
+        state: "Nebraska",
     },
     memberId: "<value>",
-    year: 3777.52,
+    year: 6070.45,
 };
 ```
 

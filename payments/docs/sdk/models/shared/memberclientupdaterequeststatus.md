@@ -5,7 +5,7 @@
 ```typescript
 import { MemberClientUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: MemberClientUpdateRequestStatus = "Pending";
+let value: MemberClientUpdateRequestStatus = "Active";
 ```
 
 ## Values

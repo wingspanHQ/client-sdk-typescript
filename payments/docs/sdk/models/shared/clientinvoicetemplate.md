@@ -10,17 +10,17 @@ let value: ClientInvoiceTemplate = {
     createdAt: "<value>",
     invoiceData: {
         additionalRecipientEmails: ["<value>"],
-        amount: 6600.4,
+        amount: 5876,
         client: {},
         createdAt: "<value>",
-        currency: "CAD",
+        currency: "USD",
         dueDate: "<value>",
         events: {},
         invoiceId: "<value>",
         invoiceNumber: "<value>",
         lineItems: [
             {
-                costPerUnit: 2065.94,
+                costPerUnit: 2728.22,
                 createdAt: "<value>",
                 labels: {
                     key: "<value>",
@@ -28,20 +28,20 @@ let value: ClientInvoiceTemplate = {
                 labelsBak2: {
                     key: "<value>",
                 },
-                quantity: 7786.96,
+                quantity: 8920.5,
                 reimbursableExpense: false,
-                totalCost: 8472.76,
-                unit: "steradian",
+                totalCost: 3708.53,
+                unit: "ampere",
                 updatedAt: "<value>",
             },
         ],
         member: {},
         memberAcceptsPayments: false,
         memberAddress: {
-            addressLine1: "213 Lacey Avenue",
-            city: "Fort Gabe",
-            postalCode: "17490",
-            state: "Oklahoma",
+            addressLine1: "74907 Kulas Circle",
+            city: "Josiahside",
+            postalCode: "45491",
+            state: "North Carolina",
         },
         memberClient: {
             achCreditAccount: {
@@ -53,7 +53,7 @@ let value: ClientInvoiceTemplate = {
             },
             clientData: {},
             clientId: "<value>",
-            clientUserAccountType: "enterprise",
+            clientUserAccountType: "member",
             createdAt: "<value>",
             emailTo: "<value>",
             eventActors: {
@@ -78,8 +78,8 @@ let value: ClientInvoiceTemplate = {
             memberId: "<value>",
             parentMemberClientId: "<value>",
             payerPayeeId: "<value>",
-            status: "Inactive",
-            taxStatus: "Complete",
+            status: "Active",
+            taxStatus: "Incomplete",
             updatedAt: "<value>",
             userRoles: {
                 ownerIds: ["<value>"],
@@ -90,7 +90,7 @@ let value: ClientInvoiceTemplate = {
         memberEmail: "<value>",
         memberLogoUrl: "<value>",
         memberName: "<value>",
-        memberPaymentsVersion: 4694.98,
+        memberPaymentsVersion: 4304.02,
         memberStripeAccountId: "<value>",
         projectName: "<value>",
         status: "Cancelled",
@@ -102,10 +102,10 @@ let value: ClientInvoiceTemplate = {
     scheduleDates: [
         {
             date: "<value>",
-            status: "Modified",
+            status: "Skipped",
         },
     ],
-    status: "Draft",
+    status: "Active",
     updatedAt: "<value>",
 };
 ```

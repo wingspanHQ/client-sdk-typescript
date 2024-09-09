@@ -29,7 +29,7 @@ let value: MemberClientSchema = {
         key: "<value>",
     },
     memberClientId: "<value>",
-    status: "Pending",
+    status: "Active",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

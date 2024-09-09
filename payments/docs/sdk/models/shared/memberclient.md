@@ -40,8 +40,8 @@ let value: MemberClient = {
     memberId: "<value>",
     parentMemberClientId: "<value>",
     payerPayeeId: "<value>",
-    status: "Pending",
-    taxStatus: "Failed",
+    status: "Inactive",
+    taxStatus: "Complete",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

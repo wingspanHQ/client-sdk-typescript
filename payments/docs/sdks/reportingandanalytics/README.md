@@ -28,7 +28,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.get();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -102,7 +102,7 @@ async function run() {
   const result = await payments.reportingAndAnalytics.getPayrollReport({
     payrollId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -177,7 +177,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listDetailedCollaborator();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -249,7 +249,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listLineItem();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -321,7 +321,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listPayable();
-
+  
   // Handle the result
   console.log(result)
 }

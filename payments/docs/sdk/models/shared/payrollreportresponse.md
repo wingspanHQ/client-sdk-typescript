@@ -12,7 +12,7 @@ let value: PayrollReportResponse = {
         dueDate: "<value>",
         invoiceId: "<value>",
         invoiceNumber: "<value>",
-        status: "PaymentInTransit",
+        status: "Cancelled",
         updatedAt: "<value>",
     },
 };

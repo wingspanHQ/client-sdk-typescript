@@ -5,7 +5,7 @@
 ```typescript
 import { LineItemsAgingReportResponseStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: LineItemsAgingReportResponseStatus = "Draft";
+let value: LineItemsAgingReportResponseStatus = "Overdue";
 ```
 
 ## Values

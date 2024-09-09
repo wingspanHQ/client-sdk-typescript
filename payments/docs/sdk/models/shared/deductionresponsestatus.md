@@ -5,7 +5,7 @@
 ```typescript
 import { DeductionResponseStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: DeductionResponseStatus = "Pending";
+let value: DeductionResponseStatus = "Complete";
 ```
 
 ## Values

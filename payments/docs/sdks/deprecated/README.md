@@ -33,7 +33,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.deprecated.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -110,7 +110,7 @@ async function run() {
   const result = await payments.deprecated.delete({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -185,7 +185,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.deprecated.deleteInstantPayout();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -261,7 +261,7 @@ async function run() {
   const result = await payments.deprecated.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -336,7 +336,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.deprecated.getInstantPayout();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -410,7 +410,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.deprecated.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -486,7 +486,7 @@ async function run() {
   const result = await payments.deprecated.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -561,7 +561,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.deprecated.updateInstantPayout();
-
+  
   // Handle the result
   console.log(result)
 }

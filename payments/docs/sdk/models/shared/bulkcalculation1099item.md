@@ -8,7 +8,7 @@ import { BulkCalculation1099Item } from "@wingspan/payments/sdk/models/shared";
 let value: BulkCalculation1099Item = {
     bulkCalculation1099BatchId: "<value>",
     bulkCalculation1099ItemId: "<value>",
-    calculationType: "Submissions",
+    calculationType: "Balances",
     clientId: "<value>",
     createdAt: "<value>",
     eventActors: {
@@ -17,13 +17,13 @@ let value: BulkCalculation1099Item = {
     labels: {
         key: "<value>",
     },
-    status: "Complete",
+    status: "Failed",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],
         viewerIds: ["<value>"],
     },
-    year: 7301.22,
+    year: 2274.14,
 };
 ```
 

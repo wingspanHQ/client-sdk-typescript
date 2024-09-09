@@ -6,7 +6,7 @@
 import { InstitutionResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: InstitutionResponse = {
-    address: "8112 Kevon Harbor",
+    address: "42813 Hubert Way",
     isACHSupported: false,
     isRTPSupported: false,
     isWireSupported: false,

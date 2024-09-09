@@ -9,7 +9,7 @@ let value: CollaboratorGroupResponse = {
     clientId: "<value>",
     collaboratorGroupId: "<value>",
     defaultGroup: false,
-    description: "User-friendly bandwidth-monitored forecast",
+    description: "Public-key attitude-oriented methodology",
     name: "<value>",
 };
 ```

@@ -27,7 +27,7 @@ async function run() {
   const result = await payments.payrollSettings.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -104,7 +104,7 @@ async function run() {
   const result = await payments.payrollSettings.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

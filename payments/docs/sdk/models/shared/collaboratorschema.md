@@ -28,8 +28,8 @@ let value: CollaboratorSchema = {
         user: {},
     },
     memberId: "<value>",
-    status: "Pending",
-    taxStatus: "Complete",
+    status: "Inactive",
+    taxStatus: "Pending",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

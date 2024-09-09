@@ -10,7 +10,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
     collaboratorGroups: [
         {
             collaboratorGroupId: "<value>",
-            description: "Public-key multi-state function",
+            description: "Managed directional secured line",
             name: "<value>",
         },
     ],
@@ -22,10 +22,10 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
     memberClientId: "<value>",
     memberId: "<value>",
     payoutsSummary: {
-        deductionsCount: 2460.63,
-        payablesCount: 6339.31,
-        totalDeducted: 6658.59,
-        totalPaid: 9268.8,
+        deductionsCount: 7065.75,
+        payablesCount: 7382.27,
+        totalDeducted: 4148.57,
+        totalPaid: 4471.44,
     },
     servicesStatus: {
         incomeAndExpenses: false,

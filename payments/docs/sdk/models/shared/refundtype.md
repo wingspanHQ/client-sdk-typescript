@@ -5,7 +5,7 @@
 ```typescript
 import { RefundType } from "@wingspan/payments/sdk/models/shared";
 
-let value: RefundType = "TaxWithholding";
+let value: RefundType = "Account";
 ```
 
 ## Values

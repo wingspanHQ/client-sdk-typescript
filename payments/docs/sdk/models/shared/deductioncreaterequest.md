@@ -6,12 +6,12 @@
 import { DeductionCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: DeductionCreateRequest = {
-    amount: 7469.94,
+    amount: 5521.93,
     clientId: "<value>",
     currency: "CAD",
     memberId: "<value>",
     name: "<value>",
-    type: "PrePayment",
+    type: "PostPayment",
 };
 ```
 

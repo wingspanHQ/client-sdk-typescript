@@ -5,7 +5,7 @@
 ```typescript
 import { Structure } from "@wingspan/payments/sdk/models/shared";
 
-let value: Structure = "LLCPartnership";
+let value: Structure = "CorporationC";
 ```
 
 ## Values

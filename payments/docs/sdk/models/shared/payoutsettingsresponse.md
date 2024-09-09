@@ -9,10 +9,10 @@ let value: PayoutSettingsResponse = {
     payoutDestinations: [
         {
             destinationId: "<value>",
-            destinationType: "Card",
+            destinationType: "Account",
             name: "<value>",
-            payoutMethod: "Expedited",
-            percentage: 336.25,
+            payoutMethod: "ECheck",
+            percentage: 5370.23,
         },
     ],
     payoutPreferences: "Check",

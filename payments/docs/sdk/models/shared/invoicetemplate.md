@@ -11,10 +11,10 @@ let value: InvoiceTemplate = {
         key: "<value>",
     },
     invoiceData: {
-        amount: 4732.21,
+        amount: 7313.98,
         client: {},
         createdAt: "<value>",
-        currency: "CAD",
+        currency: "USD",
         dueDate: "<value>",
         eventActors: {
             key: "<value>",
@@ -28,7 +28,7 @@ let value: InvoiceTemplate = {
         },
         lineItems: [
             {
-                costPerUnit: 5801.97,
+                costPerUnit: 7669.64,
                 createdAt: "<value>",
                 labels: {
                     key: "<value>",
@@ -36,25 +36,25 @@ let value: InvoiceTemplate = {
                 labelsBak2: {
                     key: "<value>",
                 },
-                quantity: 3277.2,
+                quantity: 1605.38,
                 reimbursableExpense: false,
-                totalCost: 7162.44,
-                unit: "sievert",
+                totalCost: 97.66,
+                unit: "farad",
                 updatedAt: "<value>",
             },
         ],
         member: {},
         memberAddress: {
-            addressLine1: "67271 Peyton Garden",
-            city: "DeKalb",
-            postalCode: "55985",
-            state: "Minnesota",
+            addressLine1: "92455 Stiedemann Motorway",
+            city: "Avisshire",
+            postalCode: "58819-9801",
+            state: "California",
         },
         memberClientId: "<value>",
         memberId: "<value>",
         payments: [
             {
-                amount: 974.68,
+                amount: 6288.99,
                 createdAt: "<value>",
                 events: {},
                 labels: {
@@ -63,12 +63,12 @@ let value: InvoiceTemplate = {
                 paymentId: "<value>",
                 sourceId: "<value>",
                 sourceMetadata: {},
-                sourceType: "InternalAccount",
-                status: "Sent",
+                sourceType: "Card",
+                status: "Pending",
                 updatedAt: "<value>",
             },
         ],
-        status: "Pending",
+        status: "Paid",
         updatedAt: "<value>",
         userRoles: {
             ownerIds: ["<value>"],
@@ -80,7 +80,7 @@ let value: InvoiceTemplate = {
         key: "<value>",
     },
     memberId: "<value>",
-    status: "Cancelled",
+    status: "Active",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

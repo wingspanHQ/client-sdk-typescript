@@ -5,7 +5,7 @@
 ```typescript
 import { CardProcessingFees } from "@wingspan/payments/sdk/models/shared";
 
-let value: CardProcessingFees = "Include";
+let value: CardProcessingFees = "Exclude";
 ```
 
 ## Values

@@ -28,7 +28,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.customFieldManagement.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -103,7 +103,7 @@ async function run() {
   const result = await payments.customFieldManagement.delete({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -180,7 +180,7 @@ async function run() {
   const result = await payments.customFieldManagement.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -255,7 +255,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.customFieldManagement.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -329,7 +329,7 @@ async function run() {
   const result = await payments.customFieldManagement.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

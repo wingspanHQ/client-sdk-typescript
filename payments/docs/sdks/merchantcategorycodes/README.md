@@ -24,7 +24,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.merchantCategoryCodes.get();
-
+  
   // Handle the result
   console.log(result)
 }

@@ -35,7 +35,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -110,7 +110,7 @@ async function run() {
   const result = await payments.clientManagement.deleteAssociation({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -187,7 +187,7 @@ async function run() {
   const result = await payments.clientManagement.deleteClientDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -262,7 +262,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.establish();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -337,7 +337,7 @@ async function run() {
   const result = await payments.clientManagement.getAssociation({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -414,7 +414,7 @@ async function run() {
   const result = await payments.clientManagement.getClientDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -489,7 +489,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -561,7 +561,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.listAssociations();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -633,7 +633,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.listClientDeduction();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -707,7 +707,7 @@ async function run() {
   const result = await payments.clientManagement.listSpecificClientDetail({
     clientId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -784,7 +784,7 @@ async function run() {
   const result = await payments.clientManagement.updateAssociation({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -861,7 +861,7 @@ async function run() {
   const result = await payments.clientManagement.updateClientDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

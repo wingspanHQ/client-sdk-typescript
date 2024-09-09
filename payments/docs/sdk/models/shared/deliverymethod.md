@@ -5,7 +5,7 @@
 ```typescript
 import { DeliveryMethod } from "@wingspan/payments/sdk/models/shared";
 
-let value: DeliveryMethod = "Electronic";
+let value: DeliveryMethod = "Mail";
 ```
 
 ## Values

@@ -43,7 +43,7 @@ async function run() {
     groupId: "<value>",
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -119,7 +119,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -192,7 +192,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.createCollaboratorDeduction();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -265,7 +265,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.createCollaboratorGroup();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -340,7 +340,7 @@ async function run() {
   const result = await payments.collaboratorManagement.delete({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -417,7 +417,7 @@ async function run() {
   const result = await payments.collaboratorManagement.deleteCollaboratorDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -495,7 +495,7 @@ async function run() {
     groupId: "<value>",
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -573,7 +573,7 @@ async function run() {
   const result = await payments.collaboratorManagement.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -650,7 +650,7 @@ async function run() {
   const result = await payments.collaboratorManagement.getCollaboratorDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -727,7 +727,7 @@ async function run() {
   const result = await payments.collaboratorManagement.getEventAssociated({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -802,7 +802,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -874,7 +874,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.listCollaboratorDeduction();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -946,7 +946,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.listCollaboratorGroups();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1018,7 +1018,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.listRegistered();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1092,7 +1092,7 @@ async function run() {
   const result = await payments.collaboratorManagement.listSpecificCollaboratorDetail({
     memberId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1169,7 +1169,7 @@ async function run() {
   const result = await payments.collaboratorManagement.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1246,7 +1246,7 @@ async function run() {
   const result = await payments.collaboratorManagement.updateCollaboratorDeduction({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

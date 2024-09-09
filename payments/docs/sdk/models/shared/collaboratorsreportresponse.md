@@ -10,7 +10,7 @@ let value: CollaboratorsReportResponse = {
     collaboratorGroups: [
         {
             collaboratorGroupId: "<value>",
-            description: "Versatile neutral support",
+            description: "User-friendly tertiary core",
             name: "<value>",
         },
     ],
@@ -25,8 +25,8 @@ let value: CollaboratorsReportResponse = {
         incomeAndExpenses: false,
         taxWithholdings: false,
     },
-    status: "Pending",
-    taxStatus: "Failed",
+    status: "Inactive",
+    taxStatus: "Pending",
     updatedAt: "<value>",
 };
 ```

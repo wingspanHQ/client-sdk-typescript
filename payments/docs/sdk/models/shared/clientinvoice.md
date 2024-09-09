@@ -7,7 +7,7 @@ import { ClientInvoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoice = {
     additionalRecipientEmails: ["<value>"],
-    amount: 6455.7,
+    amount: 5392.24,
     client: {},
     createdAt: "<value>",
     currency: "USD",
@@ -17,7 +17,7 @@ let value: ClientInvoice = {
     invoiceNumber: "<value>",
     lineItems: [
         {
-            costPerUnit: 353.62,
+            costPerUnit: 3256.85,
             createdAt: "<value>",
             labels: {
                 key: "<value>",
@@ -25,20 +25,20 @@ let value: ClientInvoice = {
             labelsBak2: {
                 key: "<value>",
             },
-            quantity: 7836.48,
+            quantity: 3926.76,
             reimbursableExpense: false,
-            totalCost: 4304.02,
-            unit: "tesla",
+            totalCost: 1470.14,
+            unit: "lux",
             updatedAt: "<value>",
         },
     ],
     member: {},
     memberAcceptsPayments: false,
     memberAddress: {
-        addressLine1: "1516 Gottlieb Mill",
-        city: "West Gladysville",
-        postalCode: "11195-5049",
-        state: "Vermont",
+        addressLine1: "11955 Jacques Unions",
+        city: "Biloxi",
+        postalCode: "87830",
+        state: "Virginia",
     },
     memberClient: {
         achCreditAccount: {
@@ -75,8 +75,8 @@ let value: ClientInvoice = {
         memberId: "<value>",
         parentMemberClientId: "<value>",
         payerPayeeId: "<value>",
-        status: "Inactive",
-        taxStatus: "Incomplete",
+        status: "Pending",
+        taxStatus: "Failed",
         updatedAt: "<value>",
         userRoles: {
             ownerIds: ["<value>"],
@@ -87,10 +87,10 @@ let value: ClientInvoice = {
     memberEmail: "<value>",
     memberLogoUrl: "<value>",
     memberName: "<value>",
-    memberPaymentsVersion: 7241.68,
+    memberPaymentsVersion: 6996.22,
     memberStripeAccountId: "<value>",
     projectName: "<value>",
-    status: "Paid",
+    status: "Pending",
     updatedAt: "<value>",
 };
 ```

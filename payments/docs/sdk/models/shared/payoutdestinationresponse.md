@@ -9,8 +9,8 @@ let value: PayoutDestinationResponse = {
     destinationId: "<value>",
     destinationType: "Account",
     name: "<value>",
-    payoutMethod: "Expedited",
-    percentage: 2212.62,
+    payoutMethod: "ECheck",
+    percentage: 3523.12,
 };
 ```
 

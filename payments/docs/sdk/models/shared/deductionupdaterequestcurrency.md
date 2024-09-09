@@ -5,7 +5,7 @@
 ```typescript
 import { DeductionUpdateRequestCurrency } from "@wingspan/payments/sdk/models/shared";
 
-let value: DeductionUpdateRequestCurrency = "CAD";
+let value: DeductionUpdateRequestCurrency = "USD";
 ```
 
 ## Values

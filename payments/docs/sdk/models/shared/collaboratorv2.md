@@ -24,12 +24,12 @@ let value: CollaboratorV2 = {
     firstCollaborationId: "<value>",
     form1099Balances: {},
     formW9Data: {
-        addressLine1: "222 Marianne Club",
-        city: "North Kayleighshire",
-        companyStructure: "None",
-        country: "Oman",
-        postalCode: "79275-1054",
-        state: "New Jersey",
+        addressLine1: "05906 Schaden Way",
+        city: "Lake Kyler",
+        companyStructure: "SoleProprietorship",
+        country: "Bahamas",
+        postalCode: "45978-6329",
+        state: "Minnesota",
     },
     internationalWireAccount: {
         accountNumber: "<value>",
@@ -43,7 +43,7 @@ let value: CollaboratorV2 = {
     },
     memberId: "<value>",
     primaryCollaborationId: "<value>",
-    status: "Pending",
+    status: "Active",
     taxStatus: "Incomplete",
     updatedAt: "<value>",
     userRoles: {

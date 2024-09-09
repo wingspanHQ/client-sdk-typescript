@@ -6,10 +6,10 @@
 import { TinVerification } from "@wingspan/payments/sdk/models/shared";
 
 let value: TinVerification = {
-    lastVerifiedTimestamp: 1999.96,
+    lastVerifiedTimestamp: 1646.94,
     message: "<value>",
-    status: "lockedOut",
-    unlockTimestamp: 185.21,
+    status: "pending",
+    unlockTimestamp: 6214.79,
 };
 ```
 

@@ -6,9 +6,9 @@
 import { InvoiceCollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaboratorCreateRequest = {
-    amount: 8268.71,
-    currency: "USD",
-    description: "Object-based regional architecture",
+    amount: 7774.08,
+    currency: "CAD",
+    description: "Exclusive client-server framework",
     memberClientId: "<value>",
 };
 ```

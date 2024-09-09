@@ -6,7 +6,7 @@
 import { CollaboratorGroupCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorGroupCreateRequest = {
-    description: "Monitored executive functionalities",
+    description: "User-centric asynchronous strategy",
     name: "<value>",
 };
 ```

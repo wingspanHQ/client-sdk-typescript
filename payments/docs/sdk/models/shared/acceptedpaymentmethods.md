@@ -5,7 +5,7 @@
 ```typescript
 import { AcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
-let value: AcceptedPaymentMethods = "Credit";
+let value: AcceptedPaymentMethods = "ACH";
 ```
 
 ## Values

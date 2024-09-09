@@ -5,7 +5,7 @@
 ```typescript
 import { TinVerificationStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: TinVerificationStatus = "mismatch";
+let value: TinVerificationStatus = "unverified";
 ```
 
 ## Values

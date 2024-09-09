@@ -7,20 +7,20 @@ import { PayerTaxFormResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayerTaxFormResponse = {
     activeSubmissionId: "<value>",
-    adjustments: 166.27,
+    adjustments: 1794.9,
     clientId: "<value>",
     createdAt: "<value>",
     data: {},
-    deliveryMethod: "Mail",
+    deliveryMethod: "Electronic",
     deprecatedTaxForm: {},
     eventActors: {
         key: "<value>",
     },
     eventHistory: [
         {
-            eventType: "InvitationOpened",
+            eventType: "RecipientSyncEnabled",
             timestamp: "<value>",
-            triggeredBy: "Payer",
+            triggeredBy: "System",
         },
     ],
     filingStateCode: "<value>",
@@ -29,19 +29,19 @@ let value: PayerTaxFormResponse = {
     },
     memberId: "<value>",
     payerPayeeId: "<value>",
-    paymentProcessingFees: 7649.12,
-    platformIncome: 3599.78,
+    paymentProcessingFees: 4634.51,
+    platformIncome: 2239.24,
     recipientConfirmedW9Info: false,
     recipientReadyToSubmitW9: false,
     recipientSyncEnabled: false,
-    status: "Ineligible",
+    status: "Excluded",
     submissions: [
         {
-            correctionType: "Type2",
+            correctionType: "Type1",
             deliveryMethod: "Mail",
             externalDocumentId: "<value>",
             isCorrected: false,
-            status: "ReadyToSubmitToIrs",
+            status: "Ineligible",
             submissionData: {},
             submissionId: "<value>",
         },
@@ -53,7 +53,7 @@ let value: PayerTaxFormResponse = {
         ownerIds: ["<value>"],
         viewerIds: ["<value>"],
     },
-    year: 3394.04,
+    year: 6082.53,
 };
 ```
 

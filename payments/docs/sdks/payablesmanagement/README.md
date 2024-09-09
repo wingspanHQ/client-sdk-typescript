@@ -31,7 +31,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.payablesManagement.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -106,7 +106,7 @@ async function run() {
   const result = await payments.payablesManagement.delete({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -181,7 +181,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.payablesManagement.execute();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -255,7 +255,7 @@ async function run() {
   const result = await payments.payablesManagement.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -330,7 +330,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.payablesManagement.getApproved();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -402,7 +402,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.payablesManagement.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -474,7 +474,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.payablesManagement.listSummary();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -548,7 +548,7 @@ async function run() {
   const result = await payments.payablesManagement.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

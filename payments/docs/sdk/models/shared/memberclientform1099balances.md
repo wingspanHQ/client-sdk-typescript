@@ -6,13 +6,13 @@
 import { MemberClientForm1099Balances } from "@wingspan/payments/sdk/models/shared";
 
 let value: MemberClientForm1099Balances = {
-    adjustments: 9046.48,
-    deliveryMethod: "Mail",
-    exclusionReason: "BelowThreshold",
+    adjustments: 332.22,
+    deliveryMethod: "Electronic",
+    exclusionReason: "NonUsEntity",
     form1099Generated: false,
-    paymentProcessingFees: 1624.93,
-    platformIncome: 5083.15,
-    status: "Rejected",
+    paymentProcessingFees: 6974.29,
+    platformIncome: 3732.91,
+    status: "Submitted",
     type: "NEC",
 };
 ```

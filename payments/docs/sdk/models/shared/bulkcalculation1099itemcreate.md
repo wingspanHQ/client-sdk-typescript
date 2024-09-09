@@ -7,7 +7,7 @@ import { BulkCalculation1099ItemCreate } from "@wingspan/payments/sdk/models/sha
 
 let value: BulkCalculation1099ItemCreate = {
     clientId: "<value>",
-    year: 3119.45,
+    year: 2543.56,
 };
 ```
 

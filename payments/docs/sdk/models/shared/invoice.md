@@ -6,7 +6,7 @@
 import { Invoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: Invoice = {
-    amount: 6394.73,
+    amount: 1898.48,
     client: {},
     createdAt: "<value>",
     currency: "USD",
@@ -23,7 +23,7 @@ let value: Invoice = {
     },
     lineItems: [
         {
-            costPerUnit: 3685.84,
+            costPerUnit: 5113.19,
             createdAt: "<value>",
             labels: {
                 key: "<value>",
@@ -31,25 +31,25 @@ let value: Invoice = {
             labelsBak2: {
                 key: "<value>",
             },
-            quantity: 4104.92,
+            quantity: 1206.57,
             reimbursableExpense: false,
-            totalCost: 1369,
-            unit: "watt",
+            totalCost: 2243.17,
+            unit: "katal",
             updatedAt: "<value>",
         },
     ],
     member: {},
     memberAddress: {
-        addressLine1: "214 Cartwright Extensions",
-        city: "Bothell",
-        postalCode: "85939",
-        state: "South Carolina",
+        addressLine1: "48593 Schamberger Union",
+        city: "Onabury",
+        postalCode: "30347",
+        state: "Idaho",
     },
     memberClientId: "<value>",
     memberId: "<value>",
     payments: [
         {
-            amount: 9065.56,
+            amount: 9262.13,
             createdAt: "<value>",
             events: {},
             labels: {
@@ -58,12 +58,12 @@ let value: Invoice = {
             paymentId: "<value>",
             sourceId: "<value>",
             sourceMetadata: {},
-            sourceType: "Card",
-            status: "Cleared",
+            sourceType: "Account",
+            status: "Failed",
             updatedAt: "<value>",
         },
     ],
-    status: "Overdue",
+    status: "Draft",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

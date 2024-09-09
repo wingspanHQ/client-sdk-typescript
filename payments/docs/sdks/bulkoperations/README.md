@@ -58,7 +58,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -133,7 +133,7 @@ async function run() {
   const result = await payments.bulkOperations.createBatchItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -208,7 +208,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createClient();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -283,7 +283,7 @@ async function run() {
   const result = await payments.bulkOperations.createClientItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -358,7 +358,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createCollaborator();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -431,7 +431,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createPayable();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -506,7 +506,7 @@ async function run() {
   const result = await payments.bulkOperations.createSpecificCollaboratorItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -583,7 +583,7 @@ async function run() {
   const result = await payments.bulkOperations.createSpecificInvoice({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -660,7 +660,7 @@ async function run() {
   const result = await payments.bulkOperations.deleteCollaborator({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -737,7 +737,7 @@ async function run() {
   const result = await payments.bulkOperations.deletePayable({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -814,7 +814,7 @@ async function run() {
   const result = await payments.bulkOperations.get({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -891,7 +891,7 @@ async function run() {
   const result = await payments.bulkOperations.getBatchItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -968,7 +968,7 @@ async function run() {
   const result = await payments.bulkOperations.getClient({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1046,7 +1046,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1124,7 +1124,7 @@ async function run() {
   const result = await payments.bulkOperations.getCollaborator({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1201,7 +1201,7 @@ async function run() {
   const result = await payments.bulkOperations.getPayable({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1279,7 +1279,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1358,7 +1358,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1437,7 +1437,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1513,7 +1513,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1587,7 +1587,7 @@ async function run() {
   const result = await payments.bulkOperations.listBatchItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1662,7 +1662,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listClient();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1736,7 +1736,7 @@ async function run() {
   const result = await payments.bulkOperations.listClientItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1811,7 +1811,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listCollaborator();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1883,7 +1883,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listPayable();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1957,7 +1957,7 @@ async function run() {
   const result = await payments.bulkOperations.listSpecificCollaboratorItem({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2034,7 +2034,7 @@ async function run() {
   const result = await payments.bulkOperations.listSpecificInvoice({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2111,7 +2111,7 @@ async function run() {
   const result = await payments.bulkOperations.update({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2188,7 +2188,7 @@ async function run() {
   const result = await payments.bulkOperations.updateClient({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2266,7 +2266,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2344,7 +2344,7 @@ async function run() {
   const result = await payments.bulkOperations.updateCollaborator({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2421,7 +2421,7 @@ async function run() {
   const result = await payments.bulkOperations.updatePayable({
     batchId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2499,7 +2499,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2578,7 +2578,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -2657,7 +2657,7 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }

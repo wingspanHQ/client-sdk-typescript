@@ -10,7 +10,7 @@ let value: InvoiceTemplateCreateRequest = {
         lineItems: [{}],
         memberClientId: "<value>",
     },
-    status: "Active",
+    status: "Draft",
 };
 ```
 

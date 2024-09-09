@@ -5,7 +5,7 @@
 ```typescript
 import { InvoiceDataCreateRequestCurrency } from "@wingspan/payments/sdk/models/shared";
 
-let value: InvoiceDataCreateRequestCurrency = "CAD";
+let value: InvoiceDataCreateRequestCurrency = "USD";
 ```
 
 ## Values

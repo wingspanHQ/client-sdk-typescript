@@ -6,7 +6,7 @@
 import { BulkInvoiceItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkInvoiceItem = {
-    amount: 1536.94,
+    amount: 2776.28,
     bulkInvoiceBatchId: "<value>",
     bulkInvoiceItemId: "<value>",
     createdAt: "<value>",
@@ -14,14 +14,14 @@ let value: BulkInvoiceItem = {
     eventActors: {
         key: "<value>",
     },
-    invoiceStatus: "Approved",
+    invoiceStatus: "Draft",
     labels: {
         key: "<value>",
     },
     lineItemDescription: "<value>",
     memberId: "<value>",
     paidDate: "<value>",
-    status: "Complete",
+    status: "Processing",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

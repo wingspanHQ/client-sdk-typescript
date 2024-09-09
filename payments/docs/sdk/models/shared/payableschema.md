@@ -6,14 +6,14 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-    amount: 996.15,
+    amount: 8395.13,
     attachments: {},
     client: {},
     clientId: "<value>",
     collaboratorId: "<value>",
     createdAt: "<value>",
     creditFeeHandling: {},
-    currency: "CAD",
+    currency: "USD",
     dueDate: "<value>",
     eventActors: {
         key: "<value>",
@@ -33,7 +33,7 @@ let value: PayableSchema = {
     },
     lineItems: [
         {
-            costPerUnit: 9453.02,
+            costPerUnit: 5223.71,
             createdAt: "<value>",
             labels: {
                 key: "<value>",
@@ -41,26 +41,26 @@ let value: PayableSchema = {
             labelsBak2: {
                 key: "<value>",
             },
-            quantity: 984.78,
+            quantity: 156.06,
             reimbursableExpense: false,
-            totalCost: 8694.89,
-            unit: "mole",
+            totalCost: 5130.75,
+            unit: "watt",
             updatedAt: "<value>",
         },
     ],
     member: {},
     memberAddress: {
-        addressLine1: "0302 Leta Stream",
-        city: "New Adriennemouth",
-        postalCode: "60520",
-        state: "Idaho",
+        addressLine1: "0520 Kraig Flat",
+        city: "Christiansenbury",
+        postalCode: "41962",
+        state: "Wisconsin",
     },
     memberId: "<value>",
     notificationPreferences: {
         sendReminders: false,
     },
     payableId: "<value>",
-    status: "Pending",
+    status: "Overdue",
     updatedAt: "<value>",
     userRoles: {
         ownerIds: ["<value>"],

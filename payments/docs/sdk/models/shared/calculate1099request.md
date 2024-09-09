@@ -7,7 +7,7 @@ import { Calculate1099Request } from "@wingspan/payments/sdk/models/shared";
 
 let value: Calculate1099Request = {
     memberClientId: "<value>",
-    year: 5691.01,
+    year: 8558.04,
 };
 ```
 

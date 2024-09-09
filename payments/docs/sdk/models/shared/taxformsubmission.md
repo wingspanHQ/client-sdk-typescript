@@ -10,7 +10,7 @@ let value: TaxFormSubmission = {
     deliveryMethod: "Mail",
     externalDocumentId: "<value>",
     isCorrected: false,
-    status: "SubmittedToIrs",
+    status: "Ineligible",
     submissionData: {},
     submissionId: "<value>",
 };

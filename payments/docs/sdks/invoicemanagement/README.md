@@ -47,7 +47,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.create();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -120,7 +120,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.createClient();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -193,7 +193,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.createGenerated();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -266,7 +266,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.createTemplate();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -341,7 +341,7 @@ async function run() {
   const result = await payments.invoiceManagement.delete({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -418,7 +418,7 @@ async function run() {
   const result = await payments.invoiceManagement.deleteTemplate({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -495,7 +495,7 @@ async function run() {
   const result = await payments.invoiceManagement.execute({
     invoiceId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -572,7 +572,7 @@ async function run() {
   const result = await payments.invoiceManagement.generate({
     invoiceId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -647,7 +647,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.generateTest();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -722,7 +722,7 @@ async function run() {
   const result = await payments.invoiceManagement.get({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -799,7 +799,7 @@ async function run() {
   const result = await payments.invoiceManagement.getClient({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -876,7 +876,7 @@ async function run() {
   const result = await payments.invoiceManagement.getFees({
     invoiceId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -953,7 +953,7 @@ async function run() {
   const result = await payments.invoiceManagement.getGenerated({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1028,7 +1028,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.getMember();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1102,7 +1102,7 @@ async function run() {
   const result = await payments.invoiceManagement.getTemplate({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1177,7 +1177,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.list();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1249,7 +1249,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.listClient();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1321,7 +1321,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.listTemplates();
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1395,7 +1395,7 @@ async function run() {
   const result = await payments.invoiceManagement.refund({
     invoiceId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1472,7 +1472,7 @@ async function run() {
   const result = await payments.invoiceManagement.send({
     invoiceId: "<value>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1549,7 +1549,7 @@ async function run() {
   const result = await payments.invoiceManagement.update({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1626,7 +1626,7 @@ async function run() {
   const result = await payments.invoiceManagement.updateClient({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1703,7 +1703,7 @@ async function run() {
   const result = await payments.invoiceManagement.updateGenerated({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
@@ -1780,7 +1780,7 @@ async function run() {
   const result = await payments.invoiceManagement.updateTemplate({
     id: "<id>",
   });
-
+  
   // Handle the result
   console.log(result)
 }
