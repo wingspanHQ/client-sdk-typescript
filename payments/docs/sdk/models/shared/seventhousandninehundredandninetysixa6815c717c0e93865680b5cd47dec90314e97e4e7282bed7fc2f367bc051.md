@@ -7,7 +7,8 @@ import {
   SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051,
 } from "@wingspan/payments/sdk/models/shared";
 
-let value: SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 =
+let value:
+  SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 =
     {};
 ```
 

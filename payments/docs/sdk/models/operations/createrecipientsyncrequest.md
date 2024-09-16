@@ -6,7 +6,7 @@
 import { CreateRecipientSyncRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: CreateRecipientSyncRequest = {
-    taxFormId: "<value>",
+  taxFormId: "<value>",
 };
 ```
 

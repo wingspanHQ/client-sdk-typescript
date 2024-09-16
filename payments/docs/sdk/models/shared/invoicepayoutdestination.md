@@ -6,12 +6,12 @@
 import { InvoicePayoutDestination } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoicePayoutDestination = {
-    amount: 2506.22,
-    description: "Cloned national moratorium",
-    destinationType: "WeGift",
-    payoutMethod: "Instant",
-    percentage: 4321.48,
-    transferId: "<value>",
+  amount: 4764.77,
+  description: "Front-line human-resource data-warehouse",
+  destinationType: "InternalAccount",
+  payoutMethod: "Expedited",
+  percentage: 5245.93,
+  transferId: "<value>",
 };
 ```
 

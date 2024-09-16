@@ -6,11 +6,11 @@
 import { GetCollaboratorBatchResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetCollaboratorBatchResponse = {
-    contentType: "<value>",
-    statusCode: 736918,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 736918,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

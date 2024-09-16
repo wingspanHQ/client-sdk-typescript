@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type CardCodeResponse = {
-    phoneNumber: string;
-    verificationToken: string;
+  phoneNumber: string;
+  verificationToken: string;
 };
 
 /** @internal */
-export const CardCodeResponse$inboundSchema: z.ZodType<CardCodeResponse, z.ZodTypeDef, unknown> =
-    z.object({
-        phoneNumber: z.string(),
-        verificationToken: z.string(),
-    });
+export const CardCodeResponse$inboundSchema: z.ZodType<
+  CardCodeResponse,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  phoneNumber: z.string(),
+  verificationToken: z.string(),
+});
 
 /** @internal */
 export type CardCodeResponse$Outbound = {
-    phoneNumber: string;
-    verificationToken: string;
+  phoneNumber: string;
+  verificationToken: string;
 };
 
 /** @internal */
 export const CardCodeResponse$outboundSchema: z.ZodType<
-    CardCodeResponse$Outbound,
-    z.ZodTypeDef,
-    CardCodeResponse
+  CardCodeResponse$Outbound,
+  z.ZodTypeDef,
+  CardCodeResponse
 > = z.object({
-    phoneNumber: z.string(),
-    verificationToken: z.string(),
+  phoneNumber: z.string(),
+  verificationToken: z.string(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const CardCodeResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CardCodeResponse$ {
-    /** @deprecated use `CardCodeResponse$inboundSchema` instead. */
-    export const inboundSchema = CardCodeResponse$inboundSchema;
-    /** @deprecated use `CardCodeResponse$outboundSchema` instead. */
-    export const outboundSchema = CardCodeResponse$outboundSchema;
-    /** @deprecated use `CardCodeResponse$Outbound` instead. */
-    export type Outbound = CardCodeResponse$Outbound;
+  /** @deprecated use `CardCodeResponse$inboundSchema` instead. */
+  export const inboundSchema = CardCodeResponse$inboundSchema;
+  /** @deprecated use `CardCodeResponse$outboundSchema` instead. */
+  export const outboundSchema = CardCodeResponse$outboundSchema;
+  /** @deprecated use `CardCodeResponse$Outbound` instead. */
+  export type Outbound = CardCodeResponse$Outbound;
 }

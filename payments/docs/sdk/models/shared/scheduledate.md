@@ -6,8 +6,8 @@
 import { ScheduleDate } from "@wingspan/payments/sdk/models/shared";
 
 let value: ScheduleDate = {
-    date: "<value>",
-    status: "Pending",
+  date: "<value>",
+  status: "Pending",
 };
 ```
 

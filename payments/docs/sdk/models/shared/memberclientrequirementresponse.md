@@ -6,10 +6,10 @@
 import { MemberClientRequirementResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: MemberClientRequirementResponse = {
-    clientId: "<value>",
-    collaboratorGroupId: "<value>",
-    eligibilityRequirementId: "<value>",
-    requirementType: "Signature",
+  clientId: "<value>",
+  collaboratorGroupId: "<value>",
+  eligibilityRequirementId: "<value>",
+  requirementType: "Signature",
 };
 ```
 

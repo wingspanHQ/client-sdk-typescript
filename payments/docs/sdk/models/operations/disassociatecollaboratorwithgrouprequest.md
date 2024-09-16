@@ -6,8 +6,8 @@
 import { DisassociateCollaboratorWithGroupRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DisassociateCollaboratorWithGroupRequest = {
-    groupId: "<value>",
-    id: "<id>",
+  groupId: "<value>",
+  id: "<id>",
 };
 ```
 

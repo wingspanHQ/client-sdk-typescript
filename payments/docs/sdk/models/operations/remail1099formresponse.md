@@ -6,11 +6,11 @@
 import { Remail1099FormResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: Remail1099FormResponse = {
-    contentType: "<value>",
-    statusCode: 799159,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 799159,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

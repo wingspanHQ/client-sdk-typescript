@@ -6,15 +6,15 @@
 import { PayrollReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportResponse = {
-    invoices: [],
-    parentInvoice: {
-        createdAt: "<value>",
-        dueDate: "<value>",
-        invoiceId: "<value>",
-        invoiceNumber: "<value>",
-        status: "Cancelled",
-        updatedAt: "<value>",
-    },
+  invoices: [],
+  parentInvoice: {
+    createdAt: "<value>",
+    dueDate: "<value>",
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    status: "Paid",
+    updatedAt: "<value>",
+  },
 };
 ```
 

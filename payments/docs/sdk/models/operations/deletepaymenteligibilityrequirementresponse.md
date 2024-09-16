@@ -6,11 +6,11 @@
 import { DeletePaymentEligibilityRequirementResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeletePaymentEligibilityRequirementResponse = {
-    contentType: "<value>",
-    statusCode: 976460,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 976460,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

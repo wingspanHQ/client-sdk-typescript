@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type BankingApplicationForm = {
-    applicationLink: string;
-    memberId: string;
+  applicationLink: string;
+  memberId: string;
 };
 
 /** @internal */
 export const BankingApplicationForm$inboundSchema: z.ZodType<
-    BankingApplicationForm,
-    z.ZodTypeDef,
-    unknown
+  BankingApplicationForm,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    applicationLink: z.string(),
-    memberId: z.string(),
+  applicationLink: z.string(),
+  memberId: z.string(),
 });
 
 /** @internal */
 export type BankingApplicationForm$Outbound = {
-    applicationLink: string;
-    memberId: string;
+  applicationLink: string;
+  memberId: string;
 };
 
 /** @internal */
 export const BankingApplicationForm$outboundSchema: z.ZodType<
-    BankingApplicationForm$Outbound,
-    z.ZodTypeDef,
-    BankingApplicationForm
+  BankingApplicationForm$Outbound,
+  z.ZodTypeDef,
+  BankingApplicationForm
 > = z.object({
-    applicationLink: z.string(),
-    memberId: z.string(),
+  applicationLink: z.string(),
+  memberId: z.string(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const BankingApplicationForm$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace BankingApplicationForm$ {
-    /** @deprecated use `BankingApplicationForm$inboundSchema` instead. */
-    export const inboundSchema = BankingApplicationForm$inboundSchema;
-    /** @deprecated use `BankingApplicationForm$outboundSchema` instead. */
-    export const outboundSchema = BankingApplicationForm$outboundSchema;
-    /** @deprecated use `BankingApplicationForm$Outbound` instead. */
-    export type Outbound = BankingApplicationForm$Outbound;
+  /** @deprecated use `BankingApplicationForm$inboundSchema` instead. */
+  export const inboundSchema = BankingApplicationForm$inboundSchema;
+  /** @deprecated use `BankingApplicationForm$outboundSchema` instead. */
+  export const outboundSchema = BankingApplicationForm$outboundSchema;
+  /** @deprecated use `BankingApplicationForm$Outbound` instead. */
+  export type Outbound = BankingApplicationForm$Outbound;
 }

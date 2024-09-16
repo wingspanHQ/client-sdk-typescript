@@ -6,7 +6,7 @@
 import { UpdateClientDeductionRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateClientDeductionRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

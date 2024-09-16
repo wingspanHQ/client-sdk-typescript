@@ -13,65 +13,86 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class CustomFieldManagement extends ClientSDK {
-    /**
-     * Add a New Custom Field
-     *
-     * @remarks
-     * Define a new custom field for payments using additional data provided.
-     */
-    async create(
-        request?: shared.AdditionalData | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateCustomFieldResponse> {
-        return unwrapAsync(customFieldManagementCreate(this, request, options));
-    }
+  /**
+   * Add a New Custom Field
+   *
+   * @remarks
+   * Define a new custom field for payments using additional data provided.
+   */
+  async create(
+    request?: shared.AdditionalData | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCustomFieldResponse> {
+    return unwrapAsync(customFieldManagementCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Remove a Specific Custom Field
-     *
-     * @remarks
-     * Permanently delete a custom field from the system based on its unique identifier.
-     */
-    async delete(
-        request: operations.DeleteCustomFieldRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteCustomFieldResponse> {
-        return unwrapAsync(customFieldManagementDelete(this, request, options));
-    }
+  /**
+   * Remove a Specific Custom Field
+   *
+   * @remarks
+   * Permanently delete a custom field from the system based on its unique identifier.
+   */
+  async delete(
+    request: operations.DeleteCustomFieldRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteCustomFieldResponse> {
+    return unwrapAsync(customFieldManagementDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch Details of a Specific Custom Field
-     *
-     * @remarks
-     * Retrieve detailed information for a custom field based on its unique identifier.
-     */
-    async get(
-        request: operations.GetCustomFieldRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetCustomFieldResponse> {
-        return unwrapAsync(customFieldManagementGet(this, request, options));
-    }
+  /**
+   * Fetch Details of a Specific Custom Field
+   *
+   * @remarks
+   * Retrieve detailed information for a custom field based on its unique identifier.
+   */
+  async get(
+    request: operations.GetCustomFieldRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetCustomFieldResponse> {
+    return unwrapAsync(customFieldManagementGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Custom Fields
-     *
-     * @remarks
-     * Obtain a list of all user-defined custom fields associated with payments.
-     */
-    async list(options?: RequestOptions): Promise<operations.ListCustomFieldsResponse> {
-        return unwrapAsync(customFieldManagementList(this, options));
-    }
+  /**
+   * Retrieve All Custom Fields
+   *
+   * @remarks
+   * Obtain a list of all user-defined custom fields associated with payments.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListCustomFieldsResponse> {
+    return unwrapAsync(customFieldManagementList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Modify Details of a Specific Custom Field
-     *
-     * @remarks
-     * Update specific attributes or data for an existing custom field.
-     */
-    async update(
-        request: operations.UpdateCustomFieldRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateCustomFieldResponse> {
-        return unwrapAsync(customFieldManagementUpdate(this, request, options));
-    }
+  /**
+   * Modify Details of a Specific Custom Field
+   *
+   * @remarks
+   * Update specific attributes or data for an existing custom field.
+   */
+  async update(
+    request: operations.UpdateCustomFieldRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateCustomFieldResponse> {
+    return unwrapAsync(customFieldManagementUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

@@ -6,22 +6,22 @@
 import { PayableAgingReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableAgingReportResponse = {
-    ageGroup: "<value>",
-    amount: 2378.07,
-    createdAt: "<value>",
-    currency: "Pa'anga",
-    dueDate: "<value>",
-    invoiceId: "<value>",
-    invoiceNumber: "<value>",
-    invoicePdf: "<value>",
-    member: {
-        user: {},
-    },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    receiptPdf: "<value>",
-    status: "Open",
-    updatedAt: "<value>",
+  ageGroup: "<value>",
+  amount: 9402.1,
+  createdAt: "<value>",
+  currency: "Rupiah",
+  dueDate: "<value>",
+  invoiceId: "<value>",
+  invoiceNumber: "<value>",
+  invoicePdf: "<value>",
+  member: {
+    user: {},
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  receiptPdf: "<value>",
+  status: "PaymentInTransit",
+  updatedAt: "<value>",
 };
 ```
 

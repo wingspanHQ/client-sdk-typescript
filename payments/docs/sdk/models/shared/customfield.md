@@ -6,12 +6,12 @@
 import { CustomField } from "@wingspan/payments/sdk/models/shared";
 
 let value: CustomField = {
-    id: "<id>",
-    key: "<key>",
-    name: "<value>",
-    required: false,
-    resourceType: "Collaborator",
-    type: "Boolean",
+  id: "<id>",
+  key: "<key>",
+  name: "<value>",
+  required: false,
+  resourceType: "Collaborator",
+  type: "Boolean",
 };
 ```
 

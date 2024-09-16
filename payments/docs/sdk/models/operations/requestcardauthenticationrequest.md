@@ -6,7 +6,7 @@
 import { RequestCardAuthenticationRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: RequestCardAuthenticationRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

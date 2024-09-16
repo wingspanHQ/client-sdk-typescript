@@ -5,7 +5,7 @@
 ```typescript
 import { MemberOptionsWorkflowStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: MemberOptionsWorkflowStatus = "Accepted";
+let value: MemberOptionsWorkflowStatus = "Disputed";
 ```
 
 ## Values

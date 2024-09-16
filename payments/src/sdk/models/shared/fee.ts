@@ -5,37 +5,39 @@
 import * as z from "zod";
 
 export type Fee = {
-    amount: number;
-    calculatedAt?: string | null | undefined;
+  amount: number;
+  calculatedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const Fee$inboundSchema: z.ZodType<Fee, z.ZodTypeDef, unknown> = z.object({
+export const Fee$inboundSchema: z.ZodType<Fee, z.ZodTypeDef, unknown> = z
+  .object({
     amount: z.number(),
     calculatedAt: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
 export type Fee$Outbound = {
-    amount: number;
-    calculatedAt?: string | null | undefined;
+  amount: number;
+  calculatedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const Fee$outboundSchema: z.ZodType<Fee$Outbound, z.ZodTypeDef, Fee> = z.object({
+export const Fee$outboundSchema: z.ZodType<Fee$Outbound, z.ZodTypeDef, Fee> = z
+  .object({
     amount: z.number(),
     calculatedAt: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Fee$ {
-    /** @deprecated use `Fee$inboundSchema` instead. */
-    export const inboundSchema = Fee$inboundSchema;
-    /** @deprecated use `Fee$outboundSchema` instead. */
-    export const outboundSchema = Fee$outboundSchema;
-    /** @deprecated use `Fee$Outbound` instead. */
-    export type Outbound = Fee$Outbound;
+  /** @deprecated use `Fee$inboundSchema` instead. */
+  export const inboundSchema = Fee$inboundSchema;
+  /** @deprecated use `Fee$outboundSchema` instead. */
+  export const outboundSchema = Fee$outboundSchema;
+  /** @deprecated use `Fee$Outbound` instead. */
+  export type Outbound = Fee$Outbound;
 }

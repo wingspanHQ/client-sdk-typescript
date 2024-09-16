@@ -5,50 +5,50 @@
 import * as z from "zod";
 
 export type InstitutionResponse = {
-    address: string;
-    isACHSupported: boolean;
-    isRTPSupported: boolean;
-    isWireSupported: boolean;
-    name: string;
-    routingNumber: string;
+  address: string;
+  isACHSupported: boolean;
+  isRTPSupported: boolean;
+  isWireSupported: boolean;
+  name: string;
+  routingNumber: string;
 };
 
 /** @internal */
 export const InstitutionResponse$inboundSchema: z.ZodType<
-    InstitutionResponse,
-    z.ZodTypeDef,
-    unknown
+  InstitutionResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    address: z.string(),
-    isACHSupported: z.boolean(),
-    isRTPSupported: z.boolean(),
-    isWireSupported: z.boolean(),
-    name: z.string(),
-    routingNumber: z.string(),
+  address: z.string(),
+  isACHSupported: z.boolean(),
+  isRTPSupported: z.boolean(),
+  isWireSupported: z.boolean(),
+  name: z.string(),
+  routingNumber: z.string(),
 });
 
 /** @internal */
 export type InstitutionResponse$Outbound = {
-    address: string;
-    isACHSupported: boolean;
-    isRTPSupported: boolean;
-    isWireSupported: boolean;
-    name: string;
-    routingNumber: string;
+  address: string;
+  isACHSupported: boolean;
+  isRTPSupported: boolean;
+  isWireSupported: boolean;
+  name: string;
+  routingNumber: string;
 };
 
 /** @internal */
 export const InstitutionResponse$outboundSchema: z.ZodType<
-    InstitutionResponse$Outbound,
-    z.ZodTypeDef,
-    InstitutionResponse
+  InstitutionResponse$Outbound,
+  z.ZodTypeDef,
+  InstitutionResponse
 > = z.object({
-    address: z.string(),
-    isACHSupported: z.boolean(),
-    isRTPSupported: z.boolean(),
-    isWireSupported: z.boolean(),
-    name: z.string(),
-    routingNumber: z.string(),
+  address: z.string(),
+  isACHSupported: z.boolean(),
+  isRTPSupported: z.boolean(),
+  isWireSupported: z.boolean(),
+  name: z.string(),
+  routingNumber: z.string(),
 });
 
 /**
@@ -56,10 +56,10 @@ export const InstitutionResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InstitutionResponse$ {
-    /** @deprecated use `InstitutionResponse$inboundSchema` instead. */
-    export const inboundSchema = InstitutionResponse$inboundSchema;
-    /** @deprecated use `InstitutionResponse$outboundSchema` instead. */
-    export const outboundSchema = InstitutionResponse$outboundSchema;
-    /** @deprecated use `InstitutionResponse$Outbound` instead. */
-    export type Outbound = InstitutionResponse$Outbound;
+  /** @deprecated use `InstitutionResponse$inboundSchema` instead. */
+  export const inboundSchema = InstitutionResponse$inboundSchema;
+  /** @deprecated use `InstitutionResponse$outboundSchema` instead. */
+  export const outboundSchema = InstitutionResponse$outboundSchema;
+  /** @deprecated use `InstitutionResponse$Outbound` instead. */
+  export type Outbound = InstitutionResponse$Outbound;
 }

@@ -6,7 +6,7 @@
 import { EligibilityRequirementUpdateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: EligibilityRequirementUpdateRequest = {
-    requirementType: "Signature",
+  requirementType: "Signature",
 };
 ```
 

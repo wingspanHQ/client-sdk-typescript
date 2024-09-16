@@ -6,8 +6,8 @@
 import { DeleteDebitCardRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteDebitCardRequest = {
-    id: "<id>",
-    memberId: "<value>",
+  id: "<id>",
+  memberId: "<value>",
 };
 ```
 

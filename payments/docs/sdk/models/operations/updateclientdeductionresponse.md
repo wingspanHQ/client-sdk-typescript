@@ -6,11 +6,11 @@
 import { UpdateClientDeductionResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateClientDeductionResponse = {
-    contentType: "<value>",
-    statusCode: 750686,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 750686,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

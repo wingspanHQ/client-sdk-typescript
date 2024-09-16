@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type MemberClientEvents = {
-    activeAt?: string | null | undefined;
-    pendingAt?: string | null | undefined;
+  activeAt?: string | null | undefined;
+  pendingAt?: string | null | undefined;
 };
 
 /** @internal */
 export const MemberClientEvents$inboundSchema: z.ZodType<
-    MemberClientEvents,
-    z.ZodTypeDef,
-    unknown
+  MemberClientEvents,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    activeAt: z.nullable(z.string()).optional(),
-    pendingAt: z.nullable(z.string()).optional(),
+  activeAt: z.nullable(z.string()).optional(),
+  pendingAt: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type MemberClientEvents$Outbound = {
-    activeAt?: string | null | undefined;
-    pendingAt?: string | null | undefined;
+  activeAt?: string | null | undefined;
+  pendingAt?: string | null | undefined;
 };
 
 /** @internal */
 export const MemberClientEvents$outboundSchema: z.ZodType<
-    MemberClientEvents$Outbound,
-    z.ZodTypeDef,
-    MemberClientEvents
+  MemberClientEvents$Outbound,
+  z.ZodTypeDef,
+  MemberClientEvents
 > = z.object({
-    activeAt: z.nullable(z.string()).optional(),
-    pendingAt: z.nullable(z.string()).optional(),
+  activeAt: z.nullable(z.string()).optional(),
+  pendingAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const MemberClientEvents$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace MemberClientEvents$ {
-    /** @deprecated use `MemberClientEvents$inboundSchema` instead. */
-    export const inboundSchema = MemberClientEvents$inboundSchema;
-    /** @deprecated use `MemberClientEvents$outboundSchema` instead. */
-    export const outboundSchema = MemberClientEvents$outboundSchema;
-    /** @deprecated use `MemberClientEvents$Outbound` instead. */
-    export type Outbound = MemberClientEvents$Outbound;
+  /** @deprecated use `MemberClientEvents$inboundSchema` instead. */
+  export const inboundSchema = MemberClientEvents$inboundSchema;
+  /** @deprecated use `MemberClientEvents$outboundSchema` instead. */
+  export const outboundSchema = MemberClientEvents$outboundSchema;
+  /** @deprecated use `MemberClientEvents$Outbound` instead. */
+  export type Outbound = MemberClientEvents$Outbound;
 }

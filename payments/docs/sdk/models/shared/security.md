@@ -6,7 +6,7 @@
 import { Security } from "@wingspan/payments/sdk/models/shared";
 
 let value: Security = {
-    bearerAuth: "<value>",
+  bearerAuth: "<value>",
 };
 ```
 

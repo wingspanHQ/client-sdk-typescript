@@ -6,7 +6,7 @@
 import { DeleteClientDeductionRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteClientDeductionRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

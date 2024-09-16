@@ -5,50 +5,50 @@
 import * as z from "zod";
 
 export type CollaboratorPayoutsSummary = {
-    deductionsCount: number;
-    firstPaidDate?: string | null | undefined;
-    lastPaidDate?: string | null | undefined;
-    payablesCount: number;
-    totalDeducted: number;
-    totalPaid: number;
+  deductionsCount: number;
+  firstPaidDate?: string | null | undefined;
+  lastPaidDate?: string | null | undefined;
+  payablesCount: number;
+  totalDeducted: number;
+  totalPaid: number;
 };
 
 /** @internal */
 export const CollaboratorPayoutsSummary$inboundSchema: z.ZodType<
-    CollaboratorPayoutsSummary,
-    z.ZodTypeDef,
-    unknown
+  CollaboratorPayoutsSummary,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    deductionsCount: z.number(),
-    firstPaidDate: z.nullable(z.string()).optional(),
-    lastPaidDate: z.nullable(z.string()).optional(),
-    payablesCount: z.number(),
-    totalDeducted: z.number(),
-    totalPaid: z.number(),
+  deductionsCount: z.number(),
+  firstPaidDate: z.nullable(z.string()).optional(),
+  lastPaidDate: z.nullable(z.string()).optional(),
+  payablesCount: z.number(),
+  totalDeducted: z.number(),
+  totalPaid: z.number(),
 });
 
 /** @internal */
 export type CollaboratorPayoutsSummary$Outbound = {
-    deductionsCount: number;
-    firstPaidDate?: string | null | undefined;
-    lastPaidDate?: string | null | undefined;
-    payablesCount: number;
-    totalDeducted: number;
-    totalPaid: number;
+  deductionsCount: number;
+  firstPaidDate?: string | null | undefined;
+  lastPaidDate?: string | null | undefined;
+  payablesCount: number;
+  totalDeducted: number;
+  totalPaid: number;
 };
 
 /** @internal */
 export const CollaboratorPayoutsSummary$outboundSchema: z.ZodType<
-    CollaboratorPayoutsSummary$Outbound,
-    z.ZodTypeDef,
-    CollaboratorPayoutsSummary
+  CollaboratorPayoutsSummary$Outbound,
+  z.ZodTypeDef,
+  CollaboratorPayoutsSummary
 > = z.object({
-    deductionsCount: z.number(),
-    firstPaidDate: z.nullable(z.string()).optional(),
-    lastPaidDate: z.nullable(z.string()).optional(),
-    payablesCount: z.number(),
-    totalDeducted: z.number(),
-    totalPaid: z.number(),
+  deductionsCount: z.number(),
+  firstPaidDate: z.nullable(z.string()).optional(),
+  lastPaidDate: z.nullable(z.string()).optional(),
+  payablesCount: z.number(),
+  totalDeducted: z.number(),
+  totalPaid: z.number(),
 });
 
 /**
@@ -56,10 +56,10 @@ export const CollaboratorPayoutsSummary$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CollaboratorPayoutsSummary$ {
-    /** @deprecated use `CollaboratorPayoutsSummary$inboundSchema` instead. */
-    export const inboundSchema = CollaboratorPayoutsSummary$inboundSchema;
-    /** @deprecated use `CollaboratorPayoutsSummary$outboundSchema` instead. */
-    export const outboundSchema = CollaboratorPayoutsSummary$outboundSchema;
-    /** @deprecated use `CollaboratorPayoutsSummary$Outbound` instead. */
-    export type Outbound = CollaboratorPayoutsSummary$Outbound;
+  /** @deprecated use `CollaboratorPayoutsSummary$inboundSchema` instead. */
+  export const inboundSchema = CollaboratorPayoutsSummary$inboundSchema;
+  /** @deprecated use `CollaboratorPayoutsSummary$outboundSchema` instead. */
+  export const outboundSchema = CollaboratorPayoutsSummary$outboundSchema;
+  /** @deprecated use `CollaboratorPayoutsSummary$Outbound` instead. */
+  export type Outbound = CollaboratorPayoutsSummary$Outbound;
 }

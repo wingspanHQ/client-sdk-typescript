@@ -6,16 +6,20 @@
 import { DocumentResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: DocumentResponse = {
-    clientId: "<value>",
-    documentId: "<value>",
-    memberId: "<value>",
-    status: "Invalid",
-    templateId: "<value>",
-    title: "<value>",
-    userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
-    },
+  clientId: "<value>",
+  documentId: "<value>",
+  memberId: "<value>",
+  status: "Invalid",
+  templateId: "<value>",
+  title: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
 };
 ```
 

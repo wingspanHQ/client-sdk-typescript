@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type ExternalIdsBulkImport = {
-    bulkItemMergeKey?: string | null | undefined;
+  bulkItemMergeKey?: string | null | undefined;
 };
 
 /** @internal */
 export const ExternalIdsBulkImport$inboundSchema: z.ZodType<
-    ExternalIdsBulkImport,
-    z.ZodTypeDef,
-    unknown
+  ExternalIdsBulkImport,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    bulkItemMergeKey: z.nullable(z.string()).optional(),
+  bulkItemMergeKey: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type ExternalIdsBulkImport$Outbound = {
-    bulkItemMergeKey?: string | null | undefined;
+  bulkItemMergeKey?: string | null | undefined;
 };
 
 /** @internal */
 export const ExternalIdsBulkImport$outboundSchema: z.ZodType<
-    ExternalIdsBulkImport$Outbound,
-    z.ZodTypeDef,
-    ExternalIdsBulkImport
+  ExternalIdsBulkImport$Outbound,
+  z.ZodTypeDef,
+  ExternalIdsBulkImport
 > = z.object({
-    bulkItemMergeKey: z.nullable(z.string()).optional(),
+  bulkItemMergeKey: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const ExternalIdsBulkImport$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ExternalIdsBulkImport$ {
-    /** @deprecated use `ExternalIdsBulkImport$inboundSchema` instead. */
-    export const inboundSchema = ExternalIdsBulkImport$inboundSchema;
-    /** @deprecated use `ExternalIdsBulkImport$outboundSchema` instead. */
-    export const outboundSchema = ExternalIdsBulkImport$outboundSchema;
-    /** @deprecated use `ExternalIdsBulkImport$Outbound` instead. */
-    export type Outbound = ExternalIdsBulkImport$Outbound;
+  /** @deprecated use `ExternalIdsBulkImport$inboundSchema` instead. */
+  export const inboundSchema = ExternalIdsBulkImport$inboundSchema;
+  /** @deprecated use `ExternalIdsBulkImport$outboundSchema` instead. */
+  export const outboundSchema = ExternalIdsBulkImport$outboundSchema;
+  /** @deprecated use `ExternalIdsBulkImport$Outbound` instead. */
+  export type Outbound = ExternalIdsBulkImport$Outbound;
 }

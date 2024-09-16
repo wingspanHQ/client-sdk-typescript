@@ -8,9 +8,9 @@ export type DownloadW9Response = {};
 
 /** @internal */
 export const DownloadW9Response$inboundSchema: z.ZodType<
-    DownloadW9Response,
-    z.ZodTypeDef,
-    unknown
+  DownloadW9Response,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +18,9 @@ export type DownloadW9Response$Outbound = {};
 
 /** @internal */
 export const DownloadW9Response$outboundSchema: z.ZodType<
-    DownloadW9Response$Outbound,
-    z.ZodTypeDef,
-    DownloadW9Response
+  DownloadW9Response$Outbound,
+  z.ZodTypeDef,
+  DownloadW9Response
 > = z.object({});
 
 /**
@@ -28,10 +28,10 @@ export const DownloadW9Response$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace DownloadW9Response$ {
-    /** @deprecated use `DownloadW9Response$inboundSchema` instead. */
-    export const inboundSchema = DownloadW9Response$inboundSchema;
-    /** @deprecated use `DownloadW9Response$outboundSchema` instead. */
-    export const outboundSchema = DownloadW9Response$outboundSchema;
-    /** @deprecated use `DownloadW9Response$Outbound` instead. */
-    export type Outbound = DownloadW9Response$Outbound;
+  /** @deprecated use `DownloadW9Response$inboundSchema` instead. */
+  export const inboundSchema = DownloadW9Response$inboundSchema;
+  /** @deprecated use `DownloadW9Response$outboundSchema` instead. */
+  export const outboundSchema = DownloadW9Response$outboundSchema;
+  /** @deprecated use `DownloadW9Response$Outbound` instead. */
+  export type Outbound = DownloadW9Response$Outbound;
 }

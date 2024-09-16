@@ -6,11 +6,11 @@
 import { AdditionalData } from "@wingspan/payments/sdk/models/shared";
 
 let value: AdditionalData = {
-    key: "<key>",
-    name: "<value>",
-    required: false,
-    resourceType: "LineItem",
-    type: "String",
+  key: "<key>",
+  name: "<value>",
+  required: false,
+  resourceType: "LineItem",
+  type: "String",
 };
 ```
 

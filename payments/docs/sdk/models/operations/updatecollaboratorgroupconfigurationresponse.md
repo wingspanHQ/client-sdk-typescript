@@ -6,11 +6,11 @@
 import { UpdateCollaboratorGroupConfigurationResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCollaboratorGroupConfigurationResponse = {
-    contentType: "<value>",
-    statusCode: 19987,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 19987,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

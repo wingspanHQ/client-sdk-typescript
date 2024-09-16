@@ -5,7 +5,7 @@
 ```typescript
 import { BulkInvoiceItemCreateAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkInvoiceItemCreateAcceptedPaymentMethods = "Manual";
+let value: BulkInvoiceItemCreateAcceptedPaymentMethods = "Credit";
 ```
 
 ## Values

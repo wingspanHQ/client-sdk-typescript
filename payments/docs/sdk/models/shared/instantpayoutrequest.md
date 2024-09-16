@@ -6,7 +6,7 @@
 import { InstantPayoutRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InstantPayoutRequest = {
-    externalPayoutAccountToken: "<value>",
+  externalPayoutAccountToken: "<value>",
 };
 ```
 

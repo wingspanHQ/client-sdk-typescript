@@ -5,7 +5,7 @@
 ```typescript
 import { FundsTransferAccountCurrency } from "@wingspan/payments/sdk/models/shared";
 
-let value: FundsTransferAccountCurrency = "CAD";
+let value: FundsTransferAccountCurrency = "USD";
 ```
 
 ## Values

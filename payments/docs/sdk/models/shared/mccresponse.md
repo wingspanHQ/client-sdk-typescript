@@ -6,8 +6,8 @@
 import { MccResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: MccResponse = {
-    code: "<value>",
-    title: "<value>",
+  code: "<value>",
+  title: "<value>",
 };
 ```
 

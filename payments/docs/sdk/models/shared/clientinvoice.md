@@ -6,92 +6,98 @@
 import { ClientInvoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoice = {
-    additionalRecipientEmails: ["<value>"],
-    amount: 5392.24,
-    client: {},
+  additionalRecipientEmails: [
+    "<value>",
+  ],
+  amount: 8771.31,
+  client: {},
+  createdAt: "<value>",
+  currency: "USD",
+  dueDate: "<value>",
+  events: {},
+  invoiceId: "<value>",
+  invoiceNumber: "<value>",
+  lineItems: [
+    {
+      costPerUnit: 934.59,
+      createdAt: "<value>",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 9040.45,
+      reimbursableExpense: false,
+      totalCost: 4263.06,
+      unit: "gray",
+      updatedAt: "<value>",
+    },
+  ],
+  member: {},
+  memberAcceptsPayments: false,
+  memberAddress: {
+    addressLine1: "6537 Balistreri Pine",
+    city: "Fisherfort",
+    postalCode: "07392",
+    state: "Minnesota",
+  },
+  memberClient: {
+    achCreditAccount: {
+      accountNumber: "<value>",
+      bankName: "<value>",
+    },
+    client: {
+      user: {},
+    },
+    clientData: {},
+    clientId: "<value>",
+    clientUserAccountType: "enterprise",
     createdAt: "<value>",
-    currency: "USD",
-    dueDate: "<value>",
+    emailTo: "<value>",
+    eventActors: {
+      "key": "<value>",
+    },
     events: {},
-    invoiceId: "<value>",
-    invoiceNumber: "<value>",
-    lineItems: [
-        {
-            costPerUnit: 3256.85,
-            createdAt: "<value>",
-            labels: {
-                key: "<value>",
-            },
-            labelsBak2: {
-                key: "<value>",
-            },
-            quantity: 3926.76,
-            reimbursableExpense: false,
-            totalCost: 1470.14,
-            unit: "lux",
-            updatedAt: "<value>",
-        },
-    ],
-    member: {},
-    memberAcceptsPayments: false,
-    memberAddress: {
-        addressLine1: "11955 Jacques Unions",
-        city: "Biloxi",
-        postalCode: "87830",
-        state: "Virginia",
+    externalIds: {},
+    form1099Balances: {},
+    formW9Data: {},
+    internationalWireAccount: {
+      accountNumber: "<value>",
+      bankName: "<value>",
     },
-    memberClient: {
-        achCreditAccount: {
-            accountNumber: "<value>",
-            bankName: "<value>",
-        },
-        client: {
-            user: {},
-        },
-        clientData: {},
-        clientId: "<value>",
-        clientUserAccountType: "member",
-        createdAt: "<value>",
-        emailTo: "<value>",
-        eventActors: {
-            key: "<value>",
-        },
-        events: {},
-        externalIds: {},
-        form1099Balances: {},
-        formW9Data: {},
-        internationalWireAccount: {
-            accountNumber: "<value>",
-            bankName: "<value>",
-        },
-        labels: {
-            key: "<value>",
-        },
-        member: {
-            user: {},
-        },
-        memberClientId: "<value>",
-        memberData: {},
-        memberId: "<value>",
-        parentMemberClientId: "<value>",
-        payerPayeeId: "<value>",
-        status: "Pending",
-        taxStatus: "Failed",
-        updatedAt: "<value>",
-        userRoles: {
-            ownerIds: ["<value>"],
-            viewerIds: ["<value>"],
-        },
+    labels: {
+      "key": "<value>",
     },
-    memberCompany: "<value>",
-    memberEmail: "<value>",
-    memberLogoUrl: "<value>",
-    memberName: "<value>",
-    memberPaymentsVersion: 6996.22,
-    memberStripeAccountId: "<value>",
-    projectName: "<value>",
-    status: "Pending",
+    member: {
+      user: {},
+    },
+    memberClientId: "<value>",
+    memberData: {},
+    memberId: "<value>",
+    parentMemberClientId: "<value>",
+    payerPayeeId: "<value>",
+    status: "Inactive",
+    taxStatus: "Incomplete",
     updatedAt: "<value>",
+    userRoles: {
+      ownerIds: [
+        "<value>",
+      ],
+      viewerIds: [
+        "<value>",
+      ],
+    },
+  },
+  memberCompany: "<value>",
+  memberEmail: "<value>",
+  memberLogoUrl: "<value>",
+  memberName: "<value>",
+  memberPaymentsVersion: 8577.23,
+  memberStripeAccountId: "<value>",
+  projectName: "<value>",
+  status: "Cancelled",
+  updatedAt: "<value>",
 };
 ```
 

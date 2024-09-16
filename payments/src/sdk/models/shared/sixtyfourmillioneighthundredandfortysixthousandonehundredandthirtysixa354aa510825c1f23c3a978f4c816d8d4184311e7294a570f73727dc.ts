@@ -5,50 +5,52 @@
 import * as z from "zod";
 
 export type SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc =
-    {
-        customerId?: string | null | undefined;
-        itemId?: string | null | undefined;
-    };
+  {
+    customerId?: string | null | undefined;
+    itemId?: string | null | undefined;
+  };
 
 /** @internal */
-export const SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema: z.ZodType<
+export const SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema:
+  z.ZodType<
     SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     customerId: z.nullable(z.string()).optional(),
     itemId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
 export type SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound =
-    {
-        customerId?: string | null | undefined;
-        itemId?: string | null | undefined;
-    };
+  {
+    customerId?: string | null | undefined;
+    itemId?: string | null | undefined;
+  };
 
 /** @internal */
-export const SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema: z.ZodType<
+export const SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema:
+  z.ZodType<
     SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound,
     z.ZodTypeDef,
     SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc
-> = z.object({
+  > = z.object({
     customerId: z.nullable(z.string()).optional(),
     itemId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$ {
-    /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema` instead. */
-    export const inboundSchema =
-        SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema;
-    /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema` instead. */
-    export const outboundSchema =
-        SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema;
-    /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound` instead. */
-    export type Outbound =
-        SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound;
+  /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema` instead. */
+  export const inboundSchema =
+    SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$inboundSchema;
+  /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema` instead. */
+  export const outboundSchema =
+    SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$outboundSchema;
+  /** @deprecated use `SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound` instead. */
+  export type Outbound =
+    SixtyFourMillionEightHundredAndFortySixThousandOneHundredAndThirtySixa354aa510825c1f23c3a978f4c816d8d4184311e7294a570f73727dc$Outbound;
 }

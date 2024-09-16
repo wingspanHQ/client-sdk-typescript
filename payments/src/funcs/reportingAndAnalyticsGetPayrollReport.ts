@@ -10,11 +10,11 @@ import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
 import {
-    ConnectionError,
-    InvalidRequestError,
-    RequestAbortedError,
-    RequestTimeoutError,
-    UnexpectedClientError,
+  ConnectionError,
+  InvalidRequestError,
+  RequestAbortedError,
+  RequestTimeoutError,
+  UnexpectedClientError,
 } from "../sdk/models/errors/httpclienterrors.js";
 import { SDKError } from "../sdk/models/errors/sdkerror.js";
 import { SDKValidationError } from "../sdk/models/errors/sdkvalidationerror.js";
@@ -28,108 +28,109 @@ import { Result } from "../sdk/types/fp.js";
  * Offers a deep dive into the payables connected to a specific payroll run, facilitating better management and reconciliation of payroll-related finances.
  */
 export async function reportingAndAnalyticsGetPayrollReport(
-    client$: PaymentsCore,
-    request: operations.GetPayrollDetailedReportRequest,
-    options?: RequestOptions
+  client$: PaymentsCore,
+  request: operations.GetPayrollDetailedReportRequest,
+  options?: RequestOptions,
 ): Promise<
-    Result<
-        operations.GetPayrollDetailedReportResponse,
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >
+  Result<
+    operations.GetPayrollDetailedReportResponse,
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >
 > {
-    const input$ = request;
+  const input$ = request;
 
-    const parsed$ = schemas$.safeParse(
-        input$,
-        (value$) => operations.GetPayrollDetailedReportRequest$outboundSchema.parse(value$),
-        "Input validation failed"
-    );
-    if (!parsed$.ok) {
-        return parsed$;
-    }
-    const payload$ = parsed$.value;
-    const body$ = null;
+  const parsed$ = schemas$.safeParse(
+    input$,
+    (value$) =>
+      operations.GetPayrollDetailedReportRequest$outboundSchema.parse(value$),
+    "Input validation failed",
+  );
+  if (!parsed$.ok) {
+    return parsed$;
+  }
+  const payload$ = parsed$.value;
+  const body$ = null;
 
-    const pathParams$ = {
-        payrollId: encodeSimple$("payrollId", payload$.payrollId, {
-            explode: false,
-            charEncoding: "percent",
-        }),
-    };
+  const pathParams$ = {
+    payrollId: encodeSimple$("payrollId", payload$.payrollId, {
+      explode: false,
+      charEncoding: "percent",
+    }),
+  };
 
-    const path$ = pathToFunc("/payments/reports/payroll/{payrollId}")(pathParams$);
+  const path$ = pathToFunc("/payments/reports/payroll/{payrollId}")(
+    pathParams$,
+  );
 
-    const headers$ = new Headers({
-        Accept: "application/json",
-    });
+  const headers$ = new Headers({
+    Accept: "application/json",
+  });
 
-    const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
-    const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
-    const context = {
-        operationID: "getPayrollDetailedReport",
-        oAuth2Scopes: [],
-        securitySource: client$.options$.bearerAuth,
-    };
-    const securitySettings$ = resolveGlobalSecurity(security$);
+  const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
+  const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
+  const context = {
+    operationID: "getPayrollDetailedReport",
+    oAuth2Scopes: [],
+    securitySource: client$.options$.bearerAuth,
+  };
+  const securitySettings$ = resolveGlobalSecurity(security$);
 
-    const requestRes = client$.createRequest$(
-        context,
-        {
-            security: securitySettings$,
-            method: "GET",
-            path: path$,
-            headers: headers$,
-            body: body$,
-            timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
-        },
-        options
-    );
-    if (!requestRes.ok) {
-        return requestRes;
-    }
-    const request$ = requestRes.value;
+  const requestRes = client$.createRequest$(context, {
+    security: securitySettings$,
+    method: "GET",
+    path: path$,
+    headers: headers$,
+    body: body$,
+    timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
+  }, options);
+  if (!requestRes.ok) {
+    return requestRes;
+  }
+  const request$ = requestRes.value;
 
-    const doResult = await client$.do$(request$, {
-        context,
-        errorCodes: [],
-        retryConfig: options?.retries || client$.options$.retryConfig,
-        retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
-    });
-    if (!doResult.ok) {
-        return doResult;
-    }
-    const response = doResult.value;
+  const doResult = await client$.do$(request$, {
+    context,
+    errorCodes: [],
+    retryConfig: options?.retries
+      || client$.options$.retryConfig,
+    retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
+  });
+  if (!doResult.ok) {
+    return doResult;
+  }
+  const response = doResult.value;
 
-    const responseFields$ = {
-        ContentType: response.headers.get("content-type") ?? "application/octet-stream",
-        StatusCode: response.status,
-        RawResponse: response,
-        Headers: {},
-    };
+  const responseFields$ = {
+    ContentType: response.headers.get("content-type")
+      ?? "application/octet-stream",
+    StatusCode: response.status,
+    RawResponse: response,
+    Headers: {},
+  };
 
-    const [result$] = await m$.match<
-        operations.GetPayrollDetailedReportResponse,
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >(
-        m$.json(200, operations.GetPayrollDetailedReportResponse$inboundSchema, {
-            key: "PayrollReportResponse",
-        })
-    )(response, { extraFields: responseFields$ });
-    if (!result$.ok) {
-        return result$;
-    }
-
+  const [result$] = await m$.match<
+    operations.GetPayrollDetailedReportResponse,
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >(
+    m$.json(200, operations.GetPayrollDetailedReportResponse$inboundSchema, {
+      key: "PayrollReportResponse",
+    }),
+  )(response, { extraFields: responseFields$ });
+  if (!result$.ok) {
     return result$;
+  }
+
+  return result$;
 }

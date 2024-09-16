@@ -5,7 +5,7 @@
 ```typescript
 import { ScheduleDateUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: ScheduleDateUpdateStatus = "Skipped";
+let value: ScheduleDateUpdateStatus = "Modified";
 ```
 
 ## Values

@@ -6,7 +6,7 @@
 import { UpdateMemberClientAssociationRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateMemberClientAssociationRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

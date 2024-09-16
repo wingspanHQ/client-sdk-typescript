@@ -5,48 +5,51 @@
 import * as z from "zod";
 
 export type Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4 = {
-    institution?: string | null | undefined;
-    mask?: string | null | undefined;
+  institution?: string | null | undefined;
+  mask?: string | null | undefined;
 };
 
 /** @internal */
-export const Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema: z.ZodType<
+export const Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema:
+  z.ZodType<
     Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     institution: z.nullable(z.string()).optional(),
     mask: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound = {
+export type Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound =
+  {
     institution?: string | null | undefined;
     mask?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema: z.ZodType<
+export const Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema:
+  z.ZodType<
     Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound,
     z.ZodTypeDef,
     Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4
-> = z.object({
+  > = z.object({
     institution: z.nullable(z.string()).optional(),
     mask: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$ {
-    /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema` instead. */
-    export const inboundSchema =
-        Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema;
-    /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema` instead. */
-    export const outboundSchema =
-        Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema;
-    /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound` instead. */
-    export type Outbound =
-        Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound;
+  /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema` instead. */
+  export const inboundSchema =
+    Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema;
+  /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema` instead. */
+  export const outboundSchema =
+    Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$outboundSchema;
+  /** @deprecated use `Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound` instead. */
+  export type Outbound =
+    Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$Outbound;
 }

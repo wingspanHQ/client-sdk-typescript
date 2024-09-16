@@ -6,7 +6,7 @@
 import { DeletePaymentEligibilityRequirementRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeletePaymentEligibilityRequirementRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

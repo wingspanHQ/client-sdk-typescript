@@ -5,55 +5,58 @@
 import * as z from "zod";
 
 export type Form1099Events = {
-    acceptedByCollaboratorAt?: string | null | undefined;
-    createdAt?: string | null | undefined;
-    postFilingSuggestionMadeAt?: string | null | undefined;
-    postFilingSuggestionResolvedAt?: string | null | undefined;
-    submittedForCollaboratorReviewAt?: string | null | undefined;
-    suggestionMadeAt?: string | null | undefined;
-    suggestionResolvedAt?: string | null | undefined;
-    updatedAt?: string | null | undefined;
+  acceptedByCollaboratorAt?: string | null | undefined;
+  createdAt?: string | null | undefined;
+  postFilingSuggestionMadeAt?: string | null | undefined;
+  postFilingSuggestionResolvedAt?: string | null | undefined;
+  submittedForCollaboratorReviewAt?: string | null | undefined;
+  suggestionMadeAt?: string | null | undefined;
+  suggestionResolvedAt?: string | null | undefined;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const Form1099Events$inboundSchema: z.ZodType<Form1099Events, z.ZodTypeDef, unknown> =
-    z.object({
-        acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
-        createdAt: z.nullable(z.string()).optional(),
-        postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
-        postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
-        submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
-        suggestionMadeAt: z.nullable(z.string()).optional(),
-        suggestionResolvedAt: z.nullable(z.string()).optional(),
-        updatedAt: z.nullable(z.string()).optional(),
-    });
+export const Form1099Events$inboundSchema: z.ZodType<
+  Form1099Events,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
+  createdAt: z.nullable(z.string()).optional(),
+  postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
+  postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
+  submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
+  suggestionMadeAt: z.nullable(z.string()).optional(),
+  suggestionResolvedAt: z.nullable(z.string()).optional(),
+  updatedAt: z.nullable(z.string()).optional(),
+});
 
 /** @internal */
 export type Form1099Events$Outbound = {
-    acceptedByCollaboratorAt?: string | null | undefined;
-    createdAt?: string | null | undefined;
-    postFilingSuggestionMadeAt?: string | null | undefined;
-    postFilingSuggestionResolvedAt?: string | null | undefined;
-    submittedForCollaboratorReviewAt?: string | null | undefined;
-    suggestionMadeAt?: string | null | undefined;
-    suggestionResolvedAt?: string | null | undefined;
-    updatedAt?: string | null | undefined;
+  acceptedByCollaboratorAt?: string | null | undefined;
+  createdAt?: string | null | undefined;
+  postFilingSuggestionMadeAt?: string | null | undefined;
+  postFilingSuggestionResolvedAt?: string | null | undefined;
+  submittedForCollaboratorReviewAt?: string | null | undefined;
+  suggestionMadeAt?: string | null | undefined;
+  suggestionResolvedAt?: string | null | undefined;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const Form1099Events$outboundSchema: z.ZodType<
-    Form1099Events$Outbound,
-    z.ZodTypeDef,
-    Form1099Events
+  Form1099Events$Outbound,
+  z.ZodTypeDef,
+  Form1099Events
 > = z.object({
-    acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
-    createdAt: z.nullable(z.string()).optional(),
-    postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
-    postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
-    submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
-    suggestionMadeAt: z.nullable(z.string()).optional(),
-    suggestionResolvedAt: z.nullable(z.string()).optional(),
-    updatedAt: z.nullable(z.string()).optional(),
+  acceptedByCollaboratorAt: z.nullable(z.string()).optional(),
+  createdAt: z.nullable(z.string()).optional(),
+  postFilingSuggestionMadeAt: z.nullable(z.string()).optional(),
+  postFilingSuggestionResolvedAt: z.nullable(z.string()).optional(),
+  submittedForCollaboratorReviewAt: z.nullable(z.string()).optional(),
+  suggestionMadeAt: z.nullable(z.string()).optional(),
+  suggestionResolvedAt: z.nullable(z.string()).optional(),
+  updatedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -61,10 +64,10 @@ export const Form1099Events$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Form1099Events$ {
-    /** @deprecated use `Form1099Events$inboundSchema` instead. */
-    export const inboundSchema = Form1099Events$inboundSchema;
-    /** @deprecated use `Form1099Events$outboundSchema` instead. */
-    export const outboundSchema = Form1099Events$outboundSchema;
-    /** @deprecated use `Form1099Events$Outbound` instead. */
-    export type Outbound = Form1099Events$Outbound;
+  /** @deprecated use `Form1099Events$inboundSchema` instead. */
+  export const inboundSchema = Form1099Events$inboundSchema;
+  /** @deprecated use `Form1099Events$outboundSchema` instead. */
+  export const outboundSchema = Form1099Events$outboundSchema;
+  /** @deprecated use `Form1099Events$Outbound` instead. */
+  export type Outbound = Form1099Events$Outbound;
 }

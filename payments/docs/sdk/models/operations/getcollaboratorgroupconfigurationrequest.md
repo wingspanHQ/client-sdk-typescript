@@ -6,7 +6,7 @@
 import { GetCollaboratorGroupConfigurationRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetCollaboratorGroupConfigurationRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

@@ -5,27 +5,30 @@
 import * as z from "zod";
 
 export type CardCodeRequest = {
-    channel: string;
+  channel: string;
 };
 
 /** @internal */
-export const CardCodeRequest$inboundSchema: z.ZodType<CardCodeRequest, z.ZodTypeDef, unknown> =
-    z.object({
-        channel: z.string(),
-    });
+export const CardCodeRequest$inboundSchema: z.ZodType<
+  CardCodeRequest,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  channel: z.string(),
+});
 
 /** @internal */
 export type CardCodeRequest$Outbound = {
-    channel: string;
+  channel: string;
 };
 
 /** @internal */
 export const CardCodeRequest$outboundSchema: z.ZodType<
-    CardCodeRequest$Outbound,
-    z.ZodTypeDef,
-    CardCodeRequest
+  CardCodeRequest$Outbound,
+  z.ZodTypeDef,
+  CardCodeRequest
 > = z.object({
-    channel: z.string(),
+  channel: z.string(),
 });
 
 /**
@@ -33,10 +36,10 @@ export const CardCodeRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CardCodeRequest$ {
-    /** @deprecated use `CardCodeRequest$inboundSchema` instead. */
-    export const inboundSchema = CardCodeRequest$inboundSchema;
-    /** @deprecated use `CardCodeRequest$outboundSchema` instead. */
-    export const outboundSchema = CardCodeRequest$outboundSchema;
-    /** @deprecated use `CardCodeRequest$Outbound` instead. */
-    export type Outbound = CardCodeRequest$Outbound;
+  /** @deprecated use `CardCodeRequest$inboundSchema` instead. */
+  export const inboundSchema = CardCodeRequest$inboundSchema;
+  /** @deprecated use `CardCodeRequest$outboundSchema` instead. */
+  export const outboundSchema = CardCodeRequest$outboundSchema;
+  /** @deprecated use `CardCodeRequest$Outbound` instead. */
+  export type Outbound = CardCodeRequest$Outbound;
 }

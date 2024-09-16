@@ -7,7 +7,8 @@ import {
   FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac,
 } from "@wingspan/payments/sdk/models/shared";
 
-let value: FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac =
+let value:
+  FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac =
     {};
 ```
 

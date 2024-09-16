@@ -6,7 +6,7 @@
 import { UpdateTaxFormRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateTaxFormRequest = {
-    taxFormId: "<value>",
+  taxFormId: "<value>",
 };
 ```
 

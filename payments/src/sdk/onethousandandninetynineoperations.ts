@@ -30,282 +30,367 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class OneThousandAndNinetyNineOperations extends ClientSDK {
-    /**
-     * Determine 1099 Amounts for Collaborators
-     *
-     * @remarks
-     * Analyzes and calculates the appropriate 1099 amounts for collaborators based on provided data and relevant financial parameters.
-     */
-    async calculate(
-        request?: shared.Calculate1099Request | undefined,
-        options?: RequestOptions
-    ): Promise<operations.Calculate1099AmountsResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsCalculate(this, request, options));
-    }
+  /**
+   * Determine 1099 Amounts for Collaborators
+   *
+   * @remarks
+   * Analyzes and calculates the appropriate 1099 amounts for collaborators based on provided data and relevant financial parameters.
+   */
+  async calculate(
+    request?: shared.Calculate1099Request | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.Calculate1099AmountsResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCalculate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Re-enable recipient sync on a tax form.
-     *
-     * @remarks
-     * Re-enables recipient sync for a tax form. Reverts to last provided recipient data and triggers payable calculations. Does nothing if sync is already enabled.
-     */
-    async create(
-        request: operations.CreateRecipientSyncRequest,
-        options?: RequestOptions
-    ): Promise<operations.CreateRecipientSyncResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsCreate(this, request, options));
-    }
+  /**
+   * Re-enable recipient sync on a tax form.
+   *
+   * @remarks
+   * Re-enables recipient sync for a tax form. Reverts to last provided recipient data and triggers payable calculations. Does nothing if sync is already enabled.
+   */
+  async create(
+    request: operations.CreateRecipientSyncRequest,
+    options?: RequestOptions,
+  ): Promise<operations.CreateRecipientSyncResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Initialize a new batch for bulk calculation 1099
-     *
-     * @remarks
-     * Allows users to create a new batch for facilitating bulk 1099 calculations by providing necessary batch details.
-     */
-    async createBatchCalculation(
-        request?: shared.BulkBatchCreate | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateCalculation1099BatchResponse> {
-        return unwrapAsync(
-            oneThousandAndNinetyNineOperationsCreateBatchCalculation(this, request, options)
-        );
-    }
+  /**
+   * Initialize a new batch for bulk calculation 1099
+   *
+   * @remarks
+   * Allows users to create a new batch for facilitating bulk 1099 calculations by providing necessary batch details.
+   */
+  async createBatchCalculation(
+    request?: shared.BulkBatchCreate | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCalculation1099BatchResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCreateBatchCalculation(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Add a new item to a calculation 1099 batch
-     *
-     * @remarks
-     * Facilitates the incorporation of a new item into the specified calculation 1099 batch, streamlining the process of batch expansion.
-     */
-    async createItem(
-        request: operations.CreateCalculation1099BatchItemRequest,
-        options?: RequestOptions
-    ): Promise<operations.CreateCalculation1099BatchItemResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsCreateItem(this, request, options));
-    }
+  /**
+   * Add a new item to a calculation 1099 batch
+   *
+   * @remarks
+   * Facilitates the incorporation of a new item into the specified calculation 1099 batch, streamlining the process of batch expansion.
+   */
+  async createItem(
+    request: operations.CreateCalculation1099BatchItemRequest,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCalculation1099BatchItemResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCreateItem(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Provide Recipient Proof of Identity
-     *
-     * @remarks
-     * Allows recipient of a tax form to verify their identity in order to access a non-redacted tax form.
-     */
-    async createProof(
-        request: operations.CreateRecipientProofRequest,
-        options?: RequestOptions
-    ): Promise<operations.CreateRecipientProofResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsCreateProof(this, request, options));
-    }
+  /**
+   * Provide Recipient Proof of Identity
+   *
+   * @remarks
+   * Allows recipient of a tax form to verify their identity in order to access a non-redacted tax form.
+   */
+  async createProof(
+    request: operations.CreateRecipientProofRequest,
+    options?: RequestOptions,
+  ): Promise<operations.CreateRecipientProofResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCreateProof(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Create a new tax form.
-     *
-     * @remarks
-     * Create a tax form for a new recipient
-     */
-    async createTaxForm(
-        request?: shared.TaxFormCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.Create1099TaxFormResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsCreateTaxForm(this, request, options));
-    }
+  /**
+   * Create a new tax form.
+   *
+   * @remarks
+   * Create a tax form for a new recipient
+   */
+  async createTaxForm(
+    request?: shared.TaxFormCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.Create1099TaxFormResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsCreateTaxForm(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch tax form.
-     *
-     * @remarks
-     * Fetches the specified tax form if it exists
-     */
-    async get(
-        request: operations.GetTaxFormRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetTaxFormResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsGet(this, request, options));
-    }
+  /**
+   * Fetch tax form.
+   *
+   * @remarks
+   * Fetches the specified tax form if it exists
+   */
+  async get(
+    request: operations.GetTaxFormRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetTaxFormResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve specific details of a bulk calculation 1099 batch
-     *
-     * @remarks
-     * Fetches detailed information about a specific batch meant for bulk 1099 calculations using its unique batch identifier.
-     */
-    async getBatchCalculation(
-        request: operations.GetCalculation1099BatchRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetCalculation1099BatchResponse> {
-        return unwrapAsync(
-            oneThousandAndNinetyNineOperationsGetBatchCalculation(this, request, options)
-        );
-    }
+  /**
+   * Retrieve specific details of a bulk calculation 1099 batch
+   *
+   * @remarks
+   * Fetches detailed information about a specific batch meant for bulk 1099 calculations using its unique batch identifier.
+   */
+  async getBatchCalculation(
+    request: operations.GetCalculation1099BatchRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetCalculation1099BatchResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsGetBatchCalculation(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Form 1099 PDF for a Collaborator by Year and Index
-     *
-     * @remarks
-     * Facilitates downloading of the specified 1099 form for a given collaborator, corresponding to the provided year and index.
-     */
-    async getForm1099(
-        request: operations.GetForm1099PDFRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetForm1099PDFResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsGetForm1099(this, request, options));
-    }
+  /**
+   * Retrieve Form 1099 PDF for a Collaborator by Year and Index
+   *
+   * @remarks
+   * Facilitates downloading of the specified 1099 form for a given collaborator, corresponding to the provided year and index.
+   */
+  async getForm1099(
+    request: operations.GetForm1099PDFRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetForm1099PDFResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsGetForm1099(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Form W9 PDF for a Collaborator
-     *
-     * @remarks
-     * Enables the downloading of the W9 form for the specified collaborator, ensuring compliance and streamlined financial procedures.
-     */
-    async getFormW9(
-        request: operations.GetFormW9PDFRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetFormW9PDFResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsGetFormW9(this, request, options));
-    }
+  /**
+   * Retrieve Form W9 PDF for a Collaborator
+   *
+   * @remarks
+   * Enables the downloading of the W9 form for the specified collaborator, ensuring compliance and streamlined financial procedures.
+   */
+  async getFormW9(
+    request: operations.GetFormW9PDFRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetFormW9PDFResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsGetFormW9(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch details of a specific item from a calculation 1099 batch
-     *
-     * @remarks
-     * Gain insights into a particular item's attributes and data stored within a calculation 1099 batch, enhancing data management and verification.
-     */
-    async getItem(
-        request: operations.GetCalculation1099BatchItemRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetCalculation1099BatchItemResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsGetItem(this, request, options));
-    }
+  /**
+   * Fetch details of a specific item from a calculation 1099 batch
+   *
+   * @remarks
+   * Gain insights into a particular item's attributes and data stored within a calculation 1099 batch, enhancing data management and verification.
+   */
+  async getItem(
+    request: operations.GetCalculation1099BatchItemRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetCalculation1099BatchItemResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsGetItem(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve all bulk calculation 1099 batches
-     *
-     * @remarks
-     * Fetches a comprehensive list of all batches created for bulk 1099 calculations.
-     */
-    async listBatchCalculation(
-        options?: RequestOptions
-    ): Promise<operations.ListCalculation1099BatchesResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsListBatchCalculation(this, options));
-    }
+  /**
+   * Retrieve all bulk calculation 1099 batches
+   *
+   * @remarks
+   * Fetches a comprehensive list of all batches created for bulk 1099 calculations.
+   */
+  async listBatchCalculation(
+    options?: RequestOptions,
+  ): Promise<operations.ListCalculation1099BatchesResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsListBatchCalculation(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve all items from a calculation 1099 batch
-     *
-     * @remarks
-     * Access a comprehensive list of items contained within a specified calculation 1099 batch, useful for verifying or inspecting batch contents.
-     */
-    async listItem(
-        request: operations.ListCalculation1099BatchItemsRequest,
-        options?: RequestOptions
-    ): Promise<operations.ListCalculation1099BatchItemsResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsListItem(this, request, options));
-    }
+  /**
+   * Retrieve all items from a calculation 1099 batch
+   *
+   * @remarks
+   * Access a comprehensive list of items contained within a specified calculation 1099 batch, useful for verifying or inspecting batch contents.
+   */
+  async listItem(
+    request: operations.ListCalculation1099BatchItemsRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ListCalculation1099BatchItemsResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsListItem(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch 1099 tax forms.
-     *
-     * @remarks
-     * Fetch tax forms for a payee or a payer and specified year.
-     */
-    async listTaxForm(options?: RequestOptions): Promise<operations.List1099TaxFormsResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsListTaxForm(this, options));
-    }
+  /**
+   * Fetch 1099 tax forms.
+   *
+   * @remarks
+   * Fetch tax forms for a payee or a payer and specified year.
+   */
+  async listTaxForm(
+    options?: RequestOptions,
+  ): Promise<operations.List1099TaxFormsResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsListTaxForm(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Indicate a collaborator's 1099 form was returned undelivered
-     *
-     * @remarks
-     * Mark a specific 1099 submission for a collaborator as undelivered, typically due to mail return or incorrect address details.
-     */
-    async mark(
-        request?: shared.Mark1099AsUndeliveredRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.MarkUndelivered1099FormResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsMark(this, request, options));
-    }
+  /**
+   * Indicate a collaborator's 1099 form was returned undelivered
+   *
+   * @remarks
+   * Mark a specific 1099 submission for a collaborator as undelivered, typically due to mail return or incorrect address details.
+   */
+  async mark(
+    request?: shared.Mark1099AsUndeliveredRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.MarkUndelivered1099FormResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsMark(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Request a new mailing of the 1099 form for a collaborator
-     *
-     * @remarks
-     * Initiates a process to resend the 1099 form to a collaborator in the event of a previous failed delivery or at the request of the collaborator.
-     */
-    async remail(
-        request?: shared.Remail1099Request | undefined,
-        options?: RequestOptions
-    ): Promise<operations.Remail1099FormResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsRemail(this, request, options));
-    }
+  /**
+   * Request a new mailing of the 1099 form for a collaborator
+   *
+   * @remarks
+   * Initiates a process to resend the 1099 form to a collaborator in the event of a previous failed delivery or at the request of the collaborator.
+   */
+  async remail(
+    request?: shared.Remail1099Request | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.Remail1099FormResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsRemail(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Request a new 1099 invite email.
-     *
-     * @remarks
-     * Requests a new 1099 invite email to be sent to the recipient. Only sends if the email exists and the user has tax forms.
-     */
-    async request(options?: RequestOptions): Promise<operations.Request1099InviteEmailResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsRequest(this, options));
-    }
+  /**
+   * Request a new 1099 invite email.
+   *
+   * @remarks
+   * Requests a new 1099 invite email to be sent to the recipient. Only sends if the email exists and the user has tax forms.
+   */
+  async request(
+    options?: RequestOptions,
+  ): Promise<operations.Request1099InviteEmailResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsRequest(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Submit Payee TIN for verification
-     *
-     * @remarks
-     * Asynchronously verifies the TIN on file with the IRS. May return a pending status if waiting on IRS response.
-     */
-    async submit(options?: RequestOptions): Promise<operations.SubmitPayeeTINResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsSubmit(this, options));
-    }
+  /**
+   * Submit Payee TIN for verification
+   *
+   * @remarks
+   * Asynchronously verifies the TIN on file with the IRS. May return a pending status if waiting on IRS response.
+   */
+  async submit(
+    options?: RequestOptions,
+  ): Promise<operations.SubmitPayeeTINResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsSubmit(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Update a tax form.
-     *
-     * @remarks
-     * Updates a tax form with provided information.
-     */
-    async update(
-        request: operations.UpdateTaxFormRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateTaxFormResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsUpdate(this, request, options));
-    }
+  /**
+   * Update a tax form.
+   *
+   * @remarks
+   * Updates a tax form with provided information.
+   */
+  async update(
+    request: operations.UpdateTaxFormRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateTaxFormResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify the details of a specific bulk calculation 1099 batch
-     *
-     * @remarks
-     * Provides the ability to update or alter attributes of a given batch for bulk 1099 calculations by using its unique batch identifier.
-     */
-    async updateBatchCalculation(
-        request: operations.UpdateCalculation1099BatchRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateCalculation1099BatchResponse> {
-        return unwrapAsync(
-            oneThousandAndNinetyNineOperationsUpdateBatchCalculation(this, request, options)
-        );
-    }
+  /**
+   * Modify the details of a specific bulk calculation 1099 batch
+   *
+   * @remarks
+   * Provides the ability to update or alter attributes of a given batch for bulk 1099 calculations by using its unique batch identifier.
+   */
+  async updateBatchCalculation(
+    request: operations.UpdateCalculation1099BatchRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateCalculation1099BatchResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsUpdateBatchCalculation(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Revise the attributes of an item in a calculation 1099 batch
-     *
-     * @remarks
-     * Make alterations or updates to a specific item within the calculation 1099 batch, ensuring accurate and up-to-date record-keeping.
-     */
-    async updateItem(
-        request: operations.UpdateCalculation1099BatchItemRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateCalculation1099BatchItemResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsUpdateItem(this, request, options));
-    }
+  /**
+   * Revise the attributes of an item in a calculation 1099 batch
+   *
+   * @remarks
+   * Make alterations or updates to a specific item within the calculation 1099 batch, ensuring accurate and up-to-date record-keeping.
+   */
+  async updateItem(
+    request: operations.UpdateCalculation1099BatchItemRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateCalculation1099BatchItemResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsUpdateItem(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Submit Payee W9 Information.
-     *
-     * @remarks
-     * Updates 1099 tax forms for the current year with W9 information wherever W9 sharing is enabled.
-     */
-    async updateW9(options?: RequestOptions): Promise<operations.UpdatePayeeW9InformationResponse> {
-        return unwrapAsync(oneThousandAndNinetyNineOperationsUpdateW9(this, options));
-    }
+  /**
+   * Submit Payee W9 Information.
+   *
+   * @remarks
+   * Updates 1099 tax forms for the current year with W9 information wherever W9 sharing is enabled.
+   */
+  async updateW9(
+    options?: RequestOptions,
+  ): Promise<operations.UpdatePayeeW9InformationResponse> {
+    return unwrapAsync(oneThousandAndNinetyNineOperationsUpdateW9(
+      this,
+      options,
+    ));
+  }
 }

@@ -6,11 +6,11 @@
 import { List1099TaxFormsResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: List1099TaxFormsResponse = {
-    contentType: "<value>",
-    statusCode: 978619,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 978619,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

@@ -6,9 +6,9 @@
 import { GetForm1099PDFRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetForm1099PDFRequest = {
-    id: "<id>",
-    index: "<value>",
-    year: "<value>",
+  id: "<id>",
+  index: "<value>",
+  year: "<value>",
 };
 ```
 

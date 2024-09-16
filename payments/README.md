@@ -70,14 +70,14 @@ yarn add @wingspan/payments zod
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get();
+  const result = await payments.serviceSettings.get();
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -88,30 +88,8 @@ run();
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
-### [serviceSettings](docs/sdks/servicesettings/README.md)
-
-* [get](docs/sdks/servicesettings/README.md#get) - Check Service Status
-
-### [wingspanWallet](docs/sdks/wingspanwallet/README.md)
-
-* [create](docs/sdks/wingspanwallet/README.md#create) - Register a New  Wingspan Wallet Card
-* [delete](docs/sdks/wingspanwallet/README.md#delete) - Remove a card using its unique ID
-* [get](docs/sdks/wingspanwallet/README.md#get) - Retrieve card details by its unique ID
-* [list](docs/sdks/wingspanwallet/README.md#list) - List All Stored Wingspan Wallet Cards
-* [request](docs/sdks/wingspanwallet/README.md#request) - Request a verification code for card authentication
-* [update](docs/sdks/wingspanwallet/README.md#update) - Modify card details by its unique ID
-* [validate](docs/sdks/wingspanwallet/README.md#validate) - Validate verification code to receive a token
-
-### [deprecated](docs/sdks/deprecated/README.md)
-
-* [~~create~~](docs/sdks/deprecated/README.md#create) - Register New Custom Data for Collaborator-Member Relationship :warning: **Deprecated**
-* [~~delete~~](docs/sdks/deprecated/README.md#delete) - Erase a Specific Collaborator-Member Custom Data :warning: **Deprecated**
-* [deleteInstantPayout](docs/sdks/deprecated/README.md#deleteinstantpayout) - Deprecated Remove Instant Payout Configuration
-* [~~get~~](docs/sdks/deprecated/README.md#get) - Retrieve Specific Collaborator Custom Data :warning: **Deprecated**
-* [getInstantPayout](docs/sdks/deprecated/README.md#getinstantpayout) - Deprecated Retrieve Instant Payout Information
-* [~~list~~](docs/sdks/deprecated/README.md#list) - Retrieve All Collaborator-Member Custom Data Points :warning: **Deprecated**
-* [~~update~~](docs/sdks/deprecated/README.md#update) - Modify a Specific Collaborator-Member Custom Data :warning: **Deprecated**
-* [updateInstantPayout](docs/sdks/deprecated/README.md#updateinstantpayout) - Deprecated Set Up Instant Payout Configuration
+<details open>
+<summary>Available methods</summary>
 
 ### [bankingManagement](docs/sdks/bankingmanagement/README.md)
 
@@ -126,31 +104,6 @@ run();
 * [list](docs/sdks/bankingmanagement/README.md#list) - Fetch all registered payout debit cards for a member
 * [listStatements](docs/sdks/bankingmanagement/README.md#liststatements) - Retrieve All Bank Statements
 * [update](docs/sdks/bankingmanagement/README.md#update) - Modify and update payout settings for a specific member
-
-### [oneThousandAndNinetyNineOperations](docs/sdks/onethousandandninetynineoperations/README.md)
-
-* [calculate](docs/sdks/onethousandandninetynineoperations/README.md#calculate) - Determine 1099 Amounts for Collaborators
-* [create](docs/sdks/onethousandandninetynineoperations/README.md#create) - Re-enable recipient sync on a tax form.
-* [createBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#createbatchcalculation) - Initialize a new batch for bulk calculation 1099
-* [createItem](docs/sdks/onethousandandninetynineoperations/README.md#createitem) - Add a new item to a calculation 1099 batch
-* [createProof](docs/sdks/onethousandandninetynineoperations/README.md#createproof) - Provide Recipient Proof of Identity
-* [createTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#createtaxform) - Create a new tax form.
-* [get](docs/sdks/onethousandandninetynineoperations/README.md#get) - Fetch tax form.
-* [getBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#getbatchcalculation) - Retrieve specific details of a bulk calculation 1099 batch
-* [getForm1099](docs/sdks/onethousandandninetynineoperations/README.md#getform1099) - Retrieve Form 1099 PDF for a Collaborator by Year and Index
-* [getFormW9](docs/sdks/onethousandandninetynineoperations/README.md#getformw9) - Retrieve Form W9 PDF for a Collaborator
-* [getItem](docs/sdks/onethousandandninetynineoperations/README.md#getitem) - Fetch details of a specific item from a calculation 1099 batch
-* [listBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#listbatchcalculation) - Retrieve all bulk calculation 1099 batches
-* [listItem](docs/sdks/onethousandandninetynineoperations/README.md#listitem) - Retrieve all items from a calculation 1099 batch
-* [listTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#listtaxform) - Fetch 1099 tax forms.
-* [mark](docs/sdks/onethousandandninetynineoperations/README.md#mark) - Indicate a collaborator's 1099 form was returned undelivered
-* [remail](docs/sdks/onethousandandninetynineoperations/README.md#remail) - Request a new mailing of the 1099 form for a collaborator
-* [request](docs/sdks/onethousandandninetynineoperations/README.md#request) - Request a new 1099 invite email.
-* [submit](docs/sdks/onethousandandninetynineoperations/README.md#submit) - Submit Payee TIN for verification
-* [update](docs/sdks/onethousandandninetynineoperations/README.md#update) - Update a tax form.
-* [updateBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#updatebatchcalculation) - Modify the details of a specific bulk calculation 1099 batch
-* [updateItem](docs/sdks/onethousandandninetynineoperations/README.md#updateitem) - Revise the attributes of an item in a calculation 1099 batch
-* [updateW9](docs/sdks/onethousandandninetynineoperations/README.md#updatew9) - Submit Payee W9 Information.
 
 ### [bulkOperations](docs/sdks/bulkoperations/README.md)
 
@@ -205,6 +158,62 @@ run();
 * [updateAssociation](docs/sdks/clientmanagement/README.md#updateassociation) - Update information of a specific member-client relationship
 * [updateClientDeduction](docs/sdks/clientmanagement/README.md#updateclientdeduction) - Modify a Client Deduction
 
+### [collaboratorManagement](docs/sdks/collaboratormanagement/README.md)
+
+* [associate](docs/sdks/collaboratormanagement/README.md#associate) - Associate Collaborator with a Specific Group
+* [create](docs/sdks/collaboratormanagement/README.md#create) - Register a New Collaborator
+* [createCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#createcollaboratordeduction) - Register a New Deduction for a Collaborator
+* [createCollaboratorGroup](docs/sdks/collaboratormanagement/README.md#createcollaboratorgroup) - Generate New Collaborator Group
+* [delete](docs/sdks/collaboratormanagement/README.md#delete) - Remove a Specific Collaborator Record
+* [deleteCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#deletecollaboratordeduction) - Erase a Specific Deduction Entry
+* [disassociate](docs/sdks/collaboratormanagement/README.md#disassociate) - Disassociate Collaborator from a Specific Group
+* [get](docs/sdks/collaboratormanagement/README.md#get) - Retrieve Details of a Specific Collaborator
+* [getCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#getcollaboratordeduction) - Retrieve Specific Deduction Details
+* [getEventAssociated](docs/sdks/collaboratormanagement/README.md#geteventassociated) - Retrieve Events Associated with a Collaborator
+* [list](docs/sdks/collaboratormanagement/README.md#list) - Retrieve All Collaborators (Version 2)
+* [listCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#listcollaboratordeduction) - Retrieve All Deductions for Collaborators
+* [listCollaboratorGroups](docs/sdks/collaboratormanagement/README.md#listcollaboratorgroups) - Retrieve All Collaborator Groups
+* [listRegistered](docs/sdks/collaboratormanagement/README.md#listregistered) - Retrieve All Registered Collaborators
+* [listSpecificCollaboratorDetail](docs/sdks/collaboratormanagement/README.md#listspecificcollaboratordetail) - Retrieve Specific Collaborator Details (Version 2)
+* [update](docs/sdks/collaboratormanagement/README.md#update) - Modify Collaborator Details
+* [updateCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#updatecollaboratordeduction) - Modify Details of a Specific Deduction
+
+### [customFieldManagement](docs/sdks/customfieldmanagement/README.md)
+
+* [create](docs/sdks/customfieldmanagement/README.md#create) - Add a New Custom Field
+* [delete](docs/sdks/customfieldmanagement/README.md#delete) - Remove a Specific Custom Field
+* [get](docs/sdks/customfieldmanagement/README.md#get) - Fetch Details of a Specific Custom Field
+* [list](docs/sdks/customfieldmanagement/README.md#list) - Retrieve All Custom Fields
+* [update](docs/sdks/customfieldmanagement/README.md#update) - Modify Details of a Specific Custom Field
+
+### [deprecated](docs/sdks/deprecated/README.md)
+
+* [~~create~~](docs/sdks/deprecated/README.md#create) - Register New Custom Data for Collaborator-Member Relationship :warning: **Deprecated**
+* [~~delete~~](docs/sdks/deprecated/README.md#delete) - Erase a Specific Collaborator-Member Custom Data :warning: **Deprecated**
+* [deleteInstantPayout](docs/sdks/deprecated/README.md#deleteinstantpayout) - Deprecated Remove Instant Payout Configuration
+* [~~get~~](docs/sdks/deprecated/README.md#get) - Retrieve Specific Collaborator Custom Data :warning: **Deprecated**
+* [getInstantPayout](docs/sdks/deprecated/README.md#getinstantpayout) - Deprecated Retrieve Instant Payout Information
+* [~~list~~](docs/sdks/deprecated/README.md#list) - Retrieve All Collaborator-Member Custom Data Points :warning: **Deprecated**
+* [~~update~~](docs/sdks/deprecated/README.md#update) - Modify a Specific Collaborator-Member Custom Data :warning: **Deprecated**
+* [updateInstantPayout](docs/sdks/deprecated/README.md#updateinstantpayout) - Deprecated Set Up Instant Payout Configuration
+
+### [documentSigningAndEligibility](docs/sdks/documentsigningandeligibility/README.md)
+
+* [create](docs/sdks/documentsigningandeligibility/README.md#create) - Add a New Payment Eligibility Requirement
+* [delete](docs/sdks/documentsigningandeligibility/README.md#delete) - Remove a Specific Eligibility Requirement
+* [deleteCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#deletecollaboratorgroup) - Remove Eligibility Requirement from Collaborator Group
+* [deletePayment](docs/sdks/documentsigningandeligibility/README.md#deletepayment) - Remove a specific Payment Eligibility Requirement
+* [establish](docs/sdks/documentsigningandeligibility/README.md#establish) - Establish a new Eligibility Requirement
+* [get](docs/sdks/documentsigningandeligibility/README.md#get) - Retrieve a Specific Eligibility Requirement
+* [getGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#getgroupconfiguration) - Retrieve Specific Collaborator Group Configuration
+* [getPayment](docs/sdks/documentsigningandeligibility/README.md#getpayment) - Retrieve details of a specific Payment Eligibility Requirement
+* [list](docs/sdks/documentsigningandeligibility/README.md#list) - Retrieve all Eligibility Requirements
+* [listPayment](docs/sdks/documentsigningandeligibility/README.md#listpayment) - Retrieve All Payment Eligibility Requirements
+* [update](docs/sdks/documentsigningandeligibility/README.md#update) - Modify a Specific Eligibility Requirement
+* [updateCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#updatecollaboratorgroup) - Modify Eligibility Requirement for Collaborator Group
+* [updateGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#updategroupconfiguration) - Modify Collaborator Group Configuration
+* [updatePayment](docs/sdks/documentsigningandeligibility/README.md#updatepayment) - Modify a specific Payment Eligibility Requirement
+
 ### [invoiceManagement](docs/sdks/invoicemanagement/README.md)
 
 * [create](docs/sdks/invoicemanagement/README.md#create) - Initiate New Invoice for a Member
@@ -232,54 +241,34 @@ run();
 * [updateGenerated](docs/sdks/invoicemanagement/README.md#updategenerated) - Modify an Existing Client-Generated Invoice
 * [updateTemplate](docs/sdks/invoicemanagement/README.md#updatetemplate) - Modify details of an existing invoice template
 
-### [collaboratorManagement](docs/sdks/collaboratormanagement/README.md)
-
-* [associate](docs/sdks/collaboratormanagement/README.md#associate) - Associate Collaborator with a Specific Group
-* [create](docs/sdks/collaboratormanagement/README.md#create) - Register a New Collaborator
-* [createCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#createcollaboratordeduction) - Register a New Deduction for a Collaborator
-* [createCollaboratorGroup](docs/sdks/collaboratormanagement/README.md#createcollaboratorgroup) - Generate New Collaborator Group
-* [delete](docs/sdks/collaboratormanagement/README.md#delete) - Remove a Specific Collaborator Record
-* [deleteCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#deletecollaboratordeduction) - Erase a Specific Deduction Entry
-* [disassociate](docs/sdks/collaboratormanagement/README.md#disassociate) - Disassociate Collaborator from a Specific Group
-* [get](docs/sdks/collaboratormanagement/README.md#get) - Retrieve Details of a Specific Collaborator
-* [getCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#getcollaboratordeduction) - Retrieve Specific Deduction Details
-* [getEventAssociated](docs/sdks/collaboratormanagement/README.md#geteventassociated) - Retrieve Events Associated with a Collaborator
-* [list](docs/sdks/collaboratormanagement/README.md#list) - Retrieve All Collaborators (Version 2)
-* [listCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#listcollaboratordeduction) - Retrieve All Deductions for Collaborators
-* [listCollaboratorGroups](docs/sdks/collaboratormanagement/README.md#listcollaboratorgroups) - Retrieve All Collaborator Groups
-* [listRegistered](docs/sdks/collaboratormanagement/README.md#listregistered) - Retrieve All Registered Collaborators
-* [listSpecificCollaboratorDetail](docs/sdks/collaboratormanagement/README.md#listspecificcollaboratordetail) - Retrieve Specific Collaborator Details (Version 2)
-* [update](docs/sdks/collaboratormanagement/README.md#update) - Modify Collaborator Details
-* [updateCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#updatecollaboratordeduction) - Modify Details of a Specific Deduction
-
-### [documentSigningAndEligibility](docs/sdks/documentsigningandeligibility/README.md)
-
-* [create](docs/sdks/documentsigningandeligibility/README.md#create) - Add a New Payment Eligibility Requirement
-* [delete](docs/sdks/documentsigningandeligibility/README.md#delete) - Remove a Specific Eligibility Requirement
-* [deleteCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#deletecollaboratorgroup) - Remove Eligibility Requirement from Collaborator Group
-* [deletePayment](docs/sdks/documentsigningandeligibility/README.md#deletepayment) - Remove a specific Payment Eligibility Requirement
-* [establish](docs/sdks/documentsigningandeligibility/README.md#establish) - Establish a new Eligibility Requirement
-* [get](docs/sdks/documentsigningandeligibility/README.md#get) - Retrieve a Specific Eligibility Requirement
-* [getGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#getgroupconfiguration) - Retrieve Specific Collaborator Group Configuration
-* [getPayment](docs/sdks/documentsigningandeligibility/README.md#getpayment) - Retrieve details of a specific Payment Eligibility Requirement
-* [list](docs/sdks/documentsigningandeligibility/README.md#list) - Retrieve all Eligibility Requirements
-* [listPayment](docs/sdks/documentsigningandeligibility/README.md#listpayment) - Retrieve All Payment Eligibility Requirements
-* [update](docs/sdks/documentsigningandeligibility/README.md#update) - Modify a Specific Eligibility Requirement
-* [updateCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#updatecollaboratorgroup) - Modify Eligibility Requirement for Collaborator Group
-* [updateGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#updategroupconfiguration) - Modify Collaborator Group Configuration
-* [updatePayment](docs/sdks/documentsigningandeligibility/README.md#updatepayment) - Modify a specific Payment Eligibility Requirement
-
-### [customFieldManagement](docs/sdks/customfieldmanagement/README.md)
-
-* [create](docs/sdks/customfieldmanagement/README.md#create) - Add a New Custom Field
-* [delete](docs/sdks/customfieldmanagement/README.md#delete) - Remove a Specific Custom Field
-* [get](docs/sdks/customfieldmanagement/README.md#get) - Fetch Details of a Specific Custom Field
-* [list](docs/sdks/customfieldmanagement/README.md#list) - Retrieve All Custom Fields
-* [update](docs/sdks/customfieldmanagement/README.md#update) - Modify Details of a Specific Custom Field
-
 ### [merchantCategoryCodes](docs/sdks/merchantcategorycodes/README.md)
 
 * [get](docs/sdks/merchantcategorycodes/README.md#get) - Retrieve Merchant Category Codes (MCC)
+
+### [oneThousandAndNinetyNineOperations](docs/sdks/onethousandandninetynineoperations/README.md)
+
+* [calculate](docs/sdks/onethousandandninetynineoperations/README.md#calculate) - Determine 1099 Amounts for Collaborators
+* [create](docs/sdks/onethousandandninetynineoperations/README.md#create) - Re-enable recipient sync on a tax form.
+* [createBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#createbatchcalculation) - Initialize a new batch for bulk calculation 1099
+* [createItem](docs/sdks/onethousandandninetynineoperations/README.md#createitem) - Add a new item to a calculation 1099 batch
+* [createProof](docs/sdks/onethousandandninetynineoperations/README.md#createproof) - Provide Recipient Proof of Identity
+* [createTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#createtaxform) - Create a new tax form.
+* [get](docs/sdks/onethousandandninetynineoperations/README.md#get) - Fetch tax form.
+* [getBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#getbatchcalculation) - Retrieve specific details of a bulk calculation 1099 batch
+* [getForm1099](docs/sdks/onethousandandninetynineoperations/README.md#getform1099) - Retrieve Form 1099 PDF for a Collaborator by Year and Index
+* [getFormW9](docs/sdks/onethousandandninetynineoperations/README.md#getformw9) - Retrieve Form W9 PDF for a Collaborator
+* [getItem](docs/sdks/onethousandandninetynineoperations/README.md#getitem) - Fetch details of a specific item from a calculation 1099 batch
+* [listBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#listbatchcalculation) - Retrieve all bulk calculation 1099 batches
+* [listItem](docs/sdks/onethousandandninetynineoperations/README.md#listitem) - Retrieve all items from a calculation 1099 batch
+* [listTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#listtaxform) - Fetch 1099 tax forms.
+* [mark](docs/sdks/onethousandandninetynineoperations/README.md#mark) - Indicate a collaborator's 1099 form was returned undelivered
+* [remail](docs/sdks/onethousandandninetynineoperations/README.md#remail) - Request a new mailing of the 1099 form for a collaborator
+* [request](docs/sdks/onethousandandninetynineoperations/README.md#request) - Request a new 1099 invite email.
+* [submit](docs/sdks/onethousandandninetynineoperations/README.md#submit) - Submit Payee TIN for verification
+* [update](docs/sdks/onethousandandninetynineoperations/README.md#update) - Update a tax form.
+* [updateBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#updatebatchcalculation) - Modify the details of a specific bulk calculation 1099 batch
+* [updateItem](docs/sdks/onethousandandninetynineoperations/README.md#updateitem) - Revise the attributes of an item in a calculation 1099 batch
+* [updateW9](docs/sdks/onethousandandninetynineoperations/README.md#updatew9) - Submit Payee W9 Information.
 
 ### [payablesManagement](docs/sdks/payablesmanagement/README.md)
 
@@ -291,6 +280,7 @@ run();
 * [list](docs/sdks/payablesmanagement/README.md#list) - List All Payables Associated with a Client
 * [listSummary](docs/sdks/payablesmanagement/README.md#listsummary) - Retrieve Summary of All Payables
 * [update](docs/sdks/payablesmanagement/README.md#update) - Update Client Payable Information by Payable ID
+
 
 ### [payrollSettings](docs/sdks/payrollsettings/README.md)
 
@@ -304,6 +294,22 @@ run();
 * [listDetailedCollaborator](docs/sdks/reportingandanalytics/README.md#listdetailedcollaborator) - Retrieve detailed information on all collaborators
 * [listLineItem](docs/sdks/reportingandanalytics/README.md#listlineitem) - Obtain Aging Report for Line Items
 * [listPayable](docs/sdks/reportingandanalytics/README.md#listpayable) - Retrieve Aging Report for Payables
+
+### [serviceSettings](docs/sdks/servicesettings/README.md)
+
+* [get](docs/sdks/servicesettings/README.md#get) - Check Service Status
+
+### [wingspanWallet](docs/sdks/wingspanwallet/README.md)
+
+* [create](docs/sdks/wingspanwallet/README.md#create) - Register a New  Wingspan Wallet Card
+* [delete](docs/sdks/wingspanwallet/README.md#delete) - Remove a card using its unique ID
+* [get](docs/sdks/wingspanwallet/README.md#get) - Retrieve card details by its unique ID
+* [list](docs/sdks/wingspanwallet/README.md#list) - List All Stored Wingspan Wallet Cards
+* [request](docs/sdks/wingspanwallet/README.md#request) - Request a verification code for card authentication
+* [update](docs/sdks/wingspanwallet/README.md#update) - Modify card details by its unique ID
+* [validate](docs/sdks/wingspanwallet/README.md#validate) - Validate verification code to receive a token
+
+</details>
 <!-- End Available Resources and Operations [operations] -->
 
 
@@ -325,30 +331,30 @@ import { Payments } from "@wingspan/payments";
 import { SDKValidationError } from "@wingspan/payments/sdk/models/errors";
 
 const payments = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    let result;
-    try {
-        result = await payments.serviceSettings.get();
+  let result;
+  try {
+    result = await payments.serviceSettings.get();
 
-        // Handle the result
-        console.log(result);
-    } catch (err) {
-        switch (true) {
-            case err instanceof SDKValidationError: {
-                // Validation errors can be pretty-printed
-                console.error(err.pretty());
-                // Raw value may also be inspected
-                console.error(err.rawValue);
-                return;
-            }
-            default: {
-                throw err;
-            }
-        }
+    // Handle the result
+    console.log(result);
+  } catch (err) {
+    switch (true) {
+      case (err instanceof SDKValidationError): {
+        // Validation errors can be pretty-printed
+        console.error(err.pretty());
+        // Raw value may also be inspected
+        console.error(err.rawValue);
+        return;
+      }
+      default: {
+        throw err;
+      }
     }
+  }
 }
 
 run();
@@ -374,15 +380,15 @@ You can override the default server globally by passing a server name to the `se
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    server: "staging",
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  server: "staging",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get();
+  const result = await payments.serviceSettings.get();
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -398,15 +404,15 @@ The default server can also be overridden globally by passing a URL to the `serv
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    serverURL: "https://api.wingspan.app",
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  serverURL: "https://api.wingspan.app",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get();
+  const result = await payments.serviceSettings.get();
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -481,14 +487,14 @@ To authenticate with the API the `bearerAuth` parameter must be set when initial
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get();
+  const result = await payments.serviceSettings.get();
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -512,25 +518,25 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get({
-        retries: {
-            strategy: "backoff",
-            backoff: {
-                initialInterval: 1,
-                maxInterval: 50,
-                exponent: 1.1,
-                maxElapsedTime: 100,
-            },
-            retryConnectionErrors: false,
-        },
-    });
+  const result = await payments.serviceSettings.get({
+    retries: {
+      strategy: "backoff",
+      backoff: {
+        initialInterval: 1,
+        maxInterval: 50,
+        exponent: 1.1,
+        maxElapsedTime: 100,
+      },
+      retryConnectionErrors: false,
+    },
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -542,24 +548,24 @@ If you'd like to override the default retry strategy for all operations that sup
 import { Payments } from "@wingspan/payments";
 
 const payments = new Payments({
-    retryConfig: {
-        strategy: "backoff",
-        backoff: {
-            initialInterval: 1,
-            maxInterval: 50,
-            exponent: 1.1,
-            maxElapsedTime: 100,
-        },
-        retryConnectionErrors: false,
+  retryConfig: {
+    strategy: "backoff",
+    backoff: {
+      initialInterval: 1,
+      maxInterval: 50,
+      exponent: 1.1,
+      maxElapsedTime: 100,
     },
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    retryConnectionErrors: false,
+  },
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
 });
 
 async function run() {
-    const result = await payments.serviceSettings.get();
+  const result = await payments.serviceSettings.get();
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();

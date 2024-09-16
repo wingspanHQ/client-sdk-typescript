@@ -4,45 +4,49 @@
 
 import * as z from "zod";
 
-export type ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2 = {
+export type ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2 =
+  {
     customAttachmentIds?: Array<string> | null | undefined;
-};
+  };
 
 /** @internal */
-export const ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema: z.ZodType<
+export const ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema:
+  z.ZodType<
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     customAttachmentIds: z.nullable(z.array(z.string())).optional(),
-});
+  });
 
 /** @internal */
-export type ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound = {
+export type ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound =
+  {
     customAttachmentIds?: Array<string> | null | undefined;
-};
+  };
 
 /** @internal */
-export const ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema: z.ZodType<
+export const ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema:
+  z.ZodType<
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound,
     z.ZodTypeDef,
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2
-> = z.object({
+  > = z.object({
     customAttachmentIds: z.nullable(z.array(z.string())).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$ {
-    /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema` instead. */
-    export const inboundSchema =
-        ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema;
-    /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema` instead. */
-    export const outboundSchema =
-        ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema;
-    /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound` instead. */
-    export type Outbound =
-        ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound;
+  /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema` instead. */
+  export const inboundSchema =
+    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema;
+  /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema` instead. */
+  export const outboundSchema =
+    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema;
+  /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound` instead. */
+  export type Outbound =
+    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound;
 }

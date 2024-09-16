@@ -6,9 +6,9 @@
 import { EligibilityRequirement } from "@wingspan/payments/sdk/models/shared";
 
 let value: EligibilityRequirement = {
-    clientId: "<value>",
-    eligibilityRequirementId: "<value>",
-    requirementType: "Signature",
+  clientId: "<value>",
+  eligibilityRequirementId: "<value>",
+  requirementType: "Signature",
 };
 ```
 

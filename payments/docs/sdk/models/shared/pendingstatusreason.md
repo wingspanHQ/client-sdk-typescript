@@ -5,7 +5,7 @@
 ```typescript
 import { PendingStatusReason } from "@wingspan/payments/sdk/models/shared";
 
-let value: PendingStatusReason = "CollaboratorMissingEligibilityRequirement";
+let value: PendingStatusReason = "MemberPayoutMethodNotSelected";
 ```
 
 ## Values

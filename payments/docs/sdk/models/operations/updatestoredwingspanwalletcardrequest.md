@@ -6,7 +6,7 @@
 import { UpdateStoredWingspanWalletCardRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateStoredWingspanWalletCardRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

@@ -6,11 +6,11 @@
 import { GetInvoiceResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetInvoiceResponse = {
-    contentType: "<value>",
-    statusCode: 958950,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 958950,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

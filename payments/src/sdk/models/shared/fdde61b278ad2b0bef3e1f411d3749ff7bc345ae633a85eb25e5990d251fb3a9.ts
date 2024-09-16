@@ -5,60 +5,63 @@
 import * as z from "zod";
 
 export type Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9 = {
-    clearedAt?: string | null | undefined;
-    failedAt?: string | null | undefined;
-    pendingAt?: string | null | undefined;
-    returnedAt?: string | null | undefined;
-    sentAt?: string | null | undefined;
+  clearedAt?: string | null | undefined;
+  failedAt?: string | null | undefined;
+  pendingAt?: string | null | undefined;
+  returnedAt?: string | null | undefined;
+  sentAt?: string | null | undefined;
 };
 
 /** @internal */
-export const Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema: z.ZodType<
+export const Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema:
+  z.ZodType<
     Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     clearedAt: z.nullable(z.string()).optional(),
     failedAt: z.nullable(z.string()).optional(),
     pendingAt: z.nullable(z.string()).optional(),
     returnedAt: z.nullable(z.string()).optional(),
     sentAt: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound = {
+export type Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound =
+  {
     clearedAt?: string | null | undefined;
     failedAt?: string | null | undefined;
     pendingAt?: string | null | undefined;
     returnedAt?: string | null | undefined;
     sentAt?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema: z.ZodType<
+export const Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema:
+  z.ZodType<
     Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound,
     z.ZodTypeDef,
     Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9
-> = z.object({
+  > = z.object({
     clearedAt: z.nullable(z.string()).optional(),
     failedAt: z.nullable(z.string()).optional(),
     pendingAt: z.nullable(z.string()).optional(),
     returnedAt: z.nullable(z.string()).optional(),
     sentAt: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$ {
-    /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema` instead. */
-    export const inboundSchema =
-        Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema;
-    /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema` instead. */
-    export const outboundSchema =
-        Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema;
-    /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound` instead. */
-    export type Outbound =
-        Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound;
+  /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema` instead. */
+  export const inboundSchema =
+    Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$inboundSchema;
+  /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema` instead. */
+  export const outboundSchema =
+    Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$outboundSchema;
+  /** @deprecated use `Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound` instead. */
+  export type Outbound =
+    Fdde61b278ad2b0bef3e1f411d3749ff7bc345ae633a85eb25e5990d251fb3a9$Outbound;
 }

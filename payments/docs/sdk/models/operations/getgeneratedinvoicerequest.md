@@ -6,7 +6,7 @@
 import { GetGeneratedInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetGeneratedInvoiceRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

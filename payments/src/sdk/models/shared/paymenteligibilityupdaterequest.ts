@@ -7,56 +7,61 @@ import * as z from "zod";
 export type Value = {};
 
 export type PaymentEligibilityUpdateRequest = {
-    field?: string | null | undefined;
-    value?: Value | null | undefined;
+  field?: string | null | undefined;
+  value?: Value | null | undefined;
 };
 
 /** @internal */
-export const Value$inboundSchema: z.ZodType<Value, z.ZodTypeDef, unknown> = z.object({});
+export const Value$inboundSchema: z.ZodType<Value, z.ZodTypeDef, unknown> = z
+  .object({});
 
 /** @internal */
 export type Value$Outbound = {};
 
 /** @internal */
-export const Value$outboundSchema: z.ZodType<Value$Outbound, z.ZodTypeDef, Value> = z.object({});
+export const Value$outboundSchema: z.ZodType<
+  Value$Outbound,
+  z.ZodTypeDef,
+  Value
+> = z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Value$ {
-    /** @deprecated use `Value$inboundSchema` instead. */
-    export const inboundSchema = Value$inboundSchema;
-    /** @deprecated use `Value$outboundSchema` instead. */
-    export const outboundSchema = Value$outboundSchema;
-    /** @deprecated use `Value$Outbound` instead. */
-    export type Outbound = Value$Outbound;
+  /** @deprecated use `Value$inboundSchema` instead. */
+  export const inboundSchema = Value$inboundSchema;
+  /** @deprecated use `Value$outboundSchema` instead. */
+  export const outboundSchema = Value$outboundSchema;
+  /** @deprecated use `Value$Outbound` instead. */
+  export type Outbound = Value$Outbound;
 }
 
 /** @internal */
 export const PaymentEligibilityUpdateRequest$inboundSchema: z.ZodType<
-    PaymentEligibilityUpdateRequest,
-    z.ZodTypeDef,
-    unknown
+  PaymentEligibilityUpdateRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    field: z.nullable(z.string()).optional(),
-    value: z.nullable(z.lazy(() => Value$inboundSchema)).optional(),
+  field: z.nullable(z.string()).optional(),
+  value: z.nullable(z.lazy(() => Value$inboundSchema)).optional(),
 });
 
 /** @internal */
 export type PaymentEligibilityUpdateRequest$Outbound = {
-    field?: string | null | undefined;
-    value?: Value$Outbound | null | undefined;
+  field?: string | null | undefined;
+  value?: Value$Outbound | null | undefined;
 };
 
 /** @internal */
 export const PaymentEligibilityUpdateRequest$outboundSchema: z.ZodType<
-    PaymentEligibilityUpdateRequest$Outbound,
-    z.ZodTypeDef,
-    PaymentEligibilityUpdateRequest
+  PaymentEligibilityUpdateRequest$Outbound,
+  z.ZodTypeDef,
+  PaymentEligibilityUpdateRequest
 > = z.object({
-    field: z.nullable(z.string()).optional(),
-    value: z.nullable(z.lazy(() => Value$outboundSchema)).optional(),
+  field: z.nullable(z.string()).optional(),
+  value: z.nullable(z.lazy(() => Value$outboundSchema)).optional(),
 });
 
 /**
@@ -64,10 +69,10 @@ export const PaymentEligibilityUpdateRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace PaymentEligibilityUpdateRequest$ {
-    /** @deprecated use `PaymentEligibilityUpdateRequest$inboundSchema` instead. */
-    export const inboundSchema = PaymentEligibilityUpdateRequest$inboundSchema;
-    /** @deprecated use `PaymentEligibilityUpdateRequest$outboundSchema` instead. */
-    export const outboundSchema = PaymentEligibilityUpdateRequest$outboundSchema;
-    /** @deprecated use `PaymentEligibilityUpdateRequest$Outbound` instead. */
-    export type Outbound = PaymentEligibilityUpdateRequest$Outbound;
+  /** @deprecated use `PaymentEligibilityUpdateRequest$inboundSchema` instead. */
+  export const inboundSchema = PaymentEligibilityUpdateRequest$inboundSchema;
+  /** @deprecated use `PaymentEligibilityUpdateRequest$outboundSchema` instead. */
+  export const outboundSchema = PaymentEligibilityUpdateRequest$outboundSchema;
+  /** @deprecated use `PaymentEligibilityUpdateRequest$Outbound` instead. */
+  export type Outbound = PaymentEligibilityUpdateRequest$Outbound;
 }

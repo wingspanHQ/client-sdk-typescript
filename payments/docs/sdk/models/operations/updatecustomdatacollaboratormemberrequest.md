@@ -6,7 +6,7 @@
 import { UpdateCustomDataCollaboratorMemberRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCustomDataCollaboratorMemberRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

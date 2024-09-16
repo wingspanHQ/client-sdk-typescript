@@ -5,62 +5,62 @@
 import * as z from "zod";
 
 export type InvoiceAmountDetails = {
-    clientPaid: number;
-    clientRefunded?: number | null | undefined;
-    collaboratorPayments: number;
-    deductions: number;
-    memberGross: number;
-    memberNet: number;
-    memberTaxWithheld: number;
-    processingFee: number;
-    wingspanTopUp: number;
+  clientPaid: number;
+  clientRefunded?: number | null | undefined;
+  collaboratorPayments: number;
+  deductions: number;
+  memberGross: number;
+  memberNet: number;
+  memberTaxWithheld: number;
+  processingFee: number;
+  wingspanTopUp: number;
 };
 
 /** @internal */
 export const InvoiceAmountDetails$inboundSchema: z.ZodType<
-    InvoiceAmountDetails,
-    z.ZodTypeDef,
-    unknown
+  InvoiceAmountDetails,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    clientPaid: z.number(),
-    clientRefunded: z.nullable(z.number()).optional(),
-    collaboratorPayments: z.number(),
-    deductions: z.number(),
-    memberGross: z.number(),
-    memberNet: z.number(),
-    memberTaxWithheld: z.number(),
-    processingFee: z.number(),
-    wingspanTopUp: z.number(),
+  clientPaid: z.number(),
+  clientRefunded: z.nullable(z.number()).optional(),
+  collaboratorPayments: z.number(),
+  deductions: z.number(),
+  memberGross: z.number(),
+  memberNet: z.number(),
+  memberTaxWithheld: z.number(),
+  processingFee: z.number(),
+  wingspanTopUp: z.number(),
 });
 
 /** @internal */
 export type InvoiceAmountDetails$Outbound = {
-    clientPaid: number;
-    clientRefunded?: number | null | undefined;
-    collaboratorPayments: number;
-    deductions: number;
-    memberGross: number;
-    memberNet: number;
-    memberTaxWithheld: number;
-    processingFee: number;
-    wingspanTopUp: number;
+  clientPaid: number;
+  clientRefunded?: number | null | undefined;
+  collaboratorPayments: number;
+  deductions: number;
+  memberGross: number;
+  memberNet: number;
+  memberTaxWithheld: number;
+  processingFee: number;
+  wingspanTopUp: number;
 };
 
 /** @internal */
 export const InvoiceAmountDetails$outboundSchema: z.ZodType<
-    InvoiceAmountDetails$Outbound,
-    z.ZodTypeDef,
-    InvoiceAmountDetails
+  InvoiceAmountDetails$Outbound,
+  z.ZodTypeDef,
+  InvoiceAmountDetails
 > = z.object({
-    clientPaid: z.number(),
-    clientRefunded: z.nullable(z.number()).optional(),
-    collaboratorPayments: z.number(),
-    deductions: z.number(),
-    memberGross: z.number(),
-    memberNet: z.number(),
-    memberTaxWithheld: z.number(),
-    processingFee: z.number(),
-    wingspanTopUp: z.number(),
+  clientPaid: z.number(),
+  clientRefunded: z.nullable(z.number()).optional(),
+  collaboratorPayments: z.number(),
+  deductions: z.number(),
+  memberGross: z.number(),
+  memberNet: z.number(),
+  memberTaxWithheld: z.number(),
+  processingFee: z.number(),
+  wingspanTopUp: z.number(),
 });
 
 /**
@@ -68,10 +68,10 @@ export const InvoiceAmountDetails$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceAmountDetails$ {
-    /** @deprecated use `InvoiceAmountDetails$inboundSchema` instead. */
-    export const inboundSchema = InvoiceAmountDetails$inboundSchema;
-    /** @deprecated use `InvoiceAmountDetails$outboundSchema` instead. */
-    export const outboundSchema = InvoiceAmountDetails$outboundSchema;
-    /** @deprecated use `InvoiceAmountDetails$Outbound` instead. */
-    export type Outbound = InvoiceAmountDetails$Outbound;
+  /** @deprecated use `InvoiceAmountDetails$inboundSchema` instead. */
+  export const inboundSchema = InvoiceAmountDetails$inboundSchema;
+  /** @deprecated use `InvoiceAmountDetails$outboundSchema` instead. */
+  export const outboundSchema = InvoiceAmountDetails$outboundSchema;
+  /** @deprecated use `InvoiceAmountDetails$Outbound` instead. */
+  export type Outbound = InvoiceAmountDetails$Outbound;
 }

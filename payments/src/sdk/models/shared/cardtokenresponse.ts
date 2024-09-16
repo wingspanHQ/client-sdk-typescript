@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type CardTokenResponse = {
-    cardId: string;
-    token: string;
+  cardId: string;
+  token: string;
 };
 
 /** @internal */
-export const CardTokenResponse$inboundSchema: z.ZodType<CardTokenResponse, z.ZodTypeDef, unknown> =
-    z.object({
-        cardId: z.string(),
-        token: z.string(),
-    });
+export const CardTokenResponse$inboundSchema: z.ZodType<
+  CardTokenResponse,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  cardId: z.string(),
+  token: z.string(),
+});
 
 /** @internal */
 export type CardTokenResponse$Outbound = {
-    cardId: string;
-    token: string;
+  cardId: string;
+  token: string;
 };
 
 /** @internal */
 export const CardTokenResponse$outboundSchema: z.ZodType<
-    CardTokenResponse$Outbound,
-    z.ZodTypeDef,
-    CardTokenResponse
+  CardTokenResponse$Outbound,
+  z.ZodTypeDef,
+  CardTokenResponse
 > = z.object({
-    cardId: z.string(),
-    token: z.string(),
+  cardId: z.string(),
+  token: z.string(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const CardTokenResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CardTokenResponse$ {
-    /** @deprecated use `CardTokenResponse$inboundSchema` instead. */
-    export const inboundSchema = CardTokenResponse$inboundSchema;
-    /** @deprecated use `CardTokenResponse$outboundSchema` instead. */
-    export const outboundSchema = CardTokenResponse$outboundSchema;
-    /** @deprecated use `CardTokenResponse$Outbound` instead. */
-    export type Outbound = CardTokenResponse$Outbound;
+  /** @deprecated use `CardTokenResponse$inboundSchema` instead. */
+  export const inboundSchema = CardTokenResponse$inboundSchema;
+  /** @deprecated use `CardTokenResponse$outboundSchema` instead. */
+  export const outboundSchema = CardTokenResponse$outboundSchema;
+  /** @deprecated use `CardTokenResponse$Outbound` instead. */
+  export type Outbound = CardTokenResponse$Outbound;
 }

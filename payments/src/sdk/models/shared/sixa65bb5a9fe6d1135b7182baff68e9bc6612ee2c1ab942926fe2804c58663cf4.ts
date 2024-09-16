@@ -4,49 +4,53 @@
 
 import * as z from "zod";
 
-export type Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4 = {
+export type Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4 =
+  {
     expenseAccountId?: string | null | undefined;
     vendorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema: z.ZodType<
+export const Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema:
+  z.ZodType<
     Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     expenseAccountId: z.nullable(z.string()).optional(),
     vendorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound = {
+export type Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound =
+  {
     expenseAccountId?: string | null | undefined;
     vendorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema: z.ZodType<
+export const Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema:
+  z.ZodType<
     Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound,
     z.ZodTypeDef,
     Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4
-> = z.object({
+  > = z.object({
     expenseAccountId: z.nullable(z.string()).optional(),
     vendorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$ {
-    /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema` instead. */
-    export const inboundSchema =
-        Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema;
-    /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema` instead. */
-    export const outboundSchema =
-        Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema;
-    /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound` instead. */
-    export type Outbound =
-        Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound;
+  /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema` instead. */
+  export const inboundSchema =
+    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema;
+  /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema` instead. */
+  export const outboundSchema =
+    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema;
+  /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound` instead. */
+  export type Outbound =
+    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound;
 }

@@ -10,11 +10,11 @@ import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
 import {
-    ConnectionError,
-    InvalidRequestError,
-    RequestAbortedError,
-    RequestTimeoutError,
-    UnexpectedClientError,
+  ConnectionError,
+  InvalidRequestError,
+  RequestAbortedError,
+  RequestTimeoutError,
+  UnexpectedClientError,
 } from "../sdk/models/errors/httpclienterrors.js";
 import { SDKError } from "../sdk/models/errors/sdkerror.js";
 import { SDKValidationError } from "../sdk/models/errors/sdkvalidationerror.js";
@@ -28,105 +28,107 @@ import { Result } from "../sdk/types/fp.js";
  * Permanently delete the record of a specific collaborator from the system.
  */
 export async function collaboratorManagementDelete(
-    client$: PaymentsCore,
-    request: operations.DeleteCollaboratorRequest,
-    options?: RequestOptions
+  client$: PaymentsCore,
+  request: operations.DeleteCollaboratorRequest,
+  options?: RequestOptions,
 ): Promise<
-    Result<
-        operations.DeleteCollaboratorResponse,
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >
+  Result<
+    operations.DeleteCollaboratorResponse,
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >
 > {
-    const input$ = request;
+  const input$ = request;
 
-    const parsed$ = schemas$.safeParse(
-        input$,
-        (value$) => operations.DeleteCollaboratorRequest$outboundSchema.parse(value$),
-        "Input validation failed"
-    );
-    if (!parsed$.ok) {
-        return parsed$;
-    }
-    const payload$ = parsed$.value;
-    const body$ = null;
+  const parsed$ = schemas$.safeParse(
+    input$,
+    (value$) =>
+      operations.DeleteCollaboratorRequest$outboundSchema.parse(value$),
+    "Input validation failed",
+  );
+  if (!parsed$.ok) {
+    return parsed$;
+  }
+  const payload$ = parsed$.value;
+  const body$ = null;
 
-    const pathParams$ = {
-        id: encodeSimple$("id", payload$.id, { explode: false, charEncoding: "percent" }),
-    };
+  const pathParams$ = {
+    id: encodeSimple$("id", payload$.id, {
+      explode: false,
+      charEncoding: "percent",
+    }),
+  };
 
-    const path$ = pathToFunc("/payments/collaborator/{id}")(pathParams$);
+  const path$ = pathToFunc("/payments/collaborator/{id}")(pathParams$);
 
-    const headers$ = new Headers({
-        Accept: "application/json",
-    });
+  const headers$ = new Headers({
+    Accept: "application/json",
+  });
 
-    const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
-    const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
-    const context = {
-        operationID: "deleteCollaborator",
-        oAuth2Scopes: [],
-        securitySource: client$.options$.bearerAuth,
-    };
-    const securitySettings$ = resolveGlobalSecurity(security$);
+  const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
+  const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
+  const context = {
+    operationID: "deleteCollaborator",
+    oAuth2Scopes: [],
+    securitySource: client$.options$.bearerAuth,
+  };
+  const securitySettings$ = resolveGlobalSecurity(security$);
 
-    const requestRes = client$.createRequest$(
-        context,
-        {
-            security: securitySettings$,
-            method: "DELETE",
-            path: path$,
-            headers: headers$,
-            body: body$,
-            timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
-        },
-        options
-    );
-    if (!requestRes.ok) {
-        return requestRes;
-    }
-    const request$ = requestRes.value;
+  const requestRes = client$.createRequest$(context, {
+    security: securitySettings$,
+    method: "DELETE",
+    path: path$,
+    headers: headers$,
+    body: body$,
+    timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
+  }, options);
+  if (!requestRes.ok) {
+    return requestRes;
+  }
+  const request$ = requestRes.value;
 
-    const doResult = await client$.do$(request$, {
-        context,
-        errorCodes: [],
-        retryConfig: options?.retries || client$.options$.retryConfig,
-        retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
-    });
-    if (!doResult.ok) {
-        return doResult;
-    }
-    const response = doResult.value;
+  const doResult = await client$.do$(request$, {
+    context,
+    errorCodes: [],
+    retryConfig: options?.retries
+      || client$.options$.retryConfig,
+    retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
+  });
+  if (!doResult.ok) {
+    return doResult;
+  }
+  const response = doResult.value;
 
-    const responseFields$ = {
-        ContentType: response.headers.get("content-type") ?? "application/octet-stream",
-        StatusCode: response.status,
-        RawResponse: response,
-        Headers: {},
-    };
+  const responseFields$ = {
+    ContentType: response.headers.get("content-type")
+      ?? "application/octet-stream",
+    StatusCode: response.status,
+    RawResponse: response,
+    Headers: {},
+  };
 
-    const [result$] = await m$.match<
-        operations.DeleteCollaboratorResponse,
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >(
-        m$.json(200, operations.DeleteCollaboratorResponse$inboundSchema, {
-            key: "CollaboratorSchema",
-        })
-    )(response, { extraFields: responseFields$ });
-    if (!result$.ok) {
-        return result$;
-    }
-
+  const [result$] = await m$.match<
+    operations.DeleteCollaboratorResponse,
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >(
+    m$.json(200, operations.DeleteCollaboratorResponse$inboundSchema, {
+      key: "CollaboratorSchema",
+    }),
+  )(response, { extraFields: responseFields$ });
+  if (!result$.ok) {
     return result$;
+  }
+
+  return result$;
 }

@@ -6,86 +6,94 @@
 import { InvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceTemplate = {
+  createdAt: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  invoiceData: {
+    amount: 8630.23,
+    client: {},
     createdAt: "<value>",
+    currency: "CAD",
+    dueDate: "<value>",
     eventActors: {
-        key: "<value>",
+      "key": "<value>",
     },
-    invoiceData: {
-        amount: 7313.98,
-        client: {},
-        createdAt: "<value>",
-        currency: "USD",
-        dueDate: "<value>",
-        eventActors: {
-            key: "<value>",
-        },
-        events: {},
-        externalIds: {},
-        invoiceId: "<value>",
-        invoiceNumber: "<value>",
-        labels: {
-            key: "<value>",
-        },
-        lineItems: [
-            {
-                costPerUnit: 7669.64,
-                createdAt: "<value>",
-                labels: {
-                    key: "<value>",
-                },
-                labelsBak2: {
-                    key: "<value>",
-                },
-                quantity: 1605.38,
-                reimbursableExpense: false,
-                totalCost: 97.66,
-                unit: "farad",
-                updatedAt: "<value>",
-            },
-        ],
-        member: {},
-        memberAddress: {
-            addressLine1: "92455 Stiedemann Motorway",
-            city: "Avisshire",
-            postalCode: "58819-9801",
-            state: "California",
-        },
-        memberClientId: "<value>",
-        memberId: "<value>",
-        payments: [
-            {
-                amount: 6288.99,
-                createdAt: "<value>",
-                events: {},
-                labels: {
-                    key: "<value>",
-                },
-                paymentId: "<value>",
-                sourceId: "<value>",
-                sourceMetadata: {},
-                sourceType: "Card",
-                status: "Pending",
-                updatedAt: "<value>",
-            },
-        ],
-        status: "Paid",
-        updatedAt: "<value>",
-        userRoles: {
-            ownerIds: ["<value>"],
-            viewerIds: ["<value>"],
-        },
-    },
-    invoiceTemplateId: "<value>",
+    events: {},
+    externalIds: {},
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
     labels: {
-        key: "<value>",
+      "key": "<value>",
     },
+    lineItems: [
+      {
+        costPerUnit: 1576.32,
+        createdAt: "<value>",
+        labels: {
+          "key": "<value>",
+        },
+        labelsBak2: {
+          "key": "<value>",
+        },
+        quantity: 9088.44,
+        reimbursableExpense: false,
+        totalCost: 9924.3,
+        unit: "farad",
+        updatedAt: "<value>",
+      },
+    ],
+    member: {},
+    memberAddress: {
+      addressLine1: "10663 Berge View",
+      city: "Isaiburgh",
+      postalCode: "87039-1343",
+      state: "Maryland",
+    },
+    memberClientId: "<value>",
     memberId: "<value>",
-    status: "Active",
+    payments: [
+      {
+        amount: 163.28,
+        createdAt: "<value>",
+        events: {},
+        labels: {
+          "key": "<value>",
+        },
+        paymentId: "<value>",
+        sourceId: "<value>",
+        sourceMetadata: {},
+        sourceType: "Card",
+        status: "Failed",
+        updatedAt: "<value>",
+      },
+    ],
+    status: "PaymentInTransit",
     updatedAt: "<value>",
     userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
+      ownerIds: [
+        "<value>",
+      ],
+      viewerIds: [
+        "<value>",
+      ],
     },
+  },
+  invoiceTemplateId: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  memberId: "<value>",
+  status: "Draft",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
 };
 ```
 

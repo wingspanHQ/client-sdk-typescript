@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type TestInvoiceCreate = {
-    contactName: string;
-    email: string;
+  contactName: string;
+  email: string;
 };
 
 /** @internal */
-export const TestInvoiceCreate$inboundSchema: z.ZodType<TestInvoiceCreate, z.ZodTypeDef, unknown> =
-    z.object({
-        contactName: z.string(),
-        email: z.string(),
-    });
+export const TestInvoiceCreate$inboundSchema: z.ZodType<
+  TestInvoiceCreate,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  contactName: z.string(),
+  email: z.string(),
+});
 
 /** @internal */
 export type TestInvoiceCreate$Outbound = {
-    contactName: string;
-    email: string;
+  contactName: string;
+  email: string;
 };
 
 /** @internal */
 export const TestInvoiceCreate$outboundSchema: z.ZodType<
-    TestInvoiceCreate$Outbound,
-    z.ZodTypeDef,
-    TestInvoiceCreate
+  TestInvoiceCreate$Outbound,
+  z.ZodTypeDef,
+  TestInvoiceCreate
 > = z.object({
-    contactName: z.string(),
-    email: z.string(),
+  contactName: z.string(),
+  email: z.string(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const TestInvoiceCreate$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace TestInvoiceCreate$ {
-    /** @deprecated use `TestInvoiceCreate$inboundSchema` instead. */
-    export const inboundSchema = TestInvoiceCreate$inboundSchema;
-    /** @deprecated use `TestInvoiceCreate$outboundSchema` instead. */
-    export const outboundSchema = TestInvoiceCreate$outboundSchema;
-    /** @deprecated use `TestInvoiceCreate$Outbound` instead. */
-    export type Outbound = TestInvoiceCreate$Outbound;
+  /** @deprecated use `TestInvoiceCreate$inboundSchema` instead. */
+  export const inboundSchema = TestInvoiceCreate$inboundSchema;
+  /** @deprecated use `TestInvoiceCreate$outboundSchema` instead. */
+  export const outboundSchema = TestInvoiceCreate$outboundSchema;
+  /** @deprecated use `TestInvoiceCreate$Outbound` instead. */
+  export type Outbound = TestInvoiceCreate$Outbound;
 }

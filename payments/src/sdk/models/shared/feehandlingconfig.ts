@@ -5,35 +5,38 @@
 import * as z from "zod";
 
 export type FeeHandlingConfig = {
-    clientAbsolutePercentage?: number | null | undefined;
-    clientPays?: number | null | undefined;
-    memberPays?: number | null | undefined;
+  clientAbsolutePercentage?: number | null | undefined;
+  clientPays?: number | null | undefined;
+  memberPays?: number | null | undefined;
 };
 
 /** @internal */
-export const FeeHandlingConfig$inboundSchema: z.ZodType<FeeHandlingConfig, z.ZodTypeDef, unknown> =
-    z.object({
-        clientAbsolutePercentage: z.nullable(z.number()).optional(),
-        clientPays: z.nullable(z.number()).optional(),
-        memberPays: z.nullable(z.number()).optional(),
-    });
+export const FeeHandlingConfig$inboundSchema: z.ZodType<
+  FeeHandlingConfig,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  clientAbsolutePercentage: z.nullable(z.number()).optional(),
+  clientPays: z.nullable(z.number()).optional(),
+  memberPays: z.nullable(z.number()).optional(),
+});
 
 /** @internal */
 export type FeeHandlingConfig$Outbound = {
-    clientAbsolutePercentage?: number | null | undefined;
-    clientPays?: number | null | undefined;
-    memberPays?: number | null | undefined;
+  clientAbsolutePercentage?: number | null | undefined;
+  clientPays?: number | null | undefined;
+  memberPays?: number | null | undefined;
 };
 
 /** @internal */
 export const FeeHandlingConfig$outboundSchema: z.ZodType<
-    FeeHandlingConfig$Outbound,
-    z.ZodTypeDef,
-    FeeHandlingConfig
+  FeeHandlingConfig$Outbound,
+  z.ZodTypeDef,
+  FeeHandlingConfig
 > = z.object({
-    clientAbsolutePercentage: z.nullable(z.number()).optional(),
-    clientPays: z.nullable(z.number()).optional(),
-    memberPays: z.nullable(z.number()).optional(),
+  clientAbsolutePercentage: z.nullable(z.number()).optional(),
+  clientPays: z.nullable(z.number()).optional(),
+  memberPays: z.nullable(z.number()).optional(),
 });
 
 /**
@@ -41,10 +44,10 @@ export const FeeHandlingConfig$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace FeeHandlingConfig$ {
-    /** @deprecated use `FeeHandlingConfig$inboundSchema` instead. */
-    export const inboundSchema = FeeHandlingConfig$inboundSchema;
-    /** @deprecated use `FeeHandlingConfig$outboundSchema` instead. */
-    export const outboundSchema = FeeHandlingConfig$outboundSchema;
-    /** @deprecated use `FeeHandlingConfig$Outbound` instead. */
-    export type Outbound = FeeHandlingConfig$Outbound;
+  /** @deprecated use `FeeHandlingConfig$inboundSchema` instead. */
+  export const inboundSchema = FeeHandlingConfig$inboundSchema;
+  /** @deprecated use `FeeHandlingConfig$outboundSchema` instead. */
+  export const outboundSchema = FeeHandlingConfig$outboundSchema;
+  /** @deprecated use `FeeHandlingConfig$Outbound` instead. */
+  export type Outbound = FeeHandlingConfig$Outbound;
 }

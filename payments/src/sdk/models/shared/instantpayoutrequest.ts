@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type InstantPayoutRequest = {
-    externalPayoutAccountToken: string;
+  externalPayoutAccountToken: string;
 };
 
 /** @internal */
 export const InstantPayoutRequest$inboundSchema: z.ZodType<
-    InstantPayoutRequest,
-    z.ZodTypeDef,
-    unknown
+  InstantPayoutRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    externalPayoutAccountToken: z.string(),
+  externalPayoutAccountToken: z.string(),
 });
 
 /** @internal */
 export type InstantPayoutRequest$Outbound = {
-    externalPayoutAccountToken: string;
+  externalPayoutAccountToken: string;
 };
 
 /** @internal */
 export const InstantPayoutRequest$outboundSchema: z.ZodType<
-    InstantPayoutRequest$Outbound,
-    z.ZodTypeDef,
-    InstantPayoutRequest
+  InstantPayoutRequest$Outbound,
+  z.ZodTypeDef,
+  InstantPayoutRequest
 > = z.object({
-    externalPayoutAccountToken: z.string(),
+  externalPayoutAccountToken: z.string(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const InstantPayoutRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InstantPayoutRequest$ {
-    /** @deprecated use `InstantPayoutRequest$inboundSchema` instead. */
-    export const inboundSchema = InstantPayoutRequest$inboundSchema;
-    /** @deprecated use `InstantPayoutRequest$outboundSchema` instead. */
-    export const outboundSchema = InstantPayoutRequest$outboundSchema;
-    /** @deprecated use `InstantPayoutRequest$Outbound` instead. */
-    export type Outbound = InstantPayoutRequest$Outbound;
+  /** @deprecated use `InstantPayoutRequest$inboundSchema` instead. */
+  export const inboundSchema = InstantPayoutRequest$inboundSchema;
+  /** @deprecated use `InstantPayoutRequest$outboundSchema` instead. */
+  export const outboundSchema = InstantPayoutRequest$outboundSchema;
+  /** @deprecated use `InstantPayoutRequest$Outbound` instead. */
+  export type Outbound = InstantPayoutRequest$Outbound;
 }

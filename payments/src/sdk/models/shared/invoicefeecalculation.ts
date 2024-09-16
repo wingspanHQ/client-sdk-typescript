@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type InvoiceFeeCalculation = {
-    creditFeeTotal: number;
+  creditFeeTotal: number;
 };
 
 /** @internal */
 export const InvoiceFeeCalculation$inboundSchema: z.ZodType<
-    InvoiceFeeCalculation,
-    z.ZodTypeDef,
-    unknown
+  InvoiceFeeCalculation,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    creditFeeTotal: z.number(),
+  creditFeeTotal: z.number(),
 });
 
 /** @internal */
 export type InvoiceFeeCalculation$Outbound = {
-    creditFeeTotal: number;
+  creditFeeTotal: number;
 };
 
 /** @internal */
 export const InvoiceFeeCalculation$outboundSchema: z.ZodType<
-    InvoiceFeeCalculation$Outbound,
-    z.ZodTypeDef,
-    InvoiceFeeCalculation
+  InvoiceFeeCalculation$Outbound,
+  z.ZodTypeDef,
+  InvoiceFeeCalculation
 > = z.object({
-    creditFeeTotal: z.number(),
+  creditFeeTotal: z.number(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const InvoiceFeeCalculation$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceFeeCalculation$ {
-    /** @deprecated use `InvoiceFeeCalculation$inboundSchema` instead. */
-    export const inboundSchema = InvoiceFeeCalculation$inboundSchema;
-    /** @deprecated use `InvoiceFeeCalculation$outboundSchema` instead. */
-    export const outboundSchema = InvoiceFeeCalculation$outboundSchema;
-    /** @deprecated use `InvoiceFeeCalculation$Outbound` instead. */
-    export type Outbound = InvoiceFeeCalculation$Outbound;
+  /** @deprecated use `InvoiceFeeCalculation$inboundSchema` instead. */
+  export const inboundSchema = InvoiceFeeCalculation$inboundSchema;
+  /** @deprecated use `InvoiceFeeCalculation$outboundSchema` instead. */
+  export const outboundSchema = InvoiceFeeCalculation$outboundSchema;
+  /** @deprecated use `InvoiceFeeCalculation$Outbound` instead. */
+  export type Outbound = InvoiceFeeCalculation$Outbound;
 }

@@ -8,9 +8,9 @@ export type Mark1099AsUndeliveredResponse = {};
 
 /** @internal */
 export const Mark1099AsUndeliveredResponse$inboundSchema: z.ZodType<
-    Mark1099AsUndeliveredResponse,
-    z.ZodTypeDef,
-    unknown
+  Mark1099AsUndeliveredResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +18,9 @@ export type Mark1099AsUndeliveredResponse$Outbound = {};
 
 /** @internal */
 export const Mark1099AsUndeliveredResponse$outboundSchema: z.ZodType<
-    Mark1099AsUndeliveredResponse$Outbound,
-    z.ZodTypeDef,
-    Mark1099AsUndeliveredResponse
+  Mark1099AsUndeliveredResponse$Outbound,
+  z.ZodTypeDef,
+  Mark1099AsUndeliveredResponse
 > = z.object({});
 
 /**
@@ -28,10 +28,10 @@ export const Mark1099AsUndeliveredResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Mark1099AsUndeliveredResponse$ {
-    /** @deprecated use `Mark1099AsUndeliveredResponse$inboundSchema` instead. */
-    export const inboundSchema = Mark1099AsUndeliveredResponse$inboundSchema;
-    /** @deprecated use `Mark1099AsUndeliveredResponse$outboundSchema` instead. */
-    export const outboundSchema = Mark1099AsUndeliveredResponse$outboundSchema;
-    /** @deprecated use `Mark1099AsUndeliveredResponse$Outbound` instead. */
-    export type Outbound = Mark1099AsUndeliveredResponse$Outbound;
+  /** @deprecated use `Mark1099AsUndeliveredResponse$inboundSchema` instead. */
+  export const inboundSchema = Mark1099AsUndeliveredResponse$inboundSchema;
+  /** @deprecated use `Mark1099AsUndeliveredResponse$outboundSchema` instead. */
+  export const outboundSchema = Mark1099AsUndeliveredResponse$outboundSchema;
+  /** @deprecated use `Mark1099AsUndeliveredResponse$Outbound` instead. */
+  export type Outbound = Mark1099AsUndeliveredResponse$Outbound;
 }

@@ -6,11 +6,11 @@
 import { CollaboratorGroupResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorGroupResponse = {
-    clientId: "<value>",
-    collaboratorGroupId: "<value>",
-    defaultGroup: false,
-    description: "Public-key attitude-oriented methodology",
-    name: "<value>",
+  clientId: "<value>",
+  collaboratorGroupId: "<value>",
+  defaultGroup: false,
+  description: "Profit-focused actuating intranet",
+  name: "<value>",
 };
 ```
 

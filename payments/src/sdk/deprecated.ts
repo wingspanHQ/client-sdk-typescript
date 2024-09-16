@@ -16,114 +16,143 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class Deprecated extends ClientSDK {
-    /**
-     * Register New Custom Data for Collaborator-Member Relationship
-     *
-     * @remarks
-     * [Deprecated - use /payments/custom-fields] Create custom fields that can be associated with the memberClient object to provide extra details about the relationship between a collaborator and a member.
-     *
-     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
-     */
-    async create(
-        request?: shared.AdditionalData | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateCustomDataCollaboratorMemberResponse> {
-        return unwrapAsync(deprecatedCreate(this, request, options));
-    }
+  /**
+   * Register New Custom Data for Collaborator-Member Relationship
+   *
+   * @remarks
+   * [Deprecated - use /payments/custom-fields] Create custom fields that can be associated with the memberClient object to provide extra details about the relationship between a collaborator and a member.
+   *
+   * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+   */
+  async create(
+    request?: shared.AdditionalData | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCustomDataCollaboratorMemberResponse> {
+    return unwrapAsync(deprecatedCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Erase a Specific Collaborator-Member Custom Data
-     *
-     * @remarks
-     * [Deprecated - use /payments/custom-fields] Remove a specific custom data point, eliminating the additional details provided about a collaborator-member relationship.
-     *
-     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
-     */
-    async delete(
-        request: operations.DeleteCustomDataCollaboratorMemberRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteCustomDataCollaboratorMemberResponse> {
-        return unwrapAsync(deprecatedDelete(this, request, options));
-    }
+  /**
+   * Erase a Specific Collaborator-Member Custom Data
+   *
+   * @remarks
+   * [Deprecated - use /payments/custom-fields] Remove a specific custom data point, eliminating the additional details provided about a collaborator-member relationship.
+   *
+   * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+   */
+  async delete(
+    request: operations.DeleteCustomDataCollaboratorMemberRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteCustomDataCollaboratorMemberResponse> {
+    return unwrapAsync(deprecatedDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Deprecated Remove Instant Payout Configuration
-     *
-     * @remarks
-     * Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
-     */
-    async deleteInstantPayout(
-        options?: RequestOptions
-    ): Promise<operations.DeleteInstantPayoutInformationResponse> {
-        return unwrapAsync(deprecatedDeleteInstantPayout(this, options));
-    }
+  /**
+   * Deprecated Remove Instant Payout Configuration
+   *
+   * @remarks
+   * Delete the existing instant payout configuration, preventing any further instant payouts unless reconfigured.
+   */
+  async deleteInstantPayout(
+    options?: RequestOptions,
+  ): Promise<operations.DeleteInstantPayoutInformationResponse> {
+    return unwrapAsync(deprecatedDeleteInstantPayout(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Specific Collaborator Custom Data
-     *
-     * @remarks
-     * Deprecated - use /payments/custom-fields/:id
-     *
-     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
-     */
-    async get(
-        request: operations.GetCustomDataCollaboratorMemberRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetCustomDataCollaboratorMemberResponse> {
-        return unwrapAsync(deprecatedGet(this, request, options));
-    }
+  /**
+   * Retrieve Specific Collaborator Custom Data
+   *
+   * @remarks
+   * Deprecated - use /payments/custom-fields/:id
+   *
+   * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+   */
+  async get(
+    request: operations.GetCustomDataCollaboratorMemberRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetCustomDataCollaboratorMemberResponse> {
+    return unwrapAsync(deprecatedGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Deprecated Retrieve Instant Payout Information
-     *
-     * @remarks
-     * Fetch detailed information about the current status and details of instant payouts configured in the system.
-     */
-    async getInstantPayout(
-        options?: RequestOptions
-    ): Promise<operations.GetInstantPayoutInformationResponse> {
-        return unwrapAsync(deprecatedGetInstantPayout(this, options));
-    }
+  /**
+   * Deprecated Retrieve Instant Payout Information
+   *
+   * @remarks
+   * Fetch detailed information about the current status and details of instant payouts configured in the system.
+   */
+  async getInstantPayout(
+    options?: RequestOptions,
+  ): Promise<operations.GetInstantPayoutInformationResponse> {
+    return unwrapAsync(deprecatedGetInstantPayout(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Collaborator-Member Custom Data Points
-     *
-     * @remarks
-     * [Deprecated - use /payments/custom-fields] Fetch all custom data fields that are associated with the memberClient objects, giving insight into additional details between collaborators and members.
-     *
-     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
-     */
-    async list(
-        options?: RequestOptions
-    ): Promise<operations.ListCustomDataCollaboratorMembersResponse> {
-        return unwrapAsync(deprecatedList(this, options));
-    }
+  /**
+   * Retrieve All Collaborator-Member Custom Data Points
+   *
+   * @remarks
+   * [Deprecated - use /payments/custom-fields] Fetch all custom data fields that are associated with the memberClient objects, giving insight into additional details between collaborators and members.
+   *
+   * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListCustomDataCollaboratorMembersResponse> {
+    return unwrapAsync(deprecatedList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Modify a Specific Collaborator-Member Custom Data
-     *
-     * @remarks
-     * [Deprecated - use /payments/custom-fields] Update details or attributes of an existing custom data point associated with the relationship between a collaborator and a member.
-     *
-     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
-     */
-    async update(
-        request: operations.UpdateCustomDataCollaboratorMemberRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateCustomDataCollaboratorMemberResponse> {
-        return unwrapAsync(deprecatedUpdate(this, request, options));
-    }
+  /**
+   * Modify a Specific Collaborator-Member Custom Data
+   *
+   * @remarks
+   * [Deprecated - use /payments/custom-fields] Update details or attributes of an existing custom data point associated with the relationship between a collaborator and a member.
+   *
+   * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
+   */
+  async update(
+    request: operations.UpdateCustomDataCollaboratorMemberRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateCustomDataCollaboratorMemberResponse> {
+    return unwrapAsync(deprecatedUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Deprecated Set Up Instant Payout Configuration
-     *
-     * @remarks
-     * Configure a new instant payout setting, specifying details like amount, frequency, and destination.
-     */
-    async updateInstantPayout(
-        request?: shared.InstantPayoutRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.UpdateInstantPayoutInformationResponse> {
-        return unwrapAsync(deprecatedUpdateInstantPayout(this, request, options));
-    }
+  /**
+   * Deprecated Set Up Instant Payout Configuration
+   *
+   * @remarks
+   * Configure a new instant payout setting, specifying details like amount, frequency, and destination.
+   */
+  async updateInstantPayout(
+    request?: shared.InstantPayoutRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateInstantPayoutInformationResponse> {
+    return unwrapAsync(deprecatedUpdateInstantPayout(
+      this,
+      request,
+      options,
+    ));
+  }
 }

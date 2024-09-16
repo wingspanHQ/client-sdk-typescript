@@ -5,7 +5,7 @@
 ```typescript
 import { FundsTransferAccountType } from "@wingspan/payments/sdk/models/shared";
 
-let value: FundsTransferAccountType = "Card";
+let value: FundsTransferAccountType = "InternalAccount";
 ```
 
 ## Values

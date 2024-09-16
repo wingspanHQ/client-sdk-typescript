@@ -8,13 +8,18 @@ import * as operations from "./models/operations/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class ServiceSettings extends ClientSDK {
-    /**
-     * Check Service Status
-     *
-     * @remarks
-     * Use this endpoint to determine the operational status of the payment service by obtaining the current timestamp and service name.
-     */
-    async get(options?: RequestOptions): Promise<operations.GetServiceStatusResponse> {
-        return unwrapAsync(serviceSettingsGet(this, options));
-    }
+  /**
+   * Check Service Status
+   *
+   * @remarks
+   * Use this endpoint to determine the operational status of the payment service by obtaining the current timestamp and service name.
+   */
+  async get(
+    options?: RequestOptions,
+  ): Promise<operations.GetServiceStatusResponse> {
+    return unwrapAsync(serviceSettingsGet(
+      this,
+      options,
+    ));
+  }
 }

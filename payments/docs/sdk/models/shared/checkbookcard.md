@@ -6,17 +6,17 @@
 import { CheckbookCard } from "@wingspan/payments/sdk/models/shared";
 
 let value: CheckbookCard = {
-    address: {
-        addressLine1: "655 Feeney Pines",
-        city: "South Libby",
-        postalCode: "40437-6223",
-        state: "New Mexico",
-    },
-    brand: "DinersClub",
-    cardId: "<value>",
-    expirationMM: "<value>",
-    expirationYYYY: "<value>",
-    last4: "<value>",
+  address: {
+    addressLine1: "2236 Keebler Trafficway",
+    city: "North Elianeland",
+    postalCode: "35550-6963",
+    state: "Michigan",
+  },
+  brand: "Visa",
+  cardId: "<value>",
+  expirationMM: "<value>",
+  expirationYYYY: "<value>",
+  last4: "<value>",
 };
 ```
 

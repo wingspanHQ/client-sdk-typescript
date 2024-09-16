@@ -3,10 +3,10 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: 1.392.1
-  generationVersion: 2.411.9
-  releaseVersion: 2.5.0
-  configChecksum: 5f10d467105a450e2cf2372f283c7417
+  speakeasyVersion: 1.396.9
+  generationVersion: 2.415.7
+  releaseVersion: 2.6.0
+  configChecksum: d8ae9aef5eb019c7c97f4f714f61fce0
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
@@ -14,9 +14,10 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.16.4
+    core: 3.17.3
     defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
+    enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.1
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
@@ -1418,72 +1419,126 @@ generatedFiles:
   - tsconfig.json
 examples:
   getServiceStatus:
-    speakeasy-default-get-service-status: {}
+    speakeasy-default-get-service-status:
+      responses:
+        "200":
+          application/json: {"code": "7003.47", "message": "<value>", "status": "<value>"}
   createStoredWingspanWalletCard:
-    speakeasy-default-create-stored-wingspan-wallet-card: {}
+    speakeasy-default-create-stored-wingspan-wallet-card:
+      responses:
+        "200":
+          application/json: {"brand": "<value>", "createdAt": "<value>", "expirationDate": "<value>", "last4Digits": "<value>", "status": "Lost", "type": "businessDebitCard"}
   deleteStoredWingspanWalletCard:
     speakeasy-default-delete-stored-wingspan-wallet-card:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"brand": "<value>", "createdAt": "<value>", "expirationDate": "<value>", "last4Digits": "<value>", "status": "Lost", "type": "businessVirtualDebitCard"}
   getStoredWingspanWalletCard:
     speakeasy-default-get-stored-wingspan-wallet-card:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"address": {"addressLine1": "058 Simonis Manors", "city": "Fort Sammieport", "postalCode": "44282-0924", "state": "Louisiana"}, "brand": "<value>", "createdAt": "<value>", "expirationDate": "<value>", "last4Digits": "<value>", "name": "<value>", "status": "ClosedByCustomer", "type": "individualVirtualDebitCard"}
   listStoredWingspanWalletCards:
-    speakeasy-default-list-stored-wingspan-wallet-cards: {}
+    speakeasy-default-list-stored-wingspan-wallet-cards:
+      responses:
+        "200":
+          application/json: []
   requestCardAuthentication:
     speakeasy-default-request-card-authentication:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"phoneNumber": "219.580.0233", "verificationToken": "<value>"}
   updateStoredWingspanWalletCard:
     speakeasy-default-update-stored-wingspan-wallet-card:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"brand": "<value>", "createdAt": "<value>", "expirationDate": "<value>", "last4Digits": "<value>", "status": "SuspectedFraud", "type": "individualDebitCard"}
   validateReceiveToken:
     speakeasy-default-validate-receive-token:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"cardId": "<value>", "token": "<value>"}
   createCustomDataCollaboratorMember:
-    speakeasy-default-create-custom-data-collaborator-member: {}
+    speakeasy-default-create-custom-data-collaborator-member:
+      responses:
+        "200":
+          application/json: {"key": "<key>", "name": "<value>", "required": true, "resourceType": "Collaborator", "type": "String"}
   deleteCustomDataCollaboratorMember:
     speakeasy-default-delete-custom-data-collaborator-member:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"key": "<key>", "name": "<value>", "required": true, "resourceType": "LineItem", "type": "String"}
   deleteInstantPayoutInformation:
-    speakeasy-default-delete-instant-payout-information: {}
+    speakeasy-default-delete-instant-payout-information:
+      responses:
+        "200":
+          application/json: {"instantPayoutAccount": {"country": "New Caledonia", "currency": "USD", "holderName": "<value>", "type": "Card"}, "instantPayoutAccountId": "<value>"}
   getCustomDataCollaboratorMember:
     speakeasy-default-get-custom-data-collaborator-member:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"key": "<key>", "name": "<value>", "required": true, "resourceType": "Collaborator", "type": "String"}
   getInstantPayoutInformation:
-    speakeasy-default-get-instant-payout-information: {}
+    speakeasy-default-get-instant-payout-information:
+      responses:
+        "200":
+          application/json: {"instantPayoutAccount": {"country": "Greece", "currency": "CAD", "holderName": "<value>", "type": "Card"}, "instantPayoutAccountId": "<value>"}
   listCustomDataCollaboratorMembers:
-    speakeasy-default-list-custom-data-collaborator-members: {}
+    speakeasy-default-list-custom-data-collaborator-members:
+      responses:
+        "200":
+          application/json: []
   updateCustomDataCollaboratorMember:
     speakeasy-default-update-custom-data-collaborator-member:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"key": "<key>", "name": "<value>", "required": false, "resourceType": "Collaborator", "type": "String"}
   updateInstantPayoutInformation:
-    speakeasy-default-update-instant-payout-information: {}
+    speakeasy-default-update-instant-payout-information:
+      responses:
+        "200":
+          application/json: {"instantPayoutAccount": {"country": "Bosnia and Herzegovina", "currency": "USD", "holderName": "<value>", "type": "InternalAccount"}, "instantPayoutAccountId": "<value>"}
   createDebitCard:
     speakeasy-default-create-debit-card:
       parameters:
         path:
           memberId: "<value>"
+      responses:
+        "200":
+          application/json: {"address": {"addressLine1": "4684 Bria Shores", "city": "Fort Peytonbury", "postalCode": "80413-0778", "state": "South Dakota"}, "brand": "Discover", "cardId": "<value>", "expirationMM": "<value>", "expirationYYYY": "<value>", "last4": "<value>"}
   deleteDebitCard:
     speakeasy-default-delete-debit-card:
       parameters:
         path:
           memberId: "<value>"
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"address": {"addressLine1": "8653 Vaughn Hills", "city": "Waukegan", "postalCode": "71267-6407", "state": "Ohio"}, "brand": "Discover", "cardId": "<value>", "expirationMM": "<value>", "expirationYYYY": "<value>", "last4": "<value>"}
   downloadBankStatementAsPDF:
     speakeasy-default-download-bank-statement-as-PDF:
       parameters:
@@ -1494,70 +1549,118 @@ examples:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: []
   getApplicationLink:
     speakeasy-default-get-application-link:
       parameters:
         path:
           memberId: "<value>"
+      responses:
+        "200":
+          application/json: {"applicationLink": "<value>", "memberId": "<value>"}
   getDebitCard:
     speakeasy-default-get-debit-card:
       parameters:
         path:
           memberId: "<value>"
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"address": {"addressLine1": "77751 Schmeler Fort", "city": "Port August", "postalCode": "28281-8651", "state": "Utah"}, "brand": "AmericanExpress", "cardId": "<value>", "expirationMM": "<value>", "expirationYYYY": "<value>", "last4": "<value>"}
   getBankingInstitution:
     speakeasy-default-get-banking-institution:
       parameters:
         path:
           routingNumber: "<value>"
+      responses:
+        "200":
+          application/json: {"address": "05757 Hector Ridge", "isACHSupported": false, "isRTPSupported": true, "isWireSupported": true, "name": "<value>", "routingNumber": "<value>"}
   getPayoutSetting:
     speakeasy-default-get-payout-setting:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"payoutDestinations": [], "payoutPreferences": "Standard"}
   listDebitCards:
     speakeasy-default-list-debit-cards:
       parameters:
         path:
           memberId: "<value>"
+      responses:
+        "200":
+          application/json: []
   listBankStatements:
-    speakeasy-default-list-bank-statements: {}
+    speakeasy-default-list-bank-statements:
+      responses:
+        "200":
+          application/json: []
   updatePayoutSetting:
     speakeasy-default-update-payout-setting:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"payoutDestinations": [], "payoutPreferences": "ECheck"}
   calculate1099Amounts:
-    speakeasy-default-calculate1099-amounts: {}
+    speakeasy-default-calculate1099-amounts:
+      responses:
+        "200":
+          application/json: {"memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Active", "taxStatus": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}}
   createRecipientSync:
     speakeasy-default-create-recipient-sync:
       parameters:
         path:
           taxFormId: "<value>"
+      responses:
+        "200":
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "4893.82", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "2884.08", "platformIncome": "1343.65", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "Excluded", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "3768.44"}
   createCalculation1099Batch:
-    speakeasy-default-create-calculation1099-batch: {}
+    speakeasy-default-create-calculation1099-batch:
+      responses:
+        "200":
+          application/json: {"bulkCalculation1099BatchId": "<value>", "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>"}, "status": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createCalculation1099BatchItem:
     speakeasy-default-create-calculation1099-batch-item:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCalculation1099BatchId": "<value>", "bulkCalculation1099ItemId": "<value>", "calculationType": "Balances", "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>"}, "status": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "3850.44"}
   createRecipientProof:
     speakeasy-default-create-recipient-proof:
       parameters:
         path:
           taxFormId: "<value>"
+      responses:
+        "200":
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "3160.61", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Electronic", "eventActors": {"key": "<value>"}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "1231.04", "platformIncome": "2874.15", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": true, "status": "PendingCorrection", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "9536.85"}
   create1099TaxForm:
-    speakeasy-default-create1099-tax-form: {}
+    speakeasy-default-create1099-tax-form:
+      responses:
+        "200":
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "7966.29", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "289.74", "platformIncome": "8679", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "SubmittedToIrs", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "1219.41"}
   getTaxForm:
     speakeasy-default-get-tax-form:
       parameters:
         path:
           taxFormId: "<value>"
+      responses:
+        "200":
+          application/json: []
   getCalculation1099Batch:
     speakeasy-default-get-calculation1099-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCalculation1099BatchId": "<value>", "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {}, "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getForm1099PDF:
     speakeasy-default-get-form1099-PDF:
       parameters:
@@ -1576,530 +1679,929 @@ examples:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCalculation1099BatchId": "<value>", "bulkCalculation1099ItemId": "<value>", "calculationType": "Balances", "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {}, "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "3219.66"}
   listCalculation1099Batches:
-    speakeasy-default-list-calculation1099-batches: {}
+    speakeasy-default-list-calculation1099-batches:
+      responses:
+        "200":
+          application/json: []
   listCalculation1099BatchItems:
     speakeasy-default-list-calculation1099-batch-items:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: []
   list1099TaxForms:
-    speakeasy-default-list1099-tax-forms: {}
+    speakeasy-default-list1099-tax-forms:
+      responses:
+        "200":
+          application/json: []
   markUndelivered1099Form:
     speakeasy-default-mark-undelivered1099-form: {}
   remail1099Form:
     speakeasy-default-remail1099-form: {}
   request1099InviteEmail:
-    speakeasy-default-request1099-invite-email: {}
+    speakeasy-default-request1099-invite-email:
+      responses:
+        "200":
+          application/json: {"success": "<value>"}
   submitPayeeTIN:
-    speakeasy-default-submit-payee-TIN: {}
+    speakeasy-default-submit-payee-TIN:
+      responses:
+        "200":
+          application/json: {"verificationStatus": "Verified"}
   updateTaxForm:
     speakeasy-default-update-tax-form:
       parameters:
         path:
           taxFormId: "<value>"
+      responses:
+        "200":
+          application/json: []
   updateCalculation1099Batch:
     speakeasy-default-update-calculation1099-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCalculation1099BatchId": "<value>", "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {}, "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateCalculation1099BatchItem:
     speakeasy-default-update-calculation1099-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "4291.62", "bulkPayableBatchId": "<value>", "bulkPayableItemId": "<value>", "clientId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>"}, "lineItemDescription": "<value>", "paidDate": "<value>", "payableStatus": "Draft", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updatePayeeW9Information:
-    speakeasy-default-update-payee-w9-information: {}
+    speakeasy-default-update-payee-w9-information:
+      responses:
+        "200":
+          application/json: []
   createInvoiceBatch:
-    speakeasy-default-create-invoice-batch: {}
+    speakeasy-default-create-invoice-batch:
+      responses:
+        "200":
+          application/json: {"bulkInvoiceBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {"key": "<value>"}, "memberId": "<value>", "processingStrategy": "Single", "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createPayableBatchItem:
     speakeasy-default-create-payable-batch-item:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "1194.43", "bulkPayableBatchId": "<value>", "bulkPayableItemId": "<value>", "clientId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {}, "labels": {}, "lineItemDescription": "<value>", "paidDate": "<value>", "payableStatus": "Cancelled", "status": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createClientBatch:
-    speakeasy-default-create-client-batch: {}
+    speakeasy-default-create-client-batch:
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Processing", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createClientBatchItem:
     speakeasy-default-create-client-batch-item:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "bulkClientItemId": "<value>", "clientStatus": "Pending", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createCollaboratorBatch:
-    speakeasy-default-create-collaborator-batch: {}
+    speakeasy-default-create-collaborator-batch:
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createPayableBatch:
-    speakeasy-default-create-payable-batch: {}
+    speakeasy-default-create-payable-batch:
+      responses:
+        "200":
+          application/json: {"bulkPayableBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>"}, "processingStrategy": "Single", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createSpecificCollaboratorBatchItem:
     speakeasy-default-create-specific-collaborator-batch-item:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "bulkCollaboratorItemId": "<value>", "clientId": "<value>", "collaboratorStatus": "Inactive", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>"}, "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createSpecificInvoiceBatch:
     speakeasy-default-create-specific-invoice-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "2974.53", "bulkInvoiceBatchId": "<value>", "bulkInvoiceItemId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceStatus": "Paid", "labels": {}, "lineItemDescription": "<value>", "memberId": "<value>", "paidDate": "<value>", "status": "Processing", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteCollaboratorBatch:
     speakeasy-default-delete-collaborator-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "status": "Processing", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deletePayableBatch:
     speakeasy-default-delete-payable-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkPayableBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "processingStrategy": "Single", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getInvoiceBatch:
     speakeasy-default-get-invoice-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkInvoiceBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {}, "memberId": "<value>", "processingStrategy": "Single", "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getPayableBatchItem:
     speakeasy-default-get-payable-batch-item:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"deductionCollaboratorsCount": "4184.79", "netImportAmount": "8565.99", "payableCollaboratorsCount": "2114.2", "toBeCreatedDeductionsCount": "551.1", "toBeCreatedPayablesCount": "9258.97", "toBeUpdatedDeductionsCount": "2204.9", "toBeUpdatedPayablesCount": "7673.66", "totalDeductionsAmount": "5027.2", "totalPayableItems": "2493.12", "totalPayablesAmount": "8337.64"}
   getClientBatch:
     speakeasy-default-get-client-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getClientBatchItem:
     speakeasy-default-get-client-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "bulkClientItemId": "<value>", "clientStatus": "Inactive", "createdAt": "<value>", "eventActors": {}, "labels": {}, "memberId": "<value>", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getCollaboratorBatch:
     speakeasy-default-get-collaborator-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getPayableBatch:
     speakeasy-default-get-payable-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkPayableBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "labels": {"key": "<value>"}, "processingStrategy": "Single", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getSpecificPayableBatchItem:
     speakeasy-default-get-specific-payable-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "9686.72", "bulkPayableBatchId": "<value>", "bulkPayableItemId": "<value>", "clientId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>"}, "lineItemDescription": "<value>", "paidDate": "<value>", "payableStatus": "Open", "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getSpecificCollaboratorBatchItem:
     speakeasy-default-get-specific-collaborator-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "bulkCollaboratorItemId": "<value>", "clientId": "<value>", "collaboratorStatus": "Inactive", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getSpecificInvoiceBatch:
     speakeasy-default-get-specific-invoice-batch:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "2400.45", "bulkInvoiceBatchId": "<value>", "bulkInvoiceItemId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "invoiceStatus": "Paid", "labels": {"key": "<value>"}, "lineItemDescription": "<value>", "memberId": "<value>", "paidDate": "<value>", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   listInvoiceBatches:
-    speakeasy-default-list-invoice-batches: {}
+    speakeasy-default-list-invoice-batches:
+      responses:
+        "200":
+          application/json: []
   listPayableBatchItems:
     speakeasy-default-list-payable-batch-items:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: []
   listClientBatches:
-    speakeasy-default-list-client-batches: {}
+    speakeasy-default-list-client-batches:
+      responses:
+        "200":
+          application/json: []
   listClientBatchItems:
     speakeasy-default-list-client-batch-items:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: []
   listCollaboratorBatches:
-    speakeasy-default-list-collaborator-batches: {}
+    speakeasy-default-list-collaborator-batches:
+      responses:
+        "200":
+          application/json: []
   listPayableBatches:
-    speakeasy-default-list-payable-batches: {}
+    speakeasy-default-list-payable-batches:
+      responses:
+        "200":
+          application/json: []
   listSpecificCollaboratorBatchItems:
     speakeasy-default-list-specific-collaborator-batch-items:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: []
   listSpecificInvoiceBatches:
     speakeasy-default-list-specific-invoice-batches:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: []
   updateInvoiceBatch:
     speakeasy-default-update-invoice-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkInvoiceBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {}, "memberId": "<value>", "processingStrategy": "Single", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateClientBatch:
     speakeasy-default-update-client-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateClientBatchItem:
     speakeasy-default-update-client-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkClientBatchId": "<value>", "bulkClientItemId": "<value>", "clientStatus": "Active", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateCollaboratorBatch:
     speakeasy-default-update-collaborator-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {}, "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updatePayableBatch:
     speakeasy-default-update-payable-batch:
       parameters:
         path:
           batchId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkPayableBatchId": "<value>", "client": {}, "clientId": "<value>", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>"}, "processingStrategy": "Merge", "status": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateSpecificPayableBatchItem:
     speakeasy-default-update-specific-payable-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "2473", "bulkPayableBatchId": "<value>", "bulkPayableItemId": "<value>", "clientId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {}, "labels": {}, "lineItemDescription": "<value>", "paidDate": "<value>", "payableStatus": "Cancelled", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateSpecificCollaboratorBatchItem:
     speakeasy-default-update-specific-collaborator-batch-item:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"bulkCollaboratorBatchId": "<value>", "bulkCollaboratorItemId": "<value>", "clientId": "<value>", "collaboratorStatus": "Active", "createdAt": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "status": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateSpecificInvoiceBatch:
     speakeasy-default-update-specific-invoice-batch:
       parameters:
         path:
           batchId: "<value>"
           batchItemId: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "3356.83", "bulkInvoiceBatchId": "<value>", "bulkInvoiceItemId": "<value>", "createdAt": "<value>", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceStatus": "Approved", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lineItemDescription": "<value>", "memberId": "<value>", "paidDate": "<value>", "status": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createClientDeduction:
-    speakeasy-default-create-client-deduction: {}
+    speakeasy-default-create-client-deduction:
+      responses:
+        "200":
+          application/json: {"amount": "4865.89", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "USD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "4174.58", "startDate": "<value>", "status": "Pending", "type": "PrePayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteMemberClientAssociation:
     speakeasy-default-delete-member-client-association:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "memberClientId": "<value>", "status": "Active", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteClientDeduction:
     speakeasy-default-delete-client-deduction:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "6313.6", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "CAD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "3476.52", "startDate": "<value>", "status": "Pending", "type": "PostPayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   establishMemberClientAssociation:
-    speakeasy-default-establish-member-client-association: {}
+    speakeasy-default-establish-member-client-association:
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "memberClientId": "<value>", "status": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getMemberClientAssociation:
     speakeasy-default-get-member-client-association:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberClientId": "<value>", "status": "Inactive", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getClientDeduction:
     speakeasy-default-get-client-deduction:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "4278.32", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "USD", "deductionId": "<value>", "eventActors": {}, "labels": {"key": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "812.92", "startDate": "<value>", "status": "PartiallyApplied", "type": "PostPayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   listClients:
-    speakeasy-default-list-clients: {}
+    speakeasy-default-list-clients:
+      responses:
+        "200":
+          application/json: []
   listMemberClientAssociations:
-    speakeasy-default-list-member-client-associations: {}
+    speakeasy-default-list-member-client-associations:
+      responses:
+        "200":
+          application/json: []
   listClientDeductions:
-    speakeasy-default-list-client-deductions: {}
+    speakeasy-default-list-client-deductions:
+      responses:
+        "200":
+          application/json: []
   listSpecificClientDetails:
     speakeasy-default-list-specific-client-details:
       parameters:
         path:
           clientId: "<value>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaborations": [], "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "firstCollaborationId": "<value>", "formW9Data": {"addressLine1": "054 Makenna Ford", "city": "Port Ethanborough", "companyStructure": "LLCCorporationC", "country": "New Caledonia", "postalCode": "46382-1217", "state": "Rhode Island"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "member": {}, "memberId": "<value>", "primaryCollaborationId": "<value>", "status": "Inactive", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateMemberClientAssociation:
     speakeasy-default-update-member-client-association:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "memberClientId": "<value>", "status": "Active", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateClientDeduction:
     speakeasy-default-update-client-deduction:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "1213.72", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "CAD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {}, "memberId": "<value>", "name": "<value>", "priority": "9789.41", "startDate": "<value>", "status": "PartiallyApplied", "type": "PostPayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createInvoice:
-    speakeasy-default-create-invoice: {}
+    speakeasy-default-create-invoice:
+      responses:
+        "200":
+          application/json: {"amount": "4865.89", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "2170 Schinner Highway", "city": "Texas City", "postalCode": "41307", "state": "South Carolina"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "PaymentInTransit", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createClientInvoiceTemplate:
-    speakeasy-default-create-client-invoice-template: {}
+    speakeasy-default-create-client-invoice-template:
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "createdAt": "<value>", "invoiceData": {"additionalRecipientEmails": [], "amount": "6228.31", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": true, "memberAddress": {"addressLine1": "629 Thiel Parkway", "city": "Arecibo", "postalCode": "88934", "state": "Mississippi"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Active", "taxStatus": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "3975.84", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Draft", "updatedAt": "<value>"}, "invoiceTemplateId": "<value>", "memberId": "<value>", "nextInvoiceDate": "<value>", "scheduleDates": [], "status": "Expired", "updatedAt": "<value>"}
   createGeneratedInvoice:
-    speakeasy-default-create-generated-invoice: {}
+    speakeasy-default-create-generated-invoice:
+      responses:
+        "200":
+          application/json: {"additionalRecipientEmails": [], "amount": "6302.07", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": true, "memberAddress": {"addressLine1": "24066 Ankunding Pike", "city": "South Arnulfo", "postalCode": "98349-6274", "state": "Alaska"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Inactive", "taxStatus": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "2771.14", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "PaymentInTransit", "updatedAt": "<value>"}
   createInvoiceTemplate:
-    speakeasy-default-create-invoice-template: {}
+    speakeasy-default-create-invoice-template:
+      responses:
+        "200":
+          application/json: {"createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "invoiceData": {"amount": "753.46", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "eventActors": {"key": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "7425 Josefina Parkways", "city": "Port Rahulberg", "postalCode": "98934", "state": "Ohio"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Overdue", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Active", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteInvoice:
     speakeasy-default-delete-invoice:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "5459.07", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "2939 Moen Rest", "city": "East Margotfort", "postalCode": "40765-0472", "state": "Idaho"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "PaymentInTransit", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteInvoiceTemplate:
     speakeasy-default-delete-invoice-template:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceData": {"amount": "3748.74", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "763 Bridget Drives", "city": "East Deontaestead", "postalCode": "15403", "state": "Alaska"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Expired", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   executeClientInvoicePayment:
     speakeasy-default-execute-client-invoice-payment:
       parameters:
         path:
           invoice_id: "<value>"
+      responses:
+        "200":
+          application/json: {"additionalRecipientEmails": [], "amount": "2468.15", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": true, "memberAddress": {"addressLine1": "039 Cartwright Branch", "city": "Sydnibury", "postalCode": "35488", "state": "California"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Pending", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "8836.4", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Paid", "updatedAt": "<value>"}
   generateSpecificInvoice:
     speakeasy-default-generate-specific-invoice:
       parameters:
         path:
           invoice_id: "<value>"
+      responses:
+        "200":
+          application/json: {"invoiceId": "<value>"}
   generateTestInvoice:
-    speakeasy-default-generate-test-invoice: {}
+    speakeasy-default-generate-test-invoice:
+      responses:
+        "200":
+          application/json: {"additionalRecipientEmails": [], "amount": "5240.1", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": false, "memberAddress": {"addressLine1": "1852 Larkin Vista", "city": "Port Fatimafield", "postalCode": "17860", "state": "New York"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Inactive", "taxStatus": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "4118.95", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Pending", "updatedAt": "<value>"}
   getInvoice:
     speakeasy-default-get-invoice:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "7003.47", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "8509 Koch River", "city": "Harrisonboro", "postalCode": "20924-3870", "state": "Wisconsin"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getClientInvoiceTemplate:
     speakeasy-default-get-client-invoice-template:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "createdAt": "<value>", "invoiceData": {"additionalRecipientEmails": [], "amount": "7293.12", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": false, "memberAddress": {"addressLine1": "1613 Upton Spur", "city": "Grand Junction", "postalCode": "10329-1024", "state": "South Dakota"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Pending", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "3831.58", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Draft", "updatedAt": "<value>"}, "invoiceTemplateId": "<value>", "memberId": "<value>", "nextInvoiceDate": "<value>", "scheduleDates": [], "status": "Draft", "updatedAt": "<value>"}
   getInvoiceFees:
     speakeasy-default-get-invoice-fees:
       parameters:
         path:
           invoice_id: "<value>"
+      responses:
+        "200":
+          application/json: {"creditFeeTotal": "7298.81"}
   getGeneratedInvoice:
     speakeasy-default-get-generated-invoice:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"additionalRecipientEmails": [], "amount": "3848.37", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": true, "memberAddress": {"addressLine1": "5246 Ryann Forge", "city": "East Bertafurt", "postalCode": "19733", "state": "Hawaii"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Inactive", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "1738.3", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Draft", "updatedAt": "<value>"}
   getMemberInvoices:
-    speakeasy-default-get-member-invoices: {}
+    speakeasy-default-get-member-invoices:
+      responses:
+        "200":
+          application/json: []
   getInvoiceTemplate:
     speakeasy-default-get-invoice-template:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "invoiceData": {"amount": "6317.55", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "054 Oberbrunner Turnpike", "city": "West Richard", "postalCode": "90511", "state": "Colorado"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Overdue", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "status": "Cancelled", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   listGeneratedInvoices:
-    speakeasy-default-list-generated-invoices: {}
+    speakeasy-default-list-generated-invoices:
+      responses:
+        "200":
+          application/json: []
   listClientInvoiceTemplates:
-    speakeasy-default-list-client-invoice-templates: {}
+    speakeasy-default-list-client-invoice-templates:
+      responses:
+        "200":
+          application/json: []
   listInvoiceTemplates:
-    speakeasy-default-list-invoice-templates: {}
+    speakeasy-default-list-invoice-templates:
+      responses:
+        "200":
+          application/json: []
   refundDepositedInvoice:
     speakeasy-default-refund-deposited-invoice:
       parameters:
         path:
           invoice_id: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "6111.95", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {}, "lineItems": [], "memberAddress": {"addressLine1": "7737 Aufderhar Dam", "city": "Amarashire", "postalCode": "10661", "state": "Florida"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Overdue", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   sendInvoiceEmail:
     speakeasy-default-send-invoice-email:
       parameters:
         path:
           invoice_id: "<value>"
+      responses:
+        "200":
+          application/json: {"amount": "5169.69", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "0116 Hudson Land", "city": "Arelymouth", "postalCode": "31175-3004", "state": "South Dakota"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Paid", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateInvoice:
     speakeasy-default-update-invoice:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "8574.78", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {}, "lineItems": [], "memberAddress": {"addressLine1": "7926 Kuhn Knolls", "city": "Camden", "postalCode": "28443", "state": "Kansas"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "PaymentInTransit", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateClientInvoiceTemplate:
     speakeasy-default-update-client-invoice-template:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "createdAt": "<value>", "invoiceData": {"additionalRecipientEmails": [], "amount": "7821.3", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": false, "memberAddress": {"addressLine1": "94024 Rath Trace", "city": "Lake Sterling", "postalCode": "45570-8965", "state": "Rhode Island"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "member", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Pending", "taxStatus": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "3451.91", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "PaymentInTransit", "updatedAt": "<value>"}, "invoiceTemplateId": "<value>", "memberId": "<value>", "nextInvoiceDate": "<value>", "scheduleDates": [], "status": "Cancelled", "updatedAt": "<value>"}
   updateGeneratedInvoice:
     speakeasy-default-update-generated-invoice:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"additionalRecipientEmails": [], "amount": "2434.8", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "lineItems": [], "memberAcceptsPayments": false, "memberAddress": {"addressLine1": "20823 Vandervort Key", "city": "South Sedrickfield", "postalCode": "63547-3343", "state": "Oklahoma"}, "memberClient": {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "client": {}, "clientId": "<value>", "clientUserAccountType": "enterprise", "createdAt": "<value>", "emailTo": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberClientId": "<value>", "memberId": "<value>", "parentMemberClientId": "<value>", "payerPayeeId": "<value>", "status": "Inactive", "taxStatus": "Failed", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "memberCompany": "<value>", "memberEmail": "<value>", "memberLogoUrl": "<value>", "memberName": "<value>", "memberPaymentsVersion": "1531.64", "memberStripeAccountId": "<value>", "projectName": "<value>", "status": "Cancelled", "updatedAt": "<value>"}
   updateInvoiceTemplate:
     speakeasy-default-update-invoice-template:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"createdAt": "<value>", "eventActors": {}, "invoiceData": {"amount": "4236.39", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "eventActors": {}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {}, "lineItems": [], "memberAddress": {"addressLine1": "23357 Grady Gateway", "city": "Johnnyborough", "postalCode": "10729", "state": "New Hampshire"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "Overdue", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}, "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "status": "Expired", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   associateCollaboratorWithGroup:
     speakeasy-default-associate-collaborator-with-group:
       parameters:
         path:
           id: "<id>"
           groupId: "<value>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "member": {}, "memberId": "<value>", "status": "Inactive", "taxStatus": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createCollaborator:
-    speakeasy-default-create-collaborator: {}
+    speakeasy-default-create-collaborator:
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "member": {}, "memberId": "<value>", "status": "Inactive", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createDeductionCollaborator:
-    speakeasy-default-create-deduction-collaborator: {}
+    speakeasy-default-create-deduction-collaborator:
+      responses:
+        "200":
+          application/json: {"amount": "5570.68", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "USD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "labels": {"key": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "5079.74", "startDate": "<value>", "status": "Complete", "type": "PrePayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createCollaboratorGroup:
-    speakeasy-default-create-collaborator-group: {}
+    speakeasy-default-create-collaborator-group:
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "collaboratorGroupId": "<value>", "defaultGroup": true, "description": "Balanced uniform functionalities", "name": "<value>"}
   deleteCollaborator:
     speakeasy-default-delete-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "member": {}, "memberId": "<value>", "status": "Pending", "taxStatus": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deleteDeductionCollaborator:
     speakeasy-default-delete-deduction-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "8513.21", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "CAD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "112.65", "startDate": "<value>", "status": "Complete", "type": "PostPayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   disassociateCollaboratorWithGroup:
     speakeasy-default-disassociate-collaborator-with-group:
       parameters:
         path:
           id: "<id>"
           groupId: "<value>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>"}, "member": {}, "memberId": "<value>", "status": "Active", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getCollaborator:
     speakeasy-default-get-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberId": "<value>", "status": "Inactive", "taxStatus": "Incomplete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getDeductionCollaborator:
     speakeasy-default-get-deduction-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "2244.99", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "CAD", "deductionId": "<value>", "eventActors": {}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "8822.7", "startDate": "<value>", "status": "Pending", "type": "PrePayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getEventAssociatedCollaborator:
     speakeasy-default-get-event-associated-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"knowYourCustomerVerifiedAt": "<value>", "payoutMethodFirstAddedAt": "<value>", "taxDocumentationVerifiedAt": "<value>"}
   listCollaborators:
-    speakeasy-default-list-collaborators: {}
+    speakeasy-default-list-collaborators:
+      responses:
+        "200":
+          application/json: []
   listDeductionCollaborators:
-    speakeasy-default-list-deduction-collaborators: {}
+    speakeasy-default-list-deduction-collaborators:
+      responses:
+        "200":
+          application/json: []
   listCollaboratorGroups:
-    speakeasy-default-list-collaborator-groups: {}
+    speakeasy-default-list-collaborator-groups:
+      responses:
+        "200":
+          application/json: []
   listRegisteredCollaborators:
-    speakeasy-default-list-registered-collaborators: {}
+    speakeasy-default-list-registered-collaborators:
+      responses:
+        "200":
+          application/json: []
   listSpecificCollaboratorDetails:
     speakeasy-default-list-specific-collaborator-details:
       parameters:
         path:
           memberId: "<value>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaborations": [], "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "firstCollaborationId": "<value>", "formW9Data": {"addressLine1": "74032 Herzog Villages", "city": "New Kathrynetown", "companyStructure": "SoleProprietorship", "country": "Niger", "postalCode": "10804-1514", "state": "Iowa"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "member": {}, "memberId": "<value>", "primaryCollaborationId": "<value>", "status": "Inactive", "taxStatus": "Pending", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateCollaborator:
     speakeasy-default-update-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"achCreditAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "internationalWireAccount": {"accountNumber": "<value>", "bankName": "<value>"}, "labels": {}, "member": {}, "memberId": "<value>", "status": "Inactive", "taxStatus": "Complete", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   updateDeductionCollaborator:
     speakeasy-default-update-deduction-collaborator:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "8094.79", "application": [], "clientId": "<value>", "createdAt": "<value>", "currency": "USD", "deductionId": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "labels": {"key": "<value>"}, "memberId": "<value>", "name": "<value>", "priority": "5254.83", "startDate": "<value>", "status": "Complete", "type": "PostPayment", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   createPaymentEligibilityRequirement:
-    speakeasy-default-create-payment-eligibility-requirement: {}
+    speakeasy-default-create-payment-eligibility-requirement:
+      responses:
+        "200":
+          application/json: {"field": "<value>", "value": "<value>"}
   deleteEligibilityRequirement:
     speakeasy-default-delete-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: []
   deleteEligibilityRequirementCollaboratorGroup:
     speakeasy-default-delete-eligibility-requirement-collaborator-group:
       parameters:
         path:
           id: "<id>"
           eligibilityRequirementId: "<value>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "collaboratorGroupId": "<value>", "defaultGroup": true, "description": "Synergistic upward-trending flexibility", "name": "<value>"}
   deletePaymentEligibilityRequirement:
     speakeasy-default-delete-payment-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"field": "<value>", "value": "<value>"}
   establishEligibilityRequirement:
-    speakeasy-default-establish-eligibility-requirement: {}
+    speakeasy-default-establish-eligibility-requirement:
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "eligibilityRequirementId": "<value>", "requirementType": "Signature"}
   getEligibilityRequirement:
     speakeasy-default-get-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: []
   getCollaboratorGroupConfiguration:
     speakeasy-default-get-collaborator-group-configuration:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "collaboratorGroupId": "<value>", "defaultGroup": false, "description": "Switchable directional help-desk", "name": "<value>"}
   getPaymentEligibilityRequirement:
     speakeasy-default-get-payment-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"field": "<value>", "value": "<value>"}
   listEligibilityRequirements:
-    speakeasy-default-list-eligibility-requirements: {}
+    speakeasy-default-list-eligibility-requirements:
+      responses:
+        "200":
+          application/json: []
   listPaymentEligibilityRequirements:
-    speakeasy-default-list-payment-eligibility-requirements: {}
+    speakeasy-default-list-payment-eligibility-requirements:
+      responses:
+        "200":
+          application/json: []
   updateEligibilityRequirement:
     speakeasy-default-update-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: []
   updateEligibilityRequirementCollaboratorGroup:
     speakeasy-default-update-eligibility-requirement-collaborator-group:
       parameters:
         path:
           id: "<id>"
           eligibilityRequirementId: "<value>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "collaboratorGroupId": "<value>", "defaultGroup": true, "description": "Total bandwidth-monitored paradigm", "name": "<value>"}
   updateCollaboratorGroupConfiguration:
     speakeasy-default-update-collaborator-group-configuration:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"clientId": "<value>", "collaboratorGroupId": "<value>", "defaultGroup": false, "description": "Visionary zero defect archive", "name": "<value>"}
   updatePaymentEligibilityRequirement:
     speakeasy-default-update-payment-eligibility-requirement:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"field": "<value>", "value": "<value>"}
   createCustomField:
-    speakeasy-default-create-custom-field: {}
+    speakeasy-default-create-custom-field:
+      responses:
+        "200":
+          application/json: {"id": "<id>", "key": "<key>", "name": "<value>", "required": true, "resourceType": "Collaborator", "type": "String"}
   deleteCustomField:
     speakeasy-default-delete-custom-field:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "key": "<key>", "name": "<value>", "required": true, "resourceType": "LineItem", "type": "String"}
   getCustomField:
     speakeasy-default-get-custom-field:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "key": "<key>", "name": "<value>", "required": true, "resourceType": "Collaborator", "type": "String"}
   listCustomFields:
-    speakeasy-default-list-custom-fields: {}
+    speakeasy-default-list-custom-fields:
+      responses:
+        "200":
+          application/json: []
   updateCustomField:
     speakeasy-default-update-custom-field:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "key": "<key>", "name": "<value>", "required": false, "resourceType": "Collaborator", "type": "String"}
   getMerchantCategoryCodes:
-    speakeasy-default-get-merchant-category-codes: {}
+    speakeasy-default-get-merchant-category-codes:
+      responses:
+        "200":
+          application/json: []
   createPayable:
-    speakeasy-default-create-payable: {}
+    speakeasy-default-create-payable:
+      responses:
+        "200":
+          application/json: {"amount": "4865.89", "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceNotes": "<value>", "invoiceNumber": "<value>", "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lateFeeHandling": {"frequency": {"startDate": "<value>"}}, "lineItems": [], "memberAddress": {"addressLine1": "2170 Schinner Highway", "city": "Texas City", "postalCode": "41307", "state": "South Carolina"}, "memberId": "<value>", "notificationPreferences": {"sendReminders": false}, "payableId": "<value>", "status": "PaymentInTransit", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   deletePayable:
     speakeasy-default-delete-payable:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "5459.07", "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceNotes": "<value>", "invoiceNumber": "<value>", "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "lateFeeHandling": {"frequency": {"startDate": "<value>"}}, "lineItems": [], "memberAddress": {"addressLine1": "2939 Moen Rest", "city": "East Margotfort", "postalCode": "40765-0472", "state": "Idaho"}, "memberId": "<value>", "notificationPreferences": {"sendReminders": true}, "payableId": "<value>", "status": "Paid", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   executeApprovedPayrollTransaction:
-    speakeasy-default-execute-approved-payroll-transaction: {}
+    speakeasy-default-execute-approved-payroll-transaction:
+      responses:
+        "200":
+          application/json: {"amount": "2468.15", "createdAt": "<value>", "currency": "CAD", "dueDate": "<value>", "eventActors": {"key": "<value>"}, "invoiceId": "<value>", "invoiceNumber": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "lineItems": [], "memberAddress": {"addressLine1": "39810 Upton Haven", "city": "West Jocelynview", "postalCode": "80930-8989", "state": "Maryland"}, "memberClientId": "<value>", "memberId": "<value>", "payments": [], "status": "PaymentInTransit", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getPayable:
     speakeasy-default-get-payable:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "7003.47", "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceNotes": "<value>", "invoiceNumber": "<value>", "invoiceTemplateId": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "lateFeeHandling": {"frequency": {"startDate": "<value>"}}, "lineItems": [], "memberAddress": {"addressLine1": "8509 Koch River", "city": "Harrisonboro", "postalCode": "20924-3870", "state": "Wisconsin"}, "memberId": "<value>", "notificationPreferences": {"sendReminders": false}, "payableId": "<value>", "status": "Overdue", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getApprovedPayables:
-    speakeasy-default-get-approved-payables: {}
+    speakeasy-default-get-approved-payables:
+      responses:
+        "200":
+          application/json: []
   listPayables:
-    speakeasy-default-list-payables: {}
+    speakeasy-default-list-payables:
+      responses:
+        "200":
+          application/json: []
   listSummaryPayables:
-    speakeasy-default-list-summary-payables: {}
+    speakeasy-default-list-summary-payables:
+      responses:
+        "200":
+          application/json: {"invoicesApproved": "8652.94", "invoicesDraft": "5130.62", "invoicesOpen": "9282.54", "invoicesOverdue": "6808.64", "invoicesPaid": "1388.59", "invoicesPending": "80.85", "memberId": "<value>", "totalApproved": "6056.64", "totalOpen": "6492.97", "totalOverdue": "3957.07", "totalPaid": "5532.05"}
   updatePayable:
     speakeasy-default-update-payable:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"amount": "8574.78", "clientId": "<value>", "collaboratorId": "<value>", "createdAt": "<value>", "currency": "USD", "dueDate": "<value>", "eventActors": {"key": "<value>", "key1": "<value>"}, "invoiceNotes": "<value>", "invoiceNumber": "<value>", "invoiceTemplateId": "<value>", "labels": {}, "lateFeeHandling": {"frequency": {"startDate": "<value>"}}, "lineItems": [], "memberAddress": {"addressLine1": "7926 Kuhn Knolls", "city": "Camden", "postalCode": "28443", "state": "Kansas"}, "memberId": "<value>", "notificationPreferences": {"sendReminders": false}, "payableId": "<value>", "status": "Open", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}}
   getPayrollSetting:
     speakeasy-default-get-payroll-setting:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "Expired"}
   updatePayrollSetting:
     speakeasy-default-update-payroll-setting:
       parameters:
         path:
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "Cancelled"}
   getSummarizedReport:
-    speakeasy-default-get-summarized-report: {}
+    speakeasy-default-get-summarized-report:
+      responses:
+        "200":
+          application/json: []
   getPayrollDetailedReport:
     speakeasy-default-get-payroll-detailed-report:
       parameters:
         path:
           payrollId: "<value>"
+      responses:
+        "200":
+          application/json: {"invoices": [], "parentInvoice": {"createdAt": "<value>", "dueDate": "<value>", "invoiceId": "<value>", "invoiceNumber": "<value>", "status": "Draft", "updatedAt": "<value>"}}
   listDetailedInformationCollaborators:
-    speakeasy-default-list-detailed-information-collaborators: {}
+    speakeasy-default-list-detailed-information-collaborators:
+      responses:
+        "200":
+          application/json: []
   listAgingReportLineItems:
-    speakeasy-default-list-aging-report-line-items: {}
+    speakeasy-default-list-aging-report-line-items:
+      responses:
+        "200":
+          application/json: []
   listAgingReportPayables:
-    speakeasy-default-list-aging-report-payables: {}
+    speakeasy-default-list-aging-report-payables:
+      responses:
+        "200":
+          application/json: []

@@ -6,10 +6,12 @@
 import { ClientInvoiceCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceCreateRequest = {
-    clientEmail: "<value>",
-    dueDate: "<value>",
-    lineItems: [{}],
-    memberId: "<value>",
+  clientEmail: "<value>",
+  dueDate: "<value>",
+  lineItems: [
+    {},
+  ],
+  memberId: "<value>",
 };
 ```
 

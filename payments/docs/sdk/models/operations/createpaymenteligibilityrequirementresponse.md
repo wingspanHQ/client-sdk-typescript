@@ -6,11 +6,11 @@
 import { CreatePaymentEligibilityRequirementResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: CreatePaymentEligibilityRequirementResponse = {
-    contentType: "<value>",
-    statusCode: 673660,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 673660,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

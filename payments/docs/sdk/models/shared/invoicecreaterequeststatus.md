@@ -5,7 +5,7 @@
 ```typescript
 import { InvoiceCreateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: InvoiceCreateRequestStatus = "Open";
+let value: InvoiceCreateRequestStatus = "PaymentInTransit";
 ```
 
 ## Values

@@ -19,48 +19,49 @@ export const ServerStaging = "staging";
  * Contains the list of servers available to the SDK
  */
 export const ServerList = {
-    [ServerProd]: "https://api.wingspan.app",
-    [ServerStaging]: "https://stagingapi.wingspan.app",
+  [ServerProd]: "https://api.wingspan.app",
+  [ServerStaging]: "https://stagingapi.wingspan.app",
 } as const;
 
 export type SDKOptions = {
-    bearerAuth?: string | (() => Promise<string>);
+  bearerAuth?: string | (() => Promise<string>);
 
-    httpClient?: HTTPClient;
-    /**
-     * Allows overriding the default server used by the SDK
-     */
-    server?: keyof typeof ServerList;
-    /**
-     * Allows overriding the default server URL used by the SDK
-     */
-    serverURL?: string;
-    /**
-     * Allows overriding the default retry config used by the SDK
-     */
-    retryConfig?: RetryConfig;
-    timeoutMs?: number;
-    debugLogger?: Logger;
+  httpClient?: HTTPClient;
+  /**
+   * Allows overriding the default server used by the SDK
+   */
+  server?: keyof typeof ServerList;
+  /**
+   * Allows overriding the default server URL used by the SDK
+   */
+  serverURL?: string;
+  /**
+   * Allows overriding the default retry config used by the SDK
+   */
+  retryConfig?: RetryConfig;
+  timeoutMs?: number;
+  debugLogger?: Logger;
 };
 
 export function serverURLFromOptions(options: SDKOptions): URL | null {
-    let serverURL = options.serverURL;
+  let serverURL = options.serverURL;
 
-    const params: Params = {};
+  const params: Params = {};
 
-    if (!serverURL) {
-        const server = options.server ?? ServerProd;
-        serverURL = ServerList[server] || "";
-    }
+  if (!serverURL) {
+    const server = options.server ?? ServerProd;
+    serverURL = ServerList[server] || "";
+  }
 
-    const u = pathToFunc(serverURL)(params);
-    return new URL(u);
+  const u = pathToFunc(serverURL)(params);
+  return new URL(u);
 }
 
 export const SDK_METADATA = {
-    language: "typescript",
-    openapiDocVersion: "1.0.0-oas3.1",
-    sdkVersion: "2.5.0",
-    genVersion: "2.411.9",
-    userAgent: "speakeasy-sdk/typescript 2.5.0 2.411.9 1.0.0-oas3.1 @wingspan/payments",
+  language: "typescript",
+  openapiDocVersion: "1.0.0-oas3.1",
+  sdkVersion: "2.6.0",
+  genVersion: "2.415.7",
+  userAgent:
+    "speakeasy-sdk/typescript 2.6.0 2.415.7 1.0.0-oas3.1 @wingspan/payments",
 } as const;

@@ -5,7 +5,7 @@
 ```typescript
 import { TaxFormUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: TaxFormUpdateRequestStatus = "RejectedByIrs";
+let value: TaxFormUpdateRequestStatus = "SubmittedToIrs";
 ```
 
 ## Values

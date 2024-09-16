@@ -4,61 +4,65 @@
 
 import * as z from "zod";
 
-export type Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56 = {
+export type Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56 =
+  {
     addressLine1: string;
     addressLine2?: string | null | undefined;
     city: string;
     postalCode: string;
     state: string;
-};
+  };
 
 /** @internal */
-export const Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema: z.ZodType<
+export const Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema:
+  z.ZodType<
     Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     addressLine1: z.string(),
     addressLine2: z.nullable(z.string()).optional(),
     city: z.string(),
     postalCode: z.string(),
     state: z.string(),
-});
+  });
 
 /** @internal */
-export type Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound = {
+export type Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound =
+  {
     addressLine1: string;
     addressLine2?: string | null | undefined;
     city: string;
     postalCode: string;
     state: string;
-};
+  };
 
 /** @internal */
-export const Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema: z.ZodType<
+export const Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema:
+  z.ZodType<
     Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound,
     z.ZodTypeDef,
     Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56
-> = z.object({
+  > = z.object({
     addressLine1: z.string(),
     addressLine2: z.nullable(z.string()).optional(),
     city: z.string(),
     postalCode: z.string(),
     state: z.string(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$ {
-    /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema` instead. */
-    export const inboundSchema =
-        Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema;
-    /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema` instead. */
-    export const outboundSchema =
-        Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema;
-    /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound` instead. */
-    export type Outbound =
-        Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound;
+  /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema` instead. */
+  export const inboundSchema =
+    Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$inboundSchema;
+  /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema` instead. */
+  export const outboundSchema =
+    Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$outboundSchema;
+  /** @deprecated use `Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound` instead. */
+  export type Outbound =
+    Sevenb49dbbd81f36ab6d7b4f07c5e2e53f40e36eb7b83d1488f379e993b830eec56$Outbound;
 }

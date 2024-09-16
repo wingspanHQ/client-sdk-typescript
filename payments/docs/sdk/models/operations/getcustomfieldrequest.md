@@ -6,7 +6,7 @@
 import { GetCustomFieldRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetCustomFieldRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

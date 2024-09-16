@@ -9,29 +9,37 @@ import * as operations from "./models/operations/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class PayrollSettings extends ClientSDK {
-    /**
-     * Retrieve Individual Payroll Settings
-     *
-     * @remarks
-     * Fetch the detailed payroll settings associated with the provided unique identifier.
-     */
-    async get(
-        request: operations.GetPayrollSettingRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetPayrollSettingResponse> {
-        return unwrapAsync(payrollSettingsGet(this, request, options));
-    }
+  /**
+   * Retrieve Individual Payroll Settings
+   *
+   * @remarks
+   * Fetch the detailed payroll settings associated with the provided unique identifier.
+   */
+  async get(
+    request: operations.GetPayrollSettingRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetPayrollSettingResponse> {
+    return unwrapAsync(payrollSettingsGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify Existing Payroll Settings
-     *
-     * @remarks
-     * Update certain attributes or details of payroll settings associated with the provided identifier.
-     */
-    async update(
-        request: operations.UpdatePayrollSettingRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdatePayrollSettingResponse> {
-        return unwrapAsync(payrollSettingsUpdate(this, request, options));
-    }
+  /**
+   * Modify Existing Payroll Settings
+   *
+   * @remarks
+   * Update certain attributes or details of payroll settings associated with the provided identifier.
+   */
+  async update(
+    request: operations.UpdatePayrollSettingRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdatePayrollSettingResponse> {
+    return unwrapAsync(payrollSettingsUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

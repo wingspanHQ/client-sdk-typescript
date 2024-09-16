@@ -6,35 +6,39 @@
 import { CollaboratorSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorSchema = {
-    achCreditAccount: {
-        accountNumber: "<value>",
-        bankName: "<value>",
-    },
-    clientId: "<value>",
-    collaboratorId: "<value>",
-    createdAt: "<value>",
-    eventActors: {
-        key: "<value>",
-    },
-    form1099Balances: {},
-    internationalWireAccount: {
-        accountNumber: "<value>",
-        bankName: "<value>",
-    },
-    labels: {
-        key: "<value>",
-    },
-    member: {
-        user: {},
-    },
-    memberId: "<value>",
-    status: "Inactive",
-    taxStatus: "Pending",
-    updatedAt: "<value>",
-    userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
-    },
+  achCreditAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  clientId: "<value>",
+  collaboratorId: "<value>",
+  createdAt: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  form1099Balances: {},
+  internationalWireAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  member: {
+    user: {},
+  },
+  memberId: "<value>",
+  status: "Active",
+  taxStatus: "Pending",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
 };
 ```
 

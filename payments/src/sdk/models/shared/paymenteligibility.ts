@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type PaymentEligibility = {
-    field: string;
-    value: string;
+  field: string;
+  value: string;
 };
 
 /** @internal */
 export const PaymentEligibility$inboundSchema: z.ZodType<
-    PaymentEligibility,
-    z.ZodTypeDef,
-    unknown
+  PaymentEligibility,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    field: z.string(),
-    value: z.string(),
+  field: z.string(),
+  value: z.string(),
 });
 
 /** @internal */
 export type PaymentEligibility$Outbound = {
-    field: string;
-    value: string;
+  field: string;
+  value: string;
 };
 
 /** @internal */
 export const PaymentEligibility$outboundSchema: z.ZodType<
-    PaymentEligibility$Outbound,
-    z.ZodTypeDef,
-    PaymentEligibility
+  PaymentEligibility$Outbound,
+  z.ZodTypeDef,
+  PaymentEligibility
 > = z.object({
-    field: z.string(),
-    value: z.string(),
+  field: z.string(),
+  value: z.string(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const PaymentEligibility$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace PaymentEligibility$ {
-    /** @deprecated use `PaymentEligibility$inboundSchema` instead. */
-    export const inboundSchema = PaymentEligibility$inboundSchema;
-    /** @deprecated use `PaymentEligibility$outboundSchema` instead. */
-    export const outboundSchema = PaymentEligibility$outboundSchema;
-    /** @deprecated use `PaymentEligibility$Outbound` instead. */
-    export type Outbound = PaymentEligibility$Outbound;
+  /** @deprecated use `PaymentEligibility$inboundSchema` instead. */
+  export const inboundSchema = PaymentEligibility$inboundSchema;
+  /** @deprecated use `PaymentEligibility$outboundSchema` instead. */
+  export const outboundSchema = PaymentEligibility$outboundSchema;
+  /** @deprecated use `PaymentEligibility$Outbound` instead. */
+  export type Outbound = PaymentEligibility$Outbound;
 }

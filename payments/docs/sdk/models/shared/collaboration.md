@@ -6,8 +6,8 @@
 import { Collaboration } from "@wingspan/payments/sdk/models/shared";
 
 let value: Collaboration = {
-    collaboratorId: "<value>",
-    status: "Inactive",
+  collaboratorId: "<value>",
+  status: "Pending",
 };
 ```
 

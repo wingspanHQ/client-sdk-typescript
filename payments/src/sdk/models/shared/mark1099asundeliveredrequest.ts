@@ -5,38 +5,38 @@
 import * as z from "zod";
 
 export type Mark1099AsUndeliveredRequest = {
-    memberId: string;
-    submissionIndex: number;
-    year: number;
+  memberId: string;
+  submissionIndex: number;
+  year: number;
 };
 
 /** @internal */
 export const Mark1099AsUndeliveredRequest$inboundSchema: z.ZodType<
-    Mark1099AsUndeliveredRequest,
-    z.ZodTypeDef,
-    unknown
+  Mark1099AsUndeliveredRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    memberId: z.string(),
-    submissionIndex: z.number(),
-    year: z.number(),
+  memberId: z.string(),
+  submissionIndex: z.number(),
+  year: z.number(),
 });
 
 /** @internal */
 export type Mark1099AsUndeliveredRequest$Outbound = {
-    memberId: string;
-    submissionIndex: number;
-    year: number;
+  memberId: string;
+  submissionIndex: number;
+  year: number;
 };
 
 /** @internal */
 export const Mark1099AsUndeliveredRequest$outboundSchema: z.ZodType<
-    Mark1099AsUndeliveredRequest$Outbound,
-    z.ZodTypeDef,
-    Mark1099AsUndeliveredRequest
+  Mark1099AsUndeliveredRequest$Outbound,
+  z.ZodTypeDef,
+  Mark1099AsUndeliveredRequest
 > = z.object({
-    memberId: z.string(),
-    submissionIndex: z.number(),
-    year: z.number(),
+  memberId: z.string(),
+  submissionIndex: z.number(),
+  year: z.number(),
 });
 
 /**
@@ -44,10 +44,10 @@ export const Mark1099AsUndeliveredRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Mark1099AsUndeliveredRequest$ {
-    /** @deprecated use `Mark1099AsUndeliveredRequest$inboundSchema` instead. */
-    export const inboundSchema = Mark1099AsUndeliveredRequest$inboundSchema;
-    /** @deprecated use `Mark1099AsUndeliveredRequest$outboundSchema` instead. */
-    export const outboundSchema = Mark1099AsUndeliveredRequest$outboundSchema;
-    /** @deprecated use `Mark1099AsUndeliveredRequest$Outbound` instead. */
-    export type Outbound = Mark1099AsUndeliveredRequest$Outbound;
+  /** @deprecated use `Mark1099AsUndeliveredRequest$inboundSchema` instead. */
+  export const inboundSchema = Mark1099AsUndeliveredRequest$inboundSchema;
+  /** @deprecated use `Mark1099AsUndeliveredRequest$outboundSchema` instead. */
+  export const outboundSchema = Mark1099AsUndeliveredRequest$outboundSchema;
+  /** @deprecated use `Mark1099AsUndeliveredRequest$Outbound` instead. */
+  export type Outbound = Mark1099AsUndeliveredRequest$Outbound;
 }

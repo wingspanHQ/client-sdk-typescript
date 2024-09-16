@@ -6,40 +6,40 @@
 import { LineItemsAgingReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: LineItemsAgingReportResponse = {
-    ageGroup: "<value>",
-    amount: 583.56,
-    createdAt: "<value>",
-    currency: "European Unit of Account 17(E.U.A.-17)",
-    dueDate: "<value>",
-    invoiceId: "<value>",
-    invoiceNumber: "<value>",
-    invoicePdf: "<value>",
-    lineItems: [
-        {
-            costPerUnit: 7307.09,
-            createdAt: "<value>",
-            index: 1138.16,
-            labels: {
-                key: "<value>",
-            },
-            labelsBak2: {
-                key: "<value>",
-            },
-            quantity: 8817.21,
-            reimbursableExpense: false,
-            totalCost: 6311.26,
-            unit: "radian",
-            updatedAt: "<value>",
-        },
-    ],
-    member: {
-        user: {},
+  ageGroup: "<value>",
+  amount: 3044.68,
+  createdAt: "<value>",
+  currency: "Silver",
+  dueDate: "<value>",
+  invoiceId: "<value>",
+  invoiceNumber: "<value>",
+  invoicePdf: "<value>",
+  lineItems: [
+    {
+      costPerUnit: 8391.89,
+      createdAt: "<value>",
+      index: 3518.7,
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 2377.42,
+      reimbursableExpense: false,
+      totalCost: 7383.91,
+      unit: "volt",
+      updatedAt: "<value>",
     },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    receiptPdf: "<value>",
-    status: "Draft",
-    updatedAt: "<value>",
+  ],
+  member: {
+    user: {},
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  receiptPdf: "<value>",
+  status: "Cancelled",
+  updatedAt: "<value>",
 };
 ```
 

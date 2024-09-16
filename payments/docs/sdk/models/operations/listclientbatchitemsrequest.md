@@ -6,7 +6,7 @@
 import { ListClientBatchItemsRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: ListClientBatchItemsRequest = {
-    batchId: "<value>",
+  batchId: "<value>",
 };
 ```
 

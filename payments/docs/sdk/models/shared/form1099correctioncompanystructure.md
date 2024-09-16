@@ -5,7 +5,7 @@
 ```typescript
 import { Form1099CorrectionCompanyStructure } from "@wingspan/payments/sdk/models/shared";
 
-let value: Form1099CorrectionCompanyStructure = "LLCPartnership";
+let value: Form1099CorrectionCompanyStructure = "LLCCorporationS";
 ```
 
 ## Values

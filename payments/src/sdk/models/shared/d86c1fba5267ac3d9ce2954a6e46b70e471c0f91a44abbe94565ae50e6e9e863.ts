@@ -5,56 +5,59 @@
 import * as z from "zod";
 
 export type D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863 = {
-    customerId?: string | null | undefined;
-    expenseAccountId?: string | null | undefined;
-    itemId?: string | null | undefined;
-    vendorId?: string | null | undefined;
+  customerId?: string | null | undefined;
+  expenseAccountId?: string | null | undefined;
+  itemId?: string | null | undefined;
+  vendorId?: string | null | undefined;
 };
 
 /** @internal */
-export const D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema: z.ZodType<
+export const D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema:
+  z.ZodType<
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     customerId: z.nullable(z.string()).optional(),
     expenseAccountId: z.nullable(z.string()).optional(),
     itemId: z.nullable(z.string()).optional(),
     vendorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound = {
+export type D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound =
+  {
     customerId?: string | null | undefined;
     expenseAccountId?: string | null | undefined;
     itemId?: string | null | undefined;
     vendorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema: z.ZodType<
+export const D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema:
+  z.ZodType<
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound,
     z.ZodTypeDef,
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863
-> = z.object({
+  > = z.object({
     customerId: z.nullable(z.string()).optional(),
     expenseAccountId: z.nullable(z.string()).optional(),
     itemId: z.nullable(z.string()).optional(),
     vendorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$ {
-    /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema` instead. */
-    export const inboundSchema =
-        D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema;
-    /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema` instead. */
-    export const outboundSchema =
-        D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema;
-    /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound` instead. */
-    export type Outbound =
-        D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound;
+  /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema` instead. */
+  export const inboundSchema =
+    D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema;
+  /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema` instead. */
+  export const outboundSchema =
+    D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema;
+  /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound` instead. */
+  export type Outbound =
+    D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound;
 }

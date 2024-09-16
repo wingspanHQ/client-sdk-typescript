@@ -6,7 +6,7 @@
 import { GetBankingInstitutionRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetBankingInstitutionRequest = {
-    routingNumber: "<value>",
+  routingNumber: "<value>",
 };
 ```
 

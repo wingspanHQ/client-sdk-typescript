@@ -6,11 +6,11 @@
 import { BulkPayableItemCreate } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkPayableItemCreate = {
-    amount: 4561.3,
-    bulkPayableBatchId: "<value>",
-    dueDate: "<value>",
-    lineItemDescription: "<value>",
-    payableStatus: "Paid",
+  amount: 2148.8,
+  bulkPayableBatchId: "<value>",
+  dueDate: "<value>",
+  lineItemDescription: "<value>",
+  payableStatus: "Open",
 };
 ```
 

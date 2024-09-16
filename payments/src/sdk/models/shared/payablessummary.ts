@@ -5,67 +5,70 @@
 import * as z from "zod";
 
 export type PayablesSummary = {
-    invoicesApproved: number;
-    invoicesDraft: number;
-    invoicesOpen: number;
-    invoicesOverdue: number;
-    invoicesPaid: number;
-    invoicesPending: number;
-    memberId: string;
-    totalApproved: number;
-    totalOpen: number;
-    totalOverdue: number;
-    totalPaid: number;
+  invoicesApproved: number;
+  invoicesDraft: number;
+  invoicesOpen: number;
+  invoicesOverdue: number;
+  invoicesPaid: number;
+  invoicesPending: number;
+  memberId: string;
+  totalApproved: number;
+  totalOpen: number;
+  totalOverdue: number;
+  totalPaid: number;
 };
 
 /** @internal */
-export const PayablesSummary$inboundSchema: z.ZodType<PayablesSummary, z.ZodTypeDef, unknown> =
-    z.object({
-        invoicesApproved: z.number(),
-        invoicesDraft: z.number(),
-        invoicesOpen: z.number(),
-        invoicesOverdue: z.number(),
-        invoicesPaid: z.number(),
-        invoicesPending: z.number(),
-        memberId: z.string(),
-        totalApproved: z.number(),
-        totalOpen: z.number(),
-        totalOverdue: z.number(),
-        totalPaid: z.number(),
-    });
+export const PayablesSummary$inboundSchema: z.ZodType<
+  PayablesSummary,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  invoicesApproved: z.number(),
+  invoicesDraft: z.number(),
+  invoicesOpen: z.number(),
+  invoicesOverdue: z.number(),
+  invoicesPaid: z.number(),
+  invoicesPending: z.number(),
+  memberId: z.string(),
+  totalApproved: z.number(),
+  totalOpen: z.number(),
+  totalOverdue: z.number(),
+  totalPaid: z.number(),
+});
 
 /** @internal */
 export type PayablesSummary$Outbound = {
-    invoicesApproved: number;
-    invoicesDraft: number;
-    invoicesOpen: number;
-    invoicesOverdue: number;
-    invoicesPaid: number;
-    invoicesPending: number;
-    memberId: string;
-    totalApproved: number;
-    totalOpen: number;
-    totalOverdue: number;
-    totalPaid: number;
+  invoicesApproved: number;
+  invoicesDraft: number;
+  invoicesOpen: number;
+  invoicesOverdue: number;
+  invoicesPaid: number;
+  invoicesPending: number;
+  memberId: string;
+  totalApproved: number;
+  totalOpen: number;
+  totalOverdue: number;
+  totalPaid: number;
 };
 
 /** @internal */
 export const PayablesSummary$outboundSchema: z.ZodType<
-    PayablesSummary$Outbound,
-    z.ZodTypeDef,
-    PayablesSummary
+  PayablesSummary$Outbound,
+  z.ZodTypeDef,
+  PayablesSummary
 > = z.object({
-    invoicesApproved: z.number(),
-    invoicesDraft: z.number(),
-    invoicesOpen: z.number(),
-    invoicesOverdue: z.number(),
-    invoicesPaid: z.number(),
-    invoicesPending: z.number(),
-    memberId: z.string(),
-    totalApproved: z.number(),
-    totalOpen: z.number(),
-    totalOverdue: z.number(),
-    totalPaid: z.number(),
+  invoicesApproved: z.number(),
+  invoicesDraft: z.number(),
+  invoicesOpen: z.number(),
+  invoicesOverdue: z.number(),
+  invoicesPaid: z.number(),
+  invoicesPending: z.number(),
+  memberId: z.string(),
+  totalApproved: z.number(),
+  totalOpen: z.number(),
+  totalOverdue: z.number(),
+  totalPaid: z.number(),
 });
 
 /**
@@ -73,10 +76,10 @@ export const PayablesSummary$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace PayablesSummary$ {
-    /** @deprecated use `PayablesSummary$inboundSchema` instead. */
-    export const inboundSchema = PayablesSummary$inboundSchema;
-    /** @deprecated use `PayablesSummary$outboundSchema` instead. */
-    export const outboundSchema = PayablesSummary$outboundSchema;
-    /** @deprecated use `PayablesSummary$Outbound` instead. */
-    export type Outbound = PayablesSummary$Outbound;
+  /** @deprecated use `PayablesSummary$inboundSchema` instead. */
+  export const inboundSchema = PayablesSummary$inboundSchema;
+  /** @deprecated use `PayablesSummary$outboundSchema` instead. */
+  export const outboundSchema = PayablesSummary$outboundSchema;
+  /** @deprecated use `PayablesSummary$Outbound` instead. */
+  export type Outbound = PayablesSummary$Outbound;
 }

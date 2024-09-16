@@ -6,54 +6,58 @@
 import { PayerTaxFormResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayerTaxFormResponse = {
-    activeSubmissionId: "<value>",
-    adjustments: 1794.9,
-    clientId: "<value>",
-    createdAt: "<value>",
-    data: {},
-    deliveryMethod: "Electronic",
-    deprecatedTaxForm: {},
-    eventActors: {
-        key: "<value>",
+  activeSubmissionId: "<value>",
+  adjustments: 5000.26,
+  clientId: "<value>",
+  createdAt: "<value>",
+  data: {},
+  deliveryMethod: "Mail",
+  deprecatedTaxForm: {},
+  eventActors: {
+    "key": "<value>",
+  },
+  eventHistory: [
+    {
+      eventType: "PayerManuallyUpdatedStatus",
+      timestamp: "<value>",
+      triggeredBy: "Payee",
     },
-    eventHistory: [
-        {
-            eventType: "RecipientSyncEnabled",
-            timestamp: "<value>",
-            triggeredBy: "System",
-        },
+  ],
+  filingStateCode: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  memberId: "<value>",
+  payerPayeeId: "<value>",
+  paymentProcessingFees: 6990.98,
+  platformIncome: 2378.93,
+  recipientConfirmedW9Info: false,
+  recipientReadyToSubmitW9: false,
+  recipientSyncEnabled: false,
+  status: "Ineligible",
+  submissions: [
+    {
+      correctionType: "Type2",
+      deliveryMethod: "Electronic",
+      externalDocumentId: "<value>",
+      isCorrected: false,
+      status: "RejectedByIrs",
+      submissionData: {},
+      submissionId: "<value>",
+    },
+  ],
+  taxFormId: "<value>",
+  type: "Form1099Nec",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
     ],
-    filingStateCode: "<value>",
-    labels: {
-        key: "<value>",
-    },
-    memberId: "<value>",
-    payerPayeeId: "<value>",
-    paymentProcessingFees: 4634.51,
-    platformIncome: 2239.24,
-    recipientConfirmedW9Info: false,
-    recipientReadyToSubmitW9: false,
-    recipientSyncEnabled: false,
-    status: "Excluded",
-    submissions: [
-        {
-            correctionType: "Type1",
-            deliveryMethod: "Mail",
-            externalDocumentId: "<value>",
-            isCorrected: false,
-            status: "Ineligible",
-            submissionData: {},
-            submissionId: "<value>",
-        },
+    viewerIds: [
+      "<value>",
     ],
-    taxFormId: "<value>",
-    type: "Form1099Nec",
-    updatedAt: "<value>",
-    userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
-    },
-    year: 6082.53,
+  },
+  year: 6790.91,
 };
 ```
 

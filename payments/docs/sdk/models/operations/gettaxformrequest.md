@@ -6,7 +6,7 @@
 import { GetTaxFormRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetTaxFormRequest = {
-    taxFormId: "<value>",
+  taxFormId: "<value>",
 };
 ```
 

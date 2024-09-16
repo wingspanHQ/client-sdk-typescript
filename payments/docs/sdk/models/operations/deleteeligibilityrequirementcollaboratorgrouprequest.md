@@ -6,8 +6,8 @@
 import { DeleteEligibilityRequirementCollaboratorGroupRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteEligibilityRequirementCollaboratorGroupRequest = {
-    eligibilityRequirementId: "<value>",
-    id: "<id>",
+  eligibilityRequirementId: "<value>",
+  id: "<id>",
 };
 ```
 

@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type DocumentEvents = {
-    clientSignedAt?: string | null | undefined;
-    memberSignedAt?: string | null | undefined;
+  clientSignedAt?: string | null | undefined;
+  memberSignedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const DocumentEvents$inboundSchema: z.ZodType<DocumentEvents, z.ZodTypeDef, unknown> =
-    z.object({
-        clientSignedAt: z.nullable(z.string()).optional(),
-        memberSignedAt: z.nullable(z.string()).optional(),
-    });
+export const DocumentEvents$inboundSchema: z.ZodType<
+  DocumentEvents,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  clientSignedAt: z.nullable(z.string()).optional(),
+  memberSignedAt: z.nullable(z.string()).optional(),
+});
 
 /** @internal */
 export type DocumentEvents$Outbound = {
-    clientSignedAt?: string | null | undefined;
-    memberSignedAt?: string | null | undefined;
+  clientSignedAt?: string | null | undefined;
+  memberSignedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const DocumentEvents$outboundSchema: z.ZodType<
-    DocumentEvents$Outbound,
-    z.ZodTypeDef,
-    DocumentEvents
+  DocumentEvents$Outbound,
+  z.ZodTypeDef,
+  DocumentEvents
 > = z.object({
-    clientSignedAt: z.nullable(z.string()).optional(),
-    memberSignedAt: z.nullable(z.string()).optional(),
+  clientSignedAt: z.nullable(z.string()).optional(),
+  memberSignedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const DocumentEvents$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace DocumentEvents$ {
-    /** @deprecated use `DocumentEvents$inboundSchema` instead. */
-    export const inboundSchema = DocumentEvents$inboundSchema;
-    /** @deprecated use `DocumentEvents$outboundSchema` instead. */
-    export const outboundSchema = DocumentEvents$outboundSchema;
-    /** @deprecated use `DocumentEvents$Outbound` instead. */
-    export type Outbound = DocumentEvents$Outbound;
+  /** @deprecated use `DocumentEvents$inboundSchema` instead. */
+  export const inboundSchema = DocumentEvents$inboundSchema;
+  /** @deprecated use `DocumentEvents$outboundSchema` instead. */
+  export const outboundSchema = DocumentEvents$outboundSchema;
+  /** @deprecated use `DocumentEvents$Outbound` instead. */
+  export type Outbound = DocumentEvents$Outbound;
 }

@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type InvoiceRefundRequest = {
-    amount: number;
-    description?: string | null | undefined;
+  amount: number;
+  description?: string | null | undefined;
 };
 
 /** @internal */
 export const InvoiceRefundRequest$inboundSchema: z.ZodType<
-    InvoiceRefundRequest,
-    z.ZodTypeDef,
-    unknown
+  InvoiceRefundRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    amount: z.number(),
-    description: z.nullable(z.string()).optional(),
+  amount: z.number(),
+  description: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type InvoiceRefundRequest$Outbound = {
-    amount: number;
-    description?: string | null | undefined;
+  amount: number;
+  description?: string | null | undefined;
 };
 
 /** @internal */
 export const InvoiceRefundRequest$outboundSchema: z.ZodType<
-    InvoiceRefundRequest$Outbound,
-    z.ZodTypeDef,
-    InvoiceRefundRequest
+  InvoiceRefundRequest$Outbound,
+  z.ZodTypeDef,
+  InvoiceRefundRequest
 > = z.object({
-    amount: z.number(),
-    description: z.nullable(z.string()).optional(),
+  amount: z.number(),
+  description: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const InvoiceRefundRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceRefundRequest$ {
-    /** @deprecated use `InvoiceRefundRequest$inboundSchema` instead. */
-    export const inboundSchema = InvoiceRefundRequest$inboundSchema;
-    /** @deprecated use `InvoiceRefundRequest$outboundSchema` instead. */
-    export const outboundSchema = InvoiceRefundRequest$outboundSchema;
-    /** @deprecated use `InvoiceRefundRequest$Outbound` instead. */
-    export type Outbound = InvoiceRefundRequest$Outbound;
+  /** @deprecated use `InvoiceRefundRequest$inboundSchema` instead. */
+  export const inboundSchema = InvoiceRefundRequest$inboundSchema;
+  /** @deprecated use `InvoiceRefundRequest$outboundSchema` instead. */
+  export const outboundSchema = InvoiceRefundRequest$outboundSchema;
+  /** @deprecated use `InvoiceRefundRequest$Outbound` instead. */
+  export type Outbound = InvoiceRefundRequest$Outbound;
 }

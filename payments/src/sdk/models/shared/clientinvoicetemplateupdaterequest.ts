@@ -5,38 +5,38 @@
 import * as z from "zod";
 
 export type ClientInvoiceTemplateUpdateRequest = {
-    accountId?: string | null | undefined;
-    clientId: string;
-    paymentMethodId?: string | null | undefined;
+  accountId?: string | null | undefined;
+  clientId: string;
+  paymentMethodId?: string | null | undefined;
 };
 
 /** @internal */
 export const ClientInvoiceTemplateUpdateRequest$inboundSchema: z.ZodType<
-    ClientInvoiceTemplateUpdateRequest,
-    z.ZodTypeDef,
-    unknown
+  ClientInvoiceTemplateUpdateRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    accountId: z.nullable(z.string()).optional(),
-    clientId: z.string(),
-    paymentMethodId: z.nullable(z.string()).optional(),
+  accountId: z.nullable(z.string()).optional(),
+  clientId: z.string(),
+  paymentMethodId: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type ClientInvoiceTemplateUpdateRequest$Outbound = {
-    accountId?: string | null | undefined;
-    clientId: string;
-    paymentMethodId?: string | null | undefined;
+  accountId?: string | null | undefined;
+  clientId: string;
+  paymentMethodId?: string | null | undefined;
 };
 
 /** @internal */
 export const ClientInvoiceTemplateUpdateRequest$outboundSchema: z.ZodType<
-    ClientInvoiceTemplateUpdateRequest$Outbound,
-    z.ZodTypeDef,
-    ClientInvoiceTemplateUpdateRequest
+  ClientInvoiceTemplateUpdateRequest$Outbound,
+  z.ZodTypeDef,
+  ClientInvoiceTemplateUpdateRequest
 > = z.object({
-    accountId: z.nullable(z.string()).optional(),
-    clientId: z.string(),
-    paymentMethodId: z.nullable(z.string()).optional(),
+  accountId: z.nullable(z.string()).optional(),
+  clientId: z.string(),
+  paymentMethodId: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -44,10 +44,11 @@ export const ClientInvoiceTemplateUpdateRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ClientInvoiceTemplateUpdateRequest$ {
-    /** @deprecated use `ClientInvoiceTemplateUpdateRequest$inboundSchema` instead. */
-    export const inboundSchema = ClientInvoiceTemplateUpdateRequest$inboundSchema;
-    /** @deprecated use `ClientInvoiceTemplateUpdateRequest$outboundSchema` instead. */
-    export const outboundSchema = ClientInvoiceTemplateUpdateRequest$outboundSchema;
-    /** @deprecated use `ClientInvoiceTemplateUpdateRequest$Outbound` instead. */
-    export type Outbound = ClientInvoiceTemplateUpdateRequest$Outbound;
+  /** @deprecated use `ClientInvoiceTemplateUpdateRequest$inboundSchema` instead. */
+  export const inboundSchema = ClientInvoiceTemplateUpdateRequest$inboundSchema;
+  /** @deprecated use `ClientInvoiceTemplateUpdateRequest$outboundSchema` instead. */
+  export const outboundSchema =
+    ClientInvoiceTemplateUpdateRequest$outboundSchema;
+  /** @deprecated use `ClientInvoiceTemplateUpdateRequest$Outbound` instead. */
+  export type Outbound = ClientInvoiceTemplateUpdateRequest$Outbound;
 }

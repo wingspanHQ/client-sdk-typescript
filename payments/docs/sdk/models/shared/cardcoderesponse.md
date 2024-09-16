@@ -6,8 +6,8 @@
 import { CardCodeResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardCodeResponse = {
-    phoneNumber: "<value>",
-    verificationToken: "<value>",
+  phoneNumber: "712.884.3682 x53896",
+  verificationToken: "<value>",
 };
 ```
 

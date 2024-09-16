@@ -5,7 +5,7 @@
 ```typescript
 import { WorkflowStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: WorkflowStatus = "PreApproved";
+let value: WorkflowStatus = "PaymentInitiated";
 ```
 
 ## Values

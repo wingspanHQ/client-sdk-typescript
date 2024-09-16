@@ -6,11 +6,11 @@
 import { ListClientBatchesResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: ListClientBatchesResponse = {
-    contentType: "<value>",
-    statusCode: 617636,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 617636,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

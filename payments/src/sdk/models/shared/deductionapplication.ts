@@ -5,38 +5,38 @@
 import * as z from "zod";
 
 export type DeductionApplication = {
-    amountDeducted: number;
-    disbursementId?: string | null | undefined;
-    payableId: string;
+  amountDeducted: number;
+  disbursementId?: string | null | undefined;
+  payableId: string;
 };
 
 /** @internal */
 export const DeductionApplication$inboundSchema: z.ZodType<
-    DeductionApplication,
-    z.ZodTypeDef,
-    unknown
+  DeductionApplication,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    amountDeducted: z.number(),
-    disbursementId: z.nullable(z.string()).optional(),
-    payableId: z.string(),
+  amountDeducted: z.number(),
+  disbursementId: z.nullable(z.string()).optional(),
+  payableId: z.string(),
 });
 
 /** @internal */
 export type DeductionApplication$Outbound = {
-    amountDeducted: number;
-    disbursementId?: string | null | undefined;
-    payableId: string;
+  amountDeducted: number;
+  disbursementId?: string | null | undefined;
+  payableId: string;
 };
 
 /** @internal */
 export const DeductionApplication$outboundSchema: z.ZodType<
-    DeductionApplication$Outbound,
-    z.ZodTypeDef,
-    DeductionApplication
+  DeductionApplication$Outbound,
+  z.ZodTypeDef,
+  DeductionApplication
 > = z.object({
-    amountDeducted: z.number(),
-    disbursementId: z.nullable(z.string()).optional(),
-    payableId: z.string(),
+  amountDeducted: z.number(),
+  disbursementId: z.nullable(z.string()).optional(),
+  payableId: z.string(),
 });
 
 /**
@@ -44,10 +44,10 @@ export const DeductionApplication$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace DeductionApplication$ {
-    /** @deprecated use `DeductionApplication$inboundSchema` instead. */
-    export const inboundSchema = DeductionApplication$inboundSchema;
-    /** @deprecated use `DeductionApplication$outboundSchema` instead. */
-    export const outboundSchema = DeductionApplication$outboundSchema;
-    /** @deprecated use `DeductionApplication$Outbound` instead. */
-    export type Outbound = DeductionApplication$Outbound;
+  /** @deprecated use `DeductionApplication$inboundSchema` instead. */
+  export const inboundSchema = DeductionApplication$inboundSchema;
+  /** @deprecated use `DeductionApplication$outboundSchema` instead. */
+  export const outboundSchema = DeductionApplication$outboundSchema;
+  /** @deprecated use `DeductionApplication$Outbound` instead. */
+  export type Outbound = DeductionApplication$Outbound;
 }

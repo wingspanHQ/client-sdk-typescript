@@ -6,7 +6,7 @@
 import { RedactedMember } from "@wingspan/payments/sdk/models/shared";
 
 let value: RedactedMember = {
-    user: {},
+  user: {},
 };
 ```
 

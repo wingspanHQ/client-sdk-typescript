@@ -6,7 +6,7 @@
 import { CardCodeRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardCodeRequest = {
-    channel: "<value>",
+  channel: "<value>",
 };
 ```
 

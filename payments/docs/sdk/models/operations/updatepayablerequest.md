@@ -6,7 +6,7 @@
 import { UpdatePayableRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdatePayableRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

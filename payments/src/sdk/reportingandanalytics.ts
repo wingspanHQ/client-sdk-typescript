@@ -12,62 +12,80 @@ import * as operations from "./models/operations/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class ReportingAndAnalytics extends ClientSDK {
-    /**
-     * Obtain a summarized report of payable amounts for each collaborator
-     *
-     * @remarks
-     * Gathers and presents a concise summary showcasing the payable amounts due to each collaborator, helping in financial planning and payout strategies.
-     */
-    async get(options?: RequestOptions): Promise<operations.GetSummarizedReportResponse> {
-        return unwrapAsync(reportingAndAnalyticsGet(this, options));
-    }
+  /**
+   * Obtain a summarized report of payable amounts for each collaborator
+   *
+   * @remarks
+   * Gathers and presents a concise summary showcasing the payable amounts due to each collaborator, helping in financial planning and payout strategies.
+   */
+  async get(
+    options?: RequestOptions,
+  ): Promise<operations.GetSummarizedReportResponse> {
+    return unwrapAsync(reportingAndAnalyticsGet(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Extract detailed report of payables associated with a particular payroll run
-     *
-     * @remarks
-     * Offers a deep dive into the payables connected to a specific payroll run, facilitating better management and reconciliation of payroll-related finances.
-     */
-    async getPayrollReport(
-        request: operations.GetPayrollDetailedReportRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetPayrollDetailedReportResponse> {
-        return unwrapAsync(reportingAndAnalyticsGetPayrollReport(this, request, options));
-    }
+  /**
+   * Extract detailed report of payables associated with a particular payroll run
+   *
+   * @remarks
+   * Offers a deep dive into the payables connected to a specific payroll run, facilitating better management and reconciliation of payroll-related finances.
+   */
+  async getPayrollReport(
+    request: operations.GetPayrollDetailedReportRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetPayrollDetailedReportResponse> {
+    return unwrapAsync(reportingAndAnalyticsGetPayrollReport(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve detailed information on all collaborators
-     *
-     * @remarks
-     * Fetches comprehensive data on all collaborators, including their activities and current status, as listed in the reports.
-     */
-    async listDetailedCollaborator(
-        options?: RequestOptions
-    ): Promise<operations.ListDetailedInformationCollaboratorsResponse> {
-        return unwrapAsync(reportingAndAnalyticsListDetailedCollaborator(this, options));
-    }
+  /**
+   * Retrieve detailed information on all collaborators
+   *
+   * @remarks
+   * Fetches comprehensive data on all collaborators, including their activities and current status, as listed in the reports.
+   */
+  async listDetailedCollaborator(
+    options?: RequestOptions,
+  ): Promise<operations.ListDetailedInformationCollaboratorsResponse> {
+    return unwrapAsync(reportingAndAnalyticsListDetailedCollaborator(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Obtain Aging Report for Line Items
-     *
-     * @remarks
-     * Retrieve a comprehensive report detailing line items that have been open for a set number of days.
-     */
-    async listLineItem(
-        options?: RequestOptions
-    ): Promise<operations.ListAgingReportLineItemsResponse> {
-        return unwrapAsync(reportingAndAnalyticsListLineItem(this, options));
-    }
+  /**
+   * Obtain Aging Report for Line Items
+   *
+   * @remarks
+   * Retrieve a comprehensive report detailing line items that have been open for a set number of days.
+   */
+  async listLineItem(
+    options?: RequestOptions,
+  ): Promise<operations.ListAgingReportLineItemsResponse> {
+    return unwrapAsync(reportingAndAnalyticsListLineItem(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Aging Report for Payables
-     *
-     * @remarks
-     * Access a detailed report that showcases the list of payables categorized by age.
-     */
-    async listPayable(
-        options?: RequestOptions
-    ): Promise<operations.ListAgingReportPayablesResponse> {
-        return unwrapAsync(reportingAndAnalyticsListPayable(this, options));
-    }
+  /**
+   * Retrieve Aging Report for Payables
+   *
+   * @remarks
+   * Access a detailed report that showcases the list of payables categorized by age.
+   */
+  async listPayable(
+    options?: RequestOptions,
+  ): Promise<operations.ListAgingReportPayablesResponse> {
+    return unwrapAsync(reportingAndAnalyticsListPayable(
+      this,
+      options,
+    ));
+  }
 }

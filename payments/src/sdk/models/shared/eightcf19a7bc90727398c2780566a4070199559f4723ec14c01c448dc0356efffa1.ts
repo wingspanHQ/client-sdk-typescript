@@ -4,49 +4,53 @@
 
 import * as z from "zod";
 
-export type Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1 = {
+export type Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1 =
+  {
     errorMessage?: string | null | undefined;
     resolvedCollaboratorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema: z.ZodType<
+export const Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema:
+  z.ZodType<
     Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     resolvedCollaboratorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound = {
+export type Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound =
+  {
     errorMessage?: string | null | undefined;
     resolvedCollaboratorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema: z.ZodType<
+export const Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema:
+  z.ZodType<
     Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound,
     z.ZodTypeDef,
     Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     resolvedCollaboratorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$ {
-    /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema` instead. */
-    export const inboundSchema =
-        Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema;
-    /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema` instead. */
-    export const outboundSchema =
-        Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema;
-    /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound` instead. */
-    export type Outbound =
-        Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound;
+  /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema` instead. */
+  export const inboundSchema =
+    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema;
+  /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema` instead. */
+  export const outboundSchema =
+    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema;
+  /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound` instead. */
+  export type Outbound =
+    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound;
 }

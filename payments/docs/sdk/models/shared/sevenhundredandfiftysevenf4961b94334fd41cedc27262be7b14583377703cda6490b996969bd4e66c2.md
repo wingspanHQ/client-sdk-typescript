@@ -7,11 +7,12 @@ import {
   SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2,
 } from "@wingspan/payments/sdk/models/shared";
 
-let value: SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2 =
+let value:
+  SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2 =
     {
-        itemsFailed: 2187.49,
-        itemsProcessed: 9443.73,
-        itemsTotal: 5695.74,
+      itemsFailed: 8810.05,
+      itemsProcessed: 6963.44,
+      itemsTotal: 9764.05,
     };
 ```
 

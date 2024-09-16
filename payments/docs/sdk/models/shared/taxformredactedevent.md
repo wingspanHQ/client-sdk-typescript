@@ -6,9 +6,9 @@
 import { TaxFormRedactedEvent } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormRedactedEvent = {
-    eventType: "InvitationSent",
-    timestamp: "<value>",
-    triggeredBy: "Payer",
+  eventType: "PayerManuallyUpdatedStatus",
+  timestamp: "<value>",
+  triggeredBy: "Payee",
 };
 ```
 

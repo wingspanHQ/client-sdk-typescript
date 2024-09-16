@@ -5,54 +5,56 @@
 import * as z from "zod";
 
 export type SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2 =
-    {
-        itemsFailed: number;
-        itemsProcessed: number;
-        itemsTotal: number;
-    };
+  {
+    itemsFailed: number;
+    itemsProcessed: number;
+    itemsTotal: number;
+  };
 
 /** @internal */
-export const SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema: z.ZodType<
+export const SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema:
+  z.ZodType<
     SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     itemsFailed: z.number(),
     itemsProcessed: z.number(),
     itemsTotal: z.number(),
-});
+  });
 
 /** @internal */
 export type SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound =
-    {
-        itemsFailed: number;
-        itemsProcessed: number;
-        itemsTotal: number;
-    };
+  {
+    itemsFailed: number;
+    itemsProcessed: number;
+    itemsTotal: number;
+  };
 
 /** @internal */
-export const SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema: z.ZodType<
+export const SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema:
+  z.ZodType<
     SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound,
     z.ZodTypeDef,
     SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2
-> = z.object({
+  > = z.object({
     itemsFailed: z.number(),
     itemsProcessed: z.number(),
     itemsTotal: z.number(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$ {
-    /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema` instead. */
-    export const inboundSchema =
-        SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema;
-    /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema` instead. */
-    export const outboundSchema =
-        SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema;
-    /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound` instead. */
-    export type Outbound =
-        SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound;
+  /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema` instead. */
+  export const inboundSchema =
+    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema;
+  /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema` instead. */
+  export const outboundSchema =
+    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$outboundSchema;
+  /** @deprecated use `SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound` instead. */
+  export type Outbound =
+    SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$Outbound;
 }

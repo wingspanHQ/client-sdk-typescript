@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type CollaboratorGroupRequirement = {
-    eligibilityRequirementId?: string | null | undefined;
+  eligibilityRequirementId?: string | null | undefined;
 };
 
 /** @internal */
 export const CollaboratorGroupRequirement$inboundSchema: z.ZodType<
-    CollaboratorGroupRequirement,
-    z.ZodTypeDef,
-    unknown
+  CollaboratorGroupRequirement,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    eligibilityRequirementId: z.nullable(z.string()).optional(),
+  eligibilityRequirementId: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type CollaboratorGroupRequirement$Outbound = {
-    eligibilityRequirementId?: string | null | undefined;
+  eligibilityRequirementId?: string | null | undefined;
 };
 
 /** @internal */
 export const CollaboratorGroupRequirement$outboundSchema: z.ZodType<
-    CollaboratorGroupRequirement$Outbound,
-    z.ZodTypeDef,
-    CollaboratorGroupRequirement
+  CollaboratorGroupRequirement$Outbound,
+  z.ZodTypeDef,
+  CollaboratorGroupRequirement
 > = z.object({
-    eligibilityRequirementId: z.nullable(z.string()).optional(),
+  eligibilityRequirementId: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const CollaboratorGroupRequirement$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CollaboratorGroupRequirement$ {
-    /** @deprecated use `CollaboratorGroupRequirement$inboundSchema` instead. */
-    export const inboundSchema = CollaboratorGroupRequirement$inboundSchema;
-    /** @deprecated use `CollaboratorGroupRequirement$outboundSchema` instead. */
-    export const outboundSchema = CollaboratorGroupRequirement$outboundSchema;
-    /** @deprecated use `CollaboratorGroupRequirement$Outbound` instead. */
-    export type Outbound = CollaboratorGroupRequirement$Outbound;
+  /** @deprecated use `CollaboratorGroupRequirement$inboundSchema` instead. */
+  export const inboundSchema = CollaboratorGroupRequirement$inboundSchema;
+  /** @deprecated use `CollaboratorGroupRequirement$outboundSchema` instead. */
+  export const outboundSchema = CollaboratorGroupRequirement$outboundSchema;
+  /** @deprecated use `CollaboratorGroupRequirement$Outbound` instead. */
+  export type Outbound = CollaboratorGroupRequirement$Outbound;
 }

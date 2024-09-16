@@ -5,7 +5,7 @@
 ```typescript
 import { AutoPayStrategy } from "@wingspan/payments/sdk/models/shared";
 
-let value: AutoPayStrategy = "None";
+let value: AutoPayStrategy = "All";
 ```
 
 ## Values

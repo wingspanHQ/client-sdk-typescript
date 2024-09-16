@@ -5,7 +5,7 @@
 ```typescript
 import { PayableStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayableStatus = "Cancelled";
+let value: PayableStatus = "Open";
 ```
 
 ## Values

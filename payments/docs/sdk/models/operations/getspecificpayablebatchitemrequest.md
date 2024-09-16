@@ -6,8 +6,8 @@
 import { GetSpecificPayableBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetSpecificPayableBatchItemRequest = {
-    batchId: "<value>",
-    batchItemId: "<value>",
+  batchId: "<value>",
+  batchItemId: "<value>",
 };
 ```
 

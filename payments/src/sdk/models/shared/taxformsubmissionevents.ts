@@ -5,74 +5,74 @@
 import * as z from "zod";
 
 export type TaxFormSubmissionEvents = {
-    acceptedByIrsAt?: string | null | undefined;
-    deliveredByMailAt?: string | null | undefined;
-    deliveredElectronicallyAt?: string | null | undefined;
-    mailDeliveryFailedAt?: string | null | undefined;
-    openedByCollaboratorAt?: string | null | undefined;
-    redeliveredByMailAt?: string | null | undefined;
-    rejectedByIrsAt?: string | null | undefined;
-    remailingFailedAt?: string | null | undefined;
-    resentByMailAt?: string | null | undefined;
-    returnedToSenderAt?: string | null | undefined;
-    sentByMailAt?: string | null | undefined;
-    submittedAt?: string | null | undefined;
+  acceptedByIrsAt?: string | null | undefined;
+  deliveredByMailAt?: string | null | undefined;
+  deliveredElectronicallyAt?: string | null | undefined;
+  mailDeliveryFailedAt?: string | null | undefined;
+  openedByCollaboratorAt?: string | null | undefined;
+  redeliveredByMailAt?: string | null | undefined;
+  rejectedByIrsAt?: string | null | undefined;
+  remailingFailedAt?: string | null | undefined;
+  resentByMailAt?: string | null | undefined;
+  returnedToSenderAt?: string | null | undefined;
+  sentByMailAt?: string | null | undefined;
+  submittedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const TaxFormSubmissionEvents$inboundSchema: z.ZodType<
-    TaxFormSubmissionEvents,
-    z.ZodTypeDef,
-    unknown
+  TaxFormSubmissionEvents,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    acceptedByIrsAt: z.nullable(z.string()).optional(),
-    deliveredByMailAt: z.nullable(z.string()).optional(),
-    deliveredElectronicallyAt: z.nullable(z.string()).optional(),
-    mailDeliveryFailedAt: z.nullable(z.string()).optional(),
-    openedByCollaboratorAt: z.nullable(z.string()).optional(),
-    redeliveredByMailAt: z.nullable(z.string()).optional(),
-    rejectedByIrsAt: z.nullable(z.string()).optional(),
-    remailingFailedAt: z.nullable(z.string()).optional(),
-    resentByMailAt: z.nullable(z.string()).optional(),
-    returnedToSenderAt: z.nullable(z.string()).optional(),
-    sentByMailAt: z.nullable(z.string()).optional(),
-    submittedAt: z.nullable(z.string()).optional(),
+  acceptedByIrsAt: z.nullable(z.string()).optional(),
+  deliveredByMailAt: z.nullable(z.string()).optional(),
+  deliveredElectronicallyAt: z.nullable(z.string()).optional(),
+  mailDeliveryFailedAt: z.nullable(z.string()).optional(),
+  openedByCollaboratorAt: z.nullable(z.string()).optional(),
+  redeliveredByMailAt: z.nullable(z.string()).optional(),
+  rejectedByIrsAt: z.nullable(z.string()).optional(),
+  remailingFailedAt: z.nullable(z.string()).optional(),
+  resentByMailAt: z.nullable(z.string()).optional(),
+  returnedToSenderAt: z.nullable(z.string()).optional(),
+  sentByMailAt: z.nullable(z.string()).optional(),
+  submittedAt: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type TaxFormSubmissionEvents$Outbound = {
-    acceptedByIrsAt?: string | null | undefined;
-    deliveredByMailAt?: string | null | undefined;
-    deliveredElectronicallyAt?: string | null | undefined;
-    mailDeliveryFailedAt?: string | null | undefined;
-    openedByCollaboratorAt?: string | null | undefined;
-    redeliveredByMailAt?: string | null | undefined;
-    rejectedByIrsAt?: string | null | undefined;
-    remailingFailedAt?: string | null | undefined;
-    resentByMailAt?: string | null | undefined;
-    returnedToSenderAt?: string | null | undefined;
-    sentByMailAt?: string | null | undefined;
-    submittedAt?: string | null | undefined;
+  acceptedByIrsAt?: string | null | undefined;
+  deliveredByMailAt?: string | null | undefined;
+  deliveredElectronicallyAt?: string | null | undefined;
+  mailDeliveryFailedAt?: string | null | undefined;
+  openedByCollaboratorAt?: string | null | undefined;
+  redeliveredByMailAt?: string | null | undefined;
+  rejectedByIrsAt?: string | null | undefined;
+  remailingFailedAt?: string | null | undefined;
+  resentByMailAt?: string | null | undefined;
+  returnedToSenderAt?: string | null | undefined;
+  sentByMailAt?: string | null | undefined;
+  submittedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const TaxFormSubmissionEvents$outboundSchema: z.ZodType<
-    TaxFormSubmissionEvents$Outbound,
-    z.ZodTypeDef,
-    TaxFormSubmissionEvents
+  TaxFormSubmissionEvents$Outbound,
+  z.ZodTypeDef,
+  TaxFormSubmissionEvents
 > = z.object({
-    acceptedByIrsAt: z.nullable(z.string()).optional(),
-    deliveredByMailAt: z.nullable(z.string()).optional(),
-    deliveredElectronicallyAt: z.nullable(z.string()).optional(),
-    mailDeliveryFailedAt: z.nullable(z.string()).optional(),
-    openedByCollaboratorAt: z.nullable(z.string()).optional(),
-    redeliveredByMailAt: z.nullable(z.string()).optional(),
-    rejectedByIrsAt: z.nullable(z.string()).optional(),
-    remailingFailedAt: z.nullable(z.string()).optional(),
-    resentByMailAt: z.nullable(z.string()).optional(),
-    returnedToSenderAt: z.nullable(z.string()).optional(),
-    sentByMailAt: z.nullable(z.string()).optional(),
-    submittedAt: z.nullable(z.string()).optional(),
+  acceptedByIrsAt: z.nullable(z.string()).optional(),
+  deliveredByMailAt: z.nullable(z.string()).optional(),
+  deliveredElectronicallyAt: z.nullable(z.string()).optional(),
+  mailDeliveryFailedAt: z.nullable(z.string()).optional(),
+  openedByCollaboratorAt: z.nullable(z.string()).optional(),
+  redeliveredByMailAt: z.nullable(z.string()).optional(),
+  rejectedByIrsAt: z.nullable(z.string()).optional(),
+  remailingFailedAt: z.nullable(z.string()).optional(),
+  resentByMailAt: z.nullable(z.string()).optional(),
+  returnedToSenderAt: z.nullable(z.string()).optional(),
+  sentByMailAt: z.nullable(z.string()).optional(),
+  submittedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -80,10 +80,10 @@ export const TaxFormSubmissionEvents$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace TaxFormSubmissionEvents$ {
-    /** @deprecated use `TaxFormSubmissionEvents$inboundSchema` instead. */
-    export const inboundSchema = TaxFormSubmissionEvents$inboundSchema;
-    /** @deprecated use `TaxFormSubmissionEvents$outboundSchema` instead. */
-    export const outboundSchema = TaxFormSubmissionEvents$outboundSchema;
-    /** @deprecated use `TaxFormSubmissionEvents$Outbound` instead. */
-    export type Outbound = TaxFormSubmissionEvents$Outbound;
+  /** @deprecated use `TaxFormSubmissionEvents$inboundSchema` instead. */
+  export const inboundSchema = TaxFormSubmissionEvents$inboundSchema;
+  /** @deprecated use `TaxFormSubmissionEvents$outboundSchema` instead. */
+  export const outboundSchema = TaxFormSubmissionEvents$outboundSchema;
+  /** @deprecated use `TaxFormSubmissionEvents$Outbound` instead. */
+  export type Outbound = TaxFormSubmissionEvents$Outbound;
 }

@@ -8,9 +8,9 @@ export type Remail1099Response = {};
 
 /** @internal */
 export const Remail1099Response$inboundSchema: z.ZodType<
-    Remail1099Response,
-    z.ZodTypeDef,
-    unknown
+  Remail1099Response,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +18,9 @@ export type Remail1099Response$Outbound = {};
 
 /** @internal */
 export const Remail1099Response$outboundSchema: z.ZodType<
-    Remail1099Response$Outbound,
-    z.ZodTypeDef,
-    Remail1099Response
+  Remail1099Response$Outbound,
+  z.ZodTypeDef,
+  Remail1099Response
 > = z.object({});
 
 /**
@@ -28,10 +28,10 @@ export const Remail1099Response$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Remail1099Response$ {
-    /** @deprecated use `Remail1099Response$inboundSchema` instead. */
-    export const inboundSchema = Remail1099Response$inboundSchema;
-    /** @deprecated use `Remail1099Response$outboundSchema` instead. */
-    export const outboundSchema = Remail1099Response$outboundSchema;
-    /** @deprecated use `Remail1099Response$Outbound` instead. */
-    export type Outbound = Remail1099Response$Outbound;
+  /** @deprecated use `Remail1099Response$inboundSchema` instead. */
+  export const inboundSchema = Remail1099Response$inboundSchema;
+  /** @deprecated use `Remail1099Response$outboundSchema` instead. */
+  export const outboundSchema = Remail1099Response$outboundSchema;
+  /** @deprecated use `Remail1099Response$Outbound` instead. */
+  export type Outbound = Remail1099Response$Outbound;
 }

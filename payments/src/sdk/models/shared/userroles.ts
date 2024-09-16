@@ -5,38 +5,45 @@
 import * as z from "zod";
 
 export type UserRoles = {
-    ownerIds: Array<string>;
-    viewerIds: Array<string>;
+  ownerIds: Array<string>;
+  viewerIds: Array<string>;
 };
 
 /** @internal */
-export const UserRoles$inboundSchema: z.ZodType<UserRoles, z.ZodTypeDef, unknown> = z.object({
-    ownerIds: z.array(z.string()),
-    viewerIds: z.array(z.string()),
+export const UserRoles$inboundSchema: z.ZodType<
+  UserRoles,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  ownerIds: z.array(z.string()),
+  viewerIds: z.array(z.string()),
 });
 
 /** @internal */
 export type UserRoles$Outbound = {
-    ownerIds: Array<string>;
-    viewerIds: Array<string>;
+  ownerIds: Array<string>;
+  viewerIds: Array<string>;
 };
 
 /** @internal */
-export const UserRoles$outboundSchema: z.ZodType<UserRoles$Outbound, z.ZodTypeDef, UserRoles> =
-    z.object({
-        ownerIds: z.array(z.string()),
-        viewerIds: z.array(z.string()),
-    });
+export const UserRoles$outboundSchema: z.ZodType<
+  UserRoles$Outbound,
+  z.ZodTypeDef,
+  UserRoles
+> = z.object({
+  ownerIds: z.array(z.string()),
+  viewerIds: z.array(z.string()),
+});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace UserRoles$ {
-    /** @deprecated use `UserRoles$inboundSchema` instead. */
-    export const inboundSchema = UserRoles$inboundSchema;
-    /** @deprecated use `UserRoles$outboundSchema` instead. */
-    export const outboundSchema = UserRoles$outboundSchema;
-    /** @deprecated use `UserRoles$Outbound` instead. */
-    export type Outbound = UserRoles$Outbound;
+  /** @deprecated use `UserRoles$inboundSchema` instead. */
+  export const inboundSchema = UserRoles$inboundSchema;
+  /** @deprecated use `UserRoles$outboundSchema` instead. */
+  export const outboundSchema = UserRoles$outboundSchema;
+  /** @deprecated use `UserRoles$Outbound` instead. */
+  export type Outbound = UserRoles$Outbound;
 }

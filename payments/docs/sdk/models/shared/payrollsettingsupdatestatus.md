@@ -5,7 +5,7 @@
 ```typescript
 import { PayrollSettingsUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayrollSettingsUpdateStatus = "Cancelled";
+let value: PayrollSettingsUpdateStatus = "Draft";
 ```
 
 ## Values

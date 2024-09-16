@@ -5,7 +5,7 @@
 ```typescript
 import { DocumentResponseStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: DocumentResponseStatus = "PendingReview";
+let value: DocumentResponseStatus = "Required";
 ```
 
 ## Values

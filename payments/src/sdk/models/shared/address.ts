@@ -5,38 +5,43 @@
 import * as z from "zod";
 
 export type Address = {
-    addressLine1: string;
-    addressLine2?: string | null | undefined;
-    city: string;
-    postalCode: string;
-    state: string;
+  addressLine1: string;
+  addressLine2?: string | null | undefined;
+  city: string;
+  postalCode: string;
+  state: string;
 };
 
 /** @internal */
-export const Address$inboundSchema: z.ZodType<Address, z.ZodTypeDef, unknown> = z.object({
+export const Address$inboundSchema: z.ZodType<Address, z.ZodTypeDef, unknown> =
+  z.object({
     addressLine1: z.string(),
     addressLine2: z.nullable(z.string()).optional(),
     city: z.string(),
     postalCode: z.string(),
     state: z.string(),
-});
+  });
 
 /** @internal */
 export type Address$Outbound = {
-    addressLine1: string;
-    addressLine2?: string | null | undefined;
-    city: string;
-    postalCode: string;
-    state: string;
+  addressLine1: string;
+  addressLine2?: string | null | undefined;
+  city: string;
+  postalCode: string;
+  state: string;
 };
 
 /** @internal */
-export const Address$outboundSchema: z.ZodType<Address$Outbound, z.ZodTypeDef, Address> = z.object({
-    addressLine1: z.string(),
-    addressLine2: z.nullable(z.string()).optional(),
-    city: z.string(),
-    postalCode: z.string(),
-    state: z.string(),
+export const Address$outboundSchema: z.ZodType<
+  Address$Outbound,
+  z.ZodTypeDef,
+  Address
+> = z.object({
+  addressLine1: z.string(),
+  addressLine2: z.nullable(z.string()).optional(),
+  city: z.string(),
+  postalCode: z.string(),
+  state: z.string(),
 });
 
 /**
@@ -44,10 +49,10 @@ export const Address$outboundSchema: z.ZodType<Address$Outbound, z.ZodTypeDef, A
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Address$ {
-    /** @deprecated use `Address$inboundSchema` instead. */
-    export const inboundSchema = Address$inboundSchema;
-    /** @deprecated use `Address$outboundSchema` instead. */
-    export const outboundSchema = Address$outboundSchema;
-    /** @deprecated use `Address$Outbound` instead. */
-    export type Outbound = Address$Outbound;
+  /** @deprecated use `Address$inboundSchema` instead. */
+  export const inboundSchema = Address$inboundSchema;
+  /** @deprecated use `Address$outboundSchema` instead. */
+  export const outboundSchema = Address$outboundSchema;
+  /** @deprecated use `Address$Outbound` instead. */
+  export type Outbound = Address$Outbound;
 }

@@ -6,7 +6,7 @@
 import { DeleteInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteInvoiceRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

@@ -6,7 +6,7 @@
 import { DeleteStoredWingspanWalletCardRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteStoredWingspanWalletCardRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

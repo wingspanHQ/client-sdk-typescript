@@ -6,7 +6,7 @@
 import { CreateSpecificCollaboratorBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: CreateSpecificCollaboratorBatchItemRequest = {
-    batchId: "<value>",
+  batchId: "<value>",
 };
 ```
 

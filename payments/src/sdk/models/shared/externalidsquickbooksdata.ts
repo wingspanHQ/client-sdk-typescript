@@ -5,50 +5,50 @@
 import * as z from "zod";
 
 export type ExternalIdsQuickbooksData = {
-    doCreate?: boolean | null | undefined;
-    doDelete?: boolean | null | undefined;
-    doUpdate?: boolean | null | undefined;
-    id: string;
-    syncToken: string;
-    updatedAt?: string | null | undefined;
+  doCreate?: boolean | null | undefined;
+  doDelete?: boolean | null | undefined;
+  doUpdate?: boolean | null | undefined;
+  id: string;
+  syncToken: string;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const ExternalIdsQuickbooksData$inboundSchema: z.ZodType<
-    ExternalIdsQuickbooksData,
-    z.ZodTypeDef,
-    unknown
+  ExternalIdsQuickbooksData,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    doCreate: z.nullable(z.boolean()).optional(),
-    doDelete: z.nullable(z.boolean()).optional(),
-    doUpdate: z.nullable(z.boolean()).optional(),
-    id: z.string(),
-    syncToken: z.string(),
-    updatedAt: z.nullable(z.string()).optional(),
+  doCreate: z.nullable(z.boolean()).optional(),
+  doDelete: z.nullable(z.boolean()).optional(),
+  doUpdate: z.nullable(z.boolean()).optional(),
+  id: z.string(),
+  syncToken: z.string(),
+  updatedAt: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type ExternalIdsQuickbooksData$Outbound = {
-    doCreate?: boolean | null | undefined;
-    doDelete?: boolean | null | undefined;
-    doUpdate?: boolean | null | undefined;
-    id: string;
-    syncToken: string;
-    updatedAt?: string | null | undefined;
+  doCreate?: boolean | null | undefined;
+  doDelete?: boolean | null | undefined;
+  doUpdate?: boolean | null | undefined;
+  id: string;
+  syncToken: string;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const ExternalIdsQuickbooksData$outboundSchema: z.ZodType<
-    ExternalIdsQuickbooksData$Outbound,
-    z.ZodTypeDef,
-    ExternalIdsQuickbooksData
+  ExternalIdsQuickbooksData$Outbound,
+  z.ZodTypeDef,
+  ExternalIdsQuickbooksData
 > = z.object({
-    doCreate: z.nullable(z.boolean()).optional(),
-    doDelete: z.nullable(z.boolean()).optional(),
-    doUpdate: z.nullable(z.boolean()).optional(),
-    id: z.string(),
-    syncToken: z.string(),
-    updatedAt: z.nullable(z.string()).optional(),
+  doCreate: z.nullable(z.boolean()).optional(),
+  doDelete: z.nullable(z.boolean()).optional(),
+  doUpdate: z.nullable(z.boolean()).optional(),
+  id: z.string(),
+  syncToken: z.string(),
+  updatedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -56,10 +56,10 @@ export const ExternalIdsQuickbooksData$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ExternalIdsQuickbooksData$ {
-    /** @deprecated use `ExternalIdsQuickbooksData$inboundSchema` instead. */
-    export const inboundSchema = ExternalIdsQuickbooksData$inboundSchema;
-    /** @deprecated use `ExternalIdsQuickbooksData$outboundSchema` instead. */
-    export const outboundSchema = ExternalIdsQuickbooksData$outboundSchema;
-    /** @deprecated use `ExternalIdsQuickbooksData$Outbound` instead. */
-    export type Outbound = ExternalIdsQuickbooksData$Outbound;
+  /** @deprecated use `ExternalIdsQuickbooksData$inboundSchema` instead. */
+  export const inboundSchema = ExternalIdsQuickbooksData$inboundSchema;
+  /** @deprecated use `ExternalIdsQuickbooksData$outboundSchema` instead. */
+  export const outboundSchema = ExternalIdsQuickbooksData$outboundSchema;
+  /** @deprecated use `ExternalIdsQuickbooksData$Outbound` instead. */
+  export type Outbound = ExternalIdsQuickbooksData$Outbound;
 }

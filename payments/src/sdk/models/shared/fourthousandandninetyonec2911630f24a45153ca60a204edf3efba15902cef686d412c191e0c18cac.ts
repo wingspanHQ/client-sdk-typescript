@@ -4,50 +4,53 @@
 
 import * as z from "zod";
 
-export type FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac = {
+export type FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac =
+  {
     errorMessage?: string | null | undefined;
     resolvedMemberClientId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema: z.ZodType<
+export const FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema:
+  z.ZodType<
     FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     resolvedMemberClientId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
 export type FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound =
-    {
-        errorMessage?: string | null | undefined;
-        resolvedMemberClientId?: string | null | undefined;
-    };
+  {
+    errorMessage?: string | null | undefined;
+    resolvedMemberClientId?: string | null | undefined;
+  };
 
 /** @internal */
-export const FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema: z.ZodType<
+export const FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema:
+  z.ZodType<
     FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound,
     z.ZodTypeDef,
     FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     resolvedMemberClientId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$ {
-    /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema` instead. */
-    export const inboundSchema =
-        FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema;
-    /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema` instead. */
-    export const outboundSchema =
-        FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema;
-    /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound` instead. */
-    export type Outbound =
-        FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound;
+  /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema` instead. */
+  export const inboundSchema =
+    FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$inboundSchema;
+  /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema` instead. */
+  export const outboundSchema =
+    FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$outboundSchema;
+  /** @deprecated use `FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound` instead. */
+  export type Outbound =
+    FourThousandAndNinetyOnec2911630f24a45153ca60a204edf3efba15902cef686d412c191e0c18cac$Outbound;
 }

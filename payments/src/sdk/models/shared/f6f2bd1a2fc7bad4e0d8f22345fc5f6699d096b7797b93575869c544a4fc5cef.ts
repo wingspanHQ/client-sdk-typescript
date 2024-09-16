@@ -5,48 +5,51 @@
 import * as z from "zod";
 
 export type F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef = {
-    firstName?: string | null | undefined;
-    lastName?: string | null | undefined;
+  firstName?: string | null | undefined;
+  lastName?: string | null | undefined;
 };
 
 /** @internal */
-export const F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema: z.ZodType<
+export const F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema:
+  z.ZodType<
     F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     firstName: z.nullable(z.string()).optional(),
     lastName: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound = {
+export type F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound =
+  {
     firstName?: string | null | undefined;
     lastName?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema: z.ZodType<
+export const F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema:
+  z.ZodType<
     F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound,
     z.ZodTypeDef,
     F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef
-> = z.object({
+  > = z.object({
     firstName: z.nullable(z.string()).optional(),
     lastName: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$ {
-    /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema` instead. */
-    export const inboundSchema =
-        F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema;
-    /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema` instead. */
-    export const outboundSchema =
-        F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema;
-    /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound` instead. */
-    export type Outbound =
-        F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound;
+  /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema` instead. */
+  export const inboundSchema =
+    F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema;
+  /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema` instead. */
+  export const outboundSchema =
+    F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$outboundSchema;
+  /** @deprecated use `F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound` instead. */
+  export type Outbound =
+    F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$Outbound;
 }

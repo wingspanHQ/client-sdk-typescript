@@ -5,52 +5,55 @@
 import * as z from "zod";
 
 export type Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b = {
-    amount?: number | null | undefined;
-    description?: string | null | undefined;
-    percentage?: number | null | undefined;
+  amount?: number | null | undefined;
+  description?: string | null | undefined;
+  percentage?: number | null | undefined;
 };
 
 /** @internal */
-export const Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema: z.ZodType<
+export const Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema:
+  z.ZodType<
     Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     amount: z.nullable(z.number()).optional(),
     description: z.nullable(z.string()).optional(),
     percentage: z.nullable(z.number()).optional(),
-});
+  });
 
 /** @internal */
-export type Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound = {
+export type Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound =
+  {
     amount?: number | null | undefined;
     description?: string | null | undefined;
     percentage?: number | null | undefined;
-};
+  };
 
 /** @internal */
-export const Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema: z.ZodType<
+export const Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema:
+  z.ZodType<
     Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound,
     z.ZodTypeDef,
     Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b
-> = z.object({
+  > = z.object({
     amount: z.nullable(z.number()).optional(),
     description: z.nullable(z.string()).optional(),
     percentage: z.nullable(z.number()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$ {
-    /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema` instead. */
-    export const inboundSchema =
-        Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema;
-    /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema` instead. */
-    export const outboundSchema =
-        Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema;
-    /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound` instead. */
-    export type Outbound =
-        Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound;
+  /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema` instead. */
+  export const inboundSchema =
+    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema;
+  /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema` instead. */
+  export const outboundSchema =
+    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$outboundSchema;
+  /** @deprecated use `Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound` instead. */
+  export type Outbound =
+    Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$Outbound;
 }

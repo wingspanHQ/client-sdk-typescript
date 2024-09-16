@@ -6,12 +6,12 @@
 import { CollaboratorV2FormW9Info } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorV2FormW9Info = {
-    addressLine1: "9774 Quitzon Track",
-    city: "Eldahaven",
-    companyStructure: "CorporationC",
-    country: "Comoros",
-    postalCode: "70938-1799",
-    state: "Mississippi",
+  addressLine1: "79947 Abelardo Pine",
+  city: "West Hallie",
+  companyStructure: "SoleProprietorship",
+  country: "Israel",
+  postalCode: "21451-2904",
+  state: "Utah",
 };
 ```
 

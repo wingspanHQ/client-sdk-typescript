@@ -5,7 +5,7 @@
 ```typescript
 import { MemberClientRequirementResponseStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: MemberClientRequirementResponseStatus = "New";
+let value: MemberClientRequirementResponseStatus = "Sent";
 ```
 
 ## Values

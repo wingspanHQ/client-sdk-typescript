@@ -6,66 +6,70 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-    amount: 8395.13,
-    attachments: {},
-    client: {},
-    clientId: "<value>",
-    collaboratorId: "<value>",
-    createdAt: "<value>",
-    creditFeeHandling: {},
-    currency: "USD",
-    dueDate: "<value>",
-    eventActors: {
-        key: "<value>",
+  amount: 9816.4,
+  attachments: {},
+  client: {},
+  clientId: "<value>",
+  collaboratorId: "<value>",
+  createdAt: "<value>",
+  creditFeeHandling: {},
+  currency: "CAD",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  events: {},
+  integration: {},
+  invoiceNotes: "<value>",
+  invoiceNumber: "<value>",
+  invoiceTemplateId: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  lateFeeHandling: {
+    frequency: {
+      startDate: "<value>",
     },
-    events: {},
-    integration: {},
-    invoiceNotes: "<value>",
-    invoiceNumber: "<value>",
-    invoiceTemplateId: "<value>",
-    labels: {
-        key: "<value>",
+  },
+  lineItems: [
+    {
+      costPerUnit: 2446.51,
+      createdAt: "<value>",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 9742.57,
+      reimbursableExpense: false,
+      totalCost: 3743.23,
+      unit: "katal",
+      updatedAt: "<value>",
     },
-    lateFeeHandling: {
-        frequency: {
-            startDate: "<value>",
-        },
-    },
-    lineItems: [
-        {
-            costPerUnit: 5223.71,
-            createdAt: "<value>",
-            labels: {
-                key: "<value>",
-            },
-            labelsBak2: {
-                key: "<value>",
-            },
-            quantity: 156.06,
-            reimbursableExpense: false,
-            totalCost: 5130.75,
-            unit: "watt",
-            updatedAt: "<value>",
-        },
+  ],
+  member: {},
+  memberAddress: {
+    addressLine1: "43186 Kuhn Pine",
+    city: "Gresham",
+    postalCode: "37820",
+    state: "Illinois",
+  },
+  memberId: "<value>",
+  notificationPreferences: {
+    sendReminders: false,
+  },
+  payableId: "<value>",
+  status: "Pending",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
     ],
-    member: {},
-    memberAddress: {
-        addressLine1: "0520 Kraig Flat",
-        city: "Christiansenbury",
-        postalCode: "41962",
-        state: "Wisconsin",
-    },
-    memberId: "<value>",
-    notificationPreferences: {
-        sendReminders: false,
-    },
-    payableId: "<value>",
-    status: "Overdue",
-    updatedAt: "<value>",
-    userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
-    },
+    viewerIds: [
+      "<value>",
+    ],
+  },
 };
 ```
 

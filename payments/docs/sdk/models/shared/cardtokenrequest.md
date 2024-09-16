@@ -6,8 +6,8 @@
 import { CardTokenRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardTokenRequest = {
-    verificationCode: "<value>",
-    verificationToken: "<value>",
+  verificationCode: "<value>",
+  verificationToken: "<value>",
 };
 ```
 

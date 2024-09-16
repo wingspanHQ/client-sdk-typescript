@@ -6,8 +6,8 @@
 import { UpdateClientBatchItemRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateClientBatchItemRequest = {
-    batchId: "<value>",
-    batchItemId: "<value>",
+  batchId: "<value>",
+  batchItemId: "<value>",
 };
 ```
 

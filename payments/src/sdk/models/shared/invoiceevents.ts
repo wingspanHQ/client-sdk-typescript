@@ -5,183 +5,186 @@
 import * as z from "zod";
 
 export type InvoiceEvents = {
-    approvedAt?: string | null | undefined;
-    cancelledAt?: string | null | undefined;
-    clientDeclinedAt?: string | null | undefined;
-    clientResolvedDisputeAt?: string | null | undefined;
-    depositedAt?: string | null | undefined;
-    depositedToPayoutPlatformAt?: string | null | undefined;
-    disputedAt?: string | null | undefined;
-    emailMarkedAsSpamAt?: string | null | undefined;
-    emailReceivedAt?: Array<string> | null | undefined;
-    emailUndeliverableAt?: string | null | undefined;
-    emailViewedAt?: Array<string> | null | undefined;
-    estimatedDepositAt?: string | null | undefined;
-    instantPayoutAt?: string | null | undefined;
-    instantPayoutEligibleAt?: string | null | undefined;
-    instantPayoutFailedAt?: string | null | undefined;
-    markedPaidAt?: string | null | undefined;
-    memberAcceptedAt?: string | null | undefined;
-    memberDisputedAt?: string | null | undefined;
-    memberResubmittedAt?: string | null | undefined;
-    openedAt?: string | null | undefined;
-    paidAt?: string | null | undefined;
-    payAfterAccountVerified?: string | null | undefined;
-    paymentFailedAt?: Array<string> | null | undefined;
-    paymentInTransitAt?: string | null | undefined;
-    paymentRetriedAt?: Array<string> | null | undefined;
-    payoutFailedAt?: string | null | undefined;
-    preApprovedAt?: string | null | undefined;
-    refundedAt?: string | null | undefined;
-    sentAt?: string | null | undefined;
-    sentDue3DaysAgoAt?: string | null | undefined;
-    sentDue7DaysAgoAt?: string | null | undefined;
-    sentDueIn3DaysAt?: string | null | undefined;
-    sentDueTodayAt?: string | null | undefined;
-    sentInstantPayoutFailedToMember?: string | null | undefined;
-    sentManuallyAt?: Array<string> | null | undefined;
-    sentPaymentConfirmationToClient?: string | null | undefined;
-    sentPaymentConfirmationToMember?: string | null | undefined;
-    sentPaymentInTransitReminderAt?: string | null | undefined;
-    sentPayoutMightBeDelayedToClient?: string | null | undefined;
-    sentRecurringPaymentFailedAt?: string | null | undefined;
+  approvedAt?: string | null | undefined;
+  cancelledAt?: string | null | undefined;
+  clientDeclinedAt?: string | null | undefined;
+  clientResolvedDisputeAt?: string | null | undefined;
+  depositedAt?: string | null | undefined;
+  depositedToPayoutPlatformAt?: string | null | undefined;
+  disputedAt?: string | null | undefined;
+  emailMarkedAsSpamAt?: string | null | undefined;
+  emailReceivedAt?: Array<string> | null | undefined;
+  emailUndeliverableAt?: string | null | undefined;
+  emailViewedAt?: Array<string> | null | undefined;
+  estimatedDepositAt?: string | null | undefined;
+  instantPayoutAt?: string | null | undefined;
+  instantPayoutEligibleAt?: string | null | undefined;
+  instantPayoutFailedAt?: string | null | undefined;
+  markedPaidAt?: string | null | undefined;
+  memberAcceptedAt?: string | null | undefined;
+  memberDisputedAt?: string | null | undefined;
+  memberResubmittedAt?: string | null | undefined;
+  openedAt?: string | null | undefined;
+  paidAt?: string | null | undefined;
+  payAfterAccountVerified?: string | null | undefined;
+  paymentFailedAt?: Array<string> | null | undefined;
+  paymentInTransitAt?: string | null | undefined;
+  paymentRetriedAt?: Array<string> | null | undefined;
+  payoutFailedAt?: string | null | undefined;
+  preApprovedAt?: string | null | undefined;
+  refundedAt?: string | null | undefined;
+  sentAt?: string | null | undefined;
+  sentDue3DaysAgoAt?: string | null | undefined;
+  sentDue7DaysAgoAt?: string | null | undefined;
+  sentDueIn3DaysAt?: string | null | undefined;
+  sentDueTodayAt?: string | null | undefined;
+  sentInstantPayoutFailedToMember?: string | null | undefined;
+  sentManuallyAt?: Array<string> | null | undefined;
+  sentPaymentConfirmationToClient?: string | null | undefined;
+  sentPaymentConfirmationToMember?: string | null | undefined;
+  sentPaymentInTransitReminderAt?: string | null | undefined;
+  sentPayoutMightBeDelayedToClient?: string | null | undefined;
+  sentRecurringPaymentFailedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const InvoiceEvents$inboundSchema: z.ZodType<InvoiceEvents, z.ZodTypeDef, unknown> =
-    z.object({
-        approvedAt: z.nullable(z.string()).optional(),
-        cancelledAt: z.nullable(z.string()).optional(),
-        clientDeclinedAt: z.nullable(z.string()).optional(),
-        clientResolvedDisputeAt: z.nullable(z.string()).optional(),
-        depositedAt: z.nullable(z.string()).optional(),
-        depositedToPayoutPlatformAt: z.nullable(z.string()).optional(),
-        disputedAt: z.nullable(z.string()).optional(),
-        emailMarkedAsSpamAt: z.nullable(z.string()).optional(),
-        emailReceivedAt: z.nullable(z.array(z.string())).optional(),
-        emailUndeliverableAt: z.nullable(z.string()).optional(),
-        emailViewedAt: z.nullable(z.array(z.string())).optional(),
-        estimatedDepositAt: z.nullable(z.string()).optional(),
-        instantPayoutAt: z.nullable(z.string()).optional(),
-        instantPayoutEligibleAt: z.nullable(z.string()).optional(),
-        instantPayoutFailedAt: z.nullable(z.string()).optional(),
-        markedPaidAt: z.nullable(z.string()).optional(),
-        memberAcceptedAt: z.nullable(z.string()).optional(),
-        memberDisputedAt: z.nullable(z.string()).optional(),
-        memberResubmittedAt: z.nullable(z.string()).optional(),
-        openedAt: z.nullable(z.string()).optional(),
-        paidAt: z.nullable(z.string()).optional(),
-        payAfterAccountVerified: z.nullable(z.string()).optional(),
-        paymentFailedAt: z.nullable(z.array(z.string())).optional(),
-        paymentInTransitAt: z.nullable(z.string()).optional(),
-        paymentRetriedAt: z.nullable(z.array(z.string())).optional(),
-        payoutFailedAt: z.nullable(z.string()).optional(),
-        preApprovedAt: z.nullable(z.string()).optional(),
-        refundedAt: z.nullable(z.string()).optional(),
-        sentAt: z.nullable(z.string()).optional(),
-        sentDue3DaysAgoAt: z.nullable(z.string()).optional(),
-        sentDue7DaysAgoAt: z.nullable(z.string()).optional(),
-        sentDueIn3DaysAt: z.nullable(z.string()).optional(),
-        sentDueTodayAt: z.nullable(z.string()).optional(),
-        sentInstantPayoutFailedToMember: z.nullable(z.string()).optional(),
-        sentManuallyAt: z.nullable(z.array(z.string())).optional(),
-        sentPaymentConfirmationToClient: z.nullable(z.string()).optional(),
-        sentPaymentConfirmationToMember: z.nullable(z.string()).optional(),
-        sentPaymentInTransitReminderAt: z.nullable(z.string()).optional(),
-        sentPayoutMightBeDelayedToClient: z.nullable(z.string()).optional(),
-        sentRecurringPaymentFailedAt: z.nullable(z.string()).optional(),
-    });
+export const InvoiceEvents$inboundSchema: z.ZodType<
+  InvoiceEvents,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  approvedAt: z.nullable(z.string()).optional(),
+  cancelledAt: z.nullable(z.string()).optional(),
+  clientDeclinedAt: z.nullable(z.string()).optional(),
+  clientResolvedDisputeAt: z.nullable(z.string()).optional(),
+  depositedAt: z.nullable(z.string()).optional(),
+  depositedToPayoutPlatformAt: z.nullable(z.string()).optional(),
+  disputedAt: z.nullable(z.string()).optional(),
+  emailMarkedAsSpamAt: z.nullable(z.string()).optional(),
+  emailReceivedAt: z.nullable(z.array(z.string())).optional(),
+  emailUndeliverableAt: z.nullable(z.string()).optional(),
+  emailViewedAt: z.nullable(z.array(z.string())).optional(),
+  estimatedDepositAt: z.nullable(z.string()).optional(),
+  instantPayoutAt: z.nullable(z.string()).optional(),
+  instantPayoutEligibleAt: z.nullable(z.string()).optional(),
+  instantPayoutFailedAt: z.nullable(z.string()).optional(),
+  markedPaidAt: z.nullable(z.string()).optional(),
+  memberAcceptedAt: z.nullable(z.string()).optional(),
+  memberDisputedAt: z.nullable(z.string()).optional(),
+  memberResubmittedAt: z.nullable(z.string()).optional(),
+  openedAt: z.nullable(z.string()).optional(),
+  paidAt: z.nullable(z.string()).optional(),
+  payAfterAccountVerified: z.nullable(z.string()).optional(),
+  paymentFailedAt: z.nullable(z.array(z.string())).optional(),
+  paymentInTransitAt: z.nullable(z.string()).optional(),
+  paymentRetriedAt: z.nullable(z.array(z.string())).optional(),
+  payoutFailedAt: z.nullable(z.string()).optional(),
+  preApprovedAt: z.nullable(z.string()).optional(),
+  refundedAt: z.nullable(z.string()).optional(),
+  sentAt: z.nullable(z.string()).optional(),
+  sentDue3DaysAgoAt: z.nullable(z.string()).optional(),
+  sentDue7DaysAgoAt: z.nullable(z.string()).optional(),
+  sentDueIn3DaysAt: z.nullable(z.string()).optional(),
+  sentDueTodayAt: z.nullable(z.string()).optional(),
+  sentInstantPayoutFailedToMember: z.nullable(z.string()).optional(),
+  sentManuallyAt: z.nullable(z.array(z.string())).optional(),
+  sentPaymentConfirmationToClient: z.nullable(z.string()).optional(),
+  sentPaymentConfirmationToMember: z.nullable(z.string()).optional(),
+  sentPaymentInTransitReminderAt: z.nullable(z.string()).optional(),
+  sentPayoutMightBeDelayedToClient: z.nullable(z.string()).optional(),
+  sentRecurringPaymentFailedAt: z.nullable(z.string()).optional(),
+});
 
 /** @internal */
 export type InvoiceEvents$Outbound = {
-    approvedAt?: string | null | undefined;
-    cancelledAt?: string | null | undefined;
-    clientDeclinedAt?: string | null | undefined;
-    clientResolvedDisputeAt?: string | null | undefined;
-    depositedAt?: string | null | undefined;
-    depositedToPayoutPlatformAt?: string | null | undefined;
-    disputedAt?: string | null | undefined;
-    emailMarkedAsSpamAt?: string | null | undefined;
-    emailReceivedAt?: Array<string> | null | undefined;
-    emailUndeliverableAt?: string | null | undefined;
-    emailViewedAt?: Array<string> | null | undefined;
-    estimatedDepositAt?: string | null | undefined;
-    instantPayoutAt?: string | null | undefined;
-    instantPayoutEligibleAt?: string | null | undefined;
-    instantPayoutFailedAt?: string | null | undefined;
-    markedPaidAt?: string | null | undefined;
-    memberAcceptedAt?: string | null | undefined;
-    memberDisputedAt?: string | null | undefined;
-    memberResubmittedAt?: string | null | undefined;
-    openedAt?: string | null | undefined;
-    paidAt?: string | null | undefined;
-    payAfterAccountVerified?: string | null | undefined;
-    paymentFailedAt?: Array<string> | null | undefined;
-    paymentInTransitAt?: string | null | undefined;
-    paymentRetriedAt?: Array<string> | null | undefined;
-    payoutFailedAt?: string | null | undefined;
-    preApprovedAt?: string | null | undefined;
-    refundedAt?: string | null | undefined;
-    sentAt?: string | null | undefined;
-    sentDue3DaysAgoAt?: string | null | undefined;
-    sentDue7DaysAgoAt?: string | null | undefined;
-    sentDueIn3DaysAt?: string | null | undefined;
-    sentDueTodayAt?: string | null | undefined;
-    sentInstantPayoutFailedToMember?: string | null | undefined;
-    sentManuallyAt?: Array<string> | null | undefined;
-    sentPaymentConfirmationToClient?: string | null | undefined;
-    sentPaymentConfirmationToMember?: string | null | undefined;
-    sentPaymentInTransitReminderAt?: string | null | undefined;
-    sentPayoutMightBeDelayedToClient?: string | null | undefined;
-    sentRecurringPaymentFailedAt?: string | null | undefined;
+  approvedAt?: string | null | undefined;
+  cancelledAt?: string | null | undefined;
+  clientDeclinedAt?: string | null | undefined;
+  clientResolvedDisputeAt?: string | null | undefined;
+  depositedAt?: string | null | undefined;
+  depositedToPayoutPlatformAt?: string | null | undefined;
+  disputedAt?: string | null | undefined;
+  emailMarkedAsSpamAt?: string | null | undefined;
+  emailReceivedAt?: Array<string> | null | undefined;
+  emailUndeliverableAt?: string | null | undefined;
+  emailViewedAt?: Array<string> | null | undefined;
+  estimatedDepositAt?: string | null | undefined;
+  instantPayoutAt?: string | null | undefined;
+  instantPayoutEligibleAt?: string | null | undefined;
+  instantPayoutFailedAt?: string | null | undefined;
+  markedPaidAt?: string | null | undefined;
+  memberAcceptedAt?: string | null | undefined;
+  memberDisputedAt?: string | null | undefined;
+  memberResubmittedAt?: string | null | undefined;
+  openedAt?: string | null | undefined;
+  paidAt?: string | null | undefined;
+  payAfterAccountVerified?: string | null | undefined;
+  paymentFailedAt?: Array<string> | null | undefined;
+  paymentInTransitAt?: string | null | undefined;
+  paymentRetriedAt?: Array<string> | null | undefined;
+  payoutFailedAt?: string | null | undefined;
+  preApprovedAt?: string | null | undefined;
+  refundedAt?: string | null | undefined;
+  sentAt?: string | null | undefined;
+  sentDue3DaysAgoAt?: string | null | undefined;
+  sentDue7DaysAgoAt?: string | null | undefined;
+  sentDueIn3DaysAt?: string | null | undefined;
+  sentDueTodayAt?: string | null | undefined;
+  sentInstantPayoutFailedToMember?: string | null | undefined;
+  sentManuallyAt?: Array<string> | null | undefined;
+  sentPaymentConfirmationToClient?: string | null | undefined;
+  sentPaymentConfirmationToMember?: string | null | undefined;
+  sentPaymentInTransitReminderAt?: string | null | undefined;
+  sentPayoutMightBeDelayedToClient?: string | null | undefined;
+  sentRecurringPaymentFailedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const InvoiceEvents$outboundSchema: z.ZodType<
-    InvoiceEvents$Outbound,
-    z.ZodTypeDef,
-    InvoiceEvents
+  InvoiceEvents$Outbound,
+  z.ZodTypeDef,
+  InvoiceEvents
 > = z.object({
-    approvedAt: z.nullable(z.string()).optional(),
-    cancelledAt: z.nullable(z.string()).optional(),
-    clientDeclinedAt: z.nullable(z.string()).optional(),
-    clientResolvedDisputeAt: z.nullable(z.string()).optional(),
-    depositedAt: z.nullable(z.string()).optional(),
-    depositedToPayoutPlatformAt: z.nullable(z.string()).optional(),
-    disputedAt: z.nullable(z.string()).optional(),
-    emailMarkedAsSpamAt: z.nullable(z.string()).optional(),
-    emailReceivedAt: z.nullable(z.array(z.string())).optional(),
-    emailUndeliverableAt: z.nullable(z.string()).optional(),
-    emailViewedAt: z.nullable(z.array(z.string())).optional(),
-    estimatedDepositAt: z.nullable(z.string()).optional(),
-    instantPayoutAt: z.nullable(z.string()).optional(),
-    instantPayoutEligibleAt: z.nullable(z.string()).optional(),
-    instantPayoutFailedAt: z.nullable(z.string()).optional(),
-    markedPaidAt: z.nullable(z.string()).optional(),
-    memberAcceptedAt: z.nullable(z.string()).optional(),
-    memberDisputedAt: z.nullable(z.string()).optional(),
-    memberResubmittedAt: z.nullable(z.string()).optional(),
-    openedAt: z.nullable(z.string()).optional(),
-    paidAt: z.nullable(z.string()).optional(),
-    payAfterAccountVerified: z.nullable(z.string()).optional(),
-    paymentFailedAt: z.nullable(z.array(z.string())).optional(),
-    paymentInTransitAt: z.nullable(z.string()).optional(),
-    paymentRetriedAt: z.nullable(z.array(z.string())).optional(),
-    payoutFailedAt: z.nullable(z.string()).optional(),
-    preApprovedAt: z.nullable(z.string()).optional(),
-    refundedAt: z.nullable(z.string()).optional(),
-    sentAt: z.nullable(z.string()).optional(),
-    sentDue3DaysAgoAt: z.nullable(z.string()).optional(),
-    sentDue7DaysAgoAt: z.nullable(z.string()).optional(),
-    sentDueIn3DaysAt: z.nullable(z.string()).optional(),
-    sentDueTodayAt: z.nullable(z.string()).optional(),
-    sentInstantPayoutFailedToMember: z.nullable(z.string()).optional(),
-    sentManuallyAt: z.nullable(z.array(z.string())).optional(),
-    sentPaymentConfirmationToClient: z.nullable(z.string()).optional(),
-    sentPaymentConfirmationToMember: z.nullable(z.string()).optional(),
-    sentPaymentInTransitReminderAt: z.nullable(z.string()).optional(),
-    sentPayoutMightBeDelayedToClient: z.nullable(z.string()).optional(),
-    sentRecurringPaymentFailedAt: z.nullable(z.string()).optional(),
+  approvedAt: z.nullable(z.string()).optional(),
+  cancelledAt: z.nullable(z.string()).optional(),
+  clientDeclinedAt: z.nullable(z.string()).optional(),
+  clientResolvedDisputeAt: z.nullable(z.string()).optional(),
+  depositedAt: z.nullable(z.string()).optional(),
+  depositedToPayoutPlatformAt: z.nullable(z.string()).optional(),
+  disputedAt: z.nullable(z.string()).optional(),
+  emailMarkedAsSpamAt: z.nullable(z.string()).optional(),
+  emailReceivedAt: z.nullable(z.array(z.string())).optional(),
+  emailUndeliverableAt: z.nullable(z.string()).optional(),
+  emailViewedAt: z.nullable(z.array(z.string())).optional(),
+  estimatedDepositAt: z.nullable(z.string()).optional(),
+  instantPayoutAt: z.nullable(z.string()).optional(),
+  instantPayoutEligibleAt: z.nullable(z.string()).optional(),
+  instantPayoutFailedAt: z.nullable(z.string()).optional(),
+  markedPaidAt: z.nullable(z.string()).optional(),
+  memberAcceptedAt: z.nullable(z.string()).optional(),
+  memberDisputedAt: z.nullable(z.string()).optional(),
+  memberResubmittedAt: z.nullable(z.string()).optional(),
+  openedAt: z.nullable(z.string()).optional(),
+  paidAt: z.nullable(z.string()).optional(),
+  payAfterAccountVerified: z.nullable(z.string()).optional(),
+  paymentFailedAt: z.nullable(z.array(z.string())).optional(),
+  paymentInTransitAt: z.nullable(z.string()).optional(),
+  paymentRetriedAt: z.nullable(z.array(z.string())).optional(),
+  payoutFailedAt: z.nullable(z.string()).optional(),
+  preApprovedAt: z.nullable(z.string()).optional(),
+  refundedAt: z.nullable(z.string()).optional(),
+  sentAt: z.nullable(z.string()).optional(),
+  sentDue3DaysAgoAt: z.nullable(z.string()).optional(),
+  sentDue7DaysAgoAt: z.nullable(z.string()).optional(),
+  sentDueIn3DaysAt: z.nullable(z.string()).optional(),
+  sentDueTodayAt: z.nullable(z.string()).optional(),
+  sentInstantPayoutFailedToMember: z.nullable(z.string()).optional(),
+  sentManuallyAt: z.nullable(z.array(z.string())).optional(),
+  sentPaymentConfirmationToClient: z.nullable(z.string()).optional(),
+  sentPaymentConfirmationToMember: z.nullable(z.string()).optional(),
+  sentPaymentInTransitReminderAt: z.nullable(z.string()).optional(),
+  sentPayoutMightBeDelayedToClient: z.nullable(z.string()).optional(),
+  sentRecurringPaymentFailedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -189,10 +192,10 @@ export const InvoiceEvents$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceEvents$ {
-    /** @deprecated use `InvoiceEvents$inboundSchema` instead. */
-    export const inboundSchema = InvoiceEvents$inboundSchema;
-    /** @deprecated use `InvoiceEvents$outboundSchema` instead. */
-    export const outboundSchema = InvoiceEvents$outboundSchema;
-    /** @deprecated use `InvoiceEvents$Outbound` instead. */
-    export type Outbound = InvoiceEvents$Outbound;
+  /** @deprecated use `InvoiceEvents$inboundSchema` instead. */
+  export const inboundSchema = InvoiceEvents$inboundSchema;
+  /** @deprecated use `InvoiceEvents$outboundSchema` instead. */
+  export const outboundSchema = InvoiceEvents$outboundSchema;
+  /** @deprecated use `InvoiceEvents$Outbound` instead. */
+  export type Outbound = InvoiceEvents$Outbound;
 }

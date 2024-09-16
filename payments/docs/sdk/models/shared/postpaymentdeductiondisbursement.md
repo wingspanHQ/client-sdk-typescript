@@ -6,10 +6,10 @@
 import { PostPaymentDeductionDisbursement } from "@wingspan/payments/sdk/models/shared";
 
 let value: PostPaymentDeductionDisbursement = {
-    inputs: {
-        key: "<value>",
-    },
-    strategy: "<value>",
+  inputs: {
+    "key": "<value>",
+  },
+  strategy: "<value>",
 };
 ```
 

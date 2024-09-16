@@ -6,7 +6,7 @@
 import { GetPayoutSettingRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetPayoutSettingRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

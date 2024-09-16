@@ -5,66 +5,66 @@
 import * as z from "zod";
 
 export type BulkPayableImportSummary = {
-    deductionCollaboratorsCount: number;
-    netImportAmount: number;
-    payableCollaboratorsCount: number;
-    toBeCreatedDeductionsCount: number;
-    toBeCreatedPayablesCount: number;
-    toBeUpdatedDeductionsCount: number;
-    toBeUpdatedPayablesCount: number;
-    totalDeductionsAmount: number;
-    totalPayableItems: number;
-    totalPayablesAmount: number;
+  deductionCollaboratorsCount: number;
+  netImportAmount: number;
+  payableCollaboratorsCount: number;
+  toBeCreatedDeductionsCount: number;
+  toBeCreatedPayablesCount: number;
+  toBeUpdatedDeductionsCount: number;
+  toBeUpdatedPayablesCount: number;
+  totalDeductionsAmount: number;
+  totalPayableItems: number;
+  totalPayablesAmount: number;
 };
 
 /** @internal */
 export const BulkPayableImportSummary$inboundSchema: z.ZodType<
-    BulkPayableImportSummary,
-    z.ZodTypeDef,
-    unknown
+  BulkPayableImportSummary,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    deductionCollaboratorsCount: z.number(),
-    netImportAmount: z.number(),
-    payableCollaboratorsCount: z.number(),
-    toBeCreatedDeductionsCount: z.number(),
-    toBeCreatedPayablesCount: z.number(),
-    toBeUpdatedDeductionsCount: z.number(),
-    toBeUpdatedPayablesCount: z.number(),
-    totalDeductionsAmount: z.number(),
-    totalPayableItems: z.number(),
-    totalPayablesAmount: z.number(),
+  deductionCollaboratorsCount: z.number(),
+  netImportAmount: z.number(),
+  payableCollaboratorsCount: z.number(),
+  toBeCreatedDeductionsCount: z.number(),
+  toBeCreatedPayablesCount: z.number(),
+  toBeUpdatedDeductionsCount: z.number(),
+  toBeUpdatedPayablesCount: z.number(),
+  totalDeductionsAmount: z.number(),
+  totalPayableItems: z.number(),
+  totalPayablesAmount: z.number(),
 });
 
 /** @internal */
 export type BulkPayableImportSummary$Outbound = {
-    deductionCollaboratorsCount: number;
-    netImportAmount: number;
-    payableCollaboratorsCount: number;
-    toBeCreatedDeductionsCount: number;
-    toBeCreatedPayablesCount: number;
-    toBeUpdatedDeductionsCount: number;
-    toBeUpdatedPayablesCount: number;
-    totalDeductionsAmount: number;
-    totalPayableItems: number;
-    totalPayablesAmount: number;
+  deductionCollaboratorsCount: number;
+  netImportAmount: number;
+  payableCollaboratorsCount: number;
+  toBeCreatedDeductionsCount: number;
+  toBeCreatedPayablesCount: number;
+  toBeUpdatedDeductionsCount: number;
+  toBeUpdatedPayablesCount: number;
+  totalDeductionsAmount: number;
+  totalPayableItems: number;
+  totalPayablesAmount: number;
 };
 
 /** @internal */
 export const BulkPayableImportSummary$outboundSchema: z.ZodType<
-    BulkPayableImportSummary$Outbound,
-    z.ZodTypeDef,
-    BulkPayableImportSummary
+  BulkPayableImportSummary$Outbound,
+  z.ZodTypeDef,
+  BulkPayableImportSummary
 > = z.object({
-    deductionCollaboratorsCount: z.number(),
-    netImportAmount: z.number(),
-    payableCollaboratorsCount: z.number(),
-    toBeCreatedDeductionsCount: z.number(),
-    toBeCreatedPayablesCount: z.number(),
-    toBeUpdatedDeductionsCount: z.number(),
-    toBeUpdatedPayablesCount: z.number(),
-    totalDeductionsAmount: z.number(),
-    totalPayableItems: z.number(),
-    totalPayablesAmount: z.number(),
+  deductionCollaboratorsCount: z.number(),
+  netImportAmount: z.number(),
+  payableCollaboratorsCount: z.number(),
+  toBeCreatedDeductionsCount: z.number(),
+  toBeCreatedPayablesCount: z.number(),
+  toBeUpdatedDeductionsCount: z.number(),
+  toBeUpdatedPayablesCount: z.number(),
+  totalDeductionsAmount: z.number(),
+  totalPayableItems: z.number(),
+  totalPayablesAmount: z.number(),
 });
 
 /**
@@ -72,10 +72,10 @@ export const BulkPayableImportSummary$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace BulkPayableImportSummary$ {
-    /** @deprecated use `BulkPayableImportSummary$inboundSchema` instead. */
-    export const inboundSchema = BulkPayableImportSummary$inboundSchema;
-    /** @deprecated use `BulkPayableImportSummary$outboundSchema` instead. */
-    export const outboundSchema = BulkPayableImportSummary$outboundSchema;
-    /** @deprecated use `BulkPayableImportSummary$Outbound` instead. */
-    export type Outbound = BulkPayableImportSummary$Outbound;
+  /** @deprecated use `BulkPayableImportSummary$inboundSchema` instead. */
+  export const inboundSchema = BulkPayableImportSummary$inboundSchema;
+  /** @deprecated use `BulkPayableImportSummary$outboundSchema` instead. */
+  export const outboundSchema = BulkPayableImportSummary$outboundSchema;
+  /** @deprecated use `BulkPayableImportSummary$Outbound` instead. */
+  export type Outbound = BulkPayableImportSummary$Outbound;
 }

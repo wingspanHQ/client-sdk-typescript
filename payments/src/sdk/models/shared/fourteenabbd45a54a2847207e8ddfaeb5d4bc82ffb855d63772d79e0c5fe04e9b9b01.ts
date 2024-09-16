@@ -4,49 +4,53 @@
 
 import * as z from "zod";
 
-export type Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01 = {
+export type Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01 =
+  {
     amountWithheld: number;
     rate: number;
-};
+  };
 
 /** @internal */
-export const Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema: z.ZodType<
+export const Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema:
+  z.ZodType<
     Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     amountWithheld: z.number(),
     rate: z.number(),
-});
+  });
 
 /** @internal */
-export type Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound = {
+export type Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound =
+  {
     amountWithheld: number;
     rate: number;
-};
+  };
 
 /** @internal */
-export const Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema: z.ZodType<
+export const Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema:
+  z.ZodType<
     Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound,
     z.ZodTypeDef,
     Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01
-> = z.object({
+  > = z.object({
     amountWithheld: z.number(),
     rate: z.number(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$ {
-    /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema` instead. */
-    export const inboundSchema =
-        Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema;
-    /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema` instead. */
-    export const outboundSchema =
-        Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema;
-    /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound` instead. */
-    export type Outbound =
-        Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound;
+  /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema` instead. */
+  export const inboundSchema =
+    Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema;
+  /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema` instead. */
+  export const outboundSchema =
+    Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$outboundSchema;
+  /** @deprecated use `Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound` instead. */
+  export type Outbound =
+    Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$Outbound;
 }

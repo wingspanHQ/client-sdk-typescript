@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type TaxFormInviteResponse = {
-    success?: any | undefined;
+  success?: any | undefined;
 };
 
 /** @internal */
 export const TaxFormInviteResponse$inboundSchema: z.ZodType<
-    TaxFormInviteResponse,
-    z.ZodTypeDef,
-    unknown
+  TaxFormInviteResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    success: z.any().optional(),
+  success: z.any().optional(),
 });
 
 /** @internal */
 export type TaxFormInviteResponse$Outbound = {
-    success?: any | undefined;
+  success?: any | undefined;
 };
 
 /** @internal */
 export const TaxFormInviteResponse$outboundSchema: z.ZodType<
-    TaxFormInviteResponse$Outbound,
-    z.ZodTypeDef,
-    TaxFormInviteResponse
+  TaxFormInviteResponse$Outbound,
+  z.ZodTypeDef,
+  TaxFormInviteResponse
 > = z.object({
-    success: z.any().optional(),
+  success: z.any().optional(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const TaxFormInviteResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace TaxFormInviteResponse$ {
-    /** @deprecated use `TaxFormInviteResponse$inboundSchema` instead. */
-    export const inboundSchema = TaxFormInviteResponse$inboundSchema;
-    /** @deprecated use `TaxFormInviteResponse$outboundSchema` instead. */
-    export const outboundSchema = TaxFormInviteResponse$outboundSchema;
-    /** @deprecated use `TaxFormInviteResponse$Outbound` instead. */
-    export type Outbound = TaxFormInviteResponse$Outbound;
+  /** @deprecated use `TaxFormInviteResponse$inboundSchema` instead. */
+  export const inboundSchema = TaxFormInviteResponse$inboundSchema;
+  /** @deprecated use `TaxFormInviteResponse$outboundSchema` instead. */
+  export const outboundSchema = TaxFormInviteResponse$outboundSchema;
+  /** @deprecated use `TaxFormInviteResponse$Outbound` instead. */
+  export type Outbound = TaxFormInviteResponse$Outbound;
 }

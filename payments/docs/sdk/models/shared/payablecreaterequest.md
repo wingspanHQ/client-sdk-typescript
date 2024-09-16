@@ -6,10 +6,12 @@
 import { PayableCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableCreateRequest = {
-    collaboratorId: "<value>",
-    creditFeeHandling: {},
-    dueDate: "<value>",
-    lineItems: [{}],
+  collaboratorId: "<value>",
+  creditFeeHandling: {},
+  dueDate: "<value>",
+  lineItems: [
+    {},
+  ],
 };
 ```
 

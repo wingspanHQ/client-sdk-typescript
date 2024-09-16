@@ -6,39 +6,39 @@
 import { PayrollReportInvoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportInvoice = {
-    amount: 2572.33,
-    createdAt: "<value>",
-    currency: "Namibia Dollar",
-    dueDate: "<value>",
-    invoiceId: "<value>",
-    invoiceNumber: "<value>",
-    invoicePdf: "<value>",
-    lineItems: [
-        {
-            costPerUnit: 3817.6,
-            createdAt: "<value>",
-            index: 9689.72,
-            labels: {
-                key: "<value>",
-            },
-            labelsBak2: {
-                key: "<value>",
-            },
-            quantity: 6971.42,
-            reimbursableExpense: false,
-            totalCost: 9049.49,
-            unit: "henry",
-            updatedAt: "<value>",
-        },
-    ],
-    member: {
-        user: {},
+  amount: 3852.37,
+  createdAt: "<value>",
+  currency: "Azerbaijanian Manat",
+  dueDate: "<value>",
+  invoiceId: "<value>",
+  invoiceNumber: "<value>",
+  invoicePdf: "<value>",
+  lineItems: [
+    {
+      costPerUnit: 9167.27,
+      createdAt: "<value>",
+      index: 7307.09,
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 1138.16,
+      reimbursableExpense: false,
+      totalCost: 8817.21,
+      unit: "lumen",
+      updatedAt: "<value>",
     },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    receiptPdf: "<value>",
-    status: "Overdue",
-    updatedAt: "<value>",
+  ],
+  member: {
+    user: {},
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  receiptPdf: "<value>",
+  status: "Open",
+  updatedAt: "<value>",
 };
 ```
 

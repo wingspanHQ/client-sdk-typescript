@@ -25,226 +25,284 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class CollaboratorManagement extends ClientSDK {
-    /**
-     * Associate Collaborator with a Specific Group
-     *
-     * @remarks
-     * Add the specified collaborator to the designated group, allowing group-specific configurations and permissions.
-     */
-    async associate(
-        request: operations.AssociateCollaboratorWithGroupRequest,
-        options?: RequestOptions
-    ): Promise<operations.AssociateCollaboratorWithGroupResponse> {
-        return unwrapAsync(collaboratorManagementAssociate(this, request, options));
-    }
+  /**
+   * Associate Collaborator with a Specific Group
+   *
+   * @remarks
+   * Add the specified collaborator to the designated group, allowing group-specific configurations and permissions.
+   */
+  async associate(
+    request: operations.AssociateCollaboratorWithGroupRequest,
+    options?: RequestOptions,
+  ): Promise<operations.AssociateCollaboratorWithGroupResponse> {
+    return unwrapAsync(collaboratorManagementAssociate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Register a New Collaborator
-     *
-     * @remarks
-     * Add a new collaborator to the system, allowing them to be eligible for payments.
-     */
-    async create(
-        request?: shared.CollaboratorCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementCreate(this, request, options));
-    }
+  /**
+   * Register a New Collaborator
+   *
+   * @remarks
+   * Add a new collaborator to the system, allowing them to be eligible for payments.
+   */
+  async create(
+    request?: shared.CollaboratorCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Register a New Deduction for a Collaborator
-     *
-     * @remarks
-     * Create and add a new deduction entry for a collaborator based on the provided data.
-     */
-    async createCollaboratorDeduction(
-        request?: shared.DeductionCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateDeductionCollaboratorResponse> {
-        return unwrapAsync(
-            collaboratorManagementCreateCollaboratorDeduction(this, request, options)
-        );
-    }
+  /**
+   * Register a New Deduction for a Collaborator
+   *
+   * @remarks
+   * Create and add a new deduction entry for a collaborator based on the provided data.
+   */
+  async createCollaboratorDeduction(
+    request?: shared.DeductionCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateDeductionCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementCreateCollaboratorDeduction(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Generate New Collaborator Group
-     *
-     * @remarks
-     * Create a new collaborator group with specific configurations and permissions as defined by the client.
-     */
-    async createCollaboratorGroup(
-        request?: shared.CollaboratorGroupCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateCollaboratorGroupResponse> {
-        return unwrapAsync(collaboratorManagementCreateCollaboratorGroup(this, request, options));
-    }
+  /**
+   * Generate New Collaborator Group
+   *
+   * @remarks
+   * Create a new collaborator group with specific configurations and permissions as defined by the client.
+   */
+  async createCollaboratorGroup(
+    request?: shared.CollaboratorGroupCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateCollaboratorGroupResponse> {
+    return unwrapAsync(collaboratorManagementCreateCollaboratorGroup(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Remove a Specific Collaborator Record
-     *
-     * @remarks
-     * Permanently delete the record of a specific collaborator from the system.
-     */
-    async delete(
-        request: operations.DeleteCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementDelete(this, request, options));
-    }
+  /**
+   * Remove a Specific Collaborator Record
+   *
+   * @remarks
+   * Permanently delete the record of a specific collaborator from the system.
+   */
+  async delete(
+    request: operations.DeleteCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Erase a Specific Deduction Entry
-     *
-     * @remarks
-     * Delete a specific deduction entry, eliminating its record from the system.
-     */
-    async deleteCollaboratorDeduction(
-        request: operations.DeleteDeductionCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteDeductionCollaboratorResponse> {
-        return unwrapAsync(
-            collaboratorManagementDeleteCollaboratorDeduction(this, request, options)
-        );
-    }
+  /**
+   * Erase a Specific Deduction Entry
+   *
+   * @remarks
+   * Delete a specific deduction entry, eliminating its record from the system.
+   */
+  async deleteCollaboratorDeduction(
+    request: operations.DeleteDeductionCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteDeductionCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementDeleteCollaboratorDeduction(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Disassociate Collaborator from a Specific Group
-     *
-     * @remarks
-     * Remove the collaborator from the designated group, revoking any group-specific configurations and permissions.
-     */
-    async disassociate(
-        request: operations.DisassociateCollaboratorWithGroupRequest,
-        options?: RequestOptions
-    ): Promise<operations.DisassociateCollaboratorWithGroupResponse> {
-        return unwrapAsync(collaboratorManagementDisassociate(this, request, options));
-    }
+  /**
+   * Disassociate Collaborator from a Specific Group
+   *
+   * @remarks
+   * Remove the collaborator from the designated group, revoking any group-specific configurations and permissions.
+   */
+  async disassociate(
+    request: operations.DisassociateCollaboratorWithGroupRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DisassociateCollaboratorWithGroupResponse> {
+    return unwrapAsync(collaboratorManagementDisassociate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Details of a Specific Collaborator
-     *
-     * @remarks
-     * Fetch detailed information about a specific collaborator using its unique identifier.
-     */
-    async get(
-        request: operations.GetCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementGet(this, request, options));
-    }
+  /**
+   * Retrieve Details of a Specific Collaborator
+   *
+   * @remarks
+   * Fetch detailed information about a specific collaborator using its unique identifier.
+   */
+  async get(
+    request: operations.GetCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Specific Deduction Details
-     *
-     * @remarks
-     * Fetch details of a specific deduction entry for a collaborator based on its unique identifier.
-     */
-    async getCollaboratorDeduction(
-        request: operations.GetDeductionCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetDeductionCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementGetCollaboratorDeduction(this, request, options));
-    }
+  /**
+   * Retrieve Specific Deduction Details
+   *
+   * @remarks
+   * Fetch details of a specific deduction entry for a collaborator based on its unique identifier.
+   */
+  async getCollaboratorDeduction(
+    request: operations.GetDeductionCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetDeductionCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementGetCollaboratorDeduction(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Events Associated with a Collaborator
-     *
-     * @remarks
-     * Fetch a list of all events linked to a collaborator based on the provided collaborator ID.
-     */
-    async getEventAssociated(
-        request: operations.GetEventAssociatedCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetEventAssociatedCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementGetEventAssociated(this, request, options));
-    }
+  /**
+   * Retrieve Events Associated with a Collaborator
+   *
+   * @remarks
+   * Fetch a list of all events linked to a collaborator based on the provided collaborator ID.
+   */
+  async getEventAssociated(
+    request: operations.GetEventAssociatedCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetEventAssociatedCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementGetEventAssociated(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Collaborators (Version 2)
-     *
-     * @remarks
-     * Fetches a comprehensive list of collaborators formatted in the V2 standard, providing an overview of all collaborator data.
-     */
-    async list(options?: RequestOptions): Promise<operations.ListCollaboratorsResponse> {
-        return unwrapAsync(collaboratorManagementList(this, options));
-    }
+  /**
+   * Retrieve All Collaborators (Version 2)
+   *
+   * @remarks
+   * Fetches a comprehensive list of collaborators formatted in the V2 standard, providing an overview of all collaborator data.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListCollaboratorsResponse> {
+    return unwrapAsync(collaboratorManagementList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Deductions for Collaborators
-     *
-     * @remarks
-     * Fetch a list of all deduction entries currently registered for collaborators.
-     */
-    async listCollaboratorDeduction(
-        options?: RequestOptions
-    ): Promise<operations.ListDeductionCollaboratorsResponse> {
-        return unwrapAsync(collaboratorManagementListCollaboratorDeduction(this, options));
-    }
+  /**
+   * Retrieve All Deductions for Collaborators
+   *
+   * @remarks
+   * Fetch a list of all deduction entries currently registered for collaborators.
+   */
+  async listCollaboratorDeduction(
+    options?: RequestOptions,
+  ): Promise<operations.ListDeductionCollaboratorsResponse> {
+    return unwrapAsync(collaboratorManagementListCollaboratorDeduction(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Collaborator Groups
-     *
-     * @remarks
-     * Fetch a comprehensive list of all collaborator groups created by the client, showcasing configurations and member details.
-     */
-    async listCollaboratorGroups(
-        options?: RequestOptions
-    ): Promise<operations.ListCollaboratorGroupsResponse> {
-        return unwrapAsync(collaboratorManagementListCollaboratorGroups(this, options));
-    }
+  /**
+   * Retrieve All Collaborator Groups
+   *
+   * @remarks
+   * Fetch a comprehensive list of all collaborator groups created by the client, showcasing configurations and member details.
+   */
+  async listCollaboratorGroups(
+    options?: RequestOptions,
+  ): Promise<operations.ListCollaboratorGroupsResponse> {
+    return unwrapAsync(collaboratorManagementListCollaboratorGroups(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Registered Collaborators
-     *
-     * @remarks
-     * Fetch a comprehensive list of all collaborators currently registered in the system.
-     */
-    async listRegistered(
-        options?: RequestOptions
-    ): Promise<operations.ListRegisteredCollaboratorsResponse> {
-        return unwrapAsync(collaboratorManagementListRegistered(this, options));
-    }
+  /**
+   * Retrieve All Registered Collaborators
+   *
+   * @remarks
+   * Fetch a comprehensive list of all collaborators currently registered in the system.
+   */
+  async listRegistered(
+    options?: RequestOptions,
+  ): Promise<operations.ListRegisteredCollaboratorsResponse> {
+    return unwrapAsync(collaboratorManagementListRegistered(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Specific Collaborator Details (Version 2)
-     *
-     * @remarks
-     * Fetches detailed information of a specific collaborator, identified by the memberId, in the V2 format.
-     */
-    async listSpecificCollaboratorDetail(
-        request: operations.ListSpecificCollaboratorDetailsRequest,
-        options?: RequestOptions
-    ): Promise<operations.ListSpecificCollaboratorDetailsResponse> {
-        return unwrapAsync(
-            collaboratorManagementListSpecificCollaboratorDetail(this, request, options)
-        );
-    }
+  /**
+   * Retrieve Specific Collaborator Details (Version 2)
+   *
+   * @remarks
+   * Fetches detailed information of a specific collaborator, identified by the memberId, in the V2 format.
+   */
+  async listSpecificCollaboratorDetail(
+    request: operations.ListSpecificCollaboratorDetailsRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ListSpecificCollaboratorDetailsResponse> {
+    return unwrapAsync(collaboratorManagementListSpecificCollaboratorDetail(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify Collaborator Details
-     *
-     * @remarks
-     * Update specific details or attributes related to an existing collaborator.
-     */
-    async update(
-        request: operations.UpdateCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateCollaboratorResponse> {
-        return unwrapAsync(collaboratorManagementUpdate(this, request, options));
-    }
+  /**
+   * Modify Collaborator Details
+   *
+   * @remarks
+   * Update specific details or attributes related to an existing collaborator.
+   */
+  async update(
+    request: operations.UpdateCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify Details of a Specific Deduction
-     *
-     * @remarks
-     * Update attributes or data related to an existing deduction entry for a collaborator.
-     */
-    async updateCollaboratorDeduction(
-        request: operations.UpdateDeductionCollaboratorRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateDeductionCollaboratorResponse> {
-        return unwrapAsync(
-            collaboratorManagementUpdateCollaboratorDeduction(this, request, options)
-        );
-    }
+  /**
+   * Modify Details of a Specific Deduction
+   *
+   * @remarks
+   * Update attributes or data related to an existing deduction entry for a collaborator.
+   */
+  async updateCollaboratorDeduction(
+    request: operations.UpdateDeductionCollaboratorRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateDeductionCollaboratorResponse> {
+    return unwrapAsync(collaboratorManagementUpdateCollaboratorDeduction(
+      this,
+      request,
+      options,
+    ));
+  }
 }

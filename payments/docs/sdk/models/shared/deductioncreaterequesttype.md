@@ -5,7 +5,7 @@
 ```typescript
 import { DeductionCreateRequestType } from "@wingspan/payments/sdk/models/shared";
 
-let value: DeductionCreateRequestType = "PostPayment";
+let value: DeductionCreateRequestType = "PrePayment";
 ```
 
 ## Values

@@ -16,97 +16,131 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class PayablesManagement extends ClientSDK {
-    /**
-     * Create a New Payable for a Member on Behalf of a Client
-     *
-     * @remarks
-     * Allows for the generation of a new Payables for a specific member on behalf of a client. This ensures streamlined billing and effective financial tracking between clients and members.
-     */
-    async create(
-        request?: shared.PayableCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreatePayableResponse> {
-        return unwrapAsync(payablesManagementCreate(this, request, options));
-    }
+  /**
+   * Create a New Payable for a Member on Behalf of a Client
+   *
+   * @remarks
+   * Allows for the generation of a new Payables for a specific member on behalf of a client. This ensures streamlined billing and effective financial tracking between clients and members.
+   */
+  async create(
+    request?: shared.PayableCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreatePayableResponse> {
+    return unwrapAsync(payablesManagementCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Delete Client Payable by Payable ID
-     *
-     * @remarks
-     * This API endpoint is designed to remove the payable information related to a client using a unique Payable ID.
-     */
-    async delete(
-        request: operations.DeletePayableRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeletePayableResponse> {
-        return unwrapAsync(payablesManagementDelete(this, request, options));
-    }
+  /**
+   * Delete Client Payable by Payable ID
+   *
+   * @remarks
+   * This API endpoint is designed to remove the payable information related to a client using a unique Payable ID.
+   */
+  async delete(
+    request: operations.DeletePayableRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeletePayableResponse> {
+    return unwrapAsync(payablesManagementDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Execute Approved Payroll Transactions
-     *
-     * @remarks
-     * Processes all approved payroll transactions, ensuring employees and vendors are compensated as per their respective invoices.
-     */
-    async execute(
-        options?: RequestOptions
-    ): Promise<operations.ExecuteApprovedPayrollTransactionResponse> {
-        return unwrapAsync(payablesManagementExecute(this, options));
-    }
+  /**
+   * Execute Approved Payroll Transactions
+   *
+   * @remarks
+   * Processes all approved payroll transactions, ensuring employees and vendors are compensated as per their respective invoices.
+   */
+  async execute(
+    options?: RequestOptions,
+  ): Promise<operations.ExecuteApprovedPayrollTransactionResponse> {
+    return unwrapAsync(payablesManagementExecute(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Payable Details by Payable ID
-     *
-     * @remarks
-     * This API endpoint is designed to fetch the detailed Payable information of a member using a unique Payable ID.
-     */
-    async get(
-        request: operations.GetPayableRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetPayableResponse> {
-        return unwrapAsync(payablesManagementGet(this, request, options));
-    }
+  /**
+   * Retrieve Payable Details by Payable ID
+   *
+   * @remarks
+   * This API endpoint is designed to fetch the detailed Payable information of a member using a unique Payable ID.
+   */
+  async get(
+    request: operations.GetPayableRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetPayableResponse> {
+    return unwrapAsync(payablesManagementGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Approved Payables Ready for Immediate Payroll
-     *
-     * @remarks
-     * Fetches all payables that have been approved and are awaiting immediate payroll processing. This provides a quick view of all payments that are due for immediate payroll execution.
-     */
-    async getApproved(options?: RequestOptions): Promise<operations.GetApprovedPayablesResponse> {
-        return unwrapAsync(payablesManagementGetApproved(this, options));
-    }
+  /**
+   * Retrieve Approved Payables Ready for Immediate Payroll
+   *
+   * @remarks
+   * Fetches all payables that have been approved and are awaiting immediate payroll processing. This provides a quick view of all payments that are due for immediate payroll execution.
+   */
+  async getApproved(
+    options?: RequestOptions,
+  ): Promise<operations.GetApprovedPayablesResponse> {
+    return unwrapAsync(payablesManagementGetApproved(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * List All Payables Associated with a Client
-     *
-     * @remarks
-     * Provides an list of all Payables associated with a specific client, facilitating easier management and overview of the client's financial obligations.
-     */
-    async list(options?: RequestOptions): Promise<operations.ListPayablesResponse> {
-        return unwrapAsync(payablesManagementList(this, options));
-    }
+  /**
+   * List All Payables Associated with a Client
+   *
+   * @remarks
+   * Provides an list of all Payables associated with a specific client, facilitating easier management and overview of the client's financial obligations.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListPayablesResponse> {
+    return unwrapAsync(payablesManagementList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Summary of All Payables
-     *
-     * @remarks
-     * This endpoint provides a comprehensive summary of all the payables, offering insights into the current state of pending and completed payments. Ideal for clients and financial departments looking for a snapshot view of their payment obligations.
-     */
-    async listSummary(options?: RequestOptions): Promise<operations.ListSummaryPayablesResponse> {
-        return unwrapAsync(payablesManagementListSummary(this, options));
-    }
+  /**
+   * Retrieve Summary of All Payables
+   *
+   * @remarks
+   * This endpoint provides a comprehensive summary of all the payables, offering insights into the current state of pending and completed payments. Ideal for clients and financial departments looking for a snapshot view of their payment obligations.
+   */
+  async listSummary(
+    options?: RequestOptions,
+  ): Promise<operations.ListSummaryPayablesResponse> {
+    return unwrapAsync(payablesManagementListSummary(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Update Client Payable Information by Payable ID
-     *
-     * @remarks
-     * This API endpoint facilitates the updating of existing payable details related to a client using a unique Payable ID.
-     */
-    async update(
-        request: operations.UpdatePayableRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdatePayableResponse> {
-        return unwrapAsync(payablesManagementUpdate(this, request, options));
-    }
+  /**
+   * Update Client Payable Information by Payable ID
+   *
+   * @remarks
+   * This API endpoint facilitates the updating of existing payable details related to a client using a unique Payable ID.
+   */
+  async update(
+    request: operations.UpdatePayableRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdatePayableResponse> {
+    return unwrapAsync(payablesManagementUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

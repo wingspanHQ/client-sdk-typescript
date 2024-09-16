@@ -6,8 +6,8 @@
 import { InvoicePdfGenerationResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoicePdfGenerationResponse = {
-    attachments: {},
-    invoiceId: "<value>",
+  attachments: {},
+  invoiceId: "<value>",
 };
 ```
 

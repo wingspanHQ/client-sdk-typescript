@@ -6,34 +6,34 @@
 import { CollaboratorsPayoutsSummaryReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorsPayoutsSummaryReportResponse = {
-    clientId: "<value>",
-    collaboratorGroups: [
-        {
-            collaboratorGroupId: "<value>",
-            description: "Managed directional secured line",
-            name: "<value>",
-        },
-    ],
-    createdAt: "<value>",
-    inviteEmail: "<value>",
-    member: {
-        user: {},
+  clientId: "<value>",
+  collaboratorGroups: [
+    {
+      collaboratorGroupId: "<value>",
+      description: "Exclusive zero defect function",
+      name: "<value>",
     },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    payoutsSummary: {
-        deductionsCount: 7065.75,
-        payablesCount: 7382.27,
-        totalDeducted: 4148.57,
-        totalPaid: 4471.44,
-    },
-    servicesStatus: {
-        incomeAndExpenses: false,
-        taxWithholdings: false,
-    },
-    status: "Inactive",
-    taxStatus: "Incomplete",
-    updatedAt: "<value>",
+  ],
+  createdAt: "<value>",
+  inviteEmail: "<value>",
+  member: {
+    user: {},
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  payoutsSummary: {
+    deductionsCount: 9689.72,
+    payablesCount: 6971.42,
+    totalDeducted: 9049.49,
+    totalPaid: 8970.71,
+  },
+  servicesStatus: {
+    incomeAndExpenses: false,
+    taxWithholdings: false,
+  },
+  status: "Active",
+  taxStatus: "Complete",
+  updatedAt: "<value>",
 };
 ```
 

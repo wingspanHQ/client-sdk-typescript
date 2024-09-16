@@ -6,7 +6,7 @@
 import { GetEligibilityRequirementRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetEligibilityRequirementRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

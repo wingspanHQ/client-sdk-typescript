@@ -6,69 +6,73 @@
 import { Invoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: Invoice = {
-    amount: 1898.48,
-    client: {},
-    createdAt: "<value>",
-    currency: "USD",
-    dueDate: "<value>",
-    eventActors: {
-        key: "<value>",
+  amount: 811.01,
+  client: {},
+  createdAt: "<value>",
+  currency: "USD",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  events: {},
+  externalIds: {},
+  invoiceId: "<value>",
+  invoiceNumber: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  lineItems: [
+    {
+      costPerUnit: 4072.41,
+      createdAt: "<value>",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 7752.2,
+      reimbursableExpense: false,
+      totalCost: 2322.34,
+      unit: "henry",
+      updatedAt: "<value>",
     },
-    events: {},
-    externalIds: {},
-    invoiceId: "<value>",
-    invoiceNumber: "<value>",
-    labels: {
-        key: "<value>",
+  ],
+  member: {},
+  memberAddress: {
+    addressLine1: "30970 Kade Shoal",
+    city: "East Shany",
+    postalCode: "20668",
+    state: "Illinois",
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  payments: [
+    {
+      amount: 4321.48,
+      createdAt: "<value>",
+      events: {},
+      labels: {
+        "key": "<value>",
+      },
+      paymentId: "<value>",
+      sourceId: "<value>",
+      sourceMetadata: {},
+      sourceType: "Card",
+      status: "Cleared",
+      updatedAt: "<value>",
     },
-    lineItems: [
-        {
-            costPerUnit: 5113.19,
-            createdAt: "<value>",
-            labels: {
-                key: "<value>",
-            },
-            labelsBak2: {
-                key: "<value>",
-            },
-            quantity: 1206.57,
-            reimbursableExpense: false,
-            totalCost: 2243.17,
-            unit: "katal",
-            updatedAt: "<value>",
-        },
+  ],
+  status: "Cancelled",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
     ],
-    member: {},
-    memberAddress: {
-        addressLine1: "48593 Schamberger Union",
-        city: "Onabury",
-        postalCode: "30347",
-        state: "Idaho",
-    },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    payments: [
-        {
-            amount: 9262.13,
-            createdAt: "<value>",
-            events: {},
-            labels: {
-                key: "<value>",
-            },
-            paymentId: "<value>",
-            sourceId: "<value>",
-            sourceMetadata: {},
-            sourceType: "Account",
-            status: "Failed",
-            updatedAt: "<value>",
-        },
+    viewerIds: [
+      "<value>",
     ],
-    status: "Draft",
-    updatedAt: "<value>",
-    userRoles: {
-        ownerIds: ["<value>"],
-        viewerIds: ["<value>"],
-    },
+  },
 };
 ```
 

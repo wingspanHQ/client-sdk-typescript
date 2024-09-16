@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type InvoiceAttachmentFile = {
-    fileName: string;
-    fileUrl: string;
+  fileName: string;
+  fileUrl: string;
 };
 
 /** @internal */
 export const InvoiceAttachmentFile$inboundSchema: z.ZodType<
-    InvoiceAttachmentFile,
-    z.ZodTypeDef,
-    unknown
+  InvoiceAttachmentFile,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    fileName: z.string(),
-    fileUrl: z.string(),
+  fileName: z.string(),
+  fileUrl: z.string(),
 });
 
 /** @internal */
 export type InvoiceAttachmentFile$Outbound = {
-    fileName: string;
-    fileUrl: string;
+  fileName: string;
+  fileUrl: string;
 };
 
 /** @internal */
 export const InvoiceAttachmentFile$outboundSchema: z.ZodType<
-    InvoiceAttachmentFile$Outbound,
-    z.ZodTypeDef,
-    InvoiceAttachmentFile
+  InvoiceAttachmentFile$Outbound,
+  z.ZodTypeDef,
+  InvoiceAttachmentFile
 > = z.object({
-    fileName: z.string(),
-    fileUrl: z.string(),
+  fileName: z.string(),
+  fileUrl: z.string(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const InvoiceAttachmentFile$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceAttachmentFile$ {
-    /** @deprecated use `InvoiceAttachmentFile$inboundSchema` instead. */
-    export const inboundSchema = InvoiceAttachmentFile$inboundSchema;
-    /** @deprecated use `InvoiceAttachmentFile$outboundSchema` instead. */
-    export const outboundSchema = InvoiceAttachmentFile$outboundSchema;
-    /** @deprecated use `InvoiceAttachmentFile$Outbound` instead. */
-    export type Outbound = InvoiceAttachmentFile$Outbound;
+  /** @deprecated use `InvoiceAttachmentFile$inboundSchema` instead. */
+  export const inboundSchema = InvoiceAttachmentFile$inboundSchema;
+  /** @deprecated use `InvoiceAttachmentFile$outboundSchema` instead. */
+  export const outboundSchema = InvoiceAttachmentFile$outboundSchema;
+  /** @deprecated use `InvoiceAttachmentFile$Outbound` instead. */
+  export type Outbound = InvoiceAttachmentFile$Outbound;
 }

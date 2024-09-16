@@ -6,7 +6,7 @@
 import { ExecuteClientInvoicePaymentRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: ExecuteClientInvoicePaymentRequest = {
-    invoiceId: "<value>",
+  invoiceId: "<value>",
 };
 ```
 

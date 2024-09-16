@@ -6,7 +6,7 @@
 import { ListSpecificInvoiceBatchesRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: ListSpecificInvoiceBatchesRequest = {
-    batchId: "<value>",
+  batchId: "<value>",
 };
 ```
 

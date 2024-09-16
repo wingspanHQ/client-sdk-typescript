@@ -8,13 +8,18 @@ import * as operations from "./models/operations/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class MerchantCategoryCodes extends ClientSDK {
-    /**
-     * Retrieve Merchant Category Codes (MCC)
-     *
-     * @remarks
-     * This endpoint provides a comprehensive list of available Merchant Category Codes (MCC) which are used to classify businesses by the type of services or goods they provide.
-     */
-    async get(options?: RequestOptions): Promise<operations.GetMerchantCategoryCodesResponse> {
-        return unwrapAsync(merchantCategoryCodesGet(this, options));
-    }
+  /**
+   * Retrieve Merchant Category Codes (MCC)
+   *
+   * @remarks
+   * This endpoint provides a comprehensive list of available Merchant Category Codes (MCC) which are used to classify businesses by the type of services or goods they provide.
+   */
+  async get(
+    options?: RequestOptions,
+  ): Promise<operations.GetMerchantCategoryCodesResponse> {
+    return unwrapAsync(merchantCategoryCodesGet(
+      this,
+      options,
+    ));
+  }
 }

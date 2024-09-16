@@ -6,11 +6,11 @@
 import { DeleteInvoiceResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteInvoiceResponse = {
-    contentType: "<value>",
-    statusCode: 570197,
-    rawResponse: new Response('{"message": "hello world"}', {
-        headers: { "Content-Type": "application/json" },
-    }),
+  contentType: "<value>",
+  statusCode: 570197,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
 };
 ```
 

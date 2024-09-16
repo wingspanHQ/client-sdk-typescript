@@ -5,54 +5,56 @@
 import * as z from "zod";
 
 export type EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14 =
-    {
-        errorMessage?: string | null | undefined;
-        failedMemberClients?: number | null | undefined;
-        processedMemberClients?: number | null | undefined;
-    };
+  {
+    errorMessage?: string | null | undefined;
+    failedMemberClients?: number | null | undefined;
+    processedMemberClients?: number | null | undefined;
+  };
 
 /** @internal */
-export const EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema: z.ZodType<
+export const EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema:
+  z.ZodType<
     EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     failedMemberClients: z.nullable(z.number()).optional(),
     processedMemberClients: z.nullable(z.number()).optional(),
-});
+  });
 
 /** @internal */
 export type EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound =
-    {
-        errorMessage?: string | null | undefined;
-        failedMemberClients?: number | null | undefined;
-        processedMemberClients?: number | null | undefined;
-    };
+  {
+    errorMessage?: string | null | undefined;
+    failedMemberClients?: number | null | undefined;
+    processedMemberClients?: number | null | undefined;
+  };
 
 /** @internal */
-export const EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema: z.ZodType<
+export const EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema:
+  z.ZodType<
     EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound,
     z.ZodTypeDef,
     EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14
-> = z.object({
+  > = z.object({
     errorMessage: z.nullable(z.string()).optional(),
     failedMemberClients: z.nullable(z.number()).optional(),
     processedMemberClients: z.nullable(z.number()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$ {
-    /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema` instead. */
-    export const inboundSchema =
-        EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema;
-    /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema` instead. */
-    export const outboundSchema =
-        EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema;
-    /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound` instead. */
-    export type Outbound =
-        EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound;
+  /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema` instead. */
+  export const inboundSchema =
+    EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema;
+  /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema` instead. */
+  export const outboundSchema =
+    EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$outboundSchema;
+  /** @deprecated use `EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound` instead. */
+  export type Outbound =
+    EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$Outbound;
 }

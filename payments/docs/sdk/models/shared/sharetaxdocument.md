@@ -5,7 +5,7 @@
 ```typescript
 import { ShareTaxDocument } from "@wingspan/payments/sdk/models/shared";
 
-let value: ShareTaxDocument = "Decline";
+let value: ShareTaxDocument = "Allow";
 ```
 
 ## Values

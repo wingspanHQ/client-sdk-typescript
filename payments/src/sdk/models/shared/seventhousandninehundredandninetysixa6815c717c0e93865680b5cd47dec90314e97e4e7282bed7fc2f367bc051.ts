@@ -5,46 +5,48 @@
 import * as z from "zod";
 
 export type SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051 =
-    {
-        number?: string | null | undefined;
-    };
+  {
+    number?: string | null | undefined;
+  };
 
 /** @internal */
-export const SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema: z.ZodType<
+export const SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema:
+  z.ZodType<
     SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     number: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
 export type SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound =
-    {
-        number?: string | null | undefined;
-    };
+  {
+    number?: string | null | undefined;
+  };
 
 /** @internal */
-export const SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema: z.ZodType<
+export const SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema:
+  z.ZodType<
     SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound,
     z.ZodTypeDef,
     SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051
-> = z.object({
+  > = z.object({
     number: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$ {
-    /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema` instead. */
-    export const inboundSchema =
-        SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema;
-    /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema` instead. */
-    export const outboundSchema =
-        SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema;
-    /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound` instead. */
-    export type Outbound =
-        SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound;
+  /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema` instead. */
+  export const inboundSchema =
+    SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$inboundSchema;
+  /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema` instead. */
+  export const outboundSchema =
+    SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$outboundSchema;
+  /** @deprecated use `SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound` instead. */
+  export type Outbound =
+    SevenThousandNineHundredAndNinetySixa6815c717c0e93865680b5cd47dec90314e97e4e7282bed7fc2f367bc051$Outbound;
 }

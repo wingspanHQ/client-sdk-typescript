@@ -5,42 +5,42 @@
 import * as z from "zod";
 
 export type InvoiceAppliedDeductions = {
-    amount: number;
-    deductionId: string;
-    name: string;
-    transferId?: string | null | undefined;
+  amount: number;
+  deductionId: string;
+  name: string;
+  transferId?: string | null | undefined;
 };
 
 /** @internal */
 export const InvoiceAppliedDeductions$inboundSchema: z.ZodType<
-    InvoiceAppliedDeductions,
-    z.ZodTypeDef,
-    unknown
+  InvoiceAppliedDeductions,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    amount: z.number(),
-    deductionId: z.string(),
-    name: z.string(),
-    transferId: z.nullable(z.string()).optional(),
+  amount: z.number(),
+  deductionId: z.string(),
+  name: z.string(),
+  transferId: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type InvoiceAppliedDeductions$Outbound = {
-    amount: number;
-    deductionId: string;
-    name: string;
-    transferId?: string | null | undefined;
+  amount: number;
+  deductionId: string;
+  name: string;
+  transferId?: string | null | undefined;
 };
 
 /** @internal */
 export const InvoiceAppliedDeductions$outboundSchema: z.ZodType<
-    InvoiceAppliedDeductions$Outbound,
-    z.ZodTypeDef,
-    InvoiceAppliedDeductions
+  InvoiceAppliedDeductions$Outbound,
+  z.ZodTypeDef,
+  InvoiceAppliedDeductions
 > = z.object({
-    amount: z.number(),
-    deductionId: z.string(),
-    name: z.string(),
-    transferId: z.nullable(z.string()).optional(),
+  amount: z.number(),
+  deductionId: z.string(),
+  name: z.string(),
+  transferId: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -48,10 +48,10 @@ export const InvoiceAppliedDeductions$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceAppliedDeductions$ {
-    /** @deprecated use `InvoiceAppliedDeductions$inboundSchema` instead. */
-    export const inboundSchema = InvoiceAppliedDeductions$inboundSchema;
-    /** @deprecated use `InvoiceAppliedDeductions$outboundSchema` instead. */
-    export const outboundSchema = InvoiceAppliedDeductions$outboundSchema;
-    /** @deprecated use `InvoiceAppliedDeductions$Outbound` instead. */
-    export type Outbound = InvoiceAppliedDeductions$Outbound;
+  /** @deprecated use `InvoiceAppliedDeductions$inboundSchema` instead. */
+  export const inboundSchema = InvoiceAppliedDeductions$inboundSchema;
+  /** @deprecated use `InvoiceAppliedDeductions$outboundSchema` instead. */
+  export const outboundSchema = InvoiceAppliedDeductions$outboundSchema;
+  /** @deprecated use `InvoiceAppliedDeductions$Outbound` instead. */
+  export type Outbound = InvoiceAppliedDeductions$Outbound;
 }

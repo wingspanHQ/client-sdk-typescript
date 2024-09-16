@@ -6,12 +6,12 @@
 import { InstitutionResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: InstitutionResponse = {
-    address: "42813 Hubert Way",
-    isACHSupported: false,
-    isRTPSupported: false,
-    isWireSupported: false,
-    name: "<value>",
-    routingNumber: "<value>",
+  address: "93749 Cormier Union",
+  isACHSupported: false,
+  isRTPSupported: false,
+  isWireSupported: false,
+  name: "<value>",
+  routingNumber: "<value>",
 };
 ```
 

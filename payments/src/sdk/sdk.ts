@@ -20,82 +20,89 @@ import { ServiceSettings } from "./servicesettings.js";
 import { WingspanWallet } from "./wingspanwallet.js";
 
 export class Payments extends ClientSDK {
-    private _serviceSettings?: ServiceSettings;
-    get serviceSettings(): ServiceSettings {
-        return (this._serviceSettings ??= new ServiceSettings(this.options$));
-    }
+  private _serviceSettings?: ServiceSettings;
+  get serviceSettings(): ServiceSettings {
+    return (this._serviceSettings ??= new ServiceSettings(this.options$));
+  }
 
-    private _wingspanWallet?: WingspanWallet;
-    get wingspanWallet(): WingspanWallet {
-        return (this._wingspanWallet ??= new WingspanWallet(this.options$));
-    }
+  private _wingspanWallet?: WingspanWallet;
+  get wingspanWallet(): WingspanWallet {
+    return (this._wingspanWallet ??= new WingspanWallet(this.options$));
+  }
 
-    private _deprecated?: Deprecated;
-    get deprecated(): Deprecated {
-        return (this._deprecated ??= new Deprecated(this.options$));
-    }
+  private _deprecated?: Deprecated;
+  get deprecated(): Deprecated {
+    return (this._deprecated ??= new Deprecated(this.options$));
+  }
 
-    private _bankingManagement?: BankingManagement;
-    get bankingManagement(): BankingManagement {
-        return (this._bankingManagement ??= new BankingManagement(this.options$));
-    }
+  private _bankingManagement?: BankingManagement;
+  get bankingManagement(): BankingManagement {
+    return (this._bankingManagement ??= new BankingManagement(this.options$));
+  }
 
-    private _oneThousandAndNinetyNineOperations?: OneThousandAndNinetyNineOperations;
-    get oneThousandAndNinetyNineOperations(): OneThousandAndNinetyNineOperations {
-        return (this._oneThousandAndNinetyNineOperations ??= new OneThousandAndNinetyNineOperations(
-            this.options$
-        ));
-    }
+  private _oneThousandAndNinetyNineOperations?:
+    OneThousandAndNinetyNineOperations;
+  get oneThousandAndNinetyNineOperations(): OneThousandAndNinetyNineOperations {
+    return (this._oneThousandAndNinetyNineOperations ??=
+      new OneThousandAndNinetyNineOperations(this.options$));
+  }
 
-    private _bulkOperations?: BulkOperations;
-    get bulkOperations(): BulkOperations {
-        return (this._bulkOperations ??= new BulkOperations(this.options$));
-    }
+  private _bulkOperations?: BulkOperations;
+  get bulkOperations(): BulkOperations {
+    return (this._bulkOperations ??= new BulkOperations(this.options$));
+  }
 
-    private _clientManagement?: ClientManagement;
-    get clientManagement(): ClientManagement {
-        return (this._clientManagement ??= new ClientManagement(this.options$));
-    }
+  private _clientManagement?: ClientManagement;
+  get clientManagement(): ClientManagement {
+    return (this._clientManagement ??= new ClientManagement(this.options$));
+  }
 
-    private _invoiceManagement?: InvoiceManagement;
-    get invoiceManagement(): InvoiceManagement {
-        return (this._invoiceManagement ??= new InvoiceManagement(this.options$));
-    }
+  private _invoiceManagement?: InvoiceManagement;
+  get invoiceManagement(): InvoiceManagement {
+    return (this._invoiceManagement ??= new InvoiceManagement(this.options$));
+  }
 
-    private _collaboratorManagement?: CollaboratorManagement;
-    get collaboratorManagement(): CollaboratorManagement {
-        return (this._collaboratorManagement ??= new CollaboratorManagement(this.options$));
-    }
+  private _collaboratorManagement?: CollaboratorManagement;
+  get collaboratorManagement(): CollaboratorManagement {
+    return (this._collaboratorManagement ??= new CollaboratorManagement(
+      this.options$,
+    ));
+  }
 
-    private _documentSigningAndEligibility?: DocumentSigningAndEligibility;
-    get documentSigningAndEligibility(): DocumentSigningAndEligibility {
-        return (this._documentSigningAndEligibility ??= new DocumentSigningAndEligibility(
-            this.options$
-        ));
-    }
+  private _documentSigningAndEligibility?: DocumentSigningAndEligibility;
+  get documentSigningAndEligibility(): DocumentSigningAndEligibility {
+    return (this._documentSigningAndEligibility ??=
+      new DocumentSigningAndEligibility(this.options$));
+  }
 
-    private _customFieldManagement?: CustomFieldManagement;
-    get customFieldManagement(): CustomFieldManagement {
-        return (this._customFieldManagement ??= new CustomFieldManagement(this.options$));
-    }
+  private _customFieldManagement?: CustomFieldManagement;
+  get customFieldManagement(): CustomFieldManagement {
+    return (this._customFieldManagement ??= new CustomFieldManagement(
+      this.options$,
+    ));
+  }
 
-    private _merchantCategoryCodes?: MerchantCategoryCodes;
-    get merchantCategoryCodes(): MerchantCategoryCodes {
-        return (this._merchantCategoryCodes ??= new MerchantCategoryCodes(this.options$));
-    }
+  private _merchantCategoryCodes?: MerchantCategoryCodes;
+  get merchantCategoryCodes(): MerchantCategoryCodes {
+    return (this._merchantCategoryCodes ??= new MerchantCategoryCodes(
+      this.options$,
+    ));
+  }
 
-    private _payablesManagement?: PayablesManagement;
-    get payablesManagement(): PayablesManagement {
-        return (this._payablesManagement ??= new PayablesManagement(this.options$));
-    }
+  private _payablesManagement?: PayablesManagement;
+  get payablesManagement(): PayablesManagement {
+    return (this._payablesManagement ??= new PayablesManagement(this.options$));
+  }
 
-    private _payrollSettings?: PayrollSettings;
-    get payrollSettings(): PayrollSettings {
-        return (this._payrollSettings ??= new PayrollSettings(this.options$));
-    }
+  private _payrollSettings?: PayrollSettings;
+  get payrollSettings(): PayrollSettings {
+    return (this._payrollSettings ??= new PayrollSettings(this.options$));
+  }
 
-    private _reportingAndAnalytics?: ReportingAndAnalytics;
-    get reportingAndAnalytics(): ReportingAndAnalytics {
-        return (this._reportingAndAnalytics ??= new ReportingAndAnalytics(this.options$));
-    }
+  private _reportingAndAnalytics?: ReportingAndAnalytics;
+  get reportingAndAnalytics(): ReportingAndAnalytics {
+    return (this._reportingAndAnalytics ??= new ReportingAndAnalytics(
+      this.options$,
+    ));
+  }
 }

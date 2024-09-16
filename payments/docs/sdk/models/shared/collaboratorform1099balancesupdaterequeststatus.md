@@ -5,7 +5,7 @@
 ```typescript
 import { CollaboratorForm1099BalancesUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CollaboratorForm1099BalancesUpdateRequestStatus = "NeedsActionInfo";
+let value: CollaboratorForm1099BalancesUpdateRequestStatus = "Accepted";
 ```
 
 ## Values

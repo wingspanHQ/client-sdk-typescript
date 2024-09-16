@@ -5,7 +5,7 @@
 ```typescript
 import { RedactedTaxFormW9InfoTinType } from "@wingspan/payments/sdk/models/shared";
 
-let value: RedactedTaxFormW9InfoTinType = "Individual";
+let value: RedactedTaxFormW9InfoTinType = "Business";
 ```
 
 ## Values

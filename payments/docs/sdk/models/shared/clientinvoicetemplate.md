@@ -6,107 +6,113 @@
 import { ClientInvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceTemplate = {
-    clientId: "<value>",
-    createdAt: "<value>",
-    invoiceData: {
-        additionalRecipientEmails: ["<value>"],
-        amount: 5876,
-        client: {},
-        createdAt: "<value>",
-        currency: "USD",
-        dueDate: "<value>",
-        events: {},
-        invoiceId: "<value>",
-        invoiceNumber: "<value>",
-        lineItems: [
-            {
-                costPerUnit: 2728.22,
-                createdAt: "<value>",
-                labels: {
-                    key: "<value>",
-                },
-                labelsBak2: {
-                    key: "<value>",
-                },
-                quantity: 8920.5,
-                reimbursableExpense: false,
-                totalCost: 3708.53,
-                unit: "ampere",
-                updatedAt: "<value>",
-            },
-        ],
-        member: {},
-        memberAcceptsPayments: false,
-        memberAddress: {
-            addressLine1: "74907 Kulas Circle",
-            city: "Josiahside",
-            postalCode: "45491",
-            state: "North Carolina",
-        },
-        memberClient: {
-            achCreditAccount: {
-                accountNumber: "<value>",
-                bankName: "<value>",
-            },
-            client: {
-                user: {},
-            },
-            clientData: {},
-            clientId: "<value>",
-            clientUserAccountType: "member",
-            createdAt: "<value>",
-            emailTo: "<value>",
-            eventActors: {
-                key: "<value>",
-            },
-            events: {},
-            externalIds: {},
-            form1099Balances: {},
-            formW9Data: {},
-            internationalWireAccount: {
-                accountNumber: "<value>",
-                bankName: "<value>",
-            },
-            labels: {
-                key: "<value>",
-            },
-            member: {
-                user: {},
-            },
-            memberClientId: "<value>",
-            memberData: {},
-            memberId: "<value>",
-            parentMemberClientId: "<value>",
-            payerPayeeId: "<value>",
-            status: "Active",
-            taxStatus: "Incomplete",
-            updatedAt: "<value>",
-            userRoles: {
-                ownerIds: ["<value>"],
-                viewerIds: ["<value>"],
-            },
-        },
-        memberCompany: "<value>",
-        memberEmail: "<value>",
-        memberLogoUrl: "<value>",
-        memberName: "<value>",
-        memberPaymentsVersion: 4304.02,
-        memberStripeAccountId: "<value>",
-        projectName: "<value>",
-        status: "Cancelled",
-        updatedAt: "<value>",
-    },
-    invoiceTemplateId: "<value>",
-    memberId: "<value>",
-    nextInvoiceDate: "<value>",
-    scheduleDates: [
-        {
-            date: "<value>",
-            status: "Skipped",
-        },
+  clientId: "<value>",
+  createdAt: "<value>",
+  invoiceData: {
+    additionalRecipientEmails: [
+      "<value>",
     ],
-    status: "Active",
+    amount: 5775.43,
+    client: {},
+    createdAt: "<value>",
+    currency: "USD",
+    dueDate: "<value>",
+    events: {},
+    invoiceId: "<value>",
+    invoiceNumber: "<value>",
+    lineItems: [
+      {
+        costPerUnit: 9594.34,
+        createdAt: "<value>",
+        labels: {
+          "key": "<value>",
+        },
+        labelsBak2: {
+          "key": "<value>",
+        },
+        quantity: 1741.12,
+        reimbursableExpense: false,
+        totalCost: 6455.7,
+        unit: "coulomb",
+        updatedAt: "<value>",
+      },
+    ],
+    member: {},
+    memberAcceptsPayments: false,
+    memberAddress: {
+      addressLine1: "74551 Considine Port",
+      city: "Gottliebstad",
+      postalCode: "33191",
+      state: "Georgia",
+    },
+    memberClient: {
+      achCreditAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+      },
+      client: {
+        user: {},
+      },
+      clientData: {},
+      clientId: "<value>",
+      clientUserAccountType: "member",
+      createdAt: "<value>",
+      emailTo: "<value>",
+      eventActors: {
+        "key": "<value>",
+      },
+      events: {},
+      externalIds: {},
+      form1099Balances: {},
+      formW9Data: {},
+      internationalWireAccount: {
+        accountNumber: "<value>",
+        bankName: "<value>",
+      },
+      labels: {
+        "key": "<value>",
+      },
+      member: {
+        user: {},
+      },
+      memberClientId: "<value>",
+      memberData: {},
+      memberId: "<value>",
+      parentMemberClientId: "<value>",
+      payerPayeeId: "<value>",
+      status: "Pending",
+      taxStatus: "Pending",
+      updatedAt: "<value>",
+      userRoles: {
+        ownerIds: [
+          "<value>",
+        ],
+        viewerIds: [
+          "<value>",
+        ],
+      },
+    },
+    memberCompany: "<value>",
+    memberEmail: "<value>",
+    memberLogoUrl: "<value>",
+    memberName: "<value>",
+    memberPaymentsVersion: 5438.06,
+    memberStripeAccountId: "<value>",
+    projectName: "<value>",
+    status: "Draft",
     updatedAt: "<value>",
+  },
+  invoiceTemplateId: "<value>",
+  memberId: "<value>",
+  nextInvoiceDate: "<value>",
+  scheduleDates: [
+    {
+      date: "<value>",
+      status: "Completed",
+    },
+  ],
+  status: "Cancelled",
+  updatedAt: "<value>",
 };
 ```
 

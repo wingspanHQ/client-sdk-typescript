@@ -6,7 +6,7 @@
 import { CardUpdateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardUpdateRequest = {
-    status: "Frozen",
+  status: "Frozen",
 };
 ```
 

@@ -6,7 +6,7 @@
 import { InvoiceNotificationPreferences } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceNotificationPreferences = {
-    sendReminders: false,
+  sendReminders: false,
 };
 ```
 

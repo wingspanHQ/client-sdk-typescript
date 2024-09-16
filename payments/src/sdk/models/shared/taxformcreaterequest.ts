@@ -7,60 +7,62 @@ import * as z from "zod";
 export type Data = {};
 
 export type TaxFormCreateRequest = {
-    clientId: string;
-    data: Data;
-    memberId: string;
+  clientId: string;
+  data: Data;
+  memberId: string;
 };
 
 /** @internal */
-export const Data$inboundSchema: z.ZodType<Data, z.ZodTypeDef, unknown> = z.object({});
+export const Data$inboundSchema: z.ZodType<Data, z.ZodTypeDef, unknown> = z
+  .object({});
 
 /** @internal */
 export type Data$Outbound = {};
 
 /** @internal */
-export const Data$outboundSchema: z.ZodType<Data$Outbound, z.ZodTypeDef, Data> = z.object({});
+export const Data$outboundSchema: z.ZodType<Data$Outbound, z.ZodTypeDef, Data> =
+  z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Data$ {
-    /** @deprecated use `Data$inboundSchema` instead. */
-    export const inboundSchema = Data$inboundSchema;
-    /** @deprecated use `Data$outboundSchema` instead. */
-    export const outboundSchema = Data$outboundSchema;
-    /** @deprecated use `Data$Outbound` instead. */
-    export type Outbound = Data$Outbound;
+  /** @deprecated use `Data$inboundSchema` instead. */
+  export const inboundSchema = Data$inboundSchema;
+  /** @deprecated use `Data$outboundSchema` instead. */
+  export const outboundSchema = Data$outboundSchema;
+  /** @deprecated use `Data$Outbound` instead. */
+  export type Outbound = Data$Outbound;
 }
 
 /** @internal */
 export const TaxFormCreateRequest$inboundSchema: z.ZodType<
-    TaxFormCreateRequest,
-    z.ZodTypeDef,
-    unknown
+  TaxFormCreateRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    clientId: z.string(),
-    data: z.lazy(() => Data$inboundSchema),
-    memberId: z.string(),
+  clientId: z.string(),
+  data: z.lazy(() => Data$inboundSchema),
+  memberId: z.string(),
 });
 
 /** @internal */
 export type TaxFormCreateRequest$Outbound = {
-    clientId: string;
-    data: Data$Outbound;
-    memberId: string;
+  clientId: string;
+  data: Data$Outbound;
+  memberId: string;
 };
 
 /** @internal */
 export const TaxFormCreateRequest$outboundSchema: z.ZodType<
-    TaxFormCreateRequest$Outbound,
-    z.ZodTypeDef,
-    TaxFormCreateRequest
+  TaxFormCreateRequest$Outbound,
+  z.ZodTypeDef,
+  TaxFormCreateRequest
 > = z.object({
-    clientId: z.string(),
-    data: z.lazy(() => Data$outboundSchema),
-    memberId: z.string(),
+  clientId: z.string(),
+  data: z.lazy(() => Data$outboundSchema),
+  memberId: z.string(),
 });
 
 /**
@@ -68,10 +70,10 @@ export const TaxFormCreateRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace TaxFormCreateRequest$ {
-    /** @deprecated use `TaxFormCreateRequest$inboundSchema` instead. */
-    export const inboundSchema = TaxFormCreateRequest$inboundSchema;
-    /** @deprecated use `TaxFormCreateRequest$outboundSchema` instead. */
-    export const outboundSchema = TaxFormCreateRequest$outboundSchema;
-    /** @deprecated use `TaxFormCreateRequest$Outbound` instead. */
-    export type Outbound = TaxFormCreateRequest$Outbound;
+  /** @deprecated use `TaxFormCreateRequest$inboundSchema` instead. */
+  export const inboundSchema = TaxFormCreateRequest$inboundSchema;
+  /** @deprecated use `TaxFormCreateRequest$outboundSchema` instead. */
+  export const outboundSchema = TaxFormCreateRequest$outboundSchema;
+  /** @deprecated use `TaxFormCreateRequest$Outbound` instead. */
+  export type Outbound = TaxFormCreateRequest$Outbound;
 }

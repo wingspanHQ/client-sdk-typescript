@@ -5,27 +5,30 @@
 import * as z from "zod";
 
 export type BulkBatchCreate = {
-    labels?: { [k: string]: string } | null | undefined;
+  labels?: { [k: string]: string } | null | undefined;
 };
 
 /** @internal */
-export const BulkBatchCreate$inboundSchema: z.ZodType<BulkBatchCreate, z.ZodTypeDef, unknown> =
-    z.object({
-        labels: z.nullable(z.record(z.string())).optional(),
-    });
+export const BulkBatchCreate$inboundSchema: z.ZodType<
+  BulkBatchCreate,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  labels: z.nullable(z.record(z.string())).optional(),
+});
 
 /** @internal */
 export type BulkBatchCreate$Outbound = {
-    labels?: { [k: string]: string } | null | undefined;
+  labels?: { [k: string]: string } | null | undefined;
 };
 
 /** @internal */
 export const BulkBatchCreate$outboundSchema: z.ZodType<
-    BulkBatchCreate$Outbound,
-    z.ZodTypeDef,
-    BulkBatchCreate
+  BulkBatchCreate$Outbound,
+  z.ZodTypeDef,
+  BulkBatchCreate
 > = z.object({
-    labels: z.nullable(z.record(z.string())).optional(),
+  labels: z.nullable(z.record(z.string())).optional(),
 });
 
 /**
@@ -33,10 +36,10 @@ export const BulkBatchCreate$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace BulkBatchCreate$ {
-    /** @deprecated use `BulkBatchCreate$inboundSchema` instead. */
-    export const inboundSchema = BulkBatchCreate$inboundSchema;
-    /** @deprecated use `BulkBatchCreate$outboundSchema` instead. */
-    export const outboundSchema = BulkBatchCreate$outboundSchema;
-    /** @deprecated use `BulkBatchCreate$Outbound` instead. */
-    export type Outbound = BulkBatchCreate$Outbound;
+  /** @deprecated use `BulkBatchCreate$inboundSchema` instead. */
+  export const inboundSchema = BulkBatchCreate$inboundSchema;
+  /** @deprecated use `BulkBatchCreate$outboundSchema` instead. */
+  export const outboundSchema = BulkBatchCreate$outboundSchema;
+  /** @deprecated use `BulkBatchCreate$Outbound` instead. */
+  export type Outbound = BulkBatchCreate$Outbound;
 }

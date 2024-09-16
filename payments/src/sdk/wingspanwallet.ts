@@ -15,93 +15,120 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class WingspanWallet extends ClientSDK {
-    /**
-     * Register a New  Wingspan Wallet Card
-     *
-     * @remarks
-     * Add a new  Wingspan Wallet card to the system, allowing it to be used for future transactions.
-     */
-    async create(
-        request?: shared.CardCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateStoredWingspanWalletCardResponse> {
-        return unwrapAsync(wingspanWalletCreate(this, request, options));
-    }
+  /**
+   * Register a New  Wingspan Wallet Card
+   *
+   * @remarks
+   * Add a new  Wingspan Wallet card to the system, allowing it to be used for future transactions.
+   */
+  async create(
+    request?: shared.CardCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateStoredWingspanWalletCardResponse> {
+    return unwrapAsync(wingspanWalletCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Remove a card using its unique ID
-     *
-     * @remarks
-     * Deletes a Wingspan Wallet card from the system based on its unique identifier. This action is irreversible.
-     */
-    async delete(
-        request: operations.DeleteStoredWingspanWalletCardRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteStoredWingspanWalletCardResponse> {
-        return unwrapAsync(wingspanWalletDelete(this, request, options));
-    }
+  /**
+   * Remove a card using its unique ID
+   *
+   * @remarks
+   * Deletes a Wingspan Wallet card from the system based on its unique identifier. This action is irreversible.
+   */
+  async delete(
+    request: operations.DeleteStoredWingspanWalletCardRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteStoredWingspanWalletCardResponse> {
+    return unwrapAsync(wingspanWalletDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve card details by its unique ID
-     *
-     * @remarks
-     * Fetches detailed information about a Wingspan Wallet card associated with the given unique identifier.
-     */
-    async get(
-        request: operations.GetStoredWingspanWalletCardRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetStoredWingspanWalletCardResponse> {
-        return unwrapAsync(wingspanWalletGet(this, request, options));
-    }
+  /**
+   * Retrieve card details by its unique ID
+   *
+   * @remarks
+   * Fetches detailed information about a Wingspan Wallet card associated with the given unique identifier.
+   */
+  async get(
+    request: operations.GetStoredWingspanWalletCardRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetStoredWingspanWalletCardResponse> {
+    return unwrapAsync(wingspanWalletGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * List All Stored Wingspan Wallet Cards
-     *
-     * @remarks
-     * Retrieve a comprehensive list of all stored  Wingspan Wallet cards within the system. This includes both active and deactivated cards.
-     */
-    async list(
-        options?: RequestOptions
-    ): Promise<operations.ListStoredWingspanWalletCardsResponse> {
-        return unwrapAsync(wingspanWalletList(this, options));
-    }
+  /**
+   * List All Stored Wingspan Wallet Cards
+   *
+   * @remarks
+   * Retrieve a comprehensive list of all stored  Wingspan Wallet cards within the system. This includes both active and deactivated cards.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListStoredWingspanWalletCardsResponse> {
+    return unwrapAsync(wingspanWalletList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Request a verification code for card authentication
-     *
-     * @remarks
-     * Sends a verification code to the users registered contact method for additional Wingspan Wallet card authentication.
-     */
-    async request(
-        request: operations.RequestCardAuthenticationRequest,
-        options?: RequestOptions
-    ): Promise<operations.RequestCardAuthenticationResponse> {
-        return unwrapAsync(wingspanWalletRequest(this, request, options));
-    }
+  /**
+   * Request a verification code for card authentication
+   *
+   * @remarks
+   * Sends a verification code to the users registered contact method for additional Wingspan Wallet card authentication.
+   */
+  async request(
+    request: operations.RequestCardAuthenticationRequest,
+    options?: RequestOptions,
+  ): Promise<operations.RequestCardAuthenticationResponse> {
+    return unwrapAsync(wingspanWalletRequest(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify card details by its unique ID
-     *
-     * @remarks
-     * Updates specific information about a Wingspan Wallet card using the provided data.
-     */
-    async update(
-        request: operations.UpdateStoredWingspanWalletCardRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateStoredWingspanWalletCardResponse> {
-        return unwrapAsync(wingspanWalletUpdate(this, request, options));
-    }
+  /**
+   * Modify card details by its unique ID
+   *
+   * @remarks
+   * Updates specific information about a Wingspan Wallet card using the provided data.
+   */
+  async update(
+    request: operations.UpdateStoredWingspanWalletCardRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateStoredWingspanWalletCardResponse> {
+    return unwrapAsync(wingspanWalletUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Validate verification code to receive a token
-     *
-     * @remarks
-     * Validates the received verification code and, if correct, returns a token for Wingspan Wallet card operations.
-     */
-    async validate(
-        request: operations.ValidateReceiveTokenRequest,
-        options?: RequestOptions
-    ): Promise<operations.ValidateReceiveTokenResponse> {
-        return unwrapAsync(wingspanWalletValidate(this, request, options));
-    }
+  /**
+   * Validate verification code to receive a token
+   *
+   * @remarks
+   * Validates the received verification code and, if correct, returns a token for Wingspan Wallet card operations.
+   */
+  async validate(
+    request: operations.ValidateReceiveTokenRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ValidateReceiveTokenResponse> {
+    return unwrapAsync(wingspanWalletValidate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

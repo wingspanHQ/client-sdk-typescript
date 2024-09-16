@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type TaxFormEvents = {
-    createdAt?: string | null | undefined;
-    updatedAt?: string | null | undefined;
+  createdAt?: string | null | undefined;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
-export const TaxFormEvents$inboundSchema: z.ZodType<TaxFormEvents, z.ZodTypeDef, unknown> =
-    z.object({
-        createdAt: z.nullable(z.string()).optional(),
-        updatedAt: z.nullable(z.string()).optional(),
-    });
+export const TaxFormEvents$inboundSchema: z.ZodType<
+  TaxFormEvents,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  createdAt: z.nullable(z.string()).optional(),
+  updatedAt: z.nullable(z.string()).optional(),
+});
 
 /** @internal */
 export type TaxFormEvents$Outbound = {
-    createdAt?: string | null | undefined;
-    updatedAt?: string | null | undefined;
+  createdAt?: string | null | undefined;
+  updatedAt?: string | null | undefined;
 };
 
 /** @internal */
 export const TaxFormEvents$outboundSchema: z.ZodType<
-    TaxFormEvents$Outbound,
-    z.ZodTypeDef,
-    TaxFormEvents
+  TaxFormEvents$Outbound,
+  z.ZodTypeDef,
+  TaxFormEvents
 > = z.object({
-    createdAt: z.nullable(z.string()).optional(),
-    updatedAt: z.nullable(z.string()).optional(),
+  createdAt: z.nullable(z.string()).optional(),
+  updatedAt: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const TaxFormEvents$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace TaxFormEvents$ {
-    /** @deprecated use `TaxFormEvents$inboundSchema` instead. */
-    export const inboundSchema = TaxFormEvents$inboundSchema;
-    /** @deprecated use `TaxFormEvents$outboundSchema` instead. */
-    export const outboundSchema = TaxFormEvents$outboundSchema;
-    /** @deprecated use `TaxFormEvents$Outbound` instead. */
-    export type Outbound = TaxFormEvents$Outbound;
+  /** @deprecated use `TaxFormEvents$inboundSchema` instead. */
+  export const inboundSchema = TaxFormEvents$inboundSchema;
+  /** @deprecated use `TaxFormEvents$outboundSchema` instead. */
+  export const outboundSchema = TaxFormEvents$outboundSchema;
+  /** @deprecated use `TaxFormEvents$Outbound` instead. */
+  export type Outbound = TaxFormEvents$Outbound;
 }

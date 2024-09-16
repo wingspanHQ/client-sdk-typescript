@@ -5,48 +5,51 @@
 import * as z from "zod";
 
 export type B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a = {
-    incomeAndExpenses: boolean;
-    taxWithholdings: boolean;
+  incomeAndExpenses: boolean;
+  taxWithholdings: boolean;
 };
 
 /** @internal */
-export const B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema: z.ZodType<
+export const B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema:
+  z.ZodType<
     B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     incomeAndExpenses: z.boolean(),
     taxWithholdings: z.boolean(),
-});
+  });
 
 /** @internal */
-export type B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound = {
+export type B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound =
+  {
     incomeAndExpenses: boolean;
     taxWithholdings: boolean;
-};
+  };
 
 /** @internal */
-export const B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema: z.ZodType<
+export const B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema:
+  z.ZodType<
     B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound,
     z.ZodTypeDef,
     B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a
-> = z.object({
+  > = z.object({
     incomeAndExpenses: z.boolean(),
     taxWithholdings: z.boolean(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$ {
-    /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema` instead. */
-    export const inboundSchema =
-        B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema;
-    /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema` instead. */
-    export const outboundSchema =
-        B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema;
-    /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound` instead. */
-    export type Outbound =
-        B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound;
+  /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema` instead. */
+  export const inboundSchema =
+    B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema;
+  /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema` instead. */
+  export const outboundSchema =
+    B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema;
+  /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound` instead. */
+  export type Outbound =
+    B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound;
 }

@@ -5,7 +5,7 @@
 ```typescript
 import { MemberClientForm1099BalancesStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: MemberClientForm1099BalancesStatus = "NeedsActionDispute";
+let value: MemberClientForm1099BalancesStatus = "Ready";
 ```
 
 ## Values

@@ -8,9 +8,9 @@ export type Download1099Response = {};
 
 /** @internal */
 export const Download1099Response$inboundSchema: z.ZodType<
-    Download1099Response,
-    z.ZodTypeDef,
-    unknown
+  Download1099Response,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +18,9 @@ export type Download1099Response$Outbound = {};
 
 /** @internal */
 export const Download1099Response$outboundSchema: z.ZodType<
-    Download1099Response$Outbound,
-    z.ZodTypeDef,
-    Download1099Response
+  Download1099Response$Outbound,
+  z.ZodTypeDef,
+  Download1099Response
 > = z.object({});
 
 /**
@@ -28,10 +28,10 @@ export const Download1099Response$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Download1099Response$ {
-    /** @deprecated use `Download1099Response$inboundSchema` instead. */
-    export const inboundSchema = Download1099Response$inboundSchema;
-    /** @deprecated use `Download1099Response$outboundSchema` instead. */
-    export const outboundSchema = Download1099Response$outboundSchema;
-    /** @deprecated use `Download1099Response$Outbound` instead. */
-    export type Outbound = Download1099Response$Outbound;
+  /** @deprecated use `Download1099Response$inboundSchema` instead. */
+  export const inboundSchema = Download1099Response$inboundSchema;
+  /** @deprecated use `Download1099Response$outboundSchema` instead. */
+  export const outboundSchema = Download1099Response$outboundSchema;
+  /** @deprecated use `Download1099Response$Outbound` instead. */
+  export type Outbound = Download1099Response$Outbound;
 }

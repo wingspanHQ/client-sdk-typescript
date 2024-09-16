@@ -6,7 +6,7 @@
 import { ValidateReceiveTokenRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: ValidateReceiveTokenRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

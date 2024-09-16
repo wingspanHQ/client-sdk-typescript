@@ -6,8 +6,8 @@
 import { MemberClientWireAccount } from "@wingspan/payments/sdk/models/shared";
 
 let value: MemberClientWireAccount = {
-    accountNumber: "<value>",
-    bankName: "<value>",
+  accountNumber: "<value>",
+  bankName: "<value>",
 };
 ```
 

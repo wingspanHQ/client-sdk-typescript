@@ -5,7 +5,7 @@
 ```typescript
 import { MemberClientSchemaClientUserAccountType } from "@wingspan/payments/sdk/models/shared";
 
-let value: MemberClientSchemaClientUserAccountType = "member";
+let value: MemberClientSchemaClientUserAccountType = "enterprise";
 ```
 
 ## Values

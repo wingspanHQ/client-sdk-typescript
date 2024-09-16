@@ -6,7 +6,7 @@
 import { GetBankStatementRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetBankStatementRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

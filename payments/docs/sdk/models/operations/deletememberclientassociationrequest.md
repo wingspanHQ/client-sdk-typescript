@@ -6,7 +6,7 @@
 import { DeleteMemberClientAssociationRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteMemberClientAssociationRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

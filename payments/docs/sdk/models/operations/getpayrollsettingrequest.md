@@ -6,7 +6,7 @@
 import { GetPayrollSettingRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetPayrollSettingRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

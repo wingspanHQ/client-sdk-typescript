@@ -6,8 +6,8 @@
 import { AssociateCollaboratorWithGroupRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: AssociateCollaboratorWithGroupRequest = {
-    groupId: "<value>",
-    id: "<id>",
+  groupId: "<value>",
+  id: "<id>",
 };
 ```
 

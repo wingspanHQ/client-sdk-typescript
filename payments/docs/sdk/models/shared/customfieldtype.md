@@ -5,7 +5,7 @@
 ```typescript
 import { CustomFieldType } from "@wingspan/payments/sdk/models/shared";
 
-let value: CustomFieldType = "Boolean";
+let value: CustomFieldType = "String";
 ```
 
 ## Values

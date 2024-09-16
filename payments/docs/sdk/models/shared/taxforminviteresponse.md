@@ -6,7 +6,7 @@
 import { TaxFormInviteResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormInviteResponse = {
-    success: "<value>",
+  success: "<value>",
 };
 ```
 

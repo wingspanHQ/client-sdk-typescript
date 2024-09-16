@@ -5,41 +5,43 @@
 import * as z from "zod";
 
 export type Ping = {
-    code: number;
-    message: string;
-    status: string;
+  code: number;
+  message: string;
+  status: string;
 };
 
 /** @internal */
-export const Ping$inboundSchema: z.ZodType<Ping, z.ZodTypeDef, unknown> = z.object({
+export const Ping$inboundSchema: z.ZodType<Ping, z.ZodTypeDef, unknown> = z
+  .object({
     code: z.number(),
     message: z.string(),
     status: z.string(),
-});
+  });
 
 /** @internal */
 export type Ping$Outbound = {
-    code: number;
-    message: string;
-    status: string;
+  code: number;
+  message: string;
+  status: string;
 };
 
 /** @internal */
-export const Ping$outboundSchema: z.ZodType<Ping$Outbound, z.ZodTypeDef, Ping> = z.object({
+export const Ping$outboundSchema: z.ZodType<Ping$Outbound, z.ZodTypeDef, Ping> =
+  z.object({
     code: z.number(),
     message: z.string(),
     status: z.string(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Ping$ {
-    /** @deprecated use `Ping$inboundSchema` instead. */
-    export const inboundSchema = Ping$inboundSchema;
-    /** @deprecated use `Ping$outboundSchema` instead. */
-    export const outboundSchema = Ping$outboundSchema;
-    /** @deprecated use `Ping$Outbound` instead. */
-    export type Outbound = Ping$Outbound;
+  /** @deprecated use `Ping$inboundSchema` instead. */
+  export const inboundSchema = Ping$inboundSchema;
+  /** @deprecated use `Ping$outboundSchema` instead. */
+  export const outboundSchema = Ping$outboundSchema;
+  /** @deprecated use `Ping$Outbound` instead. */
+  export type Outbound = Ping$Outbound;
 }

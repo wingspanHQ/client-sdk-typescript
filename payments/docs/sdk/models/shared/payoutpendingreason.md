@@ -5,7 +5,7 @@
 ```typescript
 import { PayoutPendingReason } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayoutPendingReason = "PaymentNotClearedFuture";
+let value: PayoutPendingReason = "PaymentNotCleared";
 ```
 
 ## Values

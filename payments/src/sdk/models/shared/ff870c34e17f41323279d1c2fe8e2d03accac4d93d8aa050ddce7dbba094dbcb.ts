@@ -5,60 +5,63 @@
 import * as z from "zod";
 
 export type Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb = {
-    deductionId?: string | null | undefined;
-    errorMessage?: string | null | undefined;
-    payableId?: string | null | undefined;
-    resolvedClientId?: string | null | undefined;
-    resolvedCollaboratorId?: string | null | undefined;
+  deductionId?: string | null | undefined;
+  errorMessage?: string | null | undefined;
+  payableId?: string | null | undefined;
+  resolvedClientId?: string | null | undefined;
+  resolvedCollaboratorId?: string | null | undefined;
 };
 
 /** @internal */
-export const Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema: z.ZodType<
+export const Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema:
+  z.ZodType<
     Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb,
     z.ZodTypeDef,
     unknown
-> = z.object({
+  > = z.object({
     deductionId: z.nullable(z.string()).optional(),
     errorMessage: z.nullable(z.string()).optional(),
     payableId: z.nullable(z.string()).optional(),
     resolvedClientId: z.nullable(z.string()).optional(),
     resolvedCollaboratorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /** @internal */
-export type Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound = {
+export type Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound =
+  {
     deductionId?: string | null | undefined;
     errorMessage?: string | null | undefined;
     payableId?: string | null | undefined;
     resolvedClientId?: string | null | undefined;
     resolvedCollaboratorId?: string | null | undefined;
-};
+  };
 
 /** @internal */
-export const Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema: z.ZodType<
+export const Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema:
+  z.ZodType<
     Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound,
     z.ZodTypeDef,
     Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb
-> = z.object({
+  > = z.object({
     deductionId: z.nullable(z.string()).optional(),
     errorMessage: z.nullable(z.string()).optional(),
     payableId: z.nullable(z.string()).optional(),
     resolvedClientId: z.nullable(z.string()).optional(),
     resolvedCollaboratorId: z.nullable(z.string()).optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$ {
-    /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema` instead. */
-    export const inboundSchema =
-        Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema;
-    /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema` instead. */
-    export const outboundSchema =
-        Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema;
-    /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound` instead. */
-    export type Outbound =
-        Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound;
+  /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema` instead. */
+  export const inboundSchema =
+    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema;
+  /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema` instead. */
+  export const outboundSchema =
+    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema;
+  /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound` instead. */
+  export type Outbound =
+    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound;
 }

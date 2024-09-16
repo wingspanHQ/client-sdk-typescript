@@ -6,8 +6,8 @@
 import { BankAccount } from "@wingspan/payments/sdk/models/shared";
 
 let value: BankAccount = {
-    accountNumber: "<value>",
-    bankName: "<value>",
+  accountNumber: "<value>",
+  bankName: "<value>",
 };
 ```
 

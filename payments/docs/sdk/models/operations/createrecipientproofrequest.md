@@ -6,7 +6,7 @@
 import { CreateRecipientProofRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: CreateRecipientProofRequest = {
-    taxFormId: "<value>",
+  taxFormId: "<value>",
 };
 ```
 

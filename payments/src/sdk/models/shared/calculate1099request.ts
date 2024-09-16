@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type Calculate1099Request = {
-    memberClientId: string;
-    year: number;
+  memberClientId: string;
+  year: number;
 };
 
 /** @internal */
 export const Calculate1099Request$inboundSchema: z.ZodType<
-    Calculate1099Request,
-    z.ZodTypeDef,
-    unknown
+  Calculate1099Request,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    memberClientId: z.string(),
-    year: z.number(),
+  memberClientId: z.string(),
+  year: z.number(),
 });
 
 /** @internal */
 export type Calculate1099Request$Outbound = {
-    memberClientId: string;
-    year: number;
+  memberClientId: string;
+  year: number;
 };
 
 /** @internal */
 export const Calculate1099Request$outboundSchema: z.ZodType<
-    Calculate1099Request$Outbound,
-    z.ZodTypeDef,
-    Calculate1099Request
+  Calculate1099Request$Outbound,
+  z.ZodTypeDef,
+  Calculate1099Request
 > = z.object({
-    memberClientId: z.string(),
-    year: z.number(),
+  memberClientId: z.string(),
+  year: z.number(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const Calculate1099Request$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Calculate1099Request$ {
-    /** @deprecated use `Calculate1099Request$inboundSchema` instead. */
-    export const inboundSchema = Calculate1099Request$inboundSchema;
-    /** @deprecated use `Calculate1099Request$outboundSchema` instead. */
-    export const outboundSchema = Calculate1099Request$outboundSchema;
-    /** @deprecated use `Calculate1099Request$Outbound` instead. */
-    export type Outbound = Calculate1099Request$Outbound;
+  /** @deprecated use `Calculate1099Request$inboundSchema` instead. */
+  export const inboundSchema = Calculate1099Request$inboundSchema;
+  /** @deprecated use `Calculate1099Request$outboundSchema` instead. */
+  export const outboundSchema = Calculate1099Request$outboundSchema;
+  /** @deprecated use `Calculate1099Request$Outbound` instead. */
+  export type Outbound = Calculate1099Request$Outbound;
 }

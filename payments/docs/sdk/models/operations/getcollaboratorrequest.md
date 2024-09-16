@@ -6,7 +6,7 @@
 import { GetCollaboratorRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetCollaboratorRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

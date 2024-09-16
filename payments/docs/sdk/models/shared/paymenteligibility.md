@@ -6,8 +6,8 @@
 import { PaymentEligibility } from "@wingspan/payments/sdk/models/shared";
 
 let value: PaymentEligibility = {
-    field: "<value>",
-    value: "<value>",
+  field: "<value>",
+  value: "<value>",
 };
 ```
 

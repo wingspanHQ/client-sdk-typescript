@@ -6,7 +6,7 @@
 import { DownloadBankStatementAsPDFRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DownloadBankStatementAsPDFRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

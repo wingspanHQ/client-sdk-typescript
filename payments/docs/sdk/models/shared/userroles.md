@@ -6,8 +6,12 @@
 import { UserRoles } from "@wingspan/payments/sdk/models/shared";
 
 let value: UserRoles = {
-    ownerIds: ["<value>"],
-    viewerIds: ["<value>"],
+  ownerIds: [
+    "<value>",
+  ],
+  viewerIds: [
+    "<value>",
+  ],
 };
 ```
 

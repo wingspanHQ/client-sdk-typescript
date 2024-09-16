@@ -6,20 +6,20 @@
 import { PayrollReportLineItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportLineItem = {
-    costPerUnit: 1210.59,
-    createdAt: "<value>",
-    index: 9920.12,
-    labels: {
-        key: "<value>",
-    },
-    labelsBak2: {
-        key: "<value>",
-    },
-    quantity: 2415.45,
-    reimbursableExpense: false,
-    totalCost: 2494.2,
-    unit: "kilogram",
-    updatedAt: "<value>",
+  costPerUnit: 1328.15,
+  createdAt: "<value>",
+  index: 3790.57,
+  labels: {
+    "key": "<value>",
+  },
+  labelsBak2: {
+    "key": "<value>",
+  },
+  quantity: 3742.44,
+  reimbursableExpense: false,
+  totalCost: 3742.96,
+  unit: "newton",
+  updatedAt: "<value>",
 };
 ```
 

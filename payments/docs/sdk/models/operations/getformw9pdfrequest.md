@@ -6,7 +6,7 @@
 import { GetFormW9PDFRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetFormW9PDFRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

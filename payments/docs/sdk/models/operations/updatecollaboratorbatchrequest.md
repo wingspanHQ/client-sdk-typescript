@@ -6,7 +6,7 @@
 import { UpdateCollaboratorBatchRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCollaboratorBatchRequest = {
-    batchId: "<value>",
+  batchId: "<value>",
 };
 ```
 

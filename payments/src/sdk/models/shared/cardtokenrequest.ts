@@ -5,31 +5,34 @@
 import * as z from "zod";
 
 export type CardTokenRequest = {
-    verificationCode: string;
-    verificationToken: string;
+  verificationCode: string;
+  verificationToken: string;
 };
 
 /** @internal */
-export const CardTokenRequest$inboundSchema: z.ZodType<CardTokenRequest, z.ZodTypeDef, unknown> =
-    z.object({
-        verificationCode: z.string(),
-        verificationToken: z.string(),
-    });
+export const CardTokenRequest$inboundSchema: z.ZodType<
+  CardTokenRequest,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  verificationCode: z.string(),
+  verificationToken: z.string(),
+});
 
 /** @internal */
 export type CardTokenRequest$Outbound = {
-    verificationCode: string;
-    verificationToken: string;
+  verificationCode: string;
+  verificationToken: string;
 };
 
 /** @internal */
 export const CardTokenRequest$outboundSchema: z.ZodType<
-    CardTokenRequest$Outbound,
-    z.ZodTypeDef,
-    CardTokenRequest
+  CardTokenRequest$Outbound,
+  z.ZodTypeDef,
+  CardTokenRequest
 > = z.object({
-    verificationCode: z.string(),
-    verificationToken: z.string(),
+  verificationCode: z.string(),
+  verificationToken: z.string(),
 });
 
 /**
@@ -37,10 +40,10 @@ export const CardTokenRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace CardTokenRequest$ {
-    /** @deprecated use `CardTokenRequest$inboundSchema` instead. */
-    export const inboundSchema = CardTokenRequest$inboundSchema;
-    /** @deprecated use `CardTokenRequest$outboundSchema` instead. */
-    export const outboundSchema = CardTokenRequest$outboundSchema;
-    /** @deprecated use `CardTokenRequest$Outbound` instead. */
-    export type Outbound = CardTokenRequest$Outbound;
+  /** @deprecated use `CardTokenRequest$inboundSchema` instead. */
+  export const inboundSchema = CardTokenRequest$inboundSchema;
+  /** @deprecated use `CardTokenRequest$outboundSchema` instead. */
+  export const outboundSchema = CardTokenRequest$outboundSchema;
+  /** @deprecated use `CardTokenRequest$Outbound` instead. */
+  export type Outbound = CardTokenRequest$Outbound;
 }

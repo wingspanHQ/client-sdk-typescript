@@ -6,19 +6,19 @@
 import { InvoiceLineItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceLineItem = {
-    costPerUnit: 553.74,
-    createdAt: "<value>",
-    labels: {
-        key: "<value>",
-    },
-    labelsBak2: {
-        key: "<value>",
-    },
-    quantity: 4764.77,
-    reimbursableExpense: false,
-    totalCost: 3015.98,
-    unit: "volt",
-    updatedAt: "<value>",
+  costPerUnit: 568.48,
+  createdAt: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  labelsBak2: {
+    "key": "<value>",
+  },
+  quantity: 6600.4,
+  reimbursableExpense: false,
+  totalCost: 6969.97,
+  unit: "candela",
+  updatedAt: "<value>",
 };
 ```
 

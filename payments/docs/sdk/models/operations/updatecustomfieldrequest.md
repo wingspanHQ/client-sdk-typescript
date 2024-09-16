@@ -6,7 +6,7 @@
 import { UpdateCustomFieldRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCustomFieldRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

@@ -6,28 +6,28 @@
 import { CollaboratorsReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorsReportResponse = {
-    clientId: "<value>",
-    collaboratorGroups: [
-        {
-            collaboratorGroupId: "<value>",
-            description: "User-friendly tertiary core",
-            name: "<value>",
-        },
-    ],
-    createdAt: "<value>",
-    inviteEmail: "<value>",
-    member: {
-        user: {},
+  clientId: "<value>",
+  collaboratorGroups: [
+    {
+      collaboratorGroupId: "<value>",
+      description: "Enterprise-wide responsive challenge",
+      name: "<value>",
     },
-    memberClientId: "<value>",
-    memberId: "<value>",
-    servicesStatus: {
-        incomeAndExpenses: false,
-        taxWithholdings: false,
-    },
-    status: "Inactive",
-    taxStatus: "Pending",
-    updatedAt: "<value>",
+  ],
+  createdAt: "<value>",
+  inviteEmail: "<value>",
+  member: {
+    user: {},
+  },
+  memberClientId: "<value>",
+  memberId: "<value>",
+  servicesStatus: {
+    incomeAndExpenses: false,
+    taxWithholdings: false,
+  },
+  status: "Inactive",
+  taxStatus: "Failed",
+  updatedAt: "<value>",
 };
 ```
 

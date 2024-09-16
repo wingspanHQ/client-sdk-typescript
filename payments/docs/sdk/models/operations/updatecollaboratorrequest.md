@@ -6,7 +6,7 @@
 import { UpdateCollaboratorRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCollaboratorRequest = {
-    id: "<id>",
+  id: "<id>",
 };
 ```
 

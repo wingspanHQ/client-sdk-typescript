@@ -5,38 +5,38 @@
 import * as z from "zod";
 
 export type InvoiceNotificationPreferences = {
-    sendInvoice?: boolean | null | undefined;
-    sendReceipt?: boolean | null | undefined;
-    sendReminders: boolean;
+  sendInvoice?: boolean | null | undefined;
+  sendReceipt?: boolean | null | undefined;
+  sendReminders: boolean;
 };
 
 /** @internal */
 export const InvoiceNotificationPreferences$inboundSchema: z.ZodType<
-    InvoiceNotificationPreferences,
-    z.ZodTypeDef,
-    unknown
+  InvoiceNotificationPreferences,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    sendInvoice: z.nullable(z.boolean()).optional(),
-    sendReceipt: z.nullable(z.boolean()).optional(),
-    sendReminders: z.boolean(),
+  sendInvoice: z.nullable(z.boolean()).optional(),
+  sendReceipt: z.nullable(z.boolean()).optional(),
+  sendReminders: z.boolean(),
 });
 
 /** @internal */
 export type InvoiceNotificationPreferences$Outbound = {
-    sendInvoice?: boolean | null | undefined;
-    sendReceipt?: boolean | null | undefined;
-    sendReminders: boolean;
+  sendInvoice?: boolean | null | undefined;
+  sendReceipt?: boolean | null | undefined;
+  sendReminders: boolean;
 };
 
 /** @internal */
 export const InvoiceNotificationPreferences$outboundSchema: z.ZodType<
-    InvoiceNotificationPreferences$Outbound,
-    z.ZodTypeDef,
-    InvoiceNotificationPreferences
+  InvoiceNotificationPreferences$Outbound,
+  z.ZodTypeDef,
+  InvoiceNotificationPreferences
 > = z.object({
-    sendInvoice: z.nullable(z.boolean()).optional(),
-    sendReceipt: z.nullable(z.boolean()).optional(),
-    sendReminders: z.boolean(),
+  sendInvoice: z.nullable(z.boolean()).optional(),
+  sendReceipt: z.nullable(z.boolean()).optional(),
+  sendReminders: z.boolean(),
 });
 
 /**
@@ -44,10 +44,10 @@ export const InvoiceNotificationPreferences$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InvoiceNotificationPreferences$ {
-    /** @deprecated use `InvoiceNotificationPreferences$inboundSchema` instead. */
-    export const inboundSchema = InvoiceNotificationPreferences$inboundSchema;
-    /** @deprecated use `InvoiceNotificationPreferences$outboundSchema` instead. */
-    export const outboundSchema = InvoiceNotificationPreferences$outboundSchema;
-    /** @deprecated use `InvoiceNotificationPreferences$Outbound` instead. */
-    export type Outbound = InvoiceNotificationPreferences$Outbound;
+  /** @deprecated use `InvoiceNotificationPreferences$inboundSchema` instead. */
+  export const inboundSchema = InvoiceNotificationPreferences$inboundSchema;
+  /** @deprecated use `InvoiceNotificationPreferences$outboundSchema` instead. */
+  export const outboundSchema = InvoiceNotificationPreferences$outboundSchema;
+  /** @deprecated use `InvoiceNotificationPreferences$Outbound` instead. */
+  export type Outbound = InvoiceNotificationPreferences$Outbound;
 }

@@ -32,307 +32,403 @@ import * as shared from "./models/shared/index.js";
 import { unwrapAsync } from "./types/fp.js";
 
 export class InvoiceManagement extends ClientSDK {
-    /**
-     * Initiate New Invoice for a Member
-     *
-     * @remarks
-     * Facilitates the creation of a new invoice for a member using the provided invoice details. Useful for adding new billing records.
-     */
-    async create(
-        request?: shared.InvoiceCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateInvoiceResponse> {
-        return unwrapAsync(invoiceManagementCreate(this, request, options));
-    }
+  /**
+   * Initiate New Invoice for a Member
+   *
+   * @remarks
+   * Facilitates the creation of a new invoice for a member using the provided invoice details. Useful for adding new billing records.
+   */
+  async create(
+    request?: shared.InvoiceCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateInvoiceResponse> {
+    return unwrapAsync(invoiceManagementCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Create a new client-generated invoice template
-     *
-     * @remarks
-     * Allows clients to create a new invoice template based on the provided details.
-     */
-    async createClient(
-        request?: shared.ClientInvoiceTemplateCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateClientInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementCreateClient(this, request, options));
-    }
+  /**
+   * Create a new client-generated invoice template
+   *
+   * @remarks
+   * Allows clients to create a new invoice template based on the provided details.
+   */
+  async createClient(
+    request?: shared.ClientInvoiceTemplateCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateClientInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementCreateClient(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Generate a New Invoice on Behalf of the Client
-     *
-     * @remarks
-     * Enables the creation of a new invoice on behalf of a client using the provided details, facilitating new billing records.
-     */
-    async createGenerated(
-        request?: shared.ClientInvoiceCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateGeneratedInvoiceResponse> {
-        return unwrapAsync(invoiceManagementCreateGenerated(this, request, options));
-    }
+  /**
+   * Generate a New Invoice on Behalf of the Client
+   *
+   * @remarks
+   * Enables the creation of a new invoice on behalf of a client using the provided details, facilitating new billing records.
+   */
+  async createGenerated(
+    request?: shared.ClientInvoiceCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateGeneratedInvoiceResponse> {
+    return unwrapAsync(invoiceManagementCreateGenerated(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Create a new invoice template
-     *
-     * @remarks
-     * Creates a new invoice template based on the provided details.
-     */
-    async createTemplate(
-        request?: shared.InvoiceTemplateCreateRequest | undefined,
-        options?: RequestOptions
-    ): Promise<operations.CreateInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementCreateTemplate(this, request, options));
-    }
+  /**
+   * Create a new invoice template
+   *
+   * @remarks
+   * Creates a new invoice template based on the provided details.
+   */
+  async createTemplate(
+    request?: shared.InvoiceTemplateCreateRequest | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.CreateInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementCreateTemplate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Remove Invoice Record by ID
-     *
-     * @remarks
-     * Enables the deletion of a specific member's invoice using its unique ID, helping in maintaining accurate billing records.
-     */
-    async delete(
-        request: operations.DeleteInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteInvoiceResponse> {
-        return unwrapAsync(invoiceManagementDelete(this, request, options));
-    }
+  /**
+   * Remove Invoice Record by ID
+   *
+   * @remarks
+   * Enables the deletion of a specific member's invoice using its unique ID, helping in maintaining accurate billing records.
+   */
+  async delete(
+    request: operations.DeleteInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteInvoiceResponse> {
+    return unwrapAsync(invoiceManagementDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Remove a specific invoice template
-     *
-     * @remarks
-     * Deletes the invoice template associated with the provided unique identifier.
-     */
-    async deleteTemplate(
-        request: operations.DeleteInvoiceTemplateRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementDeleteTemplate(this, request, options));
-    }
+  /**
+   * Remove a specific invoice template
+   *
+   * @remarks
+   * Deletes the invoice template associated with the provided unique identifier.
+   */
+  async deleteTemplate(
+    request: operations.DeleteInvoiceTemplateRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementDeleteTemplate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Execute Payment for a Client-Generated Invoice
-     *
-     * @remarks
-     * Process a payment for a specific client-generated invoice using the provided details, ensuring the invoice is marked as settled.
-     */
-    async execute(
-        request: operations.ExecuteClientInvoicePaymentRequest,
-        options?: RequestOptions
-    ): Promise<operations.ExecuteClientInvoicePaymentResponse> {
-        return unwrapAsync(invoiceManagementExecute(this, request, options));
-    }
+  /**
+   * Execute Payment for a Client-Generated Invoice
+   *
+   * @remarks
+   * Process a payment for a specific client-generated invoice using the provided details, ensuring the invoice is marked as settled.
+   */
+  async execute(
+    request: operations.ExecuteClientInvoicePaymentRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ExecuteClientInvoicePaymentResponse> {
+    return unwrapAsync(invoiceManagementExecute(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Generate a PDF for a specific invoice
-     *
-     * @remarks
-     * This endpoint allows for the dynamic generation of a PDF document for a given invoice, identified by its unique ID.
-     */
-    async generate(
-        request: operations.GenerateSpecificInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.GenerateSpecificInvoiceResponse> {
-        return unwrapAsync(invoiceManagementGenerate(this, request, options));
-    }
+  /**
+   * Generate a PDF for a specific invoice
+   *
+   * @remarks
+   * This endpoint allows for the dynamic generation of a PDF document for a given invoice, identified by its unique ID.
+   */
+  async generate(
+    request: operations.GenerateSpecificInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GenerateSpecificInvoiceResponse> {
+    return unwrapAsync(invoiceManagementGenerate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Generate Test Invoice for a Client
-     *
-     * @remarks
-     * Use this endpoint to create a test invoice for testing and validation purposes. This invoice will mimic a client's real invoice.
-     */
-    async generateTest(
-        request?: shared.TestInvoiceCreate | undefined,
-        options?: RequestOptions
-    ): Promise<operations.GenerateTestInvoiceResponse> {
-        return unwrapAsync(invoiceManagementGenerateTest(this, request, options));
-    }
+  /**
+   * Generate Test Invoice for a Client
+   *
+   * @remarks
+   * Use this endpoint to create a test invoice for testing and validation purposes. This invoice will mimic a client's real invoice.
+   */
+  async generateTest(
+    request?: shared.TestInvoiceCreate | undefined,
+    options?: RequestOptions,
+  ): Promise<operations.GenerateTestInvoiceResponse> {
+    return unwrapAsync(invoiceManagementGenerateTest(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch Invoice by ID
-     *
-     * @remarks
-     * Retrieve the specifics of an individual invoice associated with a member using its unique ID. Ideal for diving into invoice details.
-     */
-    async get(
-        request: operations.GetInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetInvoiceResponse> {
-        return unwrapAsync(invoiceManagementGet(this, request, options));
-    }
+  /**
+   * Fetch Invoice by ID
+   *
+   * @remarks
+   * Retrieve the specifics of an individual invoice associated with a member using its unique ID. Ideal for diving into invoice details.
+   */
+  async get(
+    request: operations.GetInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetInvoiceResponse> {
+    return unwrapAsync(invoiceManagementGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch a specific client-generated invoice template by ID
-     *
-     * @remarks
-     * Provides details of the client-generated invoice template associated with the provided unique identifier.
-     */
-    async getClient(
-        request: operations.GetClientInvoiceTemplateRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetClientInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementGetClient(this, request, options));
-    }
+  /**
+   * Fetch a specific client-generated invoice template by ID
+   *
+   * @remarks
+   * Provides details of the client-generated invoice template associated with the provided unique identifier.
+   */
+  async getClient(
+    request: operations.GetClientInvoiceTemplateRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetClientInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementGetClient(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve Fees Associated with a Client's Invoice
-     *
-     * @remarks
-     * Obtain a detailed breakdown of all the fees associated with a specific client's invoice, identified by its unique ID.
-     */
-    async getFees(
-        request: operations.GetInvoiceFeesRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetInvoiceFeesResponse> {
-        return unwrapAsync(invoiceManagementGetFees(this, request, options));
-    }
+  /**
+   * Retrieve Fees Associated with a Client's Invoice
+   *
+   * @remarks
+   * Obtain a detailed breakdown of all the fees associated with a specific client's invoice, identified by its unique ID.
+   */
+  async getFees(
+    request: operations.GetInvoiceFeesRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetInvoiceFeesResponse> {
+    return unwrapAsync(invoiceManagementGetFees(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Fetch Specific Client-Generated Invoice by ID
-     *
-     * @remarks
-     * Retrieve detailed information of an individual invoice created by a client using its unique ID for in-depth billing analysis.
-     */
-    async getGenerated(
-        request: operations.GetGeneratedInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetGeneratedInvoiceResponse> {
-        return unwrapAsync(invoiceManagementGetGenerated(this, request, options));
-    }
+  /**
+   * Fetch Specific Client-Generated Invoice by ID
+   *
+   * @remarks
+   * Retrieve detailed information of an individual invoice created by a client using its unique ID for in-depth billing analysis.
+   */
+  async getGenerated(
+    request: operations.GetGeneratedInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetGeneratedInvoiceResponse> {
+    return unwrapAsync(invoiceManagementGetGenerated(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Member Invoices
-     *
-     * @remarks
-     * Fetch a complete list of invoices associated with members, providing a comprehensive overview of all member-related billing details.
-     */
-    async getMember(options?: RequestOptions): Promise<operations.GetMemberInvoicesResponse> {
-        return unwrapAsync(invoiceManagementGetMember(this, options));
-    }
+  /**
+   * Retrieve All Member Invoices
+   *
+   * @remarks
+   * Fetch a complete list of invoices associated with members, providing a comprehensive overview of all member-related billing details.
+   */
+  async getMember(
+    options?: RequestOptions,
+  ): Promise<operations.GetMemberInvoicesResponse> {
+    return unwrapAsync(invoiceManagementGetMember(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve a specific invoice template by ID
-     *
-     * @remarks
-     * Fetches details of the invoice template corresponding to the provided unique identifier.
-     */
-    async getTemplate(
-        request: operations.GetInvoiceTemplateRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementGetTemplate(this, request, options));
-    }
+  /**
+   * Retrieve a specific invoice template by ID
+   *
+   * @remarks
+   * Fetches details of the invoice template corresponding to the provided unique identifier.
+   */
+  async getTemplate(
+    request: operations.GetInvoiceTemplateRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementGetTemplate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve All Invoices Generated by a Client
-     *
-     * @remarks
-     * Fetch a comprehensive list of invoices that have been generated by a client, offering an overview of all client-related billing records.
-     */
-    async list(options?: RequestOptions): Promise<operations.ListGeneratedInvoicesResponse> {
-        return unwrapAsync(invoiceManagementList(this, options));
-    }
+  /**
+   * Retrieve All Invoices Generated by a Client
+   *
+   * @remarks
+   * Fetch a comprehensive list of invoices that have been generated by a client, offering an overview of all client-related billing records.
+   */
+  async list(
+    options?: RequestOptions,
+  ): Promise<operations.ListGeneratedInvoicesResponse> {
+    return unwrapAsync(invoiceManagementList(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve all client-generated invoice templates
-     *
-     * @remarks
-     * Fetches a comprehensive list of all invoice templates created by clients in the system.
-     */
-    async listClient(
-        options?: RequestOptions
-    ): Promise<operations.ListClientInvoiceTemplatesResponse> {
-        return unwrapAsync(invoiceManagementListClient(this, options));
-    }
+  /**
+   * Retrieve all client-generated invoice templates
+   *
+   * @remarks
+   * Fetches a comprehensive list of all invoice templates created by clients in the system.
+   */
+  async listClient(
+    options?: RequestOptions,
+  ): Promise<operations.ListClientInvoiceTemplatesResponse> {
+    return unwrapAsync(invoiceManagementListClient(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Retrieve all available invoice templates
-     *
-     * @remarks
-     * Fetches a comprehensive list of all invoice templates in the system.
-     */
-    async listTemplates(
-        options?: RequestOptions
-    ): Promise<operations.ListInvoiceTemplatesResponse> {
-        return unwrapAsync(invoiceManagementListTemplates(this, options));
-    }
+  /**
+   * Retrieve all available invoice templates
+   *
+   * @remarks
+   * Fetches a comprehensive list of all invoice templates in the system.
+   */
+  async listTemplates(
+    options?: RequestOptions,
+  ): Promise<operations.ListInvoiceTemplatesResponse> {
+    return unwrapAsync(invoiceManagementListTemplates(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Refund a deposited invoice
-     *
-     * @remarks
-     * Use this endpoint to refund a specific amount of a deposited invoice.
-     */
-    async refund(
-        request: operations.RefundDepositedInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.RefundDepositedInvoiceResponse> {
-        return unwrapAsync(invoiceManagementRefund(this, request, options));
-    }
+  /**
+   * Refund a deposited invoice
+   *
+   * @remarks
+   * Use this endpoint to refund a specific amount of a deposited invoice.
+   */
+  async refund(
+    request: operations.RefundDepositedInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.RefundDepositedInvoiceResponse> {
+    return unwrapAsync(invoiceManagementRefund(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Send an invoice by email
-     *
-     * @remarks
-     * Use this endpoint to send an invoice by email using its unique ID for identification.
-     */
-    async send(
-        request: operations.SendInvoiceEmailRequest,
-        options?: RequestOptions
-    ): Promise<operations.SendInvoiceEmailResponse> {
-        return unwrapAsync(invoiceManagementSend(this, request, options));
-    }
+  /**
+   * Send an invoice by email
+   *
+   * @remarks
+   * Use this endpoint to send an invoice by email using its unique ID for identification.
+   */
+  async send(
+    request: operations.SendInvoiceEmailRequest,
+    options?: RequestOptions,
+  ): Promise<operations.SendInvoiceEmailResponse> {
+    return unwrapAsync(invoiceManagementSend(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify Existing Invoice Details
-     *
-     * @remarks
-     * Allows updates to the details of an existing member invoice using its unique ID. Useful for making corrections or updates to billing records.
-     */
-    async update(
-        request: operations.UpdateInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateInvoiceResponse> {
-        return unwrapAsync(invoiceManagementUpdate(this, request, options));
-    }
+  /**
+   * Modify Existing Invoice Details
+   *
+   * @remarks
+   * Allows updates to the details of an existing member invoice using its unique ID. Useful for making corrections or updates to billing records.
+   */
+  async update(
+    request: operations.UpdateInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateInvoiceResponse> {
+    return unwrapAsync(invoiceManagementUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify a client-generated invoice template
-     *
-     * @remarks
-     * Updates the specified client-generated invoice template with the provided modifications.
-     */
-    async updateClient(
-        request: operations.UpdateClientInvoiceTemplateRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateClientInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementUpdateClient(this, request, options));
-    }
+  /**
+   * Modify a client-generated invoice template
+   *
+   * @remarks
+   * Updates the specified client-generated invoice template with the provided modifications.
+   */
+  async updateClient(
+    request: operations.UpdateClientInvoiceTemplateRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateClientInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementUpdateClient(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify an Existing Client-Generated Invoice
-     *
-     * @remarks
-     * Allows for modifications to a client-generated invoice using its unique ID, ensuring billing details remain current and accurate.
-     */
-    async updateGenerated(
-        request: operations.UpdateGeneratedInvoiceRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateGeneratedInvoiceResponse> {
-        return unwrapAsync(invoiceManagementUpdateGenerated(this, request, options));
-    }
+  /**
+   * Modify an Existing Client-Generated Invoice
+   *
+   * @remarks
+   * Allows for modifications to a client-generated invoice using its unique ID, ensuring billing details remain current and accurate.
+   */
+  async updateGenerated(
+    request: operations.UpdateGeneratedInvoiceRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateGeneratedInvoiceResponse> {
+    return unwrapAsync(invoiceManagementUpdateGenerated(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Modify details of an existing invoice template
-     *
-     * @remarks
-     * Updates details of the specified invoice template based on the provided information.
-     */
-    async updateTemplate(
-        request: operations.UpdateInvoiceTemplateRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateInvoiceTemplateResponse> {
-        return unwrapAsync(invoiceManagementUpdateTemplate(this, request, options));
-    }
+  /**
+   * Modify details of an existing invoice template
+   *
+   * @remarks
+   * Updates details of the specified invoice template based on the provided information.
+   */
+  async updateTemplate(
+    request: operations.UpdateInvoiceTemplateRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateInvoiceTemplateResponse> {
+    return unwrapAsync(invoiceManagementUpdateTemplate(
+      this,
+      request,
+      options,
+    ));
+  }
 }
