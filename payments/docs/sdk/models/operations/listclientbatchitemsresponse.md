@@ -7,7 +7,7 @@ import { ListClientBatchItemsResponse } from "@wingspan/payments/sdk/models/oper
 
 let value: ListClientBatchItemsResponse = {
   contentType: "<value>",
-  statusCode: 149675,
+  statusCode: 468651,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

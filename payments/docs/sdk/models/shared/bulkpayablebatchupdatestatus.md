@@ -5,7 +5,7 @@
 ```typescript
 import { BulkPayableBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkPayableBatchUpdateStatus = "Pending";
+let value: BulkPayableBatchUpdateStatus = "Complete";
 ```
 
 ## Values

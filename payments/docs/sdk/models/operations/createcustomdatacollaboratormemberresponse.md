@@ -7,7 +7,7 @@ import { CreateCustomDataCollaboratorMemberResponse } from "@wingspan/payments/s
 
 let value: CreateCustomDataCollaboratorMemberResponse = {
   contentType: "<value>",
-  statusCode: 423655,
+  statusCode: 963663,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

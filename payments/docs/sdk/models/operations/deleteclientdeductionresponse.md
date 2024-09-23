@@ -7,7 +7,7 @@ import { DeleteClientDeductionResponse } from "@wingspan/payments/sdk/models/ope
 
 let value: DeleteClientDeductionResponse = {
   contentType: "<value>",
-  statusCode: 60225,
+  statusCode: 523248,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

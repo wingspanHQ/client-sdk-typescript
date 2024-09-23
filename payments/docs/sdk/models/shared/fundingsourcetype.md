@@ -5,7 +5,7 @@
 ```typescript
 import { FundingSourceType } from "@wingspan/payments/sdk/models/shared";
 
-let value: FundingSourceType = "Account";
+let value: FundingSourceType = "PaymentCard";
 ```
 
 ## Values

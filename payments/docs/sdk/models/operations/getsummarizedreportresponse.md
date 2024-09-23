@@ -7,7 +7,7 @@ import { GetSummarizedReportResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: GetSummarizedReportResponse = {
   contentType: "<value>",
-  statusCode: 565189,
+  statusCode: 359978,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

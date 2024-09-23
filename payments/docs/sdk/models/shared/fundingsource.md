@@ -6,7 +6,7 @@
 import { FundingSource } from "@wingspan/payments/sdk/models/shared";
 
 let value: FundingSource = {
-  fundingSourceCurrency: "CAD",
+  fundingSourceCurrency: "USD",
   fundingSourceId: "<value>",
   fundingSourceType: "Account",
 };

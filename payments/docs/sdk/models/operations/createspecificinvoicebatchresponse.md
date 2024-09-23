@@ -7,7 +7,7 @@ import { CreateSpecificInvoiceBatchResponse } from "@wingspan/payments/sdk/model
 
 let value: CreateSpecificInvoiceBatchResponse = {
   contentType: "<value>",
-  statusCode: 521848,
+  statusCode: 653108,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

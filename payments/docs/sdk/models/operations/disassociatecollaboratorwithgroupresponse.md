@@ -7,7 +7,7 @@ import { DisassociateCollaboratorWithGroupResponse } from "@wingspan/payments/sd
 
 let value: DisassociateCollaboratorWithGroupResponse = {
   contentType: "<value>",
-  statusCode: 138183,
+  statusCode: 19193,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

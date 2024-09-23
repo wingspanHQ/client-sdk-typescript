@@ -10,7 +10,7 @@ let value: CustomField = {
   key: "<key>",
   name: "<value>",
   required: false,
-  resourceType: "Collaborator",
+  resourceType: "LineItem",
   type: "Boolean",
 };
 ```

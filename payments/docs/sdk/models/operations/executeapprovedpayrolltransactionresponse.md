@@ -7,7 +7,7 @@ import { ExecuteApprovedPayrollTransactionResponse } from "@wingspan/payments/sd
 
 let value: ExecuteApprovedPayrollTransactionResponse = {
   contentType: "<value>",
-  statusCode: 688661,
+  statusCode: 69167,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -9,13 +9,13 @@ let value: PayoutSettingsResponse = {
   payoutDestinations: [
     {
       destinationId: "<value>",
-      destinationType: "Account",
+      destinationType: "WeGift",
       name: "<value>",
-      payoutMethod: "Standard",
-      percentage: 5083.15,
+      payoutMethod: "Check",
+      percentage: 3331.45,
     },
   ],
-  payoutPreferences: "Check",
+  payoutPreferences: "Standard",
 };
 ```
 

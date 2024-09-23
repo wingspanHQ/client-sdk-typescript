@@ -5,7 +5,7 @@
 ```typescript
 import { AdditionalDataUpdateRequestResourceType } from "@wingspan/payments/sdk/models/shared";
 
-let value: AdditionalDataUpdateRequestResourceType = "Collaborator";
+let value: AdditionalDataUpdateRequestResourceType = "LineItem";
 ```
 
 ## Values

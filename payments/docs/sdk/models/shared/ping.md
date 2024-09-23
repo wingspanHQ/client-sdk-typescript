@@ -6,7 +6,7 @@
 import { Ping } from "@wingspan/payments/sdk/models/shared";
 
 let value: Ping = {
-  code: 5232.48,
+  code: 1999.97,
   message: "<value>",
   status: "<value>",
 };

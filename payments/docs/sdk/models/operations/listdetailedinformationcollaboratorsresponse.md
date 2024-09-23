@@ -7,7 +7,7 @@ import { ListDetailedInformationCollaboratorsResponse } from "@wingspan/payments
 
 let value: ListDetailedInformationCollaboratorsResponse = {
   contentType: "<value>",
-  statusCode: 865103,
+  statusCode: 171629,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

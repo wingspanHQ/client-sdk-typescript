@@ -6,7 +6,7 @@
 import { CheckbookCardCreate } from "@wingspan/payments/sdk/models/shared";
 
 let value: CheckbookCardCreate = {
-  cardNumber: "6759-3049-8285-7415",
+  cardNumber: "4860319446319",
   expMM: "<value>",
   expYYYY: "<value>",
   name: "<value>",

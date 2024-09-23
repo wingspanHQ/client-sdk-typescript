@@ -15,7 +15,7 @@ let value: BulkClientBatch = {
     "key": "<value>",
   },
   memberId: "<value>",
-  status: "Processing",
+  status: "Failed",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

@@ -10,7 +10,7 @@ let value: CollaboratorsReportResponse = {
   collaboratorGroups: [
     {
       collaboratorGroupId: "<value>",
-      description: "Enterprise-wide responsive challenge",
+      description: "Triple-buffered leading edge secured line",
       name: "<value>",
     },
   ],
@@ -25,8 +25,8 @@ let value: CollaboratorsReportResponse = {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
-  status: "Inactive",
-  taxStatus: "Failed",
+  status: "Pending",
+  taxStatus: "Complete",
   updatedAt: "<value>",
 };
 ```

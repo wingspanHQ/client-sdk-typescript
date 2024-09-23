@@ -10,7 +10,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   collaboratorGroups: [
     {
       collaboratorGroupId: "<value>",
-      description: "Exclusive zero defect function",
+      description: "Reactive discrete local area network",
       name: "<value>",
     },
   ],
@@ -22,16 +22,16 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   memberClientId: "<value>",
   memberId: "<value>",
   payoutsSummary: {
-    deductionsCount: 9689.72,
-    payablesCount: 6971.42,
-    totalDeducted: 9049.49,
-    totalPaid: 8970.71,
+    deductionsCount: 7791.79,
+    payablesCount: 7955.90,
+    totalDeducted: 3445.30,
+    totalPaid: 7708.73,
   },
   servicesStatus: {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
-  status: "Active",
+  status: "Pending",
   taxStatus: "Complete",
   updatedAt: "<value>",
 };

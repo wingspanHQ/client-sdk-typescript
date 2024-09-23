@@ -7,7 +7,7 @@ import { GetInstantPayoutInformationResponse } from "@wingspan/payments/sdk/mode
 
 let value: GetInstantPayoutInformationResponse = {
   contentType: "<value>",
-  statusCode: 437587,
+  statusCode: 568045,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

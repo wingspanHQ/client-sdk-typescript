@@ -5,7 +5,7 @@
 ```typescript
 import { MeansType } from "@wingspan/payments/sdk/models/shared";
 
-let value: MeansType = "Account";
+let value: MeansType = "InternalAccount";
 ```
 
 ## Values

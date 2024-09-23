@@ -6,10 +6,10 @@
 import { BulkInvoiceItemCreate } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkInvoiceItemCreate = {
-  amount: 7469.94,
+  amount: 3103.81,
   bulkInvoiceBatchId: "<value>",
   dueDate: "<value>",
-  invoiceStatus: "Paid",
+  invoiceStatus: "Open",
   lineItemDescription: "<value>",
 };
 ```

@@ -11,10 +11,10 @@ let value: InvoiceTemplate = {
     "key": "<value>",
   },
   invoiceData: {
-    amount: 8630.23,
+    amount: 8773.99,
     client: {},
     createdAt: "<value>",
-    currency: "CAD",
+    currency: "USD",
     dueDate: "<value>",
     eventActors: {
       "key": "<value>",
@@ -28,7 +28,7 @@ let value: InvoiceTemplate = {
     },
     lineItems: [
       {
-        costPerUnit: 1576.32,
+        costPerUnit: 13.83,
         createdAt: "<value>",
         labels: {
           "key": "<value>",
@@ -36,25 +36,25 @@ let value: InvoiceTemplate = {
         labelsBak2: {
           "key": "<value>",
         },
-        quantity: 9088.44,
+        quantity: 2476.85,
         reimbursableExpense: false,
-        totalCost: 9924.3,
-        unit: "farad",
+        totalCost: 3182.34,
+        unit: "siemens",
         updatedAt: "<value>",
       },
     ],
     member: {},
     memberAddress: {
-      addressLine1: "10663 Berge View",
-      city: "Isaiburgh",
-      postalCode: "87039-1343",
-      state: "Maryland",
+      addressLine1: "5389 Jackson Street",
+      city: "San Mateo",
+      postalCode: "22192-4478",
+      state: "Connecticut",
     },
     memberClientId: "<value>",
     memberId: "<value>",
     payments: [
       {
-        amount: 163.28,
+        amount: 4269.04,
         createdAt: "<value>",
         events: {},
         labels: {
@@ -63,12 +63,12 @@ let value: InvoiceTemplate = {
         paymentId: "<value>",
         sourceId: "<value>",
         sourceMetadata: {},
-        sourceType: "Card",
-        status: "Failed",
+        sourceType: "InternalAccount",
+        status: "Cleared",
         updatedAt: "<value>",
       },
     ],
-    status: "PaymentInTransit",
+    status: "Draft",
     updatedAt: "<value>",
     userRoles: {
       ownerIds: [
@@ -84,7 +84,7 @@ let value: InvoiceTemplate = {
     "key": "<value>",
   },
   memberId: "<value>",
-  status: "Draft",
+  status: "Active",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

@@ -5,7 +5,7 @@
 ```typescript
 import { TaxFormUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: TaxFormUpdateRequestStatus = "SubmittedToIrs";
+let value: TaxFormUpdateRequestStatus = "ReadyToSubmitToIrs";
 ```
 
 ## Values

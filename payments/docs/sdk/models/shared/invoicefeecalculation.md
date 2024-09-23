@@ -6,7 +6,7 @@
 import { InvoiceFeeCalculation } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceFeeCalculation = {
-  creditFeeTotal: 559.65,
+  creditFeeTotal: 2503.98,
 };
 ```
 

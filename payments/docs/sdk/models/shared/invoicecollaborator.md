@@ -6,9 +6,9 @@
 import { InvoiceCollaborator } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaborator = {
-  amount: 6813.59,
+  amount: 8571.25,
   currency: "USD",
-  description: "Devolved explicit approach",
+  description: "Extended foreground function",
   memberClientId: "<value>",
 };
 ```

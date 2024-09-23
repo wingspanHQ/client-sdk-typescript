@@ -7,7 +7,7 @@ import { CreateCollaboratorResponse } from "@wingspan/payments/sdk/models/operat
 
 let value: CreateCollaboratorResponse = {
   contentType: "<value>",
-  statusCode: 338007,
+  statusCode: 501324,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

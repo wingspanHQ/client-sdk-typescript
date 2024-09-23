@@ -7,7 +7,7 @@ import { GetEventAssociatedCollaboratorResponse } from "@wingspan/payments/sdk/m
 
 let value: GetEventAssociatedCollaboratorResponse = {
   contentType: "<value>",
-  statusCode: 949572,
+  statusCode: 290077,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

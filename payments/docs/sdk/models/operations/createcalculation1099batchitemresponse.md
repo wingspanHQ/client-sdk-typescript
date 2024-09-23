@@ -7,7 +7,7 @@ import { CreateCalculation1099BatchItemResponse } from "@wingspan/payments/sdk/m
 
 let value: CreateCalculation1099BatchItemResponse = {
   contentType: "<value>",
-  statusCode: 87129,
+  statusCode: 264555,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

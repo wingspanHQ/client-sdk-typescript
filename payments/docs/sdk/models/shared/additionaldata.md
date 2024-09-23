@@ -9,7 +9,7 @@ let value: AdditionalData = {
   key: "<key>",
   name: "<value>",
   required: false,
-  resourceType: "LineItem",
+  resourceType: "Collaborator",
   type: "String",
 };
 ```

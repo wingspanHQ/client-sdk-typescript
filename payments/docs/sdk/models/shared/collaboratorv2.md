@@ -14,7 +14,7 @@ let value: CollaboratorV2 = {
   collaborations: [
     {
       collaboratorId: "<value>",
-      status: "Pending",
+      status: "Inactive",
     },
   ],
   createdAt: "<value>",
@@ -24,12 +24,12 @@ let value: CollaboratorV2 = {
   firstCollaborationId: "<value>",
   form1099Balances: {},
   formW9Data: {
-    addressLine1: "2894 Rau Spring",
-    city: "Loncester",
-    companyStructure: "CorporationC",
-    country: "Liberia",
-    postalCode: "88167",
-    state: "Alabama",
+    addressLine1: "6906 N Broadway",
+    city: "Port Avis",
+    companyStructure: "CorporationS",
+    country: "Lithuania",
+    postalCode: "02468-6198",
+    state: "Montana",
   },
   internationalWireAccount: {
     accountNumber: "<value>",
@@ -44,7 +44,7 @@ let value: CollaboratorV2 = {
   memberId: "<value>",
   primaryCollaborationId: "<value>",
   status: "Pending",
-  taxStatus: "Failed",
+  taxStatus: "Pending",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

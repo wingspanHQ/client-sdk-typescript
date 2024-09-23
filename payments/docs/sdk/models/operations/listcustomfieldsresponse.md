@@ -7,7 +7,7 @@ import { ListCustomFieldsResponse } from "@wingspan/payments/sdk/models/operatio
 
 let value: ListCustomFieldsResponse = {
   contentType: "<value>",
-  statusCode: 120196,
+  statusCode: 123820,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

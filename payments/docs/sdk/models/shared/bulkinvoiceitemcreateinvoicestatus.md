@@ -5,7 +5,7 @@
 ```typescript
 import { BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkInvoiceItemCreateInvoiceStatus = "Paid";
+let value: BulkInvoiceItemCreateInvoiceStatus = "Approved";
 ```
 
 ## Values

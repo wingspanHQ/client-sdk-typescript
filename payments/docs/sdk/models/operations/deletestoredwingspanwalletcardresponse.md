@@ -7,7 +7,7 @@ import { DeleteStoredWingspanWalletCardResponse } from "@wingspan/payments/sdk/m
 
 let value: DeleteStoredWingspanWalletCardResponse = {
   contentType: "<value>",
-  statusCode: 715190,
+  statusCode: 602763,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

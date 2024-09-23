@@ -16,7 +16,7 @@ let value: BulkInvoiceBatch = {
   },
   memberId: "<value>",
   processingStrategy: "Merge",
-  status: "Complete",
+  status: "Processing",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

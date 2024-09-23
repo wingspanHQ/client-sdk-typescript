@@ -5,7 +5,7 @@
 ```typescript
 import { CardStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CardStatus = "SuspectedFraud";
+let value: CardStatus = "Active";
 ```
 
 ## Values

@@ -5,7 +5,7 @@
 ```typescript
 import { OffPlatformPayments } from "@wingspan/payments/sdk/models/shared";
 
-let value: OffPlatformPayments = "Exclude";
+let value: OffPlatformPayments = "Include";
 ```
 
 ## Values

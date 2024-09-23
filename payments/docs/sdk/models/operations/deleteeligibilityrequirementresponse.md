@@ -7,7 +7,7 @@ import { DeleteEligibilityRequirementResponse } from "@wingspan/payments/sdk/mod
 
 let value: DeleteEligibilityRequirementResponse = {
   contentType: "<value>",
-  statusCode: 96098,
+  statusCode: 652103,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

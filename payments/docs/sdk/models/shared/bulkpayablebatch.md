@@ -18,8 +18,8 @@ let value: BulkPayableBatch = {
   labels: {
     "key": "<value>",
   },
-  processingStrategy: "Single",
-  status: "Complete",
+  processingStrategy: "Merge",
+  status: "Open",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

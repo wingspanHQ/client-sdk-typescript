@@ -7,7 +7,7 @@ import { DeleteCollaboratorBatchResponse } from "@wingspan/payments/sdk/models/o
 
 let value: DeleteCollaboratorBatchResponse = {
   contentType: "<value>",
-  statusCode: 105907,
+  statusCode: 253291,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

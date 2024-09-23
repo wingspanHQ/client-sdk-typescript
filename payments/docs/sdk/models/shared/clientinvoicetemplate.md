@@ -12,17 +12,17 @@ let value: ClientInvoiceTemplate = {
     additionalRecipientEmails: [
       "<value>",
     ],
-    amount: 5775.43,
+    amount: 7032.17,
     client: {},
     createdAt: "<value>",
-    currency: "USD",
+    currency: "CAD",
     dueDate: "<value>",
     events: {},
     invoiceId: "<value>",
     invoiceNumber: "<value>",
     lineItems: [
       {
-        costPerUnit: 9594.34,
+        costPerUnit: 9591.42,
         createdAt: "<value>",
         labels: {
           "key": "<value>",
@@ -30,20 +30,20 @@ let value: ClientInvoiceTemplate = {
         labelsBak2: {
           "key": "<value>",
         },
-        quantity: 1741.12,
+        quantity: 1032.98,
         reimbursableExpense: false,
-        totalCost: 6455.7,
-        unit: "coulomb",
+        totalCost: 8671.67,
+        unit: "meter",
         updatedAt: "<value>",
       },
     ],
     member: {},
     memberAcceptsPayments: false,
     memberAddress: {
-      addressLine1: "74551 Considine Port",
-      city: "Gottliebstad",
-      postalCode: "33191",
-      state: "Georgia",
+      addressLine1: "4531 Joshua Street",
+      city: "East Arlo",
+      postalCode: "21200",
+      state: "Texas",
     },
     memberClient: {
       achCreditAccount: {
@@ -80,8 +80,8 @@ let value: ClientInvoiceTemplate = {
       memberId: "<value>",
       parentMemberClientId: "<value>",
       payerPayeeId: "<value>",
-      status: "Pending",
-      taxStatus: "Pending",
+      status: "Inactive",
+      taxStatus: "Incomplete",
       updatedAt: "<value>",
       userRoles: {
         ownerIds: [
@@ -96,10 +96,10 @@ let value: ClientInvoiceTemplate = {
     memberEmail: "<value>",
     memberLogoUrl: "<value>",
     memberName: "<value>",
-    memberPaymentsVersion: 5438.06,
+    memberPaymentsVersion: 4564.10,
     memberStripeAccountId: "<value>",
     projectName: "<value>",
-    status: "Draft",
+    status: "Open",
     updatedAt: "<value>",
   },
   invoiceTemplateId: "<value>",
@@ -108,10 +108,10 @@ let value: ClientInvoiceTemplate = {
   scheduleDates: [
     {
       date: "<value>",
-      status: "Completed",
+      status: "Pending",
     },
   ],
-  status: "Cancelled",
+  status: "Draft",
   updatedAt: "<value>",
 };
 ```

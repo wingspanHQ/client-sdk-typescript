@@ -6,16 +6,16 @@
 import { BulkPayableImportSummary } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkPayableImportSummary = {
-  deductionCollaboratorsCount: 925.96,
-  netImportAmount: 9037.2,
-  payableCollaboratorsCount: 2174.5,
-  toBeCreatedDeductionsCount: 834.22,
-  toBeCreatedPayablesCount: 7492.55,
-  toBeUpdatedDeductionsCount: 5521.93,
-  toBeUpdatedPayablesCount: 7316.94,
-  totalDeductionsAmount: 5844.76,
-  totalPayableItems: 456.14,
-  totalPayablesAmount: 9619.37,
+  deductionCollaboratorsCount: 5249.70,
+  netImportAmount: 7505.95,
+  payableCollaboratorsCount: 3335.07,
+  toBeCreatedDeductionsCount: 9241.59,
+  toBeCreatedPayablesCount: 8623.19,
+  toBeUpdatedDeductionsCount: 486.90,
+  toBeUpdatedPayablesCount: 2536.43,
+  totalDeductionsAmount: 4461.36,
+  totalPayableItems: 1046.28,
+  totalPayablesAmount: 3484.76,
 };
 ```
 

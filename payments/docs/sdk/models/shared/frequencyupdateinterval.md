@@ -5,7 +5,7 @@
 ```typescript
 import { FrequencyUpdateInterval } from "@wingspan/payments/sdk/models/shared";
 
-let value: FrequencyUpdateInterval = "Month";
+let value: FrequencyUpdateInterval = "Week";
 ```
 
 ## Values

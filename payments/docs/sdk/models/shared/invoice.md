@@ -6,10 +6,10 @@
 import { Invoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: Invoice = {
-  amount: 811.01,
+  amount: 3782.45,
   client: {},
   createdAt: "<value>",
-  currency: "USD",
+  currency: "CAD",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -23,7 +23,7 @@ let value: Invoice = {
   },
   lineItems: [
     {
-      costPerUnit: 4072.41,
+      costPerUnit: 1746.58,
       createdAt: "<value>",
       labels: {
         "key": "<value>",
@@ -31,25 +31,25 @@ let value: Invoice = {
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 7752.2,
+      quantity: 3279.88,
       reimbursableExpense: false,
-      totalCost: 2322.34,
-      unit: "henry",
+      totalCost: 6803.49,
+      unit: "second",
       updatedAt: "<value>",
     },
   ],
   member: {},
   memberAddress: {
-    addressLine1: "30970 Kade Shoal",
-    city: "East Shany",
-    postalCode: "20668",
-    state: "Illinois",
+    addressLine1: "5225 Klocko Green",
+    city: "Cambridge",
+    postalCode: "35639",
+    state: "Louisiana",
   },
   memberClientId: "<value>",
   memberId: "<value>",
   payments: [
     {
-      amount: 4321.48,
+      amount: 7214.07,
       createdAt: "<value>",
       events: {},
       labels: {
@@ -63,7 +63,7 @@ let value: Invoice = {
       updatedAt: "<value>",
     },
   ],
-  status: "Cancelled",
+  status: "Paid",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

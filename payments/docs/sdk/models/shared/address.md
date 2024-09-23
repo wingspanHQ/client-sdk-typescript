@@ -6,10 +6,10 @@
 import { Address } from "@wingspan/payments/sdk/models/shared";
 
 let value: Address = {
-  addressLine1: "92306 Cole Place",
-  city: "Spencerboro",
-  postalCode: "13550",
-  state: "Florida",
+  addressLine1: "701 Mayert Ferry",
+  city: "Norman",
+  postalCode: "57332-1974",
+  state: "Idaho",
 };
 ```
 

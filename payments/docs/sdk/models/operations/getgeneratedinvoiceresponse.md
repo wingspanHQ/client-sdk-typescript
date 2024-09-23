@@ -7,7 +7,7 @@ import { GetGeneratedInvoiceResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: GetGeneratedInvoiceResponse = {
   contentType: "<value>",
-  statusCode: 208876,
+  statusCode: 223081,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

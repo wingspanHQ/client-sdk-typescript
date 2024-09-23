@@ -5,7 +5,7 @@
 ```typescript
 import { BulkCalculation1099ItemUpdateCalculationType } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkCalculation1099ItemUpdateCalculationType = "Submissions";
+let value: BulkCalculation1099ItemUpdateCalculationType = "Balances";
 ```
 
 ## Values

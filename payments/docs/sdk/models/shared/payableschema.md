@@ -6,7 +6,7 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-  amount: 9816.4,
+  amount: 2082.53,
   attachments: {},
   client: {},
   clientId: "<value>",
@@ -33,7 +33,7 @@ let value: PayableSchema = {
   },
   lineItems: [
     {
-      costPerUnit: 2446.51,
+      costPerUnit: 2153.98,
       createdAt: "<value>",
       labels: {
         "key": "<value>",
@@ -41,26 +41,26 @@ let value: PayableSchema = {
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 9742.57,
+      quantity: 8583.38,
       reimbursableExpense: false,
-      totalCost: 3743.23,
-      unit: "katal",
+      totalCost: 8028.93,
+      unit: "kelvin",
       updatedAt: "<value>",
     },
   ],
   member: {},
   memberAddress: {
-    addressLine1: "43186 Kuhn Pine",
-    city: "Gresham",
-    postalCode: "37820",
-    state: "Illinois",
+    addressLine1: "2768 Volkman Camp",
+    city: "Lake Hazle",
+    postalCode: "18487",
+    state: "Massachusetts",
   },
   memberId: "<value>",
   notificationPreferences: {
     sendReminders: false,
   },
   payableId: "<value>",
-  status: "Pending",
+  status: "Overdue",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

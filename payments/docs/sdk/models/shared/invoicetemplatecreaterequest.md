@@ -12,7 +12,7 @@ let value: InvoiceTemplateCreateRequest = {
     ],
     memberClientId: "<value>",
   },
-  status: "Cancelled",
+  status: "Active",
 };
 ```
 

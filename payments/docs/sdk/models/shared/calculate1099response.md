@@ -41,8 +41,8 @@ let value: Calculate1099Response = {
     memberId: "<value>",
     parentMemberClientId: "<value>",
     payerPayeeId: "<value>",
-    status: "Inactive",
-    taxStatus: "Complete",
+    status: "Active",
+    taxStatus: "Pending",
     updatedAt: "<value>",
     userRoles: {
       ownerIds: [

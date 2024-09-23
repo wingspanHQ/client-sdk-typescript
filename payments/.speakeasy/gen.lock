@@ -3,10 +3,10 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: 1.396.9
-  generationVersion: 2.415.7
-  releaseVersion: 2.6.0
-  configChecksum: d8ae9aef5eb019c7c97f4f714f61fce0
+  speakeasyVersion: 1.401.2
+  generationVersion: 2.421.3
+  releaseVersion: 2.6.1
+  configChecksum: 3622a51dfdd09d27c4be2e00a91c03a5
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
@@ -14,7 +14,7 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.17.3
+    core: 3.17.6
     defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
     enumUnions: 0.1.0
@@ -1618,7 +1618,7 @@ examples:
           taxFormId: "<value>"
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<value>", "adjustments": "4893.82", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "2884.08", "platformIncome": "1343.65", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "Excluded", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "3768.44"}
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "6384.24", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Electronic", "eventActors": {}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "9510.62", "platformIncome": "0.87", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "Excluded", "submissions": [{"correctionType": "Type2", "deliveryMethod": "Mail", "externalDocumentId": "<value>", "isCorrected": true, "status": "SubmittedToIrs", "submissionId": "<value>"}, {"correctionType": "None", "deliveryMethod": "Electronic", "externalDocumentId": "<value>", "isCorrected": true, "status": "Pending", "submissionId": "<value>"}], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": ["<value>"], "viewerIds": []}, "year": "738.99"}
   createCalculation1099Batch:
     speakeasy-default-create-calculation1099-batch:
       responses:
@@ -1639,12 +1639,12 @@ examples:
           taxFormId: "<value>"
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<value>", "adjustments": "3160.61", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Electronic", "eventActors": {"key": "<value>"}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "1231.04", "platformIncome": "2874.15", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": true, "status": "PendingCorrection", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "9536.85"}
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "1410.42", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {"key": "<value>"}, "eventHistory": [{"eventType": "Emailed1099CopyDelivered", "timestamp": "<value>", "triggeredBy": "System"}, {"eventType": "CorrectionAccepted", "timestamp": "<value>", "triggeredBy": "Payee"}, {"eventType": "FormAcceptedByIRS", "timestamp": "<value>", "triggeredBy": "Payee"}], "filingStateCode": "<value>", "labels": {"key": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "7264.41", "platformIncome": "8251.16", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": false, "recipientSyncEnabled": true, "status": "Pending", "submissions": [{"correctionType": "None", "deliveryMethod": "Electronic", "externalDocumentId": "<value>", "isCorrected": false, "status": "Ineligible", "submissionId": "<value>"}], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": ["<value>", "<value>"]}, "year": "1036.75"}
   create1099TaxForm:
     speakeasy-default-create1099-tax-form:
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<value>", "adjustments": "7966.29", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "289.74", "platformIncome": "8679", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "SubmittedToIrs", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "1219.41"}
+          application/json: {"activeSubmissionId": "<value>", "adjustments": "8411.37", "clientId": "<value>", "createdAt": "<value>", "deliveryMethod": "Mail", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "eventHistory": [], "filingStateCode": "<value>", "labels": {"key": "<value>"}, "memberId": "<value>", "payerPayeeId": "<value>", "paymentProcessingFees": "4811.85", "platformIncome": "1946.80", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": false, "recipientSyncEnabled": true, "status": "ReadyToSubmitToIrs", "submissions": [], "taxFormId": "<value>", "type": "Form1099Nec", "updatedAt": "<value>", "userRoles": {"ownerIds": ["<value>", "<value>", "<value>"], "viewerIds": []}, "year": "2384.86"}
   getTaxForm:
     speakeasy-default-get-tax-form:
       parameters:

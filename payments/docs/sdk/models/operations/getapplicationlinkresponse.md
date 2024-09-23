@@ -7,7 +7,7 @@ import { GetApplicationLinkResponse } from "@wingspan/payments/sdk/models/operat
 
 let value: GetApplicationLinkResponse = {
   contentType: "<value>",
-  statusCode: 791725,
+  statusCode: 978619,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

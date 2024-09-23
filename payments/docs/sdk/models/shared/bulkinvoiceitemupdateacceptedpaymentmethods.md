@@ -5,7 +5,7 @@
 ```typescript
 import { BulkInvoiceItemUpdateAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkInvoiceItemUpdateAcceptedPaymentMethods = "Credit";
+let value: BulkInvoiceItemUpdateAcceptedPaymentMethods = "ACH";
 ```
 
 ## Values

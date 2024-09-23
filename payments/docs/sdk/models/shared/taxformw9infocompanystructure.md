@@ -5,7 +5,7 @@
 ```typescript
 import { TaxFormW9InfoCompanyStructure } from "@wingspan/payments/sdk/models/shared";
 
-let value: TaxFormW9InfoCompanyStructure = "Partnership";
+let value: TaxFormW9InfoCompanyStructure = "LLCCorporationS";
 ```
 
 ## Values

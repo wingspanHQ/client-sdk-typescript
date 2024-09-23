@@ -9,7 +9,7 @@ let value: CollaboratorGroupResponse = {
   clientId: "<value>",
   collaboratorGroupId: "<value>",
   defaultGroup: false,
-  description: "Profit-focused actuating intranet",
+  description: "Grass-roots mobile definition",
   name: "<value>",
 };
 ```

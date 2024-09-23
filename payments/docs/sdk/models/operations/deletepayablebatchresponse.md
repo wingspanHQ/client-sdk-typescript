@@ -7,7 +7,7 @@ import { DeletePayableBatchResponse } from "@wingspan/payments/sdk/models/operat
 
 let value: DeletePayableBatchResponse = {
   contentType: "<value>",
-  statusCode: 414662,
+  statusCode: 466311,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

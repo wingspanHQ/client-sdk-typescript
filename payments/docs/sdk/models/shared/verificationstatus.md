@@ -5,7 +5,7 @@
 ```typescript
 import { VerificationStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: VerificationStatus = "Failed";
+let value: VerificationStatus = "None";
 ```
 
 ## Values

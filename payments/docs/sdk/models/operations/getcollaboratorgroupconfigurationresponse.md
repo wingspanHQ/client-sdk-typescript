@@ -7,7 +7,7 @@ import { GetCollaboratorGroupConfigurationResponse } from "@wingspan/payments/sd
 
 let value: GetCollaboratorGroupConfigurationResponse = {
   contentType: "<value>",
-  statusCode: 509624,
+  statusCode: 891924,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

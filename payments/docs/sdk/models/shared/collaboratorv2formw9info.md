@@ -6,12 +6,12 @@
 import { CollaboratorV2FormW9Info } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorV2FormW9Info = {
-  addressLine1: "79947 Abelardo Pine",
-  city: "West Hallie",
-  companyStructure: "SoleProprietorship",
-  country: "Israel",
-  postalCode: "21451-2904",
-  state: "Utah",
+  addressLine1: "990 Gillian Villages",
+  city: "East Shemar",
+  companyStructure: "CorporationS",
+  country: "Tunisia",
+  postalCode: "64062",
+  state: "Alaska",
 };
 ```
 

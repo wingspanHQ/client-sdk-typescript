@@ -5,7 +5,7 @@
 ```typescript
 import { CardType } from "@wingspan/payments/sdk/models/shared";
 
-let value: CardType = "individualDebitCard";
+let value: CardType = "businessVirtualDebitCard";
 ```
 
 ## Values

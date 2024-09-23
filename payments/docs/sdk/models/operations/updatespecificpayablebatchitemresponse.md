@@ -7,7 +7,7 @@ import { UpdateSpecificPayableBatchItemResponse } from "@wingspan/payments/sdk/m
 
 let value: UpdateSpecificPayableBatchItemResponse = {
   contentType: "<value>",
-  statusCode: 613064,
+  statusCode: 414263,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

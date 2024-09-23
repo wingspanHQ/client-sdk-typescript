@@ -5,7 +5,7 @@
 ```typescript
 import { BulkClientBatchStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkClientBatchStatus = "Open";
+let value: BulkClientBatchStatus = "Complete";
 ```
 
 ## Values

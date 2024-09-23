@@ -22,87 +22,87 @@ import { WingspanWallet } from "./wingspanwallet.js";
 export class Payments extends ClientSDK {
   private _serviceSettings?: ServiceSettings;
   get serviceSettings(): ServiceSettings {
-    return (this._serviceSettings ??= new ServiceSettings(this.options$));
+    return (this._serviceSettings ??= new ServiceSettings(this._options));
   }
 
   private _wingspanWallet?: WingspanWallet;
   get wingspanWallet(): WingspanWallet {
-    return (this._wingspanWallet ??= new WingspanWallet(this.options$));
+    return (this._wingspanWallet ??= new WingspanWallet(this._options));
   }
 
   private _deprecated?: Deprecated;
   get deprecated(): Deprecated {
-    return (this._deprecated ??= new Deprecated(this.options$));
+    return (this._deprecated ??= new Deprecated(this._options));
   }
 
   private _bankingManagement?: BankingManagement;
   get bankingManagement(): BankingManagement {
-    return (this._bankingManagement ??= new BankingManagement(this.options$));
+    return (this._bankingManagement ??= new BankingManagement(this._options));
   }
 
   private _oneThousandAndNinetyNineOperations?:
     OneThousandAndNinetyNineOperations;
   get oneThousandAndNinetyNineOperations(): OneThousandAndNinetyNineOperations {
     return (this._oneThousandAndNinetyNineOperations ??=
-      new OneThousandAndNinetyNineOperations(this.options$));
+      new OneThousandAndNinetyNineOperations(this._options));
   }
 
   private _bulkOperations?: BulkOperations;
   get bulkOperations(): BulkOperations {
-    return (this._bulkOperations ??= new BulkOperations(this.options$));
+    return (this._bulkOperations ??= new BulkOperations(this._options));
   }
 
   private _clientManagement?: ClientManagement;
   get clientManagement(): ClientManagement {
-    return (this._clientManagement ??= new ClientManagement(this.options$));
+    return (this._clientManagement ??= new ClientManagement(this._options));
   }
 
   private _invoiceManagement?: InvoiceManagement;
   get invoiceManagement(): InvoiceManagement {
-    return (this._invoiceManagement ??= new InvoiceManagement(this.options$));
+    return (this._invoiceManagement ??= new InvoiceManagement(this._options));
   }
 
   private _collaboratorManagement?: CollaboratorManagement;
   get collaboratorManagement(): CollaboratorManagement {
     return (this._collaboratorManagement ??= new CollaboratorManagement(
-      this.options$,
+      this._options,
     ));
   }
 
   private _documentSigningAndEligibility?: DocumentSigningAndEligibility;
   get documentSigningAndEligibility(): DocumentSigningAndEligibility {
     return (this._documentSigningAndEligibility ??=
-      new DocumentSigningAndEligibility(this.options$));
+      new DocumentSigningAndEligibility(this._options));
   }
 
   private _customFieldManagement?: CustomFieldManagement;
   get customFieldManagement(): CustomFieldManagement {
     return (this._customFieldManagement ??= new CustomFieldManagement(
-      this.options$,
+      this._options,
     ));
   }
 
   private _merchantCategoryCodes?: MerchantCategoryCodes;
   get merchantCategoryCodes(): MerchantCategoryCodes {
     return (this._merchantCategoryCodes ??= new MerchantCategoryCodes(
-      this.options$,
+      this._options,
     ));
   }
 
   private _payablesManagement?: PayablesManagement;
   get payablesManagement(): PayablesManagement {
-    return (this._payablesManagement ??= new PayablesManagement(this.options$));
+    return (this._payablesManagement ??= new PayablesManagement(this._options));
   }
 
   private _payrollSettings?: PayrollSettings;
   get payrollSettings(): PayrollSettings {
-    return (this._payrollSettings ??= new PayrollSettings(this.options$));
+    return (this._payrollSettings ??= new PayrollSettings(this._options));
   }
 
   private _reportingAndAnalytics?: ReportingAndAnalytics;
   get reportingAndAnalytics(): ReportingAndAnalytics {
     return (this._reportingAndAnalytics ??= new ReportingAndAnalytics(
-      this.options$,
+      this._options,
     ));
   }
 }

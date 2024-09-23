@@ -3,9 +3,9 @@
  */
 
 import { PaymentsCore } from "../core.js";
-import { encodeSimple as encodeSimple$ } from "../lib/encodings.js";
-import * as m$ from "../lib/matchers.js";
-import * as schemas$ from "../lib/schemas.js";
+import { encodeSimple } from "../lib/encodings.js";
+import * as M from "../lib/matchers.js";
+import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -28,7 +28,7 @@ import { Result } from "../sdk/types/fp.js";
  * Provides a comprehensive list of items present within a specified batch of collaborators, identifiable through its unique batch identifier.
  */
 export async function bulkOperationsListSpecificCollaboratorItem(
-  client$: PaymentsCore,
+  client: PaymentsCore,
   request: operations.ListSpecificCollaboratorBatchItemsRequest,
   options?: RequestOptions,
 ): Promise<
@@ -43,64 +43,64 @@ export async function bulkOperationsListSpecificCollaboratorItem(
     | ConnectionError
   >
 > {
-  const input$ = request;
+  const input = request;
 
-  const parsed$ = schemas$.safeParse(
-    input$,
-    (value$) =>
+  const parsed = safeParse(
+    input,
+    (value) =>
       operations.ListSpecificCollaboratorBatchItemsRequest$outboundSchema.parse(
-        value$,
+        value,
       ),
     "Input validation failed",
   );
-  if (!parsed$.ok) {
-    return parsed$;
+  if (!parsed.ok) {
+    return parsed;
   }
-  const payload$ = parsed$.value;
-  const body$ = null;
+  const payload = parsed.value;
+  const body = null;
 
-  const pathParams$ = {
-    batchId: encodeSimple$("batchId", payload$.batchId, {
+  const pathParams = {
+    batchId: encodeSimple("batchId", payload.batchId, {
       explode: false,
       charEncoding: "percent",
     }),
   };
 
-  const path$ = pathToFunc("/payments/bulk/collaborator/batch/{batchId}/item")(
-    pathParams$,
+  const path = pathToFunc("/payments/bulk/collaborator/batch/{batchId}/item")(
+    pathParams,
   );
 
-  const headers$ = new Headers({
+  const headers = new Headers({
     Accept: "application/json",
   });
 
-  const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
-  const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
+  const secConfig = await extractSecurity(client._options.bearerAuth);
+  const securityInput = secConfig == null ? {} : { bearerAuth: secConfig };
   const context = {
     operationID: "listSpecificCollaboratorBatchItems",
     oAuth2Scopes: [],
-    securitySource: client$.options$.bearerAuth,
+    securitySource: client._options.bearerAuth,
   };
-  const securitySettings$ = resolveGlobalSecurity(security$);
+  const requestSecurity = resolveGlobalSecurity(securityInput);
 
-  const requestRes = client$.createRequest$(context, {
-    security: securitySettings$,
+  const requestRes = client._createRequest(context, {
+    security: requestSecurity,
     method: "GET",
-    path: path$,
-    headers: headers$,
-    body: body$,
-    timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
+    path: path,
+    headers: headers,
+    body: body,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
     return requestRes;
   }
-  const request$ = requestRes.value;
+  const req = requestRes.value;
 
-  const doResult = await client$.do$(request$, {
+  const doResult = await client._do(req, {
     context,
     errorCodes: [],
     retryConfig: options?.retries
-      || client$.options$.retryConfig,
+      || client._options.retryConfig,
     retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
   });
   if (!doResult.ok) {
@@ -108,7 +108,7 @@ export async function bulkOperationsListSpecificCollaboratorItem(
   }
   const response = doResult.value;
 
-  const responseFields$ = {
+  const responseFields = {
     ContentType: response.headers.get("content-type")
       ?? "application/octet-stream",
     StatusCode: response.status,
@@ -116,7 +116,7 @@ export async function bulkOperationsListSpecificCollaboratorItem(
     Headers: {},
   };
 
-  const [result$] = await m$.match<
+  const [result] = await M.match<
     operations.ListSpecificCollaboratorBatchItemsResponse,
     | SDKError
     | SDKValidationError
@@ -126,15 +126,15 @@ export async function bulkOperationsListSpecificCollaboratorItem(
     | RequestTimeoutError
     | ConnectionError
   >(
-    m$.json(
+    M.json(
       200,
       operations.ListSpecificCollaboratorBatchItemsResponse$inboundSchema,
       { key: "classes" },
     ),
-  )(response, { extraFields: responseFields$ });
-  if (!result$.ok) {
-    return result$;
+  )(response, { extraFields: responseFields });
+  if (!result.ok) {
+    return result;
   }
 
-  return result$;
+  return result;
 }

@@ -7,7 +7,7 @@ import { DownloadBankStatementAsPDFResponse } from "@wingspan/payments/sdk/model
 
 let value: DownloadBankStatementAsPDFResponse = {
   contentType: "<value>",
-  statusCode: 383441,
+  statusCode: 778157,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

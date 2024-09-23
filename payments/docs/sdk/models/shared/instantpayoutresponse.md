@@ -7,11 +7,11 @@ import { InstantPayoutResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: InstantPayoutResponse = {
   instantPayoutAccount: {
-    country: "Denmark",
+    country: "Holy See (Vatican City State)",
     currency: "CAD",
     holderName: "<value>",
     numbers: {},
-    type: "BankAccount",
+    type: "Card",
   },
   instantPayoutAccountId: "<value>",
 };

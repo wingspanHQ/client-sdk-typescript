@@ -5,7 +5,7 @@
 ```typescript
 import { Interval } from "@wingspan/payments/sdk/models/shared";
 
-let value: Interval = "Month";
+let value: Interval = "Week";
 ```
 
 ## Values

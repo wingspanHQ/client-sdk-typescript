@@ -7,7 +7,7 @@ import { ListAgingReportLineItemsResponse } from "@wingspan/payments/sdk/models/
 
 let value: ListAgingReportLineItemsResponse = {
   contentType: "<value>",
-  statusCode: 265389,
+  statusCode: 521037,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -5,7 +5,7 @@
 ```typescript
 import { PayoutDestinationUpdatePayoutMethod } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayoutDestinationUpdatePayoutMethod = "Expedited";
+let value: PayoutDestinationUpdatePayoutMethod = "Standard";
 ```
 
 ## Values

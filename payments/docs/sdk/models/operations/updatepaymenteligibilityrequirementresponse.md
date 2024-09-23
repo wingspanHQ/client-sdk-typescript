@@ -7,7 +7,7 @@ import { UpdatePaymentEligibilityRequirementResponse } from "@wingspan/payments/
 
 let value: UpdatePaymentEligibilityRequirementResponse = {
   contentType: "<value>",
-  statusCode: 39187,
+  statusCode: 149448,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

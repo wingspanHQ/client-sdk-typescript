@@ -7,7 +7,7 @@ import { ListMemberClientAssociationsResponse } from "@wingspan/payments/sdk/mod
 
 let value: ListMemberClientAssociationsResponse = {
   contentType: "<value>",
-  statusCode: 170909,
+  statusCode: 667411,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

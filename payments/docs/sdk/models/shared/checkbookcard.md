@@ -7,12 +7,12 @@ import { CheckbookCard } from "@wingspan/payments/sdk/models/shared";
 
 let value: CheckbookCard = {
   address: {
-    addressLine1: "2236 Keebler Trafficway",
-    city: "North Elianeland",
-    postalCode: "35550-6963",
-    state: "Michigan",
+    addressLine1: "6922 Agnes Viaduct",
+    city: "Schadenboro",
+    postalCode: "04983-9299",
+    state: "South Carolina",
   },
-  brand: "Visa",
+  brand: "Discover",
   cardId: "<value>",
   expirationMM: "<value>",
   expirationYYYY: "<value>",

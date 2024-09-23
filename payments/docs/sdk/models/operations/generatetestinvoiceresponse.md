@@ -7,7 +7,7 @@ import { GenerateTestInvoiceResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: GenerateTestInvoiceResponse = {
   contentType: "<value>",
-  statusCode: 988374,
+  statusCode: 248753,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

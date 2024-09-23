@@ -18,7 +18,7 @@ let value: BulkCollaboratorBatch = {
   labels: {
     "key": "<value>",
   },
-  status: "Pending",
+  status: "Open",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

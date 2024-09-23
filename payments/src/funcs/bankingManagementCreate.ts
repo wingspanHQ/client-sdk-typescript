@@ -3,12 +3,9 @@
  */
 
 import { PaymentsCore } from "../core.js";
-import {
-  encodeJSON as encodeJSON$,
-  encodeSimple as encodeSimple$,
-} from "../lib/encodings.js";
-import * as m$ from "../lib/matchers.js";
-import * as schemas$ from "../lib/schemas.js";
+import { encodeJSON, encodeSimple } from "../lib/encodings.js";
+import * as M from "../lib/matchers.js";
+import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -31,7 +28,7 @@ import { Result } from "../sdk/types/fp.js";
  * Allows the addition of a new debit card to a member's profile for payout transactions.
  */
 export async function bankingManagementCreate(
-  client$: PaymentsCore,
+  client: PaymentsCore,
   request: operations.CreateDebitCardRequest,
   options?: RequestOptions,
 ): Promise<
@@ -46,64 +43,64 @@ export async function bankingManagementCreate(
     | ConnectionError
   >
 > {
-  const input$ = request;
+  const input = request;
 
-  const parsed$ = schemas$.safeParse(
-    input$,
-    (value$) => operations.CreateDebitCardRequest$outboundSchema.parse(value$),
+  const parsed = safeParse(
+    input,
+    (value) => operations.CreateDebitCardRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
-  if (!parsed$.ok) {
-    return parsed$;
+  if (!parsed.ok) {
+    return parsed;
   }
-  const payload$ = parsed$.value;
-  const body$ = encodeJSON$("body", payload$.CheckbookCardCreate, {
+  const payload = parsed.value;
+  const body = encodeJSON("body", payload.CheckbookCardCreate, {
     explode: true,
   });
 
-  const pathParams$ = {
-    memberId: encodeSimple$("memberId", payload$.memberId, {
+  const pathParams = {
+    memberId: encodeSimple("memberId", payload.memberId, {
       explode: false,
       charEncoding: "percent",
     }),
   };
 
-  const path$ = pathToFunc("/payments/payout-settings/{memberId}/debit-card")(
-    pathParams$,
+  const path = pathToFunc("/payments/payout-settings/{memberId}/debit-card")(
+    pathParams,
   );
 
-  const headers$ = new Headers({
+  const headers = new Headers({
     "Content-Type": "application/json",
     Accept: "application/json",
   });
 
-  const bearerAuth$ = await extractSecurity(client$.options$.bearerAuth);
-  const security$ = bearerAuth$ == null ? {} : { bearerAuth: bearerAuth$ };
+  const secConfig = await extractSecurity(client._options.bearerAuth);
+  const securityInput = secConfig == null ? {} : { bearerAuth: secConfig };
   const context = {
     operationID: "createDebitCard",
     oAuth2Scopes: [],
-    securitySource: client$.options$.bearerAuth,
+    securitySource: client._options.bearerAuth,
   };
-  const securitySettings$ = resolveGlobalSecurity(security$);
+  const requestSecurity = resolveGlobalSecurity(securityInput);
 
-  const requestRes = client$.createRequest$(context, {
-    security: securitySettings$,
+  const requestRes = client._createRequest(context, {
+    security: requestSecurity,
     method: "POST",
-    path: path$,
-    headers: headers$,
-    body: body$,
-    timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
+    path: path,
+    headers: headers,
+    body: body,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
     return requestRes;
   }
-  const request$ = requestRes.value;
+  const req = requestRes.value;
 
-  const doResult = await client$.do$(request$, {
+  const doResult = await client._do(req, {
     context,
     errorCodes: [],
     retryConfig: options?.retries
-      || client$.options$.retryConfig,
+      || client._options.retryConfig,
     retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
   });
   if (!doResult.ok) {
@@ -111,7 +108,7 @@ export async function bankingManagementCreate(
   }
   const response = doResult.value;
 
-  const responseFields$ = {
+  const responseFields = {
     ContentType: response.headers.get("content-type")
       ?? "application/octet-stream",
     StatusCode: response.status,
@@ -119,7 +116,7 @@ export async function bankingManagementCreate(
     Headers: {},
   };
 
-  const [result$] = await m$.match<
+  const [result] = await M.match<
     operations.CreateDebitCardResponse,
     | SDKError
     | SDKValidationError
@@ -129,13 +126,13 @@ export async function bankingManagementCreate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    m$.json(200, operations.CreateDebitCardResponse$inboundSchema, {
+    M.json(200, operations.CreateDebitCardResponse$inboundSchema, {
       key: "CheckbookCard",
     }),
-  )(response, { extraFields: responseFields$ });
-  if (!result$.ok) {
-    return result$;
+  )(response, { extraFields: responseFields });
+  if (!result.ok) {
+    return result;
   }
 
-  return result$;
+  return result;
 }

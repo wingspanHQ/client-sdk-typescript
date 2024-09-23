@@ -6,7 +6,43 @@
 import { PayrollReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportResponse = {
-  invoices: [],
+  invoices: [
+    {
+      amount: 8667.89,
+      createdAt: "<value>",
+      currency: "Norwegian Krone",
+      dueDate: "<value>",
+      invoiceId: "<value>",
+      invoiceNumber: "<value>",
+      invoicePdf: "<value>",
+      lineItems: [
+        {
+          costPerUnit: 4014.28,
+          createdAt: "<value>",
+          index: 4166.92,
+          labels: {
+            "key": "<value>",
+          },
+          labelsBak2: {
+            "key": "<value>",
+          },
+          quantity: 8108.39,
+          reimbursableExpense: false,
+          totalCost: 3481.92,
+          unit: "kilogram",
+          updatedAt: "<value>",
+        },
+      ],
+      member: {
+        user: {},
+      },
+      memberClientId: "<value>",
+      memberId: "<value>",
+      receiptPdf: "<value>",
+      status: "Draft",
+      updatedAt: "<value>",
+    },
+  ],
   parentInvoice: {
     createdAt: "<value>",
     dueDate: "<value>",

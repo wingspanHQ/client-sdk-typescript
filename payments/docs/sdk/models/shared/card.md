@@ -10,8 +10,8 @@ let value: Card = {
   createdAt: "<value>",
   expirationDate: "<value>",
   last4Digits: "<value>",
-  status: "SuspectedFraud",
-  type: "individualVirtualDebitCard",
+  status: "Inactive",
+  type: "businessDebitCard",
 };
 ```
 

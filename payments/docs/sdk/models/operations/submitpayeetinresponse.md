@@ -7,7 +7,7 @@ import { SubmitPayeeTINResponse } from "@wingspan/payments/sdk/models/operations
 
 let value: SubmitPayeeTINResponse = {
   contentType: "<value>",
-  statusCode: 461479,
+  statusCode: 666767,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

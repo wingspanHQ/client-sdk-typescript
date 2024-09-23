@@ -6,9 +6,9 @@
 import { InvoiceCollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaboratorCreateRequest = {
-  amount: 769.56,
+  amount: 4053.74,
   currency: "USD",
-  description: "Open-architected tangible encryption",
+  description: "Ameliorated optimal archive",
   memberClientId: "<value>",
 };
 ```

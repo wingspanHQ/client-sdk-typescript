@@ -7,7 +7,7 @@ import { DeleteInvoiceTemplateResponse } from "@wingspan/payments/sdk/models/ope
 
 let value: DeleteInvoiceTemplateResponse = {
   contentType: "<value>",
-  statusCode: 38425,
+  statusCode: 270008,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

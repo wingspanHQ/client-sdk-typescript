@@ -5,7 +5,7 @@
 ```typescript
 import { FundingSourceCurrency } from "@wingspan/payments/sdk/models/shared";
 
-let value: FundingSourceCurrency = "CAD";
+let value: FundingSourceCurrency = "USD";
 ```
 
 ## Values

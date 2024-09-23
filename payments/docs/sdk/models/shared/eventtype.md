@@ -5,7 +5,7 @@
 ```typescript
 import { EventType } from "@wingspan/payments/sdk/models/shared";
 
-let value: EventType = "InvitationOpened";
+let value: EventType = "TINVerificationSucceeded";
 ```
 
 ## Values

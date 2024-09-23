@@ -5,7 +5,7 @@
 ```typescript
 import { PayableUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayableUpdateRequestStatus = "PaymentInTransit";
+let value: PayableUpdateRequestStatus = "Pending";
 ```
 
 ## Values

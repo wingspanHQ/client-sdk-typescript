@@ -9,17 +9,17 @@ let value: ClientInvoice = {
   additionalRecipientEmails: [
     "<value>",
   ],
-  amount: 8771.31,
+  amount: 289.53,
   client: {},
   createdAt: "<value>",
-  currency: "USD",
+  currency: "CAD",
   dueDate: "<value>",
   events: {},
   invoiceId: "<value>",
   invoiceNumber: "<value>",
   lineItems: [
     {
-      costPerUnit: 934.59,
+      costPerUnit: 3925.69,
       createdAt: "<value>",
       labels: {
         "key": "<value>",
@@ -27,20 +27,20 @@ let value: ClientInvoice = {
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 9040.45,
+      quantity: 8783.72,
       reimbursableExpense: false,
-      totalCost: 4263.06,
-      unit: "gray",
+      totalCost: 6907.85,
+      unit: "katal",
       updatedAt: "<value>",
     },
   ],
   member: {},
   memberAcceptsPayments: false,
   memberAddress: {
-    addressLine1: "6537 Balistreri Pine",
-    city: "Fisherfort",
-    postalCode: "07392",
-    state: "Minnesota",
+    addressLine1: "453 Gibson Locks",
+    city: "Gottliebstad",
+    postalCode: "10901",
+    state: "New Mexico",
   },
   memberClient: {
     achCreditAccount: {
@@ -52,7 +52,7 @@ let value: ClientInvoice = {
     },
     clientData: {},
     clientId: "<value>",
-    clientUserAccountType: "enterprise",
+    clientUserAccountType: "member",
     createdAt: "<value>",
     emailTo: "<value>",
     eventActors: {
@@ -77,8 +77,8 @@ let value: ClientInvoice = {
     memberId: "<value>",
     parentMemberClientId: "<value>",
     payerPayeeId: "<value>",
-    status: "Inactive",
-    taxStatus: "Incomplete",
+    status: "Pending",
+    taxStatus: "Pending",
     updatedAt: "<value>",
     userRoles: {
       ownerIds: [
@@ -93,7 +93,7 @@ let value: ClientInvoice = {
   memberEmail: "<value>",
   memberLogoUrl: "<value>",
   memberName: "<value>",
-  memberPaymentsVersion: 8577.23,
+  memberPaymentsVersion: 9663.90,
   memberStripeAccountId: "<value>",
   projectName: "<value>",
   status: "Cancelled",

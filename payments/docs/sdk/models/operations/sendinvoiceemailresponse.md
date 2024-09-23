@@ -7,7 +7,7 @@ import { SendInvoiceEmailResponse } from "@wingspan/payments/sdk/models/operatio
 
 let value: SendInvoiceEmailResponse = {
   contentType: "<value>",
-  statusCode: 414369,
+  statusCode: 396506,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

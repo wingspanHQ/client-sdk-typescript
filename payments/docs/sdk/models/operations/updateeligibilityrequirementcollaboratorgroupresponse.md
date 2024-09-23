@@ -7,7 +7,7 @@ import { UpdateEligibilityRequirementCollaboratorGroupResponse } from "@wingspan
 
 let value: UpdateEligibilityRequirementCollaboratorGroupResponse = {
   contentType: "<value>",
-  statusCode: 739264,
+  statusCode: 714242,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

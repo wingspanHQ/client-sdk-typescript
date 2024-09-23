@@ -17,7 +17,7 @@ let value: BulkClientItem = {
     "key": "<value>",
   },
   memberId: "<value>",
-  status: "Open",
+  status: "Failed",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

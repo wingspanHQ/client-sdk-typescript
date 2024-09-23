@@ -7,7 +7,7 @@ import { ListSummaryPayablesResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: ListSummaryPayablesResponse = {
   contentType: "<value>",
-  statusCode: 918236,
+  statusCode: 866383,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

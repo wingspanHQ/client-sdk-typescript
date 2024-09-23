@@ -7,7 +7,7 @@ import { ListDebitCardsResponse } from "@wingspan/payments/sdk/models/operations
 
 let value: ListDebitCardsResponse = {
   contentType: "<value>",
-  statusCode: 568045,
+  statusCode: 118274,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

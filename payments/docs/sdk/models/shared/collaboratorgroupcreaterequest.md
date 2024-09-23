@@ -6,7 +6,7 @@
 import { CollaboratorGroupCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorGroupCreateRequest = {
-  description: "Exclusive 4th generation contingency",
+  description: "Synergized background complexity",
   name: "<value>",
 };
 ```

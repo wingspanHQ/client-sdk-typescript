@@ -7,7 +7,7 @@ import { GetClientDeductionResponse } from "@wingspan/payments/sdk/models/operat
 
 let value: GetClientDeductionResponse = {
   contentType: "<value>",
-  statusCode: 653140,
+  statusCode: 929297,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -5,7 +5,7 @@
 ```typescript
 import { AutoPayRequirement } from "@wingspan/payments/sdk/models/shared";
 
-let value: AutoPayRequirement = "None";
+let value: AutoPayRequirement = "All";
 ```
 
 ## Values

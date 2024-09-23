@@ -5,7 +5,7 @@
 ```typescript
 import { Brand } from "@wingspan/payments/sdk/models/shared";
 
-let value: Brand = "DinersClub";
+let value: Brand = "AmericanExpress";
 ```
 
 ## Values
