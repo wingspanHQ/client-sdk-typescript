@@ -7,7 +7,7 @@ import { GetBankStatementResponse } from "@wingspan/payments/sdk/models/operatio
 
 let value: GetBankStatementResponse = {
   contentType: "<value>",
-  statusCode: 870013,
+  statusCode: 507,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

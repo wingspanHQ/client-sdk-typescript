@@ -7,7 +7,7 @@ import { DeleteDeductionCollaboratorResponse } from "@wingspan/payments/sdk/mode
 
 let value: DeleteDeductionCollaboratorResponse = {
   contentType: "<value>",
-  statusCode: 606393,
+  statusCode: 226,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

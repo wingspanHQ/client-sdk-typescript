@@ -6,7 +6,7 @@
 import { Fee } from "@wingspan/payments/sdk/models/shared";
 
 let value: Fee = {
-  amount: 4322.81,
+  amount: 6216.65,
 };
 ```
 

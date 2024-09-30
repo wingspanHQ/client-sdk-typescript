@@ -7,7 +7,7 @@ import { GetMemberInvoicesResponse } from "@wingspan/payments/sdk/models/operati
 
 let value: GetMemberInvoicesResponse = {
   contentType: "<value>",
-  statusCode: 952749,
+  statusCode: 307,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

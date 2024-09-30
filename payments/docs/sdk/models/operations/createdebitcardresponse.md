@@ -7,7 +7,7 @@ import { CreateDebitCardResponse } from "@wingspan/payments/sdk/models/operation
 
 let value: CreateDebitCardResponse = {
   contentType: "<value>",
-  statusCode: 20218,
+  statusCode: 305,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

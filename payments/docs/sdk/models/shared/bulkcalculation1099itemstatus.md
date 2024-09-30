@@ -5,7 +5,7 @@
 ```typescript
 import { BulkCalculation1099ItemStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkCalculation1099ItemStatus = "Open";
+let value: BulkCalculation1099ItemStatus = "Processing";
 ```
 
 ## Values

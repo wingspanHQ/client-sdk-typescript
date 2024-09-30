@@ -7,7 +7,7 @@ import { DeleteMemberClientAssociationResponse } from "@wingspan/payments/sdk/mo
 
 let value: DeleteMemberClientAssociationResponse = {
   contentType: "<value>",
-  statusCode: 265389,
+  statusCode: 300,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

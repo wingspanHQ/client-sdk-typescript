@@ -5,7 +5,7 @@
 ```typescript
 import { RecipientSyncToggled } from "@wingspan/payments/sdk/models/shared";
 
-let value: RecipientSyncToggled = "Enabled";
+let value: RecipientSyncToggled = "Disabled";
 ```
 
 ## Values

@@ -7,7 +7,7 @@ import { ListGeneratedInvoicesResponse } from "@wingspan/payments/sdk/models/ope
 
 let value: ListGeneratedInvoicesResponse = {
   contentType: "<value>",
-  statusCode: 846409,
+  statusCode: 207,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

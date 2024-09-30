@@ -5,7 +5,7 @@
 ```typescript
 import { PayerTaxFormResponseStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayerTaxFormResponseStatus = "ReadyToSubmitToIrs";
+let value: PayerTaxFormResponseStatus = "SubmittedToIrs";
 ```
 
 ## Values

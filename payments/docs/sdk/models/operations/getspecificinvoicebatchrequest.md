@@ -6,8 +6,8 @@
 import { GetSpecificInvoiceBatchRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetSpecificInvoiceBatchRequest = {
-  batchId: "<value>",
-  batchItemId: "<value>",
+  batchId: "<id>",
+  batchItemId: "<id>",
 };
 ```
 

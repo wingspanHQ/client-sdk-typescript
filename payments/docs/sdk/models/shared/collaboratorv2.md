@@ -10,10 +10,10 @@ let value: CollaboratorV2 = {
     accountNumber: "<value>",
     bankName: "<value>",
   },
-  clientId: "<value>",
+  clientId: "<id>",
   collaborations: [
     {
-      collaboratorId: "<value>",
+      collaboratorId: "<id>",
       status: "Inactive",
     },
   ],
@@ -21,15 +21,15 @@ let value: CollaboratorV2 = {
   eventActors: {
     "key": "<value>",
   },
-  firstCollaborationId: "<value>",
+  firstCollaborationId: "<id>",
   form1099Balances: {},
   formW9Data: {
-    addressLine1: "6906 N Broadway",
-    city: "Port Avis",
-    companyStructure: "CorporationS",
-    country: "Lithuania",
-    postalCode: "02468-6198",
-    state: "Montana",
+    addressLine1: "4779 Sonny Hollow",
+    city: "Pinellas Park",
+    companyStructure: "Partnership",
+    country: "Saint Martin",
+    postalCode: "53324",
+    state: "Ohio",
   },
   internationalWireAccount: {
     accountNumber: "<value>",
@@ -41,9 +41,9 @@ let value: CollaboratorV2 = {
   member: {
     user: {},
   },
-  memberId: "<value>",
-  primaryCollaborationId: "<value>",
-  status: "Pending",
+  memberId: "<id>",
+  primaryCollaborationId: "<id>",
+  status: "Active",
   taxStatus: "Pending",
   updatedAt: "<value>",
   userRoles: {

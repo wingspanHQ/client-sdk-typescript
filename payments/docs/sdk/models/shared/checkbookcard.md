@@ -7,13 +7,13 @@ import { CheckbookCard } from "@wingspan/payments/sdk/models/shared";
 
 let value: CheckbookCard = {
   address: {
-    addressLine1: "6922 Agnes Viaduct",
-    city: "Schadenboro",
-    postalCode: "04983-9299",
-    state: "South Carolina",
+    addressLine1: "69941 Kuhn Ways",
+    city: "Port Edwardoburgh",
+    postalCode: "26545-2743",
+    state: "Tennessee",
   },
-  brand: "Discover",
-  cardId: "<value>",
+  brand: "JCB",
+  cardId: "<id>",
   expirationMM: "<value>",
   expirationYYYY: "<value>",
   last4: "<value>",

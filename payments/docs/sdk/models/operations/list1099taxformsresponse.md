@@ -7,7 +7,7 @@ import { List1099TaxFormsResponse } from "@wingspan/payments/sdk/models/operatio
 
 let value: List1099TaxFormsResponse = {
   contentType: "<value>",
-  statusCode: 359508,
+  statusCode: 204,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

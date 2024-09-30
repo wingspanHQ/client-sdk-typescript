@@ -7,7 +7,7 @@ import { UpdatePayableResponse } from "@wingspan/payments/sdk/models/operations"
 
 let value: UpdatePayableResponse = {
   contentType: "<value>",
-  statusCode: 975522,
+  statusCode: 203,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

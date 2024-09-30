@@ -7,7 +7,7 @@ import { RequestCardAuthenticationResponse } from "@wingspan/payments/sdk/models
 
 let value: RequestCardAuthenticationResponse = {
   contentType: "<value>",
-  statusCode: 645894,
+  statusCode: 415,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

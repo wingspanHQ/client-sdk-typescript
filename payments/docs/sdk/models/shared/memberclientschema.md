@@ -13,7 +13,7 @@ let value: MemberClientSchema = {
   client: {
     user: {},
   },
-  clientId: "<value>",
+  clientId: "<id>",
   clientUserAccountType: "enterprise",
   createdAt: "<value>",
   emailTo: "<value>",
@@ -28,7 +28,7 @@ let value: MemberClientSchema = {
   labels: {
     "key": "<value>",
   },
-  memberClientId: "<value>",
+  memberClientId: "<id>",
   status: "Pending",
   updatedAt: "<value>",
   userRoles: {

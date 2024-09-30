@@ -6,7 +6,7 @@
 import { CardTokenResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardTokenResponse = {
-  cardId: "<value>",
+  cardId: "<id>",
   token: "<value>",
 };
 ```

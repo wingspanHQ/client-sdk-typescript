@@ -6,7 +6,7 @@
 import { DeletePayableBatchRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeletePayableBatchRequest = {
-  batchId: "<value>",
+  batchId: "<id>",
 };
 ```
 

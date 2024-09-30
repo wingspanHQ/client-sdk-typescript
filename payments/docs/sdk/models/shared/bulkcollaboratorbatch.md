@@ -6,11 +6,11 @@
 import { BulkCollaboratorBatch } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkCollaboratorBatch = {
-  bulkCollaboratorBatchId: "<value>",
+  bulkCollaboratorBatchId: "<id>",
   client: {
     user: {},
   },
-  clientId: "<value>",
+  clientId: "<id>",
   createdAt: "<value>",
   eventActors: {
     "key": "<value>",

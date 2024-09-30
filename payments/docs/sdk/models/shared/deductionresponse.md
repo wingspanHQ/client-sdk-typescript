@@ -6,29 +6,29 @@
 import { DeductionResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: DeductionResponse = {
-  amount: 302.35,
+  amount: 191.23,
   application: [
     {
-      amountDeducted: 7103.37,
-      payableId: "<value>",
+      amountDeducted: 5181.50,
+      payableId: "<id>",
     },
   ],
-  clientId: "<value>",
+  clientId: "<id>",
   createdAt: "<value>",
-  currency: "USD",
-  deductionId: "<value>",
+  currency: "CAD",
+  deductionId: "<id>",
   eventActors: {
     "key": "<value>",
   },
   labels: {
     "key": "<value>",
   },
-  memberId: "<value>",
+  memberId: "<id>",
   name: "<value>",
-  priority: 3726.79,
+  priority: 3732.16,
   startDate: "<value>",
-  status: "PartiallyApplied",
-  type: "PostPayment",
+  status: "Pending",
+  type: "PrePayment",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

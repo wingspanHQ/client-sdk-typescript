@@ -28,9 +28,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.get();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -60,7 +60,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -102,9 +102,9 @@ async function run() {
   const result = await payments.reportingAndAnalytics.getPayrollReport({
     payrollId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -136,7 +136,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -177,9 +177,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listDetailedCollaborator();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -209,7 +209,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -249,9 +249,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listLineItem();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -281,7 +281,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -321,9 +321,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.listPayable();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -353,7 +353,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

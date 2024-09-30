@@ -6,13 +6,13 @@
 import { TaxFormSubmission } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormSubmission = {
-  correctionType: "Type1",
-  deliveryMethod: "Mail",
-  externalDocumentId: "<value>",
+  correctionType: "None",
+  deliveryMethod: "Electronic",
+  externalDocumentId: "<id>",
   isCorrected: false,
   status: "AcceptedByIrs",
   submissionData: {},
-  submissionId: "<value>",
+  submissionId: "<id>",
 };
 ```
 

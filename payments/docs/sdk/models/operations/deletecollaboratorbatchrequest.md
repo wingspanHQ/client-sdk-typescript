@@ -6,7 +6,7 @@
 import { DeleteCollaboratorBatchRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: DeleteCollaboratorBatchRequest = {
-  batchId: "<value>",
+  batchId: "<id>",
 };
 ```
 

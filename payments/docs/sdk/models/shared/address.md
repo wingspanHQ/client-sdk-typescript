@@ -6,10 +6,10 @@
 import { Address } from "@wingspan/payments/sdk/models/shared";
 
 let value: Address = {
-  addressLine1: "701 Mayert Ferry",
-  city: "Norman",
-  postalCode: "57332-1974",
-  state: "Idaho",
+  addressLine1: "604 Leuschke Port",
+  city: "East Gladys",
+  postalCode: "19548-4739",
+  state: "Ohio",
 };
 ```
 

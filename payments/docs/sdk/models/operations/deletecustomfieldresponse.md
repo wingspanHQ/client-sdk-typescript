@@ -7,7 +7,7 @@ import { DeleteCustomFieldResponse } from "@wingspan/payments/sdk/models/operati
 
 let value: DeleteCustomFieldResponse = {
   contentType: "<value>",
-  statusCode: 162493,
+  statusCode: 302,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

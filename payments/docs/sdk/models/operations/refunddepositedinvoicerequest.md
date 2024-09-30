@@ -6,7 +6,7 @@
 import { RefundDepositedInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: RefundDepositedInvoiceRequest = {
-  invoiceId: "<value>",
+  invoiceId: "<id>",
 };
 ```
 

@@ -6,9 +6,9 @@
 import { BulkCollaboratorItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkCollaboratorItem = {
-  bulkCollaboratorBatchId: "<value>",
-  bulkCollaboratorItemId: "<value>",
-  clientId: "<value>",
+  bulkCollaboratorBatchId: "<id>",
+  bulkCollaboratorItemId: "<id>",
+  clientId: "<id>",
   collaboratorStatus: "Inactive",
   createdAt: "<value>",
   eventActors: {

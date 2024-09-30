@@ -6,8 +6,8 @@
 import { RecipientVerification } from "@wingspan/payments/sdk/models/shared";
 
 let value: RecipientVerification = {
-  failureCount: 8155.24,
-  tinType: "Individual",
+  failureCount: 9805.80,
+  tinType: "Business",
   verified: false,
 };
 ```

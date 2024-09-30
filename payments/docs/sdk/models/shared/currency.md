@@ -5,7 +5,7 @@
 ```typescript
 import { Currency } from "@wingspan/payments/sdk/models/shared";
 
-let value: Currency = "CAD";
+let value: Currency = "USD";
 ```
 
 ## Values

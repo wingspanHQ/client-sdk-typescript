@@ -6,8 +6,8 @@
 import { BulkCalculation1099Batch } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkCalculation1099Batch = {
-  bulkCalculation1099BatchId: "<value>",
-  clientId: "<value>",
+  bulkCalculation1099BatchId: "<id>",
+  clientId: "<id>",
   createdAt: "<value>",
   eventActors: {
     "key": "<value>",

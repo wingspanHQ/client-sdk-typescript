@@ -6,19 +6,19 @@
 import { PayerTaxFormResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayerTaxFormResponse = {
-  activeSubmissionId: "<value>",
-  adjustments: 3926.76,
-  clientId: "<value>",
+  activeSubmissionId: "<id>",
+  adjustments: 2097.50,
+  clientId: "<id>",
   createdAt: "<value>",
   data: {},
-  deliveryMethod: "Mail",
+  deliveryMethod: "Electronic",
   deprecatedTaxForm: {},
   eventActors: {
     "key": "<value>",
   },
   eventHistory: [
     {
-      eventType: "InvitationSent",
+      eventType: "FormRejectedByIRS",
       timestamp: "<value>",
       triggeredBy: "System",
     },
@@ -27,26 +27,26 @@ let value: PayerTaxFormResponse = {
   labels: {
     "key": "<value>",
   },
-  memberId: "<value>",
-  payerPayeeId: "<value>",
-  paymentProcessingFees: 5438.06,
-  platformIncome: 4569.11,
+  memberId: "<id>",
+  payerPayeeId: "<id>",
+  paymentProcessingFees: 6719.57,
+  platformIncome: 9488.61,
   recipientConfirmedW9Info: false,
   recipientReadyToSubmitW9: false,
   recipientSyncEnabled: false,
-  status: "Ineligible",
+  status: "Pending",
   submissions: [
     {
       correctionType: "Type1",
       deliveryMethod: "Mail",
-      externalDocumentId: "<value>",
+      externalDocumentId: "<id>",
       isCorrected: false,
-      status: "AcceptedByIrs",
+      status: "RejectedByIrs",
       submissionData: {},
-      submissionId: "<value>",
+      submissionId: "<id>",
     },
   ],
-  taxFormId: "<value>",
+  taxFormId: "<id>",
   type: "Form1099Nec",
   updatedAt: "<value>",
   userRoles: {
@@ -57,7 +57,7 @@ let value: PayerTaxFormResponse = {
       "<value>",
     ],
   },
-  year: 9040.44,
+  year: 9627.70,
 };
 ```
 

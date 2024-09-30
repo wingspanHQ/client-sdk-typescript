@@ -7,7 +7,7 @@ import { Calculate1099AmountsResponse } from "@wingspan/payments/sdk/models/oper
 
 let value: Calculate1099AmountsResponse = {
   contentType: "<value>",
-  statusCode: 944669,
+  statusCode: 201,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

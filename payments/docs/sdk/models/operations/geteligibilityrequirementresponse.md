@@ -7,7 +7,7 @@ import { GetEligibilityRequirementResponse } from "@wingspan/payments/sdk/models
 
 let value: GetEligibilityRequirementResponse = {
   contentType: "<value>",
-  statusCode: 435865,
+  statusCode: 201,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -7,7 +7,7 @@ import { CreateClientBatchResponse } from "@wingspan/payments/sdk/models/operati
 
 let value: CreateClientBatchResponse = {
   contentType: "<value>",
-  statusCode: 438601,
+  statusCode: 431,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

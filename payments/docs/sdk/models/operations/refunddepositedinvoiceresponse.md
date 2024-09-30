@@ -7,7 +7,7 @@ import { RefundDepositedInvoiceResponse } from "@wingspan/payments/sdk/models/op
 
 let value: RefundDepositedInvoiceResponse = {
   contentType: "<value>",
-  statusCode: 813798,
+  statusCode: 508,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

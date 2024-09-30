@@ -6,8 +6,8 @@
 import { InvoiceAppliedDeductions } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceAppliedDeductions = {
-  amount: 9799.62,
-  deductionId: "<value>",
+  amount: 6002.13,
+  deductionId: "<id>",
   name: "<value>",
 };
 ```

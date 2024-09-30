@@ -7,7 +7,7 @@ import { CreateClientDeductionResponse } from "@wingspan/payments/sdk/models/ope
 
 let value: CreateClientDeductionResponse = {
   contentType: "<value>",
-  statusCode: 566602,
+  statusCode: 404,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

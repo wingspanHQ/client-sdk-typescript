@@ -14,8 +14,8 @@ let value: MemberClient = {
     user: {},
   },
   clientData: {},
-  clientId: "<value>",
-  clientUserAccountType: "enterprise",
+  clientId: "<id>",
+  clientUserAccountType: "member",
   createdAt: "<value>",
   emailTo: "<value>",
   eventActors: {
@@ -35,12 +35,12 @@ let value: MemberClient = {
   member: {
     user: {},
   },
-  memberClientId: "<value>",
+  memberClientId: "<id>",
   memberData: {},
-  memberId: "<value>",
-  parentMemberClientId: "<value>",
-  payerPayeeId: "<value>",
-  status: "Pending",
+  memberId: "<id>",
+  parentMemberClientId: "<id>",
+  payerPayeeId: "<id>",
+  status: "Inactive",
   taxStatus: "Failed",
   updatedAt: "<value>",
   userRoles: {

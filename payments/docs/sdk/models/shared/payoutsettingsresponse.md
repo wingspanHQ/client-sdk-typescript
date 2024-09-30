@@ -8,14 +8,14 @@ import { PayoutSettingsResponse } from "@wingspan/payments/sdk/models/shared";
 let value: PayoutSettingsResponse = {
   payoutDestinations: [
     {
-      destinationId: "<value>",
-      destinationType: "WeGift",
+      destinationId: "<id>",
+      destinationType: "Card",
       name: "<value>",
-      payoutMethod: "Check",
-      percentage: 3331.45,
+      payoutMethod: "Instant",
+      percentage: 8391.89,
     },
   ],
-  payoutPreferences: "Standard",
+  payoutPreferences: "Instant",
 };
 ```
 

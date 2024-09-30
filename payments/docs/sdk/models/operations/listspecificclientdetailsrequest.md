@@ -6,7 +6,7 @@
 import { ListSpecificClientDetailsRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: ListSpecificClientDetailsRequest = {
-  clientId: "<value>",
+  clientId: "<id>",
 };
 ```
 

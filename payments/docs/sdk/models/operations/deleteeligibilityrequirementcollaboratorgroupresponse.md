@@ -7,7 +7,7 @@ import { DeleteEligibilityRequirementCollaboratorGroupResponse } from "@wingspan
 
 let value: DeleteEligibilityRequirementCollaboratorGroupResponse = {
   contentType: "<value>",
-  statusCode: 431418,
+  statusCode: 428,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -7,7 +7,7 @@ import { BankingApplicationForm } from "@wingspan/payments/sdk/models/shared";
 
 let value: BankingApplicationForm = {
   applicationLink: "<value>",
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

@@ -6,14 +6,14 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-  amount: 2082.53,
+  amount: 4016.88,
   attachments: {},
   client: {},
-  clientId: "<value>",
-  collaboratorId: "<value>",
+  clientId: "<id>",
+  collaboratorId: "<id>",
   createdAt: "<value>",
   creditFeeHandling: {},
-  currency: "CAD",
+  currency: "USD",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -22,7 +22,7 @@ let value: PayableSchema = {
   integration: {},
   invoiceNotes: "<value>",
   invoiceNumber: "<value>",
-  invoiceTemplateId: "<value>",
+  invoiceTemplateId: "<id>",
   labels: {
     "key": "<value>",
   },
@@ -33,7 +33,7 @@ let value: PayableSchema = {
   },
   lineItems: [
     {
-      costPerUnit: 2153.98,
+      costPerUnit: 626.89,
       createdAt: "<value>",
       labels: {
         "key": "<value>",
@@ -41,26 +41,26 @@ let value: PayableSchema = {
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 8583.38,
+      quantity: 2781.17,
       reimbursableExpense: false,
-      totalCost: 8028.93,
-      unit: "kelvin",
+      totalCost: 1693.13,
+      unit: "lux",
       updatedAt: "<value>",
     },
   ],
   member: {},
   memberAddress: {
-    addressLine1: "2768 Volkman Camp",
-    city: "Lake Hazle",
-    postalCode: "18487",
-    state: "Massachusetts",
+    addressLine1: "85559 Schaefer Motorway",
+    city: "Fort Lavina",
+    postalCode: "47692",
+    state: "Pennsylvania",
   },
-  memberId: "<value>",
+  memberId: "<id>",
   notificationPreferences: {
     sendReminders: false,
   },
-  payableId: "<value>",
-  status: "Overdue",
+  payableId: "<id>",
+  status: "Cancelled",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

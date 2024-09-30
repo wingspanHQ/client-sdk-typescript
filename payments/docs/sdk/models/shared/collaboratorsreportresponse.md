@@ -6,11 +6,11 @@
 import { CollaboratorsReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorsReportResponse = {
-  clientId: "<value>",
+  clientId: "<id>",
   collaboratorGroups: [
     {
-      collaboratorGroupId: "<value>",
-      description: "Triple-buffered leading edge secured line",
+      collaboratorGroupId: "<id>",
+      description: "capsize unfinished boo upside-down fruitful",
       name: "<value>",
     },
   ],
@@ -19,14 +19,14 @@ let value: CollaboratorsReportResponse = {
   member: {
     user: {},
   },
-  memberClientId: "<value>",
-  memberId: "<value>",
+  memberClientId: "<id>",
+  memberId: "<id>",
   servicesStatus: {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
   status: "Pending",
-  taxStatus: "Complete",
+  taxStatus: "Incomplete",
   updatedAt: "<value>",
 };
 ```

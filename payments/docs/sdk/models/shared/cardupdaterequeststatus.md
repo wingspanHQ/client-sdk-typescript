@@ -5,7 +5,7 @@
 ```typescript
 import { CardUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CardUpdateRequestStatus = "Lost";
+let value: CardUpdateRequestStatus = "ClosedByCustomer";
 ```
 
 ## Values

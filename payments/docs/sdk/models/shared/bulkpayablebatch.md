@@ -6,11 +6,11 @@
 import { BulkPayableBatch } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkPayableBatch = {
-  bulkPayableBatchId: "<value>",
+  bulkPayableBatchId: "<id>",
   client: {
     user: {},
   },
-  clientId: "<value>",
+  clientId: "<id>",
   createdAt: "<value>",
   eventActors: {
     "key": "<value>",
@@ -19,7 +19,7 @@ let value: BulkPayableBatch = {
     "key": "<value>",
   },
   processingStrategy: "Merge",
-  status: "Open",
+  status: "Failed",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

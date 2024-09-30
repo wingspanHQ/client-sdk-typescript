@@ -6,8 +6,8 @@
 import { GetCalculation1099BatchItemRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetCalculation1099BatchItemRequest = {
-  batchId: "<value>",
-  batchItemId: "<value>",
+  batchId: "<id>",
+  batchItemId: "<id>",
 };
 ```
 

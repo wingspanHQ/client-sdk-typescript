@@ -10,9 +10,9 @@ import {
 let value:
   SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2 =
     {
-      itemsFailed: 163.29,
-      itemsProcessed: 1852.32,
-      itemsTotal: 4012.60,
+      itemsFailed: 9521.43,
+      itemsProcessed: 3000.29,
+      itemsTotal: 1604.68,
     };
 ```
 

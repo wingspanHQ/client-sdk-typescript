@@ -7,7 +7,7 @@ import { GetPayableBatchItemResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: GetPayableBatchItemResponse = {
   contentType: "<value>",
-  statusCode: 158969,
+  statusCode: 414,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

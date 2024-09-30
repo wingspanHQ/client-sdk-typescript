@@ -7,13 +7,13 @@ import { Remail1099Request } from "@wingspan/payments/sdk/models/shared";
 
 let value: Remail1099Request = {
   address: {
-    addressLine1: "40222 Adolfo Corners",
-    city: "Wizaworth",
-    postalCode: "16490",
-    state: "South Carolina",
+    addressLine1: "10978 N High Street",
+    city: "Fort Francesco",
+    postalCode: "39136",
+    state: "Arkansas",
   },
-  memberId: "<value>",
-  year: 2883.98,
+  memberId: "<id>",
+  year: 6072.49,
 };
 ```
 

@@ -9,7 +9,7 @@ let value: InvoiceDataCreateRequest = {
   lineItems: [
     {},
   ],
-  memberClientId: "<value>",
+  memberClientId: "<id>",
 };
 ```
 

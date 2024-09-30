@@ -6,7 +6,7 @@
 import { CompanyPerson } from "@wingspan/payments/sdk/models/shared";
 
 let value: CompanyPerson = {
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

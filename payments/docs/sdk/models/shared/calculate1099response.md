@@ -15,8 +15,8 @@ let value: Calculate1099Response = {
       user: {},
     },
     clientData: {},
-    clientId: "<value>",
-    clientUserAccountType: "member",
+    clientId: "<id>",
+    clientUserAccountType: "enterprise",
     createdAt: "<value>",
     emailTo: "<value>",
     eventActors: {
@@ -36,13 +36,13 @@ let value: Calculate1099Response = {
     member: {
       user: {},
     },
-    memberClientId: "<value>",
+    memberClientId: "<id>",
     memberData: {},
-    memberId: "<value>",
-    parentMemberClientId: "<value>",
-    payerPayeeId: "<value>",
-    status: "Active",
-    taxStatus: "Pending",
+    memberId: "<id>",
+    parentMemberClientId: "<id>",
+    payerPayeeId: "<id>",
+    status: "Inactive",
+    taxStatus: "Complete",
     updatedAt: "<value>",
     userRoles: {
       ownerIds: [

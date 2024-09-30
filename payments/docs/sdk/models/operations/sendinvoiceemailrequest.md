@@ -6,7 +6,7 @@
 import { SendInvoiceEmailRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: SendInvoiceEmailRequest = {
-  invoiceId: "<value>",
+  invoiceId: "<id>",
 };
 ```
 

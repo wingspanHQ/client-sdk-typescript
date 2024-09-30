@@ -7,7 +7,7 @@ import { GetPayrollDetailedReportResponse } from "@wingspan/payments/sdk/models/
 
 let value: GetPayrollDetailedReportResponse = {
   contentType: "<value>",
-  statusCode: 729991,
+  statusCode: 203,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

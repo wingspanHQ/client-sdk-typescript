@@ -7,7 +7,7 @@ import { CreateRecipientProofResponse } from "@wingspan/payments/sdk/models/oper
 
 let value: CreateRecipientProofResponse = {
   contentType: "<value>",
-  statusCode: 774234,
+  statusCode: 404,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

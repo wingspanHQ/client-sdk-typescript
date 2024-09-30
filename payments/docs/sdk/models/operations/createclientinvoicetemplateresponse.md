@@ -7,7 +7,7 @@ import { CreateClientInvoiceTemplateResponse } from "@wingspan/payments/sdk/mode
 
 let value: CreateClientInvoiceTemplateResponse = {
   contentType: "<value>",
-  statusCode: 20107,
+  statusCode: 414,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

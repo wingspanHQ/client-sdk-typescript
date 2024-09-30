@@ -7,7 +7,7 @@ import { ListStoredWingspanWalletCardsResponse } from "@wingspan/payments/sdk/mo
 
 let value: ListStoredWingspanWalletCardsResponse = {
   contentType: "<value>",
-  statusCode: 423655,
+  statusCode: 504,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

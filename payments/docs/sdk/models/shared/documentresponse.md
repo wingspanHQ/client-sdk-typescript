@@ -6,11 +6,11 @@
 import { DocumentResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: DocumentResponse = {
-  clientId: "<value>",
-  documentId: "<value>",
-  memberId: "<value>",
-  status: "Invalid",
-  templateId: "<value>",
+  clientId: "<id>",
+  documentId: "<id>",
+  memberId: "<id>",
+  status: "PendingReview",
+  templateId: "<id>",
   title: "<value>",
   userRoles: {
     ownerIds: [

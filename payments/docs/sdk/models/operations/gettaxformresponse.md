@@ -7,7 +7,7 @@ import { GetTaxFormResponse } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetTaxFormResponse = {
   contentType: "<value>",
-  statusCode: 568434,
+  statusCode: 501,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

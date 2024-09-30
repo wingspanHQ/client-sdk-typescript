@@ -7,7 +7,7 @@ import { MarkUndelivered1099FormResponse } from "@wingspan/payments/sdk/models/o
 
 let value: MarkUndelivered1099FormResponse = {
   contentType: "<value>",
-  statusCode: 437032,
+  statusCode: 102,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

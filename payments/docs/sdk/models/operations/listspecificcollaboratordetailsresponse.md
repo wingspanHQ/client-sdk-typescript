@@ -7,7 +7,7 @@ import { ListSpecificCollaboratorDetailsResponse } from "@wingspan/payments/sdk/
 
 let value: ListSpecificCollaboratorDetailsResponse = {
   contentType: "<value>",
-  statusCode: 569965,
+  statusCode: 101,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

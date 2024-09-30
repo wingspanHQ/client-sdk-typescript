@@ -6,7 +6,7 @@
 import { ClientInvoiceTemplateUpdateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceTemplateUpdateRequest = {
-  clientId: "<value>",
+  clientId: "<id>",
 };
 ```
 

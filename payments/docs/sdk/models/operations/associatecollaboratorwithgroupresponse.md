@@ -7,7 +7,7 @@ import { AssociateCollaboratorWithGroupResponse } from "@wingspan/payments/sdk/m
 
 let value: AssociateCollaboratorWithGroupResponse = {
   contentType: "<value>",
-  statusCode: 725255,
+  statusCode: 501,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

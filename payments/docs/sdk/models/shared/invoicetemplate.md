@@ -11,7 +11,7 @@ let value: InvoiceTemplate = {
     "key": "<value>",
   },
   invoiceData: {
-    amount: 8773.99,
+    amount: 832.91,
     client: {},
     createdAt: "<value>",
     currency: "USD",
@@ -21,14 +21,14 @@ let value: InvoiceTemplate = {
     },
     events: {},
     externalIds: {},
-    invoiceId: "<value>",
+    invoiceId: "<id>",
     invoiceNumber: "<value>",
     labels: {
       "key": "<value>",
     },
     lineItems: [
       {
-        costPerUnit: 13.83,
+        costPerUnit: 9655.17,
         createdAt: "<value>",
         labels: {
           "key": "<value>",
@@ -36,39 +36,39 @@ let value: InvoiceTemplate = {
         labelsBak2: {
           "key": "<value>",
         },
-        quantity: 2476.85,
+        quantity: 8590.03,
         reimbursableExpense: false,
-        totalCost: 3182.34,
-        unit: "siemens",
+        totalCost: 1520.27,
+        unit: "meter",
         updatedAt: "<value>",
       },
     ],
     member: {},
     memberAddress: {
-      addressLine1: "5389 Jackson Street",
-      city: "San Mateo",
-      postalCode: "22192-4478",
+      addressLine1: "316 Dillan Wall",
+      city: "Lebsackview",
+      postalCode: "19860-7953",
       state: "Connecticut",
     },
-    memberClientId: "<value>",
-    memberId: "<value>",
+    memberClientId: "<id>",
+    memberId: "<id>",
     payments: [
       {
-        amount: 4269.04,
+        amount: 7549.01,
         createdAt: "<value>",
         events: {},
         labels: {
           "key": "<value>",
         },
-        paymentId: "<value>",
-        sourceId: "<value>",
+        paymentId: "<id>",
+        sourceId: "<id>",
         sourceMetadata: {},
         sourceType: "InternalAccount",
-        status: "Cleared",
+        status: "Created",
         updatedAt: "<value>",
       },
     ],
-    status: "Draft",
+    status: "PaymentInTransit",
     updatedAt: "<value>",
     userRoles: {
       ownerIds: [
@@ -79,11 +79,11 @@ let value: InvoiceTemplate = {
       ],
     },
   },
-  invoiceTemplateId: "<value>",
+  invoiceTemplateId: "<id>",
   labels: {
     "key": "<value>",
   },
-  memberId: "<value>",
+  memberId: "<id>",
   status: "Active",
   updatedAt: "<value>",
   userRoles: {

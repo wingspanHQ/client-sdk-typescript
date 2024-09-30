@@ -7,7 +7,7 @@ import { Request1099InviteEmailResponse } from "@wingspan/payments/sdk/models/op
 
 let value: Request1099InviteEmailResponse = {
   contentType: "<value>",
-  statusCode: 60225,
+  statusCode: 300,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

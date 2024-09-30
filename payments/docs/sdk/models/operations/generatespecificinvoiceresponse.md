@@ -7,7 +7,7 @@ import { GenerateSpecificInvoiceResponse } from "@wingspan/payments/sdk/models/o
 
 let value: GenerateSpecificInvoiceResponse = {
   contentType: "<value>",
-  statusCode: 962189,
+  statusCode: 413,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

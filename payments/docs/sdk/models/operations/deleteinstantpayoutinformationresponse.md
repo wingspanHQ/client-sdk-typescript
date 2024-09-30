@@ -7,7 +7,7 @@ import { DeleteInstantPayoutInformationResponse } from "@wingspan/payments/sdk/m
 
 let value: DeleteInstantPayoutInformationResponse = {
   contentType: "<value>",
-  statusCode: 791725,
+  statusCode: 508,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

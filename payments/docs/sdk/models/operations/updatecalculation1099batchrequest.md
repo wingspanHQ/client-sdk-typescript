@@ -6,7 +6,7 @@
 import { UpdateCalculation1099BatchRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateCalculation1099BatchRequest = {
-  batchId: "<value>",
+  batchId: "<id>",
 };
 ```
 

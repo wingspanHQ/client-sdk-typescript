@@ -6,7 +6,7 @@
 import { GetPayrollDetailedReportRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetPayrollDetailedReportRequest = {
-  payrollId: "<value>",
+  payrollId: "<id>",
 };
 ```
 

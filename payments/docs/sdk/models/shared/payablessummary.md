@@ -6,17 +6,17 @@
 import { PayablesSummary } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayablesSummary = {
-  invoicesApproved: 51.53,
-  invoicesDraft: 6941.58,
-  invoicesOpen: 9195.07,
-  invoicesOverdue: 7104.56,
-  invoicesPaid: 1770.06,
-  invoicesPending: 4835.18,
-  memberId: "<value>",
-  totalApproved: 1403.16,
-  totalOpen: 3589.95,
-  totalOverdue: 9371.17,
-  totalPaid: 9233.05,
+  invoicesApproved: 8615.91,
+  invoicesDraft: 3590.97,
+  invoicesOpen: 8877.01,
+  invoicesOverdue: 6386.09,
+  invoicesPaid: 4299.97,
+  invoicesPending: 357.43,
+  memberId: "<id>",
+  totalApproved: 7701.28,
+  totalOpen: 5021.06,
+  totalOverdue: 7861.88,
+  totalPaid: 7480.23,
 };
 ```
 

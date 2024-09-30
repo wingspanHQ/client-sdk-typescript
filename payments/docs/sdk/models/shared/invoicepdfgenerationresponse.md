@@ -7,7 +7,7 @@ import { InvoicePdfGenerationResponse } from "@wingspan/payments/sdk/models/shar
 
 let value: InvoicePdfGenerationResponse = {
   attachments: {},
-  invoiceId: "<value>",
+  invoiceId: "<id>",
 };
 ```
 

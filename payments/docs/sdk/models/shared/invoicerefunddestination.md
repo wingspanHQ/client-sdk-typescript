@@ -6,14 +6,14 @@
 import { InvoiceRefundDestination } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceRefundDestination = {
-  amount: 1476.86,
+  amount: 8975.43,
   createdAt: "<value>",
-  destinationType: "Account",
+  destinationType: "PaperCheck",
   events: {},
   labels: {
     "key": "<value>",
   },
-  refundType: "Account",
+  refundType: "TaxWithholding",
   updatedAt: "<value>",
 };
 ```

@@ -6,7 +6,7 @@
 import { CreateDebitCardRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: CreateDebitCardRequest = {
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

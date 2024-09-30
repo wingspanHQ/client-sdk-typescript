@@ -6,11 +6,11 @@
 import { FundsTransferAccount } from "@wingspan/payments/sdk/models/shared";
 
 let value: FundsTransferAccount = {
-  country: "Grenada",
-  currency: "CAD",
+  country: "Bahamas",
+  currency: "USD",
   holderName: "<value>",
   numbers: {},
-  type: "StripeAccount",
+  type: "Card",
 };
 ```
 

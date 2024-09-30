@@ -6,7 +6,7 @@
 import { GetApplicationLinkRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: GetApplicationLinkRequest = {
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

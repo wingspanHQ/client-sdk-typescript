@@ -11,7 +11,7 @@ let value: ClientInvoiceCreateRequest = {
   lineItems: [
     {},
   ],
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

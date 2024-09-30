@@ -5,7 +5,7 @@
 ```typescript
 import { PayrollSettingsUpdateWorkflow } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayrollSettingsUpdateWorkflow = "SingleStage";
+let value: PayrollSettingsUpdateWorkflow = "DualStage";
 ```
 
 ## Values

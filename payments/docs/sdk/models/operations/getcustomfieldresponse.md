@@ -7,7 +7,7 @@ import { GetCustomFieldResponse } from "@wingspan/payments/sdk/models/operations
 
 let value: GetCustomFieldResponse = {
   contentType: "<value>",
-  statusCode: 615560,
+  statusCode: 100,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

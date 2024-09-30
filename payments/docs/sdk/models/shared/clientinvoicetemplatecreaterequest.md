@@ -12,8 +12,8 @@ let value: ClientInvoiceTemplateCreateRequest = {
       {},
     ],
   },
-  memberId: "<value>",
-  status: "Expired",
+  memberId: "<id>",
+  status: "Draft",
 };
 ```
 

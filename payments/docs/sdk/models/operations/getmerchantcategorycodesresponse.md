@@ -7,7 +7,7 @@ import { GetMerchantCategoryCodesResponse } from "@wingspan/payments/sdk/models/
 
 let value: GetMerchantCategoryCodesResponse = {
   contentType: "<value>",
-  statusCode: 807319,
+  statusCode: 100,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

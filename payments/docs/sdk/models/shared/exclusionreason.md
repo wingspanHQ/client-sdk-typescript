@@ -5,7 +5,7 @@
 ```typescript
 import { ExclusionReason } from "@wingspan/payments/sdk/models/shared";
 
-let value: ExclusionReason = "BelowThreshold";
+let value: ExclusionReason = "CompanyStructure";
 ```
 
 ## Values

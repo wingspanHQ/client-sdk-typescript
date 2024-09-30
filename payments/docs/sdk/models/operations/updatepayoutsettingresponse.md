@@ -7,7 +7,7 @@ import { UpdatePayoutSettingResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: UpdatePayoutSettingResponse = {
   contentType: "<value>",
-  statusCode: 143353,
+  statusCode: 501,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -6,10 +6,10 @@
 import { InvoiceCollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaboratorCreateRequest = {
-  amount: 4053.74,
-  currency: "USD",
-  description: "Ameliorated optimal archive",
-  memberClientId: "<value>",
+  amount: 2176.63,
+  currency: "CAD",
+  description: "uniform from psst toothpick",
+  memberClientId: "<id>",
 };
 ```
 

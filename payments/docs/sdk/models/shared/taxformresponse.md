@@ -1,53 +1,113 @@
 # TaxFormResponse
 
-## Example Usage
+
+## Supported Types
+
+### `shared.PayerTaxFormResponse`
 
 ```typescript
-import { TaxFormResponse } from "@wingspan/payments/sdk/models/shared";
+const value: shared.PayerTaxFormResponse = {
+  activeSubmissionId: "<id>",
+  adjustments: 1046.28,
+  clientId: "<id>",
+  createdAt: "<value>",
+  data: {},
+  deliveryMethod: "Electronic",
+  deprecatedTaxForm: {},
+  eventActors: {
+    "key": "<value>",
+  },
+  eventHistory: [
+    {
+      eventType: "Emailed1099CopyDelivered",
+      timestamp: "<value>",
+      triggeredBy: "System",
+    },
+  ],
+  filingStateCode: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  memberId: "<id>",
+  payerPayeeId: "<id>",
+  paymentProcessingFees: 6223.84,
+  platformIncome: 7105.28,
+  recipientConfirmedW9Info: false,
+  recipientReadyToSubmitW9: false,
+  recipientSyncEnabled: false,
+  status: "ReadyToSubmitToIrs",
+  submissions: [
+    {
+      correctionType: "Type1",
+      deliveryMethod: "Mail",
+      externalDocumentId: "<id>",
+      isCorrected: false,
+      status: "Ineligible",
+      submissionData: {},
+      submissionId: "<id>",
+    },
+  ],
+  taxFormId: "<id>",
+  type: "Form1099Nec",
+  updatedAt: "<value>",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+  year: 5436.78,
+};
+```
 
-let value: TaxFormResponse = [
+### `shared.PayerTaxFormResponse[]`
+
+```typescript
+const value: shared.PayerTaxFormResponse[] = [
   {
-    activeSubmissionId: "<value>",
-    adjustments: 769.56,
-    clientId: "<value>",
+    activeSubmissionId: "<id>",
+    adjustments: 2827.00,
+    clientId: "<id>",
     createdAt: "<value>",
     data: {},
-    deliveryMethod: "Mail",
+    deliveryMethod: "Electronic",
     deprecatedTaxForm: {},
     eventActors: {
       "key": "<value>",
     },
     eventHistory: [
       {
-        eventType: "RecipientSharedW9Info",
+        eventType: "CorrectionRejected",
         timestamp: "<value>",
-        triggeredBy: "Payee",
+        triggeredBy: "Payer",
       },
     ],
     filingStateCode: "<value>",
     labels: {
       "key": "<value>",
     },
-    memberId: "<value>",
-    payerPayeeId: "<value>",
-    paymentProcessingFees: 9594.33,
-    platformIncome: 6455.70,
+    memberId: "<id>",
+    payerPayeeId: "<id>",
+    paymentProcessingFees: 3726.79,
+    platformIncome: 5305.37,
     recipientConfirmedW9Info: false,
     recipientReadyToSubmitW9: false,
     recipientSyncEnabled: false,
-    status: "Pending",
+    status: "Ineligible",
     submissions: [
       {
-        correctionType: "Type1",
-        deliveryMethod: "Mail",
-        externalDocumentId: "<value>",
+        correctionType: "None",
+        deliveryMethod: "Electronic",
+        externalDocumentId: "<id>",
         isCorrected: false,
-        status: "RejectedByIrs",
+        status: "Pending",
         submissionData: {},
-        submissionId: "<value>",
+        submissionId: "<id>",
       },
     ],
-    taxFormId: "<value>",
+    taxFormId: "<id>",
     type: "Form1099Nec",
     updatedAt: "<value>",
     userRoles: {
@@ -58,22 +118,8 @@ let value: TaxFormResponse = [
         "<value>",
       ],
     },
-    year: 6813.93,
+    year: 3426.11,
   },
 ];
-```
-
-## Supported Types
-
-### `shared.PayerTaxFormResponse`
-
-```typescript
-const value: shared.PayerTaxFormResponse = /* values here */
-```
-
-### `shared.PayerTaxFormResponse[]`
-
-```typescript
-const value: shared.PayerTaxFormResponse[] = /* values here */
 ```
 

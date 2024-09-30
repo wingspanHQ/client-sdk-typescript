@@ -6,7 +6,7 @@
 import { UpdateEligibilityRequirementCollaboratorGroupRequest } from "@wingspan/payments/sdk/models/operations";
 
 let value: UpdateEligibilityRequirementCollaboratorGroupRequest = {
-  eligibilityRequirementId: "<value>",
+  eligibilityRequirementId: "<id>",
   id: "<id>",
 };
 ```

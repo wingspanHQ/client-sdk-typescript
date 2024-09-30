@@ -7,7 +7,7 @@ import { CreateRecipientSyncResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: CreateRecipientSyncResponse = {
   contentType: "<value>",
-  statusCode: 521848,
+  statusCode: 407,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

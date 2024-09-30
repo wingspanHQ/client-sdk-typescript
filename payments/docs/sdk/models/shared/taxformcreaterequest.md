@@ -6,9 +6,9 @@
 import { TaxFormCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormCreateRequest = {
-  clientId: "<value>",
+  clientId: "<id>",
   data: {},
-  memberId: "<value>",
+  memberId: "<id>",
 };
 ```
 

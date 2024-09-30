@@ -7,7 +7,7 @@ import { UpdatePayrollSettingResponse } from "@wingspan/payments/sdk/models/oper
 
 let value: UpdatePayrollSettingResponse = {
   contentType: "<value>",
-  statusCode: 11714,
+  statusCode: 102,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

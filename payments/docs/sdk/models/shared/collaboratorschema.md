@@ -10,8 +10,8 @@ let value: CollaboratorSchema = {
     accountNumber: "<value>",
     bankName: "<value>",
   },
-  clientId: "<value>",
-  collaboratorId: "<value>",
+  clientId: "<id>",
+  collaboratorId: "<id>",
   createdAt: "<value>",
   eventActors: {
     "key": "<value>",
@@ -27,9 +27,9 @@ let value: CollaboratorSchema = {
   member: {
     user: {},
   },
-  memberId: "<value>",
-  status: "Inactive",
-  taxStatus: "Incomplete",
+  memberId: "<id>",
+  status: "Pending",
+  taxStatus: "Pending",
   updatedAt: "<value>",
   userRoles: {
     ownerIds: [

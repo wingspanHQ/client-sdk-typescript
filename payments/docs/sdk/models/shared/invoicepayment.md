@@ -6,17 +6,17 @@
 import { InvoicePayment } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoicePayment = {
-  amount: 1478.09,
+  amount: 8890.60,
   createdAt: "<value>",
   events: {},
   labels: {
     "key": "<value>",
   },
-  paymentId: "<value>",
-  sourceId: "<value>",
+  paymentId: "<id>",
+  sourceId: "<id>",
   sourceMetadata: {},
   sourceType: "InternalAccount",
-  status: "Sent",
+  status: "Created",
   updatedAt: "<value>",
 };
 ```

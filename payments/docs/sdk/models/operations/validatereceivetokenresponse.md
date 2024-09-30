@@ -7,7 +7,7 @@ import { ValidateReceiveTokenResponse } from "@wingspan/payments/sdk/models/oper
 
 let value: ValidateReceiveTokenResponse = {
   contentType: "<value>",
-  statusCode: 891773,
+  statusCode: 100,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

@@ -7,7 +7,7 @@ import { GetApprovedPayablesResponse } from "@wingspan/payments/sdk/models/opera
 
 let value: GetApprovedPayablesResponse = {
   contentType: "<value>",
-  statusCode: 453543,
+  statusCode: 101,
   rawResponse: new Response("{\"message\": \"hello world\"}", {
     headers: { "Content-Type": "application/json" },
   }),

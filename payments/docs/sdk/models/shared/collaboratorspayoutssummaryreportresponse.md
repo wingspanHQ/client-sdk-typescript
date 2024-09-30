@@ -6,11 +6,11 @@
 import { CollaboratorsPayoutsSummaryReportResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorsPayoutsSummaryReportResponse = {
-  clientId: "<value>",
+  clientId: "<id>",
   collaboratorGroups: [
     {
-      collaboratorGroupId: "<value>",
-      description: "Reactive discrete local area network",
+      collaboratorGroupId: "<id>",
+      description: "if while unless",
       name: "<value>",
     },
   ],
@@ -19,19 +19,19 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   member: {
     user: {},
   },
-  memberClientId: "<value>",
-  memberId: "<value>",
+  memberClientId: "<id>",
+  memberId: "<id>",
   payoutsSummary: {
-    deductionsCount: 7791.79,
-    payablesCount: 7955.90,
-    totalDeducted: 3445.30,
-    totalPaid: 7708.73,
+    deductionsCount: 8830.78,
+    payablesCount: 9665.75,
+    totalDeducted: 7747.48,
+    totalPaid: 9942.33,
   },
   servicesStatus: {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
-  status: "Pending",
+  status: "Inactive",
   taxStatus: "Complete",
   updatedAt: "<value>",
 };

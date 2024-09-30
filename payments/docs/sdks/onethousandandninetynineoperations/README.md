@@ -45,9 +45,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.calculate();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -77,7 +77,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -120,9 +120,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.create({
     taxFormId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -154,7 +154,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -195,9 +195,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createBatchCalculation();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -227,7 +227,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -270,9 +270,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createItem({
     batchId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -304,7 +304,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -347,9 +347,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createProof({
     taxFormId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -381,7 +381,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -422,9 +422,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createTaxForm();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -454,7 +454,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -497,9 +497,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.get({
     taxFormId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -531,7 +531,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -574,9 +574,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.getBatchCalculation({
     batchId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -608,7 +608,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -653,9 +653,9 @@ async function run() {
     index: "<value>",
     year: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -689,7 +689,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -732,9 +732,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.getFormW9({
     id: "<id>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -766,7 +766,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -810,9 +810,9 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -845,7 +845,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -886,9 +886,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.listBatchCalculation();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -918,7 +918,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -960,9 +960,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.listItem({
     batchId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -994,7 +994,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1035,9 +1035,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.listTaxForm();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1067,7 +1067,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1107,9 +1107,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.mark();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1139,7 +1139,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1180,9 +1180,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.remail();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1212,7 +1212,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1253,9 +1253,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.request();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1285,7 +1285,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1325,9 +1325,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.submit();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1357,7 +1357,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1399,9 +1399,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.update({
     taxFormId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1433,7 +1433,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1476,9 +1476,9 @@ async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.updateBatchCalculation({
     batchId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1510,7 +1510,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1554,9 +1554,9 @@ async function run() {
     batchId: "<value>",
     batchItemId: "<value>",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1589,7 +1589,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1630,9 +1630,9 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.updateW9();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1662,7 +1662,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

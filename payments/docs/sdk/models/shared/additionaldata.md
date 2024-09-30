@@ -10,7 +10,7 @@ let value: AdditionalData = {
   name: "<value>",
   required: false,
   resourceType: "Collaborator",
-  type: "String",
+  type: "Boolean",
 };
 ```
 

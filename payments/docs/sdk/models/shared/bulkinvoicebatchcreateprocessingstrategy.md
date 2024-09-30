@@ -5,7 +5,7 @@
 ```typescript
 import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkInvoiceBatchCreateProcessingStrategy = "Merge";
+let value: BulkInvoiceBatchCreateProcessingStrategy = "Single";
 ```
 
 ## Values

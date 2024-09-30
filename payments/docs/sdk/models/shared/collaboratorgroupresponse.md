@@ -6,10 +6,11 @@
 import { CollaboratorGroupResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorGroupResponse = {
-  clientId: "<value>",
-  collaboratorGroupId: "<value>",
+  clientId: "<id>",
+  collaboratorGroupId: "<id>",
   defaultGroup: false,
-  description: "Grass-roots mobile definition",
+  description:
+    "so whose till anaesthetise slink brook joyously versus hm flawed",
   name: "<value>",
 };
 ```

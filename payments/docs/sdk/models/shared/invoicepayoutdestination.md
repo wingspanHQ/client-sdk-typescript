@@ -6,12 +6,12 @@
 import { InvoicePayoutDestination } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoicePayoutDestination = {
-  amount: 9587.41,
-  description: "Cross-group attitude-oriented matrices",
-  destinationType: "PaperCheck",
+  amount: 1124.27,
+  description: "honesty huzzah valiantly skeleton",
+  destinationType: "InternalAccount",
   payoutMethod: "ECheck",
-  percentage: 9358.32,
-  transferId: "<value>",
+  percentage: 7332.89,
+  transferId: "<id>",
 };
 ```
 

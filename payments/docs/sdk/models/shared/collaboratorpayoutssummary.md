@@ -6,10 +6,10 @@
 import { CollaboratorPayoutsSummary } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorPayoutsSummary = {
-  deductionsCount: 8659.45,
-  payablesCount: 4413.21,
-  totalDeducted: 4864.10,
-  totalPaid: 4483.69,
+  deductionsCount: 142.52,
+  payablesCount: 3421.04,
+  totalDeducted: 8234.72,
+  totalPaid: 8661.35,
 };
 ```
 
