@@ -43,10 +43,8 @@ export async function payablesManagementDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.DeletePayableRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

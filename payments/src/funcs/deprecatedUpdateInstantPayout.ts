@@ -44,10 +44,8 @@ export async function deprecatedUpdateInstantPayout(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.InstantPayoutRequest$outboundSchema.optional().parse(value),
     "Input validation failed",

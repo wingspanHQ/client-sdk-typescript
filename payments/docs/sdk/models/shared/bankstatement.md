@@ -7,7 +7,7 @@ import { BankStatement } from "@wingspan/payments/sdk/models/shared";
 
 let value: BankStatement = {
   accountId: "<id>",
-  date: "2023-10-22",
+  date: "2023-10-29",
   id: "<id>",
   name: "<value>",
 };

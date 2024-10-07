@@ -43,10 +43,8 @@ export async function invoiceManagementUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.UpdateInvoiceRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

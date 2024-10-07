@@ -43,10 +43,8 @@ export async function oneThousandAndNinetyNineOperationsGetForm1099(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.GetForm1099PDFRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

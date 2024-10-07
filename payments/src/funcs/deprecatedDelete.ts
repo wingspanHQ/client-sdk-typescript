@@ -45,10 +45,8 @@ export async function deprecatedDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DeleteCustomDataCollaboratorMemberRequest$outboundSchema.parse(
         value,

@@ -43,10 +43,8 @@ export async function documentSigningAndEligibilityUpdatePayment(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdatePaymentEligibilityRequirementRequest$outboundSchema
         .parse(value),

@@ -43,10 +43,8 @@ export async function collaboratorManagementListSpecificCollaboratorDetail(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.ListSpecificCollaboratorDetailsRequest$outboundSchema.parse(
         value,

@@ -44,10 +44,8 @@ export async function oneThousandAndNinetyNineOperationsMark(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.Mark1099AsUndeliveredRequest$outboundSchema.optional().parse(
         value,

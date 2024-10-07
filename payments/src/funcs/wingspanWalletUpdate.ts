@@ -43,10 +43,8 @@ export async function wingspanWalletUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateStoredWingspanWalletCardRequest$outboundSchema.parse(
         value,

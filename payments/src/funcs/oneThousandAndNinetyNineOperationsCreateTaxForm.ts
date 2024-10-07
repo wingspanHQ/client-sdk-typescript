@@ -44,10 +44,8 @@ export async function oneThousandAndNinetyNineOperationsCreateTaxForm(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.TaxFormCreateRequest$outboundSchema.optional().parse(value),
     "Input validation failed",

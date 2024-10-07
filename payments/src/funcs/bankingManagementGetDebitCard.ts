@@ -43,10 +43,8 @@ export async function bankingManagementGetDebitCard(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.GetDebitCardRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

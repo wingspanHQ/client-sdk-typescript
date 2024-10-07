@@ -43,10 +43,8 @@ export async function clientManagementUpdateClientDeduction(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateClientDeductionRequest$outboundSchema.parse(value),
     "Input validation failed",

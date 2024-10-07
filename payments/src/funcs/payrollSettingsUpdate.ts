@@ -43,10 +43,8 @@ export async function payrollSettingsUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdatePayrollSettingRequest$outboundSchema.parse(value),
     "Input validation failed",

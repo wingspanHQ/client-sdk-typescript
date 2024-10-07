@@ -44,10 +44,8 @@ export async function oneThousandAndNinetyNineOperationsRemail(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => shared.Remail1099Request$outboundSchema.optional().parse(value),
     "Input validation failed",
   );

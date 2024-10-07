@@ -43,10 +43,8 @@ export async function clientManagementDeleteAssociation(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DeleteMemberClientAssociationRequest$outboundSchema.parse(
         value,

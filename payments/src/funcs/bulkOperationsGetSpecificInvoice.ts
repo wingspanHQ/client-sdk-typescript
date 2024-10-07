@@ -43,10 +43,8 @@ export async function bulkOperationsGetSpecificInvoice(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetSpecificInvoiceBatchRequest$outboundSchema.parse(value),
     "Input validation failed",

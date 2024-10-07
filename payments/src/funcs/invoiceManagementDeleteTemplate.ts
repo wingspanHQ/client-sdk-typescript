@@ -43,10 +43,8 @@ export async function invoiceManagementDeleteTemplate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DeleteInvoiceTemplateRequest$outboundSchema.parse(value),
     "Input validation failed",

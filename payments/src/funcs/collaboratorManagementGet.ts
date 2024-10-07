@@ -43,10 +43,8 @@ export async function collaboratorManagementGet(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.GetCollaboratorRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

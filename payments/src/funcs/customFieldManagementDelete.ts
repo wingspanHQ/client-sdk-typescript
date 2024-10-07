@@ -43,10 +43,8 @@ export async function customFieldManagementDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.DeleteCustomFieldRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

@@ -43,10 +43,8 @@ export async function oneThousandAndNinetyNineOperationsCreateItem(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.CreateCalculation1099BatchItemRequest$outboundSchema.parse(
         value,

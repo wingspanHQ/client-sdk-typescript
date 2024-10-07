@@ -44,10 +44,8 @@ export async function collaboratorManagementCreateCollaboratorDeduction(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.DeductionCreateRequest$outboundSchema.optional().parse(value),
     "Input validation failed",

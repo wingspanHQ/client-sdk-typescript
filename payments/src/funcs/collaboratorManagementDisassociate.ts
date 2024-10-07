@@ -43,10 +43,8 @@ export async function collaboratorManagementDisassociate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DisassociateCollaboratorWithGroupRequest$outboundSchema.parse(
         value,

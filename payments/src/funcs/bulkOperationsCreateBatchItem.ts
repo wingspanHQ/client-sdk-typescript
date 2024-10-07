@@ -43,10 +43,8 @@ export async function bulkOperationsCreateBatchItem(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.CreatePayableBatchItemRequest$outboundSchema.parse(value),
     "Input validation failed",

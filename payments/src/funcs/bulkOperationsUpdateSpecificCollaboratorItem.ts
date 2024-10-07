@@ -43,10 +43,8 @@ export async function bulkOperationsUpdateSpecificCollaboratorItem(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateSpecificCollaboratorBatchItemRequest$outboundSchema
         .parse(value),

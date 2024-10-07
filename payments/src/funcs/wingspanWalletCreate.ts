@@ -44,10 +44,8 @@ export async function wingspanWalletCreate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => shared.CardCreateRequest$outboundSchema.optional().parse(value),
     "Input validation failed",
   );

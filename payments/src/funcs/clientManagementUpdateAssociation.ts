@@ -43,10 +43,8 @@ export async function clientManagementUpdateAssociation(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateMemberClientAssociationRequest$outboundSchema.parse(
         value,

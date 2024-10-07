@@ -44,10 +44,8 @@ export async function payablesManagementCreate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.PayableCreateRequest$outboundSchema.optional().parse(value),
     "Input validation failed",

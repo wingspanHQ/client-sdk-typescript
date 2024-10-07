@@ -43,10 +43,8 @@ export async function customFieldManagementUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.UpdateCustomFieldRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

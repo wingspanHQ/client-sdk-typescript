@@ -43,10 +43,8 @@ export async function bulkOperationsDeleteCollaborator(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DeleteCollaboratorBatchRequest$outboundSchema.parse(value),
     "Input validation failed",

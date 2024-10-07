@@ -44,10 +44,8 @@ export async function collaboratorManagementCreateCollaboratorGroup(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.CollaboratorGroupCreateRequest$outboundSchema.optional().parse(
         value,

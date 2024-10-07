@@ -43,10 +43,8 @@ export async function oneThousandAndNinetyNineOperationsGet(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.GetTaxFormRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

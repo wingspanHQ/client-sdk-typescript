@@ -43,10 +43,8 @@ export async function clientManagementListSpecificClientDetail(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.ListSpecificClientDetailsRequest$outboundSchema.parse(value),
     "Input validation failed",

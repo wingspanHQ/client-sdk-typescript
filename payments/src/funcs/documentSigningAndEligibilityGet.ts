@@ -43,10 +43,8 @@ export async function documentSigningAndEligibilityGet(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetEligibilityRequirementRequest$outboundSchema.parse(value),
     "Input validation failed",

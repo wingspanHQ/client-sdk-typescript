@@ -43,10 +43,8 @@ export async function collaboratorManagementUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.UpdateCollaboratorRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

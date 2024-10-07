@@ -43,10 +43,8 @@ export async function customFieldManagementGet(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.GetCustomFieldRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

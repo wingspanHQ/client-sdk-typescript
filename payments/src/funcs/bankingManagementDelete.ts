@@ -43,10 +43,8 @@ export async function bankingManagementDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.DeleteDebitCardRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

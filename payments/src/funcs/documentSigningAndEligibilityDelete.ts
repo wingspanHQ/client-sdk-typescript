@@ -43,10 +43,8 @@ export async function documentSigningAndEligibilityDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DeleteEligibilityRequirementRequest$outboundSchema.parse(
         value,

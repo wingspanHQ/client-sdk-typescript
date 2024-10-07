@@ -43,10 +43,8 @@ export async function wingspanWalletValidate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.ValidateReceiveTokenRequest$outboundSchema.parse(value),
     "Input validation failed",

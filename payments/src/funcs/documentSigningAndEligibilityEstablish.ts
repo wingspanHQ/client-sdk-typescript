@@ -44,10 +44,8 @@ export async function documentSigningAndEligibilityEstablish(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.EligibilityRequirementCreateRequest$outboundSchema.optional()
         .parse(value),

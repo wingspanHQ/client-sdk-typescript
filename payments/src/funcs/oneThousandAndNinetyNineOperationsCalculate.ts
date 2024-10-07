@@ -44,10 +44,8 @@ export async function oneThousandAndNinetyNineOperationsCalculate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.Calculate1099Request$outboundSchema.optional().parse(value),
     "Input validation failed",

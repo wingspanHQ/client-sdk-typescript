@@ -43,10 +43,8 @@ export async function reportingAndAnalyticsGetPayrollReport(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetPayrollDetailedReportRequest$outboundSchema.parse(value),
     "Input validation failed",

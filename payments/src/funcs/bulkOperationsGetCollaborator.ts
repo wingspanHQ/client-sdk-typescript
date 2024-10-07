@@ -43,10 +43,8 @@ export async function bulkOperationsGetCollaborator(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetCollaboratorBatchRequest$outboundSchema.parse(value),
     "Input validation failed",

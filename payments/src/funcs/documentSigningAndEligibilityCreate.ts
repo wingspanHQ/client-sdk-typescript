@@ -44,10 +44,8 @@ export async function documentSigningAndEligibilityCreate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => shared.PaymentEligibility$outboundSchema.optional().parse(value),
     "Input validation failed",
   );

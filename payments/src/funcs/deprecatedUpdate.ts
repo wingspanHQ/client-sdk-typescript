@@ -45,10 +45,8 @@ export async function deprecatedUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateCustomDataCollaboratorMemberRequest$outboundSchema.parse(
         value,

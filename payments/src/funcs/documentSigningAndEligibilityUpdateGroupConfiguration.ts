@@ -43,10 +43,8 @@ export async function documentSigningAndEligibilityUpdateGroupConfiguration(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateCollaboratorGroupConfigurationRequest$outboundSchema
         .parse(value),

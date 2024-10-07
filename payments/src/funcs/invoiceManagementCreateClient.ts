@@ -44,10 +44,8 @@ export async function invoiceManagementCreateClient(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.ClientInvoiceTemplateCreateRequest$outboundSchema.optional().parse(
         value,

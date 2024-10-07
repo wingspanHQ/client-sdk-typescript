@@ -43,10 +43,8 @@ export async function bankingManagementDownload(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.DownloadBankStatementAsPDFRequest$outboundSchema.parse(value),
     "Input validation failed",

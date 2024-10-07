@@ -43,10 +43,8 @@ export async function collaboratorManagementGetEventAssociated(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetEventAssociatedCollaboratorRequest$outboundSchema.parse(
         value,

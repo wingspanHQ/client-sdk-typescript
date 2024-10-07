@@ -44,10 +44,8 @@ export async function bulkOperationsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       shared.BulkInvoiceBatchCreate$outboundSchema.optional().parse(value),
     "Input validation failed",

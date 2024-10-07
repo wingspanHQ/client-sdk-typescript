@@ -44,10 +44,8 @@ export async function customFieldManagementCreate(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => shared.AdditionalData$outboundSchema.optional().parse(value),
     "Input validation failed",
   );

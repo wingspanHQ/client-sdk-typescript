@@ -45,10 +45,8 @@ export async function deprecatedGet(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetCustomDataCollaboratorMemberRequest$outboundSchema.parse(
         value,

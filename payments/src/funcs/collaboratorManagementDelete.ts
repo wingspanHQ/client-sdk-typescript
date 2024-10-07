@@ -43,10 +43,8 @@ export async function collaboratorManagementDelete(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.DeleteCollaboratorRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

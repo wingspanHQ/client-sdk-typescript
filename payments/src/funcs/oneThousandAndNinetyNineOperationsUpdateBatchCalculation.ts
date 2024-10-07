@@ -43,10 +43,8 @@ export async function oneThousandAndNinetyNineOperationsUpdateBatchCalculation(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateCalculation1099BatchRequest$outboundSchema.parse(value),
     "Input validation failed",

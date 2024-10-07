@@ -43,10 +43,8 @@ export async function clientManagementGetAssociation(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.GetMemberClientAssociationRequest$outboundSchema.parse(value),
     "Input validation failed",

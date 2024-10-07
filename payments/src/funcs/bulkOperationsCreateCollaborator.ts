@@ -44,10 +44,8 @@ export async function bulkOperationsCreateCollaborator(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => shared.BulkBatchCreate$outboundSchema.optional().parse(value),
     "Input validation failed",
   );

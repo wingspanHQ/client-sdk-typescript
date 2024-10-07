@@ -43,10 +43,8 @@ export async function bulkOperationsUpdateSpecific(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.UpdateSpecificPayableBatchItemRequest$outboundSchema.parse(
         value,
