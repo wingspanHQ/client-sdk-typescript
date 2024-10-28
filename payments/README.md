@@ -616,179 +616,178 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [bankingManagementCreate](docs/sdks/bankingmanagement/README.md#create)
-- [bankingManagementDelete](docs/sdks/bankingmanagement/README.md#delete)
-- [bankingManagementDownload](docs/sdks/bankingmanagement/README.md#download)
-- [bankingManagementGetApplicationLink](docs/sdks/bankingmanagement/README.md#getapplicationlink)
-- [bankingManagementGetDebitCard](docs/sdks/bankingmanagement/README.md#getdebitcard)
-- [bankingManagementGetInstitution](docs/sdks/bankingmanagement/README.md#getinstitution)
-- [bankingManagementGetPayoutSetting](docs/sdks/bankingmanagement/README.md#getpayoutsetting)
-- [bankingManagementGet](docs/sdks/bankingmanagement/README.md#get)
-- [bankingManagementListStatements](docs/sdks/bankingmanagement/README.md#liststatements)
-- [bankingManagementList](docs/sdks/bankingmanagement/README.md#list)
-- [bankingManagementUpdate](docs/sdks/bankingmanagement/README.md#update)
-- [bulkOperationsCreateBatchItem](docs/sdks/bulkoperations/README.md#createbatchitem)
-- [bulkOperationsCreateClientItem](docs/sdks/bulkoperations/README.md#createclientitem)
-- [bulkOperationsCreateClient](docs/sdks/bulkoperations/README.md#createclient)
-- [bulkOperationsCreateCollaborator](docs/sdks/bulkoperations/README.md#createcollaborator)
-- [bulkOperationsCreatePayable](docs/sdks/bulkoperations/README.md#createpayable)
-- [bulkOperationsCreateSpecificCollaboratorItem](docs/sdks/bulkoperations/README.md#createspecificcollaboratoritem)
-- [bulkOperationsCreateSpecificInvoice](docs/sdks/bulkoperations/README.md#createspecificinvoice)
-- [bulkOperationsCreate](docs/sdks/bulkoperations/README.md#create)
-- [bulkOperationsDeleteCollaborator](docs/sdks/bulkoperations/README.md#deletecollaborator)
-- [bulkOperationsDeletePayable](docs/sdks/bulkoperations/README.md#deletepayable)
-- [bulkOperationsGetBatchItem](docs/sdks/bulkoperations/README.md#getbatchitem)
-- [bulkOperationsGetClientItem](docs/sdks/bulkoperations/README.md#getclientitem)
-- [bulkOperationsGetClient](docs/sdks/bulkoperations/README.md#getclient)
-- [bulkOperationsGetCollaborator](docs/sdks/bulkoperations/README.md#getcollaborator)
-- [bulkOperationsGetPayable](docs/sdks/bulkoperations/README.md#getpayable)
-- [bulkOperationsGetSpecificCollaboratorItem](docs/sdks/bulkoperations/README.md#getspecificcollaboratoritem)
-- [bulkOperationsGetSpecificInvoice](docs/sdks/bulkoperations/README.md#getspecificinvoice)
-- [bulkOperationsGetSpecific](docs/sdks/bulkoperations/README.md#getspecific)
-- [bulkOperationsGet](docs/sdks/bulkoperations/README.md#get)
-- [bulkOperationsListBatchItem](docs/sdks/bulkoperations/README.md#listbatchitem)
-- [bulkOperationsListClientItem](docs/sdks/bulkoperations/README.md#listclientitem)
-- [bulkOperationsListClient](docs/sdks/bulkoperations/README.md#listclient)
-- [bulkOperationsListCollaborator](docs/sdks/bulkoperations/README.md#listcollaborator)
-- [bulkOperationsListPayable](docs/sdks/bulkoperations/README.md#listpayable)
-- [bulkOperationsListSpecificCollaboratorItem](docs/sdks/bulkoperations/README.md#listspecificcollaboratoritem)
-- [bulkOperationsListSpecificInvoice](docs/sdks/bulkoperations/README.md#listspecificinvoice)
-- [bulkOperationsList](docs/sdks/bulkoperations/README.md#list)
-- [bulkOperationsUpdateClientItem](docs/sdks/bulkoperations/README.md#updateclientitem)
-- [bulkOperationsUpdateClient](docs/sdks/bulkoperations/README.md#updateclient)
-- [bulkOperationsUpdateCollaborator](docs/sdks/bulkoperations/README.md#updatecollaborator)
-- [bulkOperationsUpdatePayable](docs/sdks/bulkoperations/README.md#updatepayable)
-- [bulkOperationsUpdateSpecificCollaboratorItem](docs/sdks/bulkoperations/README.md#updatespecificcollaboratoritem)
-- [bulkOperationsUpdateSpecificInvoice](docs/sdks/bulkoperations/README.md#updatespecificinvoice)
-- [bulkOperationsUpdateSpecific](docs/sdks/bulkoperations/README.md#updatespecific)
-- [bulkOperationsUpdate](docs/sdks/bulkoperations/README.md#update)
-- [clientManagementCreate](docs/sdks/clientmanagement/README.md#create)
-- [clientManagementDeleteAssociation](docs/sdks/clientmanagement/README.md#deleteassociation)
-- [clientManagementDeleteClientDeduction](docs/sdks/clientmanagement/README.md#deleteclientdeduction)
-- [clientManagementEstablish](docs/sdks/clientmanagement/README.md#establish)
-- [clientManagementGetAssociation](docs/sdks/clientmanagement/README.md#getassociation)
-- [clientManagementGetClientDeduction](docs/sdks/clientmanagement/README.md#getclientdeduction)
-- [clientManagementListAssociations](docs/sdks/clientmanagement/README.md#listassociations)
-- [clientManagementListClientDeduction](docs/sdks/clientmanagement/README.md#listclientdeduction)
-- [clientManagementListSpecificClientDetail](docs/sdks/clientmanagement/README.md#listspecificclientdetail)
-- [clientManagementList](docs/sdks/clientmanagement/README.md#list)
-- [clientManagementUpdateAssociation](docs/sdks/clientmanagement/README.md#updateassociation)
-- [clientManagementUpdateClientDeduction](docs/sdks/clientmanagement/README.md#updateclientdeduction)
-- [collaboratorManagementAssociate](docs/sdks/collaboratormanagement/README.md#associate)
-- [collaboratorManagementCreateCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#createcollaboratordeduction)
-- [collaboratorManagementCreateCollaboratorGroup](docs/sdks/collaboratormanagement/README.md#createcollaboratorgroup)
-- [collaboratorManagementCreate](docs/sdks/collaboratormanagement/README.md#create)
-- [collaboratorManagementDeleteCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#deletecollaboratordeduction)
-- [collaboratorManagementDelete](docs/sdks/collaboratormanagement/README.md#delete)
-- [collaboratorManagementDisassociate](docs/sdks/collaboratormanagement/README.md#disassociate)
-- [collaboratorManagementGetCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#getcollaboratordeduction)
-- [collaboratorManagementGetEventAssociated](docs/sdks/collaboratormanagement/README.md#geteventassociated)
-- [collaboratorManagementGet](docs/sdks/collaboratormanagement/README.md#get)
-- [collaboratorManagementListCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#listcollaboratordeduction)
-- [collaboratorManagementListCollaboratorGroups](docs/sdks/collaboratormanagement/README.md#listcollaboratorgroups)
-- [collaboratorManagementListRegistered](docs/sdks/collaboratormanagement/README.md#listregistered)
-- [collaboratorManagementListSpecificCollaboratorDetail](docs/sdks/collaboratormanagement/README.md#listspecificcollaboratordetail)
-- [collaboratorManagementList](docs/sdks/collaboratormanagement/README.md#list)
-- [collaboratorManagementUpdateCollaboratorDeduction](docs/sdks/collaboratormanagement/README.md#updatecollaboratordeduction)
-- [collaboratorManagementUpdate](docs/sdks/collaboratormanagement/README.md#update)
-- [customFieldManagementCreate](docs/sdks/customfieldmanagement/README.md#create)
-- [customFieldManagementDelete](docs/sdks/customfieldmanagement/README.md#delete)
-- [customFieldManagementGet](docs/sdks/customfieldmanagement/README.md#get)
-- [customFieldManagementList](docs/sdks/customfieldmanagement/README.md#list)
-- [customFieldManagementUpdate](docs/sdks/customfieldmanagement/README.md#update)
-- [deprecatedCreate](docs/sdks/deprecated/README.md#create)
-- [deprecatedDeleteInstantPayout](docs/sdks/deprecated/README.md#deleteinstantpayout)
-- [deprecatedDelete](docs/sdks/deprecated/README.md#delete)
-- [deprecatedGetInstantPayout](docs/sdks/deprecated/README.md#getinstantpayout)
-- [deprecatedGet](docs/sdks/deprecated/README.md#get)
-- [deprecatedList](docs/sdks/deprecated/README.md#list)
-- [deprecatedUpdateInstantPayout](docs/sdks/deprecated/README.md#updateinstantpayout)
-- [deprecatedUpdate](docs/sdks/deprecated/README.md#update)
-- [documentSigningAndEligibilityCreate](docs/sdks/documentsigningandeligibility/README.md#create)
-- [documentSigningAndEligibilityDeleteCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#deletecollaboratorgroup)
-- [documentSigningAndEligibilityDeletePayment](docs/sdks/documentsigningandeligibility/README.md#deletepayment)
-- [documentSigningAndEligibilityDelete](docs/sdks/documentsigningandeligibility/README.md#delete)
-- [documentSigningAndEligibilityEstablish](docs/sdks/documentsigningandeligibility/README.md#establish)
-- [documentSigningAndEligibilityGetGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#getgroupconfiguration)
-- [documentSigningAndEligibilityGetPayment](docs/sdks/documentsigningandeligibility/README.md#getpayment)
-- [documentSigningAndEligibilityGet](docs/sdks/documentsigningandeligibility/README.md#get)
-- [documentSigningAndEligibilityListPayment](docs/sdks/documentsigningandeligibility/README.md#listpayment)
-- [documentSigningAndEligibilityList](docs/sdks/documentsigningandeligibility/README.md#list)
-- [documentSigningAndEligibilityUpdateCollaboratorGroup](docs/sdks/documentsigningandeligibility/README.md#updatecollaboratorgroup)
-- [documentSigningAndEligibilityUpdateGroupConfiguration](docs/sdks/documentsigningandeligibility/README.md#updategroupconfiguration)
-- [documentSigningAndEligibilityUpdatePayment](docs/sdks/documentsigningandeligibility/README.md#updatepayment)
-- [documentSigningAndEligibilityUpdate](docs/sdks/documentsigningandeligibility/README.md#update)
-- [invoiceManagementCreateClient](docs/sdks/invoicemanagement/README.md#createclient)
-- [invoiceManagementCreateGenerated](docs/sdks/invoicemanagement/README.md#creategenerated)
-- [invoiceManagementCreateTemplate](docs/sdks/invoicemanagement/README.md#createtemplate)
-- [invoiceManagementCreate](docs/sdks/invoicemanagement/README.md#create)
-- [invoiceManagementDeleteTemplate](docs/sdks/invoicemanagement/README.md#deletetemplate)
-- [invoiceManagementDelete](docs/sdks/invoicemanagement/README.md#delete)
-- [invoiceManagementExecute](docs/sdks/invoicemanagement/README.md#execute)
-- [invoiceManagementGenerateTest](docs/sdks/invoicemanagement/README.md#generatetest)
-- [invoiceManagementGenerate](docs/sdks/invoicemanagement/README.md#generate)
-- [invoiceManagementGetClient](docs/sdks/invoicemanagement/README.md#getclient)
-- [invoiceManagementGetFees](docs/sdks/invoicemanagement/README.md#getfees)
-- [invoiceManagementGetGenerated](docs/sdks/invoicemanagement/README.md#getgenerated)
-- [invoiceManagementGetMember](docs/sdks/invoicemanagement/README.md#getmember)
-- [invoiceManagementGetTemplate](docs/sdks/invoicemanagement/README.md#gettemplate)
-- [invoiceManagementGet](docs/sdks/invoicemanagement/README.md#get)
-- [invoiceManagementListClient](docs/sdks/invoicemanagement/README.md#listclient)
-- [invoiceManagementListTemplates](docs/sdks/invoicemanagement/README.md#listtemplates)
-- [invoiceManagementList](docs/sdks/invoicemanagement/README.md#list)
-- [invoiceManagementRefund](docs/sdks/invoicemanagement/README.md#refund)
-- [invoiceManagementSend](docs/sdks/invoicemanagement/README.md#send)
-- [invoiceManagementUpdateClient](docs/sdks/invoicemanagement/README.md#updateclient)
-- [invoiceManagementUpdateGenerated](docs/sdks/invoicemanagement/README.md#updategenerated)
-- [invoiceManagementUpdateTemplate](docs/sdks/invoicemanagement/README.md#updatetemplate)
-- [invoiceManagementUpdate](docs/sdks/invoicemanagement/README.md#update)
-- [merchantCategoryCodesGet](docs/sdks/merchantcategorycodes/README.md#get)
-- [oneThousandAndNinetyNineOperationsCalculate](docs/sdks/onethousandandninetynineoperations/README.md#calculate)
-- [oneThousandAndNinetyNineOperationsCreateBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#createbatchcalculation)
-- [oneThousandAndNinetyNineOperationsCreateItem](docs/sdks/onethousandandninetynineoperations/README.md#createitem)
-- [oneThousandAndNinetyNineOperationsCreateProof](docs/sdks/onethousandandninetynineoperations/README.md#createproof)
-- [oneThousandAndNinetyNineOperationsCreateTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#createtaxform)
-- [oneThousandAndNinetyNineOperationsCreate](docs/sdks/onethousandandninetynineoperations/README.md#create)
-- [oneThousandAndNinetyNineOperationsGetBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#getbatchcalculation)
-- [oneThousandAndNinetyNineOperationsGetForm1099](docs/sdks/onethousandandninetynineoperations/README.md#getform1099)
-- [oneThousandAndNinetyNineOperationsGetFormW9](docs/sdks/onethousandandninetynineoperations/README.md#getformw9)
-- [oneThousandAndNinetyNineOperationsGetItem](docs/sdks/onethousandandninetynineoperations/README.md#getitem)
-- [oneThousandAndNinetyNineOperationsGet](docs/sdks/onethousandandninetynineoperations/README.md#get)
-- [oneThousandAndNinetyNineOperationsListBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#listbatchcalculation)
-- [oneThousandAndNinetyNineOperationsListItem](docs/sdks/onethousandandninetynineoperations/README.md#listitem)
-- [oneThousandAndNinetyNineOperationsListTaxForm](docs/sdks/onethousandandninetynineoperations/README.md#listtaxform)
-- [oneThousandAndNinetyNineOperationsMark](docs/sdks/onethousandandninetynineoperations/README.md#mark)
-- [oneThousandAndNinetyNineOperationsRemail](docs/sdks/onethousandandninetynineoperations/README.md#remail)
-- [oneThousandAndNinetyNineOperationsRequest](docs/sdks/onethousandandninetynineoperations/README.md#request)
-- [oneThousandAndNinetyNineOperationsSubmit](docs/sdks/onethousandandninetynineoperations/README.md#submit)
-- [oneThousandAndNinetyNineOperationsUpdateBatchCalculation](docs/sdks/onethousandandninetynineoperations/README.md#updatebatchcalculation)
-- [oneThousandAndNinetyNineOperationsUpdateItem](docs/sdks/onethousandandninetynineoperations/README.md#updateitem)
-- [oneThousandAndNinetyNineOperationsUpdateW9](docs/sdks/onethousandandninetynineoperations/README.md#updatew9)
-- [oneThousandAndNinetyNineOperationsUpdate](docs/sdks/onethousandandninetynineoperations/README.md#update)
-- [payablesManagementCreate](docs/sdks/payablesmanagement/README.md#create)
-- [payablesManagementDelete](docs/sdks/payablesmanagement/README.md#delete)
-- [payablesManagementExecute](docs/sdks/payablesmanagement/README.md#execute)
-- [payablesManagementGetApproved](docs/sdks/payablesmanagement/README.md#getapproved)
-- [payablesManagementGet](docs/sdks/payablesmanagement/README.md#get)
-- [payablesManagementListSummary](docs/sdks/payablesmanagement/README.md#listsummary)
-- [payablesManagementList](docs/sdks/payablesmanagement/README.md#list)
-- [payablesManagementUpdate](docs/sdks/payablesmanagement/README.md#update)
-- [payrollSettingsGet](docs/sdks/payrollsettings/README.md#get)
-- [payrollSettingsUpdate](docs/sdks/payrollsettings/README.md#update)
-- [reportingAndAnalyticsGetPayrollReport](docs/sdks/reportingandanalytics/README.md#getpayrollreport)
-- [reportingAndAnalyticsGet](docs/sdks/reportingandanalytics/README.md#get)
-- [reportingAndAnalyticsListDetailedCollaborator](docs/sdks/reportingandanalytics/README.md#listdetailedcollaborator)
-- [reportingAndAnalyticsListLineItem](docs/sdks/reportingandanalytics/README.md#listlineitem)
-- [reportingAndAnalyticsListPayable](docs/sdks/reportingandanalytics/README.md#listpayable)
-- [serviceSettingsGet](docs/sdks/servicesettings/README.md#get)
-- [wingspanWalletCreate](docs/sdks/wingspanwallet/README.md#create)
-- [wingspanWalletDelete](docs/sdks/wingspanwallet/README.md#delete)
-- [wingspanWalletGet](docs/sdks/wingspanwallet/README.md#get)
-- [wingspanWalletList](docs/sdks/wingspanwallet/README.md#list)
-- [wingspanWalletRequest](docs/sdks/wingspanwallet/README.md#request)
-- [wingspanWalletUpdate](docs/sdks/wingspanwallet/README.md#update)
-- [wingspanWalletValidate](docs/sdks/wingspanwallet/README.md#validate)
-
+- [`bankingManagementCreate`](docs/sdks/bankingmanagement/README.md#create) - Register a new payout debit card for a member
+- [`bankingManagementDelete`](docs/sdks/bankingmanagement/README.md#delete) - Unlink and delete a specific payout debit card from a member's profile
+- [`bankingManagementDownload`](docs/sdks/bankingmanagement/README.md#download) - Download a specific bank statement as a PDF
+- [`bankingManagementGet`](docs/sdks/bankingmanagement/README.md#get) - Retrieve Specific Bank Statement
+- [`bankingManagementGetApplicationLink`](docs/sdks/bankingmanagement/README.md#getapplicationlink) - Fetch the application link for setting up a clearing bank account
+- [`bankingManagementGetDebitCard`](docs/sdks/bankingmanagement/README.md#getdebitcard) - Retrieve a specific payout debit card linked to a member
+- [`bankingManagementGetInstitution`](docs/sdks/bankingmanagement/README.md#getinstitution) - Retrieve banking institution details by its routing number
+- [`bankingManagementGetPayoutSetting`](docs/sdks/bankingmanagement/README.md#getpayoutsetting) - Retrieve payout settings for a specific member
+- [`bankingManagementList`](docs/sdks/bankingmanagement/README.md#list) - Fetch all registered payout debit cards for a member
+- [`bankingManagementListStatements`](docs/sdks/bankingmanagement/README.md#liststatements) - Retrieve All Bank Statements
+- [`bankingManagementUpdate`](docs/sdks/bankingmanagement/README.md#update) - Modify and update payout settings for a specific member
+- [`bulkOperationsCreate`](docs/sdks/bulkoperations/README.md#create) - Initiate a New Bulk Invoice Batch
+- [`bulkOperationsCreateBatchItem`](docs/sdks/bulkoperations/README.md#createbatchitem) - Add a new item to a specific bulk payable batch
+- [`bulkOperationsCreateClient`](docs/sdks/bulkoperations/README.md#createclient) - Create a new bulk client batch
+- [`bulkOperationsCreateClientItem`](docs/sdks/bulkoperations/README.md#createclientitem) - Add a New Item to a Client Batch
+- [`bulkOperationsCreateCollaborator`](docs/sdks/bulkoperations/README.md#createcollaborator) - Initiate a new bulk collaborator batch.
+- [`bulkOperationsCreatePayable`](docs/sdks/bulkoperations/README.md#createpayable) - Initiate a New Bulk Payable Batch
+- [`bulkOperationsCreateSpecificCollaboratorItem`](docs/sdks/bulkoperations/README.md#createspecificcollaboratoritem) - Append a new item to a specific collaborator batch
+- [`bulkOperationsCreateSpecificInvoice`](docs/sdks/bulkoperations/README.md#createspecificinvoice) - Add a new item to a specific bulk invoice batch
+- [`bulkOperationsDeleteCollaborator`](docs/sdks/bulkoperations/README.md#deletecollaborator) - Remove a Specific Collaborator Batch
+- [`bulkOperationsDeletePayable`](docs/sdks/bulkoperations/README.md#deletepayable) - Remove a Specific Bulk Payable Batch
+- [`bulkOperationsGet`](docs/sdks/bulkoperations/README.md#get) - Retrieve details of a specific bulk invoice batch
+- [`bulkOperationsGetBatchItem`](docs/sdks/bulkoperations/README.md#getbatchitem) - Fetch the import summary for a specific bulk payable batch
+- [`bulkOperationsGetClient`](docs/sdks/bulkoperations/README.md#getclient) - Fetch Details of a Specific Item from a Client Batch
+- [`bulkOperationsGetClientItem`](docs/sdks/bulkoperations/README.md#getclientitem) - Fetch Details of a Specific Item from a Client Batch
+- [`bulkOperationsGetCollaborator`](docs/sdks/bulkoperations/README.md#getcollaborator) - Retrieve Details of a Specific Collaborator Batch
+- [`bulkOperationsGetPayable`](docs/sdks/bulkoperations/README.md#getpayable) - Retrieve Details of a Specific Bulk Payable Batch
+- [`bulkOperationsGetSpecific`](docs/sdks/bulkoperations/README.md#getspecific) - Retrieve a Specific Item from a Bulk Payable Batch
+- [`bulkOperationsGetSpecificCollaboratorItem`](docs/sdks/bulkoperations/README.md#getspecificcollaboratoritem) - Retrieve details of a specific item from a collaborator batch
+- [`bulkOperationsGetSpecificInvoice`](docs/sdks/bulkoperations/README.md#getspecificinvoice) - Retrieve a specific item from a bulk invoice batch
+- [`bulkOperationsList`](docs/sdks/bulkoperations/README.md#list) - Retrieve All Bulk Invoice Batches
+- [`bulkOperationsListBatchItem`](docs/sdks/bulkoperations/README.md#listbatchitem) - Retrieve all items from a specific bulk payable batch
+- [`bulkOperationsListClient`](docs/sdks/bulkoperations/README.md#listclient) - Retrieve all bulk client batches
+- [`bulkOperationsListClientItem`](docs/sdks/bulkoperations/README.md#listclientitem) - Retrieve All Items from a Client Batch
+- [`bulkOperationsListCollaborator`](docs/sdks/bulkoperations/README.md#listcollaborator) - Fetch all bulk collaborator batches
+- [`bulkOperationsListPayable`](docs/sdks/bulkoperations/README.md#listpayable) - Retrieve All Bulk Payable Batches
+- [`bulkOperationsListSpecificCollaboratorItem`](docs/sdks/bulkoperations/README.md#listspecificcollaboratoritem) - Retrieve all items from a specific collaborator batch
+- [`bulkOperationsListSpecificInvoice`](docs/sdks/bulkoperations/README.md#listspecificinvoice) - Fetch all items from a specific bulk invoice batch
+- [`bulkOperationsUpdate`](docs/sdks/bulkoperations/README.md#update) - Modify the details of a specific bulk invoice batch
+- [`bulkOperationsUpdateClient`](docs/sdks/bulkoperations/README.md#updateclient) - Modify Details of a Specific Item in a Client Batch
+- [`bulkOperationsUpdateClientItem`](docs/sdks/bulkoperations/README.md#updateclientitem) - Modify Details of a Specific Item in a Client Batch
+- [`bulkOperationsUpdateCollaborator`](docs/sdks/bulkoperations/README.md#updatecollaborator) - Modify Details of a Bulk Collaborator Batch
+- [`bulkOperationsUpdatePayable`](docs/sdks/bulkoperations/README.md#updatepayable) - Modify a Specific Bulk Payable Batch
+- [`bulkOperationsUpdateSpecific`](docs/sdks/bulkoperations/README.md#updatespecific) - Modify a Specific Item in a Bulk Payable Batch
+- [`bulkOperationsUpdateSpecificCollaboratorItem`](docs/sdks/bulkoperations/README.md#updatespecificcollaboratoritem) - Modify the details of a specific item within a collaborator batch
+- [`bulkOperationsUpdateSpecificInvoice`](docs/sdks/bulkoperations/README.md#updatespecificinvoice) - Modify a specific item within a bulk invoice batch
+- [`clientManagementCreate`](docs/sdks/clientmanagement/README.md#create) - Register a New Client Deduction
+- [`clientManagementDeleteAssociation`](docs/sdks/clientmanagement/README.md#deleteassociation) - Remove a specific member-client relationship from the system
+- [`clientManagementDeleteClientDeduction`](docs/sdks/clientmanagement/README.md#deleteclientdeduction) - Remove a Client Deduction
+- [`clientManagementEstablish`](docs/sdks/clientmanagement/README.md#establish) - Establish a new association between a member and client
+- [`clientManagementGetAssociation`](docs/sdks/clientmanagement/README.md#getassociation) - Retrieve detailed information of a specific member-client relationship
+- [`clientManagementGetClientDeduction`](docs/sdks/clientmanagement/README.md#getclientdeduction) - Fetch Specific Client Deduction Details
+- [`clientManagementList`](docs/sdks/clientmanagement/README.md#list) - Retrieve All Clients (Version 2)
+- [`clientManagementListAssociations`](docs/sdks/clientmanagement/README.md#listassociations) - Fetch a list of member and client associations
+- [`clientManagementListClientDeduction`](docs/sdks/clientmanagement/README.md#listclientdeduction) - Retrieve All Client Deductions
+- [`clientManagementListSpecificClientDetail`](docs/sdks/clientmanagement/README.md#listspecificclientdetail) - Retrieve Specific Client Details (Version 2)
+- [`clientManagementUpdateAssociation`](docs/sdks/clientmanagement/README.md#updateassociation) - Update information of a specific member-client relationship
+- [`clientManagementUpdateClientDeduction`](docs/sdks/clientmanagement/README.md#updateclientdeduction) - Modify a Client Deduction
+- [`collaboratorManagementAssociate`](docs/sdks/collaboratormanagement/README.md#associate) - Associate Collaborator with a Specific Group
+- [`collaboratorManagementCreate`](docs/sdks/collaboratormanagement/README.md#create) - Register a New Collaborator
+- [`collaboratorManagementCreateCollaboratorDeduction`](docs/sdks/collaboratormanagement/README.md#createcollaboratordeduction) - Register a New Deduction for a Collaborator
+- [`collaboratorManagementCreateCollaboratorGroup`](docs/sdks/collaboratormanagement/README.md#createcollaboratorgroup) - Generate New Collaborator Group
+- [`collaboratorManagementDelete`](docs/sdks/collaboratormanagement/README.md#delete) - Remove a Specific Collaborator Record
+- [`collaboratorManagementDeleteCollaboratorDeduction`](docs/sdks/collaboratormanagement/README.md#deletecollaboratordeduction) - Erase a Specific Deduction Entry
+- [`collaboratorManagementDisassociate`](docs/sdks/collaboratormanagement/README.md#disassociate) - Disassociate Collaborator from a Specific Group
+- [`collaboratorManagementGet`](docs/sdks/collaboratormanagement/README.md#get) - Retrieve Details of a Specific Collaborator
+- [`collaboratorManagementGetCollaboratorDeduction`](docs/sdks/collaboratormanagement/README.md#getcollaboratordeduction) - Retrieve Specific Deduction Details
+- [`collaboratorManagementGetEventAssociated`](docs/sdks/collaboratormanagement/README.md#geteventassociated) - Retrieve Events Associated with a Collaborator
+- [`collaboratorManagementList`](docs/sdks/collaboratormanagement/README.md#list) - Retrieve All Collaborators (Version 2)
+- [`collaboratorManagementListCollaboratorDeduction`](docs/sdks/collaboratormanagement/README.md#listcollaboratordeduction) - Retrieve All Deductions for Collaborators
+- [`collaboratorManagementListCollaboratorGroups`](docs/sdks/collaboratormanagement/README.md#listcollaboratorgroups) - Retrieve All Collaborator Groups
+- [`collaboratorManagementListRegistered`](docs/sdks/collaboratormanagement/README.md#listregistered) - Retrieve All Registered Collaborators
+- [`collaboratorManagementListSpecificCollaboratorDetail`](docs/sdks/collaboratormanagement/README.md#listspecificcollaboratordetail) - Retrieve Specific Collaborator Details (Version 2)
+- [`collaboratorManagementUpdate`](docs/sdks/collaboratormanagement/README.md#update) - Modify Collaborator Details
+- [`collaboratorManagementUpdateCollaboratorDeduction`](docs/sdks/collaboratormanagement/README.md#updatecollaboratordeduction) - Modify Details of a Specific Deduction
+- [`customFieldManagementCreate`](docs/sdks/customfieldmanagement/README.md#create) - Add a New Custom Field
+- [`customFieldManagementDelete`](docs/sdks/customfieldmanagement/README.md#delete) - Remove a Specific Custom Field
+- [`customFieldManagementGet`](docs/sdks/customfieldmanagement/README.md#get) - Fetch Details of a Specific Custom Field
+- [`customFieldManagementList`](docs/sdks/customfieldmanagement/README.md#list) - Retrieve All Custom Fields
+- [`customFieldManagementUpdate`](docs/sdks/customfieldmanagement/README.md#update) - Modify Details of a Specific Custom Field
+- [`deprecatedDeleteInstantPayout`](docs/sdks/deprecated/README.md#deleteinstantpayout) - Deprecated Remove Instant Payout Configuration
+- [`deprecatedGetInstantPayout`](docs/sdks/deprecated/README.md#getinstantpayout) - Deprecated Retrieve Instant Payout Information
+- [`deprecatedUpdateInstantPayout`](docs/sdks/deprecated/README.md#updateinstantpayout) - Deprecated Set Up Instant Payout Configuration
+- [`documentSigningAndEligibilityCreate`](docs/sdks/documentsigningandeligibility/README.md#create) - Add a New Payment Eligibility Requirement
+- [`documentSigningAndEligibilityDelete`](docs/sdks/documentsigningandeligibility/README.md#delete) - Remove a Specific Eligibility Requirement
+- [`documentSigningAndEligibilityDeleteCollaboratorGroup`](docs/sdks/documentsigningandeligibility/README.md#deletecollaboratorgroup) - Remove Eligibility Requirement from Collaborator Group
+- [`documentSigningAndEligibilityDeletePayment`](docs/sdks/documentsigningandeligibility/README.md#deletepayment) - Remove a specific Payment Eligibility Requirement
+- [`documentSigningAndEligibilityEstablish`](docs/sdks/documentsigningandeligibility/README.md#establish) - Establish a new Eligibility Requirement
+- [`documentSigningAndEligibilityGet`](docs/sdks/documentsigningandeligibility/README.md#get) - Retrieve a Specific Eligibility Requirement
+- [`documentSigningAndEligibilityGetGroupConfiguration`](docs/sdks/documentsigningandeligibility/README.md#getgroupconfiguration) - Retrieve Specific Collaborator Group Configuration
+- [`documentSigningAndEligibilityGetPayment`](docs/sdks/documentsigningandeligibility/README.md#getpayment) - Retrieve details of a specific Payment Eligibility Requirement
+- [`documentSigningAndEligibilityList`](docs/sdks/documentsigningandeligibility/README.md#list) - Retrieve all Eligibility Requirements
+- [`documentSigningAndEligibilityListPayment`](docs/sdks/documentsigningandeligibility/README.md#listpayment) - Retrieve All Payment Eligibility Requirements
+- [`documentSigningAndEligibilityUpdate`](docs/sdks/documentsigningandeligibility/README.md#update) - Modify a Specific Eligibility Requirement
+- [`documentSigningAndEligibilityUpdateCollaboratorGroup`](docs/sdks/documentsigningandeligibility/README.md#updatecollaboratorgroup) - Modify Eligibility Requirement for Collaborator Group
+- [`documentSigningAndEligibilityUpdateGroupConfiguration`](docs/sdks/documentsigningandeligibility/README.md#updategroupconfiguration) - Modify Collaborator Group Configuration
+- [`documentSigningAndEligibilityUpdatePayment`](docs/sdks/documentsigningandeligibility/README.md#updatepayment) - Modify a specific Payment Eligibility Requirement
+- [`invoiceManagementCreate`](docs/sdks/invoicemanagement/README.md#create) - Initiate New Invoice for a Member
+- [`invoiceManagementCreateClient`](docs/sdks/invoicemanagement/README.md#createclient) - Create a new client-generated invoice template
+- [`invoiceManagementCreateGenerated`](docs/sdks/invoicemanagement/README.md#creategenerated) - Generate a New Invoice on Behalf of the Client
+- [`invoiceManagementCreateTemplate`](docs/sdks/invoicemanagement/README.md#createtemplate) - Create a new invoice template
+- [`invoiceManagementDelete`](docs/sdks/invoicemanagement/README.md#delete) - Remove Invoice Record by ID
+- [`invoiceManagementDeleteTemplate`](docs/sdks/invoicemanagement/README.md#deletetemplate) - Remove a specific invoice template
+- [`invoiceManagementExecute`](docs/sdks/invoicemanagement/README.md#execute) - Execute Payment for a Client-Generated Invoice
+- [`invoiceManagementGenerate`](docs/sdks/invoicemanagement/README.md#generate) - Generate a PDF for a specific invoice
+- [`invoiceManagementGenerateTest`](docs/sdks/invoicemanagement/README.md#generatetest) - Generate Test Invoice for a Client
+- [`invoiceManagementGet`](docs/sdks/invoicemanagement/README.md#get) - Fetch Invoice by ID
+- [`invoiceManagementGetClient`](docs/sdks/invoicemanagement/README.md#getclient) - Fetch a specific client-generated invoice template by ID
+- [`invoiceManagementGetFees`](docs/sdks/invoicemanagement/README.md#getfees) - Retrieve Fees Associated with a Client's Invoice
+- [`invoiceManagementGetGenerated`](docs/sdks/invoicemanagement/README.md#getgenerated) - Fetch Specific Client-Generated Invoice by ID
+- [`invoiceManagementGetMember`](docs/sdks/invoicemanagement/README.md#getmember) - Retrieve All Member Invoices
+- [`invoiceManagementGetTemplate`](docs/sdks/invoicemanagement/README.md#gettemplate) - Retrieve a specific invoice template by ID
+- [`invoiceManagementList`](docs/sdks/invoicemanagement/README.md#list) - Retrieve All Invoices Generated by a Client
+- [`invoiceManagementListClient`](docs/sdks/invoicemanagement/README.md#listclient) - Retrieve all client-generated invoice templates
+- [`invoiceManagementListTemplates`](docs/sdks/invoicemanagement/README.md#listtemplates) - Retrieve all available invoice templates
+- [`invoiceManagementRefund`](docs/sdks/invoicemanagement/README.md#refund) - Refund a deposited invoice
+- [`invoiceManagementSend`](docs/sdks/invoicemanagement/README.md#send) - Send an invoice by email
+- [`invoiceManagementUpdate`](docs/sdks/invoicemanagement/README.md#update) - Modify Existing Invoice Details
+- [`invoiceManagementUpdateClient`](docs/sdks/invoicemanagement/README.md#updateclient) - Modify a client-generated invoice template
+- [`invoiceManagementUpdateGenerated`](docs/sdks/invoicemanagement/README.md#updategenerated) - Modify an Existing Client-Generated Invoice
+- [`invoiceManagementUpdateTemplate`](docs/sdks/invoicemanagement/README.md#updatetemplate) - Modify details of an existing invoice template
+- [`merchantCategoryCodesGet`](docs/sdks/merchantcategorycodes/README.md#get) - Retrieve Merchant Category Codes (MCC)
+- [`oneThousandAndNinetyNineOperationsCalculate`](docs/sdks/onethousandandninetynineoperations/README.md#calculate) - Determine 1099 Amounts for Collaborators
+- [`oneThousandAndNinetyNineOperationsCreate`](docs/sdks/onethousandandninetynineoperations/README.md#create) - Re-enable recipient sync on a tax form.
+- [`oneThousandAndNinetyNineOperationsCreateBatchCalculation`](docs/sdks/onethousandandninetynineoperations/README.md#createbatchcalculation) - Initialize a new batch for bulk calculation 1099
+- [`oneThousandAndNinetyNineOperationsCreateItem`](docs/sdks/onethousandandninetynineoperations/README.md#createitem) - Add a new item to a calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsCreateProof`](docs/sdks/onethousandandninetynineoperations/README.md#createproof) - Provide Recipient Proof of Identity
+- [`oneThousandAndNinetyNineOperationsCreateTaxForm`](docs/sdks/onethousandandninetynineoperations/README.md#createtaxform) - Create a new tax form.
+- [`oneThousandAndNinetyNineOperationsGet`](docs/sdks/onethousandandninetynineoperations/README.md#get) - Fetch tax form.
+- [`oneThousandAndNinetyNineOperationsGetBatchCalculation`](docs/sdks/onethousandandninetynineoperations/README.md#getbatchcalculation) - Retrieve specific details of a bulk calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsGetForm1099`](docs/sdks/onethousandandninetynineoperations/README.md#getform1099) - Retrieve Form 1099 PDF for a Collaborator by Year and Index
+- [`oneThousandAndNinetyNineOperationsGetFormW9`](docs/sdks/onethousandandninetynineoperations/README.md#getformw9) - Retrieve Form W9 PDF for a Collaborator
+- [`oneThousandAndNinetyNineOperationsGetItem`](docs/sdks/onethousandandninetynineoperations/README.md#getitem) - Fetch details of a specific item from a calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsListBatchCalculation`](docs/sdks/onethousandandninetynineoperations/README.md#listbatchcalculation) - Retrieve all bulk calculation 1099 batches
+- [`oneThousandAndNinetyNineOperationsListItem`](docs/sdks/onethousandandninetynineoperations/README.md#listitem) - Retrieve all items from a calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsListTaxForm`](docs/sdks/onethousandandninetynineoperations/README.md#listtaxform) - Fetch 1099 tax forms.
+- [`oneThousandAndNinetyNineOperationsMark`](docs/sdks/onethousandandninetynineoperations/README.md#mark) - Indicate a collaborator's 1099 form was returned undelivered
+- [`oneThousandAndNinetyNineOperationsRemail`](docs/sdks/onethousandandninetynineoperations/README.md#remail) - Request a new mailing of the 1099 form for a collaborator
+- [`oneThousandAndNinetyNineOperationsRequest`](docs/sdks/onethousandandninetynineoperations/README.md#request) - Request a new 1099 invite email.
+- [`oneThousandAndNinetyNineOperationsSubmit`](docs/sdks/onethousandandninetynineoperations/README.md#submit) - Submit Payee TIN for verification
+- [`oneThousandAndNinetyNineOperationsUpdate`](docs/sdks/onethousandandninetynineoperations/README.md#update) - Update a tax form.
+- [`oneThousandAndNinetyNineOperationsUpdateBatchCalculation`](docs/sdks/onethousandandninetynineoperations/README.md#updatebatchcalculation) - Modify the details of a specific bulk calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsUpdateItem`](docs/sdks/onethousandandninetynineoperations/README.md#updateitem) - Revise the attributes of an item in a calculation 1099 batch
+- [`oneThousandAndNinetyNineOperationsUpdateW9`](docs/sdks/onethousandandninetynineoperations/README.md#updatew9) - Submit Payee W9 Information.
+- [`payablesManagementCreate`](docs/sdks/payablesmanagement/README.md#create) - Create a New Payable for a Member on Behalf of a Client
+- [`payablesManagementDelete`](docs/sdks/payablesmanagement/README.md#delete) - Delete Client Payable by Payable ID
+- [`payablesManagementExecute`](docs/sdks/payablesmanagement/README.md#execute) - Execute Approved Payroll Transactions
+- [`payablesManagementGet`](docs/sdks/payablesmanagement/README.md#get) - Retrieve Payable Details by Payable ID
+- [`payablesManagementGetApproved`](docs/sdks/payablesmanagement/README.md#getapproved) - Retrieve Approved Payables Ready for Immediate Payroll
+- [`payablesManagementList`](docs/sdks/payablesmanagement/README.md#list) - List All Payables Associated with a Client
+- [`payablesManagementListSummary`](docs/sdks/payablesmanagement/README.md#listsummary) - Retrieve Summary of All Payables
+- [`payablesManagementUpdate`](docs/sdks/payablesmanagement/README.md#update) - Update Client Payable Information by Payable ID
+- [`payrollSettingsGet`](docs/sdks/payrollsettings/README.md#get) - Retrieve Individual Payroll Settings
+- [`payrollSettingsUpdate`](docs/sdks/payrollsettings/README.md#update) - Modify Existing Payroll Settings
+- [`reportingAndAnalyticsGet`](docs/sdks/reportingandanalytics/README.md#get) - Obtain a summarized report of payable amounts for each collaborator
+- [`reportingAndAnalyticsGetPayrollReport`](docs/sdks/reportingandanalytics/README.md#getpayrollreport) - Extract detailed report of payables associated with a particular payroll run
+- [`reportingAndAnalyticsListDetailedCollaborator`](docs/sdks/reportingandanalytics/README.md#listdetailedcollaborator) - Retrieve detailed information on all collaborators
+- [`reportingAndAnalyticsListLineItem`](docs/sdks/reportingandanalytics/README.md#listlineitem) - Obtain Aging Report for Line Items
+- [`reportingAndAnalyticsListPayable`](docs/sdks/reportingandanalytics/README.md#listpayable) - Retrieve Aging Report for Payables
+- [`serviceSettingsGet`](docs/sdks/servicesettings/README.md#get) - Check Service Status
+- [`wingspanWalletCreate`](docs/sdks/wingspanwallet/README.md#create) - Register a New  Wingspan Wallet Card
+- [`wingspanWalletDelete`](docs/sdks/wingspanwallet/README.md#delete) - Remove a card using its unique ID
+- [`wingspanWalletGet`](docs/sdks/wingspanwallet/README.md#get) - Retrieve card details by its unique ID
+- [`wingspanWalletList`](docs/sdks/wingspanwallet/README.md#list) - List All Stored Wingspan Wallet Cards
+- [`wingspanWalletRequest`](docs/sdks/wingspanwallet/README.md#request) - Request a verification code for card authentication
+- [`wingspanWalletUpdate`](docs/sdks/wingspanwallet/README.md#update) - Modify card details by its unique ID
+- [`wingspanWalletValidate`](docs/sdks/wingspanwallet/README.md#validate) - Validate verification code to receive a token
+- ~~[`deprecatedCreate`](docs/sdks/deprecated/README.md#create)~~ - Register New Custom Data for Collaborator-Member Relationship :warning: **Deprecated**
+- ~~[`deprecatedDelete`](docs/sdks/deprecated/README.md#delete)~~ - Erase a Specific Collaborator-Member Custom Data :warning: **Deprecated**
+- ~~[`deprecatedGet`](docs/sdks/deprecated/README.md#get)~~ - Retrieve Specific Collaborator Custom Data :warning: **Deprecated**
+- ~~[`deprecatedList`](docs/sdks/deprecated/README.md#list)~~ - Retrieve All Collaborator-Member Custom Data Points :warning: **Deprecated**
+- ~~[`deprecatedUpdate`](docs/sdks/deprecated/README.md#update)~~ - Modify a Specific Collaborator-Member Custom Data :warning: **Deprecated**
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->

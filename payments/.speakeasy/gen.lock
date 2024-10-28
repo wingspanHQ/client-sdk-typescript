@@ -3,10 +3,10 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: 1.410.0
-  generationVersion: 2.434.1
-  releaseVersion: 2.7.1
-  configChecksum: 411a5bb07302cea52725d25e105fec00
+  speakeasyVersion: 1.422.1
+  generationVersion: 2.438.15
+  releaseVersion: 2.7.2
+  configChecksum: 4137bd68dc8b85a02f48029b8f3fb9a3
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments

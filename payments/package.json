@@ -1,6 +1,6 @@
 {
   "name": "@wingspan/payments",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "author": "Wingspan Networks, Inc.",
   "main": "./index.js",
   "sideEffects": false,
