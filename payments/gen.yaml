@@ -9,9 +9,10 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   telemetryEnabled: false
 typescript:
-  version: 2.7.3
+  version: 2.8.0
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -19,6 +20,7 @@ typescript:
   additionalPackageJSON: {}
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
+  defaultErrorName: SDKError
   enumFormat: union
   flattenGlobalSecurity: true
   flatteningOrder: body-first
