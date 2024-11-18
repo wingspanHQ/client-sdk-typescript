@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FundsTransferAccount,
   FundsTransferAccount$inboundSchema,
@@ -52,4 +55,22 @@ export namespace InstantPayoutResponse$ {
   export const outboundSchema = InstantPayoutResponse$outboundSchema;
   /** @deprecated use `InstantPayoutResponse$Outbound` instead. */
   export type Outbound = InstantPayoutResponse$Outbound;
+}
+
+export function instantPayoutResponseToJSON(
+  instantPayoutResponse: InstantPayoutResponse,
+): string {
+  return JSON.stringify(
+    InstantPayoutResponse$outboundSchema.parse(instantPayoutResponse),
+  );
+}
+
+export function instantPayoutResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<InstantPayoutResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InstantPayoutResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InstantPayoutResponse' from JSON`,
+  );
 }

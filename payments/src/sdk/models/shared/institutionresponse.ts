@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type InstitutionResponse = {
   address: string;
@@ -62,4 +65,22 @@ export namespace InstitutionResponse$ {
   export const outboundSchema = InstitutionResponse$outboundSchema;
   /** @deprecated use `InstitutionResponse$Outbound` instead. */
   export type Outbound = InstitutionResponse$Outbound;
+}
+
+export function institutionResponseToJSON(
+  institutionResponse: InstitutionResponse,
+): string {
+  return JSON.stringify(
+    InstitutionResponse$outboundSchema.parse(institutionResponse),
+  );
+}
+
+export function institutionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<InstitutionResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InstitutionResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InstitutionResponse' from JSON`,
+  );
 }

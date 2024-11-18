@@ -74,6 +74,9 @@ export async function invoiceManagementCreateTemplate(
   const context = {
     operationID: "createInvoiceTemplate",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

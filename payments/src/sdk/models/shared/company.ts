@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   CompanyLinks,
   CompanyLinks$inboundSchema,
@@ -133,4 +136,18 @@ export namespace Company$ {
   export const outboundSchema = Company$outboundSchema;
   /** @deprecated use `Company$Outbound` instead. */
   export type Outbound = Company$Outbound;
+}
+
+export function companyToJSON(company: Company): string {
+  return JSON.stringify(Company$outboundSchema.parse(company));
+}
+
+export function companyFromJSON(
+  jsonString: string,
+): SafeParseResult<Company, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Company$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Company' from JSON`,
+  );
 }

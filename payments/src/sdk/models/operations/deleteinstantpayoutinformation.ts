@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteInstantPayoutInformationResponse = {
@@ -86,4 +89,26 @@ export namespace DeleteInstantPayoutInformationResponse$ {
     DeleteInstantPayoutInformationResponse$outboundSchema;
   /** @deprecated use `DeleteInstantPayoutInformationResponse$Outbound` instead. */
   export type Outbound = DeleteInstantPayoutInformationResponse$Outbound;
+}
+
+export function deleteInstantPayoutInformationResponseToJSON(
+  deleteInstantPayoutInformationResponse:
+    DeleteInstantPayoutInformationResponse,
+): string {
+  return JSON.stringify(
+    DeleteInstantPayoutInformationResponse$outboundSchema.parse(
+      deleteInstantPayoutInformationResponse,
+    ),
+  );
+}
+
+export function deleteInstantPayoutInformationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteInstantPayoutInformationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteInstantPayoutInformationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteInstantPayoutInformationResponse' from JSON`,
+  );
 }

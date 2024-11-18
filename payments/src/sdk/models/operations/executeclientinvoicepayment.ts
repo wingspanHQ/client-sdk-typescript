@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ExecuteClientInvoicePaymentRequest = {
@@ -83,6 +86,27 @@ export namespace ExecuteClientInvoicePaymentRequest$ {
   export type Outbound = ExecuteClientInvoicePaymentRequest$Outbound;
 }
 
+export function executeClientInvoicePaymentRequestToJSON(
+  executeClientInvoicePaymentRequest: ExecuteClientInvoicePaymentRequest,
+): string {
+  return JSON.stringify(
+    ExecuteClientInvoicePaymentRequest$outboundSchema.parse(
+      executeClientInvoicePaymentRequest,
+    ),
+  );
+}
+
+export function executeClientInvoicePaymentRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ExecuteClientInvoicePaymentRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ExecuteClientInvoicePaymentRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ExecuteClientInvoicePaymentRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ExecuteClientInvoicePaymentResponse$inboundSchema: z.ZodType<
   ExecuteClientInvoicePaymentResponse,
@@ -144,4 +168,25 @@ export namespace ExecuteClientInvoicePaymentResponse$ {
     ExecuteClientInvoicePaymentResponse$outboundSchema;
   /** @deprecated use `ExecuteClientInvoicePaymentResponse$Outbound` instead. */
   export type Outbound = ExecuteClientInvoicePaymentResponse$Outbound;
+}
+
+export function executeClientInvoicePaymentResponseToJSON(
+  executeClientInvoicePaymentResponse: ExecuteClientInvoicePaymentResponse,
+): string {
+  return JSON.stringify(
+    ExecuteClientInvoicePaymentResponse$outboundSchema.parse(
+      executeClientInvoicePaymentResponse,
+    ),
+  );
+}
+
+export function executeClientInvoicePaymentResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ExecuteClientInvoicePaymentResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ExecuteClientInvoicePaymentResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ExecuteClientInvoicePaymentResponse' from JSON`,
+  );
 }

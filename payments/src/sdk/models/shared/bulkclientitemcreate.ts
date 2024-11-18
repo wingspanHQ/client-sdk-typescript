@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0,
   D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$inboundSchema,
@@ -125,4 +128,22 @@ export namespace BulkClientItemCreate$ {
   export const outboundSchema = BulkClientItemCreate$outboundSchema;
   /** @deprecated use `BulkClientItemCreate$Outbound` instead. */
   export type Outbound = BulkClientItemCreate$Outbound;
+}
+
+export function bulkClientItemCreateToJSON(
+  bulkClientItemCreate: BulkClientItemCreate,
+): string {
+  return JSON.stringify(
+    BulkClientItemCreate$outboundSchema.parse(bulkClientItemCreate),
+  );
+}
+
+export function bulkClientItemCreateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkClientItemCreate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkClientItemCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkClientItemCreate' from JSON`,
+  );
 }

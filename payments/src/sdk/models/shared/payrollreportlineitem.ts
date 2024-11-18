@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b,
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema,
@@ -124,4 +127,22 @@ export namespace PayrollReportLineItem$ {
   export const outboundSchema = PayrollReportLineItem$outboundSchema;
   /** @deprecated use `PayrollReportLineItem$Outbound` instead. */
   export type Outbound = PayrollReportLineItem$Outbound;
+}
+
+export function payrollReportLineItemToJSON(
+  payrollReportLineItem: PayrollReportLineItem,
+): string {
+  return JSON.stringify(
+    PayrollReportLineItem$outboundSchema.parse(payrollReportLineItem),
+  );
+}
+
+export function payrollReportLineItemFromJSON(
+  jsonString: string,
+): SafeParseResult<PayrollReportLineItem, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayrollReportLineItem$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayrollReportLineItem' from JSON`,
+  );
 }

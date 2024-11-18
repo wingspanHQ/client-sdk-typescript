@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreatePayableBatchItemRequest = {
@@ -80,6 +83,26 @@ export namespace CreatePayableBatchItemRequest$ {
   export type Outbound = CreatePayableBatchItemRequest$Outbound;
 }
 
+export function createPayableBatchItemRequestToJSON(
+  createPayableBatchItemRequest: CreatePayableBatchItemRequest,
+): string {
+  return JSON.stringify(
+    CreatePayableBatchItemRequest$outboundSchema.parse(
+      createPayableBatchItemRequest,
+    ),
+  );
+}
+
+export function createPayableBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreatePayableBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreatePayableBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreatePayableBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreatePayableBatchItemResponse$inboundSchema: z.ZodType<
   CreatePayableBatchItemResponse,
@@ -139,4 +162,24 @@ export namespace CreatePayableBatchItemResponse$ {
   export const outboundSchema = CreatePayableBatchItemResponse$outboundSchema;
   /** @deprecated use `CreatePayableBatchItemResponse$Outbound` instead. */
   export type Outbound = CreatePayableBatchItemResponse$Outbound;
+}
+
+export function createPayableBatchItemResponseToJSON(
+  createPayableBatchItemResponse: CreatePayableBatchItemResponse,
+): string {
+  return JSON.stringify(
+    CreatePayableBatchItemResponse$outboundSchema.parse(
+      createPayableBatchItemResponse,
+    ),
+  );
+}
+
+export function createPayableBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreatePayableBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreatePayableBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreatePayableBatchItemResponse' from JSON`,
+  );
 }

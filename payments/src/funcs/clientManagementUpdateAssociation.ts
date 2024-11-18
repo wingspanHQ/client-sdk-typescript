@@ -80,6 +80,9 @@ export async function clientManagementUpdateAssociation(
   const context = {
     operationID: "updateMemberClientAssociation",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

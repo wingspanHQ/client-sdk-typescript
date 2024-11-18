@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   MemberClientForm1099Balances,
   MemberClientForm1099Balances$inboundSchema,
@@ -73,4 +76,29 @@ export namespace B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1
   /** @deprecated use `B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$Outbound` instead. */
   export type Outbound =
     B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$Outbound;
+}
+
+export function b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1cToJSON(
+  b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c:
+    B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c,
+): string {
+  return JSON.stringify(
+    B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$outboundSchema
+      .parse(b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c),
+  );
+}
+
+export function b9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1cFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c' from JSON`,
+  );
 }

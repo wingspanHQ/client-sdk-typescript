@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateGeneratedInvoiceRequest = {
@@ -84,6 +87,26 @@ export namespace UpdateGeneratedInvoiceRequest$ {
   export type Outbound = UpdateGeneratedInvoiceRequest$Outbound;
 }
 
+export function updateGeneratedInvoiceRequestToJSON(
+  updateGeneratedInvoiceRequest: UpdateGeneratedInvoiceRequest,
+): string {
+  return JSON.stringify(
+    UpdateGeneratedInvoiceRequest$outboundSchema.parse(
+      updateGeneratedInvoiceRequest,
+    ),
+  );
+}
+
+export function updateGeneratedInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateGeneratedInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateGeneratedInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateGeneratedInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateGeneratedInvoiceResponse$inboundSchema: z.ZodType<
   UpdateGeneratedInvoiceResponse,
@@ -143,4 +166,24 @@ export namespace UpdateGeneratedInvoiceResponse$ {
   export const outboundSchema = UpdateGeneratedInvoiceResponse$outboundSchema;
   /** @deprecated use `UpdateGeneratedInvoiceResponse$Outbound` instead. */
   export type Outbound = UpdateGeneratedInvoiceResponse$Outbound;
+}
+
+export function updateGeneratedInvoiceResponseToJSON(
+  updateGeneratedInvoiceResponse: UpdateGeneratedInvoiceResponse,
+): string {
+  return JSON.stringify(
+    UpdateGeneratedInvoiceResponse$outboundSchema.parse(
+      updateGeneratedInvoiceResponse,
+    ),
+  );
+}
+
+export function updateGeneratedInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateGeneratedInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateGeneratedInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateGeneratedInvoiceResponse' from JSON`,
+  );
 }

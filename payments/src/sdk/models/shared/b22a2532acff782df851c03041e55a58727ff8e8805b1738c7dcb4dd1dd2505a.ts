@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a = {
   incomeAndExpenses: boolean;
@@ -52,4 +55,29 @@ export namespace B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505
   /** @deprecated use `B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound` instead. */
   export type Outbound =
     B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$Outbound;
+}
+
+export function b22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505aToJSON(
+  b22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a:
+    B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a,
+): string {
+  return JSON.stringify(
+    B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$outboundSchema
+      .parse(b22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a),
+  );
+}
+
+export function b22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505aFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a' from JSON`,
+  );
 }

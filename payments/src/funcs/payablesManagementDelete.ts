@@ -74,6 +74,9 @@ export async function payablesManagementDelete(
   const context = {
     operationID: "deletePayable",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

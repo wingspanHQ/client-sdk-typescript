@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetMemberClientAssociationRequest = {
@@ -69,6 +72,26 @@ export namespace GetMemberClientAssociationRequest$ {
   export type Outbound = GetMemberClientAssociationRequest$Outbound;
 }
 
+export function getMemberClientAssociationRequestToJSON(
+  getMemberClientAssociationRequest: GetMemberClientAssociationRequest,
+): string {
+  return JSON.stringify(
+    GetMemberClientAssociationRequest$outboundSchema.parse(
+      getMemberClientAssociationRequest,
+    ),
+  );
+}
+
+export function getMemberClientAssociationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetMemberClientAssociationRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetMemberClientAssociationRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetMemberClientAssociationRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetMemberClientAssociationResponse$inboundSchema: z.ZodType<
   GetMemberClientAssociationResponse,
@@ -129,4 +152,25 @@ export namespace GetMemberClientAssociationResponse$ {
     GetMemberClientAssociationResponse$outboundSchema;
   /** @deprecated use `GetMemberClientAssociationResponse$Outbound` instead. */
   export type Outbound = GetMemberClientAssociationResponse$Outbound;
+}
+
+export function getMemberClientAssociationResponseToJSON(
+  getMemberClientAssociationResponse: GetMemberClientAssociationResponse,
+): string {
+  return JSON.stringify(
+    GetMemberClientAssociationResponse$outboundSchema.parse(
+      getMemberClientAssociationResponse,
+    ),
+  );
+}
+
+export function getMemberClientAssociationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetMemberClientAssociationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetMemberClientAssociationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetMemberClientAssociationResponse' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Data = {};
 
@@ -34,6 +37,20 @@ export namespace Data$ {
   export const outboundSchema = Data$outboundSchema;
   /** @deprecated use `Data$Outbound` instead. */
   export type Outbound = Data$Outbound;
+}
+
+export function dataToJSON(data: Data): string {
+  return JSON.stringify(Data$outboundSchema.parse(data));
+}
+
+export function dataFromJSON(
+  jsonString: string,
+): SafeParseResult<Data, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Data$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Data' from JSON`,
+  );
 }
 
 /** @internal */
@@ -76,4 +93,22 @@ export namespace TaxFormCreateRequest$ {
   export const outboundSchema = TaxFormCreateRequest$outboundSchema;
   /** @deprecated use `TaxFormCreateRequest$Outbound` instead. */
   export type Outbound = TaxFormCreateRequest$Outbound;
+}
+
+export function taxFormCreateRequestToJSON(
+  taxFormCreateRequest: TaxFormCreateRequest,
+): string {
+  return JSON.stringify(
+    TaxFormCreateRequest$outboundSchema.parse(taxFormCreateRequest),
+  );
+}
+
+export function taxFormCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormCreateRequest' from JSON`,
+  );
 }

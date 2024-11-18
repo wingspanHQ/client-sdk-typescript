@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b,
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema,
@@ -124,4 +127,24 @@ export namespace LineItemsAgingReportLineItem$ {
   export const outboundSchema = LineItemsAgingReportLineItem$outboundSchema;
   /** @deprecated use `LineItemsAgingReportLineItem$Outbound` instead. */
   export type Outbound = LineItemsAgingReportLineItem$Outbound;
+}
+
+export function lineItemsAgingReportLineItemToJSON(
+  lineItemsAgingReportLineItem: LineItemsAgingReportLineItem,
+): string {
+  return JSON.stringify(
+    LineItemsAgingReportLineItem$outboundSchema.parse(
+      lineItemsAgingReportLineItem,
+    ),
+  );
+}
+
+export function lineItemsAgingReportLineItemFromJSON(
+  jsonString: string,
+): SafeParseResult<LineItemsAgingReportLineItem, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => LineItemsAgingReportLineItem$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LineItemsAgingReportLineItem' from JSON`,
+  );
 }

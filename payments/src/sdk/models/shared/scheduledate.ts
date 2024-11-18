@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const ScheduleDateStatus = {
   Pending: "Pending",
@@ -88,4 +91,18 @@ export namespace ScheduleDate$ {
   export const outboundSchema = ScheduleDate$outboundSchema;
   /** @deprecated use `ScheduleDate$Outbound` instead. */
   export type Outbound = ScheduleDate$Outbound;
+}
+
+export function scheduleDateToJSON(scheduleDate: ScheduleDate): string {
+  return JSON.stringify(ScheduleDate$outboundSchema.parse(scheduleDate));
+}
+
+export function scheduleDateFromJSON(
+  jsonString: string,
+): SafeParseResult<ScheduleDate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ScheduleDate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ScheduleDate' from JSON`,
+  );
 }

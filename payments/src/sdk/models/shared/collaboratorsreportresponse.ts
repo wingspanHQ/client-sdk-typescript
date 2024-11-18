@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a,
   B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema,
@@ -100,6 +103,26 @@ export namespace CollaboratorsReportResponseLabels$ {
     CollaboratorsReportResponseLabels$outboundSchema;
   /** @deprecated use `CollaboratorsReportResponseLabels$Outbound` instead. */
   export type Outbound = CollaboratorsReportResponseLabels$Outbound;
+}
+
+export function collaboratorsReportResponseLabelsToJSON(
+  collaboratorsReportResponseLabels: CollaboratorsReportResponseLabels,
+): string {
+  return JSON.stringify(
+    CollaboratorsReportResponseLabels$outboundSchema.parse(
+      collaboratorsReportResponseLabels,
+    ),
+  );
+}
+
+export function collaboratorsReportResponseLabelsFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorsReportResponseLabels, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorsReportResponseLabels$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorsReportResponseLabels' from JSON`,
+  );
 }
 
 /** @internal */
@@ -237,4 +260,24 @@ export namespace CollaboratorsReportResponse$ {
   export const outboundSchema = CollaboratorsReportResponse$outboundSchema;
   /** @deprecated use `CollaboratorsReportResponse$Outbound` instead. */
   export type Outbound = CollaboratorsReportResponse$Outbound;
+}
+
+export function collaboratorsReportResponseToJSON(
+  collaboratorsReportResponse: CollaboratorsReportResponse,
+): string {
+  return JSON.stringify(
+    CollaboratorsReportResponse$outboundSchema.parse(
+      collaboratorsReportResponse,
+    ),
+  );
+}
+
+export function collaboratorsReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorsReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorsReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorsReportResponse' from JSON`,
+  );
 }

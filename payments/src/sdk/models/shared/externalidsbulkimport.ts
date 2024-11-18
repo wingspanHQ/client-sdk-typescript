@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ExternalIdsBulkImport = {
   bulkItemMergeKey?: string | null | undefined;
@@ -42,4 +45,22 @@ export namespace ExternalIdsBulkImport$ {
   export const outboundSchema = ExternalIdsBulkImport$outboundSchema;
   /** @deprecated use `ExternalIdsBulkImport$Outbound` instead. */
   export type Outbound = ExternalIdsBulkImport$Outbound;
+}
+
+export function externalIdsBulkImportToJSON(
+  externalIdsBulkImport: ExternalIdsBulkImport,
+): string {
+  return JSON.stringify(
+    ExternalIdsBulkImport$outboundSchema.parse(externalIdsBulkImport),
+  );
+}
+
+export function externalIdsBulkImportFromJSON(
+  jsonString: string,
+): SafeParseResult<ExternalIdsBulkImport, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ExternalIdsBulkImport$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ExternalIdsBulkImport' from JSON`,
+  );
 }

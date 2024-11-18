@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01,
   Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01$inboundSchema,
@@ -58,4 +61,22 @@ export namespace InvoiceWithholdings$ {
   export const outboundSchema = InvoiceWithholdings$outboundSchema;
   /** @deprecated use `InvoiceWithholdings$Outbound` instead. */
   export type Outbound = InvoiceWithholdings$Outbound;
+}
+
+export function invoiceWithholdingsToJSON(
+  invoiceWithholdings: InvoiceWithholdings,
+): string {
+  return JSON.stringify(
+    InvoiceWithholdings$outboundSchema.parse(invoiceWithholdings),
+  );
+}
+
+export function invoiceWithholdingsFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceWithholdings, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceWithholdings$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceWithholdings' from JSON`,
+  );
 }

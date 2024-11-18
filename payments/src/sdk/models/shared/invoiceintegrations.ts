@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11,
   Sixd0791223791444911cf73db8aa3782fc7b1c0b614b1873468fbf7182f9f9a11$inboundSchema,
@@ -58,4 +61,22 @@ export namespace InvoiceIntegrations$ {
   export const outboundSchema = InvoiceIntegrations$outboundSchema;
   /** @deprecated use `InvoiceIntegrations$Outbound` instead. */
   export type Outbound = InvoiceIntegrations$Outbound;
+}
+
+export function invoiceIntegrationsToJSON(
+  invoiceIntegrations: InvoiceIntegrations,
+): string {
+  return JSON.stringify(
+    InvoiceIntegrations$outboundSchema.parse(invoiceIntegrations),
+  );
+}
+
+export function invoiceIntegrationsFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceIntegrations, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceIntegrations$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceIntegrations' from JSON`,
+  );
 }

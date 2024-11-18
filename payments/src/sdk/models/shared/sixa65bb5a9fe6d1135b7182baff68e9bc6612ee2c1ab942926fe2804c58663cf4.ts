@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4 =
   {
@@ -53,4 +56,31 @@ export namespace Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663
   /** @deprecated use `Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound` instead. */
   export type Outbound =
     Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$Outbound;
+}
+
+export function sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4ToJSON(
+  sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4:
+    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4,
+): string {
+  return JSON.stringify(
+    Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$outboundSchema
+      .parse(
+        sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4,
+      ),
+  );
+}
+
+export function sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Sixa65bb5a9fe6d1135b7182baff68e9bc6612ee2c1ab942926fe2804c58663cf4' from JSON`,
+  );
 }

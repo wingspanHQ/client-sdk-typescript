@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type Request1099InviteEmailResponse = {
@@ -84,4 +87,24 @@ export namespace Request1099InviteEmailResponse$ {
   export const outboundSchema = Request1099InviteEmailResponse$outboundSchema;
   /** @deprecated use `Request1099InviteEmailResponse$Outbound` instead. */
   export type Outbound = Request1099InviteEmailResponse$Outbound;
+}
+
+export function request1099InviteEmailResponseToJSON(
+  request1099InviteEmailResponse: Request1099InviteEmailResponse,
+): string {
+  return JSON.stringify(
+    Request1099InviteEmailResponse$outboundSchema.parse(
+      request1099InviteEmailResponse,
+    ),
+  );
+}
+
+export function request1099InviteEmailResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Request1099InviteEmailResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Request1099InviteEmailResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Request1099InviteEmailResponse' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type BankingApplicationForm = {
   applicationLink: string;
@@ -46,4 +49,22 @@ export namespace BankingApplicationForm$ {
   export const outboundSchema = BankingApplicationForm$outboundSchema;
   /** @deprecated use `BankingApplicationForm$Outbound` instead. */
   export type Outbound = BankingApplicationForm$Outbound;
+}
+
+export function bankingApplicationFormToJSON(
+  bankingApplicationForm: BankingApplicationForm,
+): string {
+  return JSON.stringify(
+    BankingApplicationForm$outboundSchema.parse(bankingApplicationForm),
+  );
+}
+
+export function bankingApplicationFormFromJSON(
+  jsonString: string,
+): SafeParseResult<BankingApplicationForm, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BankingApplicationForm$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BankingApplicationForm' from JSON`,
+  );
 }

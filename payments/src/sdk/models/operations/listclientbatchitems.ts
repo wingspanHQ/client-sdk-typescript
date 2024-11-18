@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListClientBatchItemsRequest = {
@@ -68,6 +71,26 @@ export namespace ListClientBatchItemsRequest$ {
   export type Outbound = ListClientBatchItemsRequest$Outbound;
 }
 
+export function listClientBatchItemsRequestToJSON(
+  listClientBatchItemsRequest: ListClientBatchItemsRequest,
+): string {
+  return JSON.stringify(
+    ListClientBatchItemsRequest$outboundSchema.parse(
+      listClientBatchItemsRequest,
+    ),
+  );
+}
+
+export function listClientBatchItemsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ListClientBatchItemsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListClientBatchItemsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListClientBatchItemsRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ListClientBatchItemsResponse$inboundSchema: z.ZodType<
   ListClientBatchItemsResponse,
@@ -125,4 +148,24 @@ export namespace ListClientBatchItemsResponse$ {
   export const outboundSchema = ListClientBatchItemsResponse$outboundSchema;
   /** @deprecated use `ListClientBatchItemsResponse$Outbound` instead. */
   export type Outbound = ListClientBatchItemsResponse$Outbound;
+}
+
+export function listClientBatchItemsResponseToJSON(
+  listClientBatchItemsResponse: ListClientBatchItemsResponse,
+): string {
+  return JSON.stringify(
+    ListClientBatchItemsResponse$outboundSchema.parse(
+      listClientBatchItemsResponse,
+    ),
+  );
+}
+
+export function listClientBatchItemsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListClientBatchItemsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListClientBatchItemsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListClientBatchItemsResponse' from JSON`,
+  );
 }

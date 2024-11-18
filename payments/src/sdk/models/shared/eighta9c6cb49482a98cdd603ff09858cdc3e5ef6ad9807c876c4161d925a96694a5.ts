@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5Status =
   {
@@ -104,4 +107,31 @@ export namespace Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96
   /** @deprecated use `Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$Outbound` instead. */
   export type Outbound =
     Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$Outbound;
+}
+
+export function eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5ToJSON(
+  eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5:
+    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5,
+): string {
+  return JSON.stringify(
+    Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$outboundSchema
+      .parse(
+        eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5,
+      ),
+  );
+}
+
+export function eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5' from JSON`,
+  );
 }

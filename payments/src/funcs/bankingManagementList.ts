@@ -76,6 +76,9 @@ export async function bankingManagementList(
   const context = {
     operationID: "listDebitCards",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

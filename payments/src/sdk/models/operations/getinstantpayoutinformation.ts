@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetInstantPayoutInformationResponse = {
@@ -86,4 +89,25 @@ export namespace GetInstantPayoutInformationResponse$ {
     GetInstantPayoutInformationResponse$outboundSchema;
   /** @deprecated use `GetInstantPayoutInformationResponse$Outbound` instead. */
   export type Outbound = GetInstantPayoutInformationResponse$Outbound;
+}
+
+export function getInstantPayoutInformationResponseToJSON(
+  getInstantPayoutInformationResponse: GetInstantPayoutInformationResponse,
+): string {
+  return JSON.stringify(
+    GetInstantPayoutInformationResponse$outboundSchema.parse(
+      getInstantPayoutInformationResponse,
+    ),
+  );
+}
+
+export function getInstantPayoutInformationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetInstantPayoutInformationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetInstantPayoutInformationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetInstantPayoutInformationResponse' from JSON`,
+  );
 }

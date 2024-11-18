@@ -78,6 +78,9 @@ export async function payrollSettingsUpdate(
   const context = {
     operationID: "updatePayrollSetting",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

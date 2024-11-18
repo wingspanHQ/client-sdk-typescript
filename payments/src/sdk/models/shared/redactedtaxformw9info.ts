@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const RedactedTaxFormW9InfoCompanyStructure = {
   None: "None",
@@ -184,4 +187,22 @@ export namespace RedactedTaxFormW9Info$ {
   export const outboundSchema = RedactedTaxFormW9Info$outboundSchema;
   /** @deprecated use `RedactedTaxFormW9Info$Outbound` instead. */
   export type Outbound = RedactedTaxFormW9Info$Outbound;
+}
+
+export function redactedTaxFormW9InfoToJSON(
+  redactedTaxFormW9Info: RedactedTaxFormW9Info,
+): string {
+  return JSON.stringify(
+    RedactedTaxFormW9Info$outboundSchema.parse(redactedTaxFormW9Info),
+  );
+}
+
+export function redactedTaxFormW9InfoFromJSON(
+  jsonString: string,
+): SafeParseResult<RedactedTaxFormW9Info, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RedactedTaxFormW9Info$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RedactedTaxFormW9Info' from JSON`,
+  );
 }

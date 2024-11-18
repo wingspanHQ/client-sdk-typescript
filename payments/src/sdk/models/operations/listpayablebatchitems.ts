@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListPayableBatchItemsRequest = {
@@ -68,6 +71,26 @@ export namespace ListPayableBatchItemsRequest$ {
   export type Outbound = ListPayableBatchItemsRequest$Outbound;
 }
 
+export function listPayableBatchItemsRequestToJSON(
+  listPayableBatchItemsRequest: ListPayableBatchItemsRequest,
+): string {
+  return JSON.stringify(
+    ListPayableBatchItemsRequest$outboundSchema.parse(
+      listPayableBatchItemsRequest,
+    ),
+  );
+}
+
+export function listPayableBatchItemsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ListPayableBatchItemsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListPayableBatchItemsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListPayableBatchItemsRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ListPayableBatchItemsResponse$inboundSchema: z.ZodType<
   ListPayableBatchItemsResponse,
@@ -125,4 +148,24 @@ export namespace ListPayableBatchItemsResponse$ {
   export const outboundSchema = ListPayableBatchItemsResponse$outboundSchema;
   /** @deprecated use `ListPayableBatchItemsResponse$Outbound` instead. */
   export type Outbound = ListPayableBatchItemsResponse$Outbound;
+}
+
+export function listPayableBatchItemsResponseToJSON(
+  listPayableBatchItemsResponse: ListPayableBatchItemsResponse,
+): string {
+  return JSON.stringify(
+    ListPayableBatchItemsResponse$outboundSchema.parse(
+      listPayableBatchItemsResponse,
+    ),
+  );
+}
+
+export function listPayableBatchItemsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListPayableBatchItemsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListPayableBatchItemsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListPayableBatchItemsResponse' from JSON`,
+  );
 }

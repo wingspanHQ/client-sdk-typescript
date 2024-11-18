@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1 =
   {
@@ -53,4 +56,31 @@ export namespace Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356e
   /** @deprecated use `Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound` instead. */
   export type Outbound =
     Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$Outbound;
+}
+
+export function eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1ToJSON(
+  eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1:
+    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1,
+): string {
+  return JSON.stringify(
+    Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$outboundSchema
+      .parse(
+        eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1,
+      ),
+  );
+}
+
+export function eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1' from JSON`,
+  );
 }

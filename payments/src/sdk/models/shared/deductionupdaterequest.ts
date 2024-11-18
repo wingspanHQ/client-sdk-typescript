@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const DeductionUpdateRequestCurrency = {
   Usd: "USD",
@@ -126,4 +129,22 @@ export namespace DeductionUpdateRequest$ {
   export const outboundSchema = DeductionUpdateRequest$outboundSchema;
   /** @deprecated use `DeductionUpdateRequest$Outbound` instead. */
   export type Outbound = DeductionUpdateRequest$Outbound;
+}
+
+export function deductionUpdateRequestToJSON(
+  deductionUpdateRequest: DeductionUpdateRequest,
+): string {
+  return JSON.stringify(
+    DeductionUpdateRequest$outboundSchema.parse(deductionUpdateRequest),
+  );
+}
+
+export function deductionUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeductionUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeductionUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeductionUpdateRequest' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481,
   Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$inboundSchema,
@@ -102,6 +105,20 @@ export namespace Events$ {
   export type Outbound = Events$Outbound;
 }
 
+export function eventsToJSON(events: Events): string {
+  return JSON.stringify(Events$outboundSchema.parse(events));
+}
+
+export function eventsFromJSON(
+  jsonString: string,
+): SafeParseResult<Events, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Events$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Events' from JSON`,
+  );
+}
+
 /** @internal */
 export const CollaboratorForm1099BalancesUpdateRequestStatus$inboundSchema:
   z.ZodNativeEnum<typeof CollaboratorForm1099BalancesUpdateRequestStatus> = z
@@ -195,4 +212,31 @@ export namespace CollaboratorForm1099BalancesUpdateRequest$ {
     CollaboratorForm1099BalancesUpdateRequest$outboundSchema;
   /** @deprecated use `CollaboratorForm1099BalancesUpdateRequest$Outbound` instead. */
   export type Outbound = CollaboratorForm1099BalancesUpdateRequest$Outbound;
+}
+
+export function collaboratorForm1099BalancesUpdateRequestToJSON(
+  collaboratorForm1099BalancesUpdateRequest:
+    CollaboratorForm1099BalancesUpdateRequest,
+): string {
+  return JSON.stringify(
+    CollaboratorForm1099BalancesUpdateRequest$outboundSchema.parse(
+      collaboratorForm1099BalancesUpdateRequest,
+    ),
+  );
+}
+
+export function collaboratorForm1099BalancesUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  CollaboratorForm1099BalancesUpdateRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CollaboratorForm1099BalancesUpdateRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'CollaboratorForm1099BalancesUpdateRequest' from JSON`,
+  );
 }

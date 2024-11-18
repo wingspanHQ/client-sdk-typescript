@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetGeneratedInvoiceRequest = {
@@ -68,6 +71,24 @@ export namespace GetGeneratedInvoiceRequest$ {
   export type Outbound = GetGeneratedInvoiceRequest$Outbound;
 }
 
+export function getGeneratedInvoiceRequestToJSON(
+  getGeneratedInvoiceRequest: GetGeneratedInvoiceRequest,
+): string {
+  return JSON.stringify(
+    GetGeneratedInvoiceRequest$outboundSchema.parse(getGeneratedInvoiceRequest),
+  );
+}
+
+export function getGeneratedInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetGeneratedInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetGeneratedInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetGeneratedInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetGeneratedInvoiceResponse$inboundSchema: z.ZodType<
   GetGeneratedInvoiceResponse,
@@ -127,4 +148,24 @@ export namespace GetGeneratedInvoiceResponse$ {
   export const outboundSchema = GetGeneratedInvoiceResponse$outboundSchema;
   /** @deprecated use `GetGeneratedInvoiceResponse$Outbound` instead. */
   export type Outbound = GetGeneratedInvoiceResponse$Outbound;
+}
+
+export function getGeneratedInvoiceResponseToJSON(
+  getGeneratedInvoiceResponse: GetGeneratedInvoiceResponse,
+): string {
+  return JSON.stringify(
+    GetGeneratedInvoiceResponse$outboundSchema.parse(
+      getGeneratedInvoiceResponse,
+    ),
+  );
+}
+
+export function getGeneratedInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetGeneratedInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetGeneratedInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetGeneratedInvoiceResponse' from JSON`,
+  );
 }

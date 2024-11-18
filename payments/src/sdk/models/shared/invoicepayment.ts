@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4,
   Fa804b4efa97e487035ead1834462b69564f5e4ebbbd376106a1847d1c1aa4f4$inboundSchema,
@@ -190,4 +193,18 @@ export namespace InvoicePayment$ {
   export const outboundSchema = InvoicePayment$outboundSchema;
   /** @deprecated use `InvoicePayment$Outbound` instead. */
   export type Outbound = InvoicePayment$Outbound;
+}
+
+export function invoicePaymentToJSON(invoicePayment: InvoicePayment): string {
+  return JSON.stringify(InvoicePayment$outboundSchema.parse(invoicePayment));
+}
+
+export function invoicePaymentFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoicePayment, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoicePayment$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoicePayment' from JSON`,
+  );
 }

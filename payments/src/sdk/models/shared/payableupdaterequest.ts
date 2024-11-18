@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -175,6 +178,24 @@ export namespace PayableUpdateRequestClient$ {
   export type Outbound = PayableUpdateRequestClient$Outbound;
 }
 
+export function payableUpdateRequestClientToJSON(
+  payableUpdateRequestClient: PayableUpdateRequestClient,
+): string {
+  return JSON.stringify(
+    PayableUpdateRequestClient$outboundSchema.parse(payableUpdateRequestClient),
+  );
+}
+
+export function payableUpdateRequestClientFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableUpdateRequestClient, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableUpdateRequestClient$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableUpdateRequestClient' from JSON`,
+  );
+}
+
 /** @internal */
 export const PayableUpdateRequestMember$inboundSchema: z.ZodType<
   PayableUpdateRequestMember,
@@ -203,6 +224,24 @@ export namespace PayableUpdateRequestMember$ {
   export const outboundSchema = PayableUpdateRequestMember$outboundSchema;
   /** @deprecated use `PayableUpdateRequestMember$Outbound` instead. */
   export type Outbound = PayableUpdateRequestMember$Outbound;
+}
+
+export function payableUpdateRequestMemberToJSON(
+  payableUpdateRequestMember: PayableUpdateRequestMember,
+): string {
+  return JSON.stringify(
+    PayableUpdateRequestMember$outboundSchema.parse(payableUpdateRequestMember),
+  );
+}
+
+export function payableUpdateRequestMemberFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableUpdateRequestMember, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableUpdateRequestMember$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableUpdateRequestMember' from JSON`,
+  );
 }
 
 /** @internal */
@@ -370,4 +409,22 @@ export namespace PayableUpdateRequest$ {
   export const outboundSchema = PayableUpdateRequest$outboundSchema;
   /** @deprecated use `PayableUpdateRequest$Outbound` instead. */
   export type Outbound = PayableUpdateRequest$Outbound;
+}
+
+export function payableUpdateRequestToJSON(
+  payableUpdateRequest: PayableUpdateRequest,
+): string {
+  return JSON.stringify(
+    PayableUpdateRequest$outboundSchema.parse(payableUpdateRequest),
+  );
+}
+
+export function payableUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableUpdateRequest' from JSON`,
+  );
 }

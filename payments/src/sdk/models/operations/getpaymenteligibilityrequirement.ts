@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPaymentEligibilityRequirementRequest = {
@@ -70,6 +73,33 @@ export namespace GetPaymentEligibilityRequirementRequest$ {
   export type Outbound = GetPaymentEligibilityRequirementRequest$Outbound;
 }
 
+export function getPaymentEligibilityRequirementRequestToJSON(
+  getPaymentEligibilityRequirementRequest:
+    GetPaymentEligibilityRequirementRequest,
+): string {
+  return JSON.stringify(
+    GetPaymentEligibilityRequirementRequest$outboundSchema.parse(
+      getPaymentEligibilityRequirementRequest,
+    ),
+  );
+}
+
+export function getPaymentEligibilityRequirementRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetPaymentEligibilityRequirementRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetPaymentEligibilityRequirementRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'GetPaymentEligibilityRequirementRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetPaymentEligibilityRequirementResponse$inboundSchema: z.ZodType<
   GetPaymentEligibilityRequirementResponse,
@@ -131,4 +161,31 @@ export namespace GetPaymentEligibilityRequirementResponse$ {
     GetPaymentEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `GetPaymentEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = GetPaymentEligibilityRequirementResponse$Outbound;
+}
+
+export function getPaymentEligibilityRequirementResponseToJSON(
+  getPaymentEligibilityRequirementResponse:
+    GetPaymentEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    GetPaymentEligibilityRequirementResponse$outboundSchema.parse(
+      getPaymentEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function getPaymentEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetPaymentEligibilityRequirementResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetPaymentEligibilityRequirementResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'GetPaymentEligibilityRequirementResponse' from JSON`,
+  );
 }

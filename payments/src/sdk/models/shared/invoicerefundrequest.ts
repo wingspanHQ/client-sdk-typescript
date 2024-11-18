@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type InvoiceRefundRequest = {
   amount: number;
@@ -46,4 +49,22 @@ export namespace InvoiceRefundRequest$ {
   export const outboundSchema = InvoiceRefundRequest$outboundSchema;
   /** @deprecated use `InvoiceRefundRequest$Outbound` instead. */
   export type Outbound = InvoiceRefundRequest$Outbound;
+}
+
+export function invoiceRefundRequestToJSON(
+  invoiceRefundRequest: InvoiceRefundRequest,
+): string {
+  return JSON.stringify(
+    InvoiceRefundRequest$outboundSchema.parse(invoiceRefundRequest),
+  );
+}
+
+export function invoiceRefundRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceRefundRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceRefundRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceRefundRequest' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   ExternalIdsBulkImport,
   ExternalIdsBulkImport$inboundSchema,
@@ -67,4 +70,18 @@ export namespace ExternalIds$ {
   export const outboundSchema = ExternalIds$outboundSchema;
   /** @deprecated use `ExternalIds$Outbound` instead. */
   export type Outbound = ExternalIds$Outbound;
+}
+
+export function externalIdsToJSON(externalIds: ExternalIds): string {
+  return JSON.stringify(ExternalIds$outboundSchema.parse(externalIds));
+}
+
+export function externalIdsFromJSON(
+  jsonString: string,
+): SafeParseResult<ExternalIds, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ExternalIds$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ExternalIds' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   InvoiceAttachments,
   InvoiceAttachments$inboundSchema,
@@ -52,4 +55,24 @@ export namespace InvoicePdfGenerationResponse$ {
   export const outboundSchema = InvoicePdfGenerationResponse$outboundSchema;
   /** @deprecated use `InvoicePdfGenerationResponse$Outbound` instead. */
   export type Outbound = InvoicePdfGenerationResponse$Outbound;
+}
+
+export function invoicePdfGenerationResponseToJSON(
+  invoicePdfGenerationResponse: InvoicePdfGenerationResponse,
+): string {
+  return JSON.stringify(
+    InvoicePdfGenerationResponse$outboundSchema.parse(
+      invoicePdfGenerationResponse,
+    ),
+  );
+}
+
+export function invoicePdfGenerationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoicePdfGenerationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoicePdfGenerationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoicePdfGenerationResponse' from JSON`,
+  );
 }

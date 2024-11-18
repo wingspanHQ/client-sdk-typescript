@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateEligibilityRequirementRequest = {
@@ -89,6 +92,27 @@ export namespace UpdateEligibilityRequirementRequest$ {
   export type Outbound = UpdateEligibilityRequirementRequest$Outbound;
 }
 
+export function updateEligibilityRequirementRequestToJSON(
+  updateEligibilityRequirementRequest: UpdateEligibilityRequirementRequest,
+): string {
+  return JSON.stringify(
+    UpdateEligibilityRequirementRequest$outboundSchema.parse(
+      updateEligibilityRequirementRequest,
+    ),
+  );
+}
+
+export function updateEligibilityRequirementRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateEligibilityRequirementRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateEligibilityRequirementRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateEligibilityRequirementRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateEligibilityRequirementResponse$inboundSchema: z.ZodType<
   UpdateEligibilityRequirementResponse,
@@ -148,4 +172,25 @@ export namespace UpdateEligibilityRequirementResponse$ {
     UpdateEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `UpdateEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = UpdateEligibilityRequirementResponse$Outbound;
+}
+
+export function updateEligibilityRequirementResponseToJSON(
+  updateEligibilityRequirementResponse: UpdateEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    UpdateEligibilityRequirementResponse$outboundSchema.parse(
+      updateEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function updateEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateEligibilityRequirementResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateEligibilityRequirementResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateEligibilityRequirementResponse' from JSON`,
+  );
 }

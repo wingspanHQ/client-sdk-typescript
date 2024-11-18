@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   ClientData,
   ClientData$inboundSchema,
@@ -77,6 +80,20 @@ export namespace FormW9Data$ {
   export const outboundSchema = FormW9Data$outboundSchema;
   /** @deprecated use `FormW9Data$Outbound` instead. */
   export type Outbound = FormW9Data$Outbound;
+}
+
+export function formW9DataToJSON(formW9Data: FormW9Data): string {
+  return JSON.stringify(FormW9Data$outboundSchema.parse(formW9Data));
+}
+
+export function formW9DataFromJSON(
+  jsonString: string,
+): SafeParseResult<FormW9Data, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FormW9Data$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FormW9Data' from JSON`,
+  );
 }
 
 /** @internal */
@@ -163,4 +180,22 @@ export namespace CollaboratorUpdateRequest$ {
   export const outboundSchema = CollaboratorUpdateRequest$outboundSchema;
   /** @deprecated use `CollaboratorUpdateRequest$Outbound` instead. */
   export type Outbound = CollaboratorUpdateRequest$Outbound;
+}
+
+export function collaboratorUpdateRequestToJSON(
+  collaboratorUpdateRequest: CollaboratorUpdateRequest,
+): string {
+  return JSON.stringify(
+    CollaboratorUpdateRequest$outboundSchema.parse(collaboratorUpdateRequest),
+  );
+}
+
+export function collaboratorUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorUpdateRequest' from JSON`,
+  );
 }

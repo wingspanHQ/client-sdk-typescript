@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DocumentEvents = {
   clientSignedAt?: string | null | undefined;
@@ -46,4 +49,18 @@ export namespace DocumentEvents$ {
   export const outboundSchema = DocumentEvents$outboundSchema;
   /** @deprecated use `DocumentEvents$Outbound` instead. */
   export type Outbound = DocumentEvents$Outbound;
+}
+
+export function documentEventsToJSON(documentEvents: DocumentEvents): string {
+  return JSON.stringify(DocumentEvents$outboundSchema.parse(documentEvents));
+}
+
+export function documentEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<DocumentEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DocumentEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DocumentEvents' from JSON`,
+  );
 }

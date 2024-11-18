@@ -53,6 +53,9 @@ export async function reportingAndAnalyticsListLineItem(
   const context = {
     operationID: "listAgingReportLineItems",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

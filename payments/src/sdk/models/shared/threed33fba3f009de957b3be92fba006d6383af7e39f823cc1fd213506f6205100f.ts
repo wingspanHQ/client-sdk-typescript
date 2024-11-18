@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863,
   D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema,
@@ -65,4 +68,31 @@ export namespace Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f620
   /** @deprecated use `Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$Outbound` instead. */
   export type Outbound =
     Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$Outbound;
+}
+
+export function threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100fToJSON(
+  threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f:
+    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f,
+): string {
+  return JSON.stringify(
+    Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$outboundSchema
+      .parse(
+        threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f,
+      ),
+  );
+}
+
+export function threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100fFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Threed33fba3f009de957b3be92fba006d6383af7e39f823cc1fd213506f6205100f' from JSON`,
+  );
 }

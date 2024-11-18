@@ -74,6 +74,9 @@ export async function collaboratorManagementDelete(
   const context = {
     operationID: "deleteCollaborator",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

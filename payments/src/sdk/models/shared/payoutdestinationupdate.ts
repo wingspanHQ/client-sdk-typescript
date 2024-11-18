@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const PayoutDestinationUpdateDestinationType = {
   Account: "Account",
@@ -128,4 +131,22 @@ export namespace PayoutDestinationUpdate$ {
   export const outboundSchema = PayoutDestinationUpdate$outboundSchema;
   /** @deprecated use `PayoutDestinationUpdate$Outbound` instead. */
   export type Outbound = PayoutDestinationUpdate$Outbound;
+}
+
+export function payoutDestinationUpdateToJSON(
+  payoutDestinationUpdate: PayoutDestinationUpdate,
+): string {
+  return JSON.stringify(
+    PayoutDestinationUpdate$outboundSchema.parse(payoutDestinationUpdate),
+  );
+}
+
+export function payoutDestinationUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<PayoutDestinationUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayoutDestinationUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayoutDestinationUpdate' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateCalculation1099BatchResponse = {
@@ -89,4 +92,25 @@ export namespace CreateCalculation1099BatchResponse$ {
     CreateCalculation1099BatchResponse$outboundSchema;
   /** @deprecated use `CreateCalculation1099BatchResponse$Outbound` instead. */
   export type Outbound = CreateCalculation1099BatchResponse$Outbound;
+}
+
+export function createCalculation1099BatchResponseToJSON(
+  createCalculation1099BatchResponse: CreateCalculation1099BatchResponse,
+): string {
+  return JSON.stringify(
+    CreateCalculation1099BatchResponse$outboundSchema.parse(
+      createCalculation1099BatchResponse,
+    ),
+  );
+}
+
+export function createCalculation1099BatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCalculation1099BatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CreateCalculation1099BatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCalculation1099BatchResponse' from JSON`,
+  );
 }

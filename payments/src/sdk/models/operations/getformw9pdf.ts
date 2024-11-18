@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetFormW9PDFRequest = {
@@ -68,6 +71,24 @@ export namespace GetFormW9PDFRequest$ {
   export type Outbound = GetFormW9PDFRequest$Outbound;
 }
 
+export function getFormW9PDFRequestToJSON(
+  getFormW9PDFRequest: GetFormW9PDFRequest,
+): string {
+  return JSON.stringify(
+    GetFormW9PDFRequest$outboundSchema.parse(getFormW9PDFRequest),
+  );
+}
+
+export function getFormW9PDFRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetFormW9PDFRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetFormW9PDFRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetFormW9PDFRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetFormW9PDFResponse$inboundSchema: z.ZodType<
   GetFormW9PDFResponse,
@@ -127,4 +148,22 @@ export namespace GetFormW9PDFResponse$ {
   export const outboundSchema = GetFormW9PDFResponse$outboundSchema;
   /** @deprecated use `GetFormW9PDFResponse$Outbound` instead. */
   export type Outbound = GetFormW9PDFResponse$Outbound;
+}
+
+export function getFormW9PDFResponseToJSON(
+  getFormW9PDFResponse: GetFormW9PDFResponse,
+): string {
+  return JSON.stringify(
+    GetFormW9PDFResponse$outboundSchema.parse(getFormW9PDFResponse),
+  );
+}
+
+export function getFormW9PDFResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetFormW9PDFResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetFormW9PDFResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetFormW9PDFResponse' from JSON`,
+  );
 }

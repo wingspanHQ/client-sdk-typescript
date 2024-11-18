@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateCustomFieldResponse = {
@@ -84,4 +87,22 @@ export namespace CreateCustomFieldResponse$ {
   export const outboundSchema = CreateCustomFieldResponse$outboundSchema;
   /** @deprecated use `CreateCustomFieldResponse$Outbound` instead. */
   export type Outbound = CreateCustomFieldResponse$Outbound;
+}
+
+export function createCustomFieldResponseToJSON(
+  createCustomFieldResponse: CreateCustomFieldResponse,
+): string {
+  return JSON.stringify(
+    CreateCustomFieldResponse$outboundSchema.parse(createCustomFieldResponse),
+  );
+}
+
+export function createCustomFieldResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCustomFieldResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateCustomFieldResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCustomFieldResponse' from JSON`,
+  );
 }

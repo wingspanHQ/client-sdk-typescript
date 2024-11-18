@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPayrollDetailedReportRequest = {
@@ -68,6 +71,26 @@ export namespace GetPayrollDetailedReportRequest$ {
   export type Outbound = GetPayrollDetailedReportRequest$Outbound;
 }
 
+export function getPayrollDetailedReportRequestToJSON(
+  getPayrollDetailedReportRequest: GetPayrollDetailedReportRequest,
+): string {
+  return JSON.stringify(
+    GetPayrollDetailedReportRequest$outboundSchema.parse(
+      getPayrollDetailedReportRequest,
+    ),
+  );
+}
+
+export function getPayrollDetailedReportRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayrollDetailedReportRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayrollDetailedReportRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayrollDetailedReportRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetPayrollDetailedReportResponse$inboundSchema: z.ZodType<
   GetPayrollDetailedReportResponse,
@@ -127,4 +150,24 @@ export namespace GetPayrollDetailedReportResponse$ {
   export const outboundSchema = GetPayrollDetailedReportResponse$outboundSchema;
   /** @deprecated use `GetPayrollDetailedReportResponse$Outbound` instead. */
   export type Outbound = GetPayrollDetailedReportResponse$Outbound;
+}
+
+export function getPayrollDetailedReportResponseToJSON(
+  getPayrollDetailedReportResponse: GetPayrollDetailedReportResponse,
+): string {
+  return JSON.stringify(
+    GetPayrollDetailedReportResponse$outboundSchema.parse(
+      getPayrollDetailedReportResponse,
+    ),
+  );
+}
+
+export function getPayrollDetailedReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayrollDetailedReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayrollDetailedReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayrollDetailedReportResponse' from JSON`,
+  );
 }

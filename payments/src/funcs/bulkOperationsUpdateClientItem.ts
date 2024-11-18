@@ -84,6 +84,9 @@ export async function bulkOperationsUpdateClientItem(
   const context = {
     operationID: "updateClientBatchItem",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

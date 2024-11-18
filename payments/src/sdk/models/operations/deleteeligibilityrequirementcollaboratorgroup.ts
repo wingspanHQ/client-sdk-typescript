@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteEligibilityRequirementCollaboratorGroupRequest = {
@@ -80,6 +83,33 @@ export namespace DeleteEligibilityRequirementCollaboratorGroupRequest$ {
     DeleteEligibilityRequirementCollaboratorGroupRequest$Outbound;
 }
 
+export function deleteEligibilityRequirementCollaboratorGroupRequestToJSON(
+  deleteEligibilityRequirementCollaboratorGroupRequest:
+    DeleteEligibilityRequirementCollaboratorGroupRequest,
+): string {
+  return JSON.stringify(
+    DeleteEligibilityRequirementCollaboratorGroupRequest$outboundSchema.parse(
+      deleteEligibilityRequirementCollaboratorGroupRequest,
+    ),
+  );
+}
+
+export function deleteEligibilityRequirementCollaboratorGroupRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DeleteEligibilityRequirementCollaboratorGroupRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteEligibilityRequirementCollaboratorGroupRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DeleteEligibilityRequirementCollaboratorGroupRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteEligibilityRequirementCollaboratorGroupResponse$inboundSchema:
   z.ZodType<
@@ -148,4 +178,31 @@ export namespace DeleteEligibilityRequirementCollaboratorGroupResponse$ {
   /** @deprecated use `DeleteEligibilityRequirementCollaboratorGroupResponse$Outbound` instead. */
   export type Outbound =
     DeleteEligibilityRequirementCollaboratorGroupResponse$Outbound;
+}
+
+export function deleteEligibilityRequirementCollaboratorGroupResponseToJSON(
+  deleteEligibilityRequirementCollaboratorGroupResponse:
+    DeleteEligibilityRequirementCollaboratorGroupResponse,
+): string {
+  return JSON.stringify(
+    DeleteEligibilityRequirementCollaboratorGroupResponse$outboundSchema.parse(
+      deleteEligibilityRequirementCollaboratorGroupResponse,
+    ),
+  );
+}
+
+export function deleteEligibilityRequirementCollaboratorGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DeleteEligibilityRequirementCollaboratorGroupResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteEligibilityRequirementCollaboratorGroupResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DeleteEligibilityRequirementCollaboratorGroupResponse' from JSON`,
+  );
 }

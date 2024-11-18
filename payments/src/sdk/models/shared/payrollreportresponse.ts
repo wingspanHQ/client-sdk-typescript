@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07,
   FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$inboundSchema,
@@ -62,4 +65,22 @@ export namespace PayrollReportResponse$ {
   export const outboundSchema = PayrollReportResponse$outboundSchema;
   /** @deprecated use `PayrollReportResponse$Outbound` instead. */
   export type Outbound = PayrollReportResponse$Outbound;
+}
+
+export function payrollReportResponseToJSON(
+  payrollReportResponse: PayrollReportResponse,
+): string {
+  return JSON.stringify(
+    PayrollReportResponse$outboundSchema.parse(payrollReportResponse),
+  );
+}
+
+export function payrollReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<PayrollReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayrollReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayrollReportResponse' from JSON`,
+  );
 }

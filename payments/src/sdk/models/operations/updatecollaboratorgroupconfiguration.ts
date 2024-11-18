@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateCollaboratorGroupConfigurationRequest = {
@@ -90,6 +93,33 @@ export namespace UpdateCollaboratorGroupConfigurationRequest$ {
   export type Outbound = UpdateCollaboratorGroupConfigurationRequest$Outbound;
 }
 
+export function updateCollaboratorGroupConfigurationRequestToJSON(
+  updateCollaboratorGroupConfigurationRequest:
+    UpdateCollaboratorGroupConfigurationRequest,
+): string {
+  return JSON.stringify(
+    UpdateCollaboratorGroupConfigurationRequest$outboundSchema.parse(
+      updateCollaboratorGroupConfigurationRequest,
+    ),
+  );
+}
+
+export function updateCollaboratorGroupConfigurationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateCollaboratorGroupConfigurationRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateCollaboratorGroupConfigurationRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateCollaboratorGroupConfigurationRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateCollaboratorGroupConfigurationResponse$inboundSchema:
   z.ZodType<
@@ -157,4 +187,31 @@ export namespace UpdateCollaboratorGroupConfigurationResponse$ {
     UpdateCollaboratorGroupConfigurationResponse$outboundSchema;
   /** @deprecated use `UpdateCollaboratorGroupConfigurationResponse$Outbound` instead. */
   export type Outbound = UpdateCollaboratorGroupConfigurationResponse$Outbound;
+}
+
+export function updateCollaboratorGroupConfigurationResponseToJSON(
+  updateCollaboratorGroupConfigurationResponse:
+    UpdateCollaboratorGroupConfigurationResponse,
+): string {
+  return JSON.stringify(
+    UpdateCollaboratorGroupConfigurationResponse$outboundSchema.parse(
+      updateCollaboratorGroupConfigurationResponse,
+    ),
+  );
+}
+
+export function updateCollaboratorGroupConfigurationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateCollaboratorGroupConfigurationResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateCollaboratorGroupConfigurationResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateCollaboratorGroupConfigurationResponse' from JSON`,
+  );
 }

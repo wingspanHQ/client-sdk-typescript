@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   RedactedMember,
   RedactedMember$inboundSchema,
@@ -171,4 +174,22 @@ export namespace BulkPayableBatch$ {
   export const outboundSchema = BulkPayableBatch$outboundSchema;
   /** @deprecated use `BulkPayableBatch$Outbound` instead. */
   export type Outbound = BulkPayableBatch$Outbound;
+}
+
+export function bulkPayableBatchToJSON(
+  bulkPayableBatch: BulkPayableBatch,
+): string {
+  return JSON.stringify(
+    BulkPayableBatch$outboundSchema.parse(bulkPayableBatch),
+  );
+}
+
+export function bulkPayableBatchFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkPayableBatch, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkPayableBatch$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkPayableBatch' from JSON`,
+  );
 }

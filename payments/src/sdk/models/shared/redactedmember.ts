@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   RedactedUser,
   RedactedUser$inboundSchema,
@@ -68,4 +71,18 @@ export namespace RedactedMember$ {
   export const outboundSchema = RedactedMember$outboundSchema;
   /** @deprecated use `RedactedMember$Outbound` instead. */
   export type Outbound = RedactedMember$Outbound;
+}
+
+export function redactedMemberToJSON(redactedMember: RedactedMember): string {
+  return JSON.stringify(RedactedMember$outboundSchema.parse(redactedMember));
+}
+
+export function redactedMemberFromJSON(
+  jsonString: string,
+): SafeParseResult<RedactedMember, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RedactedMember$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RedactedMember' from JSON`,
+  );
 }

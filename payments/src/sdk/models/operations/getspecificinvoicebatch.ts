@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetSpecificInvoiceBatchRequest = {
@@ -75,6 +78,26 @@ export namespace GetSpecificInvoiceBatchRequest$ {
   export type Outbound = GetSpecificInvoiceBatchRequest$Outbound;
 }
 
+export function getSpecificInvoiceBatchRequestToJSON(
+  getSpecificInvoiceBatchRequest: GetSpecificInvoiceBatchRequest,
+): string {
+  return JSON.stringify(
+    GetSpecificInvoiceBatchRequest$outboundSchema.parse(
+      getSpecificInvoiceBatchRequest,
+    ),
+  );
+}
+
+export function getSpecificInvoiceBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetSpecificInvoiceBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetSpecificInvoiceBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetSpecificInvoiceBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetSpecificInvoiceBatchResponse$inboundSchema: z.ZodType<
   GetSpecificInvoiceBatchResponse,
@@ -134,4 +157,24 @@ export namespace GetSpecificInvoiceBatchResponse$ {
   export const outboundSchema = GetSpecificInvoiceBatchResponse$outboundSchema;
   /** @deprecated use `GetSpecificInvoiceBatchResponse$Outbound` instead. */
   export type Outbound = GetSpecificInvoiceBatchResponse$Outbound;
+}
+
+export function getSpecificInvoiceBatchResponseToJSON(
+  getSpecificInvoiceBatchResponse: GetSpecificInvoiceBatchResponse,
+): string {
+  return JSON.stringify(
+    GetSpecificInvoiceBatchResponse$outboundSchema.parse(
+      getSpecificInvoiceBatchResponse,
+    ),
+  );
+}
+
+export function getSpecificInvoiceBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetSpecificInvoiceBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetSpecificInvoiceBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetSpecificInvoiceBatchResponse' from JSON`,
+  );
 }

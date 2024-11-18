@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DeductionApplication = {
   amountDeducted: number;
@@ -50,4 +53,22 @@ export namespace DeductionApplication$ {
   export const outboundSchema = DeductionApplication$outboundSchema;
   /** @deprecated use `DeductionApplication$Outbound` instead. */
   export type Outbound = DeductionApplication$Outbound;
+}
+
+export function deductionApplicationToJSON(
+  deductionApplication: DeductionApplication,
+): string {
+  return JSON.stringify(
+    DeductionApplication$outboundSchema.parse(deductionApplication),
+  );
+}
+
+export function deductionApplicationFromJSON(
+  jsonString: string,
+): SafeParseResult<DeductionApplication, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeductionApplication$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeductionApplication' from JSON`,
+  );
 }

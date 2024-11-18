@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetClientBatchRequest = {
@@ -68,6 +71,24 @@ export namespace GetClientBatchRequest$ {
   export type Outbound = GetClientBatchRequest$Outbound;
 }
 
+export function getClientBatchRequestToJSON(
+  getClientBatchRequest: GetClientBatchRequest,
+): string {
+  return JSON.stringify(
+    GetClientBatchRequest$outboundSchema.parse(getClientBatchRequest),
+  );
+}
+
+export function getClientBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetClientBatchResponse$inboundSchema: z.ZodType<
   GetClientBatchResponse,
@@ -127,4 +148,22 @@ export namespace GetClientBatchResponse$ {
   export const outboundSchema = GetClientBatchResponse$outboundSchema;
   /** @deprecated use `GetClientBatchResponse$Outbound` instead. */
   export type Outbound = GetClientBatchResponse$Outbound;
+}
+
+export function getClientBatchResponseToJSON(
+  getClientBatchResponse: GetClientBatchResponse,
+): string {
+  return JSON.stringify(
+    GetClientBatchResponse$outboundSchema.parse(getClientBatchResponse),
+  );
+}
+
+export function getClientBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientBatchResponse' from JSON`,
+  );
 }

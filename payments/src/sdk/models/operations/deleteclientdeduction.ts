@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteClientDeductionRequest = {
@@ -68,6 +71,26 @@ export namespace DeleteClientDeductionRequest$ {
   export type Outbound = DeleteClientDeductionRequest$Outbound;
 }
 
+export function deleteClientDeductionRequestToJSON(
+  deleteClientDeductionRequest: DeleteClientDeductionRequest,
+): string {
+  return JSON.stringify(
+    DeleteClientDeductionRequest$outboundSchema.parse(
+      deleteClientDeductionRequest,
+    ),
+  );
+}
+
+export function deleteClientDeductionRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteClientDeductionRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteClientDeductionRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteClientDeductionRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteClientDeductionResponse$inboundSchema: z.ZodType<
   DeleteClientDeductionResponse,
@@ -127,4 +150,24 @@ export namespace DeleteClientDeductionResponse$ {
   export const outboundSchema = DeleteClientDeductionResponse$outboundSchema;
   /** @deprecated use `DeleteClientDeductionResponse$Outbound` instead. */
   export type Outbound = DeleteClientDeductionResponse$Outbound;
+}
+
+export function deleteClientDeductionResponseToJSON(
+  deleteClientDeductionResponse: DeleteClientDeductionResponse,
+): string {
+  return JSON.stringify(
+    DeleteClientDeductionResponse$outboundSchema.parse(
+      deleteClientDeductionResponse,
+    ),
+  );
+}
+
+export function deleteClientDeductionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteClientDeductionResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteClientDeductionResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteClientDeductionResponse' from JSON`,
+  );
 }

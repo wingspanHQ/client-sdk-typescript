@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateRecipientSyncRequest = {
@@ -68,6 +71,24 @@ export namespace CreateRecipientSyncRequest$ {
   export type Outbound = CreateRecipientSyncRequest$Outbound;
 }
 
+export function createRecipientSyncRequestToJSON(
+  createRecipientSyncRequest: CreateRecipientSyncRequest,
+): string {
+  return JSON.stringify(
+    CreateRecipientSyncRequest$outboundSchema.parse(createRecipientSyncRequest),
+  );
+}
+
+export function createRecipientSyncRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateRecipientSyncRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateRecipientSyncRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateRecipientSyncRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateRecipientSyncResponse$inboundSchema: z.ZodType<
   CreateRecipientSyncResponse,
@@ -127,4 +148,24 @@ export namespace CreateRecipientSyncResponse$ {
   export const outboundSchema = CreateRecipientSyncResponse$outboundSchema;
   /** @deprecated use `CreateRecipientSyncResponse$Outbound` instead. */
   export type Outbound = CreateRecipientSyncResponse$Outbound;
+}
+
+export function createRecipientSyncResponseToJSON(
+  createRecipientSyncResponse: CreateRecipientSyncResponse,
+): string {
+  return JSON.stringify(
+    CreateRecipientSyncResponse$outboundSchema.parse(
+      createRecipientSyncResponse,
+    ),
+  );
+}
+
+export function createRecipientSyncResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateRecipientSyncResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateRecipientSyncResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateRecipientSyncResponse' from JSON`,
+  );
 }

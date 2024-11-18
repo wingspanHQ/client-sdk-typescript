@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreatePayableBatchResponse = {
@@ -84,4 +87,22 @@ export namespace CreatePayableBatchResponse$ {
   export const outboundSchema = CreatePayableBatchResponse$outboundSchema;
   /** @deprecated use `CreatePayableBatchResponse$Outbound` instead. */
   export type Outbound = CreatePayableBatchResponse$Outbound;
+}
+
+export function createPayableBatchResponseToJSON(
+  createPayableBatchResponse: CreatePayableBatchResponse,
+): string {
+  return JSON.stringify(
+    CreatePayableBatchResponse$outboundSchema.parse(createPayableBatchResponse),
+  );
+}
+
+export function createPayableBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreatePayableBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreatePayableBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreatePayableBatchResponse' from JSON`,
+  );
 }

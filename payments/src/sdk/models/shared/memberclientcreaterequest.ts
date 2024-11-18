@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0,
   D750b2d9403b5bcbdb3c96c89f1cc713df563d587f16e5f39f5ab546c08a20a0$inboundSchema,
@@ -131,4 +134,22 @@ export namespace MemberClientCreateRequest$ {
   export const outboundSchema = MemberClientCreateRequest$outboundSchema;
   /** @deprecated use `MemberClientCreateRequest$Outbound` instead. */
   export type Outbound = MemberClientCreateRequest$Outbound;
+}
+
+export function memberClientCreateRequestToJSON(
+  memberClientCreateRequest: MemberClientCreateRequest,
+): string {
+  return JSON.stringify(
+    MemberClientCreateRequest$outboundSchema.parse(memberClientCreateRequest),
+  );
+}
+
+export function memberClientCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberClientCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientCreateRequest' from JSON`,
+  );
 }

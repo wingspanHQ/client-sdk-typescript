@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetEventAssociatedCollaboratorRequest = {
@@ -70,6 +73,27 @@ export namespace GetEventAssociatedCollaboratorRequest$ {
   export type Outbound = GetEventAssociatedCollaboratorRequest$Outbound;
 }
 
+export function getEventAssociatedCollaboratorRequestToJSON(
+  getEventAssociatedCollaboratorRequest: GetEventAssociatedCollaboratorRequest,
+): string {
+  return JSON.stringify(
+    GetEventAssociatedCollaboratorRequest$outboundSchema.parse(
+      getEventAssociatedCollaboratorRequest,
+    ),
+  );
+}
+
+export function getEventAssociatedCollaboratorRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetEventAssociatedCollaboratorRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetEventAssociatedCollaboratorRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetEventAssociatedCollaboratorRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetEventAssociatedCollaboratorResponse$inboundSchema: z.ZodType<
   GetEventAssociatedCollaboratorResponse,
@@ -131,4 +155,26 @@ export namespace GetEventAssociatedCollaboratorResponse$ {
     GetEventAssociatedCollaboratorResponse$outboundSchema;
   /** @deprecated use `GetEventAssociatedCollaboratorResponse$Outbound` instead. */
   export type Outbound = GetEventAssociatedCollaboratorResponse$Outbound;
+}
+
+export function getEventAssociatedCollaboratorResponseToJSON(
+  getEventAssociatedCollaboratorResponse:
+    GetEventAssociatedCollaboratorResponse,
+): string {
+  return JSON.stringify(
+    GetEventAssociatedCollaboratorResponse$outboundSchema.parse(
+      getEventAssociatedCollaboratorResponse,
+    ),
+  );
+}
+
+export function getEventAssociatedCollaboratorResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetEventAssociatedCollaboratorResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetEventAssociatedCollaboratorResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetEventAssociatedCollaboratorResponse' from JSON`,
+  );
 }

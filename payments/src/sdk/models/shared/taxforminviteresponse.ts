@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type TaxFormInviteResponse = {
   success?: any | undefined;
@@ -42,4 +45,22 @@ export namespace TaxFormInviteResponse$ {
   export const outboundSchema = TaxFormInviteResponse$outboundSchema;
   /** @deprecated use `TaxFormInviteResponse$Outbound` instead. */
   export type Outbound = TaxFormInviteResponse$Outbound;
+}
+
+export function taxFormInviteResponseToJSON(
+  taxFormInviteResponse: TaxFormInviteResponse,
+): string {
+  return JSON.stringify(
+    TaxFormInviteResponse$outboundSchema.parse(taxFormInviteResponse),
+  );
+}
+
+export function taxFormInviteResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormInviteResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormInviteResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormInviteResponse' from JSON`,
+  );
 }

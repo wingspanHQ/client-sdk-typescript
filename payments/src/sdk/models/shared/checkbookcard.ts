@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Address,
   Address$inboundSchema,
@@ -99,4 +102,18 @@ export namespace CheckbookCard$ {
   export const outboundSchema = CheckbookCard$outboundSchema;
   /** @deprecated use `CheckbookCard$Outbound` instead. */
   export type Outbound = CheckbookCard$Outbound;
+}
+
+export function checkbookCardToJSON(checkbookCard: CheckbookCard): string {
+  return JSON.stringify(CheckbookCard$outboundSchema.parse(checkbookCard));
+}
+
+export function checkbookCardFromJSON(
+  jsonString: string,
+): SafeParseResult<CheckbookCard, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CheckbookCard$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CheckbookCard' from JSON`,
+  );
 }

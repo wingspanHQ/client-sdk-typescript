@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type UserRoles = {
   ownerIds: Array<string>;
@@ -46,4 +49,18 @@ export namespace UserRoles$ {
   export const outboundSchema = UserRoles$outboundSchema;
   /** @deprecated use `UserRoles$Outbound` instead. */
   export type Outbound = UserRoles$Outbound;
+}
+
+export function userRolesToJSON(userRoles: UserRoles): string {
+  return JSON.stringify(UserRoles$outboundSchema.parse(userRoles));
+}
+
+export function userRolesFromJSON(
+  jsonString: string,
+): SafeParseResult<UserRoles, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UserRoles$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UserRoles' from JSON`,
+  );
 }

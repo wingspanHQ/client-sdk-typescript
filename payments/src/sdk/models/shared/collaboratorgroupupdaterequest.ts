@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   CollaboratorGroupRequirement,
   CollaboratorGroupRequirement$inboundSchema,
@@ -70,4 +73,24 @@ export namespace CollaboratorGroupUpdateRequest$ {
   export const outboundSchema = CollaboratorGroupUpdateRequest$outboundSchema;
   /** @deprecated use `CollaboratorGroupUpdateRequest$Outbound` instead. */
   export type Outbound = CollaboratorGroupUpdateRequest$Outbound;
+}
+
+export function collaboratorGroupUpdateRequestToJSON(
+  collaboratorGroupUpdateRequest: CollaboratorGroupUpdateRequest,
+): string {
+  return JSON.stringify(
+    CollaboratorGroupUpdateRequest$outboundSchema.parse(
+      collaboratorGroupUpdateRequest,
+    ),
+  );
+}
+
+export function collaboratorGroupUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorGroupUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorGroupUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorGroupUpdateRequest' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type Remail1099FormResponse = {
@@ -84,4 +87,22 @@ export namespace Remail1099FormResponse$ {
   export const outboundSchema = Remail1099FormResponse$outboundSchema;
   /** @deprecated use `Remail1099FormResponse$Outbound` instead. */
   export type Outbound = Remail1099FormResponse$Outbound;
+}
+
+export function remail1099FormResponseToJSON(
+  remail1099FormResponse: Remail1099FormResponse,
+): string {
+  return JSON.stringify(
+    Remail1099FormResponse$outboundSchema.parse(remail1099FormResponse),
+  );
+}
+
+export function remail1099FormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Remail1099FormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Remail1099FormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Remail1099FormResponse' from JSON`,
+  );
 }

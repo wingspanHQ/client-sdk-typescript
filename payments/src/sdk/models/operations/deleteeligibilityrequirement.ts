@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteEligibilityRequirementRequest = {
@@ -70,6 +73,27 @@ export namespace DeleteEligibilityRequirementRequest$ {
   export type Outbound = DeleteEligibilityRequirementRequest$Outbound;
 }
 
+export function deleteEligibilityRequirementRequestToJSON(
+  deleteEligibilityRequirementRequest: DeleteEligibilityRequirementRequest,
+): string {
+  return JSON.stringify(
+    DeleteEligibilityRequirementRequest$outboundSchema.parse(
+      deleteEligibilityRequirementRequest,
+    ),
+  );
+}
+
+export function deleteEligibilityRequirementRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteEligibilityRequirementRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteEligibilityRequirementRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteEligibilityRequirementRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteEligibilityRequirementResponse$inboundSchema: z.ZodType<
   DeleteEligibilityRequirementResponse,
@@ -129,4 +153,25 @@ export namespace DeleteEligibilityRequirementResponse$ {
     DeleteEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `DeleteEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = DeleteEligibilityRequirementResponse$Outbound;
+}
+
+export function deleteEligibilityRequirementResponseToJSON(
+  deleteEligibilityRequirementResponse: DeleteEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    DeleteEligibilityRequirementResponse$outboundSchema.parse(
+      deleteEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function deleteEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteEligibilityRequirementResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteEligibilityRequirementResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteEligibilityRequirementResponse' from JSON`,
+  );
 }

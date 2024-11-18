@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   DeductionApplication,
   DeductionApplication$inboundSchema,
@@ -221,4 +224,22 @@ export namespace DeductionResponse$ {
   export const outboundSchema = DeductionResponse$outboundSchema;
   /** @deprecated use `DeductionResponse$Outbound` instead. */
   export type Outbound = DeductionResponse$Outbound;
+}
+
+export function deductionResponseToJSON(
+  deductionResponse: DeductionResponse,
+): string {
+  return JSON.stringify(
+    DeductionResponse$outboundSchema.parse(deductionResponse),
+  );
+}
+
+export function deductionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeductionResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeductionResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeductionResponse' from JSON`,
+  );
 }

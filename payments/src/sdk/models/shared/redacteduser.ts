@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef,
   F6f2bd1a2fc7bad4e0d8f22345fc5f6699d096b7797b93575869c544a4fc5cef$inboundSchema,
@@ -139,4 +142,18 @@ export namespace RedactedUser$ {
   export const outboundSchema = RedactedUser$outboundSchema;
   /** @deprecated use `RedactedUser$Outbound` instead. */
   export type Outbound = RedactedUser$Outbound;
+}
+
+export function redactedUserToJSON(redactedUser: RedactedUser): string {
+  return JSON.stringify(RedactedUser$outboundSchema.parse(redactedUser));
+}
+
+export function redactedUserFromJSON(
+  jsonString: string,
+): SafeParseResult<RedactedUser, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RedactedUser$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RedactedUser' from JSON`,
+  );
 }

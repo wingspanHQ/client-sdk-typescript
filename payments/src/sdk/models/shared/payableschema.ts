@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Address,
   Address$inboundSchema,
@@ -377,4 +380,18 @@ export namespace PayableSchema$ {
   export const outboundSchema = PayableSchema$outboundSchema;
   /** @deprecated use `PayableSchema$Outbound` instead. */
   export type Outbound = PayableSchema$Outbound;
+}
+
+export function payableSchemaToJSON(payableSchema: PayableSchema): string {
+  return JSON.stringify(PayableSchema$outboundSchema.parse(payableSchema));
+}
+
+export function payableSchemaFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableSchema, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableSchema$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableSchema' from JSON`,
+  );
 }

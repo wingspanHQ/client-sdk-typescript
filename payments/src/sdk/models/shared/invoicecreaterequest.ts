@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -166,6 +169,20 @@ export namespace Client$ {
   export type Outbound = Client$Outbound;
 }
 
+export function clientToJSON(client: Client): string {
+  return JSON.stringify(Client$outboundSchema.parse(client));
+}
+
+export function clientFromJSON(
+  jsonString: string,
+): SafeParseResult<Client, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Client$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Client' from JSON`,
+  );
+}
+
 /** @internal */
 export const InvoiceCreateRequestCurrency$inboundSchema: z.ZodNativeEnum<
   typeof InvoiceCreateRequestCurrency
@@ -212,6 +229,20 @@ export namespace Member$ {
   export const outboundSchema = Member$outboundSchema;
   /** @deprecated use `Member$Outbound` instead. */
   export type Outbound = Member$Outbound;
+}
+
+export function memberToJSON(member: Member): string {
+  return JSON.stringify(Member$outboundSchema.parse(member));
+}
+
+export function memberFromJSON(
+  jsonString: string,
+): SafeParseResult<Member, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Member$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Member' from JSON`,
+  );
 }
 
 /** @internal */
@@ -349,4 +380,22 @@ export namespace InvoiceCreateRequest$ {
   export const outboundSchema = InvoiceCreateRequest$outboundSchema;
   /** @deprecated use `InvoiceCreateRequest$Outbound` instead. */
   export type Outbound = InvoiceCreateRequest$Outbound;
+}
+
+export function invoiceCreateRequestToJSON(
+  invoiceCreateRequest: InvoiceCreateRequest,
+): string {
+  return JSON.stringify(
+    InvoiceCreateRequest$outboundSchema.parse(invoiceCreateRequest),
+  );
+}
+
+export function invoiceCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceCreateRequest' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CompanyPerson = {
   memberId: string;
@@ -46,4 +49,18 @@ export namespace CompanyPerson$ {
   export const outboundSchema = CompanyPerson$outboundSchema;
   /** @deprecated use `CompanyPerson$Outbound` instead. */
   export type Outbound = CompanyPerson$Outbound;
+}
+
+export function companyPersonToJSON(companyPerson: CompanyPerson): string {
+  return JSON.stringify(CompanyPerson$outboundSchema.parse(companyPerson));
+}
+
+export function companyPersonFromJSON(
+  jsonString: string,
+): SafeParseResult<CompanyPerson, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CompanyPerson$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CompanyPerson' from JSON`,
+  );
 }

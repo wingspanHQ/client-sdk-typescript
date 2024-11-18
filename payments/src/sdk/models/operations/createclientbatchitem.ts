@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateClientBatchItemRequest = {
@@ -80,6 +83,26 @@ export namespace CreateClientBatchItemRequest$ {
   export type Outbound = CreateClientBatchItemRequest$Outbound;
 }
 
+export function createClientBatchItemRequestToJSON(
+  createClientBatchItemRequest: CreateClientBatchItemRequest,
+): string {
+  return JSON.stringify(
+    CreateClientBatchItemRequest$outboundSchema.parse(
+      createClientBatchItemRequest,
+    ),
+  );
+}
+
+export function createClientBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateClientBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateClientBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateClientBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateClientBatchItemResponse$inboundSchema: z.ZodType<
   CreateClientBatchItemResponse,
@@ -139,4 +162,24 @@ export namespace CreateClientBatchItemResponse$ {
   export const outboundSchema = CreateClientBatchItemResponse$outboundSchema;
   /** @deprecated use `CreateClientBatchItemResponse$Outbound` instead. */
   export type Outbound = CreateClientBatchItemResponse$Outbound;
+}
+
+export function createClientBatchItemResponseToJSON(
+  createClientBatchItemResponse: CreateClientBatchItemResponse,
+): string {
+  return JSON.stringify(
+    CreateClientBatchItemResponse$outboundSchema.parse(
+      createClientBatchItemResponse,
+    ),
+  );
+}
+
+export function createClientBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateClientBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateClientBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateClientBatchItemResponse' from JSON`,
+  );
 }

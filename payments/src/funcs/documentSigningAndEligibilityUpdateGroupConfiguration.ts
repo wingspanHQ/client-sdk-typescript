@@ -79,6 +79,9 @@ export async function documentSigningAndEligibilityUpdateGroupConfiguration(
   const context = {
     operationID: "updateCollaboratorGroupConfiguration",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

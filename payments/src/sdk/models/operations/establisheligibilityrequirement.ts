@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type EstablishEligibilityRequirementResponse = {
@@ -88,4 +91,31 @@ export namespace EstablishEligibilityRequirementResponse$ {
     EstablishEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `EstablishEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = EstablishEligibilityRequirementResponse$Outbound;
+}
+
+export function establishEligibilityRequirementResponseToJSON(
+  establishEligibilityRequirementResponse:
+    EstablishEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    EstablishEligibilityRequirementResponse$outboundSchema.parse(
+      establishEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function establishEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  EstablishEligibilityRequirementResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      EstablishEligibilityRequirementResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'EstablishEligibilityRequirementResponse' from JSON`,
+  );
 }

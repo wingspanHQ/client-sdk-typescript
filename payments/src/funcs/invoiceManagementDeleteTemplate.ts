@@ -75,6 +75,9 @@ export async function invoiceManagementDeleteTemplate(
   const context = {
     operationID: "deleteInvoiceTemplate",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

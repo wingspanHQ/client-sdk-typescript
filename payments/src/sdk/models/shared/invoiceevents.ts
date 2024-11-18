@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type InvoiceEvents = {
   approvedAt?: string | null | undefined;
@@ -198,4 +201,18 @@ export namespace InvoiceEvents$ {
   export const outboundSchema = InvoiceEvents$outboundSchema;
   /** @deprecated use `InvoiceEvents$Outbound` instead. */
   export type Outbound = InvoiceEvents$Outbound;
+}
+
+export function invoiceEventsToJSON(invoiceEvents: InvoiceEvents): string {
+  return JSON.stringify(InvoiceEvents$outboundSchema.parse(invoiceEvents));
+}
+
+export function invoiceEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceEvents' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type AssociateCollaboratorWithGroupRequest = {
@@ -77,6 +80,27 @@ export namespace AssociateCollaboratorWithGroupRequest$ {
   export type Outbound = AssociateCollaboratorWithGroupRequest$Outbound;
 }
 
+export function associateCollaboratorWithGroupRequestToJSON(
+  associateCollaboratorWithGroupRequest: AssociateCollaboratorWithGroupRequest,
+): string {
+  return JSON.stringify(
+    AssociateCollaboratorWithGroupRequest$outboundSchema.parse(
+      associateCollaboratorWithGroupRequest,
+    ),
+  );
+}
+
+export function associateCollaboratorWithGroupRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<AssociateCollaboratorWithGroupRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      AssociateCollaboratorWithGroupRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'AssociateCollaboratorWithGroupRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const AssociateCollaboratorWithGroupResponse$inboundSchema: z.ZodType<
   AssociateCollaboratorWithGroupResponse,
@@ -138,4 +162,26 @@ export namespace AssociateCollaboratorWithGroupResponse$ {
     AssociateCollaboratorWithGroupResponse$outboundSchema;
   /** @deprecated use `AssociateCollaboratorWithGroupResponse$Outbound` instead. */
   export type Outbound = AssociateCollaboratorWithGroupResponse$Outbound;
+}
+
+export function associateCollaboratorWithGroupResponseToJSON(
+  associateCollaboratorWithGroupResponse:
+    AssociateCollaboratorWithGroupResponse,
+): string {
+  return JSON.stringify(
+    AssociateCollaboratorWithGroupResponse$outboundSchema.parse(
+      associateCollaboratorWithGroupResponse,
+    ),
+  );
+}
+
+export function associateCollaboratorWithGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<AssociateCollaboratorWithGroupResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      AssociateCollaboratorWithGroupResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'AssociateCollaboratorWithGroupResponse' from JSON`,
+  );
 }

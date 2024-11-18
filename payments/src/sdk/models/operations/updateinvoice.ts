@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateInvoiceRequest = {
@@ -80,6 +83,24 @@ export namespace UpdateInvoiceRequest$ {
   export type Outbound = UpdateInvoiceRequest$Outbound;
 }
 
+export function updateInvoiceRequestToJSON(
+  updateInvoiceRequest: UpdateInvoiceRequest,
+): string {
+  return JSON.stringify(
+    UpdateInvoiceRequest$outboundSchema.parse(updateInvoiceRequest),
+  );
+}
+
+export function updateInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateInvoiceResponse$inboundSchema: z.ZodType<
   UpdateInvoiceResponse,
@@ -139,4 +160,22 @@ export namespace UpdateInvoiceResponse$ {
   export const outboundSchema = UpdateInvoiceResponse$outboundSchema;
   /** @deprecated use `UpdateInvoiceResponse$Outbound` instead. */
   export type Outbound = UpdateInvoiceResponse$Outbound;
+}
+
+export function updateInvoiceResponseToJSON(
+  updateInvoiceResponse: UpdateInvoiceResponse,
+): string {
+  return JSON.stringify(
+    UpdateInvoiceResponse$outboundSchema.parse(updateInvoiceResponse),
+  );
+}
+
+export function updateInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateInvoiceResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateCustomFieldRequest = {
@@ -84,6 +87,24 @@ export namespace UpdateCustomFieldRequest$ {
   export type Outbound = UpdateCustomFieldRequest$Outbound;
 }
 
+export function updateCustomFieldRequestToJSON(
+  updateCustomFieldRequest: UpdateCustomFieldRequest,
+): string {
+  return JSON.stringify(
+    UpdateCustomFieldRequest$outboundSchema.parse(updateCustomFieldRequest),
+  );
+}
+
+export function updateCustomFieldRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateCustomFieldRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateCustomFieldRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateCustomFieldRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateCustomFieldResponse$inboundSchema: z.ZodType<
   UpdateCustomFieldResponse,
@@ -143,4 +164,22 @@ export namespace UpdateCustomFieldResponse$ {
   export const outboundSchema = UpdateCustomFieldResponse$outboundSchema;
   /** @deprecated use `UpdateCustomFieldResponse$Outbound` instead. */
   export type Outbound = UpdateCustomFieldResponse$Outbound;
+}
+
+export function updateCustomFieldResponseToJSON(
+  updateCustomFieldResponse: UpdateCustomFieldResponse,
+): string {
+  return JSON.stringify(
+    UpdateCustomFieldResponse$outboundSchema.parse(updateCustomFieldResponse),
+  );
+}
+
+export function updateCustomFieldResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateCustomFieldResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateCustomFieldResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateCustomFieldResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateTaxFormRequest = {
@@ -80,6 +83,24 @@ export namespace UpdateTaxFormRequest$ {
   export type Outbound = UpdateTaxFormRequest$Outbound;
 }
 
+export function updateTaxFormRequestToJSON(
+  updateTaxFormRequest: UpdateTaxFormRequest,
+): string {
+  return JSON.stringify(
+    UpdateTaxFormRequest$outboundSchema.parse(updateTaxFormRequest),
+  );
+}
+
+export function updateTaxFormRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateTaxFormRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateTaxFormRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateTaxFormRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateTaxFormResponse$inboundSchema: z.ZodType<
   UpdateTaxFormResponse,
@@ -139,4 +160,22 @@ export namespace UpdateTaxFormResponse$ {
   export const outboundSchema = UpdateTaxFormResponse$outboundSchema;
   /** @deprecated use `UpdateTaxFormResponse$Outbound` instead. */
   export type Outbound = UpdateTaxFormResponse$Outbound;
+}
+
+export function updateTaxFormResponseToJSON(
+  updateTaxFormResponse: UpdateTaxFormResponse,
+): string {
+  return JSON.stringify(
+    UpdateTaxFormResponse$outboundSchema.parse(updateTaxFormResponse),
+  );
+}
+
+export function updateTaxFormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateTaxFormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateTaxFormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateTaxFormResponse' from JSON`,
+  );
 }

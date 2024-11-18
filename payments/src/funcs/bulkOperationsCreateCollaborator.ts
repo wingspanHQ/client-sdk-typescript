@@ -71,6 +71,9 @@ export async function bulkOperationsCreateCollaborator(
   const context = {
     operationID: "createCollaboratorBatch",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

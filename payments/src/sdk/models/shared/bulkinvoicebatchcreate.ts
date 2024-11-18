@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const BulkInvoiceBatchCreateProcessingStrategy = {
   Merge: "Merge",
@@ -78,4 +81,22 @@ export namespace BulkInvoiceBatchCreate$ {
   export const outboundSchema = BulkInvoiceBatchCreate$outboundSchema;
   /** @deprecated use `BulkInvoiceBatchCreate$Outbound` instead. */
   export type Outbound = BulkInvoiceBatchCreate$Outbound;
+}
+
+export function bulkInvoiceBatchCreateToJSON(
+  bulkInvoiceBatchCreate: BulkInvoiceBatchCreate,
+): string {
+  return JSON.stringify(
+    BulkInvoiceBatchCreate$outboundSchema.parse(bulkInvoiceBatchCreate),
+  );
+}
+
+export function bulkInvoiceBatchCreateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkInvoiceBatchCreate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkInvoiceBatchCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkInvoiceBatchCreate' from JSON`,
+  );
 }

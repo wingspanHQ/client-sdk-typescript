@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   MemberClientFormW9Info,
   MemberClientFormW9Info$inboundSchema,
@@ -124,4 +127,22 @@ export namespace BulkCollaboratorItemUpdate$ {
   export const outboundSchema = BulkCollaboratorItemUpdate$outboundSchema;
   /** @deprecated use `BulkCollaboratorItemUpdate$Outbound` instead. */
   export type Outbound = BulkCollaboratorItemUpdate$Outbound;
+}
+
+export function bulkCollaboratorItemUpdateToJSON(
+  bulkCollaboratorItemUpdate: BulkCollaboratorItemUpdate,
+): string {
+  return JSON.stringify(
+    BulkCollaboratorItemUpdate$outboundSchema.parse(bulkCollaboratorItemUpdate),
+  );
+}
+
+export function bulkCollaboratorItemUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkCollaboratorItemUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkCollaboratorItemUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkCollaboratorItemUpdate' from JSON`,
+  );
 }

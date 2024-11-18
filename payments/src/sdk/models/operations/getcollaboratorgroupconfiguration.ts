@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCollaboratorGroupConfigurationRequest = {
@@ -68,6 +71,33 @@ export namespace GetCollaboratorGroupConfigurationRequest$ {
     GetCollaboratorGroupConfigurationRequest$outboundSchema;
   /** @deprecated use `GetCollaboratorGroupConfigurationRequest$Outbound` instead. */
   export type Outbound = GetCollaboratorGroupConfigurationRequest$Outbound;
+}
+
+export function getCollaboratorGroupConfigurationRequestToJSON(
+  getCollaboratorGroupConfigurationRequest:
+    GetCollaboratorGroupConfigurationRequest,
+): string {
+  return JSON.stringify(
+    GetCollaboratorGroupConfigurationRequest$outboundSchema.parse(
+      getCollaboratorGroupConfigurationRequest,
+    ),
+  );
+}
+
+export function getCollaboratorGroupConfigurationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetCollaboratorGroupConfigurationRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetCollaboratorGroupConfigurationRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'GetCollaboratorGroupConfigurationRequest' from JSON`,
+  );
 }
 
 /** @internal */
@@ -136,4 +166,31 @@ export namespace GetCollaboratorGroupConfigurationResponse$ {
     GetCollaboratorGroupConfigurationResponse$outboundSchema;
   /** @deprecated use `GetCollaboratorGroupConfigurationResponse$Outbound` instead. */
   export type Outbound = GetCollaboratorGroupConfigurationResponse$Outbound;
+}
+
+export function getCollaboratorGroupConfigurationResponseToJSON(
+  getCollaboratorGroupConfigurationResponse:
+    GetCollaboratorGroupConfigurationResponse,
+): string {
+  return JSON.stringify(
+    GetCollaboratorGroupConfigurationResponse$outboundSchema.parse(
+      getCollaboratorGroupConfigurationResponse,
+    ),
+  );
+}
+
+export function getCollaboratorGroupConfigurationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetCollaboratorGroupConfigurationResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetCollaboratorGroupConfigurationResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'GetCollaboratorGroupConfigurationResponse' from JSON`,
+  );
 }

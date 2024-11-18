@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateClientBatchRequest = {
@@ -80,6 +83,24 @@ export namespace UpdateClientBatchRequest$ {
   export type Outbound = UpdateClientBatchRequest$Outbound;
 }
 
+export function updateClientBatchRequestToJSON(
+  updateClientBatchRequest: UpdateClientBatchRequest,
+): string {
+  return JSON.stringify(
+    UpdateClientBatchRequest$outboundSchema.parse(updateClientBatchRequest),
+  );
+}
+
+export function updateClientBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateClientBatchResponse$inboundSchema: z.ZodType<
   UpdateClientBatchResponse,
@@ -139,4 +160,22 @@ export namespace UpdateClientBatchResponse$ {
   export const outboundSchema = UpdateClientBatchResponse$outboundSchema;
   /** @deprecated use `UpdateClientBatchResponse$Outbound` instead. */
   export type Outbound = UpdateClientBatchResponse$Outbound;
+}
+
+export function updateClientBatchResponseToJSON(
+  updateClientBatchResponse: UpdateClientBatchResponse,
+): string {
+  return JSON.stringify(
+    UpdateClientBatchResponse$outboundSchema.parse(updateClientBatchResponse),
+  );
+}
+
+export function updateClientBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientBatchResponse' from JSON`,
+  );
 }

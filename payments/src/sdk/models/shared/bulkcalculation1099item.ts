@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14,
   EightHundredAndSixtyFiveThousandNineHundredAndSixtyNinebc2d9a3cb12c3263d4f941da6e1c7783024804b469db4a6eab9bc12f14$inboundSchema,
@@ -168,4 +171,22 @@ export namespace BulkCalculation1099Item$ {
   export const outboundSchema = BulkCalculation1099Item$outboundSchema;
   /** @deprecated use `BulkCalculation1099Item$Outbound` instead. */
   export type Outbound = BulkCalculation1099Item$Outbound;
+}
+
+export function bulkCalculation1099ItemToJSON(
+  bulkCalculation1099Item: BulkCalculation1099Item,
+): string {
+  return JSON.stringify(
+    BulkCalculation1099Item$outboundSchema.parse(bulkCalculation1099Item),
+  );
+}
+
+export function bulkCalculation1099ItemFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkCalculation1099Item, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkCalculation1099Item$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkCalculation1099Item' from JSON`,
+  );
 }

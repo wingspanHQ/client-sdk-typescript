@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const AutoPayRequirement = {
   All: "All",
@@ -105,4 +108,18 @@ export namespace MemberData$ {
   export const outboundSchema = MemberData$outboundSchema;
   /** @deprecated use `MemberData$Outbound` instead. */
   export type Outbound = MemberData$Outbound;
+}
+
+export function memberDataToJSON(memberData: MemberData): string {
+  return JSON.stringify(MemberData$outboundSchema.parse(memberData));
+}
+
+export function memberDataFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberData' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListSpecificClientDetailsRequest = {
@@ -68,6 +71,26 @@ export namespace ListSpecificClientDetailsRequest$ {
   export type Outbound = ListSpecificClientDetailsRequest$Outbound;
 }
 
+export function listSpecificClientDetailsRequestToJSON(
+  listSpecificClientDetailsRequest: ListSpecificClientDetailsRequest,
+): string {
+  return JSON.stringify(
+    ListSpecificClientDetailsRequest$outboundSchema.parse(
+      listSpecificClientDetailsRequest,
+    ),
+  );
+}
+
+export function listSpecificClientDetailsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ListSpecificClientDetailsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListSpecificClientDetailsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListSpecificClientDetailsRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ListSpecificClientDetailsResponse$inboundSchema: z.ZodType<
   ListSpecificClientDetailsResponse,
@@ -128,4 +151,24 @@ export namespace ListSpecificClientDetailsResponse$ {
     ListSpecificClientDetailsResponse$outboundSchema;
   /** @deprecated use `ListSpecificClientDetailsResponse$Outbound` instead. */
   export type Outbound = ListSpecificClientDetailsResponse$Outbound;
+}
+
+export function listSpecificClientDetailsResponseToJSON(
+  listSpecificClientDetailsResponse: ListSpecificClientDetailsResponse,
+): string {
+  return JSON.stringify(
+    ListSpecificClientDetailsResponse$outboundSchema.parse(
+      listSpecificClientDetailsResponse,
+    ),
+  );
+}
+
+export function listSpecificClientDetailsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListSpecificClientDetailsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListSpecificClientDetailsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListSpecificClientDetailsResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdatePayeeW9InformationResponse = {
@@ -82,4 +85,24 @@ export namespace UpdatePayeeW9InformationResponse$ {
   export const outboundSchema = UpdatePayeeW9InformationResponse$outboundSchema;
   /** @deprecated use `UpdatePayeeW9InformationResponse$Outbound` instead. */
   export type Outbound = UpdatePayeeW9InformationResponse$Outbound;
+}
+
+export function updatePayeeW9InformationResponseToJSON(
+  updatePayeeW9InformationResponse: UpdatePayeeW9InformationResponse,
+): string {
+  return JSON.stringify(
+    UpdatePayeeW9InformationResponse$outboundSchema.parse(
+      updatePayeeW9InformationResponse,
+    ),
+  );
+}
+
+export function updatePayeeW9InformationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdatePayeeW9InformationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdatePayeeW9InformationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdatePayeeW9InformationResponse' from JSON`,
+  );
 }

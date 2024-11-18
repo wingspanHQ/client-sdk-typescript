@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetForm1099PDFRequest = {
@@ -82,6 +85,24 @@ export namespace GetForm1099PDFRequest$ {
   export type Outbound = GetForm1099PDFRequest$Outbound;
 }
 
+export function getForm1099PDFRequestToJSON(
+  getForm1099PDFRequest: GetForm1099PDFRequest,
+): string {
+  return JSON.stringify(
+    GetForm1099PDFRequest$outboundSchema.parse(getForm1099PDFRequest),
+  );
+}
+
+export function getForm1099PDFRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetForm1099PDFRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetForm1099PDFRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetForm1099PDFRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetForm1099PDFResponse$inboundSchema: z.ZodType<
   GetForm1099PDFResponse,
@@ -141,4 +162,22 @@ export namespace GetForm1099PDFResponse$ {
   export const outboundSchema = GetForm1099PDFResponse$outboundSchema;
   /** @deprecated use `GetForm1099PDFResponse$Outbound` instead. */
   export type Outbound = GetForm1099PDFResponse$Outbound;
+}
+
+export function getForm1099PDFResponseToJSON(
+  getForm1099PDFResponse: GetForm1099PDFResponse,
+): string {
+  return JSON.stringify(
+    GetForm1099PDFResponse$outboundSchema.parse(getForm1099PDFResponse),
+  );
+}
+
+export function getForm1099PDFResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetForm1099PDFResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetForm1099PDFResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetForm1099PDFResponse' from JSON`,
+  );
 }

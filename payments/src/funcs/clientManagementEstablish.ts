@@ -72,6 +72,9 @@ export async function clientManagementEstablish(
   const context = {
     operationID: "establishMemberClientAssociation",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

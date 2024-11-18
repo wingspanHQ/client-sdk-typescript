@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const AutoPayStrategy = {
   All: "All",
@@ -106,4 +109,18 @@ export namespace ClientData$ {
   export const outboundSchema = ClientData$outboundSchema;
   /** @deprecated use `ClientData$Outbound` instead. */
   export type Outbound = ClientData$Outbound;
+}
+
+export function clientDataToJSON(clientData: ClientData): string {
+  return JSON.stringify(ClientData$outboundSchema.parse(clientData));
+}
+
+export function clientDataFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ClientData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientData' from JSON`,
+  );
 }

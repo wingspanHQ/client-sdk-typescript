@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GenerateSpecificInvoiceRequest = {
@@ -78,6 +81,26 @@ export namespace GenerateSpecificInvoiceRequest$ {
   export type Outbound = GenerateSpecificInvoiceRequest$Outbound;
 }
 
+export function generateSpecificInvoiceRequestToJSON(
+  generateSpecificInvoiceRequest: GenerateSpecificInvoiceRequest,
+): string {
+  return JSON.stringify(
+    GenerateSpecificInvoiceRequest$outboundSchema.parse(
+      generateSpecificInvoiceRequest,
+    ),
+  );
+}
+
+export function generateSpecificInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GenerateSpecificInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GenerateSpecificInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GenerateSpecificInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GenerateSpecificInvoiceResponse$inboundSchema: z.ZodType<
   GenerateSpecificInvoiceResponse,
@@ -141,4 +164,24 @@ export namespace GenerateSpecificInvoiceResponse$ {
   export const outboundSchema = GenerateSpecificInvoiceResponse$outboundSchema;
   /** @deprecated use `GenerateSpecificInvoiceResponse$Outbound` instead. */
   export type Outbound = GenerateSpecificInvoiceResponse$Outbound;
+}
+
+export function generateSpecificInvoiceResponseToJSON(
+  generateSpecificInvoiceResponse: GenerateSpecificInvoiceResponse,
+): string {
+  return JSON.stringify(
+    GenerateSpecificInvoiceResponse$outboundSchema.parse(
+      generateSpecificInvoiceResponse,
+    ),
+  );
+}
+
+export function generateSpecificInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GenerateSpecificInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GenerateSpecificInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GenerateSpecificInvoiceResponse' from JSON`,
+  );
 }

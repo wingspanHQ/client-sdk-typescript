@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ClientInvoiceTemplateUpdateRequest = {
   accountId?: string | null | undefined;
@@ -51,4 +54,25 @@ export namespace ClientInvoiceTemplateUpdateRequest$ {
     ClientInvoiceTemplateUpdateRequest$outboundSchema;
   /** @deprecated use `ClientInvoiceTemplateUpdateRequest$Outbound` instead. */
   export type Outbound = ClientInvoiceTemplateUpdateRequest$Outbound;
+}
+
+export function clientInvoiceTemplateUpdateRequestToJSON(
+  clientInvoiceTemplateUpdateRequest: ClientInvoiceTemplateUpdateRequest,
+): string {
+  return JSON.stringify(
+    ClientInvoiceTemplateUpdateRequest$outboundSchema.parse(
+      clientInvoiceTemplateUpdateRequest,
+    ),
+  );
+}
+
+export function clientInvoiceTemplateUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientInvoiceTemplateUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ClientInvoiceTemplateUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientInvoiceTemplateUpdateRequest' from JSON`,
+  );
 }

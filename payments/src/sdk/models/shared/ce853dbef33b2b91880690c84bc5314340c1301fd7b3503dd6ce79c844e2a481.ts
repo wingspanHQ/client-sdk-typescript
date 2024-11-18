@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address =
   {};
@@ -77,6 +80,33 @@ export namespace Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a48
   /** @deprecated use `Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$Outbound` instead. */
   export type Outbound =
     Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$Outbound;
+}
+
+export function ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481AddressToJSON(
+  ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address:
+    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address,
+): string {
+  return JSON.stringify(
+    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$outboundSchema
+      .parse(
+        ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address,
+      ),
+  );
+}
+
+export function ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481AddressFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481Address' from JSON`,
+  );
 }
 
 /** @internal */
@@ -183,4 +213,29 @@ export namespace Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a48
   /** @deprecated use `Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$Outbound` instead. */
   export type Outbound =
     Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$Outbound;
+}
+
+export function ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481ToJSON(
+  ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481:
+    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481,
+): string {
+  return JSON.stringify(
+    Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$outboundSchema
+      .parse(ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481),
+  );
+}
+
+export function ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Ce853dbef33b2b91880690c84bc5314340c1301fd7b3503dd6ce79c844e2a481' from JSON`,
+  );
 }

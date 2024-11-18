@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type TaxFormSubmissionEvents = {
   acceptedByIrsAt?: string | null | undefined;
@@ -86,4 +89,22 @@ export namespace TaxFormSubmissionEvents$ {
   export const outboundSchema = TaxFormSubmissionEvents$outboundSchema;
   /** @deprecated use `TaxFormSubmissionEvents$Outbound` instead. */
   export type Outbound = TaxFormSubmissionEvents$Outbound;
+}
+
+export function taxFormSubmissionEventsToJSON(
+  taxFormSubmissionEvents: TaxFormSubmissionEvents,
+): string {
+  return JSON.stringify(
+    TaxFormSubmissionEvents$outboundSchema.parse(taxFormSubmissionEvents),
+  );
+}
+
+export function taxFormSubmissionEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormSubmissionEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormSubmissionEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormSubmissionEvents' from JSON`,
+  );
 }

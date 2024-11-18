@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   EligibilityRequirement,
   EligibilityRequirement$inboundSchema,
@@ -79,4 +82,22 @@ export namespace CollaboratorGroupResponse$ {
   export const outboundSchema = CollaboratorGroupResponse$outboundSchema;
   /** @deprecated use `CollaboratorGroupResponse$Outbound` instead. */
   export type Outbound = CollaboratorGroupResponse$Outbound;
+}
+
+export function collaboratorGroupResponseToJSON(
+  collaboratorGroupResponse: CollaboratorGroupResponse,
+): string {
+  return JSON.stringify(
+    CollaboratorGroupResponse$outboundSchema.parse(collaboratorGroupResponse),
+  );
+}
+
+export function collaboratorGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorGroupResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorGroupResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorGroupResponse' from JSON`,
+  );
 }

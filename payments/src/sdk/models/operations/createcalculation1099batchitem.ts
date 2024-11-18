@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateCalculation1099BatchItemRequest = {
@@ -88,6 +91,27 @@ export namespace CreateCalculation1099BatchItemRequest$ {
   export type Outbound = CreateCalculation1099BatchItemRequest$Outbound;
 }
 
+export function createCalculation1099BatchItemRequestToJSON(
+  createCalculation1099BatchItemRequest: CreateCalculation1099BatchItemRequest,
+): string {
+  return JSON.stringify(
+    CreateCalculation1099BatchItemRequest$outboundSchema.parse(
+      createCalculation1099BatchItemRequest,
+    ),
+  );
+}
+
+export function createCalculation1099BatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCalculation1099BatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CreateCalculation1099BatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCalculation1099BatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateCalculation1099BatchItemResponse$inboundSchema: z.ZodType<
   CreateCalculation1099BatchItemResponse,
@@ -151,4 +175,26 @@ export namespace CreateCalculation1099BatchItemResponse$ {
     CreateCalculation1099BatchItemResponse$outboundSchema;
   /** @deprecated use `CreateCalculation1099BatchItemResponse$Outbound` instead. */
   export type Outbound = CreateCalculation1099BatchItemResponse$Outbound;
+}
+
+export function createCalculation1099BatchItemResponseToJSON(
+  createCalculation1099BatchItemResponse:
+    CreateCalculation1099BatchItemResponse,
+): string {
+  return JSON.stringify(
+    CreateCalculation1099BatchItemResponse$outboundSchema.parse(
+      createCalculation1099BatchItemResponse,
+    ),
+  );
+}
+
+export function createCalculation1099BatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCalculation1099BatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CreateCalculation1099BatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCalculation1099BatchItemResponse' from JSON`,
+  );
 }

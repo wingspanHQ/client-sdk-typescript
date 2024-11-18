@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const Status = {
   Draft: "Draft",
@@ -112,4 +115,31 @@ export namespace FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e9
   /** @deprecated use `FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$Outbound` instead. */
   export type Outbound =
     FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$Outbound;
+}
+
+export function fortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07ToJSON(
+  fortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07:
+    FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07,
+): string {
+  return JSON.stringify(
+    FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$outboundSchema
+      .parse(
+        fortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07,
+      ),
+  );
+}
+
+export function fortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'FortyTwof004011439ceedfeb392c84d36ad40443a5a0446d1efa02369c56e930a1c07' from JSON`,
+  );
 }

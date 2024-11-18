@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   CalculationSettings1099,
   CalculationSettings1099$inboundSchema,
@@ -196,4 +199,20 @@ export namespace PayrollSettings$ {
   export const outboundSchema = PayrollSettings$outboundSchema;
   /** @deprecated use `PayrollSettings$Outbound` instead. */
   export type Outbound = PayrollSettings$Outbound;
+}
+
+export function payrollSettingsToJSON(
+  payrollSettings: PayrollSettings,
+): string {
+  return JSON.stringify(PayrollSettings$outboundSchema.parse(payrollSettings));
+}
+
+export function payrollSettingsFromJSON(
+  jsonString: string,
+): SafeParseResult<PayrollSettings, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayrollSettings$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayrollSettings' from JSON`,
+  );
 }

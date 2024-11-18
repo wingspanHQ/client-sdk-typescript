@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CollaboratorPayoutsSummary = {
   deductionsCount: number;
@@ -62,4 +65,22 @@ export namespace CollaboratorPayoutsSummary$ {
   export const outboundSchema = CollaboratorPayoutsSummary$outboundSchema;
   /** @deprecated use `CollaboratorPayoutsSummary$Outbound` instead. */
   export type Outbound = CollaboratorPayoutsSummary$Outbound;
+}
+
+export function collaboratorPayoutsSummaryToJSON(
+  collaboratorPayoutsSummary: CollaboratorPayoutsSummary,
+): string {
+  return JSON.stringify(
+    CollaboratorPayoutsSummary$outboundSchema.parse(collaboratorPayoutsSummary),
+  );
+}
+
+export function collaboratorPayoutsSummaryFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorPayoutsSummary, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorPayoutsSummary$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorPayoutsSummary' from JSON`,
+  );
 }

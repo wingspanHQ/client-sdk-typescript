@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Value = {};
 
@@ -36,6 +39,20 @@ export namespace Value$ {
   export const outboundSchema = Value$outboundSchema;
   /** @deprecated use `Value$Outbound` instead. */
   export type Outbound = Value$Outbound;
+}
+
+export function valueToJSON(value: Value): string {
+  return JSON.stringify(Value$outboundSchema.parse(value));
+}
+
+export function valueFromJSON(
+  jsonString: string,
+): SafeParseResult<Value, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Value$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Value' from JSON`,
+  );
 }
 
 /** @internal */
@@ -75,4 +92,24 @@ export namespace PaymentEligibilityUpdateRequest$ {
   export const outboundSchema = PaymentEligibilityUpdateRequest$outboundSchema;
   /** @deprecated use `PaymentEligibilityUpdateRequest$Outbound` instead. */
   export type Outbound = PaymentEligibilityUpdateRequest$Outbound;
+}
+
+export function paymentEligibilityUpdateRequestToJSON(
+  paymentEligibilityUpdateRequest: PaymentEligibilityUpdateRequest,
+): string {
+  return JSON.stringify(
+    PaymentEligibilityUpdateRequest$outboundSchema.parse(
+      paymentEligibilityUpdateRequest,
+    ),
+  );
+}
+
+export function paymentEligibilityUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<PaymentEligibilityUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PaymentEligibilityUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PaymentEligibilityUpdateRequest' from JSON`,
+  );
 }

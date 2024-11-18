@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b,
   Facb8048736dba546c4c76242d9f8c7111011a7a7483528f37d80226698a1f2b$inboundSchema,
@@ -110,4 +113,24 @@ export namespace InvoiceLineItemsCreateRequest$ {
   export const outboundSchema = InvoiceLineItemsCreateRequest$outboundSchema;
   /** @deprecated use `InvoiceLineItemsCreateRequest$Outbound` instead. */
   export type Outbound = InvoiceLineItemsCreateRequest$Outbound;
+}
+
+export function invoiceLineItemsCreateRequestToJSON(
+  invoiceLineItemsCreateRequest: InvoiceLineItemsCreateRequest,
+): string {
+  return JSON.stringify(
+    InvoiceLineItemsCreateRequest$outboundSchema.parse(
+      invoiceLineItemsCreateRequest,
+    ),
+  );
+}
+
+export function invoiceLineItemsCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceLineItemsCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceLineItemsCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceLineItemsCreateRequest' from JSON`,
+  );
 }

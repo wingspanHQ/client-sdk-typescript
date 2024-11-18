@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteInvoiceRequest = {
@@ -68,6 +71,24 @@ export namespace DeleteInvoiceRequest$ {
   export type Outbound = DeleteInvoiceRequest$Outbound;
 }
 
+export function deleteInvoiceRequestToJSON(
+  deleteInvoiceRequest: DeleteInvoiceRequest,
+): string {
+  return JSON.stringify(
+    DeleteInvoiceRequest$outboundSchema.parse(deleteInvoiceRequest),
+  );
+}
+
+export function deleteInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteInvoiceResponse$inboundSchema: z.ZodType<
   DeleteInvoiceResponse,
@@ -127,4 +148,22 @@ export namespace DeleteInvoiceResponse$ {
   export const outboundSchema = DeleteInvoiceResponse$outboundSchema;
   /** @deprecated use `DeleteInvoiceResponse$Outbound` instead. */
   export type Outbound = DeleteInvoiceResponse$Outbound;
+}
+
+export function deleteInvoiceResponseToJSON(
+  deleteInvoiceResponse: DeleteInvoiceResponse,
+): string {
+  return JSON.stringify(
+    DeleteInvoiceResponse$outboundSchema.parse(deleteInvoiceResponse),
+  );
+}
+
+export function deleteInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteInvoiceResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetBankingInstitutionRequest = {
@@ -68,6 +71,26 @@ export namespace GetBankingInstitutionRequest$ {
   export type Outbound = GetBankingInstitutionRequest$Outbound;
 }
 
+export function getBankingInstitutionRequestToJSON(
+  getBankingInstitutionRequest: GetBankingInstitutionRequest,
+): string {
+  return JSON.stringify(
+    GetBankingInstitutionRequest$outboundSchema.parse(
+      getBankingInstitutionRequest,
+    ),
+  );
+}
+
+export function getBankingInstitutionRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetBankingInstitutionRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetBankingInstitutionRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetBankingInstitutionRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetBankingInstitutionResponse$inboundSchema: z.ZodType<
   GetBankingInstitutionResponse,
@@ -127,4 +150,24 @@ export namespace GetBankingInstitutionResponse$ {
   export const outboundSchema = GetBankingInstitutionResponse$outboundSchema;
   /** @deprecated use `GetBankingInstitutionResponse$Outbound` instead. */
   export type Outbound = GetBankingInstitutionResponse$Outbound;
+}
+
+export function getBankingInstitutionResponseToJSON(
+  getBankingInstitutionResponse: GetBankingInstitutionResponse,
+): string {
+  return JSON.stringify(
+    GetBankingInstitutionResponse$outboundSchema.parse(
+      getBankingInstitutionResponse,
+    ),
+  );
+}
+
+export function getBankingInstitutionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetBankingInstitutionResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetBankingInstitutionResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetBankingInstitutionResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdatePaymentEligibilityRequirementRequest = {
@@ -87,6 +90,33 @@ export namespace UpdatePaymentEligibilityRequirementRequest$ {
   export type Outbound = UpdatePaymentEligibilityRequirementRequest$Outbound;
 }
 
+export function updatePaymentEligibilityRequirementRequestToJSON(
+  updatePaymentEligibilityRequirementRequest:
+    UpdatePaymentEligibilityRequirementRequest,
+): string {
+  return JSON.stringify(
+    UpdatePaymentEligibilityRequirementRequest$outboundSchema.parse(
+      updatePaymentEligibilityRequirementRequest,
+    ),
+  );
+}
+
+export function updatePaymentEligibilityRequirementRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdatePaymentEligibilityRequirementRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdatePaymentEligibilityRequirementRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdatePaymentEligibilityRequirementRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdatePaymentEligibilityRequirementResponse$inboundSchema:
   z.ZodType<
@@ -150,4 +180,31 @@ export namespace UpdatePaymentEligibilityRequirementResponse$ {
     UpdatePaymentEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `UpdatePaymentEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = UpdatePaymentEligibilityRequirementResponse$Outbound;
+}
+
+export function updatePaymentEligibilityRequirementResponseToJSON(
+  updatePaymentEligibilityRequirementResponse:
+    UpdatePaymentEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    UpdatePaymentEligibilityRequirementResponse$outboundSchema.parse(
+      updatePaymentEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function updatePaymentEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdatePaymentEligibilityRequirementResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdatePaymentEligibilityRequirementResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdatePaymentEligibilityRequirementResponse' from JSON`,
+  );
 }

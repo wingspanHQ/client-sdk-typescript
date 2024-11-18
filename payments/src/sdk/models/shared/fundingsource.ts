@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const FundingSourceCurrency = {
   Usd: "USD",
@@ -106,4 +109,18 @@ export namespace FundingSource$ {
   export const outboundSchema = FundingSource$outboundSchema;
   /** @deprecated use `FundingSource$Outbound` instead. */
   export type Outbound = FundingSource$Outbound;
+}
+
+export function fundingSourceToJSON(fundingSource: FundingSource): string {
+  return JSON.stringify(FundingSource$outboundSchema.parse(fundingSource));
+}
+
+export function fundingSourceFromJSON(
+  jsonString: string,
+): SafeParseResult<FundingSource, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FundingSource$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FundingSource' from JSON`,
+  );
 }

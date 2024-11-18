@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetSummarizedReportResponse = {
@@ -88,4 +91,24 @@ export namespace GetSummarizedReportResponse$ {
   export const outboundSchema = GetSummarizedReportResponse$outboundSchema;
   /** @deprecated use `GetSummarizedReportResponse$Outbound` instead. */
   export type Outbound = GetSummarizedReportResponse$Outbound;
+}
+
+export function getSummarizedReportResponseToJSON(
+  getSummarizedReportResponse: GetSummarizedReportResponse,
+): string {
+  return JSON.stringify(
+    GetSummarizedReportResponse$outboundSchema.parse(
+      getSummarizedReportResponse,
+    ),
+  );
+}
+
+export function getSummarizedReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetSummarizedReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetSummarizedReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetSummarizedReportResponse' from JSON`,
+  );
 }

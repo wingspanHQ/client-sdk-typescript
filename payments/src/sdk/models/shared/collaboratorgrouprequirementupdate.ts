@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CollaboratorGroupRequirementUpdate = {
   newEligibilityRequirementId: string;
@@ -43,4 +46,25 @@ export namespace CollaboratorGroupRequirementUpdate$ {
     CollaboratorGroupRequirementUpdate$outboundSchema;
   /** @deprecated use `CollaboratorGroupRequirementUpdate$Outbound` instead. */
   export type Outbound = CollaboratorGroupRequirementUpdate$Outbound;
+}
+
+export function collaboratorGroupRequirementUpdateToJSON(
+  collaboratorGroupRequirementUpdate: CollaboratorGroupRequirementUpdate,
+): string {
+  return JSON.stringify(
+    CollaboratorGroupRequirementUpdate$outboundSchema.parse(
+      collaboratorGroupRequirementUpdate,
+    ),
+  );
+}
+
+export function collaboratorGroupRequirementUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorGroupRequirementUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CollaboratorGroupRequirementUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorGroupRequirementUpdate' from JSON`,
+  );
 }

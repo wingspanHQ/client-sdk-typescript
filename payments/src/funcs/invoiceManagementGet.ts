@@ -74,6 +74,9 @@ export async function invoiceManagementGet(
   const context = {
     operationID: "getInvoice",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateSpecificPayableBatchItemRequest = {
@@ -89,6 +92,27 @@ export namespace UpdateSpecificPayableBatchItemRequest$ {
   export type Outbound = UpdateSpecificPayableBatchItemRequest$Outbound;
 }
 
+export function updateSpecificPayableBatchItemRequestToJSON(
+  updateSpecificPayableBatchItemRequest: UpdateSpecificPayableBatchItemRequest,
+): string {
+  return JSON.stringify(
+    UpdateSpecificPayableBatchItemRequest$outboundSchema.parse(
+      updateSpecificPayableBatchItemRequest,
+    ),
+  );
+}
+
+export function updateSpecificPayableBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateSpecificPayableBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateSpecificPayableBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateSpecificPayableBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateSpecificPayableBatchItemResponse$inboundSchema: z.ZodType<
   UpdateSpecificPayableBatchItemResponse,
@@ -150,4 +174,26 @@ export namespace UpdateSpecificPayableBatchItemResponse$ {
     UpdateSpecificPayableBatchItemResponse$outboundSchema;
   /** @deprecated use `UpdateSpecificPayableBatchItemResponse$Outbound` instead. */
   export type Outbound = UpdateSpecificPayableBatchItemResponse$Outbound;
+}
+
+export function updateSpecificPayableBatchItemResponseToJSON(
+  updateSpecificPayableBatchItemResponse:
+    UpdateSpecificPayableBatchItemResponse,
+): string {
+  return JSON.stringify(
+    UpdateSpecificPayableBatchItemResponse$outboundSchema.parse(
+      updateSpecificPayableBatchItemResponse,
+    ),
+  );
+}
+
+export function updateSpecificPayableBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateSpecificPayableBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateSpecificPayableBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateSpecificPayableBatchItemResponse' from JSON`,
+  );
 }

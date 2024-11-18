@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DisassociateCollaboratorWithGroupRequest = {
@@ -77,6 +80,33 @@ export namespace DisassociateCollaboratorWithGroupRequest$ {
   export type Outbound = DisassociateCollaboratorWithGroupRequest$Outbound;
 }
 
+export function disassociateCollaboratorWithGroupRequestToJSON(
+  disassociateCollaboratorWithGroupRequest:
+    DisassociateCollaboratorWithGroupRequest,
+): string {
+  return JSON.stringify(
+    DisassociateCollaboratorWithGroupRequest$outboundSchema.parse(
+      disassociateCollaboratorWithGroupRequest,
+    ),
+  );
+}
+
+export function disassociateCollaboratorWithGroupRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DisassociateCollaboratorWithGroupRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DisassociateCollaboratorWithGroupRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DisassociateCollaboratorWithGroupRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DisassociateCollaboratorWithGroupResponse$inboundSchema: z.ZodType<
   DisassociateCollaboratorWithGroupResponse,
@@ -139,4 +169,31 @@ export namespace DisassociateCollaboratorWithGroupResponse$ {
     DisassociateCollaboratorWithGroupResponse$outboundSchema;
   /** @deprecated use `DisassociateCollaboratorWithGroupResponse$Outbound` instead. */
   export type Outbound = DisassociateCollaboratorWithGroupResponse$Outbound;
+}
+
+export function disassociateCollaboratorWithGroupResponseToJSON(
+  disassociateCollaboratorWithGroupResponse:
+    DisassociateCollaboratorWithGroupResponse,
+): string {
+  return JSON.stringify(
+    DisassociateCollaboratorWithGroupResponse$outboundSchema.parse(
+      disassociateCollaboratorWithGroupResponse,
+    ),
+  );
+}
+
+export function disassociateCollaboratorWithGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DisassociateCollaboratorWithGroupResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DisassociateCollaboratorWithGroupResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DisassociateCollaboratorWithGroupResponse' from JSON`,
+  );
 }

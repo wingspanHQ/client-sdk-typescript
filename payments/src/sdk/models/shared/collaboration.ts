@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   ClientData,
   ClientData$inboundSchema,
@@ -129,4 +132,18 @@ export namespace Collaboration$ {
   export const outboundSchema = Collaboration$outboundSchema;
   /** @deprecated use `Collaboration$Outbound` instead. */
   export type Outbound = Collaboration$Outbound;
+}
+
+export function collaborationToJSON(collaboration: Collaboration): string {
+  return JSON.stringify(Collaboration$outboundSchema.parse(collaboration));
+}
+
+export function collaborationFromJSON(
+  jsonString: string,
+): SafeParseResult<Collaboration, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Collaboration$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Collaboration' from JSON`,
+  );
 }

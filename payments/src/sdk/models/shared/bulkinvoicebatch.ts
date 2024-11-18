@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2,
   SevenHundredAndFiftySevenf4961b94334fd41cedc27262be7b14583377703cda6490b996969bd4e66c2$inboundSchema,
@@ -158,4 +161,22 @@ export namespace BulkInvoiceBatch$ {
   export const outboundSchema = BulkInvoiceBatch$outboundSchema;
   /** @deprecated use `BulkInvoiceBatch$Outbound` instead. */
   export type Outbound = BulkInvoiceBatch$Outbound;
+}
+
+export function bulkInvoiceBatchToJSON(
+  bulkInvoiceBatch: BulkInvoiceBatch,
+): string {
+  return JSON.stringify(
+    BulkInvoiceBatch$outboundSchema.parse(bulkInvoiceBatch),
+  );
+}
+
+export function bulkInvoiceBatchFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkInvoiceBatch, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkInvoiceBatch$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkInvoiceBatch' from JSON`,
+  );
 }

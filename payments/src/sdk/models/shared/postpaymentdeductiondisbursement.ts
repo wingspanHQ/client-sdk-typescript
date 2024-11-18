@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type PostPaymentDeductionDisbursement = {
   inputs: { [k: string]: string };
@@ -46,4 +49,24 @@ export namespace PostPaymentDeductionDisbursement$ {
   export const outboundSchema = PostPaymentDeductionDisbursement$outboundSchema;
   /** @deprecated use `PostPaymentDeductionDisbursement$Outbound` instead. */
   export type Outbound = PostPaymentDeductionDisbursement$Outbound;
+}
+
+export function postPaymentDeductionDisbursementToJSON(
+  postPaymentDeductionDisbursement: PostPaymentDeductionDisbursement,
+): string {
+  return JSON.stringify(
+    PostPaymentDeductionDisbursement$outboundSchema.parse(
+      postPaymentDeductionDisbursement,
+    ),
+  );
+}
+
+export function postPaymentDeductionDisbursementFromJSON(
+  jsonString: string,
+): SafeParseResult<PostPaymentDeductionDisbursement, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PostPaymentDeductionDisbursement$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PostPaymentDeductionDisbursement' from JSON`,
+  );
 }

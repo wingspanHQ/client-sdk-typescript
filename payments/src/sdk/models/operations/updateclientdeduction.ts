@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateClientDeductionRequest = {
@@ -82,6 +85,26 @@ export namespace UpdateClientDeductionRequest$ {
   export type Outbound = UpdateClientDeductionRequest$Outbound;
 }
 
+export function updateClientDeductionRequestToJSON(
+  updateClientDeductionRequest: UpdateClientDeductionRequest,
+): string {
+  return JSON.stringify(
+    UpdateClientDeductionRequest$outboundSchema.parse(
+      updateClientDeductionRequest,
+    ),
+  );
+}
+
+export function updateClientDeductionRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientDeductionRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientDeductionRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientDeductionRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateClientDeductionResponse$inboundSchema: z.ZodType<
   UpdateClientDeductionResponse,
@@ -141,4 +164,24 @@ export namespace UpdateClientDeductionResponse$ {
   export const outboundSchema = UpdateClientDeductionResponse$outboundSchema;
   /** @deprecated use `UpdateClientDeductionResponse$Outbound` instead. */
   export type Outbound = UpdateClientDeductionResponse$Outbound;
+}
+
+export function updateClientDeductionResponseToJSON(
+  updateClientDeductionResponse: UpdateClientDeductionResponse,
+): string {
+  return JSON.stringify(
+    UpdateClientDeductionResponse$outboundSchema.parse(
+      updateClientDeductionResponse,
+    ),
+  );
+}
+
+export function updateClientDeductionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientDeductionResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientDeductionResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientDeductionResponse' from JSON`,
+  );
 }

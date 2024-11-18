@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Address,
   Address$inboundSchema,
@@ -68,4 +71,22 @@ export namespace CheckbookCardCreate$ {
   export const outboundSchema = CheckbookCardCreate$outboundSchema;
   /** @deprecated use `CheckbookCardCreate$Outbound` instead. */
   export type Outbound = CheckbookCardCreate$Outbound;
+}
+
+export function checkbookCardCreateToJSON(
+  checkbookCardCreate: CheckbookCardCreate,
+): string {
+  return JSON.stringify(
+    CheckbookCardCreate$outboundSchema.parse(checkbookCardCreate),
+  );
+}
+
+export function checkbookCardCreateFromJSON(
+  jsonString: string,
+): SafeParseResult<CheckbookCardCreate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CheckbookCardCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CheckbookCardCreate' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Form1099CorrectionAddress = {};
 
@@ -62,6 +65,24 @@ export namespace Form1099CorrectionAddress$ {
   export const outboundSchema = Form1099CorrectionAddress$outboundSchema;
   /** @deprecated use `Form1099CorrectionAddress$Outbound` instead. */
   export type Outbound = Form1099CorrectionAddress$Outbound;
+}
+
+export function form1099CorrectionAddressToJSON(
+  form1099CorrectionAddress: Form1099CorrectionAddress,
+): string {
+  return JSON.stringify(
+    Form1099CorrectionAddress$outboundSchema.parse(form1099CorrectionAddress),
+  );
+}
+
+export function form1099CorrectionAddressFromJSON(
+  jsonString: string,
+): SafeParseResult<Form1099CorrectionAddress, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Form1099CorrectionAddress$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Form1099CorrectionAddress' from JSON`,
+  );
 }
 
 /** @internal */
@@ -146,4 +167,22 @@ export namespace Form1099Correction$ {
   export const outboundSchema = Form1099Correction$outboundSchema;
   /** @deprecated use `Form1099Correction$Outbound` instead. */
   export type Outbound = Form1099Correction$Outbound;
+}
+
+export function form1099CorrectionToJSON(
+  form1099Correction: Form1099Correction,
+): string {
+  return JSON.stringify(
+    Form1099Correction$outboundSchema.parse(form1099Correction),
+  );
+}
+
+export function form1099CorrectionFromJSON(
+  jsonString: string,
+): SafeParseResult<Form1099Correction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Form1099Correction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Form1099Correction' from JSON`,
+  );
 }

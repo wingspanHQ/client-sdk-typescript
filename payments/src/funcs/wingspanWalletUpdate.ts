@@ -78,6 +78,9 @@ export async function wingspanWalletUpdate(
   const context = {
     operationID: "updateStoredWingspanWalletCard",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

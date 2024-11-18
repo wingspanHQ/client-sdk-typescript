@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const FrequencyUpdateInterval = {
   Week: "Week",
@@ -96,4 +99,20 @@ export namespace FrequencyUpdate$ {
   export const outboundSchema = FrequencyUpdate$outboundSchema;
   /** @deprecated use `FrequencyUpdate$Outbound` instead. */
   export type Outbound = FrequencyUpdate$Outbound;
+}
+
+export function frequencyUpdateToJSON(
+  frequencyUpdate: FrequencyUpdate,
+): string {
+  return JSON.stringify(FrequencyUpdate$outboundSchema.parse(frequencyUpdate));
+}
+
+export function frequencyUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<FrequencyUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FrequencyUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FrequencyUpdate' from JSON`,
+  );
 }

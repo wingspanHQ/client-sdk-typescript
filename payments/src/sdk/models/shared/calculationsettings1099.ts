@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const CardProcessingFees = {
   Include: "Include",
@@ -143,4 +146,22 @@ export namespace CalculationSettings1099$ {
   export const outboundSchema = CalculationSettings1099$outboundSchema;
   /** @deprecated use `CalculationSettings1099$Outbound` instead. */
   export type Outbound = CalculationSettings1099$Outbound;
+}
+
+export function calculationSettings1099ToJSON(
+  calculationSettings1099: CalculationSettings1099,
+): string {
+  return JSON.stringify(
+    CalculationSettings1099$outboundSchema.parse(calculationSettings1099),
+  );
+}
+
+export function calculationSettings1099FromJSON(
+  jsonString: string,
+): SafeParseResult<CalculationSettings1099, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CalculationSettings1099$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CalculationSettings1099' from JSON`,
+  );
 }

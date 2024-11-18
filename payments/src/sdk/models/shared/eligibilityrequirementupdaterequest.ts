@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const EligibilityRequirementUpdateRequestRequirementType = {
   Signature: "Signature",
@@ -85,4 +88,25 @@ export namespace EligibilityRequirementUpdateRequest$ {
     EligibilityRequirementUpdateRequest$outboundSchema;
   /** @deprecated use `EligibilityRequirementUpdateRequest$Outbound` instead. */
   export type Outbound = EligibilityRequirementUpdateRequest$Outbound;
+}
+
+export function eligibilityRequirementUpdateRequestToJSON(
+  eligibilityRequirementUpdateRequest: EligibilityRequirementUpdateRequest,
+): string {
+  return JSON.stringify(
+    EligibilityRequirementUpdateRequest$outboundSchema.parse(
+      eligibilityRequirementUpdateRequest,
+    ),
+  );
+}
+
+export function eligibilityRequirementUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<EligibilityRequirementUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      EligibilityRequirementUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'EligibilityRequirementUpdateRequest' from JSON`,
+  );
 }

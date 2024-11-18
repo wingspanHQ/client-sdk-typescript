@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteCollaboratorBatchRequest = {
@@ -68,6 +71,26 @@ export namespace DeleteCollaboratorBatchRequest$ {
   export type Outbound = DeleteCollaboratorBatchRequest$Outbound;
 }
 
+export function deleteCollaboratorBatchRequestToJSON(
+  deleteCollaboratorBatchRequest: DeleteCollaboratorBatchRequest,
+): string {
+  return JSON.stringify(
+    DeleteCollaboratorBatchRequest$outboundSchema.parse(
+      deleteCollaboratorBatchRequest,
+    ),
+  );
+}
+
+export function deleteCollaboratorBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteCollaboratorBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteCollaboratorBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteCollaboratorBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteCollaboratorBatchResponse$inboundSchema: z.ZodType<
   DeleteCollaboratorBatchResponse,
@@ -127,4 +150,24 @@ export namespace DeleteCollaboratorBatchResponse$ {
   export const outboundSchema = DeleteCollaboratorBatchResponse$outboundSchema;
   /** @deprecated use `DeleteCollaboratorBatchResponse$Outbound` instead. */
   export type Outbound = DeleteCollaboratorBatchResponse$Outbound;
+}
+
+export function deleteCollaboratorBatchResponseToJSON(
+  deleteCollaboratorBatchResponse: DeleteCollaboratorBatchResponse,
+): string {
+  return JSON.stringify(
+    DeleteCollaboratorBatchResponse$outboundSchema.parse(
+      deleteCollaboratorBatchResponse,
+    ),
+  );
+}
+
+export function deleteCollaboratorBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteCollaboratorBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteCollaboratorBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteCollaboratorBatchResponse' from JSON`,
+  );
 }

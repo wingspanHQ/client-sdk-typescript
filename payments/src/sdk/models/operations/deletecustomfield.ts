@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteCustomFieldRequest = {
@@ -68,6 +71,24 @@ export namespace DeleteCustomFieldRequest$ {
   export type Outbound = DeleteCustomFieldRequest$Outbound;
 }
 
+export function deleteCustomFieldRequestToJSON(
+  deleteCustomFieldRequest: DeleteCustomFieldRequest,
+): string {
+  return JSON.stringify(
+    DeleteCustomFieldRequest$outboundSchema.parse(deleteCustomFieldRequest),
+  );
+}
+
+export function deleteCustomFieldRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteCustomFieldRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteCustomFieldRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteCustomFieldRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteCustomFieldResponse$inboundSchema: z.ZodType<
   DeleteCustomFieldResponse,
@@ -127,4 +148,22 @@ export namespace DeleteCustomFieldResponse$ {
   export const outboundSchema = DeleteCustomFieldResponse$outboundSchema;
   /** @deprecated use `DeleteCustomFieldResponse$Outbound` instead. */
   export type Outbound = DeleteCustomFieldResponse$Outbound;
+}
+
+export function deleteCustomFieldResponseToJSON(
+  deleteCustomFieldResponse: DeleteCustomFieldResponse,
+): string {
+  return JSON.stringify(
+    DeleteCustomFieldResponse$outboundSchema.parse(deleteCustomFieldResponse),
+  );
+}
+
+export function deleteCustomFieldResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteCustomFieldResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteCustomFieldResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteCustomFieldResponse' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1,
   Eightcf19a7bc90727398c2780566a4070199559f4723ec14c01c448dc0356efffa1$inboundSchema,
@@ -207,4 +210,22 @@ export namespace BulkCollaboratorItem$ {
   export const outboundSchema = BulkCollaboratorItem$outboundSchema;
   /** @deprecated use `BulkCollaboratorItem$Outbound` instead. */
   export type Outbound = BulkCollaboratorItem$Outbound;
+}
+
+export function bulkCollaboratorItemToJSON(
+  bulkCollaboratorItem: BulkCollaboratorItem,
+): string {
+  return JSON.stringify(
+    BulkCollaboratorItem$outboundSchema.parse(bulkCollaboratorItem),
+  );
+}
+
+export function bulkCollaboratorItemFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkCollaboratorItem, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkCollaboratorItem$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkCollaboratorItem' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type Calculate1099AmountsResponse = {
@@ -84,4 +87,24 @@ export namespace Calculate1099AmountsResponse$ {
   export const outboundSchema = Calculate1099AmountsResponse$outboundSchema;
   /** @deprecated use `Calculate1099AmountsResponse$Outbound` instead. */
   export type Outbound = Calculate1099AmountsResponse$Outbound;
+}
+
+export function calculate1099AmountsResponseToJSON(
+  calculate1099AmountsResponse: Calculate1099AmountsResponse,
+): string {
+  return JSON.stringify(
+    Calculate1099AmountsResponse$outboundSchema.parse(
+      calculate1099AmountsResponse,
+    ),
+  );
+}
+
+export function calculate1099AmountsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Calculate1099AmountsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Calculate1099AmountsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Calculate1099AmountsResponse' from JSON`,
+  );
 }

@@ -72,6 +72,9 @@ export async function oneThousandAndNinetyNineOperationsCreateTaxForm(
   const context = {
     operationID: "create1099TaxForm",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

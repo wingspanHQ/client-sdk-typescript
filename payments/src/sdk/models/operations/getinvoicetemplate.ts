@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetInvoiceTemplateRequest = {
@@ -68,6 +71,24 @@ export namespace GetInvoiceTemplateRequest$ {
   export type Outbound = GetInvoiceTemplateRequest$Outbound;
 }
 
+export function getInvoiceTemplateRequestToJSON(
+  getInvoiceTemplateRequest: GetInvoiceTemplateRequest,
+): string {
+  return JSON.stringify(
+    GetInvoiceTemplateRequest$outboundSchema.parse(getInvoiceTemplateRequest),
+  );
+}
+
+export function getInvoiceTemplateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetInvoiceTemplateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetInvoiceTemplateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetInvoiceTemplateRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetInvoiceTemplateResponse$inboundSchema: z.ZodType<
   GetInvoiceTemplateResponse,
@@ -127,4 +148,22 @@ export namespace GetInvoiceTemplateResponse$ {
   export const outboundSchema = GetInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `GetInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = GetInvoiceTemplateResponse$Outbound;
+}
+
+export function getInvoiceTemplateResponseToJSON(
+  getInvoiceTemplateResponse: GetInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    GetInvoiceTemplateResponse$outboundSchema.parse(getInvoiceTemplateResponse),
+  );
+}
+
+export function getInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetInvoiceTemplateResponse' from JSON`,
+  );
 }

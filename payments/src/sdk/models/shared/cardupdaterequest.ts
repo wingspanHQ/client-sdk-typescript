@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const CardUpdateRequestStatus = {
   Active: "Active",
@@ -76,4 +79,22 @@ export namespace CardUpdateRequest$ {
   export const outboundSchema = CardUpdateRequest$outboundSchema;
   /** @deprecated use `CardUpdateRequest$Outbound` instead. */
   export type Outbound = CardUpdateRequest$Outbound;
+}
+
+export function cardUpdateRequestToJSON(
+  cardUpdateRequest: CardUpdateRequest,
+): string {
+  return JSON.stringify(
+    CardUpdateRequest$outboundSchema.parse(cardUpdateRequest),
+  );
+}
+
+export function cardUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CardUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CardUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CardUpdateRequest' from JSON`,
+  );
 }

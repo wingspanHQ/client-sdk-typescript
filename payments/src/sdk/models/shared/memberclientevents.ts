@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type MemberClientEvents = {
   activeAt?: string | null | undefined;
@@ -46,4 +49,22 @@ export namespace MemberClientEvents$ {
   export const outboundSchema = MemberClientEvents$outboundSchema;
   /** @deprecated use `MemberClientEvents$Outbound` instead. */
   export type Outbound = MemberClientEvents$Outbound;
+}
+
+export function memberClientEventsToJSON(
+  memberClientEvents: MemberClientEvents,
+): string {
+  return JSON.stringify(
+    MemberClientEvents$outboundSchema.parse(memberClientEvents),
+  );
+}
+
+export function memberClientEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberClientEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientEvents' from JSON`,
+  );
 }

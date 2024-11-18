@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetEligibilityRequirementRequest = {
@@ -68,6 +71,26 @@ export namespace GetEligibilityRequirementRequest$ {
   export type Outbound = GetEligibilityRequirementRequest$Outbound;
 }
 
+export function getEligibilityRequirementRequestToJSON(
+  getEligibilityRequirementRequest: GetEligibilityRequirementRequest,
+): string {
+  return JSON.stringify(
+    GetEligibilityRequirementRequest$outboundSchema.parse(
+      getEligibilityRequirementRequest,
+    ),
+  );
+}
+
+export function getEligibilityRequirementRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetEligibilityRequirementRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetEligibilityRequirementRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetEligibilityRequirementRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetEligibilityRequirementResponse$inboundSchema: z.ZodType<
   GetEligibilityRequirementResponse,
@@ -126,4 +149,24 @@ export namespace GetEligibilityRequirementResponse$ {
     GetEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `GetEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = GetEligibilityRequirementResponse$Outbound;
+}
+
+export function getEligibilityRequirementResponseToJSON(
+  getEligibilityRequirementResponse: GetEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    GetEligibilityRequirementResponse$outboundSchema.parse(
+      getEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function getEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetEligibilityRequirementResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetEligibilityRequirementResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetEligibilityRequirementResponse' from JSON`,
+  );
 }

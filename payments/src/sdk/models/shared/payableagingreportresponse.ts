@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   RedactedMember,
   RedactedMember$inboundSchema,
@@ -80,6 +83,26 @@ export namespace PayableAgingReportResponseLabels$ {
   export const outboundSchema = PayableAgingReportResponseLabels$outboundSchema;
   /** @deprecated use `PayableAgingReportResponseLabels$Outbound` instead. */
   export type Outbound = PayableAgingReportResponseLabels$Outbound;
+}
+
+export function payableAgingReportResponseLabelsToJSON(
+  payableAgingReportResponseLabels: PayableAgingReportResponseLabels,
+): string {
+  return JSON.stringify(
+    PayableAgingReportResponseLabels$outboundSchema.parse(
+      payableAgingReportResponseLabels,
+    ),
+  );
+}
+
+export function payableAgingReportResponseLabelsFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableAgingReportResponseLabels, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableAgingReportResponseLabels$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableAgingReportResponseLabels' from JSON`,
+  );
 }
 
 /** @internal */
@@ -207,4 +230,22 @@ export namespace PayableAgingReportResponse$ {
   export const outboundSchema = PayableAgingReportResponse$outboundSchema;
   /** @deprecated use `PayableAgingReportResponse$Outbound` instead. */
   export type Outbound = PayableAgingReportResponse$Outbound;
+}
+
+export function payableAgingReportResponseToJSON(
+  payableAgingReportResponse: PayableAgingReportResponse,
+): string {
+  return JSON.stringify(
+    PayableAgingReportResponse$outboundSchema.parse(payableAgingReportResponse),
+  );
+}
+
+export function payableAgingReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableAgingReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableAgingReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableAgingReportResponse' from JSON`,
+  );
 }

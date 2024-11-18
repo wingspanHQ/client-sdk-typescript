@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type FeeHandlingConfig = {
   clientAbsolutePercentage?: number | null | undefined;
@@ -50,4 +53,22 @@ export namespace FeeHandlingConfig$ {
   export const outboundSchema = FeeHandlingConfig$outboundSchema;
   /** @deprecated use `FeeHandlingConfig$Outbound` instead. */
   export type Outbound = FeeHandlingConfig$Outbound;
+}
+
+export function feeHandlingConfigToJSON(
+  feeHandlingConfig: FeeHandlingConfig,
+): string {
+  return JSON.stringify(
+    FeeHandlingConfig$outboundSchema.parse(feeHandlingConfig),
+  );
+}
+
+export function feeHandlingConfigFromJSON(
+  jsonString: string,
+): SafeParseResult<FeeHandlingConfig, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FeeHandlingConfig$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FeeHandlingConfig' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPayableBatchItemRequest = {
@@ -66,6 +69,24 @@ export namespace GetPayableBatchItemRequest$ {
   export const outboundSchema = GetPayableBatchItemRequest$outboundSchema;
   /** @deprecated use `GetPayableBatchItemRequest$Outbound` instead. */
   export type Outbound = GetPayableBatchItemRequest$Outbound;
+}
+
+export function getPayableBatchItemRequestToJSON(
+  getPayableBatchItemRequest: GetPayableBatchItemRequest,
+): string {
+  return JSON.stringify(
+    GetPayableBatchItemRequest$outboundSchema.parse(getPayableBatchItemRequest),
+  );
+}
+
+export function getPayableBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayableBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayableBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayableBatchItemRequest' from JSON`,
+  );
 }
 
 /** @internal */
@@ -131,4 +152,24 @@ export namespace GetPayableBatchItemResponse$ {
   export const outboundSchema = GetPayableBatchItemResponse$outboundSchema;
   /** @deprecated use `GetPayableBatchItemResponse$Outbound` instead. */
   export type Outbound = GetPayableBatchItemResponse$Outbound;
+}
+
+export function getPayableBatchItemResponseToJSON(
+  getPayableBatchItemResponse: GetPayableBatchItemResponse,
+): string {
+  return JSON.stringify(
+    GetPayableBatchItemResponse$outboundSchema.parse(
+      getPayableBatchItemResponse,
+    ),
+  );
+}
+
+export function getPayableBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayableBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayableBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayableBatchItemResponse' from JSON`,
+  );
 }

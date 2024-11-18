@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPayoutSettingRequest = {
@@ -68,6 +71,24 @@ export namespace GetPayoutSettingRequest$ {
   export type Outbound = GetPayoutSettingRequest$Outbound;
 }
 
+export function getPayoutSettingRequestToJSON(
+  getPayoutSettingRequest: GetPayoutSettingRequest,
+): string {
+  return JSON.stringify(
+    GetPayoutSettingRequest$outboundSchema.parse(getPayoutSettingRequest),
+  );
+}
+
+export function getPayoutSettingRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayoutSettingRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayoutSettingRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayoutSettingRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetPayoutSettingResponse$inboundSchema: z.ZodType<
   GetPayoutSettingResponse,
@@ -129,4 +150,22 @@ export namespace GetPayoutSettingResponse$ {
   export const outboundSchema = GetPayoutSettingResponse$outboundSchema;
   /** @deprecated use `GetPayoutSettingResponse$Outbound` instead. */
   export type Outbound = GetPayoutSettingResponse$Outbound;
+}
+
+export function getPayoutSettingResponseToJSON(
+  getPayoutSettingResponse: GetPayoutSettingResponse,
+): string {
+  return JSON.stringify(
+    GetPayoutSettingResponse$outboundSchema.parse(getPayoutSettingResponse),
+  );
+}
+
+export function getPayoutSettingResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayoutSettingResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayoutSettingResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayoutSettingResponse' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const AdditionalDataUpdateRequestResourceType = {
   Collaborator: "Collaborator",
@@ -123,4 +126,24 @@ export namespace AdditionalDataUpdateRequest$ {
   export const outboundSchema = AdditionalDataUpdateRequest$outboundSchema;
   /** @deprecated use `AdditionalDataUpdateRequest$Outbound` instead. */
   export type Outbound = AdditionalDataUpdateRequest$Outbound;
+}
+
+export function additionalDataUpdateRequestToJSON(
+  additionalDataUpdateRequest: AdditionalDataUpdateRequest,
+): string {
+  return JSON.stringify(
+    AdditionalDataUpdateRequest$outboundSchema.parse(
+      additionalDataUpdateRequest,
+    ),
+  );
+}
+
+export function additionalDataUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<AdditionalDataUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => AdditionalDataUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'AdditionalDataUpdateRequest' from JSON`,
+  );
 }

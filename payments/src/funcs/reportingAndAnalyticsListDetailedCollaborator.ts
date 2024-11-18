@@ -53,6 +53,9 @@ export async function reportingAndAnalyticsListDetailedCollaborator(
   const context = {
     operationID: "listDetailedInformationCollaborators",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

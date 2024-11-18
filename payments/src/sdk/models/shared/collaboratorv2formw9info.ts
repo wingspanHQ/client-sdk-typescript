@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const CompanyStructure = {
   None: "None",
@@ -126,4 +129,22 @@ export namespace CollaboratorV2FormW9Info$ {
   export const outboundSchema = CollaboratorV2FormW9Info$outboundSchema;
   /** @deprecated use `CollaboratorV2FormW9Info$Outbound` instead. */
   export type Outbound = CollaboratorV2FormW9Info$Outbound;
+}
+
+export function collaboratorV2FormW9InfoToJSON(
+  collaboratorV2FormW9Info: CollaboratorV2FormW9Info,
+): string {
+  return JSON.stringify(
+    CollaboratorV2FormW9Info$outboundSchema.parse(collaboratorV2FormW9Info),
+  );
+}
+
+export function collaboratorV2FormW9InfoFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorV2FormW9Info, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorV2FormW9Info$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorV2FormW9Info' from JSON`,
+  );
 }

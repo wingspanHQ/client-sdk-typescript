@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type MarkUndelivered1099FormResponse = {
@@ -90,4 +93,24 @@ export namespace MarkUndelivered1099FormResponse$ {
   export const outboundSchema = MarkUndelivered1099FormResponse$outboundSchema;
   /** @deprecated use `MarkUndelivered1099FormResponse$Outbound` instead. */
   export type Outbound = MarkUndelivered1099FormResponse$Outbound;
+}
+
+export function markUndelivered1099FormResponseToJSON(
+  markUndelivered1099FormResponse: MarkUndelivered1099FormResponse,
+): string {
+  return JSON.stringify(
+    MarkUndelivered1099FormResponse$outboundSchema.parse(
+      markUndelivered1099FormResponse,
+    ),
+  );
+}
+
+export function markUndelivered1099FormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<MarkUndelivered1099FormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MarkUndelivered1099FormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MarkUndelivered1099FormResponse' from JSON`,
+  );
 }

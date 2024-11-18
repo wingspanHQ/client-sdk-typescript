@@ -53,6 +53,9 @@ export async function reportingAndAnalyticsGet(
   const context = {
     operationID: "getSummarizedReport",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

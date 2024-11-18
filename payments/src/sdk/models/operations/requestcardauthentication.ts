@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type RequestCardAuthenticationRequest = {
@@ -80,6 +83,26 @@ export namespace RequestCardAuthenticationRequest$ {
   export type Outbound = RequestCardAuthenticationRequest$Outbound;
 }
 
+export function requestCardAuthenticationRequestToJSON(
+  requestCardAuthenticationRequest: RequestCardAuthenticationRequest,
+): string {
+  return JSON.stringify(
+    RequestCardAuthenticationRequest$outboundSchema.parse(
+      requestCardAuthenticationRequest,
+    ),
+  );
+}
+
+export function requestCardAuthenticationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<RequestCardAuthenticationRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RequestCardAuthenticationRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RequestCardAuthenticationRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const RequestCardAuthenticationResponse$inboundSchema: z.ZodType<
   RequestCardAuthenticationResponse,
@@ -140,4 +163,24 @@ export namespace RequestCardAuthenticationResponse$ {
     RequestCardAuthenticationResponse$outboundSchema;
   /** @deprecated use `RequestCardAuthenticationResponse$Outbound` instead. */
   export type Outbound = RequestCardAuthenticationResponse$Outbound;
+}
+
+export function requestCardAuthenticationResponseToJSON(
+  requestCardAuthenticationResponse: RequestCardAuthenticationResponse,
+): string {
+  return JSON.stringify(
+    RequestCardAuthenticationResponse$outboundSchema.parse(
+      requestCardAuthenticationResponse,
+    ),
+  );
+}
+
+export function requestCardAuthenticationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<RequestCardAuthenticationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RequestCardAuthenticationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RequestCardAuthenticationResponse' from JSON`,
+  );
 }

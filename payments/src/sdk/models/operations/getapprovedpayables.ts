@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetApprovedPayablesResponse = {
@@ -82,4 +85,24 @@ export namespace GetApprovedPayablesResponse$ {
   export const outboundSchema = GetApprovedPayablesResponse$outboundSchema;
   /** @deprecated use `GetApprovedPayablesResponse$Outbound` instead. */
   export type Outbound = GetApprovedPayablesResponse$Outbound;
+}
+
+export function getApprovedPayablesResponseToJSON(
+  getApprovedPayablesResponse: GetApprovedPayablesResponse,
+): string {
+  return JSON.stringify(
+    GetApprovedPayablesResponse$outboundSchema.parse(
+      getApprovedPayablesResponse,
+    ),
+  );
+}
+
+export function getApprovedPayablesResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetApprovedPayablesResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetApprovedPayablesResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetApprovedPayablesResponse' from JSON`,
+  );
 }

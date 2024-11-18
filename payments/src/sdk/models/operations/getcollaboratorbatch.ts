@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCollaboratorBatchRequest = {
@@ -68,6 +71,26 @@ export namespace GetCollaboratorBatchRequest$ {
   export type Outbound = GetCollaboratorBatchRequest$Outbound;
 }
 
+export function getCollaboratorBatchRequestToJSON(
+  getCollaboratorBatchRequest: GetCollaboratorBatchRequest,
+): string {
+  return JSON.stringify(
+    GetCollaboratorBatchRequest$outboundSchema.parse(
+      getCollaboratorBatchRequest,
+    ),
+  );
+}
+
+export function getCollaboratorBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCollaboratorBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCollaboratorBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCollaboratorBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetCollaboratorBatchResponse$inboundSchema: z.ZodType<
   GetCollaboratorBatchResponse,
@@ -127,4 +150,24 @@ export namespace GetCollaboratorBatchResponse$ {
   export const outboundSchema = GetCollaboratorBatchResponse$outboundSchema;
   /** @deprecated use `GetCollaboratorBatchResponse$Outbound` instead. */
   export type Outbound = GetCollaboratorBatchResponse$Outbound;
+}
+
+export function getCollaboratorBatchResponseToJSON(
+  getCollaboratorBatchResponse: GetCollaboratorBatchResponse,
+): string {
+  return JSON.stringify(
+    GetCollaboratorBatchResponse$outboundSchema.parse(
+      getCollaboratorBatchResponse,
+    ),
+  );
+}
+
+export function getCollaboratorBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCollaboratorBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCollaboratorBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCollaboratorBatchResponse' from JSON`,
+  );
 }

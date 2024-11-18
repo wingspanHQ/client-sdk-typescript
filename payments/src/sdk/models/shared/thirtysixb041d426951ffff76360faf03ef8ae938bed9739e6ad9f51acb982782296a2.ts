@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2 =
   {
@@ -49,4 +52,31 @@ export namespace ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982
   /** @deprecated use `ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound` instead. */
   export type Outbound =
     ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$Outbound;
+}
+
+export function thirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2ToJSON(
+  thirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2:
+    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2,
+): string {
+  return JSON.stringify(
+    ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$outboundSchema
+      .parse(
+        thirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2,
+      ),
+  );
+}
+
+export function thirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'ThirtySixb041d426951ffff76360faf03ef8ae938bed9739e6ad9f51acb982782296a2' from JSON`,
+  );
 }

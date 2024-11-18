@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetDeductionCollaboratorRequest = {
@@ -68,6 +71,26 @@ export namespace GetDeductionCollaboratorRequest$ {
   export type Outbound = GetDeductionCollaboratorRequest$Outbound;
 }
 
+export function getDeductionCollaboratorRequestToJSON(
+  getDeductionCollaboratorRequest: GetDeductionCollaboratorRequest,
+): string {
+  return JSON.stringify(
+    GetDeductionCollaboratorRequest$outboundSchema.parse(
+      getDeductionCollaboratorRequest,
+    ),
+  );
+}
+
+export function getDeductionCollaboratorRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetDeductionCollaboratorRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetDeductionCollaboratorRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetDeductionCollaboratorRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetDeductionCollaboratorResponse$inboundSchema: z.ZodType<
   GetDeductionCollaboratorResponse,
@@ -127,4 +150,24 @@ export namespace GetDeductionCollaboratorResponse$ {
   export const outboundSchema = GetDeductionCollaboratorResponse$outboundSchema;
   /** @deprecated use `GetDeductionCollaboratorResponse$Outbound` instead. */
   export type Outbound = GetDeductionCollaboratorResponse$Outbound;
+}
+
+export function getDeductionCollaboratorResponseToJSON(
+  getDeductionCollaboratorResponse: GetDeductionCollaboratorResponse,
+): string {
+  return JSON.stringify(
+    GetDeductionCollaboratorResponse$outboundSchema.parse(
+      getDeductionCollaboratorResponse,
+    ),
+  );
+}
+
+export function getDeductionCollaboratorResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetDeductionCollaboratorResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetDeductionCollaboratorResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetDeductionCollaboratorResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteDebitCardRequest = {
@@ -75,6 +78,24 @@ export namespace DeleteDebitCardRequest$ {
   export type Outbound = DeleteDebitCardRequest$Outbound;
 }
 
+export function deleteDebitCardRequestToJSON(
+  deleteDebitCardRequest: DeleteDebitCardRequest,
+): string {
+  return JSON.stringify(
+    DeleteDebitCardRequest$outboundSchema.parse(deleteDebitCardRequest),
+  );
+}
+
+export function deleteDebitCardRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteDebitCardRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteDebitCardRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteDebitCardRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteDebitCardResponse$inboundSchema: z.ZodType<
   DeleteDebitCardResponse,
@@ -134,4 +155,22 @@ export namespace DeleteDebitCardResponse$ {
   export const outboundSchema = DeleteDebitCardResponse$outboundSchema;
   /** @deprecated use `DeleteDebitCardResponse$Outbound` instead. */
   export type Outbound = DeleteDebitCardResponse$Outbound;
+}
+
+export function deleteDebitCardResponseToJSON(
+  deleteDebitCardResponse: DeleteDebitCardResponse,
+): string {
+  return JSON.stringify(
+    DeleteDebitCardResponse$outboundSchema.parse(deleteDebitCardResponse),
+  );
+}
+
+export function deleteDebitCardResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteDebitCardResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteDebitCardResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteDebitCardResponse' from JSON`,
+  );
 }

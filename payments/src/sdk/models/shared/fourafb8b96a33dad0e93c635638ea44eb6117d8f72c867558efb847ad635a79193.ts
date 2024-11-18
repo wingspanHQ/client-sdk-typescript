@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193 =
   {
@@ -49,4 +52,31 @@ export namespace Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a7
   /** @deprecated use `Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193$Outbound` instead. */
   export type Outbound =
     Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193$Outbound;
+}
+
+export function fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193ToJSON(
+  fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193:
+    Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193,
+): string {
+  return JSON.stringify(
+    Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193$outboundSchema
+      .parse(
+        fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193,
+      ),
+  );
+}
+
+export function fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Fourafb8b96a33dad0e93c635638ea44eb6117d8f72c867558efb847ad635a79193' from JSON`,
+  );
 }

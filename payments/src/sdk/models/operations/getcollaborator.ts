@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCollaboratorRequest = {
@@ -68,6 +71,24 @@ export namespace GetCollaboratorRequest$ {
   export type Outbound = GetCollaboratorRequest$Outbound;
 }
 
+export function getCollaboratorRequestToJSON(
+  getCollaboratorRequest: GetCollaboratorRequest,
+): string {
+  return JSON.stringify(
+    GetCollaboratorRequest$outboundSchema.parse(getCollaboratorRequest),
+  );
+}
+
+export function getCollaboratorRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCollaboratorRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCollaboratorRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCollaboratorRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetCollaboratorResponse$inboundSchema: z.ZodType<
   GetCollaboratorResponse,
@@ -127,4 +148,22 @@ export namespace GetCollaboratorResponse$ {
   export const outboundSchema = GetCollaboratorResponse$outboundSchema;
   /** @deprecated use `GetCollaboratorResponse$Outbound` instead. */
   export type Outbound = GetCollaboratorResponse$Outbound;
+}
+
+export function getCollaboratorResponseToJSON(
+  getCollaboratorResponse: GetCollaboratorResponse,
+): string {
+  return JSON.stringify(
+    GetCollaboratorResponse$outboundSchema.parse(getCollaboratorResponse),
+  );
+}
+
+export function getCollaboratorResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCollaboratorResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCollaboratorResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCollaboratorResponse' from JSON`,
+  );
 }

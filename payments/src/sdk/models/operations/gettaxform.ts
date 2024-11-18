@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetTaxFormRequest = {
@@ -68,6 +71,24 @@ export namespace GetTaxFormRequest$ {
   export type Outbound = GetTaxFormRequest$Outbound;
 }
 
+export function getTaxFormRequestToJSON(
+  getTaxFormRequest: GetTaxFormRequest,
+): string {
+  return JSON.stringify(
+    GetTaxFormRequest$outboundSchema.parse(getTaxFormRequest),
+  );
+}
+
+export function getTaxFormRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetTaxFormRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetTaxFormRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetTaxFormRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetTaxFormResponse$inboundSchema: z.ZodType<
   GetTaxFormResponse,
@@ -127,4 +148,22 @@ export namespace GetTaxFormResponse$ {
   export const outboundSchema = GetTaxFormResponse$outboundSchema;
   /** @deprecated use `GetTaxFormResponse$Outbound` instead. */
   export type Outbound = GetTaxFormResponse$Outbound;
+}
+
+export function getTaxFormResponseToJSON(
+  getTaxFormResponse: GetTaxFormResponse,
+): string {
+  return JSON.stringify(
+    GetTaxFormResponse$outboundSchema.parse(getTaxFormResponse),
+  );
+}
+
+export function getTaxFormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetTaxFormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetTaxFormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetTaxFormResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   CollaboratorForm1099BalancesUpdateRequest,
   CollaboratorForm1099BalancesUpdateRequest$inboundSchema,
@@ -88,4 +91,31 @@ export namespace Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0b
   /** @deprecated use `Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$Outbound` instead. */
   export type Outbound =
     Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$Outbound;
+}
+
+export function ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7ToJSON(
+  ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7:
+    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7,
+): string {
+  return JSON.stringify(
+    Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$outboundSchema
+      .parse(
+        ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7,
+      ),
+  );
+}
+
+export function ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Ninetyf96495b02c2509fff131505484d46479a91b7d23ed2b0f438ca117d0bccad7' from JSON`,
+  );
 }

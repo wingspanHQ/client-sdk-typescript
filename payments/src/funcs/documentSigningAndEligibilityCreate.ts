@@ -73,6 +73,9 @@ export async function documentSigningAndEligibilityCreate(
   const context = {
     operationID: "createPaymentEligibilityRequirement",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

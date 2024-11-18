@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863 = {
   customerId?: string | null | undefined;
@@ -60,4 +63,29 @@ export namespace D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e86
   /** @deprecated use `D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound` instead. */
   export type Outbound =
     D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$Outbound;
+}
+
+export function d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863ToJSON(
+  d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863:
+    D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863,
+): string {
+  return JSON.stringify(
+    D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$outboundSchema
+      .parse(d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863),
+  );
+}
+
+export function d86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'D86c1fba5267ac3d9ce2954a6e46b70e471c0f91a44abbe94565ae50e6e9e863' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCustomFieldRequest = {
@@ -68,6 +71,24 @@ export namespace GetCustomFieldRequest$ {
   export type Outbound = GetCustomFieldRequest$Outbound;
 }
 
+export function getCustomFieldRequestToJSON(
+  getCustomFieldRequest: GetCustomFieldRequest,
+): string {
+  return JSON.stringify(
+    GetCustomFieldRequest$outboundSchema.parse(getCustomFieldRequest),
+  );
+}
+
+export function getCustomFieldRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCustomFieldRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCustomFieldRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCustomFieldRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetCustomFieldResponse$inboundSchema: z.ZodType<
   GetCustomFieldResponse,
@@ -127,4 +148,22 @@ export namespace GetCustomFieldResponse$ {
   export const outboundSchema = GetCustomFieldResponse$outboundSchema;
   /** @deprecated use `GetCustomFieldResponse$Outbound` instead. */
   export type Outbound = GetCustomFieldResponse$Outbound;
+}
+
+export function getCustomFieldResponseToJSON(
+  getCustomFieldResponse: GetCustomFieldResponse,
+): string {
+  return JSON.stringify(
+    GetCustomFieldResponse$outboundSchema.parse(getCustomFieldResponse),
+  );
+}
+
+export function getCustomFieldResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCustomFieldResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCustomFieldResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCustomFieldResponse' from JSON`,
+  );
 }

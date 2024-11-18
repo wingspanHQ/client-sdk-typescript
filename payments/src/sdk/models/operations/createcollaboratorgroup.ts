@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateCollaboratorGroupResponse = {
@@ -88,4 +91,24 @@ export namespace CreateCollaboratorGroupResponse$ {
   export const outboundSchema = CreateCollaboratorGroupResponse$outboundSchema;
   /** @deprecated use `CreateCollaboratorGroupResponse$Outbound` instead. */
   export type Outbound = CreateCollaboratorGroupResponse$Outbound;
+}
+
+export function createCollaboratorGroupResponseToJSON(
+  createCollaboratorGroupResponse: CreateCollaboratorGroupResponse,
+): string {
+  return JSON.stringify(
+    CreateCollaboratorGroupResponse$outboundSchema.parse(
+      createCollaboratorGroupResponse,
+    ),
+  );
+}
+
+export function createCollaboratorGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCollaboratorGroupResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateCollaboratorGroupResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCollaboratorGroupResponse' from JSON`,
+  );
 }

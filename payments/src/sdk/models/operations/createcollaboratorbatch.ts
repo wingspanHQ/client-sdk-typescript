@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateCollaboratorBatchResponse = {
@@ -84,4 +87,24 @@ export namespace CreateCollaboratorBatchResponse$ {
   export const outboundSchema = CreateCollaboratorBatchResponse$outboundSchema;
   /** @deprecated use `CreateCollaboratorBatchResponse$Outbound` instead. */
   export type Outbound = CreateCollaboratorBatchResponse$Outbound;
+}
+
+export function createCollaboratorBatchResponseToJSON(
+  createCollaboratorBatchResponse: CreateCollaboratorBatchResponse,
+): string {
+  return JSON.stringify(
+    CreateCollaboratorBatchResponse$outboundSchema.parse(
+      createCollaboratorBatchResponse,
+    ),
+  );
+}
+
+export function createCollaboratorBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateCollaboratorBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateCollaboratorBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateCollaboratorBatchResponse' from JSON`,
+  );
 }

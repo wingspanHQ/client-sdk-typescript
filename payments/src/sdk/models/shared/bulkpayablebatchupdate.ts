@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const BulkPayableBatchUpdateStatus = {
   Open: "Open",
@@ -79,4 +82,22 @@ export namespace BulkPayableBatchUpdate$ {
   export const outboundSchema = BulkPayableBatchUpdate$outboundSchema;
   /** @deprecated use `BulkPayableBatchUpdate$Outbound` instead. */
   export type Outbound = BulkPayableBatchUpdate$Outbound;
+}
+
+export function bulkPayableBatchUpdateToJSON(
+  bulkPayableBatchUpdate: BulkPayableBatchUpdate,
+): string {
+  return JSON.stringify(
+    BulkPayableBatchUpdate$outboundSchema.parse(bulkPayableBatchUpdate),
+  );
+}
+
+export function bulkPayableBatchUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkPayableBatchUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkPayableBatchUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkPayableBatchUpdate' from JSON`,
+  );
 }

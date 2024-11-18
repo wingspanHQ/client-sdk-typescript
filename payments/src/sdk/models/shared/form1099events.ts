@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Form1099Events = {
   acceptedByCollaboratorAt?: string | null | undefined;
@@ -70,4 +73,18 @@ export namespace Form1099Events$ {
   export const outboundSchema = Form1099Events$outboundSchema;
   /** @deprecated use `Form1099Events$Outbound` instead. */
   export type Outbound = Form1099Events$Outbound;
+}
+
+export function form1099EventsToJSON(form1099Events: Form1099Events): string {
+  return JSON.stringify(Form1099Events$outboundSchema.parse(form1099Events));
+}
+
+export function form1099EventsFromJSON(
+  jsonString: string,
+): SafeParseResult<Form1099Events, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Form1099Events$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Form1099Events' from JSON`,
+  );
 }

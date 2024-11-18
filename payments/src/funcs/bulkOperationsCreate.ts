@@ -72,6 +72,9 @@ export async function bulkOperationsCreate(
   const context = {
     operationID: "createInvoiceBatch",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

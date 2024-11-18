@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreatePaymentEligibilityRequirementResponse = {
@@ -88,4 +91,31 @@ export namespace CreatePaymentEligibilityRequirementResponse$ {
     CreatePaymentEligibilityRequirementResponse$outboundSchema;
   /** @deprecated use `CreatePaymentEligibilityRequirementResponse$Outbound` instead. */
   export type Outbound = CreatePaymentEligibilityRequirementResponse$Outbound;
+}
+
+export function createPaymentEligibilityRequirementResponseToJSON(
+  createPaymentEligibilityRequirementResponse:
+    CreatePaymentEligibilityRequirementResponse,
+): string {
+  return JSON.stringify(
+    CreatePaymentEligibilityRequirementResponse$outboundSchema.parse(
+      createPaymentEligibilityRequirementResponse,
+    ),
+  );
+}
+
+export function createPaymentEligibilityRequirementResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  CreatePaymentEligibilityRequirementResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CreatePaymentEligibilityRequirementResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'CreatePaymentEligibilityRequirementResponse' from JSON`,
+  );
 }

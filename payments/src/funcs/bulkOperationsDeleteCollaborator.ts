@@ -77,6 +77,9 @@ export async function bulkOperationsDeleteCollaborator(
   const context = {
     operationID: "deleteCollaboratorBatch",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

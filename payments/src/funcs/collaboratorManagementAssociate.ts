@@ -83,6 +83,9 @@ export async function collaboratorManagementAssociate(
   const context = {
     operationID: "associateCollaboratorWithGroup",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

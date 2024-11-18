@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c,
   Fcbf27c731b13d8b05460d28c0f87d3355c006cefcc1528c739ebdcf7cb45c8c$inboundSchema,
@@ -96,6 +99,24 @@ export namespace PayrollReportInvoiceLabels$ {
   export const outboundSchema = PayrollReportInvoiceLabels$outboundSchema;
   /** @deprecated use `PayrollReportInvoiceLabels$Outbound` instead. */
   export type Outbound = PayrollReportInvoiceLabels$Outbound;
+}
+
+export function payrollReportInvoiceLabelsToJSON(
+  payrollReportInvoiceLabels: PayrollReportInvoiceLabels,
+): string {
+  return JSON.stringify(
+    PayrollReportInvoiceLabels$outboundSchema.parse(payrollReportInvoiceLabels),
+  );
+}
+
+export function payrollReportInvoiceLabelsFromJSON(
+  jsonString: string,
+): SafeParseResult<PayrollReportInvoiceLabels, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayrollReportInvoiceLabels$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayrollReportInvoiceLabels' from JSON`,
+  );
 }
 
 /** @internal */
@@ -231,4 +252,22 @@ export namespace PayrollReportInvoice$ {
   export const outboundSchema = PayrollReportInvoice$outboundSchema;
   /** @deprecated use `PayrollReportInvoice$Outbound` instead. */
   export type Outbound = PayrollReportInvoice$Outbound;
+}
+
+export function payrollReportInvoiceToJSON(
+  payrollReportInvoice: PayrollReportInvoice,
+): string {
+  return JSON.stringify(
+    PayrollReportInvoice$outboundSchema.parse(payrollReportInvoice),
+  );
+}
+
+export function payrollReportInvoiceFromJSON(
+  jsonString: string,
+): SafeParseResult<PayrollReportInvoice, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayrollReportInvoice$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayrollReportInvoice' from JSON`,
+  );
 }

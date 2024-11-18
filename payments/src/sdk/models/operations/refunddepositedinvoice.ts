@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type RefundDepositedInvoiceRequest = {
@@ -82,6 +85,26 @@ export namespace RefundDepositedInvoiceRequest$ {
   export type Outbound = RefundDepositedInvoiceRequest$Outbound;
 }
 
+export function refundDepositedInvoiceRequestToJSON(
+  refundDepositedInvoiceRequest: RefundDepositedInvoiceRequest,
+): string {
+  return JSON.stringify(
+    RefundDepositedInvoiceRequest$outboundSchema.parse(
+      refundDepositedInvoiceRequest,
+    ),
+  );
+}
+
+export function refundDepositedInvoiceRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<RefundDepositedInvoiceRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RefundDepositedInvoiceRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RefundDepositedInvoiceRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const RefundDepositedInvoiceResponse$inboundSchema: z.ZodType<
   RefundDepositedInvoiceResponse,
@@ -141,4 +164,24 @@ export namespace RefundDepositedInvoiceResponse$ {
   export const outboundSchema = RefundDepositedInvoiceResponse$outboundSchema;
   /** @deprecated use `RefundDepositedInvoiceResponse$Outbound` instead. */
   export type Outbound = RefundDepositedInvoiceResponse$Outbound;
+}
+
+export function refundDepositedInvoiceResponseToJSON(
+  refundDepositedInvoiceResponse: RefundDepositedInvoiceResponse,
+): string {
+  return JSON.stringify(
+    RefundDepositedInvoiceResponse$outboundSchema.parse(
+      refundDepositedInvoiceResponse,
+    ),
+  );
+}
+
+export function refundDepositedInvoiceResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<RefundDepositedInvoiceResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RefundDepositedInvoiceResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RefundDepositedInvoiceResponse' from JSON`,
+  );
 }

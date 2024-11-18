@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCalculation1099BatchRequest = {
@@ -66,6 +69,26 @@ export namespace GetCalculation1099BatchRequest$ {
   export const outboundSchema = GetCalculation1099BatchRequest$outboundSchema;
   /** @deprecated use `GetCalculation1099BatchRequest$Outbound` instead. */
   export type Outbound = GetCalculation1099BatchRequest$Outbound;
+}
+
+export function getCalculation1099BatchRequestToJSON(
+  getCalculation1099BatchRequest: GetCalculation1099BatchRequest,
+): string {
+  return JSON.stringify(
+    GetCalculation1099BatchRequest$outboundSchema.parse(
+      getCalculation1099BatchRequest,
+    ),
+  );
+}
+
+export function getCalculation1099BatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCalculation1099BatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCalculation1099BatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCalculation1099BatchRequest' from JSON`,
+  );
 }
 
 /** @internal */
@@ -131,4 +154,24 @@ export namespace GetCalculation1099BatchResponse$ {
   export const outboundSchema = GetCalculation1099BatchResponse$outboundSchema;
   /** @deprecated use `GetCalculation1099BatchResponse$Outbound` instead. */
   export type Outbound = GetCalculation1099BatchResponse$Outbound;
+}
+
+export function getCalculation1099BatchResponseToJSON(
+  getCalculation1099BatchResponse: GetCalculation1099BatchResponse,
+): string {
+  return JSON.stringify(
+    GetCalculation1099BatchResponse$outboundSchema.parse(
+      getCalculation1099BatchResponse,
+    ),
+  );
+}
+
+export function getCalculation1099BatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCalculation1099BatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetCalculation1099BatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCalculation1099BatchResponse' from JSON`,
+  );
 }

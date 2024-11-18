@@ -53,6 +53,9 @@ export async function clientManagementListAssociations(
   const context = {
     operationID: "listMemberClientAssociations",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

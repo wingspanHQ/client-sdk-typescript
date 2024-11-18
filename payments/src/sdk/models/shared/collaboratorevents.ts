@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CollaboratorEvents = {
   knowYourCustomerVerifiedAt: string;
@@ -54,4 +57,22 @@ export namespace CollaboratorEvents$ {
   export const outboundSchema = CollaboratorEvents$outboundSchema;
   /** @deprecated use `CollaboratorEvents$Outbound` instead. */
   export type Outbound = CollaboratorEvents$Outbound;
+}
+
+export function collaboratorEventsToJSON(
+  collaboratorEvents: CollaboratorEvents,
+): string {
+  return JSON.stringify(
+    CollaboratorEvents$outboundSchema.parse(collaboratorEvents),
+  );
+}
+
+export function collaboratorEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorEvents' from JSON`,
+  );
 }

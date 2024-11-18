@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type TaxFormUpdateRequestData = {};
 
@@ -55,6 +58,24 @@ export namespace TaxFormUpdateRequestData$ {
   export const outboundSchema = TaxFormUpdateRequestData$outboundSchema;
   /** @deprecated use `TaxFormUpdateRequestData$Outbound` instead. */
   export type Outbound = TaxFormUpdateRequestData$Outbound;
+}
+
+export function taxFormUpdateRequestDataToJSON(
+  taxFormUpdateRequestData: TaxFormUpdateRequestData,
+): string {
+  return JSON.stringify(
+    TaxFormUpdateRequestData$outboundSchema.parse(taxFormUpdateRequestData),
+  );
+}
+
+export function taxFormUpdateRequestDataFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormUpdateRequestData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormUpdateRequestData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormUpdateRequestData' from JSON`,
+  );
 }
 
 /** @internal */
@@ -118,4 +139,22 @@ export namespace TaxFormUpdateRequest$ {
   export const outboundSchema = TaxFormUpdateRequest$outboundSchema;
   /** @deprecated use `TaxFormUpdateRequest$Outbound` instead. */
   export type Outbound = TaxFormUpdateRequest$Outbound;
+}
+
+export function taxFormUpdateRequestToJSON(
+  taxFormUpdateRequest: TaxFormUpdateRequest,
+): string {
+  return JSON.stringify(
+    TaxFormUpdateRequest$outboundSchema.parse(taxFormUpdateRequest),
+  );
+}
+
+export function taxFormUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormUpdateRequest' from JSON`,
+  );
 }

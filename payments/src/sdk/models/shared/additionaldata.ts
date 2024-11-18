@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const ResourceType = {
   Collaborator: "Collaborator",
@@ -110,4 +113,18 @@ export namespace AdditionalData$ {
   export const outboundSchema = AdditionalData$outboundSchema;
   /** @deprecated use `AdditionalData$Outbound` instead. */
   export type Outbound = AdditionalData$Outbound;
+}
+
+export function additionalDataToJSON(additionalData: AdditionalData): string {
+  return JSON.stringify(AdditionalData$outboundSchema.parse(additionalData));
+}
+
+export function additionalDataFromJSON(
+  jsonString: string,
+): SafeParseResult<AdditionalData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => AdditionalData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'AdditionalData' from JSON`,
+  );
 }

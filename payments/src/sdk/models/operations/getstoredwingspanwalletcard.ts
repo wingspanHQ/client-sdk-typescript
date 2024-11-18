@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetStoredWingspanWalletCardRequest = {
@@ -69,6 +72,27 @@ export namespace GetStoredWingspanWalletCardRequest$ {
   export type Outbound = GetStoredWingspanWalletCardRequest$Outbound;
 }
 
+export function getStoredWingspanWalletCardRequestToJSON(
+  getStoredWingspanWalletCardRequest: GetStoredWingspanWalletCardRequest,
+): string {
+  return JSON.stringify(
+    GetStoredWingspanWalletCardRequest$outboundSchema.parse(
+      getStoredWingspanWalletCardRequest,
+    ),
+  );
+}
+
+export function getStoredWingspanWalletCardRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetStoredWingspanWalletCardRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetStoredWingspanWalletCardRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetStoredWingspanWalletCardRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetStoredWingspanWalletCardResponse$inboundSchema: z.ZodType<
   GetStoredWingspanWalletCardResponse,
@@ -130,4 +154,25 @@ export namespace GetStoredWingspanWalletCardResponse$ {
     GetStoredWingspanWalletCardResponse$outboundSchema;
   /** @deprecated use `GetStoredWingspanWalletCardResponse$Outbound` instead. */
   export type Outbound = GetStoredWingspanWalletCardResponse$Outbound;
+}
+
+export function getStoredWingspanWalletCardResponseToJSON(
+  getStoredWingspanWalletCardResponse: GetStoredWingspanWalletCardResponse,
+): string {
+  return JSON.stringify(
+    GetStoredWingspanWalletCardResponse$outboundSchema.parse(
+      getStoredWingspanWalletCardResponse,
+    ),
+  );
+}
+
+export function getStoredWingspanWalletCardResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetStoredWingspanWalletCardResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetStoredWingspanWalletCardResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetStoredWingspanWalletCardResponse' from JSON`,
+  );
 }

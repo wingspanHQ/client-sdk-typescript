@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DownloadBankStatementAsPDFRequest = {
   /**
@@ -64,6 +67,26 @@ export namespace DownloadBankStatementAsPDFRequest$ {
   export type Outbound = DownloadBankStatementAsPDFRequest$Outbound;
 }
 
+export function downloadBankStatementAsPDFRequestToJSON(
+  downloadBankStatementAsPDFRequest: DownloadBankStatementAsPDFRequest,
+): string {
+  return JSON.stringify(
+    DownloadBankStatementAsPDFRequest$outboundSchema.parse(
+      downloadBankStatementAsPDFRequest,
+    ),
+  );
+}
+
+export function downloadBankStatementAsPDFRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DownloadBankStatementAsPDFRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DownloadBankStatementAsPDFRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DownloadBankStatementAsPDFRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DownloadBankStatementAsPDFResponse$inboundSchema: z.ZodType<
   DownloadBankStatementAsPDFResponse,
@@ -119,4 +142,25 @@ export namespace DownloadBankStatementAsPDFResponse$ {
     DownloadBankStatementAsPDFResponse$outboundSchema;
   /** @deprecated use `DownloadBankStatementAsPDFResponse$Outbound` instead. */
   export type Outbound = DownloadBankStatementAsPDFResponse$Outbound;
+}
+
+export function downloadBankStatementAsPDFResponseToJSON(
+  downloadBankStatementAsPDFResponse: DownloadBankStatementAsPDFResponse,
+): string {
+  return JSON.stringify(
+    DownloadBankStatementAsPDFResponse$outboundSchema.parse(
+      downloadBankStatementAsPDFResponse,
+    ),
+  );
+}
+
+export function downloadBankStatementAsPDFResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DownloadBankStatementAsPDFResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DownloadBankStatementAsPDFResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DownloadBankStatementAsPDFResponse' from JSON`,
+  );
 }

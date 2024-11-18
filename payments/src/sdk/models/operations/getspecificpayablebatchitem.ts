@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetSpecificPayableBatchItemRequest = {
@@ -76,6 +79,27 @@ export namespace GetSpecificPayableBatchItemRequest$ {
   export type Outbound = GetSpecificPayableBatchItemRequest$Outbound;
 }
 
+export function getSpecificPayableBatchItemRequestToJSON(
+  getSpecificPayableBatchItemRequest: GetSpecificPayableBatchItemRequest,
+): string {
+  return JSON.stringify(
+    GetSpecificPayableBatchItemRequest$outboundSchema.parse(
+      getSpecificPayableBatchItemRequest,
+    ),
+  );
+}
+
+export function getSpecificPayableBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetSpecificPayableBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetSpecificPayableBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetSpecificPayableBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetSpecificPayableBatchItemResponse$inboundSchema: z.ZodType<
   GetSpecificPayableBatchItemResponse,
@@ -137,4 +161,25 @@ export namespace GetSpecificPayableBatchItemResponse$ {
     GetSpecificPayableBatchItemResponse$outboundSchema;
   /** @deprecated use `GetSpecificPayableBatchItemResponse$Outbound` instead. */
   export type Outbound = GetSpecificPayableBatchItemResponse$Outbound;
+}
+
+export function getSpecificPayableBatchItemResponseToJSON(
+  getSpecificPayableBatchItemResponse: GetSpecificPayableBatchItemResponse,
+): string {
+  return JSON.stringify(
+    GetSpecificPayableBatchItemResponse$outboundSchema.parse(
+      getSpecificPayableBatchItemResponse,
+    ),
+  );
+}
+
+export function getSpecificPayableBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetSpecificPayableBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetSpecificPayableBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetSpecificPayableBatchItemResponse' from JSON`,
+  );
 }

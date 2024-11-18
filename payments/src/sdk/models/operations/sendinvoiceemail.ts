@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type SendInvoiceEmailRequest = {
@@ -76,6 +79,24 @@ export namespace SendInvoiceEmailRequest$ {
   export type Outbound = SendInvoiceEmailRequest$Outbound;
 }
 
+export function sendInvoiceEmailRequestToJSON(
+  sendInvoiceEmailRequest: SendInvoiceEmailRequest,
+): string {
+  return JSON.stringify(
+    SendInvoiceEmailRequest$outboundSchema.parse(sendInvoiceEmailRequest),
+  );
+}
+
+export function sendInvoiceEmailRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<SendInvoiceEmailRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => SendInvoiceEmailRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'SendInvoiceEmailRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const SendInvoiceEmailResponse$inboundSchema: z.ZodType<
   SendInvoiceEmailResponse,
@@ -135,4 +156,22 @@ export namespace SendInvoiceEmailResponse$ {
   export const outboundSchema = SendInvoiceEmailResponse$outboundSchema;
   /** @deprecated use `SendInvoiceEmailResponse$Outbound` instead. */
   export type Outbound = SendInvoiceEmailResponse$Outbound;
+}
+
+export function sendInvoiceEmailResponseToJSON(
+  sendInvoiceEmailResponse: SendInvoiceEmailResponse,
+): string {
+  return JSON.stringify(
+    SendInvoiceEmailResponse$outboundSchema.parse(sendInvoiceEmailResponse),
+  );
+}
+
+export function sendInvoiceEmailResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<SendInvoiceEmailResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => SendInvoiceEmailResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'SendInvoiceEmailResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteMemberClientAssociationRequest = {
@@ -70,6 +73,27 @@ export namespace DeleteMemberClientAssociationRequest$ {
   export type Outbound = DeleteMemberClientAssociationRequest$Outbound;
 }
 
+export function deleteMemberClientAssociationRequestToJSON(
+  deleteMemberClientAssociationRequest: DeleteMemberClientAssociationRequest,
+): string {
+  return JSON.stringify(
+    DeleteMemberClientAssociationRequest$outboundSchema.parse(
+      deleteMemberClientAssociationRequest,
+    ),
+  );
+}
+
+export function deleteMemberClientAssociationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteMemberClientAssociationRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteMemberClientAssociationRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteMemberClientAssociationRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteMemberClientAssociationResponse$inboundSchema: z.ZodType<
   DeleteMemberClientAssociationResponse,
@@ -131,4 +155,25 @@ export namespace DeleteMemberClientAssociationResponse$ {
     DeleteMemberClientAssociationResponse$outboundSchema;
   /** @deprecated use `DeleteMemberClientAssociationResponse$Outbound` instead. */
   export type Outbound = DeleteMemberClientAssociationResponse$Outbound;
+}
+
+export function deleteMemberClientAssociationResponseToJSON(
+  deleteMemberClientAssociationResponse: DeleteMemberClientAssociationResponse,
+): string {
+  return JSON.stringify(
+    DeleteMemberClientAssociationResponse$outboundSchema.parse(
+      deleteMemberClientAssociationResponse,
+    ),
+  );
+}
+
+export function deleteMemberClientAssociationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteMemberClientAssociationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteMemberClientAssociationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteMemberClientAssociationResponse' from JSON`,
+  );
 }

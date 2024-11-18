@@ -76,6 +76,9 @@ export async function oneThousandAndNinetyNineOperationsGetFormW9(
   const context = {
     operationID: "getFormW9PDF",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

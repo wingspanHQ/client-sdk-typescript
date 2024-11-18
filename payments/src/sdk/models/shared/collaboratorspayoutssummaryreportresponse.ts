@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a,
   B22a2532acff782df851c03041e55a58727ff8e8805b1738c7dcb4dd1dd2505a$inboundSchema,
@@ -103,6 +106,20 @@ export namespace Labels$ {
   export const outboundSchema = Labels$outboundSchema;
   /** @deprecated use `Labels$Outbound` instead. */
   export type Outbound = Labels$Outbound;
+}
+
+export function labelsToJSON(labels: Labels): string {
+  return JSON.stringify(Labels$outboundSchema.parse(labels));
+}
+
+export function labelsFromJSON(
+  jsonString: string,
+): SafeParseResult<Labels, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Labels$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Labels' from JSON`,
+  );
 }
 
 /** @internal */
@@ -243,4 +260,31 @@ export namespace CollaboratorsPayoutsSummaryReportResponse$ {
     CollaboratorsPayoutsSummaryReportResponse$outboundSchema;
   /** @deprecated use `CollaboratorsPayoutsSummaryReportResponse$Outbound` instead. */
   export type Outbound = CollaboratorsPayoutsSummaryReportResponse$Outbound;
+}
+
+export function collaboratorsPayoutsSummaryReportResponseToJSON(
+  collaboratorsPayoutsSummaryReportResponse:
+    CollaboratorsPayoutsSummaryReportResponse,
+): string {
+  return JSON.stringify(
+    CollaboratorsPayoutsSummaryReportResponse$outboundSchema.parse(
+      collaboratorsPayoutsSummaryReportResponse,
+    ),
+  );
+}
+
+export function collaboratorsPayoutsSummaryReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  CollaboratorsPayoutsSummaryReportResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      CollaboratorsPayoutsSummaryReportResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'CollaboratorsPayoutsSummaryReportResponse' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type MccResponse = {
   code: string;
@@ -46,4 +49,18 @@ export namespace MccResponse$ {
   export const outboundSchema = MccResponse$outboundSchema;
   /** @deprecated use `MccResponse$Outbound` instead. */
   export type Outbound = MccResponse$Outbound;
+}
+
+export function mccResponseToJSON(mccResponse: MccResponse): string {
+  return JSON.stringify(MccResponse$outboundSchema.parse(mccResponse));
+}
+
+export function mccResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<MccResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MccResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MccResponse' from JSON`,
+  );
 }

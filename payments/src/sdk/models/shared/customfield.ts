@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const CustomFieldResourceType = {
   Collaborator: "Collaborator",
@@ -119,4 +122,18 @@ export namespace CustomField$ {
   export const outboundSchema = CustomField$outboundSchema;
   /** @deprecated use `CustomField$Outbound` instead. */
   export type Outbound = CustomField$Outbound;
+}
+
+export function customFieldToJSON(customField: CustomField): string {
+  return JSON.stringify(CustomField$outboundSchema.parse(customField));
+}
+
+export function customFieldFromJSON(
+  jsonString: string,
+): SafeParseResult<CustomField, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CustomField$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CustomField' from JSON`,
+  );
 }

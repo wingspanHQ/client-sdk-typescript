@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListCustomFieldsResponse = {
@@ -82,4 +85,22 @@ export namespace ListCustomFieldsResponse$ {
   export const outboundSchema = ListCustomFieldsResponse$outboundSchema;
   /** @deprecated use `ListCustomFieldsResponse$Outbound` instead. */
   export type Outbound = ListCustomFieldsResponse$Outbound;
+}
+
+export function listCustomFieldsResponseToJSON(
+  listCustomFieldsResponse: ListCustomFieldsResponse,
+): string {
+  return JSON.stringify(
+    ListCustomFieldsResponse$outboundSchema.parse(listCustomFieldsResponse),
+  );
+}
+
+export function listCustomFieldsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListCustomFieldsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListCustomFieldsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListCustomFieldsResponse' from JSON`,
+  );
 }

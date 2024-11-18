@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type InvoiceNotificationPreferences = {
   sendInvoice?: boolean | null | undefined;
@@ -50,4 +53,24 @@ export namespace InvoiceNotificationPreferences$ {
   export const outboundSchema = InvoiceNotificationPreferences$outboundSchema;
   /** @deprecated use `InvoiceNotificationPreferences$Outbound` instead. */
   export type Outbound = InvoiceNotificationPreferences$Outbound;
+}
+
+export function invoiceNotificationPreferencesToJSON(
+  invoiceNotificationPreferences: InvoiceNotificationPreferences,
+): string {
+  return JSON.stringify(
+    InvoiceNotificationPreferences$outboundSchema.parse(
+      invoiceNotificationPreferences,
+    ),
+  );
+}
+
+export function invoiceNotificationPreferencesFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceNotificationPreferences, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceNotificationPreferences$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceNotificationPreferences' from JSON`,
+  );
 }

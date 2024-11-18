@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Mark1099AsUndeliveredResponse = {};
 
@@ -34,4 +37,24 @@ export namespace Mark1099AsUndeliveredResponse$ {
   export const outboundSchema = Mark1099AsUndeliveredResponse$outboundSchema;
   /** @deprecated use `Mark1099AsUndeliveredResponse$Outbound` instead. */
   export type Outbound = Mark1099AsUndeliveredResponse$Outbound;
+}
+
+export function mark1099AsUndeliveredResponseToJSON(
+  mark1099AsUndeliveredResponse: Mark1099AsUndeliveredResponse,
+): string {
+  return JSON.stringify(
+    Mark1099AsUndeliveredResponse$outboundSchema.parse(
+      mark1099AsUndeliveredResponse,
+    ),
+  );
+}
+
+export function mark1099AsUndeliveredResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Mark1099AsUndeliveredResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Mark1099AsUndeliveredResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Mark1099AsUndeliveredResponse' from JSON`,
+  );
 }

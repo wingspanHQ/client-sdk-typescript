@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FrequencyUpdate,
   FrequencyUpdate$inboundSchema,
@@ -56,4 +59,22 @@ export namespace LateFeeConfigUpdate$ {
   export const outboundSchema = LateFeeConfigUpdate$outboundSchema;
   /** @deprecated use `LateFeeConfigUpdate$Outbound` instead. */
   export type Outbound = LateFeeConfigUpdate$Outbound;
+}
+
+export function lateFeeConfigUpdateToJSON(
+  lateFeeConfigUpdate: LateFeeConfigUpdate,
+): string {
+  return JSON.stringify(
+    LateFeeConfigUpdate$outboundSchema.parse(lateFeeConfigUpdate),
+  );
+}
+
+export function lateFeeConfigUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<LateFeeConfigUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => LateFeeConfigUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LateFeeConfigUpdate' from JSON`,
+  );
 }

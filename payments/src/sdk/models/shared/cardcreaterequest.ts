@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Address,
   Address$inboundSchema,
@@ -52,4 +55,22 @@ export namespace CardCreateRequest$ {
   export const outboundSchema = CardCreateRequest$outboundSchema;
   /** @deprecated use `CardCreateRequest$Outbound` instead. */
   export type Outbound = CardCreateRequest$Outbound;
+}
+
+export function cardCreateRequestToJSON(
+  cardCreateRequest: CardCreateRequest,
+): string {
+  return JSON.stringify(
+    CardCreateRequest$outboundSchema.parse(cardCreateRequest),
+  );
+}
+
+export function cardCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CardCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CardCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CardCreateRequest' from JSON`,
+  );
 }

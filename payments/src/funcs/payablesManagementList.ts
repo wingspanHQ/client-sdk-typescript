@@ -53,6 +53,9 @@ export async function payablesManagementList(
   const context = {
     operationID: "listPayables",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

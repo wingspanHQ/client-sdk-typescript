@@ -71,6 +71,9 @@ export async function customFieldManagementCreate(
   const context = {
     operationID: "createCustomField",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

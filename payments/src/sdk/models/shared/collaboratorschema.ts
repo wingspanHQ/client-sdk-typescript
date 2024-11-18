@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c,
   B9789f45f8c8070ff38a64d80c2e4a8732ddaf329e46546474400d26f84c0f1c$inboundSchema,
@@ -254,4 +257,22 @@ export namespace CollaboratorSchema$ {
   export const outboundSchema = CollaboratorSchema$outboundSchema;
   /** @deprecated use `CollaboratorSchema$Outbound` instead. */
   export type Outbound = CollaboratorSchema$Outbound;
+}
+
+export function collaboratorSchemaToJSON(
+  collaboratorSchema: CollaboratorSchema,
+): string {
+  return JSON.stringify(
+    CollaboratorSchema$outboundSchema.parse(collaboratorSchema),
+  );
+}
+
+export function collaboratorSchemaFromJSON(
+  jsonString: string,
+): SafeParseResult<CollaboratorSchema, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CollaboratorSchema$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CollaboratorSchema' from JSON`,
+  );
 }

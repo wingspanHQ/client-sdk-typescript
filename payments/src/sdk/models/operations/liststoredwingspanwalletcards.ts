@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListStoredWingspanWalletCardsResponse = {
@@ -84,4 +87,25 @@ export namespace ListStoredWingspanWalletCardsResponse$ {
     ListStoredWingspanWalletCardsResponse$outboundSchema;
   /** @deprecated use `ListStoredWingspanWalletCardsResponse$Outbound` instead. */
   export type Outbound = ListStoredWingspanWalletCardsResponse$Outbound;
+}
+
+export function listStoredWingspanWalletCardsResponseToJSON(
+  listStoredWingspanWalletCardsResponse: ListStoredWingspanWalletCardsResponse,
+): string {
+  return JSON.stringify(
+    ListStoredWingspanWalletCardsResponse$outboundSchema.parse(
+      listStoredWingspanWalletCardsResponse,
+    ),
+  );
+}
+
+export function listStoredWingspanWalletCardsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListStoredWingspanWalletCardsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListStoredWingspanWalletCardsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListStoredWingspanWalletCardsResponse' from JSON`,
+  );
 }

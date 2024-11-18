@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateInvoiceTemplateRequest = {
@@ -86,6 +89,26 @@ export namespace UpdateInvoiceTemplateRequest$ {
   export type Outbound = UpdateInvoiceTemplateRequest$Outbound;
 }
 
+export function updateInvoiceTemplateRequestToJSON(
+  updateInvoiceTemplateRequest: UpdateInvoiceTemplateRequest,
+): string {
+  return JSON.stringify(
+    UpdateInvoiceTemplateRequest$outboundSchema.parse(
+      updateInvoiceTemplateRequest,
+    ),
+  );
+}
+
+export function updateInvoiceTemplateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateInvoiceTemplateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateInvoiceTemplateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateInvoiceTemplateRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateInvoiceTemplateResponse$inboundSchema: z.ZodType<
   UpdateInvoiceTemplateResponse,
@@ -145,4 +168,24 @@ export namespace UpdateInvoiceTemplateResponse$ {
   export const outboundSchema = UpdateInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `UpdateInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = UpdateInvoiceTemplateResponse$Outbound;
+}
+
+export function updateInvoiceTemplateResponseToJSON(
+  updateInvoiceTemplateResponse: UpdateInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    UpdateInvoiceTemplateResponse$outboundSchema.parse(
+      updateInvoiceTemplateResponse,
+    ),
+  );
+}
+
+export function updateInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateInvoiceTemplateResponse' from JSON`,
+  );
 }

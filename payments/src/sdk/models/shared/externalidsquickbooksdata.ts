@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ExternalIdsQuickbooksData = {
   doCreate?: boolean | null | undefined;
@@ -62,4 +65,22 @@ export namespace ExternalIdsQuickbooksData$ {
   export const outboundSchema = ExternalIdsQuickbooksData$outboundSchema;
   /** @deprecated use `ExternalIdsQuickbooksData$Outbound` instead. */
   export type Outbound = ExternalIdsQuickbooksData$Outbound;
+}
+
+export function externalIdsQuickbooksDataToJSON(
+  externalIdsQuickbooksData: ExternalIdsQuickbooksData,
+): string {
+  return JSON.stringify(
+    ExternalIdsQuickbooksData$outboundSchema.parse(externalIdsQuickbooksData),
+  );
+}
+
+export function externalIdsQuickbooksDataFromJSON(
+  jsonString: string,
+): SafeParseResult<ExternalIdsQuickbooksData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ExternalIdsQuickbooksData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ExternalIdsQuickbooksData' from JSON`,
+  );
 }

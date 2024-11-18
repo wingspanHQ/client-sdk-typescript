@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type BankStatement = {
   accountId: string;
@@ -54,4 +57,18 @@ export namespace BankStatement$ {
   export const outboundSchema = BankStatement$outboundSchema;
   /** @deprecated use `BankStatement$Outbound` instead. */
   export type Outbound = BankStatement$Outbound;
+}
+
+export function bankStatementToJSON(bankStatement: BankStatement): string {
+  return JSON.stringify(BankStatement$outboundSchema.parse(bankStatement));
+}
+
+export function bankStatementFromJSON(
+  jsonString: string,
+): SafeParseResult<BankStatement, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BankStatement$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BankStatement' from JSON`,
+  );
 }

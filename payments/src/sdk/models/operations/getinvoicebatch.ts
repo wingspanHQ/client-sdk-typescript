@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetInvoiceBatchRequest = {
@@ -68,6 +71,24 @@ export namespace GetInvoiceBatchRequest$ {
   export type Outbound = GetInvoiceBatchRequest$Outbound;
 }
 
+export function getInvoiceBatchRequestToJSON(
+  getInvoiceBatchRequest: GetInvoiceBatchRequest,
+): string {
+  return JSON.stringify(
+    GetInvoiceBatchRequest$outboundSchema.parse(getInvoiceBatchRequest),
+  );
+}
+
+export function getInvoiceBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetInvoiceBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetInvoiceBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetInvoiceBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetInvoiceBatchResponse$inboundSchema: z.ZodType<
   GetInvoiceBatchResponse,
@@ -127,4 +148,22 @@ export namespace GetInvoiceBatchResponse$ {
   export const outboundSchema = GetInvoiceBatchResponse$outboundSchema;
   /** @deprecated use `GetInvoiceBatchResponse$Outbound` instead. */
   export type Outbound = GetInvoiceBatchResponse$Outbound;
+}
+
+export function getInvoiceBatchResponseToJSON(
+  getInvoiceBatchResponse: GetInvoiceBatchResponse,
+): string {
+  return JSON.stringify(
+    GetInvoiceBatchResponse$outboundSchema.parse(getInvoiceBatchResponse),
+  );
+}
+
+export function getInvoiceBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetInvoiceBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetInvoiceBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetInvoiceBatchResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteStoredWingspanWalletCardRequest = {
@@ -70,6 +73,27 @@ export namespace DeleteStoredWingspanWalletCardRequest$ {
   export type Outbound = DeleteStoredWingspanWalletCardRequest$Outbound;
 }
 
+export function deleteStoredWingspanWalletCardRequestToJSON(
+  deleteStoredWingspanWalletCardRequest: DeleteStoredWingspanWalletCardRequest,
+): string {
+  return JSON.stringify(
+    DeleteStoredWingspanWalletCardRequest$outboundSchema.parse(
+      deleteStoredWingspanWalletCardRequest,
+    ),
+  );
+}
+
+export function deleteStoredWingspanWalletCardRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteStoredWingspanWalletCardRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteStoredWingspanWalletCardRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteStoredWingspanWalletCardRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteStoredWingspanWalletCardResponse$inboundSchema: z.ZodType<
   DeleteStoredWingspanWalletCardResponse,
@@ -131,4 +155,26 @@ export namespace DeleteStoredWingspanWalletCardResponse$ {
     DeleteStoredWingspanWalletCardResponse$outboundSchema;
   /** @deprecated use `DeleteStoredWingspanWalletCardResponse$Outbound` instead. */
   export type Outbound = DeleteStoredWingspanWalletCardResponse$Outbound;
+}
+
+export function deleteStoredWingspanWalletCardResponseToJSON(
+  deleteStoredWingspanWalletCardResponse:
+    DeleteStoredWingspanWalletCardResponse,
+): string {
+  return JSON.stringify(
+    DeleteStoredWingspanWalletCardResponse$outboundSchema.parse(
+      deleteStoredWingspanWalletCardResponse,
+    ),
+  );
+}
+
+export function deleteStoredWingspanWalletCardResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteStoredWingspanWalletCardResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteStoredWingspanWalletCardResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteStoredWingspanWalletCardResponse' from JSON`,
+  );
 }

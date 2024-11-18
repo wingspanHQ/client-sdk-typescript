@@ -71,6 +71,9 @@ export async function oneThousandAndNinetyNineOperationsRemail(
   const context = {
     operationID: "remail1099Form",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

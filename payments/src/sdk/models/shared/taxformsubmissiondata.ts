@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   TaxFormW9Info,
   TaxFormW9Info$inboundSchema,
@@ -106,4 +109,22 @@ export namespace TaxFormSubmissionData$ {
   export const outboundSchema = TaxFormSubmissionData$outboundSchema;
   /** @deprecated use `TaxFormSubmissionData$Outbound` instead. */
   export type Outbound = TaxFormSubmissionData$Outbound;
+}
+
+export function taxFormSubmissionDataToJSON(
+  taxFormSubmissionData: TaxFormSubmissionData,
+): string {
+  return JSON.stringify(
+    TaxFormSubmissionData$outboundSchema.parse(taxFormSubmissionData),
+  );
+}
+
+export function taxFormSubmissionDataFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormSubmissionData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormSubmissionData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormSubmissionData' from JSON`,
+  );
 }

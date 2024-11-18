@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type PaymentEligibility = {
   field: string;
@@ -46,4 +49,22 @@ export namespace PaymentEligibility$ {
   export const outboundSchema = PaymentEligibility$outboundSchema;
   /** @deprecated use `PaymentEligibility$Outbound` instead. */
   export type Outbound = PaymentEligibility$Outbound;
+}
+
+export function paymentEligibilityToJSON(
+  paymentEligibility: PaymentEligibility,
+): string {
+  return JSON.stringify(
+    PaymentEligibility$outboundSchema.parse(paymentEligibility),
+  );
+}
+
+export function paymentEligibilityFromJSON(
+  jsonString: string,
+): SafeParseResult<PaymentEligibility, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PaymentEligibility$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PaymentEligibility' from JSON`,
+  );
 }

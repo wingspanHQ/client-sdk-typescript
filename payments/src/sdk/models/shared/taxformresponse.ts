@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   PayerTaxFormResponse,
   PayerTaxFormResponse$inboundSchema,
@@ -50,4 +53,20 @@ export namespace TaxFormResponse$ {
   export const outboundSchema = TaxFormResponse$outboundSchema;
   /** @deprecated use `TaxFormResponse$Outbound` instead. */
   export type Outbound = TaxFormResponse$Outbound;
+}
+
+export function taxFormResponseToJSON(
+  taxFormResponse: TaxFormResponse,
+): string {
+  return JSON.stringify(TaxFormResponse$outboundSchema.parse(taxFormResponse));
+}
+
+export function taxFormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormResponse' from JSON`,
+  );
 }

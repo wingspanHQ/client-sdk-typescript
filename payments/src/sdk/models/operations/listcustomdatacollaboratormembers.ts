@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListCustomDataCollaboratorMembersResponse = {
@@ -85,4 +88,31 @@ export namespace ListCustomDataCollaboratorMembersResponse$ {
     ListCustomDataCollaboratorMembersResponse$outboundSchema;
   /** @deprecated use `ListCustomDataCollaboratorMembersResponse$Outbound` instead. */
   export type Outbound = ListCustomDataCollaboratorMembersResponse$Outbound;
+}
+
+export function listCustomDataCollaboratorMembersResponseToJSON(
+  listCustomDataCollaboratorMembersResponse:
+    ListCustomDataCollaboratorMembersResponse,
+): string {
+  return JSON.stringify(
+    ListCustomDataCollaboratorMembersResponse$outboundSchema.parse(
+      listCustomDataCollaboratorMembersResponse,
+    ),
+  );
+}
+
+export function listCustomDataCollaboratorMembersResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  ListCustomDataCollaboratorMembersResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListCustomDataCollaboratorMembersResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'ListCustomDataCollaboratorMembersResponse' from JSON`,
+  );
 }

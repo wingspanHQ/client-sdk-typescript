@@ -53,6 +53,9 @@ export async function invoiceManagementListTemplates(
   const context = {
     operationID: "listInvoiceTemplates",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ExecuteApprovedPayrollTransactionResponse = {
@@ -87,4 +90,31 @@ export namespace ExecuteApprovedPayrollTransactionResponse$ {
     ExecuteApprovedPayrollTransactionResponse$outboundSchema;
   /** @deprecated use `ExecuteApprovedPayrollTransactionResponse$Outbound` instead. */
   export type Outbound = ExecuteApprovedPayrollTransactionResponse$Outbound;
+}
+
+export function executeApprovedPayrollTransactionResponseToJSON(
+  executeApprovedPayrollTransactionResponse:
+    ExecuteApprovedPayrollTransactionResponse,
+): string {
+  return JSON.stringify(
+    ExecuteApprovedPayrollTransactionResponse$outboundSchema.parse(
+      executeApprovedPayrollTransactionResponse,
+    ),
+  );
+}
+
+export function executeApprovedPayrollTransactionResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  ExecuteApprovedPayrollTransactionResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ExecuteApprovedPayrollTransactionResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'ExecuteApprovedPayrollTransactionResponse' from JSON`,
+  );
 }

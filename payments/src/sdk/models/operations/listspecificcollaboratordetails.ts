@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListSpecificCollaboratorDetailsRequest = {
@@ -70,6 +73,28 @@ export namespace ListSpecificCollaboratorDetailsRequest$ {
   export type Outbound = ListSpecificCollaboratorDetailsRequest$Outbound;
 }
 
+export function listSpecificCollaboratorDetailsRequestToJSON(
+  listSpecificCollaboratorDetailsRequest:
+    ListSpecificCollaboratorDetailsRequest,
+): string {
+  return JSON.stringify(
+    ListSpecificCollaboratorDetailsRequest$outboundSchema.parse(
+      listSpecificCollaboratorDetailsRequest,
+    ),
+  );
+}
+
+export function listSpecificCollaboratorDetailsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ListSpecificCollaboratorDetailsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListSpecificCollaboratorDetailsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListSpecificCollaboratorDetailsRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ListSpecificCollaboratorDetailsResponse$inboundSchema: z.ZodType<
   ListSpecificCollaboratorDetailsResponse,
@@ -131,4 +156,31 @@ export namespace ListSpecificCollaboratorDetailsResponse$ {
     ListSpecificCollaboratorDetailsResponse$outboundSchema;
   /** @deprecated use `ListSpecificCollaboratorDetailsResponse$Outbound` instead. */
   export type Outbound = ListSpecificCollaboratorDetailsResponse$Outbound;
+}
+
+export function listSpecificCollaboratorDetailsResponseToJSON(
+  listSpecificCollaboratorDetailsResponse:
+    ListSpecificCollaboratorDetailsResponse,
+): string {
+  return JSON.stringify(
+    ListSpecificCollaboratorDetailsResponse$outboundSchema.parse(
+      listSpecificCollaboratorDetailsResponse,
+    ),
+  );
+}
+
+export function listSpecificCollaboratorDetailsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  ListSpecificCollaboratorDetailsResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListSpecificCollaboratorDetailsResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'ListSpecificCollaboratorDetailsResponse' from JSON`,
+  );
 }

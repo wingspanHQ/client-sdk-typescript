@@ -80,6 +80,9 @@ export async function bankingManagementDelete(
   const context = {
     operationID: "deleteDebitCard",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

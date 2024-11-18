@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CompanyLinks = {
   instagramUrl?: string | null | undefined;
@@ -58,4 +61,18 @@ export namespace CompanyLinks$ {
   export const outboundSchema = CompanyLinks$outboundSchema;
   /** @deprecated use `CompanyLinks$Outbound` instead. */
   export type Outbound = CompanyLinks$Outbound;
+}
+
+export function companyLinksToJSON(companyLinks: CompanyLinks): string {
+  return JSON.stringify(CompanyLinks$outboundSchema.parse(companyLinks));
+}
+
+export function companyLinksFromJSON(
+  jsonString: string,
+): SafeParseResult<CompanyLinks, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CompanyLinks$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CompanyLinks' from JSON`,
+  );
 }

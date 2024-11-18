@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type TaxFormEvents = {
   createdAt?: string | null | undefined;
@@ -46,4 +49,18 @@ export namespace TaxFormEvents$ {
   export const outboundSchema = TaxFormEvents$outboundSchema;
   /** @deprecated use `TaxFormEvents$Outbound` instead. */
   export type Outbound = TaxFormEvents$Outbound;
+}
+
+export function taxFormEventsToJSON(taxFormEvents: TaxFormEvents): string {
+  return JSON.stringify(TaxFormEvents$outboundSchema.parse(taxFormEvents));
+}
+
+export function taxFormEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormEvents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormEvents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormEvents' from JSON`,
+  );
 }

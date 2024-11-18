@@ -53,6 +53,9 @@ export async function oneThousandAndNinetyNineOperationsListTaxForm(
   const context = {
     operationID: "list1099TaxForms",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Ping = {
   code: number;
@@ -44,4 +47,18 @@ export namespace Ping$ {
   export const outboundSchema = Ping$outboundSchema;
   /** @deprecated use `Ping$Outbound` instead. */
   export type Outbound = Ping$Outbound;
+}
+
+export function pingToJSON(ping: Ping): string {
+  return JSON.stringify(Ping$outboundSchema.parse(ping));
+}
+
+export function pingFromJSON(
+  jsonString: string,
+): SafeParseResult<Ping, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Ping$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Ping' from JSON`,
+  );
 }

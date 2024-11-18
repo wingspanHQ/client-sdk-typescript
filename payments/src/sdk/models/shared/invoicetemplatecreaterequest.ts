@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Frequency,
   Frequency$inboundSchema,
@@ -121,4 +124,24 @@ export namespace InvoiceTemplateCreateRequest$ {
   export const outboundSchema = InvoiceTemplateCreateRequest$outboundSchema;
   /** @deprecated use `InvoiceTemplateCreateRequest$Outbound` instead. */
   export type Outbound = InvoiceTemplateCreateRequest$Outbound;
+}
+
+export function invoiceTemplateCreateRequestToJSON(
+  invoiceTemplateCreateRequest: InvoiceTemplateCreateRequest,
+): string {
+  return JSON.stringify(
+    InvoiceTemplateCreateRequest$outboundSchema.parse(
+      invoiceTemplateCreateRequest,
+    ),
+  );
+}
+
+export function invoiceTemplateCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceTemplateCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceTemplateCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceTemplateCreateRequest' from JSON`,
+  );
 }

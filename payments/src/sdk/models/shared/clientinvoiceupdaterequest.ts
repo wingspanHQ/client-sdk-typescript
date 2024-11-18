@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -88,4 +91,22 @@ export namespace ClientInvoiceUpdateRequest$ {
   export const outboundSchema = ClientInvoiceUpdateRequest$outboundSchema;
   /** @deprecated use `ClientInvoiceUpdateRequest$Outbound` instead. */
   export type Outbound = ClientInvoiceUpdateRequest$Outbound;
+}
+
+export function clientInvoiceUpdateRequestToJSON(
+  clientInvoiceUpdateRequest: ClientInvoiceUpdateRequest,
+): string {
+  return JSON.stringify(
+    ClientInvoiceUpdateRequest$outboundSchema.parse(clientInvoiceUpdateRequest),
+  );
+}
+
+export function clientInvoiceUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientInvoiceUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ClientInvoiceUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientInvoiceUpdateRequest' from JSON`,
+  );
 }

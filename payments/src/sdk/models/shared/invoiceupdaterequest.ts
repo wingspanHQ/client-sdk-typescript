@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -167,6 +170,24 @@ export namespace InvoiceUpdateRequestClient$ {
   export type Outbound = InvoiceUpdateRequestClient$Outbound;
 }
 
+export function invoiceUpdateRequestClientToJSON(
+  invoiceUpdateRequestClient: InvoiceUpdateRequestClient,
+): string {
+  return JSON.stringify(
+    InvoiceUpdateRequestClient$outboundSchema.parse(invoiceUpdateRequestClient),
+  );
+}
+
+export function invoiceUpdateRequestClientFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceUpdateRequestClient, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceUpdateRequestClient$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceUpdateRequestClient' from JSON`,
+  );
+}
+
 /** @internal */
 export const InvoiceUpdateRequestMember$inboundSchema: z.ZodType<
   InvoiceUpdateRequestMember,
@@ -195,6 +216,24 @@ export namespace InvoiceUpdateRequestMember$ {
   export const outboundSchema = InvoiceUpdateRequestMember$outboundSchema;
   /** @deprecated use `InvoiceUpdateRequestMember$Outbound` instead. */
   export type Outbound = InvoiceUpdateRequestMember$Outbound;
+}
+
+export function invoiceUpdateRequestMemberToJSON(
+  invoiceUpdateRequestMember: InvoiceUpdateRequestMember,
+): string {
+  return JSON.stringify(
+    InvoiceUpdateRequestMember$outboundSchema.parse(invoiceUpdateRequestMember),
+  );
+}
+
+export function invoiceUpdateRequestMemberFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceUpdateRequestMember, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceUpdateRequestMember$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceUpdateRequestMember' from JSON`,
+  );
 }
 
 /** @internal */
@@ -338,4 +377,22 @@ export namespace InvoiceUpdateRequest$ {
   export const outboundSchema = InvoiceUpdateRequest$outboundSchema;
   /** @deprecated use `InvoiceUpdateRequest$Outbound` instead. */
   export type Outbound = InvoiceUpdateRequest$Outbound;
+}
+
+export function invoiceUpdateRequestToJSON(
+  invoiceUpdateRequest: InvoiceUpdateRequest,
+): string {
+  return JSON.stringify(
+    InvoiceUpdateRequest$outboundSchema.parse(invoiceUpdateRequest),
+  );
+}
+
+export function invoiceUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceUpdateRequest' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type BulkBatchCreate = {
   labels?: { [k: string]: string } | null | undefined;
@@ -42,4 +45,20 @@ export namespace BulkBatchCreate$ {
   export const outboundSchema = BulkBatchCreate$outboundSchema;
   /** @deprecated use `BulkBatchCreate$Outbound` instead. */
   export type Outbound = BulkBatchCreate$Outbound;
+}
+
+export function bulkBatchCreateToJSON(
+  bulkBatchCreate: BulkBatchCreate,
+): string {
+  return JSON.stringify(BulkBatchCreate$outboundSchema.parse(bulkBatchCreate));
+}
+
+export function bulkBatchCreateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkBatchCreate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkBatchCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkBatchCreate' from JSON`,
+  );
 }

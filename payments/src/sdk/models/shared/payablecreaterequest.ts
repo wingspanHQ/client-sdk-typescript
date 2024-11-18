@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -163,6 +166,24 @@ export namespace PayableCreateRequestClient$ {
   export type Outbound = PayableCreateRequestClient$Outbound;
 }
 
+export function payableCreateRequestClientToJSON(
+  payableCreateRequestClient: PayableCreateRequestClient,
+): string {
+  return JSON.stringify(
+    PayableCreateRequestClient$outboundSchema.parse(payableCreateRequestClient),
+  );
+}
+
+export function payableCreateRequestClientFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableCreateRequestClient, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableCreateRequestClient$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableCreateRequestClient' from JSON`,
+  );
+}
+
 /** @internal */
 export const PayableCreateRequestCurrency$inboundSchema: z.ZodNativeEnum<
   typeof PayableCreateRequestCurrency
@@ -212,6 +233,24 @@ export namespace PayableCreateRequestMember$ {
   export const outboundSchema = PayableCreateRequestMember$outboundSchema;
   /** @deprecated use `PayableCreateRequestMember$Outbound` instead. */
   export type Outbound = PayableCreateRequestMember$Outbound;
+}
+
+export function payableCreateRequestMemberToJSON(
+  payableCreateRequestMember: PayableCreateRequestMember,
+): string {
+  return JSON.stringify(
+    PayableCreateRequestMember$outboundSchema.parse(payableCreateRequestMember),
+  );
+}
+
+export function payableCreateRequestMemberFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableCreateRequestMember, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableCreateRequestMember$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableCreateRequestMember' from JSON`,
+  );
 }
 
 /** @internal */
@@ -346,4 +385,22 @@ export namespace PayableCreateRequest$ {
   export const outboundSchema = PayableCreateRequest$outboundSchema;
   /** @deprecated use `PayableCreateRequest$Outbound` instead. */
   export type Outbound = PayableCreateRequest$Outbound;
+}
+
+export function payableCreateRequestToJSON(
+  payableCreateRequest: PayableCreateRequest,
+): string {
+  return JSON.stringify(
+    PayableCreateRequest$outboundSchema.parse(payableCreateRequest),
+  );
+}
+
+export function payableCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<PayableCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayableCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayableCreateRequest' from JSON`,
+  );
 }

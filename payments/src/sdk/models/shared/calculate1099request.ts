@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Calculate1099Request = {
   memberClientId: string;
@@ -46,4 +49,22 @@ export namespace Calculate1099Request$ {
   export const outboundSchema = Calculate1099Request$outboundSchema;
   /** @deprecated use `Calculate1099Request$Outbound` instead. */
   export type Outbound = Calculate1099Request$Outbound;
+}
+
+export function calculate1099RequestToJSON(
+  calculate1099Request: Calculate1099Request,
+): string {
+  return JSON.stringify(
+    Calculate1099Request$outboundSchema.parse(calculate1099Request),
+  );
+}
+
+export function calculate1099RequestFromJSON(
+  jsonString: string,
+): SafeParseResult<Calculate1099Request, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Calculate1099Request$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Calculate1099Request' from JSON`,
+  );
 }

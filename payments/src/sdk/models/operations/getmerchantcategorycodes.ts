@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetMerchantCategoryCodesResponse = {
@@ -82,4 +85,24 @@ export namespace GetMerchantCategoryCodesResponse$ {
   export const outboundSchema = GetMerchantCategoryCodesResponse$outboundSchema;
   /** @deprecated use `GetMerchantCategoryCodesResponse$Outbound` instead. */
   export type Outbound = GetMerchantCategoryCodesResponse$Outbound;
+}
+
+export function getMerchantCategoryCodesResponseToJSON(
+  getMerchantCategoryCodesResponse: GetMerchantCategoryCodesResponse,
+): string {
+  return JSON.stringify(
+    GetMerchantCategoryCodesResponse$outboundSchema.parse(
+      getMerchantCategoryCodesResponse,
+    ),
+  );
+}
+
+export function getMerchantCategoryCodesResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetMerchantCategoryCodesResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetMerchantCategoryCodesResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetMerchantCategoryCodesResponse' from JSON`,
+  );
 }

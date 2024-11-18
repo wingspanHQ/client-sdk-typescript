@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Fee,
   Fee$inboundSchema,
@@ -46,4 +49,18 @@ export namespace Fees$ {
   export const outboundSchema = Fees$outboundSchema;
   /** @deprecated use `Fees$Outbound` instead. */
   export type Outbound = Fees$Outbound;
+}
+
+export function feesToJSON(fees: Fees): string {
+  return JSON.stringify(Fees$outboundSchema.parse(fees));
+}
+
+export function feesFromJSON(
+  jsonString: string,
+): SafeParseResult<Fees, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Fees$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Fees' from JSON`,
+  );
 }

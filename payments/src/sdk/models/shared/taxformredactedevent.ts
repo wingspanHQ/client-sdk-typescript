@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   RedactedMember,
   RedactedMember$inboundSchema,
@@ -96,6 +99,24 @@ export namespace TaxFormRedactedEventData$ {
   export type Outbound = TaxFormRedactedEventData$Outbound;
 }
 
+export function taxFormRedactedEventDataToJSON(
+  taxFormRedactedEventData: TaxFormRedactedEventData,
+): string {
+  return JSON.stringify(
+    TaxFormRedactedEventData$outboundSchema.parse(taxFormRedactedEventData),
+  );
+}
+
+export function taxFormRedactedEventDataFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormRedactedEventData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormRedactedEventData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormRedactedEventData' from JSON`,
+  );
+}
+
 /** @internal */
 export const EventType$inboundSchema: z.ZodNativeEnum<typeof EventType> = z
   .nativeEnum(EventType);
@@ -143,6 +164,20 @@ export namespace PreviousData$ {
   export const outboundSchema = PreviousData$outboundSchema;
   /** @deprecated use `PreviousData$Outbound` instead. */
   export type Outbound = PreviousData$Outbound;
+}
+
+export function previousDataToJSON(previousData: PreviousData): string {
+  return JSON.stringify(PreviousData$outboundSchema.parse(previousData));
+}
+
+export function previousDataFromJSON(
+  jsonString: string,
+): SafeParseResult<PreviousData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PreviousData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PreviousData' from JSON`,
+  );
 }
 
 /** @internal */
@@ -245,4 +280,22 @@ export namespace TaxFormRedactedEvent$ {
   export const outboundSchema = TaxFormRedactedEvent$outboundSchema;
   /** @deprecated use `TaxFormRedactedEvent$Outbound` instead. */
   export type Outbound = TaxFormRedactedEvent$Outbound;
+}
+
+export function taxFormRedactedEventToJSON(
+  taxFormRedactedEvent: TaxFormRedactedEvent,
+): string {
+  return JSON.stringify(
+    TaxFormRedactedEvent$outboundSchema.parse(taxFormRedactedEvent),
+  );
+}
+
+export function taxFormRedactedEventFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormRedactedEvent, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormRedactedEvent$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormRedactedEvent' from JSON`,
+  );
 }

@@ -77,6 +77,9 @@ export async function bankingManagementDownload(
   const context = {
     operationID: "downloadBankStatementAsPDF",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

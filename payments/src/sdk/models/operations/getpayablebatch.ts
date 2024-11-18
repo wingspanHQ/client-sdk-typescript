@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPayableBatchRequest = {
@@ -68,6 +71,24 @@ export namespace GetPayableBatchRequest$ {
   export type Outbound = GetPayableBatchRequest$Outbound;
 }
 
+export function getPayableBatchRequestToJSON(
+  getPayableBatchRequest: GetPayableBatchRequest,
+): string {
+  return JSON.stringify(
+    GetPayableBatchRequest$outboundSchema.parse(getPayableBatchRequest),
+  );
+}
+
+export function getPayableBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayableBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayableBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayableBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetPayableBatchResponse$inboundSchema: z.ZodType<
   GetPayableBatchResponse,
@@ -127,4 +148,22 @@ export namespace GetPayableBatchResponse$ {
   export const outboundSchema = GetPayableBatchResponse$outboundSchema;
   /** @deprecated use `GetPayableBatchResponse$Outbound` instead. */
   export type Outbound = GetPayableBatchResponse$Outbound;
+}
+
+export function getPayableBatchResponseToJSON(
+  getPayableBatchResponse: GetPayableBatchResponse,
+): string {
+  return JSON.stringify(
+    GetPayableBatchResponse$outboundSchema.parse(getPayableBatchResponse),
+  );
+}
+
+export function getPayableBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayableBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayableBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayableBatchResponse' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetClientInvoiceTemplateRequest = {
@@ -68,6 +71,26 @@ export namespace GetClientInvoiceTemplateRequest$ {
   export type Outbound = GetClientInvoiceTemplateRequest$Outbound;
 }
 
+export function getClientInvoiceTemplateRequestToJSON(
+  getClientInvoiceTemplateRequest: GetClientInvoiceTemplateRequest,
+): string {
+  return JSON.stringify(
+    GetClientInvoiceTemplateRequest$outboundSchema.parse(
+      getClientInvoiceTemplateRequest,
+    ),
+  );
+}
+
+export function getClientInvoiceTemplateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientInvoiceTemplateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientInvoiceTemplateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientInvoiceTemplateRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetClientInvoiceTemplateResponse$inboundSchema: z.ZodType<
   GetClientInvoiceTemplateResponse,
@@ -127,4 +150,24 @@ export namespace GetClientInvoiceTemplateResponse$ {
   export const outboundSchema = GetClientInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `GetClientInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = GetClientInvoiceTemplateResponse$Outbound;
+}
+
+export function getClientInvoiceTemplateResponseToJSON(
+  getClientInvoiceTemplateResponse: GetClientInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    GetClientInvoiceTemplateResponse$outboundSchema.parse(
+      getClientInvoiceTemplateResponse,
+    ),
+  );
+}
+
+export function getClientInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientInvoiceTemplateResponse' from JSON`,
+  );
 }

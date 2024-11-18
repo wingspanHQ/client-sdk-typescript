@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const PayoutPreferences = {
   Standard: "Standard",
@@ -147,4 +150,18 @@ export namespace MemberOptions$ {
   export const outboundSchema = MemberOptions$outboundSchema;
   /** @deprecated use `MemberOptions$Outbound` instead. */
   export type Outbound = MemberOptions$Outbound;
+}
+
+export function memberOptionsToJSON(memberOptions: MemberOptions): string {
+  return JSON.stringify(MemberOptions$outboundSchema.parse(memberOptions));
+}
+
+export function memberOptionsFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberOptions, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberOptions$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberOptions' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DocumentFiles = {
   client?: string | null | undefined;
@@ -46,4 +49,18 @@ export namespace DocumentFiles$ {
   export const outboundSchema = DocumentFiles$outboundSchema;
   /** @deprecated use `DocumentFiles$Outbound` instead. */
   export type Outbound = DocumentFiles$Outbound;
+}
+
+export function documentFilesToJSON(documentFiles: DocumentFiles): string {
+  return JSON.stringify(DocumentFiles$outboundSchema.parse(documentFiles));
+}
+
+export function documentFilesFromJSON(
+  jsonString: string,
+): SafeParseResult<DocumentFiles, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DocumentFiles$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DocumentFiles' from JSON`,
+  );
 }

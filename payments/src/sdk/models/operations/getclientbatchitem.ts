@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetClientBatchItemRequest = {
@@ -75,6 +78,24 @@ export namespace GetClientBatchItemRequest$ {
   export type Outbound = GetClientBatchItemRequest$Outbound;
 }
 
+export function getClientBatchItemRequestToJSON(
+  getClientBatchItemRequest: GetClientBatchItemRequest,
+): string {
+  return JSON.stringify(
+    GetClientBatchItemRequest$outboundSchema.parse(getClientBatchItemRequest),
+  );
+}
+
+export function getClientBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetClientBatchItemResponse$inboundSchema: z.ZodType<
   GetClientBatchItemResponse,
@@ -134,4 +155,22 @@ export namespace GetClientBatchItemResponse$ {
   export const outboundSchema = GetClientBatchItemResponse$outboundSchema;
   /** @deprecated use `GetClientBatchItemResponse$Outbound` instead. */
   export type Outbound = GetClientBatchItemResponse$Outbound;
+}
+
+export function getClientBatchItemResponseToJSON(
+  getClientBatchItemResponse: GetClientBatchItemResponse,
+): string {
+  return JSON.stringify(
+    GetClientBatchItemResponse$outboundSchema.parse(getClientBatchItemResponse),
+  );
+}
+
+export function getClientBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetClientBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetClientBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetClientBatchItemResponse' from JSON`,
+  );
 }

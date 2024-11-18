@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const MeansType = {
   Card: "Card",
@@ -85,4 +88,18 @@ export namespace PaymentInfo$ {
   export const outboundSchema = PaymentInfo$outboundSchema;
   /** @deprecated use `PaymentInfo$Outbound` instead. */
   export type Outbound = PaymentInfo$Outbound;
+}
+
+export function paymentInfoToJSON(paymentInfo: PaymentInfo): string {
+  return JSON.stringify(PaymentInfo$outboundSchema.parse(paymentInfo));
+}
+
+export function paymentInfoFromJSON(
+  jsonString: string,
+): SafeParseResult<PaymentInfo, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PaymentInfo$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PaymentInfo' from JSON`,
+  );
 }

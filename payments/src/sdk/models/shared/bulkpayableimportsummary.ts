@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type BulkPayableImportSummary = {
   deductionCollaboratorsCount: number;
@@ -78,4 +81,22 @@ export namespace BulkPayableImportSummary$ {
   export const outboundSchema = BulkPayableImportSummary$outboundSchema;
   /** @deprecated use `BulkPayableImportSummary$Outbound` instead. */
   export type Outbound = BulkPayableImportSummary$Outbound;
+}
+
+export function bulkPayableImportSummaryToJSON(
+  bulkPayableImportSummary: BulkPayableImportSummary,
+): string {
+  return JSON.stringify(
+    BulkPayableImportSummary$outboundSchema.parse(bulkPayableImportSummary),
+  );
+}
+
+export function bulkPayableImportSummaryFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkPayableImportSummary, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkPayableImportSummary$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkPayableImportSummary' from JSON`,
+  );
 }

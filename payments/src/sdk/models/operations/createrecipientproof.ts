@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateRecipientProofRequest = {
@@ -68,6 +71,26 @@ export namespace CreateRecipientProofRequest$ {
   export type Outbound = CreateRecipientProofRequest$Outbound;
 }
 
+export function createRecipientProofRequestToJSON(
+  createRecipientProofRequest: CreateRecipientProofRequest,
+): string {
+  return JSON.stringify(
+    CreateRecipientProofRequest$outboundSchema.parse(
+      createRecipientProofRequest,
+    ),
+  );
+}
+
+export function createRecipientProofRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateRecipientProofRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateRecipientProofRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateRecipientProofRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateRecipientProofResponse$inboundSchema: z.ZodType<
   CreateRecipientProofResponse,
@@ -127,4 +150,24 @@ export namespace CreateRecipientProofResponse$ {
   export const outboundSchema = CreateRecipientProofResponse$outboundSchema;
   /** @deprecated use `CreateRecipientProofResponse$Outbound` instead. */
   export type Outbound = CreateRecipientProofResponse$Outbound;
+}
+
+export function createRecipientProofResponseToJSON(
+  createRecipientProofResponse: CreateRecipientProofResponse,
+): string {
+  return JSON.stringify(
+    CreateRecipientProofResponse$outboundSchema.parse(
+      createRecipientProofResponse,
+    ),
+  );
+}
+
+export function createRecipientProofResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateRecipientProofResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateRecipientProofResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateRecipientProofResponse' from JSON`,
+  );
 }

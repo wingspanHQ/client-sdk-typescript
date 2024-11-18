@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ValidateReceiveTokenRequest = {
@@ -80,6 +83,26 @@ export namespace ValidateReceiveTokenRequest$ {
   export type Outbound = ValidateReceiveTokenRequest$Outbound;
 }
 
+export function validateReceiveTokenRequestToJSON(
+  validateReceiveTokenRequest: ValidateReceiveTokenRequest,
+): string {
+  return JSON.stringify(
+    ValidateReceiveTokenRequest$outboundSchema.parse(
+      validateReceiveTokenRequest,
+    ),
+  );
+}
+
+export function validateReceiveTokenRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ValidateReceiveTokenRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ValidateReceiveTokenRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ValidateReceiveTokenRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ValidateReceiveTokenResponse$inboundSchema: z.ZodType<
   ValidateReceiveTokenResponse,
@@ -139,4 +162,24 @@ export namespace ValidateReceiveTokenResponse$ {
   export const outboundSchema = ValidateReceiveTokenResponse$outboundSchema;
   /** @deprecated use `ValidateReceiveTokenResponse$Outbound` instead. */
   export type Outbound = ValidateReceiveTokenResponse$Outbound;
+}
+
+export function validateReceiveTokenResponseToJSON(
+  validateReceiveTokenResponse: ValidateReceiveTokenResponse,
+): string {
+  return JSON.stringify(
+    ValidateReceiveTokenResponse$outboundSchema.parse(
+      validateReceiveTokenResponse,
+    ),
+  );
+}
+
+export function validateReceiveTokenResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ValidateReceiveTokenResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ValidateReceiveTokenResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ValidateReceiveTokenResponse' from JSON`,
+  );
 }

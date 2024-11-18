@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const CardStatus = {
   Active: "Active",
@@ -114,4 +117,18 @@ export namespace Card$ {
   export const outboundSchema = Card$outboundSchema;
   /** @deprecated use `Card$Outbound` instead. */
   export type Outbound = Card$Outbound;
+}
+
+export function cardToJSON(card: Card): string {
+  return JSON.stringify(Card$outboundSchema.parse(card));
+}
+
+export function cardFromJSON(
+  jsonString: string,
+): SafeParseResult<Card, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Card$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Card' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f,
   EightThousandTwoHundredAndTwelveee55b9e13fc32935c9417826f64b3550a203b665a04aacb02c4cac363c1f$inboundSchema,
@@ -133,4 +136,22 @@ export namespace FundsTransferAccount$ {
   export const outboundSchema = FundsTransferAccount$outboundSchema;
   /** @deprecated use `FundsTransferAccount$Outbound` instead. */
   export type Outbound = FundsTransferAccount$Outbound;
+}
+
+export function fundsTransferAccountToJSON(
+  fundsTransferAccount: FundsTransferAccount,
+): string {
+  return JSON.stringify(
+    FundsTransferAccount$outboundSchema.parse(fundsTransferAccount),
+  );
+}
+
+export function fundsTransferAccountFromJSON(
+  jsonString: string,
+): SafeParseResult<FundsTransferAccount, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FundsTransferAccount$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FundsTransferAccount' from JSON`,
+  );
 }

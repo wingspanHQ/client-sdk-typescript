@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetServiceStatusResponse = {
@@ -84,4 +87,22 @@ export namespace GetServiceStatusResponse$ {
   export const outboundSchema = GetServiceStatusResponse$outboundSchema;
   /** @deprecated use `GetServiceStatusResponse$Outbound` instead. */
   export type Outbound = GetServiceStatusResponse$Outbound;
+}
+
+export function getServiceStatusResponseToJSON(
+  getServiceStatusResponse: GetServiceStatusResponse,
+): string {
+  return JSON.stringify(
+    GetServiceStatusResponse$outboundSchema.parse(getServiceStatusResponse),
+  );
+}
+
+export function getServiceStatusResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetServiceStatusResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetServiceStatusResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetServiceStatusResponse' from JSON`,
+  );
 }

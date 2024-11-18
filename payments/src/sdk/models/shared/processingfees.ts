@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Fee,
   Fee$inboundSchema,
@@ -52,4 +55,18 @@ export namespace ProcessingFees$ {
   export const outboundSchema = ProcessingFees$outboundSchema;
   /** @deprecated use `ProcessingFees$Outbound` instead. */
   export type Outbound = ProcessingFees$Outbound;
+}
+
+export function processingFeesToJSON(processingFees: ProcessingFees): string {
+  return JSON.stringify(ProcessingFees$outboundSchema.parse(processingFees));
+}
+
+export function processingFeesFromJSON(
+  jsonString: string,
+): SafeParseResult<ProcessingFees, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ProcessingFees$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ProcessingFees' from JSON`,
+  );
 }

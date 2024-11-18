@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdatePayoutSettingRequest = {
@@ -80,6 +83,24 @@ export namespace UpdatePayoutSettingRequest$ {
   export type Outbound = UpdatePayoutSettingRequest$Outbound;
 }
 
+export function updatePayoutSettingRequestToJSON(
+  updatePayoutSettingRequest: UpdatePayoutSettingRequest,
+): string {
+  return JSON.stringify(
+    UpdatePayoutSettingRequest$outboundSchema.parse(updatePayoutSettingRequest),
+  );
+}
+
+export function updatePayoutSettingRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdatePayoutSettingRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdatePayoutSettingRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdatePayoutSettingRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdatePayoutSettingResponse$inboundSchema: z.ZodType<
   UpdatePayoutSettingResponse,
@@ -141,4 +162,24 @@ export namespace UpdatePayoutSettingResponse$ {
   export const outboundSchema = UpdatePayoutSettingResponse$outboundSchema;
   /** @deprecated use `UpdatePayoutSettingResponse$Outbound` instead. */
   export type Outbound = UpdatePayoutSettingResponse$Outbound;
+}
+
+export function updatePayoutSettingResponseToJSON(
+  updatePayoutSettingResponse: UpdatePayoutSettingResponse,
+): string {
+  return JSON.stringify(
+    UpdatePayoutSettingResponse$outboundSchema.parse(
+      updatePayoutSettingResponse,
+    ),
+  );
+}
+
+export function updatePayoutSettingResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdatePayoutSettingResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdatePayoutSettingResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdatePayoutSettingResponse' from JSON`,
+  );
 }

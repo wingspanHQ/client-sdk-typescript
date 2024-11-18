@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a,
   C1b9877fd1d35a4292006c3c09941c1c5c21bbe2e0e87488661804eebf2a3e4a$inboundSchema,
@@ -281,4 +284,20 @@ export namespace BulkInvoiceItem$ {
   export const outboundSchema = BulkInvoiceItem$outboundSchema;
   /** @deprecated use `BulkInvoiceItem$Outbound` instead. */
   export type Outbound = BulkInvoiceItem$Outbound;
+}
+
+export function bulkInvoiceItemToJSON(
+  bulkInvoiceItem: BulkInvoiceItem,
+): string {
+  return JSON.stringify(BulkInvoiceItem$outboundSchema.parse(bulkInvoiceItem));
+}
+
+export function bulkInvoiceItemFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkInvoiceItem, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkInvoiceItem$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkInvoiceItem' from JSON`,
+  );
 }

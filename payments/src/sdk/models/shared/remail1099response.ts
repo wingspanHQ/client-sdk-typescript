@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Remail1099Response = {};
 
@@ -34,4 +37,22 @@ export namespace Remail1099Response$ {
   export const outboundSchema = Remail1099Response$outboundSchema;
   /** @deprecated use `Remail1099Response$Outbound` instead. */
   export type Outbound = Remail1099Response$Outbound;
+}
+
+export function remail1099ResponseToJSON(
+  remail1099Response: Remail1099Response,
+): string {
+  return JSON.stringify(
+    Remail1099Response$outboundSchema.parse(remail1099Response),
+  );
+}
+
+export function remail1099ResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Remail1099Response, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Remail1099Response$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Remail1099Response' from JSON`,
+  );
 }

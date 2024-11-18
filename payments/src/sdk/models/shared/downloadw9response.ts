@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DownloadW9Response = {};
 
@@ -34,4 +37,22 @@ export namespace DownloadW9Response$ {
   export const outboundSchema = DownloadW9Response$outboundSchema;
   /** @deprecated use `DownloadW9Response$Outbound` instead. */
   export type Outbound = DownloadW9Response$Outbound;
+}
+
+export function downloadW9ResponseToJSON(
+  downloadW9Response: DownloadW9Response,
+): string {
+  return JSON.stringify(
+    DownloadW9Response$outboundSchema.parse(downloadW9Response),
+  );
+}
+
+export function downloadW9ResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DownloadW9Response, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DownloadW9Response$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DownloadW9Response' from JSON`,
+  );
 }

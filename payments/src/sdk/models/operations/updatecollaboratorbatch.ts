@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateCollaboratorBatchRequest = {
@@ -80,6 +83,26 @@ export namespace UpdateCollaboratorBatchRequest$ {
   export type Outbound = UpdateCollaboratorBatchRequest$Outbound;
 }
 
+export function updateCollaboratorBatchRequestToJSON(
+  updateCollaboratorBatchRequest: UpdateCollaboratorBatchRequest,
+): string {
+  return JSON.stringify(
+    UpdateCollaboratorBatchRequest$outboundSchema.parse(
+      updateCollaboratorBatchRequest,
+    ),
+  );
+}
+
+export function updateCollaboratorBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateCollaboratorBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateCollaboratorBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateCollaboratorBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateCollaboratorBatchResponse$inboundSchema: z.ZodType<
   UpdateCollaboratorBatchResponse,
@@ -139,4 +162,24 @@ export namespace UpdateCollaboratorBatchResponse$ {
   export const outboundSchema = UpdateCollaboratorBatchResponse$outboundSchema;
   /** @deprecated use `UpdateCollaboratorBatchResponse$Outbound` instead. */
   export type Outbound = UpdateCollaboratorBatchResponse$Outbound;
+}
+
+export function updateCollaboratorBatchResponseToJSON(
+  updateCollaboratorBatchResponse: UpdateCollaboratorBatchResponse,
+): string {
+  return JSON.stringify(
+    UpdateCollaboratorBatchResponse$outboundSchema.parse(
+      updateCollaboratorBatchResponse,
+    ),
+  );
+}
+
+export function updateCollaboratorBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateCollaboratorBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateCollaboratorBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateCollaboratorBatchResponse' from JSON`,
+  );
 }

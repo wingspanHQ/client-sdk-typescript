@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetCustomDataCollaboratorMemberRequest = {
@@ -70,6 +73,28 @@ export namespace GetCustomDataCollaboratorMemberRequest$ {
   export type Outbound = GetCustomDataCollaboratorMemberRequest$Outbound;
 }
 
+export function getCustomDataCollaboratorMemberRequestToJSON(
+  getCustomDataCollaboratorMemberRequest:
+    GetCustomDataCollaboratorMemberRequest,
+): string {
+  return JSON.stringify(
+    GetCustomDataCollaboratorMemberRequest$outboundSchema.parse(
+      getCustomDataCollaboratorMemberRequest,
+    ),
+  );
+}
+
+export function getCustomDataCollaboratorMemberRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetCustomDataCollaboratorMemberRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetCustomDataCollaboratorMemberRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetCustomDataCollaboratorMemberRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetCustomDataCollaboratorMemberResponse$inboundSchema: z.ZodType<
   GetCustomDataCollaboratorMemberResponse,
@@ -131,4 +156,31 @@ export namespace GetCustomDataCollaboratorMemberResponse$ {
     GetCustomDataCollaboratorMemberResponse$outboundSchema;
   /** @deprecated use `GetCustomDataCollaboratorMemberResponse$Outbound` instead. */
   export type Outbound = GetCustomDataCollaboratorMemberResponse$Outbound;
+}
+
+export function getCustomDataCollaboratorMemberResponseToJSON(
+  getCustomDataCollaboratorMemberResponse:
+    GetCustomDataCollaboratorMemberResponse,
+): string {
+  return JSON.stringify(
+    GetCustomDataCollaboratorMemberResponse$outboundSchema.parse(
+      getCustomDataCollaboratorMemberResponse,
+    ),
+  );
+}
+
+export function getCustomDataCollaboratorMemberResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetCustomDataCollaboratorMemberResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetCustomDataCollaboratorMemberResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'GetCustomDataCollaboratorMemberResponse' from JSON`,
+  );
 }

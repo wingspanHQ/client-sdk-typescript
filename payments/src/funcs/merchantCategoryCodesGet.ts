@@ -53,6 +53,9 @@ export async function merchantCategoryCodesGet(
   const context = {
     operationID: "getMerchantCategoryCodes",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

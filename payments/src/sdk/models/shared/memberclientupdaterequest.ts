@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   ClientData,
   ClientData$inboundSchema,
@@ -91,6 +94,27 @@ export namespace MemberClientUpdateRequestFormW9Data$ {
     MemberClientUpdateRequestFormW9Data$outboundSchema;
   /** @deprecated use `MemberClientUpdateRequestFormW9Data$Outbound` instead. */
   export type Outbound = MemberClientUpdateRequestFormW9Data$Outbound;
+}
+
+export function memberClientUpdateRequestFormW9DataToJSON(
+  memberClientUpdateRequestFormW9Data: MemberClientUpdateRequestFormW9Data,
+): string {
+  return JSON.stringify(
+    MemberClientUpdateRequestFormW9Data$outboundSchema.parse(
+      memberClientUpdateRequestFormW9Data,
+    ),
+  );
+}
+
+export function memberClientUpdateRequestFormW9DataFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientUpdateRequestFormW9Data, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      MemberClientUpdateRequestFormW9Data$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientUpdateRequestFormW9Data' from JSON`,
+  );
 }
 
 /** @internal */
@@ -199,4 +223,22 @@ export namespace MemberClientUpdateRequest$ {
   export const outboundSchema = MemberClientUpdateRequest$outboundSchema;
   /** @deprecated use `MemberClientUpdateRequest$Outbound` instead. */
   export type Outbound = MemberClientUpdateRequest$Outbound;
+}
+
+export function memberClientUpdateRequestToJSON(
+  memberClientUpdateRequest: MemberClientUpdateRequest,
+): string {
+  return JSON.stringify(
+    MemberClientUpdateRequest$outboundSchema.parse(memberClientUpdateRequest),
+  );
+}
+
+export function memberClientUpdateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientUpdateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberClientUpdateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientUpdateRequest' from JSON`,
+  );
 }

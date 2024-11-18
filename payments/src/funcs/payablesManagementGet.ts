@@ -74,6 +74,9 @@ export async function payablesManagementGet(
   const context = {
     operationID: "getPayable",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

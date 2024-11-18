@@ -53,6 +53,9 @@ export async function collaboratorManagementListCollaboratorDeduction(
   const context = {
     operationID: "listDeductionCollaborators",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type List1099TaxFormsResponse = {
@@ -82,4 +85,22 @@ export namespace List1099TaxFormsResponse$ {
   export const outboundSchema = List1099TaxFormsResponse$outboundSchema;
   /** @deprecated use `List1099TaxFormsResponse$Outbound` instead. */
   export type Outbound = List1099TaxFormsResponse$Outbound;
+}
+
+export function list1099TaxFormsResponseToJSON(
+  list1099TaxFormsResponse: List1099TaxFormsResponse,
+): string {
+  return JSON.stringify(
+    List1099TaxFormsResponse$outboundSchema.parse(list1099TaxFormsResponse),
+  );
+}
+
+export function list1099TaxFormsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<List1099TaxFormsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => List1099TaxFormsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'List1099TaxFormsResponse' from JSON`,
+  );
 }

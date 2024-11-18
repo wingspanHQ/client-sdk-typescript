@@ -74,6 +74,9 @@ export async function oneThousandAndNinetyNineOperationsMark(
   const context = {
     operationID: "markUndelivered1099Form",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

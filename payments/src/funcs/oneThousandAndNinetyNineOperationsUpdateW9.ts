@@ -53,6 +53,9 @@ export async function oneThousandAndNinetyNineOperationsUpdateW9(
   const context = {
     operationID: "updatePayeeW9Information",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

@@ -74,6 +74,9 @@ export async function collaboratorManagementCreateCollaboratorGroup(
   const context = {
     operationID: "createCollaboratorGroup",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

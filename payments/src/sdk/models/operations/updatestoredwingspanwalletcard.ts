@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateStoredWingspanWalletCardRequest = {
@@ -82,6 +85,27 @@ export namespace UpdateStoredWingspanWalletCardRequest$ {
   export type Outbound = UpdateStoredWingspanWalletCardRequest$Outbound;
 }
 
+export function updateStoredWingspanWalletCardRequestToJSON(
+  updateStoredWingspanWalletCardRequest: UpdateStoredWingspanWalletCardRequest,
+): string {
+  return JSON.stringify(
+    UpdateStoredWingspanWalletCardRequest$outboundSchema.parse(
+      updateStoredWingspanWalletCardRequest,
+    ),
+  );
+}
+
+export function updateStoredWingspanWalletCardRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateStoredWingspanWalletCardRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateStoredWingspanWalletCardRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateStoredWingspanWalletCardRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateStoredWingspanWalletCardResponse$inboundSchema: z.ZodType<
   UpdateStoredWingspanWalletCardResponse,
@@ -143,4 +167,26 @@ export namespace UpdateStoredWingspanWalletCardResponse$ {
     UpdateStoredWingspanWalletCardResponse$outboundSchema;
   /** @deprecated use `UpdateStoredWingspanWalletCardResponse$Outbound` instead. */
   export type Outbound = UpdateStoredWingspanWalletCardResponse$Outbound;
+}
+
+export function updateStoredWingspanWalletCardResponseToJSON(
+  updateStoredWingspanWalletCardResponse:
+    UpdateStoredWingspanWalletCardResponse,
+): string {
+  return JSON.stringify(
+    UpdateStoredWingspanWalletCardResponse$outboundSchema.parse(
+      updateStoredWingspanWalletCardResponse,
+    ),
+  );
+}
+
+export function updateStoredWingspanWalletCardResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateStoredWingspanWalletCardResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateStoredWingspanWalletCardResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateStoredWingspanWalletCardResponse' from JSON`,
+  );
 }

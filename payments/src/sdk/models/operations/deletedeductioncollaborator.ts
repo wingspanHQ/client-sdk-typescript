@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteDeductionCollaboratorRequest = {
@@ -69,6 +72,27 @@ export namespace DeleteDeductionCollaboratorRequest$ {
   export type Outbound = DeleteDeductionCollaboratorRequest$Outbound;
 }
 
+export function deleteDeductionCollaboratorRequestToJSON(
+  deleteDeductionCollaboratorRequest: DeleteDeductionCollaboratorRequest,
+): string {
+  return JSON.stringify(
+    DeleteDeductionCollaboratorRequest$outboundSchema.parse(
+      deleteDeductionCollaboratorRequest,
+    ),
+  );
+}
+
+export function deleteDeductionCollaboratorRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteDeductionCollaboratorRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteDeductionCollaboratorRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteDeductionCollaboratorRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteDeductionCollaboratorResponse$inboundSchema: z.ZodType<
   DeleteDeductionCollaboratorResponse,
@@ -130,4 +154,25 @@ export namespace DeleteDeductionCollaboratorResponse$ {
     DeleteDeductionCollaboratorResponse$outboundSchema;
   /** @deprecated use `DeleteDeductionCollaboratorResponse$Outbound` instead. */
   export type Outbound = DeleteDeductionCollaboratorResponse$Outbound;
+}
+
+export function deleteDeductionCollaboratorResponseToJSON(
+  deleteDeductionCollaboratorResponse: DeleteDeductionCollaboratorResponse,
+): string {
+  return JSON.stringify(
+    DeleteDeductionCollaboratorResponse$outboundSchema.parse(
+      deleteDeductionCollaboratorResponse,
+    ),
+  );
+}
+
+export function deleteDeductionCollaboratorResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteDeductionCollaboratorResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteDeductionCollaboratorResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteDeductionCollaboratorResponse' from JSON`,
+  );
 }

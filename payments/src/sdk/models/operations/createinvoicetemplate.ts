@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateInvoiceTemplateResponse = {
@@ -84,4 +87,24 @@ export namespace CreateInvoiceTemplateResponse$ {
   export const outboundSchema = CreateInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `CreateInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = CreateInvoiceTemplateResponse$Outbound;
+}
+
+export function createInvoiceTemplateResponseToJSON(
+  createInvoiceTemplateResponse: CreateInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    CreateInvoiceTemplateResponse$outboundSchema.parse(
+      createInvoiceTemplateResponse,
+    ),
+  );
+}
+
+export function createInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateInvoiceTemplateResponse' from JSON`,
+  );
 }

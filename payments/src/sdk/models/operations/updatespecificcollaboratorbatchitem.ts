@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateSpecificCollaboratorBatchItemRequest = {
@@ -92,6 +95,33 @@ export namespace UpdateSpecificCollaboratorBatchItemRequest$ {
   export type Outbound = UpdateSpecificCollaboratorBatchItemRequest$Outbound;
 }
 
+export function updateSpecificCollaboratorBatchItemRequestToJSON(
+  updateSpecificCollaboratorBatchItemRequest:
+    UpdateSpecificCollaboratorBatchItemRequest,
+): string {
+  return JSON.stringify(
+    UpdateSpecificCollaboratorBatchItemRequest$outboundSchema.parse(
+      updateSpecificCollaboratorBatchItemRequest,
+    ),
+  );
+}
+
+export function updateSpecificCollaboratorBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateSpecificCollaboratorBatchItemRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateSpecificCollaboratorBatchItemRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateSpecificCollaboratorBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateSpecificCollaboratorBatchItemResponse$inboundSchema:
   z.ZodType<
@@ -155,4 +185,31 @@ export namespace UpdateSpecificCollaboratorBatchItemResponse$ {
     UpdateSpecificCollaboratorBatchItemResponse$outboundSchema;
   /** @deprecated use `UpdateSpecificCollaboratorBatchItemResponse$Outbound` instead. */
   export type Outbound = UpdateSpecificCollaboratorBatchItemResponse$Outbound;
+}
+
+export function updateSpecificCollaboratorBatchItemResponseToJSON(
+  updateSpecificCollaboratorBatchItemResponse:
+    UpdateSpecificCollaboratorBatchItemResponse,
+): string {
+  return JSON.stringify(
+    UpdateSpecificCollaboratorBatchItemResponse$outboundSchema.parse(
+      updateSpecificCollaboratorBatchItemResponse,
+    ),
+  );
+}
+
+export function updateSpecificCollaboratorBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateSpecificCollaboratorBatchItemResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateSpecificCollaboratorBatchItemResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateSpecificCollaboratorBatchItemResponse' from JSON`,
+  );
 }

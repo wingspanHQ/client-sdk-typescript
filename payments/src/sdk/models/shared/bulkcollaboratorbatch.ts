@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   RedactedMember,
   RedactedMember$inboundSchema,
@@ -139,4 +142,22 @@ export namespace BulkCollaboratorBatch$ {
   export const outboundSchema = BulkCollaboratorBatch$outboundSchema;
   /** @deprecated use `BulkCollaboratorBatch$Outbound` instead. */
   export type Outbound = BulkCollaboratorBatch$Outbound;
+}
+
+export function bulkCollaboratorBatchToJSON(
+  bulkCollaboratorBatch: BulkCollaboratorBatch,
+): string {
+  return JSON.stringify(
+    BulkCollaboratorBatch$outboundSchema.parse(bulkCollaboratorBatch),
+  );
+}
+
+export function bulkCollaboratorBatchFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkCollaboratorBatch, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkCollaboratorBatch$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkCollaboratorBatch' from JSON`,
+  );
 }

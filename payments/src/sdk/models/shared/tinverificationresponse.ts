@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const VerificationStatus = {
   None: "None",
@@ -72,4 +75,22 @@ export namespace TinVerificationResponse$ {
   export const outboundSchema = TinVerificationResponse$outboundSchema;
   /** @deprecated use `TinVerificationResponse$Outbound` instead. */
   export type Outbound = TinVerificationResponse$Outbound;
+}
+
+export function tinVerificationResponseToJSON(
+  tinVerificationResponse: TinVerificationResponse,
+): string {
+  return JSON.stringify(
+    TinVerificationResponse$outboundSchema.parse(tinVerificationResponse),
+  );
+}
+
+export function tinVerificationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<TinVerificationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TinVerificationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TinVerificationResponse' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type PayablesSummary = {
   invoicesApproved: number;
@@ -82,4 +85,20 @@ export namespace PayablesSummary$ {
   export const outboundSchema = PayablesSummary$outboundSchema;
   /** @deprecated use `PayablesSummary$Outbound` instead. */
   export type Outbound = PayablesSummary$Outbound;
+}
+
+export function payablesSummaryToJSON(
+  payablesSummary: PayablesSummary,
+): string {
+  return JSON.stringify(PayablesSummary$outboundSchema.parse(payablesSummary));
+}
+
+export function payablesSummaryFromJSON(
+  jsonString: string,
+): SafeParseResult<PayablesSummary, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayablesSummary$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayablesSummary' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   DocumentEvents,
   DocumentEvents$inboundSchema,
@@ -124,4 +127,22 @@ export namespace DocumentResponse$ {
   export const outboundSchema = DocumentResponse$outboundSchema;
   /** @deprecated use `DocumentResponse$Outbound` instead. */
   export type Outbound = DocumentResponse$Outbound;
+}
+
+export function documentResponseToJSON(
+  documentResponse: DocumentResponse,
+): string {
+  return JSON.stringify(
+    DocumentResponse$outboundSchema.parse(documentResponse),
+  );
+}
+
+export function documentResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DocumentResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DocumentResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DocumentResponse' from JSON`,
+  );
 }

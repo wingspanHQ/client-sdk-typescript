@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdatePayrollSettingRequest = {
@@ -80,6 +83,26 @@ export namespace UpdatePayrollSettingRequest$ {
   export type Outbound = UpdatePayrollSettingRequest$Outbound;
 }
 
+export function updatePayrollSettingRequestToJSON(
+  updatePayrollSettingRequest: UpdatePayrollSettingRequest,
+): string {
+  return JSON.stringify(
+    UpdatePayrollSettingRequest$outboundSchema.parse(
+      updatePayrollSettingRequest,
+    ),
+  );
+}
+
+export function updatePayrollSettingRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdatePayrollSettingRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdatePayrollSettingRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdatePayrollSettingRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdatePayrollSettingResponse$inboundSchema: z.ZodType<
   UpdatePayrollSettingResponse,
@@ -139,4 +162,24 @@ export namespace UpdatePayrollSettingResponse$ {
   export const outboundSchema = UpdatePayrollSettingResponse$outboundSchema;
   /** @deprecated use `UpdatePayrollSettingResponse$Outbound` instead. */
   export type Outbound = UpdatePayrollSettingResponse$Outbound;
+}
+
+export function updatePayrollSettingResponseToJSON(
+  updatePayrollSettingResponse: UpdatePayrollSettingResponse,
+): string {
+  return JSON.stringify(
+    UpdatePayrollSettingResponse$outboundSchema.parse(
+      updatePayrollSettingResponse,
+    ),
+  );
+}
+
+export function updatePayrollSettingResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdatePayrollSettingResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdatePayrollSettingResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdatePayrollSettingResponse' from JSON`,
+  );
 }

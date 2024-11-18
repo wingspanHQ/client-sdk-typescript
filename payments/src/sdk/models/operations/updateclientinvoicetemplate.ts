@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateClientInvoiceTemplateRequest = {
@@ -87,6 +90,27 @@ export namespace UpdateClientInvoiceTemplateRequest$ {
   export type Outbound = UpdateClientInvoiceTemplateRequest$Outbound;
 }
 
+export function updateClientInvoiceTemplateRequestToJSON(
+  updateClientInvoiceTemplateRequest: UpdateClientInvoiceTemplateRequest,
+): string {
+  return JSON.stringify(
+    UpdateClientInvoiceTemplateRequest$outboundSchema.parse(
+      updateClientInvoiceTemplateRequest,
+    ),
+  );
+}
+
+export function updateClientInvoiceTemplateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientInvoiceTemplateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateClientInvoiceTemplateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientInvoiceTemplateRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateClientInvoiceTemplateResponse$inboundSchema: z.ZodType<
   UpdateClientInvoiceTemplateResponse,
@@ -148,4 +172,25 @@ export namespace UpdateClientInvoiceTemplateResponse$ {
     UpdateClientInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `UpdateClientInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = UpdateClientInvoiceTemplateResponse$Outbound;
+}
+
+export function updateClientInvoiceTemplateResponseToJSON(
+  updateClientInvoiceTemplateResponse: UpdateClientInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    UpdateClientInvoiceTemplateResponse$outboundSchema.parse(
+      updateClientInvoiceTemplateResponse,
+    ),
+  );
+}
+
+export function updateClientInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateClientInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientInvoiceTemplateResponse' from JSON`,
+  );
 }

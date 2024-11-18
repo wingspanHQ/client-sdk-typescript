@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   InvoiceAttachmentFile,
   InvoiceAttachmentFile$inboundSchema,
@@ -70,4 +73,22 @@ export namespace InvoiceAttachments$ {
   export const outboundSchema = InvoiceAttachments$outboundSchema;
   /** @deprecated use `InvoiceAttachments$Outbound` instead. */
   export type Outbound = InvoiceAttachments$Outbound;
+}
+
+export function invoiceAttachmentsToJSON(
+  invoiceAttachments: InvoiceAttachments,
+): string {
+  return JSON.stringify(
+    InvoiceAttachments$outboundSchema.parse(invoiceAttachments),
+  );
+}
+
+export function invoiceAttachmentsFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceAttachments, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceAttachments$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceAttachments' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type MemberClientWireAccount = {
   accountNumber: string;
@@ -54,4 +57,22 @@ export namespace MemberClientWireAccount$ {
   export const outboundSchema = MemberClientWireAccount$outboundSchema;
   /** @deprecated use `MemberClientWireAccount$Outbound` instead. */
   export type Outbound = MemberClientWireAccount$Outbound;
+}
+
+export function memberClientWireAccountToJSON(
+  memberClientWireAccount: MemberClientWireAccount,
+): string {
+  return JSON.stringify(
+    MemberClientWireAccount$outboundSchema.parse(memberClientWireAccount),
+  );
+}
+
+export function memberClientWireAccountFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientWireAccount, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberClientWireAccount$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientWireAccount' from JSON`,
+  );
 }

@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Download1099Response = {};
 
@@ -34,4 +37,22 @@ export namespace Download1099Response$ {
   export const outboundSchema = Download1099Response$outboundSchema;
   /** @deprecated use `Download1099Response$Outbound` instead. */
   export type Outbound = Download1099Response$Outbound;
+}
+
+export function download1099ResponseToJSON(
+  download1099Response: Download1099Response,
+): string {
+  return JSON.stringify(
+    Download1099Response$outboundSchema.parse(download1099Response),
+  );
+}
+
+export function download1099ResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<Download1099Response, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Download1099Response$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Download1099Response' from JSON`,
+  );
 }

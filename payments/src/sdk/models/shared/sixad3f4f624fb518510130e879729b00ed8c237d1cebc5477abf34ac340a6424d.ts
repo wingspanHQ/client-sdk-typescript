@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d =
   {
@@ -53,4 +56,31 @@ export namespace Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a64
   /** @deprecated use `Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$Outbound` instead. */
   export type Outbound =
     Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$Outbound;
+}
+
+export function sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424dToJSON(
+  sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d:
+    Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d,
+): string {
+  return JSON.stringify(
+    Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$outboundSchema
+      .parse(
+        sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d,
+      ),
+  );
+}
+
+export function sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424dFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Sixad3f4f624fb518510130e879729b00ed8c237d1cebc5477abf34ac340a6424d' from JSON`,
+  );
 }

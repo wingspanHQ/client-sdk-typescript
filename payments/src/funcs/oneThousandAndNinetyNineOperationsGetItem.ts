@@ -81,6 +81,9 @@ export async function oneThousandAndNinetyNineOperationsGetItem(
   const context = {
     operationID: "getCalculation1099BatchItem",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

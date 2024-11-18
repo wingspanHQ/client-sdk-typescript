@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type CardTokenResponse = {
   cardId: string;
@@ -46,4 +49,22 @@ export namespace CardTokenResponse$ {
   export const outboundSchema = CardTokenResponse$outboundSchema;
   /** @deprecated use `CardTokenResponse$Outbound` instead. */
   export type Outbound = CardTokenResponse$Outbound;
+}
+
+export function cardTokenResponseToJSON(
+  cardTokenResponse: CardTokenResponse,
+): string {
+  return JSON.stringify(
+    CardTokenResponse$outboundSchema.parse(cardTokenResponse),
+  );
+}
+
+export function cardTokenResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CardTokenResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CardTokenResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CardTokenResponse' from JSON`,
+  );
 }

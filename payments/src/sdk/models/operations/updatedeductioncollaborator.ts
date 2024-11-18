@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateDeductionCollaboratorRequest = {
@@ -83,6 +86,27 @@ export namespace UpdateDeductionCollaboratorRequest$ {
   export type Outbound = UpdateDeductionCollaboratorRequest$Outbound;
 }
 
+export function updateDeductionCollaboratorRequestToJSON(
+  updateDeductionCollaboratorRequest: UpdateDeductionCollaboratorRequest,
+): string {
+  return JSON.stringify(
+    UpdateDeductionCollaboratorRequest$outboundSchema.parse(
+      updateDeductionCollaboratorRequest,
+    ),
+  );
+}
+
+export function updateDeductionCollaboratorRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateDeductionCollaboratorRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateDeductionCollaboratorRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateDeductionCollaboratorRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateDeductionCollaboratorResponse$inboundSchema: z.ZodType<
   UpdateDeductionCollaboratorResponse,
@@ -144,4 +168,25 @@ export namespace UpdateDeductionCollaboratorResponse$ {
     UpdateDeductionCollaboratorResponse$outboundSchema;
   /** @deprecated use `UpdateDeductionCollaboratorResponse$Outbound` instead. */
   export type Outbound = UpdateDeductionCollaboratorResponse$Outbound;
+}
+
+export function updateDeductionCollaboratorResponseToJSON(
+  updateDeductionCollaboratorResponse: UpdateDeductionCollaboratorResponse,
+): string {
+  return JSON.stringify(
+    UpdateDeductionCollaboratorResponse$outboundSchema.parse(
+      updateDeductionCollaboratorResponse,
+    ),
+  );
+}
+
+export function updateDeductionCollaboratorResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateDeductionCollaboratorResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateDeductionCollaboratorResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateDeductionCollaboratorResponse' from JSON`,
+  );
 }

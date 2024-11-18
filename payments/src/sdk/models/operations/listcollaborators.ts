@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListCollaboratorsResponse = {
@@ -82,4 +85,22 @@ export namespace ListCollaboratorsResponse$ {
   export const outboundSchema = ListCollaboratorsResponse$outboundSchema;
   /** @deprecated use `ListCollaboratorsResponse$Outbound` instead. */
   export type Outbound = ListCollaboratorsResponse$Outbound;
+}
+
+export function listCollaboratorsResponseToJSON(
+  listCollaboratorsResponse: ListCollaboratorsResponse,
+): string {
+  return JSON.stringify(
+    ListCollaboratorsResponse$outboundSchema.parse(listCollaboratorsResponse),
+  );
+}
+
+export function listCollaboratorsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListCollaboratorsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ListCollaboratorsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListCollaboratorsResponse' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const UserAccountType = {
   Member: "member",
@@ -77,4 +80,31 @@ export namespace Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026
   /** @deprecated use `Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$Outbound` instead. */
   export type Outbound =
     Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$Outbound;
+}
+
+export function ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4bToJSON(
+  ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b:
+    Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b,
+): string {
+  return JSON.stringify(
+    Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$outboundSchema
+      .parse(
+        ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b,
+      ),
+  );
+}
+
+export function ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4bFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Ninee97e63e736df301658ebeeab7f4fe84f3aeaa73800d3e4863801a3eb026df4b' from JSON`,
+  );
 }

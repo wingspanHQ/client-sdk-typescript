@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Address,
   Address$inboundSchema,
@@ -387,4 +390,18 @@ export namespace ClientInvoice$ {
   export const outboundSchema = ClientInvoice$outboundSchema;
   /** @deprecated use `ClientInvoice$Outbound` instead. */
   export type Outbound = ClientInvoice$Outbound;
+}
+
+export function clientInvoiceToJSON(clientInvoice: ClientInvoice): string {
+  return JSON.stringify(ClientInvoice$outboundSchema.parse(clientInvoice));
+}
+
+export function clientInvoiceFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientInvoice, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ClientInvoice$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientInvoice' from JSON`,
+  );
 }

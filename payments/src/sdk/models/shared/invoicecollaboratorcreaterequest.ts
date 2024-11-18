@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const InvoiceCollaboratorCreateRequestCurrency = {
   Usd: "USD",
@@ -86,4 +89,24 @@ export namespace InvoiceCollaboratorCreateRequest$ {
   export const outboundSchema = InvoiceCollaboratorCreateRequest$outboundSchema;
   /** @deprecated use `InvoiceCollaboratorCreateRequest$Outbound` instead. */
   export type Outbound = InvoiceCollaboratorCreateRequest$Outbound;
+}
+
+export function invoiceCollaboratorCreateRequestToJSON(
+  invoiceCollaboratorCreateRequest: InvoiceCollaboratorCreateRequest,
+): string {
+  return JSON.stringify(
+    InvoiceCollaboratorCreateRequest$outboundSchema.parse(
+      invoiceCollaboratorCreateRequest,
+    ),
+  );
+}
+
+export function invoiceCollaboratorCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceCollaboratorCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceCollaboratorCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceCollaboratorCreateRequest' from JSON`,
+  );
 }

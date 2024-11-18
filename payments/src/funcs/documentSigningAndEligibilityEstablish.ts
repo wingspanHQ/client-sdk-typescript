@@ -75,6 +75,9 @@ export async function documentSigningAndEligibilityEstablish(
   const context = {
     operationID: "establishEligibilityRequirement",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

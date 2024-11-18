@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Eightd013dd0cdafb98addfde478aafc44fc8914592071f79bc8d2aa0096744c099f,
   Eightd013dd0cdafb98addfde478aafc44fc8914592071f79bc8d2aa0096744c099f$inboundSchema,
@@ -189,6 +192,24 @@ export namespace DeprecatedTaxForm$ {
   export const outboundSchema = DeprecatedTaxForm$outboundSchema;
   /** @deprecated use `DeprecatedTaxForm$Outbound` instead. */
   export type Outbound = DeprecatedTaxForm$Outbound;
+}
+
+export function deprecatedTaxFormToJSON(
+  deprecatedTaxForm: DeprecatedTaxForm,
+): string {
+  return JSON.stringify(
+    DeprecatedTaxForm$outboundSchema.parse(deprecatedTaxForm),
+  );
+}
+
+export function deprecatedTaxFormFromJSON(
+  jsonString: string,
+): SafeParseResult<DeprecatedTaxForm, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeprecatedTaxForm$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeprecatedTaxForm' from JSON`,
+  );
 }
 
 /** @internal */
@@ -390,4 +411,22 @@ export namespace PayerTaxFormResponse$ {
   export const outboundSchema = PayerTaxFormResponse$outboundSchema;
   /** @deprecated use `PayerTaxFormResponse$Outbound` instead. */
   export type Outbound = PayerTaxFormResponse$Outbound;
+}
+
+export function payerTaxFormResponseToJSON(
+  payerTaxFormResponse: PayerTaxFormResponse,
+): string {
+  return JSON.stringify(
+    PayerTaxFormResponse$outboundSchema.parse(payerTaxFormResponse),
+  );
+}
+
+export function payerTaxFormResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<PayerTaxFormResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PayerTaxFormResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PayerTaxFormResponse' from JSON`,
+  );
 }

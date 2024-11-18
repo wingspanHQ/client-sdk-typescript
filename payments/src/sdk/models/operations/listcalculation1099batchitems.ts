@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type ListCalculation1099BatchItemsRequest = {
@@ -70,6 +73,27 @@ export namespace ListCalculation1099BatchItemsRequest$ {
   export type Outbound = ListCalculation1099BatchItemsRequest$Outbound;
 }
 
+export function listCalculation1099BatchItemsRequestToJSON(
+  listCalculation1099BatchItemsRequest: ListCalculation1099BatchItemsRequest,
+): string {
+  return JSON.stringify(
+    ListCalculation1099BatchItemsRequest$outboundSchema.parse(
+      listCalculation1099BatchItemsRequest,
+    ),
+  );
+}
+
+export function listCalculation1099BatchItemsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ListCalculation1099BatchItemsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListCalculation1099BatchItemsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListCalculation1099BatchItemsRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const ListCalculation1099BatchItemsResponse$inboundSchema: z.ZodType<
   ListCalculation1099BatchItemsResponse,
@@ -129,4 +153,25 @@ export namespace ListCalculation1099BatchItemsResponse$ {
     ListCalculation1099BatchItemsResponse$outboundSchema;
   /** @deprecated use `ListCalculation1099BatchItemsResponse$Outbound` instead. */
   export type Outbound = ListCalculation1099BatchItemsResponse$Outbound;
+}
+
+export function listCalculation1099BatchItemsResponseToJSON(
+  listCalculation1099BatchItemsResponse: ListCalculation1099BatchItemsResponse,
+): string {
+  return JSON.stringify(
+    ListCalculation1099BatchItemsResponse$outboundSchema.parse(
+      listCalculation1099BatchItemsResponse,
+    ),
+  );
+}
+
+export function listCalculation1099BatchItemsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ListCalculation1099BatchItemsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ListCalculation1099BatchItemsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ListCalculation1099BatchItemsResponse' from JSON`,
+  );
 }

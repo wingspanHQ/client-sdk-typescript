@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb = {
   deductionId?: string | null | undefined;
@@ -64,4 +67,29 @@ export namespace Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbc
   /** @deprecated use `Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound` instead. */
   export type Outbound =
     Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$Outbound;
+}
+
+export function ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcbToJSON(
+  ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb:
+    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb,
+): string {
+  return JSON.stringify(
+    Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$outboundSchema
+      .parse(ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb),
+  );
+}
+
+export function ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcbFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'Ff870c34e17f41323279d1c2fe8e2d03accac4d93d8aa050ddce7dbba094dbcb' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const WorkflowStatus = {
   Pending: "Pending",
@@ -116,4 +119,18 @@ export namespace ClientOptions$ {
   export const outboundSchema = ClientOptions$outboundSchema;
   /** @deprecated use `ClientOptions$Outbound` instead. */
   export type Outbound = ClientOptions$Outbound;
+}
+
+export function clientOptionsToJSON(clientOptions: ClientOptions): string {
+  return JSON.stringify(ClientOptions$outboundSchema.parse(clientOptions));
+}
+
+export function clientOptionsFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientOptions, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ClientOptions$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientOptions' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const TaxFormW9InfoCompanyStructure = {
   None: "None",
@@ -181,4 +184,18 @@ export namespace TaxFormW9Info$ {
   export const outboundSchema = TaxFormW9Info$outboundSchema;
   /** @deprecated use `TaxFormW9Info$Outbound` instead. */
   export type Outbound = TaxFormW9Info$Outbound;
+}
+
+export function taxFormW9InfoToJSON(taxFormW9Info: TaxFormW9Info): string {
+  return JSON.stringify(TaxFormW9Info$outboundSchema.parse(taxFormW9Info));
+}
+
+export function taxFormW9InfoFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxFormW9Info, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxFormW9Info$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxFormW9Info' from JSON`,
+  );
 }

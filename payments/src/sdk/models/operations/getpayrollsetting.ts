@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetPayrollSettingRequest = {
@@ -68,6 +71,24 @@ export namespace GetPayrollSettingRequest$ {
   export type Outbound = GetPayrollSettingRequest$Outbound;
 }
 
+export function getPayrollSettingRequestToJSON(
+  getPayrollSettingRequest: GetPayrollSettingRequest,
+): string {
+  return JSON.stringify(
+    GetPayrollSettingRequest$outboundSchema.parse(getPayrollSettingRequest),
+  );
+}
+
+export function getPayrollSettingRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayrollSettingRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayrollSettingRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayrollSettingRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const GetPayrollSettingResponse$inboundSchema: z.ZodType<
   GetPayrollSettingResponse,
@@ -127,4 +148,22 @@ export namespace GetPayrollSettingResponse$ {
   export const outboundSchema = GetPayrollSettingResponse$outboundSchema;
   /** @deprecated use `GetPayrollSettingResponse$Outbound` instead. */
   export type Outbound = GetPayrollSettingResponse$Outbound;
+}
+
+export function getPayrollSettingResponseToJSON(
+  getPayrollSettingResponse: GetPayrollSettingResponse,
+): string {
+  return JSON.stringify(
+    GetPayrollSettingResponse$outboundSchema.parse(getPayrollSettingResponse),
+  );
+}
+
+export function getPayrollSettingResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPayrollSettingResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPayrollSettingResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPayrollSettingResponse' from JSON`,
+  );
 }

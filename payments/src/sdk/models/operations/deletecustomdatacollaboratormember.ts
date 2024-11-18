@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteCustomDataCollaboratorMemberRequest = {
@@ -71,6 +74,33 @@ export namespace DeleteCustomDataCollaboratorMemberRequest$ {
   export type Outbound = DeleteCustomDataCollaboratorMemberRequest$Outbound;
 }
 
+export function deleteCustomDataCollaboratorMemberRequestToJSON(
+  deleteCustomDataCollaboratorMemberRequest:
+    DeleteCustomDataCollaboratorMemberRequest,
+): string {
+  return JSON.stringify(
+    DeleteCustomDataCollaboratorMemberRequest$outboundSchema.parse(
+      deleteCustomDataCollaboratorMemberRequest,
+    ),
+  );
+}
+
+export function deleteCustomDataCollaboratorMemberRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DeleteCustomDataCollaboratorMemberRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteCustomDataCollaboratorMemberRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DeleteCustomDataCollaboratorMemberRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteCustomDataCollaboratorMemberResponse$inboundSchema:
   z.ZodType<DeleteCustomDataCollaboratorMemberResponse, z.ZodTypeDef, unknown> =
@@ -131,4 +161,31 @@ export namespace DeleteCustomDataCollaboratorMemberResponse$ {
     DeleteCustomDataCollaboratorMemberResponse$outboundSchema;
   /** @deprecated use `DeleteCustomDataCollaboratorMemberResponse$Outbound` instead. */
   export type Outbound = DeleteCustomDataCollaboratorMemberResponse$Outbound;
+}
+
+export function deleteCustomDataCollaboratorMemberResponseToJSON(
+  deleteCustomDataCollaboratorMemberResponse:
+    DeleteCustomDataCollaboratorMemberResponse,
+): string {
+  return JSON.stringify(
+    DeleteCustomDataCollaboratorMemberResponse$outboundSchema.parse(
+      deleteCustomDataCollaboratorMemberResponse,
+    ),
+  );
+}
+
+export function deleteCustomDataCollaboratorMemberResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  DeleteCustomDataCollaboratorMemberResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeleteCustomDataCollaboratorMemberResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'DeleteCustomDataCollaboratorMemberResponse' from JSON`,
+  );
 }

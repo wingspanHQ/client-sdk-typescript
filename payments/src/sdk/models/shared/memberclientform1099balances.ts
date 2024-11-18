@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5,
   Eighta9c6cb49482a98cdd603ff09858cdc3e5ef6ad9807c876c4161d925a96694a5$inboundSchema,
@@ -172,6 +175,20 @@ export namespace TaxForm$ {
   export type Outbound = TaxForm$Outbound;
 }
 
+export function taxFormToJSON(taxForm: TaxForm): string {
+  return JSON.stringify(TaxForm$outboundSchema.parse(taxForm));
+}
+
+export function taxFormFromJSON(
+  jsonString: string,
+): SafeParseResult<TaxForm, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TaxForm$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TaxForm' from JSON`,
+  );
+}
+
 /** @internal */
 export const MemberClientForm1099BalancesType$inboundSchema: z.ZodNativeEnum<
   typeof MemberClientForm1099BalancesType
@@ -270,4 +287,24 @@ export namespace MemberClientForm1099Balances$ {
   export const outboundSchema = MemberClientForm1099Balances$outboundSchema;
   /** @deprecated use `MemberClientForm1099Balances$Outbound` instead. */
   export type Outbound = MemberClientForm1099Balances$Outbound;
+}
+
+export function memberClientForm1099BalancesToJSON(
+  memberClientForm1099Balances: MemberClientForm1099Balances,
+): string {
+  return JSON.stringify(
+    MemberClientForm1099Balances$outboundSchema.parse(
+      memberClientForm1099Balances,
+    ),
+  );
+}
+
+export function memberClientForm1099BalancesFromJSON(
+  jsonString: string,
+): SafeParseResult<MemberClientForm1099Balances, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MemberClientForm1099Balances$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MemberClientForm1099Balances' from JSON`,
+  );
 }

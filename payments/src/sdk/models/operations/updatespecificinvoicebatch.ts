@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateSpecificInvoiceBatchRequest = {
@@ -88,6 +91,26 @@ export namespace UpdateSpecificInvoiceBatchRequest$ {
   export type Outbound = UpdateSpecificInvoiceBatchRequest$Outbound;
 }
 
+export function updateSpecificInvoiceBatchRequestToJSON(
+  updateSpecificInvoiceBatchRequest: UpdateSpecificInvoiceBatchRequest,
+): string {
+  return JSON.stringify(
+    UpdateSpecificInvoiceBatchRequest$outboundSchema.parse(
+      updateSpecificInvoiceBatchRequest,
+    ),
+  );
+}
+
+export function updateSpecificInvoiceBatchRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateSpecificInvoiceBatchRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateSpecificInvoiceBatchRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateSpecificInvoiceBatchRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateSpecificInvoiceBatchResponse$inboundSchema: z.ZodType<
   UpdateSpecificInvoiceBatchResponse,
@@ -148,4 +171,25 @@ export namespace UpdateSpecificInvoiceBatchResponse$ {
     UpdateSpecificInvoiceBatchResponse$outboundSchema;
   /** @deprecated use `UpdateSpecificInvoiceBatchResponse$Outbound` instead. */
   export type Outbound = UpdateSpecificInvoiceBatchResponse$Outbound;
+}
+
+export function updateSpecificInvoiceBatchResponseToJSON(
+  updateSpecificInvoiceBatchResponse: UpdateSpecificInvoiceBatchResponse,
+): string {
+  return JSON.stringify(
+    UpdateSpecificInvoiceBatchResponse$outboundSchema.parse(
+      updateSpecificInvoiceBatchResponse,
+    ),
+  );
+}
+
+export function updateSpecificInvoiceBatchResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateSpecificInvoiceBatchResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateSpecificInvoiceBatchResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateSpecificInvoiceBatchResponse' from JSON`,
+  );
 }

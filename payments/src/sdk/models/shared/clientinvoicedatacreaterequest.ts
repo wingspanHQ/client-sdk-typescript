@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   FeeHandlingConfig,
   FeeHandlingConfig$inboundSchema,
@@ -101,4 +104,24 @@ export namespace ClientInvoiceDataCreateRequest$ {
   export const outboundSchema = ClientInvoiceDataCreateRequest$outboundSchema;
   /** @deprecated use `ClientInvoiceDataCreateRequest$Outbound` instead. */
   export type Outbound = ClientInvoiceDataCreateRequest$Outbound;
+}
+
+export function clientInvoiceDataCreateRequestToJSON(
+  clientInvoiceDataCreateRequest: ClientInvoiceDataCreateRequest,
+): string {
+  return JSON.stringify(
+    ClientInvoiceDataCreateRequest$outboundSchema.parse(
+      clientInvoiceDataCreateRequest,
+    ),
+  );
+}
+
+export function clientInvoiceDataCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<ClientInvoiceDataCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ClientInvoiceDataCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ClientInvoiceDataCreateRequest' from JSON`,
+  );
 }

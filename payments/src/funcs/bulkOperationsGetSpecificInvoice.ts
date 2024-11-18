@@ -81,6 +81,9 @@ export async function bulkOperationsGetSpecificInvoice(
   const context = {
     operationID: "getSpecificInvoiceBatch",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.bearerAuth,
     retryConfig: options?.retries
       || client._options.retryConfig

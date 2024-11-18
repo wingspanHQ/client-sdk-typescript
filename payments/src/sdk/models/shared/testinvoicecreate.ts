@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type TestInvoiceCreate = {
   contactName: string;
@@ -46,4 +49,22 @@ export namespace TestInvoiceCreate$ {
   export const outboundSchema = TestInvoiceCreate$outboundSchema;
   /** @deprecated use `TestInvoiceCreate$Outbound` instead. */
   export type Outbound = TestInvoiceCreate$Outbound;
+}
+
+export function testInvoiceCreateToJSON(
+  testInvoiceCreate: TestInvoiceCreate,
+): string {
+  return JSON.stringify(
+    TestInvoiceCreate$outboundSchema.parse(testInvoiceCreate),
+  );
+}
+
+export function testInvoiceCreateFromJSON(
+  jsonString: string,
+): SafeParseResult<TestInvoiceCreate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TestInvoiceCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TestInvoiceCreate' from JSON`,
+  );
 }

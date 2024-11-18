@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateEligibilityRequirementCollaboratorGroupRequest = {
@@ -99,6 +102,33 @@ export namespace UpdateEligibilityRequirementCollaboratorGroupRequest$ {
     UpdateEligibilityRequirementCollaboratorGroupRequest$Outbound;
 }
 
+export function updateEligibilityRequirementCollaboratorGroupRequestToJSON(
+  updateEligibilityRequirementCollaboratorGroupRequest:
+    UpdateEligibilityRequirementCollaboratorGroupRequest,
+): string {
+  return JSON.stringify(
+    UpdateEligibilityRequirementCollaboratorGroupRequest$outboundSchema.parse(
+      updateEligibilityRequirementCollaboratorGroupRequest,
+    ),
+  );
+}
+
+export function updateEligibilityRequirementCollaboratorGroupRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateEligibilityRequirementCollaboratorGroupRequest,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateEligibilityRequirementCollaboratorGroupRequest$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateEligibilityRequirementCollaboratorGroupRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateEligibilityRequirementCollaboratorGroupResponse$inboundSchema:
   z.ZodType<
@@ -167,4 +197,31 @@ export namespace UpdateEligibilityRequirementCollaboratorGroupResponse$ {
   /** @deprecated use `UpdateEligibilityRequirementCollaboratorGroupResponse$Outbound` instead. */
   export type Outbound =
     UpdateEligibilityRequirementCollaboratorGroupResponse$Outbound;
+}
+
+export function updateEligibilityRequirementCollaboratorGroupResponseToJSON(
+  updateEligibilityRequirementCollaboratorGroupResponse:
+    UpdateEligibilityRequirementCollaboratorGroupResponse,
+): string {
+  return JSON.stringify(
+    UpdateEligibilityRequirementCollaboratorGroupResponse$outboundSchema.parse(
+      updateEligibilityRequirementCollaboratorGroupResponse,
+    ),
+  );
+}
+
+export function updateEligibilityRequirementCollaboratorGroupResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  UpdateEligibilityRequirementCollaboratorGroupResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateEligibilityRequirementCollaboratorGroupResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'UpdateEligibilityRequirementCollaboratorGroupResponse' from JSON`,
+  );
 }

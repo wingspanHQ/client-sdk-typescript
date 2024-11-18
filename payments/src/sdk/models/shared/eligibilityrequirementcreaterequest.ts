@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const EligibilityRequirementCreateRequestRequirementType = {
   Signature: "Signature",
@@ -85,4 +88,25 @@ export namespace EligibilityRequirementCreateRequest$ {
     EligibilityRequirementCreateRequest$outboundSchema;
   /** @deprecated use `EligibilityRequirementCreateRequest$Outbound` instead. */
   export type Outbound = EligibilityRequirementCreateRequest$Outbound;
+}
+
+export function eligibilityRequirementCreateRequestToJSON(
+  eligibilityRequirementCreateRequest: EligibilityRequirementCreateRequest,
+): string {
+  return JSON.stringify(
+    EligibilityRequirementCreateRequest$outboundSchema.parse(
+      eligibilityRequirementCreateRequest,
+    ),
+  );
+}
+
+export function eligibilityRequirementCreateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<EligibilityRequirementCreateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      EligibilityRequirementCreateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'EligibilityRequirementCreateRequest' from JSON`,
+  );
 }

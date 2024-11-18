@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type SubmitPayeeTINResponse = {
@@ -86,4 +89,22 @@ export namespace SubmitPayeeTINResponse$ {
   export const outboundSchema = SubmitPayeeTINResponse$outboundSchema;
   /** @deprecated use `SubmitPayeeTINResponse$Outbound` instead. */
   export type Outbound = SubmitPayeeTINResponse$Outbound;
+}
+
+export function submitPayeeTINResponseToJSON(
+  submitPayeeTINResponse: SubmitPayeeTINResponse,
+): string {
+  return JSON.stringify(
+    SubmitPayeeTINResponse$outboundSchema.parse(submitPayeeTINResponse),
+  );
+}
+
+export function submitPayeeTINResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<SubmitPayeeTINResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => SubmitPayeeTINResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'SubmitPayeeTINResponse' from JSON`,
+  );
 }

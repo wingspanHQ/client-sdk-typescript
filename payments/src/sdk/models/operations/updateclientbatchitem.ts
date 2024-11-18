@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateClientBatchItemRequest = {
@@ -87,6 +90,26 @@ export namespace UpdateClientBatchItemRequest$ {
   export type Outbound = UpdateClientBatchItemRequest$Outbound;
 }
 
+export function updateClientBatchItemRequestToJSON(
+  updateClientBatchItemRequest: UpdateClientBatchItemRequest,
+): string {
+  return JSON.stringify(
+    UpdateClientBatchItemRequest$outboundSchema.parse(
+      updateClientBatchItemRequest,
+    ),
+  );
+}
+
+export function updateClientBatchItemRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientBatchItemRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientBatchItemRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientBatchItemRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateClientBatchItemResponse$inboundSchema: z.ZodType<
   UpdateClientBatchItemResponse,
@@ -146,4 +169,24 @@ export namespace UpdateClientBatchItemResponse$ {
   export const outboundSchema = UpdateClientBatchItemResponse$outboundSchema;
   /** @deprecated use `UpdateClientBatchItemResponse$Outbound` instead. */
   export type Outbound = UpdateClientBatchItemResponse$Outbound;
+}
+
+export function updateClientBatchItemResponseToJSON(
+  updateClientBatchItemResponse: UpdateClientBatchItemResponse,
+): string {
+  return JSON.stringify(
+    UpdateClientBatchItemResponse$outboundSchema.parse(
+      updateClientBatchItemResponse,
+    ),
+  );
+}
+
+export function updateClientBatchItemResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateClientBatchItemResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UpdateClientBatchItemResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateClientBatchItemResponse' from JSON`,
+  );
 }

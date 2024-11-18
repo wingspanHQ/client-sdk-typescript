@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type CreateDebitCardRequest = {
@@ -80,6 +83,24 @@ export namespace CreateDebitCardRequest$ {
   export type Outbound = CreateDebitCardRequest$Outbound;
 }
 
+export function createDebitCardRequestToJSON(
+  createDebitCardRequest: CreateDebitCardRequest,
+): string {
+  return JSON.stringify(
+    CreateDebitCardRequest$outboundSchema.parse(createDebitCardRequest),
+  );
+}
+
+export function createDebitCardRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateDebitCardRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateDebitCardRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateDebitCardRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateDebitCardResponse$inboundSchema: z.ZodType<
   CreateDebitCardResponse,
@@ -139,4 +160,22 @@ export namespace CreateDebitCardResponse$ {
   export const outboundSchema = CreateDebitCardResponse$outboundSchema;
   /** @deprecated use `CreateDebitCardResponse$Outbound` instead. */
   export type Outbound = CreateDebitCardResponse$Outbound;
+}
+
+export function createDebitCardResponseToJSON(
+  createDebitCardResponse: CreateDebitCardResponse,
+): string {
+  return JSON.stringify(
+    CreateDebitCardResponse$outboundSchema.parse(createDebitCardResponse),
+  );
+}
+
+export function createDebitCardResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateDebitCardResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateDebitCardResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateDebitCardResponse' from JSON`,
+  );
 }

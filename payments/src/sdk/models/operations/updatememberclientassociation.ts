@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type UpdateMemberClientAssociationRequest = {
@@ -86,6 +89,27 @@ export namespace UpdateMemberClientAssociationRequest$ {
   export type Outbound = UpdateMemberClientAssociationRequest$Outbound;
 }
 
+export function updateMemberClientAssociationRequestToJSON(
+  updateMemberClientAssociationRequest: UpdateMemberClientAssociationRequest,
+): string {
+  return JSON.stringify(
+    UpdateMemberClientAssociationRequest$outboundSchema.parse(
+      updateMemberClientAssociationRequest,
+    ),
+  );
+}
+
+export function updateMemberClientAssociationRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateMemberClientAssociationRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateMemberClientAssociationRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateMemberClientAssociationRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const UpdateMemberClientAssociationResponse$inboundSchema: z.ZodType<
   UpdateMemberClientAssociationResponse,
@@ -147,4 +171,25 @@ export namespace UpdateMemberClientAssociationResponse$ {
     UpdateMemberClientAssociationResponse$outboundSchema;
   /** @deprecated use `UpdateMemberClientAssociationResponse$Outbound` instead. */
   export type Outbound = UpdateMemberClientAssociationResponse$Outbound;
+}
+
+export function updateMemberClientAssociationResponseToJSON(
+  updateMemberClientAssociationResponse: UpdateMemberClientAssociationResponse,
+): string {
+  return JSON.stringify(
+    UpdateMemberClientAssociationResponse$outboundSchema.parse(
+      updateMemberClientAssociationResponse,
+    ),
+  );
+}
+
+export function updateMemberClientAssociationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<UpdateMemberClientAssociationResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      UpdateMemberClientAssociationResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UpdateMemberClientAssociationResponse' from JSON`,
+  );
 }

@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const BulkCalculation1099ItemUpdateCalculationType = {
   Balances: "Balances",
@@ -93,4 +96,24 @@ export namespace BulkCalculation1099ItemUpdate$ {
   export const outboundSchema = BulkCalculation1099ItemUpdate$outboundSchema;
   /** @deprecated use `BulkCalculation1099ItemUpdate$Outbound` instead. */
   export type Outbound = BulkCalculation1099ItemUpdate$Outbound;
+}
+
+export function bulkCalculation1099ItemUpdateToJSON(
+  bulkCalculation1099ItemUpdate: BulkCalculation1099ItemUpdate,
+): string {
+  return JSON.stringify(
+    BulkCalculation1099ItemUpdate$outboundSchema.parse(
+      bulkCalculation1099ItemUpdate,
+    ),
+  );
+}
+
+export function bulkCalculation1099ItemUpdateFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkCalculation1099ItemUpdate, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkCalculation1099ItemUpdate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkCalculation1099ItemUpdate' from JSON`,
+  );
 }

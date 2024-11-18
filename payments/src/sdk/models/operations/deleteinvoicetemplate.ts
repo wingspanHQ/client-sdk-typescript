@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type DeleteInvoiceTemplateRequest = {
@@ -68,6 +71,26 @@ export namespace DeleteInvoiceTemplateRequest$ {
   export type Outbound = DeleteInvoiceTemplateRequest$Outbound;
 }
 
+export function deleteInvoiceTemplateRequestToJSON(
+  deleteInvoiceTemplateRequest: DeleteInvoiceTemplateRequest,
+): string {
+  return JSON.stringify(
+    DeleteInvoiceTemplateRequest$outboundSchema.parse(
+      deleteInvoiceTemplateRequest,
+    ),
+  );
+}
+
+export function deleteInvoiceTemplateRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteInvoiceTemplateRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteInvoiceTemplateRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteInvoiceTemplateRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeleteInvoiceTemplateResponse$inboundSchema: z.ZodType<
   DeleteInvoiceTemplateResponse,
@@ -127,4 +150,24 @@ export namespace DeleteInvoiceTemplateResponse$ {
   export const outboundSchema = DeleteInvoiceTemplateResponse$outboundSchema;
   /** @deprecated use `DeleteInvoiceTemplateResponse$Outbound` instead. */
   export type Outbound = DeleteInvoiceTemplateResponse$Outbound;
+}
+
+export function deleteInvoiceTemplateResponseToJSON(
+  deleteInvoiceTemplateResponse: DeleteInvoiceTemplateResponse,
+): string {
+  return JSON.stringify(
+    DeleteInvoiceTemplateResponse$outboundSchema.parse(
+      deleteInvoiceTemplateResponse,
+    ),
+  );
+}
+
+export function deleteInvoiceTemplateResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<DeleteInvoiceTemplateResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeleteInvoiceTemplateResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeleteInvoiceTemplateResponse' from JSON`,
+  );
 }

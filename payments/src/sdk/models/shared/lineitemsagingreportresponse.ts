@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   LineItemsAgingReportLineItem,
   LineItemsAgingReportLineItem$inboundSchema,
@@ -88,6 +91,27 @@ export namespace LineItemsAgingReportResponseLabels$ {
     LineItemsAgingReportResponseLabels$outboundSchema;
   /** @deprecated use `LineItemsAgingReportResponseLabels$Outbound` instead. */
   export type Outbound = LineItemsAgingReportResponseLabels$Outbound;
+}
+
+export function lineItemsAgingReportResponseLabelsToJSON(
+  lineItemsAgingReportResponseLabels: LineItemsAgingReportResponseLabels,
+): string {
+  return JSON.stringify(
+    LineItemsAgingReportResponseLabels$outboundSchema.parse(
+      lineItemsAgingReportResponseLabels,
+    ),
+  );
+}
+
+export function lineItemsAgingReportResponseLabelsFromJSON(
+  jsonString: string,
+): SafeParseResult<LineItemsAgingReportResponseLabels, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      LineItemsAgingReportResponseLabels$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LineItemsAgingReportResponseLabels' from JSON`,
+  );
 }
 
 /** @internal */
@@ -219,4 +243,24 @@ export namespace LineItemsAgingReportResponse$ {
   export const outboundSchema = LineItemsAgingReportResponse$outboundSchema;
   /** @deprecated use `LineItemsAgingReportResponse$Outbound` instead. */
   export type Outbound = LineItemsAgingReportResponse$Outbound;
+}
+
+export function lineItemsAgingReportResponseToJSON(
+  lineItemsAgingReportResponse: LineItemsAgingReportResponse,
+): string {
+  return JSON.stringify(
+    LineItemsAgingReportResponse$outboundSchema.parse(
+      lineItemsAgingReportResponse,
+    ),
+  );
+}
+
+export function lineItemsAgingReportResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<LineItemsAgingReportResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => LineItemsAgingReportResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LineItemsAgingReportResponse' from JSON`,
+  );
 }

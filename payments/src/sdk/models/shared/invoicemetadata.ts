@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export const PayoutPendingReason = {
   Admin: "Admin",
@@ -133,4 +136,20 @@ export namespace InvoiceMetadata$ {
   export const outboundSchema = InvoiceMetadata$outboundSchema;
   /** @deprecated use `InvoiceMetadata$Outbound` instead. */
   export type Outbound = InvoiceMetadata$Outbound;
+}
+
+export function invoiceMetadataToJSON(
+  invoiceMetadata: InvoiceMetadata,
+): string {
+  return JSON.stringify(InvoiceMetadata$outboundSchema.parse(invoiceMetadata));
+}
+
+export function invoiceMetadataFromJSON(
+  jsonString: string,
+): SafeParseResult<InvoiceMetadata, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => InvoiceMetadata$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'InvoiceMetadata' from JSON`,
+  );
 }

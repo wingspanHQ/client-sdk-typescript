@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../../lib/primitives.js";
+import { safeParse } from "../../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as shared from "../shared/index.js";
 
 export type GetMemberInvoicesResponse = {
@@ -82,4 +85,22 @@ export namespace GetMemberInvoicesResponse$ {
   export const outboundSchema = GetMemberInvoicesResponse$outboundSchema;
   /** @deprecated use `GetMemberInvoicesResponse$Outbound` instead. */
   export type Outbound = GetMemberInvoicesResponse$Outbound;
+}
+
+export function getMemberInvoicesResponseToJSON(
+  getMemberInvoicesResponse: GetMemberInvoicesResponse,
+): string {
+  return JSON.stringify(
+    GetMemberInvoicesResponse$outboundSchema.parse(getMemberInvoicesResponse),
+  );
+}
+
+export function getMemberInvoicesResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<GetMemberInvoicesResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetMemberInvoicesResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetMemberInvoicesResponse' from JSON`,
+  );
 }
