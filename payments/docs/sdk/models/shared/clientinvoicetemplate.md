@@ -107,7 +107,7 @@ let value: ClientInvoiceTemplate = {
   nextInvoiceDate: "<value>",
   scheduleDates: [
     {
-      date: "2024-08-19",
+      date: "2024-08-26",
       status: "Pending",
     },
   ],
