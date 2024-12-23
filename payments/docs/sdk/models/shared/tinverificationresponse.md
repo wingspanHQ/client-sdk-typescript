@@ -6,7 +6,7 @@
 import { TinVerificationResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: TinVerificationResponse = {
-  verificationStatus: "None",
+  verificationStatus: "Verified",
 };
 ```
 

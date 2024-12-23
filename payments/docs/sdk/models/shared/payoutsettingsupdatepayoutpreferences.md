@@ -5,7 +5,7 @@
 ```typescript
 import { PayoutSettingsUpdatePayoutPreferences } from "@wingspan/payments/sdk/models/shared";
 
-let value: PayoutSettingsUpdatePayoutPreferences = "Check";
+let value: PayoutSettingsUpdatePayoutPreferences = "Expedited";
 ```
 
 ## Values

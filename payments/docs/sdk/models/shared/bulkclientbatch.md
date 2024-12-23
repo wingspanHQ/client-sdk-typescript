@@ -7,7 +7,7 @@ import { BulkClientBatch } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkClientBatch = {
   bulkClientBatchId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1720313951792",
   eventActors: {
     "key": "<value>",
   },
@@ -15,8 +15,8 @@ let value: BulkClientBatch = {
     "key": "<value>",
   },
   memberId: "<id>",
-  status: "Failed",
-  updatedAt: "<value>",
+  status: "Open",
+  updatedAt: "1734866143240",
   userRoles: {
     ownerIds: [
       "<value>",

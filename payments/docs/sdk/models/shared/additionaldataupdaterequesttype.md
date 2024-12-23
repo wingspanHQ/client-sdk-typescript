@@ -5,7 +5,7 @@
 ```typescript
 import { AdditionalDataUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
 
-let value: AdditionalDataUpdateRequestType = "Boolean";
+let value: AdditionalDataUpdateRequestType = "String";
 ```
 
 ## Values

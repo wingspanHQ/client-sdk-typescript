@@ -7,11 +7,11 @@ import { Card } from "@wingspan/payments/sdk/models/shared";
 
 let value: Card = {
   brand: "<value>",
-  createdAt: "<value>",
+  createdAt: "1713057110837",
   expirationDate: "<value>",
   last4Digits: "<value>",
-  status: "Stolen",
-  type: "individualVirtualDebitCard",
+  status: "Frozen",
+  type: "businessVirtualDebitCard",
 };
 ```
 

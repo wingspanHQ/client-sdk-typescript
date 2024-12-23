@@ -6,15 +6,15 @@
 import { InvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceTemplate = {
-  createdAt: "<value>",
+  createdAt: "1730244183973",
   eventActors: {
     "key": "<value>",
   },
   invoiceData: {
-    amount: 832.91,
+    amount: 9623.95,
     client: {},
-    createdAt: "<value>",
-    currency: "USD",
+    createdAt: "1706866980313",
+    currency: "CAD",
     dueDate: "<value>",
     eventActors: {
       "key": "<value>",
@@ -28,34 +28,34 @@ let value: InvoiceTemplate = {
     },
     lineItems: [
       {
-        costPerUnit: 9655.17,
-        createdAt: "<value>",
+        costPerUnit: 9979.94,
+        createdAt: "1734535621218",
         labels: {
           "key": "<value>",
         },
         labelsBak2: {
           "key": "<value>",
         },
-        quantity: 8590.03,
+        quantity: 6033.23,
         reimbursableExpense: false,
-        totalCost: 1520.27,
-        unit: "meter",
-        updatedAt: "<value>",
+        totalCost: 1280.21,
+        unit: "tesla",
+        updatedAt: "1734831327744",
       },
     ],
     member: {},
     memberAddress: {
-      addressLine1: "316 Dillan Wall",
-      city: "Lebsackview",
-      postalCode: "19860-7953",
-      state: "Connecticut",
+      addressLine1: "93629 Greenville Road",
+      city: "Brekkeview",
+      postalCode: "61325",
+      state: "Louisiana",
     },
     memberClientId: "<id>",
     memberId: "<id>",
     payments: [
       {
-        amount: 7549.01,
-        createdAt: "<value>",
+        amount: 7064.11,
+        createdAt: "1704156610377",
         events: {},
         labels: {
           "key": "<value>",
@@ -63,13 +63,13 @@ let value: InvoiceTemplate = {
         paymentId: "<id>",
         sourceId: "<id>",
         sourceMetadata: {},
-        sourceType: "InternalAccount",
-        status: "Created",
-        updatedAt: "<value>",
+        sourceType: "Card",
+        status: "Failed",
+        updatedAt: "1734854365556",
       },
     ],
     status: "PaymentInTransit",
-    updatedAt: "<value>",
+    updatedAt: "1734913709520",
     userRoles: {
       ownerIds: [
         "<value>",
@@ -84,8 +84,8 @@ let value: InvoiceTemplate = {
     "key": "<value>",
   },
   memberId: "<id>",
-  status: "Active",
-  updatedAt: "<value>",
+  status: "Draft",
+  updatedAt: "1734902584516",
   userRoles: {
     ownerIds: [
       "<value>",

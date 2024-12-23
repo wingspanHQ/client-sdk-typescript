@@ -7,10 +7,10 @@ import { PayoutDestinationResponse } from "@wingspan/payments/sdk/models/shared"
 
 let value: PayoutDestinationResponse = {
   destinationId: "<id>",
-  destinationType: "Card",
+  destinationType: "Account",
   name: "<value>",
-  payoutMethod: "ECheck",
-  percentage: 9402.10,
+  payoutMethod: "Instant",
+  percentage: 1523.55,
 };
 ```
 

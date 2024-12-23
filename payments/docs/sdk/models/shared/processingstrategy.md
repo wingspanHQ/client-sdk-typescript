@@ -5,7 +5,7 @@
 ```typescript
 import { ProcessingStrategy } from "@wingspan/payments/sdk/models/shared";
 
-let value: ProcessingStrategy = "Single";
+let value: ProcessingStrategy = "Merge";
 ```
 
 ## Values

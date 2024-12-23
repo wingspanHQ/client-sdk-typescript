@@ -9,7 +9,7 @@ let value: DocumentResponse = {
   clientId: "<id>",
   documentId: "<id>",
   memberId: "<id>",
-  status: "PendingReview",
+  status: "ReceivedBack",
   templateId: "<id>",
   title: "<value>",
   userRoles: {

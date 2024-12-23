@@ -7,7 +7,7 @@ import { TestInvoiceCreate } from "@wingspan/payments/sdk/models/shared";
 
 let value: TestInvoiceCreate = {
   contactName: "<value>",
-  email: "Rhianna.Sawayn-Leannon@gmail.com",
+  email: "Beau79@hotmail.com",
 };
 ```
 

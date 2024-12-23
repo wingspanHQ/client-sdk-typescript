@@ -7,29 +7,29 @@ import { LineItemsAgingReportResponse } from "@wingspan/payments/sdk/models/shar
 
 let value: LineItemsAgingReportResponse = {
   ageGroup: "<value>",
-  amount: 8174.53,
-  createdAt: "<value>",
-  currency: "Saint Helena Pound",
+  amount: 2277.41,
+  createdAt: "1717471623565",
+  currency: "Manat",
   dueDate: "<value>",
   invoiceId: "<id>",
   invoiceNumber: "<value>",
   invoicePdf: "<value>",
   lineItems: [
     {
-      costPerUnit: 6778.95,
-      createdAt: "<value>",
-      index: 3198.34,
+      costPerUnit: 2218.24,
+      createdAt: "1718958606953",
+      index: 9296.19,
       labels: {
         "key": "<value>",
       },
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 1964.51,
+      quantity: 6672.15,
       reimbursableExpense: false,
-      totalCost: 6715.28,
-      unit: "siemens",
-      updatedAt: "<value>",
+      totalCost: 7980.79,
+      unit: "ohm",
+      updatedAt: "1734915861188",
     },
   ],
   member: {
@@ -38,8 +38,8 @@ let value: LineItemsAgingReportResponse = {
   memberClientId: "<id>",
   memberId: "<id>",
   receiptPdf: "<value>",
-  status: "Draft",
-  updatedAt: "<value>",
+  status: "Pending",
+  updatedAt: "1734835081949",
 };
 ```
 

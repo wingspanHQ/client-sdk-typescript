@@ -5,7 +5,7 @@
 ```typescript
 import { InvoiceTemplateUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: InvoiceTemplateUpdateRequestStatus = "Draft";
+let value: InvoiceTemplateUpdateRequestStatus = "Expired";
 ```
 
 ## Values

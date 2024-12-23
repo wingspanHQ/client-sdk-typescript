@@ -5,7 +5,7 @@
 ```typescript
 import { InvoiceRefundDestinationDestinationType } from "@wingspan/payments/sdk/models/shared";
 
-let value: InvoiceRefundDestinationDestinationType = "WeGift";
+let value: InvoiceRefundDestinationDestinationType = "Account";
 ```
 
 ## Values

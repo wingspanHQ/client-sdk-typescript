@@ -6,7 +6,7 @@
 import { CollaboratorGroupCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorGroupCreateRequest = {
-  description: "expansion submissive quicker whack fooey",
+  description: "without solidly accentuate",
   name: "<value>",
 };
 ```

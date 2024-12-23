@@ -10,11 +10,12 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   collaboratorGroups: [
     {
       collaboratorGroupId: "<id>",
-      description: "if while unless",
+      description:
+        "judgementally young vary down foolishly jaggedly orderly sans sweetly solemnly",
       name: "<value>",
     },
   ],
-  createdAt: "<value>",
+  createdAt: "1706023993749",
   inviteEmail: "<value>",
   member: {
     user: {},
@@ -22,18 +23,18 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   memberClientId: "<id>",
   memberId: "<id>",
   payoutsSummary: {
-    deductionsCount: 8830.78,
-    payablesCount: 9665.75,
-    totalDeducted: 7747.48,
-    totalPaid: 9942.33,
+    deductionsCount: 5161.24,
+    payablesCount: 2198.61,
+    totalDeducted: 2742.96,
+    totalPaid: 7018.40,
   },
   servicesStatus: {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
-  status: "Inactive",
-  taxStatus: "Complete",
-  updatedAt: "<value>",
+  status: "Active",
+  taxStatus: "Incomplete",
+  updatedAt: "1734869552267",
 };
 ```
 

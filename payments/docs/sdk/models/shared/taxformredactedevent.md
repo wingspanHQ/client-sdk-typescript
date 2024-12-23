@@ -6,9 +6,9 @@
 import { TaxFormRedactedEvent } from "@wingspan/payments/sdk/models/shared";
 
 let value: TaxFormRedactedEvent = {
-  eventType: "Mailed1099CopyReturnedToSender",
+  eventType: "PayerManuallyUpdatedStatus",
   timestamp: "<value>",
-  triggeredBy: "Payer",
+  triggeredBy: "System",
 };
 ```
 

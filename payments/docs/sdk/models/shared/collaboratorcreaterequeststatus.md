@@ -5,7 +5,7 @@
 ```typescript
 import { CollaboratorCreateRequestStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CollaboratorCreateRequestStatus = "Pending";
+let value: CollaboratorCreateRequestStatus = "Inactive";
 ```
 
 ## Values

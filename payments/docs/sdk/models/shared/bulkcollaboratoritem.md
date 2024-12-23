@@ -9,16 +9,16 @@ let value: BulkCollaboratorItem = {
   bulkCollaboratorBatchId: "<id>",
   bulkCollaboratorItemId: "<id>",
   clientId: "<id>",
-  collaboratorStatus: "Inactive",
-  createdAt: "<value>",
+  collaboratorStatus: "Active",
+  createdAt: "1705921205855",
   eventActors: {
     "key": "<value>",
   },
   labels: {
     "key": "<value>",
   },
-  status: "Pending",
-  updatedAt: "<value>",
+  status: "Open",
+  updatedAt: "1734850277106",
   userRoles: {
     ownerIds: [
       "<value>",

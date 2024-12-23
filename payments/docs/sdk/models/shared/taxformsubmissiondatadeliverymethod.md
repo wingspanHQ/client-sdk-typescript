@@ -5,7 +5,7 @@
 ```typescript
 import { TaxFormSubmissionDataDeliveryMethod } from "@wingspan/payments/sdk/models/shared";
 
-let value: TaxFormSubmissionDataDeliveryMethod = "Mail";
+let value: TaxFormSubmissionDataDeliveryMethod = "Electronic";
 ```
 
 ## Values

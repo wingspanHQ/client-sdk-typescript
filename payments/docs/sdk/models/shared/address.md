@@ -6,10 +6,10 @@
 import { Address } from "@wingspan/payments/sdk/models/shared";
 
 let value: Address = {
-  addressLine1: "604 Leuschke Port",
-  city: "East Gladys",
-  postalCode: "19548-4739",
-  state: "Ohio",
+  addressLine1: "1455 East Street",
+  city: "South Verlieberg",
+  postalCode: "54847-3966",
+  state: "Kentucky",
 };
 ```
 

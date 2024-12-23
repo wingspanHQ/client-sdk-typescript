@@ -6,7 +6,7 @@
 import { InvoiceRefundRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceRefundRequest = {
-  amount: 4235.88,
+  amount: 3884.04,
 };
 ```
 

@@ -7,7 +7,7 @@ import { InvoiceAttachmentFile } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceAttachmentFile = {
   fileName: "example.file",
-  fileUrl: "https://little-slide.biz/",
+  fileUrl: "https://grubby-iridescence.name/",
 };
 ```
 

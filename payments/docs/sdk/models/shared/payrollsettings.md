@@ -6,7 +6,7 @@
 import { PayrollSettings } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollSettings = {
-  status: "Active",
+  status: "Draft",
 };
 ```
 

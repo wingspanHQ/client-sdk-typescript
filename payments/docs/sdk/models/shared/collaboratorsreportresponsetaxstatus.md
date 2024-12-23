@@ -5,7 +5,7 @@
 ```typescript
 import { CollaboratorsReportResponseTaxStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CollaboratorsReportResponseTaxStatus = "Failed";
+let value: CollaboratorsReportResponseTaxStatus = "Incomplete";
 ```
 
 ## Values

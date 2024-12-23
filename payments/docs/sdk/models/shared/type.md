@@ -5,7 +5,7 @@
 ```typescript
 import { Type } from "@wingspan/payments/sdk/models/shared";
 
-let value: Type = "String";
+let value: Type = "Boolean";
 ```
 
 ## Values

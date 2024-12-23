@@ -5,7 +5,7 @@
 ```typescript
 import { CollaborationStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CollaborationStatus = "Inactive";
+let value: CollaborationStatus = "Pending";
 ```
 
 ## Values

@@ -5,7 +5,7 @@
 ```typescript
 import { BulkClientItemStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkClientItemStatus = "Processing";
+let value: BulkClientItemStatus = "Pending";
 ```
 
 ## Values

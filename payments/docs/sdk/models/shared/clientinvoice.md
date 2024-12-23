@@ -9,9 +9,9 @@ let value: ClientInvoice = {
   additionalRecipientEmails: [
     "<value>",
   ],
-  amount: 9958.15,
+  amount: 1858.98,
   client: {},
-  createdAt: "<value>",
+  createdAt: "1725188948303",
   currency: "USD",
   dueDate: "<value>",
   events: {},
@@ -19,28 +19,28 @@ let value: ClientInvoice = {
   invoiceNumber: "<value>",
   lineItems: [
     {
-      costPerUnit: 4714.57,
-      createdAt: "<value>",
+      costPerUnit: 2646.50,
+      createdAt: "1734132134169",
       labels: {
         "key": "<value>",
       },
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 680.93,
+      quantity: 6394.63,
       reimbursableExpense: false,
-      totalCost: 9438.51,
-      unit: "lux",
-      updatedAt: "<value>",
+      totalCost: 5206.78,
+      unit: "joule",
+      updatedAt: "1734898065417",
     },
   ],
   member: {},
   memberAcceptsPayments: false,
   memberAddress: {
-    addressLine1: "422 Julian Coves",
-    city: "Lake Monique",
-    postalCode: "46849",
-    state: "Indiana",
+    addressLine1: "98607 N Elm Street",
+    city: "North Nicola",
+    postalCode: "17096-5292",
+    state: "Tennessee",
   },
   memberClient: {
     achCreditAccount: {
@@ -52,8 +52,8 @@ let value: ClientInvoice = {
     },
     clientData: {},
     clientId: "<id>",
-    clientUserAccountType: "member",
-    createdAt: "<value>",
+    clientUserAccountType: "enterprise",
+    createdAt: "1728086745141",
     emailTo: "<value>",
     eventActors: {
       "key": "<value>",
@@ -78,8 +78,8 @@ let value: ClientInvoice = {
     parentMemberClientId: "<id>",
     payerPayeeId: "<id>",
     status: "Inactive",
-    taxStatus: "Failed",
-    updatedAt: "<value>",
+    taxStatus: "Complete",
+    updatedAt: "1734871965393",
     userRoles: {
       ownerIds: [
         "<value>",
@@ -91,13 +91,13 @@ let value: ClientInvoice = {
   },
   memberCompany: "<value>",
   memberEmail: "<value>",
-  memberLogoUrl: "https://entire-experience.net",
+  memberLogoUrl: "https://distorted-hierarchy.info/",
   memberName: "<value>",
-  memberPaymentsVersion: 7151.43,
+  memberPaymentsVersion: 1636.84,
   memberStripeAccountId: "<id>",
   projectName: "<value>",
   status: "Cancelled",
-  updatedAt: "<value>",
+  updatedAt: "1734853854970",
 };
 ```
 

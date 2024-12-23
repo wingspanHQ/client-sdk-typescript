@@ -5,7 +5,7 @@
 ```typescript
 import { DestinationType } from "@wingspan/payments/sdk/models/shared";
 
-let value: DestinationType = "Card";
+let value: DestinationType = "PaperCheck";
 ```
 
 ## Values

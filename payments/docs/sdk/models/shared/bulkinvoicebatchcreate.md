@@ -6,7 +6,7 @@
 import { BulkInvoiceBatchCreate } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkInvoiceBatchCreate = {
-  processingStrategy: "Merge",
+  processingStrategy: "Single",
 };
 ```
 

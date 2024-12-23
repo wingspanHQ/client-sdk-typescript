@@ -5,7 +5,7 @@
 ```typescript
 import { CollaboratorV2TaxStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: CollaboratorV2TaxStatus = "Complete";
+let value: CollaboratorV2TaxStatus = "Incomplete";
 ```
 
 ## Values

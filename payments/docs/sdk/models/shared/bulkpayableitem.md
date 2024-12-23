@@ -6,11 +6,11 @@
 import { BulkPayableItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: BulkPayableItem = {
-  amount: 7730.84,
+  amount: 9799.62,
   bulkPayableBatchId: "<id>",
   bulkPayableItemId: "<id>",
   clientId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1716743551652",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -22,7 +22,7 @@ let value: BulkPayableItem = {
   paidDate: "<value>",
   payableStatus: "Cancelled",
   status: "Open",
-  updatedAt: "<value>",
+  updatedAt: "1734854584422",
   userRoles: {
     ownerIds: [
       "<value>",

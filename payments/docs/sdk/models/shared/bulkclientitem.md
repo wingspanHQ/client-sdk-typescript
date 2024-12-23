@@ -8,8 +8,8 @@ import { BulkClientItem } from "@wingspan/payments/sdk/models/shared";
 let value: BulkClientItem = {
   bulkClientBatchId: "<id>",
   bulkClientItemId: "<id>",
-  clientStatus: "Inactive",
-  createdAt: "<value>",
+  clientStatus: "Active",
+  createdAt: "1726631597636",
   eventActors: {
     "key": "<value>",
   },
@@ -17,8 +17,8 @@ let value: BulkClientItem = {
     "key": "<value>",
   },
   memberId: "<id>",
-  status: "Pending",
-  updatedAt: "<value>",
+  status: "Open",
+  updatedAt: "1734883532995",
   userRoles: {
     ownerIds: [
       "<value>",

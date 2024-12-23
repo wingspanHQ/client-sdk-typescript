@@ -6,12 +6,12 @@
 import { CollaboratorV2FormW9Info } from "@wingspan/payments/sdk/models/shared";
 
 let value: CollaboratorV2FormW9Info = {
-  addressLine1: "19016 Shanny Rest",
-  city: "Longmont",
-  companyStructure: "LlcMultiMember",
-  country: "Mali",
-  postalCode: "52830-2384",
-  state: "Minnesota",
+  addressLine1: "14152 Carroll Wall",
+  city: "Hesperia",
+  companyStructure: "LlcSingleMember",
+  country: "Dominica",
+  postalCode: "06438",
+  state: "Oklahoma",
 };
 ```
 

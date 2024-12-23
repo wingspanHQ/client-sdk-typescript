@@ -5,7 +5,7 @@
 ```typescript
 import { ReimbursableExpenses } from "@wingspan/payments/sdk/models/shared";
 
-let value: ReimbursableExpenses = "Include";
+let value: ReimbursableExpenses = "Exclude";
 ```
 
 ## Values

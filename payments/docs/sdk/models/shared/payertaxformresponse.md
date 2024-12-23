@@ -7,9 +7,9 @@ import { PayerTaxFormResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayerTaxFormResponse = {
   activeSubmissionId: "<id>",
-  adjustments: 2097.50,
+  adjustments: 7908.40,
   clientId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1706448201069",
   data: {},
   deliveryMethod: "Electronic",
   deprecatedTaxForm: {},
@@ -18,7 +18,7 @@ let value: PayerTaxFormResponse = {
   },
   eventHistory: [
     {
-      eventType: "FormRejectedByIRS",
+      eventType: "FormSubmittedToIRS",
       timestamp: "<value>",
       triggeredBy: "System",
     },
@@ -29,12 +29,12 @@ let value: PayerTaxFormResponse = {
   },
   memberId: "<id>",
   payerPayeeId: "<id>",
-  paymentProcessingFees: 6719.57,
-  platformIncome: 9488.61,
+  paymentProcessingFees: 908.86,
+  platformIncome: 2277.60,
   recipientConfirmedW9Info: false,
   recipientReadyToSubmitW9: false,
   recipientSyncEnabled: false,
-  status: "Pending",
+  status: "AcceptedByIrs",
   submissions: [
     {
       correctionType: "Type1",
@@ -48,7 +48,7 @@ let value: PayerTaxFormResponse = {
   ],
   taxFormId: "<id>",
   type: "Form1099Nec",
-  updatedAt: "<value>",
+  updatedAt: "1734842679206",
   userRoles: {
     ownerIds: [
       "<value>",
@@ -57,7 +57,7 @@ let value: PayerTaxFormResponse = {
       "<value>",
     ],
   },
-  year: 9627.70,
+  year: 9805.80,
 };
 ```
 

@@ -5,7 +5,7 @@
 ```typescript
 import { TinType } from "@wingspan/payments/sdk/models/shared";
 
-let value: TinType = "Individual";
+let value: TinType = "Business";
 ```
 
 ## Values

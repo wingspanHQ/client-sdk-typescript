@@ -66,6 +66,7 @@ export async function deprecatedDeleteInstantPayout(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "DELETE",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,

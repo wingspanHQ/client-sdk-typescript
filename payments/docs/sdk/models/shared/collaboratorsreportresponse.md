@@ -10,11 +10,11 @@ let value: CollaboratorsReportResponse = {
   collaboratorGroups: [
     {
       collaboratorGroupId: "<id>",
-      description: "capsize unfinished boo upside-down fruitful",
+      description: "warm remarkable institutionalize gosh longboat synthesise",
       name: "<value>",
     },
   ],
-  createdAt: "<value>",
+  createdAt: "1734390104987",
   inviteEmail: "<value>",
   member: {
     user: {},
@@ -25,9 +25,9 @@ let value: CollaboratorsReportResponse = {
     incomeAndExpenses: false,
     taxWithholdings: false,
   },
-  status: "Pending",
-  taxStatus: "Incomplete",
-  updatedAt: "<value>",
+  status: "Active",
+  taxStatus: "Complete",
+  updatedAt: "1734840848117",
 };
 ```
 

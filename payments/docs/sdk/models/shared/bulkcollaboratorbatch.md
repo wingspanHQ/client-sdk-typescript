@@ -11,7 +11,7 @@ let value: BulkCollaboratorBatch = {
     user: {},
   },
   clientId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1733629057713",
   eventActors: {
     "key": "<value>",
   },
@@ -19,7 +19,7 @@ let value: BulkCollaboratorBatch = {
     "key": "<value>",
   },
   status: "Open",
-  updatedAt: "<value>",
+  updatedAt: "1734906070991",
   userRoles: {
     ownerIds: [
       "<value>",

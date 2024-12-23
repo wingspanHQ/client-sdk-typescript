@@ -9,8 +9,7 @@ let value: CollaboratorGroupResponse = {
   clientId: "<id>",
   collaboratorGroupId: "<id>",
   defaultGroup: false,
-  description:
-    "so whose till anaesthetise slink brook joyously versus hm flawed",
+  description: "unwelcome aftermath grown whereas",
   name: "<value>",
 };
 ```

@@ -6,10 +6,9 @@
 import { InvoiceCollaborator } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaborator = {
-  amount: 1478.01,
-  currency: "USD",
-  description:
-    "lively perfectly starch state belabor zowie incidentally nifty and",
+  amount: 2168.70,
+  currency: "CAD",
+  description: "highly experience confiscate",
   memberClientId: "<id>",
 };
 ```

@@ -7,43 +7,43 @@ import { ClientInvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceTemplate = {
   clientId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1727925265684",
   invoiceData: {
     additionalRecipientEmails: [
       "<value>",
     ],
-    amount: 7239.41,
+    amount: 8483.45,
     client: {},
-    createdAt: "<value>",
-    currency: "CAD",
+    createdAt: "1718847430994",
+    currency: "USD",
     dueDate: "<value>",
     events: {},
     invoiceId: "<id>",
     invoiceNumber: "<value>",
     lineItems: [
       {
-        costPerUnit: 9222.99,
-        createdAt: "<value>",
+        costPerUnit: 9958.15,
+        createdAt: "1707460912406",
         labels: {
           "key": "<value>",
         },
         labelsBak2: {
           "key": "<value>",
         },
-        quantity: 4923.61,
+        quantity: 4714.57,
         reimbursableExpense: false,
-        totalCost: 8738.32,
-        unit: "siemens",
-        updatedAt: "<value>",
+        totalCost: 680.93,
+        unit: "lux",
+        updatedAt: "1734914517809",
       },
     ],
     member: {},
     memberAcceptsPayments: false,
     memberAddress: {
-      addressLine1: "70325 Broadway Avenue",
-      city: "Treverburgh",
-      postalCode: "50470-8502",
-      state: "West Virginia",
+      addressLine1: "422 Julian Coves",
+      city: "Lake Monique",
+      postalCode: "46849",
+      state: "Indiana",
     },
     memberClient: {
       achCreditAccount: {
@@ -55,8 +55,8 @@ let value: ClientInvoiceTemplate = {
       },
       clientData: {},
       clientId: "<id>",
-      clientUserAccountType: "enterprise",
-      createdAt: "<value>",
+      clientUserAccountType: "member",
+      createdAt: "1718637179122",
       emailTo: "<value>",
       eventActors: {
         "key": "<value>",
@@ -81,8 +81,8 @@ let value: ClientInvoiceTemplate = {
       parentMemberClientId: "<id>",
       payerPayeeId: "<id>",
       status: "Active",
-      taxStatus: "Failed",
-      updatedAt: "<value>",
+      taxStatus: "Incomplete",
+      updatedAt: "1734851260595",
       userRoles: {
         ownerIds: [
           "<value>",
@@ -94,25 +94,25 @@ let value: ClientInvoiceTemplate = {
     },
     memberCompany: "<value>",
     memberEmail: "<value>",
-    memberLogoUrl: "https://ajar-handover.info/",
+    memberLogoUrl: "https://squiggly-provider.name/",
     memberName: "<value>",
-    memberPaymentsVersion: 2436.78,
+    memberPaymentsVersion: 7049.48,
     memberStripeAccountId: "<id>",
     projectName: "<value>",
-    status: "Pending",
-    updatedAt: "<value>",
+    status: "Overdue",
+    updatedAt: "1734831608053",
   },
   invoiceTemplateId: "<id>",
   memberId: "<id>",
   nextInvoiceDate: "<value>",
   scheduleDates: [
     {
-      date: "2024-09-16",
-      status: "Pending",
+      date: "2023-12-28",
+      status: "Skipped",
     },
   ],
-  status: "Expired",
-  updatedAt: "<value>",
+  status: "Active",
+  updatedAt: "1734835562142",
 };
 ```
 

@@ -7,8 +7,8 @@ import { InstantPayoutResponse } from "@wingspan/payments/sdk/models/shared";
 
 let value: InstantPayoutResponse = {
   instantPayoutAccount: {
-    country: "Cyprus",
-    currency: "CAD",
+    country: "Dominican Republic",
+    currency: "USD",
     holderName: "<value>",
     numbers: {},
     type: "Card",

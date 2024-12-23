@@ -5,7 +5,7 @@
 ```typescript
 import { BulkCollaboratorItemCreateCollaboratorStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: BulkCollaboratorItemCreateCollaboratorStatus = "Pending";
+let value: BulkCollaboratorItemCreateCollaboratorStatus = "Active";
 ```
 
 ## Values

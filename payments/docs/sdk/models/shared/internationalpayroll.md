@@ -5,7 +5,7 @@
 ```typescript
 import { InternationalPayroll } from "@wingspan/payments/sdk/models/shared";
 
-let value: InternationalPayroll = "None";
+let value: InternationalPayroll = "All";
 ```
 
 ## Values

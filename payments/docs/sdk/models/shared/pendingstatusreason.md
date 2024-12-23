@@ -5,8 +5,7 @@
 ```typescript
 import { PendingStatusReason } from "@wingspan/payments/sdk/models/shared";
 
-let value: PendingStatusReason =
-  "CollaboratorMissingCustomEligibilityRequirement";
+let value: PendingStatusReason = "CollaboratorMissingEligibilityRequirement";
 ```
 
 ## Values

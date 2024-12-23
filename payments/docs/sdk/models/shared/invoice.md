@@ -6,10 +6,10 @@
 import { Invoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: Invoice = {
-  amount: 9227.57,
+  amount: 4030.26,
   client: {},
-  createdAt: "<value>",
-  currency: "USD",
+  createdAt: "1726883214858",
+  currency: "CAD",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -23,34 +23,34 @@ let value: Invoice = {
   },
   lineItems: [
     {
-      costPerUnit: 4530.94,
-      createdAt: "<value>",
+      costPerUnit: 4876.76,
+      createdAt: "1703398766525",
       labels: {
         "key": "<value>",
       },
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 4939.58,
+      quantity: 4254.02,
       reimbursableExpense: false,
-      totalCost: 7781.72,
-      unit: "siemens",
-      updatedAt: "<value>",
+      totalCost: 635.54,
+      unit: "kilogram",
+      updatedAt: "1734911706882",
     },
   ],
   member: {},
   memberAddress: {
-    addressLine1: "48811 Arch Junctions",
-    city: "New Delbertstead",
-    postalCode: "99322",
-    state: "Missouri",
+    addressLine1: "88161 Prospect Road",
+    city: "Las Cruces",
+    postalCode: "02741-1848",
+    state: "Oregon",
   },
   memberClientId: "<id>",
   memberId: "<id>",
   payments: [
     {
-      amount: 399.93,
-      createdAt: "<value>",
+      amount: 4097.26,
+      createdAt: "1715160591949",
       events: {},
       labels: {
         "key": "<value>",
@@ -59,12 +59,12 @@ let value: Invoice = {
       sourceId: "<id>",
       sourceMetadata: {},
       sourceType: "Card",
-      status: "Pending",
-      updatedAt: "<value>",
+      status: "Returned",
+      updatedAt: "1734894849113",
     },
   ],
-  status: "Overdue",
-  updatedAt: "<value>",
+  status: "Draft",
+  updatedAt: "1734891123525",
   userRoles: {
     ownerIds: [
       "<value>",

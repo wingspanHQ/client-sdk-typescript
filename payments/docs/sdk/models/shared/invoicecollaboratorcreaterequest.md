@@ -6,9 +6,9 @@
 import { InvoiceCollaboratorCreateRequest } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceCollaboratorCreateRequest = {
-  amount: 2176.63,
+  amount: 1764.99,
   currency: "CAD",
-  description: "uniform from psst toothpick",
+  description: "toothpick tall what abaft furthermore lest paintwork",
   memberClientId: "<id>",
 };
 ```

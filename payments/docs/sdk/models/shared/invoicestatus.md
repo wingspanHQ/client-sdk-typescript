@@ -5,7 +5,7 @@
 ```typescript
 import { InvoiceStatus } from "@wingspan/payments/sdk/models/shared";
 
-let value: InvoiceStatus = "Paid";
+let value: InvoiceStatus = "Draft";
 ```
 
 ## Values

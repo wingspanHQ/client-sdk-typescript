@@ -6,14 +6,14 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-  amount: 4016.88,
+  amount: 1512.30,
   attachments: {},
   client: {},
   clientId: "<id>",
   collaboratorId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1728782612225",
   creditFeeHandling: {},
-  currency: "USD",
+  currency: "CAD",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -33,35 +33,35 @@ let value: PayableSchema = {
   },
   lineItems: [
     {
-      costPerUnit: 626.89,
-      createdAt: "<value>",
+      costPerUnit: 5692.87,
+      createdAt: "1719530526551",
       labels: {
         "key": "<value>",
       },
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 2781.17,
+      quantity: 9717.63,
       reimbursableExpense: false,
-      totalCost: 1693.13,
-      unit: "lux",
-      updatedAt: "<value>",
+      totalCost: 3638.45,
+      unit: "steradian",
+      updatedAt: "1734879126464",
     },
   ],
   member: {},
   memberAddress: {
-    addressLine1: "85559 Schaefer Motorway",
-    city: "Fort Lavina",
-    postalCode: "47692",
-    state: "Pennsylvania",
+    addressLine1: "9514 S College Street",
+    city: "Durham",
+    postalCode: "45998-3864",
+    state: "Alaska",
   },
   memberId: "<id>",
   notificationPreferences: {
     sendReminders: false,
   },
   payableId: "<id>",
-  status: "Cancelled",
-  updatedAt: "<value>",
+  status: "PaymentInTransit",
+  updatedAt: "1734874531030",
   userRoles: {
     ownerIds: [
       "<value>",

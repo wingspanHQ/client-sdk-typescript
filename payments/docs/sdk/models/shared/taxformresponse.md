@@ -8,9 +8,9 @@
 ```typescript
 const value: shared.PayerTaxFormResponse = {
   activeSubmissionId: "<id>",
-  adjustments: 1046.28,
+  adjustments: 302.35,
   clientId: "<id>",
-  createdAt: "<value>",
+  createdAt: "1725782729754",
   data: {},
   deliveryMethod: "Electronic",
   deprecatedTaxForm: {},
@@ -19,9 +19,9 @@ const value: shared.PayerTaxFormResponse = {
   },
   eventHistory: [
     {
-      eventType: "Emailed1099CopyDelivered",
+      eventType: "TINVerificationRequested",
       timestamp: "<value>",
-      triggeredBy: "System",
+      triggeredBy: "Payee",
     },
   ],
   filingStateCode: "<value>",
@@ -30,26 +30,26 @@ const value: shared.PayerTaxFormResponse = {
   },
   memberId: "<id>",
   payerPayeeId: "<id>",
-  paymentProcessingFees: 6223.84,
-  platformIncome: 7105.28,
+  paymentProcessingFees: 9221.11,
+  platformIncome: 894.95,
   recipientConfirmedW9Info: false,
   recipientReadyToSubmitW9: false,
   recipientSyncEnabled: false,
-  status: "ReadyToSubmitToIrs",
+  status: "AcceptedByIrs",
   submissions: [
     {
-      correctionType: "Type1",
-      deliveryMethod: "Mail",
+      correctionType: "None",
+      deliveryMethod: "Electronic",
       externalDocumentId: "<id>",
       isCorrected: false,
-      status: "Ineligible",
+      status: "RejectedByIrs",
       submissionData: {},
       submissionId: "<id>",
     },
   ],
   taxFormId: "<id>",
   type: "Form1099Nec",
-  updatedAt: "<value>",
+  updatedAt: "1734855259422",
   userRoles: {
     ownerIds: [
       "<value>",
@@ -58,7 +58,7 @@ const value: shared.PayerTaxFormResponse = {
       "<value>",
     ],
   },
-  year: 5436.78,
+  year: 2097.50,
 };
 ```
 
@@ -68,20 +68,20 @@ const value: shared.PayerTaxFormResponse = {
 const value: shared.PayerTaxFormResponse[] = [
   {
     activeSubmissionId: "<id>",
-    adjustments: 2827.00,
+    adjustments: 1157.03,
     clientId: "<id>",
-    createdAt: "<value>",
+    createdAt: "1721582242395",
     data: {},
-    deliveryMethod: "Electronic",
+    deliveryMethod: "Mail",
     deprecatedTaxForm: {},
     eventActors: {
       "key": "<value>",
     },
     eventHistory: [
       {
-        eventType: "CorrectionRejected",
+        eventType: "CorrectionAccepted",
         timestamp: "<value>",
-        triggeredBy: "Payer",
+        triggeredBy: "System",
       },
     ],
     filingStateCode: "<value>",
@@ -90,16 +90,16 @@ const value: shared.PayerTaxFormResponse[] = [
     },
     memberId: "<id>",
     payerPayeeId: "<id>",
-    paymentProcessingFees: 3726.79,
-    platformIncome: 5305.37,
+    paymentProcessingFees: 27.03,
+    platformIncome: 6471.97,
     recipientConfirmedW9Info: false,
     recipientReadyToSubmitW9: false,
     recipientSyncEnabled: false,
-    status: "Ineligible",
+    status: "RejectedByIrs",
     submissions: [
       {
-        correctionType: "None",
-        deliveryMethod: "Electronic",
+        correctionType: "Type1",
+        deliveryMethod: "Mail",
         externalDocumentId: "<id>",
         isCorrected: false,
         status: "Pending",
@@ -109,7 +109,7 @@ const value: shared.PayerTaxFormResponse[] = [
     ],
     taxFormId: "<id>",
     type: "Form1099Nec",
-    updatedAt: "<value>",
+    updatedAt: "1734891323628",
     userRoles: {
       ownerIds: [
         "<value>",
@@ -118,7 +118,7 @@ const value: shared.PayerTaxFormResponse[] = [
         "<value>",
       ],
     },
-    year: 3426.11,
+    year: 8136.79,
   },
 ];
 ```

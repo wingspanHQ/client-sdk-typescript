@@ -7,17 +7,17 @@ import { CardDetails } from "@wingspan/payments/sdk/models/shared";
 
 let value: CardDetails = {
   address: {
-    addressLine1: "621 West View",
-    city: "Landenhaven",
-    postalCode: "95898",
-    state: "Delaware",
+    addressLine1: "27945 Market Square",
+    city: "Montebello",
+    postalCode: "98163-0428",
+    state: "Alaska",
   },
   brand: "<value>",
-  createdAt: "<value>",
+  createdAt: "1733624026021",
   expirationDate: "<value>",
   last4Digits: "<value>",
   name: "<value>",
-  status: "Frozen",
+  status: "Stolen",
   type: "businessDebitCard",
 };
 ```
