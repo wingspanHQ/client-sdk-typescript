@@ -7,14 +7,14 @@ import { InvoiceRefundDestination } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceRefundDestination = {
   amount: 1403.16,
-  createdAt: "1714702823742",
+  createdAt: "1715307631947",
   destinationType: "WeGift",
   events: {},
   labels: {
     "key": "<value>",
   },
   refundType: "Card",
-  updatedAt: "1734855585824",
+  updatedAt: "1735460394029",
 };
 ```
 

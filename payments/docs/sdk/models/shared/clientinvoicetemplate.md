@@ -7,14 +7,14 @@ import { ClientInvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceTemplate = {
   clientId: "<id>",
-  createdAt: "1727925265684",
+  createdAt: "1728530073900",
   invoiceData: {
     additionalRecipientEmails: [
       "<value>",
     ],
     amount: 8483.45,
     client: {},
-    createdAt: "1718847430994",
+    createdAt: "1719452239208",
     currency: "USD",
     dueDate: "<value>",
     events: {},
@@ -23,7 +23,7 @@ let value: ClientInvoiceTemplate = {
     lineItems: [
       {
         costPerUnit: 9958.15,
-        createdAt: "1707460912406",
+        createdAt: "1708065720618",
         labels: {
           "key": "<value>",
         },
@@ -34,7 +34,7 @@ let value: ClientInvoiceTemplate = {
         reimbursableExpense: false,
         totalCost: 680.93,
         unit: "lux",
-        updatedAt: "1734914517809",
+        updatedAt: "1735519326019",
       },
     ],
     member: {},
@@ -56,7 +56,7 @@ let value: ClientInvoiceTemplate = {
       clientData: {},
       clientId: "<id>",
       clientUserAccountType: "member",
-      createdAt: "1718637179122",
+      createdAt: "1719241987328",
       emailTo: "<value>",
       eventActors: {
         "key": "<value>",
@@ -82,7 +82,7 @@ let value: ClientInvoiceTemplate = {
       payerPayeeId: "<id>",
       status: "Active",
       taxStatus: "Incomplete",
-      updatedAt: "1734851260595",
+      updatedAt: "1735456068800",
       userRoles: {
         ownerIds: [
           "<value>",
@@ -100,19 +100,19 @@ let value: ClientInvoiceTemplate = {
     memberStripeAccountId: "<id>",
     projectName: "<value>",
     status: "Overdue",
-    updatedAt: "1734831608053",
+    updatedAt: "1735436416258",
   },
   invoiceTemplateId: "<id>",
   memberId: "<id>",
   nextInvoiceDate: "<value>",
   scheduleDates: [
     {
-      date: "2023-12-28",
+      date: "2024-01-04",
       status: "Skipped",
     },
   ],
   status: "Active",
-  updatedAt: "1734835562142",
+  updatedAt: "1735440370347",
 };
 ```
 

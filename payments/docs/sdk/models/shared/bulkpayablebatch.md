@@ -11,7 +11,7 @@ let value: BulkPayableBatch = {
     user: {},
   },
   clientId: "<id>",
-  createdAt: "1716129774976",
+  createdAt: "1716734583189",
   eventActors: {
     "key": "<value>",
   },
@@ -20,7 +20,7 @@ let value: BulkPayableBatch = {
   },
   processingStrategy: "Single",
   status: "Pending",
-  updatedAt: "1734847613438",
+  updatedAt: "1735452421650",
   userRoles: {
     ownerIds: [
       "<value>",

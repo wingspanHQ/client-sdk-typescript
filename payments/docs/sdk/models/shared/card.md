@@ -7,7 +7,7 @@ import { Card } from "@wingspan/payments/sdk/models/shared";
 
 let value: Card = {
   brand: "<value>",
-  createdAt: "1713057110837",
+  createdAt: "1713661919049",
   expirationDate: "<value>",
   last4Digits: "<value>",
   status: "Frozen",

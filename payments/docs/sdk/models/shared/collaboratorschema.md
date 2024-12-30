@@ -12,7 +12,7 @@ let value: CollaboratorSchema = {
   },
   clientId: "<id>",
   collaboratorId: "<id>",
-  createdAt: "1707656204720",
+  createdAt: "1708261012962",
   eventActors: {
     "key": "<value>",
   },
@@ -30,7 +30,7 @@ let value: CollaboratorSchema = {
   memberId: "<id>",
   status: "Pending",
   taxStatus: "Incomplete",
-  updatedAt: "1734888575914",
+  updatedAt: "1735493384155",
   userRoles: {
     ownerIds: [
       "<value>",

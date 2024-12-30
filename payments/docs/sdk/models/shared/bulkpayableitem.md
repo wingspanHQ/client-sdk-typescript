@@ -10,7 +10,7 @@ let value: BulkPayableItem = {
   bulkPayableBatchId: "<id>",
   bulkPayableItemId: "<id>",
   clientId: "<id>",
-  createdAt: "1716743551652",
+  createdAt: "1717348359887",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -22,7 +22,7 @@ let value: BulkPayableItem = {
   paidDate: "<value>",
   payableStatus: "Cancelled",
   status: "Open",
-  updatedAt: "1734854584422",
+  updatedAt: "1735459392658",
   userRoles: {
     ownerIds: [
       "<value>",

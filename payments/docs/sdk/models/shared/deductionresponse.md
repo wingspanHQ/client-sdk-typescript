@@ -14,7 +14,7 @@ let value: DeductionResponse = {
     },
   ],
   clientId: "<id>",
-  createdAt: "1704857633941",
+  createdAt: "1705462442141",
   currency: "CAD",
   deductionId: "<id>",
   eventActors: {
@@ -29,7 +29,7 @@ let value: DeductionResponse = {
   startDate: "<value>",
   status: "Pending",
   type: "PostPayment",
-  updatedAt: "1734838179039",
+  updatedAt: "1735442987239",
   userRoles: {
     ownerIds: [
       "<value>",

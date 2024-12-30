@@ -17,7 +17,7 @@ let value: CollaboratorV2 = {
       status: "Inactive",
     },
   ],
-  createdAt: "1717402053111",
+  createdAt: "1718006861349",
   eventActors: {
     "key": "<value>",
   },
@@ -45,7 +45,7 @@ let value: CollaboratorV2 = {
   primaryCollaborationId: "<id>",
   status: "Pending",
   taxStatus: "Incomplete",
-  updatedAt: "1734839997296",
+  updatedAt: "1735444805534",
   userRoles: {
     ownerIds: [
       "<value>",
