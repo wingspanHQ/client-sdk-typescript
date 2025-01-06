@@ -9,7 +9,7 @@ let value: PayerTaxFormResponse = {
   activeSubmissionId: "<id>",
   adjustments: 7908.40,
   clientId: "<id>",
-  createdAt: "1707053009308",
+  createdAt: "1707657813984",
   data: {},
   deliveryMethod: "Electronic",
   deprecatedTaxForm: {},
@@ -48,7 +48,7 @@ let value: PayerTaxFormResponse = {
   ],
   taxFormId: "<id>",
   type: "Form1099Nec",
-  updatedAt: "1735447487446",
+  updatedAt: "1736052292121",
   userRoles: {
     ownerIds: [
       "<value>",

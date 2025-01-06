@@ -8,7 +8,7 @@ import { PayableAgingReportResponse } from "@wingspan/payments/sdk/models/shared
 let value: PayableAgingReportResponse = {
   ageGroup: "<value>",
   amount: 9792.70,
-  createdAt: "1724473924677",
+  createdAt: "1725078729398",
   currency: "Hryvnia",
   dueDate: "<value>",
   invoiceId: "<id>",
@@ -21,7 +21,7 @@ let value: PayableAgingReportResponse = {
   memberId: "<id>",
   receiptPdf: "<value>",
   status: "Cancelled",
-  updatedAt: "1735500031861",
+  updatedAt: "1736104836582",
 };
 ```
 

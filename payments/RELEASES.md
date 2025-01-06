@@ -278,3 +278,13 @@ Based on:
 - [typescript v2.8.7] payments
 ### Releases
 - [NPM v2.8.7] https://www.npmjs.com/package/@wingspan/payments/v/2.8.7 - payments
+
+## 2025-01-06 01:32:18
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0-oas3.1 ./openapi/payment_speakeasy_edit.yaml
+- Speakeasy CLI 1.462.2 (2.486.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v2.8.8] payments
+### Releases
+- [NPM v2.8.8] https://www.npmjs.com/package/@wingspan/payments/v/2.8.8 - payments

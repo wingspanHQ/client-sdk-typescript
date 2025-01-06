@@ -10,7 +10,7 @@ let value: BulkCollaboratorItem = {
   bulkCollaboratorItemId: "<id>",
   clientId: "<id>",
   collaboratorStatus: "Active",
-  createdAt: "1706526014056",
+  createdAt: "1707130818773",
   eventActors: {
     "key": "<value>",
   },
@@ -18,7 +18,7 @@ let value: BulkCollaboratorItem = {
     "key": "<value>",
   },
   status: "Open",
-  updatedAt: "1735455085307",
+  updatedAt: "1736059890024",
   userRoles: {
     ownerIds: [
       "<value>",
