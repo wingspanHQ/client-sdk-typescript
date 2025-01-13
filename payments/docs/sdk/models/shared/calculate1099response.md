@@ -17,7 +17,7 @@ let value: Calculate1099Response = {
     clientData: {},
     clientId: "<id>",
     clientUserAccountType: "member",
-    createdAt: "1732828049298",
+    createdAt: "1733432852574",
     emailTo: "<value>",
     eventActors: {
       "key": "<value>",
@@ -43,7 +43,7 @@ let value: Calculate1099Response = {
     payerPayeeId: "<id>",
     status: "Pending",
     taxStatus: "Pending",
-    updatedAt: "1736064505430",
+    updatedAt: "1736669308706",
     userRoles: {
       ownerIds: [
         "<value>",

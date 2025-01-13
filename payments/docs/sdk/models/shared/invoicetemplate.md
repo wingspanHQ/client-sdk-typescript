@@ -6,14 +6,14 @@
 import { InvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: InvoiceTemplate = {
-  createdAt: "1731453796891",
+  createdAt: "1732058600213",
   eventActors: {
     "key": "<value>",
   },
   invoiceData: {
     amount: 9623.95,
     client: {},
-    createdAt: "1708076593232",
+    createdAt: "1708681396554",
     currency: "CAD",
     dueDate: "<value>",
     eventActors: {
@@ -29,7 +29,7 @@ let value: InvoiceTemplate = {
     lineItems: [
       {
         costPerUnit: 9979.94,
-        createdAt: "1735745234137",
+        createdAt: "1736350037459",
         labels: {
           "key": "<value>",
         },
@@ -40,7 +40,7 @@ let value: InvoiceTemplate = {
         reimbursableExpense: false,
         totalCost: 1280.21,
         unit: "tesla",
-        updatedAt: "1736040940663",
+        updatedAt: "1736645743985",
       },
     ],
     member: {},
@@ -55,7 +55,7 @@ let value: InvoiceTemplate = {
     payments: [
       {
         amount: 7064.11,
-        createdAt: "1705366223296",
+        createdAt: "1705971026618",
         events: {},
         labels: {
           "key": "<value>",
@@ -65,11 +65,11 @@ let value: InvoiceTemplate = {
         sourceMetadata: {},
         sourceType: "Card",
         status: "Failed",
-        updatedAt: "1736063978475",
+        updatedAt: "1736668781797",
       },
     ],
     status: "PaymentInTransit",
-    updatedAt: "1736123322438",
+    updatedAt: "1736728125761",
     userRoles: {
       ownerIds: [
         "<value>",
@@ -85,7 +85,7 @@ let value: InvoiceTemplate = {
   },
   memberId: "<id>",
   status: "Draft",
-  updatedAt: "1736112197435",
+  updatedAt: "1736717000757",
   userRoles: {
     ownerIds: [
       "<value>",

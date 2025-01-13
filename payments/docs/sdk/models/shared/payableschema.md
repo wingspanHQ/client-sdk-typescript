@@ -11,7 +11,7 @@ let value: PayableSchema = {
   client: {},
   clientId: "<id>",
   collaboratorId: "<id>",
-  createdAt: "1729992225147",
+  createdAt: "1730597028476",
   creditFeeHandling: {},
   currency: "CAD",
   dueDate: "<value>",
@@ -34,7 +34,7 @@ let value: PayableSchema = {
   lineItems: [
     {
       costPerUnit: 5692.87,
-      createdAt: "1720740139473",
+      createdAt: "1721344942802",
       labels: {
         "key": "<value>",
       },
@@ -45,7 +45,7 @@ let value: PayableSchema = {
       reimbursableExpense: false,
       totalCost: 3638.45,
       unit: "steradian",
-      updatedAt: "1736088739386",
+      updatedAt: "1736693542715",
     },
   ],
   member: {},
@@ -61,7 +61,7 @@ let value: PayableSchema = {
   },
   payableId: "<id>",
   status: "PaymentInTransit",
-  updatedAt: "1736084143952",
+  updatedAt: "1736688947281",
   userRoles: {
     ownerIds: [
       "<value>",

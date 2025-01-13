@@ -9,7 +9,7 @@ let value: BulkInvoiceItem = {
   amount: 8562.76,
   bulkInvoiceBatchId: "<id>",
   bulkInvoiceItemId: "<id>",
-  createdAt: "1709703785996",
+  createdAt: "1710308589292",
   dueDate: "<value>",
   eventActors: {
     "key": "<value>",
@@ -22,7 +22,7 @@ let value: BulkInvoiceItem = {
   memberId: "<id>",
   paidDate: "<value>",
   status: "Complete",
-  updatedAt: "1736080194949",
+  updatedAt: "1736684998244",
   userRoles: {
     ownerIds: [
       "<value>",

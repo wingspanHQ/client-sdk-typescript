@@ -7,7 +7,7 @@ import { PayrollReportInvoice } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportInvoice = {
   amount: 3966.10,
-  createdAt: "1707955500238",
+  createdAt: "1708560303612",
   currency: "Iceland Krona",
   dueDate: "<value>",
   invoiceId: "<id>",
@@ -16,7 +16,7 @@ let value: PayrollReportInvoice = {
   lineItems: [
     {
       costPerUnit: 2961.28,
-      createdAt: "1720151244173",
+      createdAt: "1720756047548",
       index: 6570.44,
       labels: {
         "key": "<value>",
@@ -28,7 +28,7 @@ let value: PayrollReportInvoice = {
       reimbursableExpense: false,
       totalCost: 9351.61,
       unit: "weber",
-      updatedAt: "1736101412867",
+      updatedAt: "1736706216242",
     },
   ],
   member: {
@@ -38,7 +38,7 @@ let value: PayrollReportInvoice = {
   memberId: "<id>",
   receiptPdf: "<value>",
   status: "Cancelled",
-  updatedAt: "1736052140355",
+  updatedAt: "1736656943730",
 };
 ```
 

@@ -3,10 +3,10 @@ id: 2befb1f1-77e7-4329-98ee-24b887e22472
 management:
   docChecksum: 55a65721cde4ca4bef725ba04f5e3f8b
   docVersion: 1.0.0-oas3.1
-  speakeasyVersion: 1.462.2
-  generationVersion: 2.486.1
-  releaseVersion: 2.8.8
-  configChecksum: 0451a580ea4083d65d2bafacf010748a
+  speakeasyVersion: 1.468.2
+  generationVersion: 2.493.4
+  releaseVersion: 2.8.9
+  configChecksum: 4382e0e6a9037c8b33d8d7d5abe802c1
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: payments
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/payments
@@ -34,7 +34,6 @@ generatedFiles:
   - .eslintrc.cjs
   - .gitattributes
   - .npmignore
-  - CONTRIBUTING.md
   - FUNCTIONS.md
   - RUNTIMES.md
   - USAGE.md
@@ -1618,7 +1617,7 @@ examples:
           taxFormId: "<value>"
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<id>", "adjustments": "6384.24", "clientId": "<id>", "createdAt": "1717756095373", "deliveryMethod": "Electronic", "eventActors": {}, "eventHistory": [{"eventType": "Mailed1099CopyReturnedToSender", "timestamp": "<value>", "triggeredBy": "Payer"}, {"eventType": "RecipientSyncEnabled", "timestamp": "<value>", "triggeredBy": "Payer"}, {"eventType": "Emailed1099CopyOpened", "timestamp": "<value>", "triggeredBy": "System"}], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "7524.37", "platformIncome": "9574.08", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": true, "status": "ReadyToSubmitToIrs", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736046341133", "userRoles": {"ownerIds": ["<value>"], "viewerIds": []}, "year": "738.99"}
+          application/json: {"activeSubmissionId": "<id>", "adjustments": "6384.24", "clientId": "<id>", "createdAt": "1718360898405", "deliveryMethod": "Electronic", "eventActors": {}, "eventHistory": [{"eventType": "Mailed1099CopyReturnedToSender", "timestamp": "<value>", "triggeredBy": "Payer"}, {"eventType": "RecipientSyncEnabled", "timestamp": "<value>", "triggeredBy": "Payer"}, {"eventType": "Emailed1099CopyOpened", "timestamp": "<value>", "triggeredBy": "System"}], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "7524.37", "platformIncome": "9574.08", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": true, "status": "ReadyToSubmitToIrs", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736651144165", "userRoles": {"ownerIds": ["<value>"], "viewerIds": []}, "year": "738.99"}
   createCalculation1099Batch:
     speakeasy-default-create-calculation1099-batch:
       responses:
@@ -1639,12 +1638,12 @@ examples:
           taxFormId: "<value>"
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<id>", "adjustments": "1410.42", "clientId": "<id>", "createdAt": "1734911548896", "deliveryMethod": "Electronic", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "eventHistory": [{"eventType": "CorrectionAccepted", "timestamp": "<value>", "triggeredBy": "Payee"}, {"eventType": "FormSubmittedToIRS", "timestamp": "<value>", "triggeredBy": "Payee"}], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "3326.55", "platformIncome": "7264.41", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": false, "recipientSyncEnabled": false, "status": "AcceptedByIrs", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736064175512", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "9870.48"}
+          application/json: {"activeSubmissionId": "<id>", "adjustments": "1410.42", "clientId": "<id>", "createdAt": "1735516351985", "deliveryMethod": "Electronic", "eventActors": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "eventHistory": [{"eventType": "CorrectionAccepted", "timestamp": "<value>", "triggeredBy": "Payee"}, {"eventType": "FormSubmittedToIRS", "timestamp": "<value>", "triggeredBy": "Payee"}], "filingStateCode": "<value>", "labels": {"key": "<value>", "key1": "<value>"}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "3326.55", "platformIncome": "7264.41", "recipientConfirmedW9Info": false, "recipientReadyToSubmitW9": false, "recipientSyncEnabled": false, "status": "AcceptedByIrs", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736668978610", "userRoles": {"ownerIds": [], "viewerIds": []}, "year": "9870.48"}
   create1099TaxForm:
     speakeasy-default-create1099-tax-form:
       responses:
         "200":
-          application/json: {"activeSubmissionId": "<id>", "adjustments": "8411.37", "clientId": "<id>", "createdAt": "1734555554021", "deliveryMethod": "Mail", "eventActors": {}, "eventHistory": [{"eventType": "FormSubmittedToIRS", "timestamp": "<value>", "triggeredBy": "Payer"}], "filingStateCode": "<value>", "labels": {}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "8349.90", "platformIncome": "1104.89", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "Pending", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736103334887", "userRoles": {"ownerIds": ["<value>"], "viewerIds": ["<value>"]}, "year": "4817.01"}
+          application/json: {"activeSubmissionId": "<id>", "adjustments": "8411.37", "clientId": "<id>", "createdAt": "1735160357132", "deliveryMethod": "Mail", "eventActors": {}, "eventHistory": [{"eventType": "FormSubmittedToIRS", "timestamp": "<value>", "triggeredBy": "Payer"}], "filingStateCode": "<value>", "labels": {}, "memberId": "<id>", "payerPayeeId": "<id>", "paymentProcessingFees": "8349.90", "platformIncome": "1104.89", "recipientConfirmedW9Info": true, "recipientReadyToSubmitW9": true, "recipientSyncEnabled": false, "status": "Pending", "submissions": [], "taxFormId": "<id>", "type": "Form1099Nec", "updatedAt": "1736708137998", "userRoles": {"ownerIds": ["<value>"], "viewerIds": ["<value>"]}, "year": "4817.01"}
   getTaxForm:
     speakeasy-default-get-tax-form:
       parameters:
