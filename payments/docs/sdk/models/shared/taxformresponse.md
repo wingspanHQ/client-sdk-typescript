@@ -10,7 +10,7 @@ const value: shared.PayerTaxFormResponse = {
   activeSubmissionId: "<id>",
   adjustments: 302.35,
   clientId: "<id>",
-  createdAt: "1727597145989",
+  createdAt: "1728201937947",
   data: {},
   deliveryMethod: "Electronic",
   deprecatedTaxForm: {},
@@ -30,8 +30,8 @@ const value: shared.PayerTaxFormResponse = {
   },
   memberId: "<id>",
   payerPayeeId: "<id>",
-  paymentProcessingFees: 9221.11,
-  platformIncome: 894.95,
+  paymentProcessingFees: 9221.12,
+  platformIncome: 894.94,
   recipientConfirmedW9Info: false,
   recipientReadyToSubmitW9: false,
   recipientSyncEnabled: false,
@@ -49,7 +49,7 @@ const value: shared.PayerTaxFormResponse = {
   ],
   taxFormId: "<id>",
   type: "Form1099Nec",
-  updatedAt: "1736669675658",
+  updatedAt: "1737274467616",
   userRoles: {
     ownerIds: [
       "<value>",
@@ -58,7 +58,7 @@ const value: shared.PayerTaxFormResponse = {
       "<value>",
     ],
   },
-  year: 2097.50,
+  year: 2097.5,
 };
 ```
 
@@ -70,7 +70,7 @@ const value: shared.PayerTaxFormResponse[] = [
     activeSubmissionId: "<id>",
     adjustments: 1157.03,
     clientId: "<id>",
-    createdAt: "1723396658630",
+    createdAt: "1724001450588",
     data: {},
     deliveryMethod: "Mail",
     deprecatedTaxForm: {},
@@ -109,7 +109,7 @@ const value: shared.PayerTaxFormResponse[] = [
     ],
     taxFormId: "<id>",
     type: "Form1099Nec",
-    updatedAt: "1736705739864",
+    updatedAt: "1737310531822",
     userRoles: {
       ownerIds: [
         "<value>",

@@ -99,7 +99,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.reportingAndAnalytics.getPayrollReport({
-    payrollId: "<value>",
+    payrollId: "<id>",
   });
 
   // Handle the result
@@ -125,7 +125,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await reportingAndAnalyticsGetPayrollReport(payments, {
-    payrollId: "<value>",
+    payrollId: "<id>",
   });
 
   if (!res.ok) {

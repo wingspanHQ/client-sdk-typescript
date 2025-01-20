@@ -185,7 +185,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.documentSigningAndEligibility.deleteCollaboratorGroup({
-    eligibilityRequirementId: "<value>",
+    eligibilityRequirementId: "<id>",
     id: "<id>",
   });
 
@@ -212,7 +212,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await documentSigningAndEligibilityDeleteCollaboratorGroup(payments, {
-    eligibilityRequirementId: "<value>",
+    eligibilityRequirementId: "<id>",
     id: "<id>",
   });
 
@@ -857,7 +857,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.documentSigningAndEligibility.updateCollaboratorGroup({
-    eligibilityRequirementId: "<value>",
+    eligibilityRequirementId: "<id>",
     id: "<id>",
   });
 
@@ -884,7 +884,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await documentSigningAndEligibilityUpdateCollaboratorGroup(payments, {
-    eligibilityRequirementId: "<value>",
+    eligibilityRequirementId: "<id>",
     id: "<id>",
   });
 

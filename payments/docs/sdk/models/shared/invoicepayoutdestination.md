@@ -10,7 +10,7 @@ let value: InvoicePayoutDestination = {
   description: "besides forsaken coordinated married aside",
   destinationType: "Account",
   payoutMethod: "ECheck",
-  percentage: 9185.46,
+  percentage: 9185.47,
   transferId: "<id>",
 };
 ```

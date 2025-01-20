@@ -10,7 +10,7 @@ let value: PayoutDestinationResponse = {
   destinationType: "Account",
   name: "<value>",
   payoutMethod: "Instant",
-  percentage: 1523.55,
+  percentage: 1523.54,
 };
 ```
 

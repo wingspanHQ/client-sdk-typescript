@@ -7,7 +7,7 @@ import { Mark1099AsUndeliveredRequest } from "@wingspan/payments/sdk/models/shar
 
 let value: Mark1099AsUndeliveredRequest = {
   memberId: "<id>",
-  submissionIndex: 2840.00,
+  submissionIndex: 2840,
   year: 2384.13,
 };
 ```

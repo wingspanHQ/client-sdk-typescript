@@ -6,8 +6,8 @@
 import { LineItemsAgingReportLineItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: LineItemsAgingReportLineItem = {
-  costPerUnit: 1979.83,
-  createdAt: "1717960906896",
+  costPerUnit: 1979.82,
+  createdAt: "1718565698832",
   index: 6012.77,
   labels: {
     "key": "<value>",
@@ -19,7 +19,7 @@ let value: LineItemsAgingReportLineItem = {
   reimbursableExpense: false,
   totalCost: 4130.86,
   unit: "gray",
-  updatedAt: "1736713810074",
+  updatedAt: "1737318602010",
 };
 ```
 

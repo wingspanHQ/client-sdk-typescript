@@ -7,7 +7,7 @@ import { Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01 
 
 let value:
   Fourteenabbd45a54a2847207e8ddfaeb5d4bc82ffb855d63772d79e0c5fe04e9b9b01 = {
-    amountWithheld: 9195.07,
+    amountWithheld: 9195.08,
     rate: 7104.56,
   };
 ```

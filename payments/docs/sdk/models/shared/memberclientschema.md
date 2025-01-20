@@ -15,7 +15,7 @@ let value: MemberClientSchema = {
   },
   clientId: "<id>",
   clientUserAccountType: "member",
-  createdAt: "1732865612415",
+  createdAt: "1733470404365",
   emailTo: "<value>",
   eventActors: {
     "key": "<value>",
@@ -30,7 +30,7 @@ let value: MemberClientSchema = {
   },
   memberClientId: "<id>",
   status: "Inactive",
-  updatedAt: "1736645684599",
+  updatedAt: "1737250476548",
   userRoles: {
     ownerIds: [
       "<value>",

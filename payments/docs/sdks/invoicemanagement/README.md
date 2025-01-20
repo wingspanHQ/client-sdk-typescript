@@ -487,7 +487,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.execute({
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   // Handle the result
@@ -513,7 +513,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await invoiceManagementExecute(payments, {
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   if (!res.ok) {
@@ -563,7 +563,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.generate({
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   // Handle the result
@@ -589,7 +589,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await invoiceManagementGenerate(payments, {
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   if (!res.ok) {
@@ -863,7 +863,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.getFees({
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   // Handle the result
@@ -889,7 +889,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await invoiceManagementGetFees(payments, {
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   if (!res.ok) {
@@ -1375,7 +1375,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.refund({
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   // Handle the result
@@ -1401,7 +1401,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await invoiceManagementRefund(payments, {
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   if (!res.ok) {
@@ -1451,7 +1451,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.invoiceManagement.send({
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   // Handle the result
@@ -1477,7 +1477,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await invoiceManagementSend(payments, {
-    invoiceId: "<value>",
+    invoiceId: "<id>",
   });
 
   if (!res.ok) {

@@ -7,8 +7,8 @@ import { PayrollReportLineItem } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayrollReportLineItem = {
   costPerUnit: 3970.14,
-  createdAt: "1727409972329",
-  index: 2848.86,
+  createdAt: "1728014764265",
+  index: 2848.85,
   labels: {
     "key": "<value>",
   },
@@ -17,9 +17,9 @@ let value: PayrollReportLineItem = {
   },
   quantity: 1039.88,
   reimbursableExpense: false,
-  totalCost: 9078.98,
+  totalCost: 9078.99,
   unit: "gray",
-  updatedAt: "1736698725356",
+  updatedAt: "1737303517292",
 };
 ```
 

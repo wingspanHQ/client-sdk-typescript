@@ -117,7 +117,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.create({
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   // Handle the result
@@ -143,7 +143,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsCreate(payments, {
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   if (!res.ok) {
@@ -265,7 +265,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -291,7 +291,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsCreateItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -341,7 +341,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.createProof({
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   // Handle the result
@@ -367,7 +367,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsCreateProof(payments, {
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   if (!res.ok) {
@@ -489,7 +489,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.get({
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   // Handle the result
@@ -515,7 +515,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsGet(payments, {
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   if (!res.ok) {
@@ -565,7 +565,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.getBatchCalculation({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -591,7 +591,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsGetBatchCalculation(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -797,8 +797,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.getItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -824,8 +824,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsGetItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -946,7 +946,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.listItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -972,7 +972,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsListItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1379,7 +1379,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.update({
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   // Handle the result
@@ -1405,7 +1405,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsUpdate(payments, {
-    taxFormId: "<value>",
+    taxFormId: "<id>",
   });
 
   if (!res.ok) {
@@ -1455,7 +1455,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.updateBatchCalculation({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1481,7 +1481,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsUpdateBatchCalculation(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1531,8 +1531,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.oneThousandAndNinetyNineOperations.updateItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -1558,8 +1558,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await oneThousandAndNinetyNineOperationsUpdateItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {

@@ -15,7 +15,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
       name: "<value>",
     },
   ],
-  createdAt: "1707838410046",
+  createdAt: "1708443201983",
   inviteEmail: "<value>",
   member: {
     user: {},
@@ -24,9 +24,9 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   memberId: "<id>",
   payoutsSummary: {
     deductionsCount: 5161.24,
-    payablesCount: 2198.61,
-    totalDeducted: 2742.96,
-    totalPaid: 7018.40,
+    payablesCount: 2198.6,
+    totalDeducted: 2742.95,
+    totalPaid: 7018.41,
   },
   servicesStatus: {
     incomeAndExpenses: false,
@@ -34,7 +34,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   },
   status: "Active",
   taxStatus: "Incomplete",
-  updatedAt: "1736683968564",
+  updatedAt: "1737288760500",
 };
 ```
 

@@ -6,12 +6,12 @@
 import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
 
 let value: PayableSchema = {
-  amount: 1512.30,
+  amount: 1512.3,
   attachments: {},
   client: {},
   clientId: "<id>",
   collaboratorId: "<id>",
-  createdAt: "1730597028476",
+  createdAt: "1731201820417",
   creditFeeHandling: {},
   currency: "CAD",
   dueDate: "<value>",
@@ -34,18 +34,18 @@ let value: PayableSchema = {
   lineItems: [
     {
       costPerUnit: 5692.87,
-      createdAt: "1721344942802",
+      createdAt: "1721949734743",
       labels: {
         "key": "<value>",
       },
       labelsBak2: {
         "key": "<value>",
       },
-      quantity: 9717.63,
+      quantity: 9717.64,
       reimbursableExpense: false,
       totalCost: 3638.45,
       unit: "steradian",
-      updatedAt: "1736693542715",
+      updatedAt: "1737298334656",
     },
   ],
   member: {},
@@ -61,7 +61,7 @@ let value: PayableSchema = {
   },
   payableId: "<id>",
   status: "PaymentInTransit",
-  updatedAt: "1736688947281",
+  updatedAt: "1737293739221",
   userRoles: {
     ownerIds: [
       "<value>",

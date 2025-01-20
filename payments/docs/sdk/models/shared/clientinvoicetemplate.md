@@ -7,14 +7,14 @@ import { ClientInvoiceTemplate } from "@wingspan/payments/sdk/models/shared";
 
 let value: ClientInvoiceTemplate = {
   clientId: "<id>",
-  createdAt: "1729739681933",
+  createdAt: "1730344473876",
   invoiceData: {
     additionalRecipientEmails: [
       "<value>",
     ],
-    amount: 8483.45,
+    amount: 8483.46,
     client: {},
-    createdAt: "1720661847242",
+    createdAt: "1721266639185",
     currency: "USD",
     dueDate: "<value>",
     events: {},
@@ -22,8 +22,8 @@ let value: ClientInvoiceTemplate = {
     invoiceNumber: "<value>",
     lineItems: [
       {
-        costPerUnit: 9958.15,
-        createdAt: "1709275328652",
+        costPerUnit: 9958.16,
+        createdAt: "1709880120595",
         labels: {
           "key": "<value>",
         },
@@ -34,7 +34,7 @@ let value: ClientInvoiceTemplate = {
         reimbursableExpense: false,
         totalCost: 680.93,
         unit: "lux",
-        updatedAt: "1736728934052",
+        updatedAt: "1737333725995",
       },
     ],
     member: {},
@@ -56,7 +56,7 @@ let value: ClientInvoiceTemplate = {
       clientData: {},
       clientId: "<id>",
       clientUserAccountType: "member",
-      createdAt: "1720451595362",
+      createdAt: "1721056387305",
       emailTo: "<value>",
       eventActors: {
         "key": "<value>",
@@ -82,7 +82,7 @@ let value: ClientInvoiceTemplate = {
       payerPayeeId: "<id>",
       status: "Active",
       taxStatus: "Incomplete",
-      updatedAt: "1736665676834",
+      updatedAt: "1737270468777",
       userRoles: {
         ownerIds: [
           "<value>",
@@ -100,19 +100,19 @@ let value: ClientInvoiceTemplate = {
     memberStripeAccountId: "<id>",
     projectName: "<value>",
     status: "Overdue",
-    updatedAt: "1736646024292",
+    updatedAt: "1737250816235",
   },
   invoiceTemplateId: "<id>",
   memberId: "<id>",
   nextInvoiceDate: "<value>",
   scheduleDates: [
     {
-      date: "2024-01-18",
+      date: "2024-01-25",
       status: "Skipped",
     },
   ],
   status: "Active",
-  updatedAt: "1736649978381",
+  updatedAt: "1737254770324",
 };
 ```
 

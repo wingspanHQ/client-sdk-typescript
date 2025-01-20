@@ -11,8 +11,8 @@ let value: InvoiceAmountDetails = {
   deductions: 2201.04,
   memberGross: 6228.94,
   memberNet: 1114.96,
-  memberTaxWithheld: 4589.70,
-  processingFee: 3223.34,
+  memberTaxWithheld: 4589.7,
+  processingFee: 3223.33,
   wingspanTopUp: 3165.01,
 };
 ```

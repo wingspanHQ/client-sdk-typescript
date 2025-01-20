@@ -130,7 +130,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createBatchItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -156,7 +156,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsCreateBatchItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -278,7 +278,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createClientItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -304,7 +304,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsCreateClientItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -498,7 +498,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createSpecificCollaboratorItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -524,7 +524,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsCreateSpecificCollaboratorItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -574,7 +574,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.createSpecificInvoice({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -600,7 +600,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsCreateSpecificInvoice(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -650,7 +650,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.deleteCollaborator({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -676,7 +676,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsDeleteCollaborator(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -726,7 +726,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.deletePayable({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -752,7 +752,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsDeletePayable(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -802,7 +802,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.get({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -828,7 +828,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGet(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -878,7 +878,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getBatchItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -904,7 +904,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetBatchItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -954,7 +954,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getClient({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -980,7 +980,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetClient(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1030,8 +1030,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getClientItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -1057,8 +1057,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetClientItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -1108,7 +1108,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getCollaborator({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1134,7 +1134,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetCollaborator(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1184,7 +1184,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getPayable({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1210,7 +1210,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetPayable(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1260,8 +1260,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getSpecific({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -1287,8 +1287,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetSpecific(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -1338,8 +1338,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getSpecificCollaboratorItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -1365,8 +1365,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetSpecificCollaboratorItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -1416,8 +1416,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.getSpecificInvoice({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -1443,8 +1443,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsGetSpecificInvoice(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -1565,7 +1565,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listBatchItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1591,7 +1591,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsListBatchItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1712,7 +1712,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listClientItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1738,7 +1738,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsListClientItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -1930,7 +1930,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listSpecificCollaboratorItem({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -1956,7 +1956,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsListSpecificCollaboratorItem(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2006,7 +2006,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.listSpecificInvoice({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -2032,7 +2032,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsListSpecificInvoice(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2082,7 +2082,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.update({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -2108,7 +2108,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdate(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2158,7 +2158,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateClient({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -2184,7 +2184,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateClient(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2234,8 +2234,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateClientItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -2261,8 +2261,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateClientItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -2312,7 +2312,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateCollaborator({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -2338,7 +2338,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateCollaborator(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2388,7 +2388,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updatePayable({
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   // Handle the result
@@ -2414,7 +2414,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdatePayable(payments, {
-    batchId: "<value>",
+    batchId: "<id>",
   });
 
   if (!res.ok) {
@@ -2464,8 +2464,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateSpecific({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -2491,8 +2491,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateSpecific(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -2542,8 +2542,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateSpecificCollaboratorItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -2569,8 +2569,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateSpecificCollaboratorItem(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {
@@ -2620,8 +2620,8 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bulkOperations.updateSpecificInvoice({
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
@@ -2647,8 +2647,8 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bulkOperationsUpdateSpecificInvoice(payments, {
-    batchId: "<value>",
-    batchItemId: "<value>",
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   if (!res.ok) {

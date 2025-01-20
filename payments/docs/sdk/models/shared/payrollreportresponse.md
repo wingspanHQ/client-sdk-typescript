@@ -8,8 +8,8 @@ import { PayrollReportResponse } from "@wingspan/payments/sdk/models/shared";
 let value: PayrollReportResponse = {
   invoices: [
     {
-      amount: 2001.90,
-      createdAt: "1726440294886",
+      amount: 2001.9,
+      createdAt: "1727045086822",
       currency: "Rial Omani",
       dueDate: "<value>",
       invoiceId: "<id>",
@@ -17,8 +17,8 @@ let value: PayrollReportResponse = {
       invoicePdf: "<value>",
       lineItems: [
         {
-          costPerUnit: 1220.86,
-          createdAt: "1713382718755",
+          costPerUnit: 1220.85,
+          createdAt: "1713987510691",
           index: 600.78,
           labels: {
             "key": "<value>",
@@ -26,11 +26,11 @@ let value: PayrollReportResponse = {
           labelsBak2: {
             "key": "<value>",
           },
-          quantity: 2098.60,
+          quantity: 2098.6,
           reimbursableExpense: false,
-          totalCost: 1323.06,
+          totalCost: 1323.05,
           unit: "candela",
-          updatedAt: "1736704789728",
+          updatedAt: "1737309581664",
         },
       ],
       member: {
@@ -40,16 +40,16 @@ let value: PayrollReportResponse = {
       memberId: "<id>",
       receiptPdf: "<value>",
       status: "Draft",
-      updatedAt: "1736654366190",
+      updatedAt: "1737259158126",
     },
   ],
   parentInvoice: {
-    createdAt: "1709427265769",
+    createdAt: "1710032057706",
     dueDate: "<value>",
     invoiceId: "<id>",
     invoiceNumber: "<value>",
     status: "Overdue",
-    updatedAt: "1736671377782",
+    updatedAt: "1737276169718",
   },
 };
 ```

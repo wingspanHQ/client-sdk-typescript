@@ -11,12 +11,12 @@ let value: PayablesSummary = {
   invoicesOpen: 5488.46,
   invoicesOverdue: 4733.26,
   invoicesPaid: 6751.26,
-  invoicesPending: 213.59,
+  invoicesPending: 213.58,
   memberId: "<id>",
-  totalApproved: 1023.17,
+  totalApproved: 1023.16,
   totalOpen: 2921.77,
-  totalOverdue: 9829.90,
-  totalPaid: 1397.46,
+  totalOverdue: 9829.91,
+  totalPaid: 1397.45,
 };
 ```
 

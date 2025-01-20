@@ -6,7 +6,7 @@
 import { MemberClientForm1099Balances } from "@wingspan/payments/sdk/models/shared";
 
 let value: MemberClientForm1099Balances = {
-  adjustments: 2536.43,
+  adjustments: 2536.42,
   deliveryMethod: "Electronic",
   exclusionReason: "BelowThreshold",
   form1099Generated: false,

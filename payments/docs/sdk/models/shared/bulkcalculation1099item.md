@@ -10,7 +10,7 @@ let value: BulkCalculation1099Item = {
   bulkCalculation1099ItemId: "<id>",
   calculationType: "Submissions",
   clientId: "<id>",
-  createdAt: "1710703991307",
+  createdAt: "1711308783284",
   eventActors: {
     "key": "<value>",
   },
@@ -18,7 +18,7 @@ let value: BulkCalculation1099Item = {
     "key": "<value>",
   },
   status: "Pending",
-  updatedAt: "1736704346085",
+  updatedAt: "1737309138063",
   userRoles: {
     ownerIds: [
       "<value>",
@@ -27,7 +27,7 @@ let value: BulkCalculation1099Item = {
       "<value>",
     ],
   },
-  year: 632.08,
+  year: 632.07,
 };
 ```
 

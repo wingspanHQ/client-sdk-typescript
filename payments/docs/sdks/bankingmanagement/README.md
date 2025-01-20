@@ -34,7 +34,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bankingManagement.create({
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -60,7 +60,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bankingManagementCreate(payments, {
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {
@@ -111,7 +111,7 @@ const payments = new Payments({
 async function run() {
   const result = await payments.bankingManagement.delete({
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -138,7 +138,7 @@ const payments = new PaymentsCore({
 async function run() {
   const res = await bankingManagementDelete(payments, {
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {
@@ -340,7 +340,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bankingManagement.getApplicationLink({
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -366,7 +366,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bankingManagementGetApplicationLink(payments, {
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {
@@ -417,7 +417,7 @@ const payments = new Payments({
 async function run() {
   const result = await payments.bankingManagement.getDebitCard({
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -444,7 +444,7 @@ const payments = new PaymentsCore({
 async function run() {
   const res = await bankingManagementGetDebitCard(payments, {
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {
@@ -646,7 +646,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.bankingManagement.list({
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -672,7 +672,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await bankingManagementList(payments, {
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {

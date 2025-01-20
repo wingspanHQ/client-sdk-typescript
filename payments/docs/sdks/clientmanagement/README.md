@@ -696,7 +696,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.clientManagement.listSpecificClientDetail({
-    clientId: "<value>",
+    clientId: "<id>",
   });
 
   // Handle the result
@@ -722,7 +722,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await clientManagementListSpecificClientDetail(payments, {
-    clientId: "<value>",
+    clientId: "<id>",
   });
 
   if (!res.ok) {

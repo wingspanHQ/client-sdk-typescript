@@ -40,7 +40,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.associate({
-    groupId: "<value>",
+    groupId: "<id>",
     id: "<id>",
   });
 
@@ -67,7 +67,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await collaboratorManagementAssociate(payments, {
-    groupId: "<value>",
+    groupId: "<id>",
     id: "<id>",
   });
 
@@ -486,7 +486,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.disassociate({
-    groupId: "<value>",
+    groupId: "<id>",
     id: "<id>",
   });
 
@@ -513,7 +513,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await collaboratorManagementDisassociate(payments, {
-    groupId: "<value>",
+    groupId: "<id>",
     id: "<id>",
   });
 
@@ -1076,7 +1076,7 @@ const payments = new Payments({
 
 async function run() {
   const result = await payments.collaboratorManagement.listSpecificCollaboratorDetail({
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
@@ -1102,7 +1102,7 @@ const payments = new PaymentsCore({
 
 async function run() {
   const res = await collaboratorManagementListSpecificCollaboratorDetail(payments, {
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   if (!res.ok) {
