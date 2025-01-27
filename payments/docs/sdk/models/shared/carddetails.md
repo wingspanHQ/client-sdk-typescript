@@ -13,7 +13,7 @@ let value: CardDetails = {
     state: "Alaska",
   },
   brand: "<value>",
-  createdAt: "1736043234208",
+  createdAt: "1736648021207",
   expirationDate: "<value>",
   last4Digits: "<value>",
   name: "<value>",

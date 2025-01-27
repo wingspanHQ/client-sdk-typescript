@@ -11,7 +11,7 @@ let value: ClientInvoice = {
   ],
   amount: 1858.97,
   client: {},
-  createdAt: "1727608156485",
+  createdAt: "1728212943531",
   currency: "USD",
   dueDate: "<value>",
   events: {},
@@ -20,7 +20,7 @@ let value: ClientInvoice = {
   lineItems: [
     {
       costPerUnit: 2646.49,
-      createdAt: "1736551342350",
+      createdAt: "1737156129397",
       labels: {
         "key": "<value>",
       },
@@ -31,7 +31,7 @@ let value: ClientInvoice = {
       reimbursableExpense: false,
       totalCost: 5206.78,
       unit: "joule",
-      updatedAt: "1737317273598",
+      updatedAt: "1737922060644",
     },
   ],
   member: {},
@@ -53,7 +53,7 @@ let value: ClientInvoice = {
     clientData: {},
     clientId: "<id>",
     clientUserAccountType: "enterprise",
-    createdAt: "1730505953322",
+    createdAt: "1731110740369",
     emailTo: "<value>",
     eventActors: {
       "key": "<value>",
@@ -79,7 +79,7 @@ let value: ClientInvoice = {
     payerPayeeId: "<id>",
     status: "Inactive",
     taxStatus: "Complete",
-    updatedAt: "1737291173574",
+    updatedAt: "1737895960621",
     userRoles: {
       ownerIds: [
         "<value>",
@@ -97,7 +97,7 @@ let value: ClientInvoice = {
   memberStripeAccountId: "<id>",
   projectName: "<value>",
   status: "Cancelled",
-  updatedAt: "1737273063151",
+  updatedAt: "1737877850197",
 };
 ```
 

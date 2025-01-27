@@ -9,7 +9,7 @@ let value: BulkClientItem = {
   bulkClientBatchId: "<id>",
   bulkClientItemId: "<id>",
   clientStatus: "Active",
-  createdAt: "1729050805838",
+  createdAt: "1729655592844",
   eventActors: {
     "key": "<value>",
   },
@@ -18,7 +18,7 @@ let value: BulkClientItem = {
   },
   memberId: "<id>",
   status: "Open",
-  updatedAt: "1737302741197",
+  updatedAt: "1737907528204",
   userRoles: {
     ownerIds: [
       "<value>",

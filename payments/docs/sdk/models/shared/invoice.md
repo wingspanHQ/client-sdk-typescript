@@ -8,7 +8,7 @@ import { Invoice } from "@wingspan/payments/sdk/models/shared";
 let value: Invoice = {
   amount: 4030.26,
   client: {},
-  createdAt: "1729302423035",
+  createdAt: "1729907210080",
   currency: "CAD",
   dueDate: "<value>",
   eventActors: {
@@ -24,7 +24,7 @@ let value: Invoice = {
   lineItems: [
     {
       costPerUnit: 4876.76,
-      createdAt: "1705817974703",
+      createdAt: "1706422761747",
       labels: {
         "key": "<value>",
       },
@@ -35,7 +35,7 @@ let value: Invoice = {
       reimbursableExpense: false,
       totalCost: 635.53,
       unit: "kilogram",
-      updatedAt: "1737330915060",
+      updatedAt: "1737935702104",
     },
   ],
   member: {},
@@ -50,7 +50,7 @@ let value: Invoice = {
   payments: [
     {
       amount: 4097.26,
-      createdAt: "1717579800127",
+      createdAt: "1718184587171",
       events: {},
       labels: {
         "key": "<value>",
@@ -60,11 +60,11 @@ let value: Invoice = {
       sourceMetadata: {},
       sourceType: "Card",
       status: "Returned",
-      updatedAt: "1737314057290",
+      updatedAt: "1737918844335",
     },
   ],
   status: "Draft",
-  updatedAt: "1737310331703",
+  updatedAt: "1737915118748",
   userRoles: {
     ownerIds: [
       "<value>",

@@ -15,7 +15,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
       name: "<value>",
     },
   ],
-  createdAt: "1708443201983",
+  createdAt: "1709047988991",
   inviteEmail: "<value>",
   member: {
     user: {},
@@ -34,7 +34,7 @@ let value: CollaboratorsPayoutsSummaryReportResponse = {
   },
   status: "Active",
   taxStatus: "Incomplete",
-  updatedAt: "1737288760500",
+  updatedAt: "1737893547508",
 };
 ```
 
