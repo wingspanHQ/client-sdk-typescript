@@ -1,5 +1,21 @@
 # InstantPayoutResponse
 
+## Example Usage
+
+```typescript
+import { InstantPayoutResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: InstantPayoutResponse = {
+  instantPayoutAccount: {
+    country: "Dominican Republic",
+    currency: "USD",
+    holderName: "<value>",
+    numbers: {},
+    type: "Card",
+  },
+  instantPayoutAccountId: "<id>",
+};
+```
 
 ## Fields
 

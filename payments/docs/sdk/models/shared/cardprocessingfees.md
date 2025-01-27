@@ -1,9 +1,15 @@
 # CardProcessingFees
 
+## Example Usage
+
+```typescript
+import { CardProcessingFees } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardProcessingFees = "Exclude";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Include` | Include   |
-| `Exclude` | Exclude   |
+```typescript
+"Include" | "Exclude"
+```

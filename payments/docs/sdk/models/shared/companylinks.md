@@ -1,5 +1,12 @@
 # CompanyLinks
 
+## Example Usage
+
+```typescript
+import { CompanyLinks } from "@wingspan/payments/sdk/models/shared";
+
+let value: CompanyLinks = {};
+```
 
 ## Fields
 

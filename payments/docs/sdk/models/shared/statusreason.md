@@ -1,15 +1,15 @@
 # StatusReason
 
+## Example Usage
+
+```typescript
+import { StatusReason } from "@wingspan/payments/sdk/models/shared";
+
+let value: StatusReason = "AccountNotFound";
+```
 
 ## Values
 
-| Name                       | Value                      |
-| -------------------------- | -------------------------- |
-| `InsufficientFunds`        | InsufficientFunds          |
-| `AccountNotFound`          | AccountNotFound            |
-| `Unauthorized`             | Unauthorized               |
-| `GenericBankError`         | GenericBankError           |
-| `GenericCardError`         | GenericCardError           |
-| `CardCurrencyNotSupported` | CardCurrencyNotSupported   |
-| `CardExpired`              | CardExpired                |
-| `CardInputInvalid`         | CardInputInvalid           |
+```typescript
+"InsufficientFunds" | "AccountNotFound" | "Unauthorized" | "GenericBankError" | "GenericCardError" | "CardCurrencyNotSupported" | "CardExpired" | "CardInputInvalid"
+```

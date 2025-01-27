@@ -1,10 +1,15 @@
 # DeductionResponseStatus
 
+## Example Usage
+
+```typescript
+import { DeductionResponseStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionResponseStatus = "Pending";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Pending`          | Pending            |
-| `PartiallyApplied` | PartiallyApplied   |
-| `Complete`         | Complete           |
+```typescript
+"Pending" | "PartiallyApplied" | "Complete"
+```

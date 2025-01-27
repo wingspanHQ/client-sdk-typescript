@@ -1,5 +1,17 @@
 # MemberClientRequirementResponse
 
+## Example Usage
+
+```typescript
+import { MemberClientRequirementResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientRequirementResponse = {
+  clientId: "<id>",
+  collaboratorGroupId: "<id>",
+  eligibilityRequirementId: "<id>",
+  requirementType: "Signature",
+};
+```
 
 ## Fields
 

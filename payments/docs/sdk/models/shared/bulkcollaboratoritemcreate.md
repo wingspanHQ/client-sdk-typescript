@@ -1,5 +1,12 @@
 # BulkCollaboratorItemCreate
 
+## Example Usage
+
+```typescript
+import { BulkCollaboratorItemCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCollaboratorItemCreate = {};
+```
 
 ## Fields
 

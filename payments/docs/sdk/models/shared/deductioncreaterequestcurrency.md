@@ -1,9 +1,15 @@
 # DeductionCreateRequestCurrency
 
+## Example Usage
+
+```typescript
+import { DeductionCreateRequestCurrency } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionCreateRequestCurrency = "CAD";
+```
 
 ## Values
 
-| Name  | Value |
-| ----- | ----- |
-| `Usd` | USD   |
-| `Cad` | CAD   |
+```typescript
+"USD" | "CAD"
+```

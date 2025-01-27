@@ -1,10 +1,15 @@
 # CollaborationStatus
 
+## Example Usage
+
+```typescript
+import { CollaborationStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaborationStatus = "Pending";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Active`   | Active     |
-| `Inactive` | Inactive   |
-| `Pending`  | Pending    |
+```typescript
+"Active" | "Inactive" | "Pending"
+```

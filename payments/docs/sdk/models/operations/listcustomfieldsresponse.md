@@ -1,5 +1,18 @@
 # ListCustomFieldsResponse
 
+## Example Usage
+
+```typescript
+import { ListCustomFieldsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListCustomFieldsResponse = {
+  contentType: "<value>",
+  statusCode: 400,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

@@ -51,22 +51,46 @@ Creates a new batch for importing multiple invoices at once, streamlining the bu
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkInvoiceBatchCreateProcessingStrategy } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.bulkOperations.create({
-    labels: {
-      "key": "<value>",
-    },
-    processingStrategy: BulkInvoiceBatchCreateProcessingStrategy.Merge,
-  });
+  const result = await payments.bulkOperations.create();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreate } from "@wingspan/payments/funcs/bulkOperationsCreate.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreate(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -79,16 +103,17 @@ run();
 | `request`                                                                                                                                                                      | [shared.BulkInvoiceBatchCreate](../../sdk/models/shared/bulkinvoicebatchcreate.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateInvoiceBatchResponse](../../sdk/models/operations/createinvoicebatchresponse.md)>**
+**Promise\<[operations.CreateInvoiceBatchResponse](../../sdk/models/operations/createinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createBatchItem
 
@@ -98,29 +123,50 @@ Allows for the creation and addition of a new individual payable item into an ex
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkPayableItemCreatePayableStatus } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.bulkOperations.createBatchItem({
-    bulkPayableItemCreate: {
-      amount: 1194.43,
-      bulkPayableBatchId: "<value>",
-      dueDate: "<value>",
-      labels: {
-        "key": "<value>",
-      },
-      lineItemDescription: "<value>",
-      payableStatus: BulkPayableItemCreatePayableStatus.Draft,
-    },
-    batchId: "<value>",
+  const result = await payments.bulkOperations.createBatchItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateBatchItem } from "@wingspan/payments/funcs/bulkOperationsCreateBatchItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateBatchItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -133,16 +179,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreatePayableBatchItemRequest](../../sdk/models/operations/createpayablebatchitemrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreatePayableBatchItemResponse](../../sdk/models/operations/createpayablebatchitemresponse.md)>**
+**Promise\<[operations.CreatePayableBatchItemResponse](../../sdk/models/operations/createpayablebatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createClient
 
@@ -153,19 +200,45 @@ Initiates the creation of a fresh bulk client batch, streamlining the process of
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.createClient({
-    labels: {
-      "key": "<value>",
-    },
-  });
+async function run() {
+  const result = await payments.bulkOperations.createClient();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateClient } from "@wingspan/payments/funcs/bulkOperationsCreateClient.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateClient(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -178,16 +251,17 @@ run();
 | `request`                                                                                                                                                                      | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md)                                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateClientBatchResponse](../../sdk/models/operations/createclientbatchresponse.md)>**
+**Promise\<[operations.CreateClientBatchResponse](../../sdk/models/operations/createclientbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createClientItem
 
@@ -198,26 +272,49 @@ Inserts a new item into the specified bulk client batch, allowing for further ex
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.createClientItem({
-    bulkClientItemCreate: {
-      integration: {
-        quickbooks: {},
-      },
-      labels: {
-        "key": "<value>",
-      },
-      memberData: {},
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.createClientItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateClientItem } from "@wingspan/payments/funcs/bulkOperationsCreateClientItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateClientItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -230,16 +327,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateClientBatchItemRequest](../../sdk/models/operations/createclientbatchitemrequest.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateClientBatchItemResponse](../../sdk/models/operations/createclientbatchitemresponse.md)>**
+**Promise\<[operations.CreateClientBatchItemResponse](../../sdk/models/operations/createclientbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createCollaborator
 
@@ -250,19 +348,45 @@ Enables the creation of a new bulk collaborator batch, facilitating the bulk man
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.createCollaborator({
-    labels: {
-      "key": "<value>",
-    },
-  });
+async function run() {
+  const result = await payments.bulkOperations.createCollaborator();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateCollaborator } from "@wingspan/payments/funcs/bulkOperationsCreateCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateCollaborator(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -275,16 +399,17 @@ run();
 | `request`                                                                                                                                                                      | [shared.BulkBatchCreate](../../sdk/models/shared/bulkbatchcreate.md)                                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateCollaboratorBatchResponse](../../sdk/models/operations/createcollaboratorbatchresponse.md)>**
+**Promise\<[operations.CreateCollaboratorBatchResponse](../../sdk/models/operations/createcollaboratorbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createPayable
 
@@ -294,22 +419,46 @@ Creates a new batch for importing multiple payables at once, streamlining the bu
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkPayableBatchCreateProcessingStrategy } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.bulkOperations.createPayable({
-    labels: {
-      "key": "<value>",
-    },
-    processingStrategy: BulkPayableBatchCreateProcessingStrategy.Merge,
-  });
+  const result = await payments.bulkOperations.createPayable();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreatePayable } from "@wingspan/payments/funcs/bulkOperationsCreatePayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreatePayable(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -322,16 +471,17 @@ run();
 | `request`                                                                                                                                                                      | [shared.BulkPayableBatchCreate](../../sdk/models/shared/bulkpayablebatchcreate.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreatePayableBatchResponse](../../sdk/models/operations/createpayablebatchresponse.md)>**
+**Promise\<[operations.CreatePayableBatchResponse](../../sdk/models/operations/createpayablebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createSpecificCollaboratorItem
 
@@ -342,23 +492,49 @@ Allows for the addition of a new item to an existing batch of collaborators by p
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.createSpecificCollaboratorItem({
-    bulkCollaboratorItemCreate: {
-      formW9Data: {},
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.createSpecificCollaboratorItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateSpecificCollaboratorItem } from "@wingspan/payments/funcs/bulkOperationsCreateSpecificCollaboratorItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateSpecificCollaboratorItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -371,16 +547,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateSpecificCollaboratorBatchItemRequest](../../sdk/models/operations/createspecificcollaboratorbatchitemrequest.md)                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/createspecificcollaboratorbatchitemresponse.md)>**
+**Promise\<[operations.CreateSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/createspecificcollaboratorbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createSpecificInvoice
 
@@ -390,33 +567,50 @@ Allows users to append a new item to a given batch of bulk invoices by supplying
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkInvoiceItemCreateAcceptedPaymentMethods, BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.bulkOperations.createSpecificInvoice({
-    bulkInvoiceItemCreate: {
-      acceptedPaymentMethods: [
-        BulkInvoiceItemCreateAcceptedPaymentMethods.Credit,
-      ],
-      amount: 7164.89,
-      bulkInvoiceBatchId: "<value>",
-      creditFeeHandling: {},
-      dueDate: "<value>",
-      invoiceStatus: BulkInvoiceItemCreateInvoiceStatus.Paid,
-      labels: {
-        "key": "<value>",
-      },
-      lineItemDescription: "<value>",
-    },
-    batchId: "<value>",
+  const result = await payments.bulkOperations.createSpecificInvoice({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsCreateSpecificInvoice } from "@wingspan/payments/funcs/bulkOperationsCreateSpecificInvoice.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsCreateSpecificInvoice(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -429,16 +623,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateSpecificInvoiceBatchRequest](../../sdk/models/operations/createspecificinvoicebatchrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateSpecificInvoiceBatchResponse](../../sdk/models/operations/createspecificinvoicebatchresponse.md)>**
+**Promise\<[operations.CreateSpecificInvoiceBatchResponse](../../sdk/models/operations/createspecificinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## deleteCollaborator
 
@@ -449,17 +644,49 @@ Deletes a specific bulk collaborator batch using its unique identifier. Once del
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.deleteCollaborator({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.deleteCollaborator({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsDeleteCollaborator } from "@wingspan/payments/funcs/bulkOperationsDeleteCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsDeleteCollaborator(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -472,16 +699,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.DeleteCollaboratorBatchRequest](../../sdk/models/operations/deletecollaboratorbatchrequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.DeleteCollaboratorBatchResponse](../../sdk/models/operations/deletecollaboratorbatchresponse.md)>**
+**Promise\<[operations.DeleteCollaboratorBatchResponse](../../sdk/models/operations/deletecollaboratorbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## deletePayable
 
@@ -492,17 +720,49 @@ Deletes a specific batch for bulk payables, using the provided batch ID, prevent
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.deletePayable({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.deletePayable({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsDeletePayable } from "@wingspan/payments/funcs/bulkOperationsDeletePayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsDeletePayable(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -515,16 +775,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.DeletePayableBatchRequest](../../sdk/models/operations/deletepayablebatchrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.DeletePayableBatchResponse](../../sdk/models/operations/deletepayablebatchresponse.md)>**
+**Promise\<[operations.DeletePayableBatchResponse](../../sdk/models/operations/deletepayablebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get
 
@@ -535,17 +796,49 @@ Allows for the retrieval of a specified batch of bulk invoices by providing its 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.get({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.get({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGet } from "@wingspan/payments/funcs/bulkOperationsGet.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGet(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -558,16 +851,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetInvoiceBatchRequest](../../sdk/models/operations/getinvoicebatchrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetInvoiceBatchResponse](../../sdk/models/operations/getinvoicebatchresponse.md)>**
+**Promise\<[operations.GetInvoiceBatchResponse](../../sdk/models/operations/getinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getBatchItem
 
@@ -578,17 +872,49 @@ Provides an overview and summary of the import process for a given bulk payable 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getBatchItem({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getBatchItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetBatchItem } from "@wingspan/payments/funcs/bulkOperationsGetBatchItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetBatchItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -601,16 +927,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetPayableBatchItemRequest](../../sdk/models/operations/getpayablebatchitemrequest.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetPayableBatchItemResponse](../../sdk/models/operations/getpayablebatchitemresponse.md)>**
+**Promise\<[operations.GetPayableBatchItemResponse](../../sdk/models/operations/getpayablebatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getClient
 
@@ -621,17 +948,49 @@ Retrieves the detailed information of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getClient({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getClient({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetClient } from "@wingspan/payments/funcs/bulkOperationsGetClient.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetClient(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -644,16 +1003,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetClientBatchRequest](../../sdk/models/operations/getclientbatchrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetClientBatchResponse](../../sdk/models/operations/getclientbatchresponse.md)>**
+**Promise\<[operations.GetClientBatchResponse](../../sdk/models/operations/getclientbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getClientItem
 
@@ -664,18 +1024,51 @@ Retrieves the detailed information of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getClientItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getClientItem({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetClientItem } from "@wingspan/payments/funcs/bulkOperationsGetClientItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetClientItem(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -688,16 +1081,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetClientBatchItemRequest](../../sdk/models/operations/getclientbatchitemrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetClientBatchItemResponse](../../sdk/models/operations/getclientbatchitemresponse.md)>**
+**Promise\<[operations.GetClientBatchItemResponse](../../sdk/models/operations/getclientbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getCollaborator
 
@@ -708,17 +1102,49 @@ Fetches detailed information of a specific bulk collaborator batch, using the pr
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getCollaborator({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getCollaborator({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetCollaborator } from "@wingspan/payments/funcs/bulkOperationsGetCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetCollaborator(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -731,16 +1157,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetCollaboratorBatchRequest](../../sdk/models/operations/getcollaboratorbatchrequest.md)                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetCollaboratorBatchResponse](../../sdk/models/operations/getcollaboratorbatchresponse.md)>**
+**Promise\<[operations.GetCollaboratorBatchResponse](../../sdk/models/operations/getcollaboratorbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getPayable
 
@@ -751,17 +1178,49 @@ Fetches detailed information of a specific batch created for bulk payables, usin
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getPayable({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getPayable({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetPayable } from "@wingspan/payments/funcs/bulkOperationsGetPayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetPayable(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -774,16 +1233,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetPayableBatchRequest](../../sdk/models/operations/getpayablebatchrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetPayableBatchResponse](../../sdk/models/operations/getpayablebatchresponse.md)>**
+**Promise\<[operations.GetPayableBatchResponse](../../sdk/models/operations/getpayablebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getSpecific
 
@@ -794,18 +1254,51 @@ Fetches detailed information of a specific item within a bulk payable batch, usi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getSpecific({
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getSpecific({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetSpecific } from "@wingspan/payments/funcs/bulkOperationsGetSpecific.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetSpecific(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -818,16 +1311,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetSpecificPayableBatchItemRequest](../../sdk/models/operations/getspecificpayablebatchitemrequest.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetSpecificPayableBatchItemResponse](../../sdk/models/operations/getspecificpayablebatchitemresponse.md)>**
+**Promise\<[operations.GetSpecificPayableBatchItemResponse](../../sdk/models/operations/getspecificpayablebatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getSpecificCollaboratorItem
 
@@ -838,18 +1332,51 @@ Enables fetching of detailed information about an individual item from a specifi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getSpecificCollaboratorItem({
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getSpecificCollaboratorItem({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetSpecificCollaboratorItem } from "@wingspan/payments/funcs/bulkOperationsGetSpecificCollaboratorItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetSpecificCollaboratorItem(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -862,16 +1389,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetSpecificCollaboratorBatchItemRequest](../../sdk/models/operations/getspecificcollaboratorbatchitemrequest.md)                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/getspecificcollaboratorbatchitemresponse.md)>**
+**Promise\<[operations.GetSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/getspecificcollaboratorbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getSpecificInvoice
 
@@ -882,18 +1410,51 @@ Fetches detailed information about a specific item located within a designated b
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.getSpecificInvoice({
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.getSpecificInvoice({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsGetSpecificInvoice } from "@wingspan/payments/funcs/bulkOperationsGetSpecificInvoice.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsGetSpecificInvoice(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -906,16 +1467,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetSpecificInvoiceBatchRequest](../../sdk/models/operations/getspecificinvoicebatchrequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetSpecificInvoiceBatchResponse](../../sdk/models/operations/getspecificinvoicebatchresponse.md)>**
+**Promise\<[operations.GetSpecificInvoiceBatchResponse](../../sdk/models/operations/getspecificinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list
 
@@ -926,15 +1488,45 @@ Fetches a list of all the batches created for bulk invoices, providing an overvi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.list();
+async function run() {
+  const result = await payments.bulkOperations.list();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsList } from "@wingspan/payments/funcs/bulkOperationsList.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsList(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -946,16 +1538,17 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListInvoiceBatchesResponse](../../sdk/models/operations/listinvoicebatchesresponse.md)>**
+**Promise\<[operations.ListInvoiceBatchesResponse](../../sdk/models/operations/listinvoicebatchesresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listBatchItem
 
@@ -966,17 +1559,49 @@ Fetches and lists all individual payable items associated with a specified bulk 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listBatchItem({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.listBatchItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListBatchItem } from "@wingspan/payments/funcs/bulkOperationsListBatchItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListBatchItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -989,16 +1614,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListPayableBatchItemsRequest](../../sdk/models/operations/listpayablebatchitemsrequest.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListPayableBatchItemsResponse](../../sdk/models/operations/listpayablebatchitemsresponse.md)>**
+**Promise\<[operations.ListPayableBatchItemsResponse](../../sdk/models/operations/listpayablebatchitemsresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listClient
 
@@ -1009,15 +1635,45 @@ Provides an overview of all existing bulk client batches, allowing users to quic
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listClient();
+async function run() {
+  const result = await payments.bulkOperations.listClient();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListClient } from "@wingspan/payments/funcs/bulkOperationsListClient.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListClient(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1029,16 +1685,17 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListClientBatchesResponse](../../sdk/models/operations/listclientbatchesresponse.md)>**
+**Promise\<[operations.ListClientBatchesResponse](../../sdk/models/operations/listclientbatchesresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listClientItem
 
@@ -1049,17 +1706,49 @@ Fetches all items present in the specified bulk client batch, providing a compre
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listClientItem({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.listClientItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListClientItem } from "@wingspan/payments/funcs/bulkOperationsListClientItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListClientItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1072,16 +1761,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListClientBatchItemsRequest](../../sdk/models/operations/listclientbatchitemsrequest.md)                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListClientBatchItemsResponse](../../sdk/models/operations/listclientbatchitemsresponse.md)>**
+**Promise\<[operations.ListClientBatchItemsResponse](../../sdk/models/operations/listclientbatchitemsresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listCollaborator
 
@@ -1092,15 +1782,45 @@ Provides a list of all existing bulk collaborator batches, allowing users to vie
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listCollaborator();
+async function run() {
+  const result = await payments.bulkOperations.listCollaborator();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListCollaborator } from "@wingspan/payments/funcs/bulkOperationsListCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListCollaborator(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1112,16 +1832,17 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListCollaboratorBatchesResponse](../../sdk/models/operations/listcollaboratorbatchesresponse.md)>**
+**Promise\<[operations.ListCollaboratorBatchesResponse](../../sdk/models/operations/listcollaboratorbatchesresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listPayable
 
@@ -1132,15 +1853,45 @@ Fetches a list of all the batches created for bulk payables, providing an overvi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listPayable();
+async function run() {
+  const result = await payments.bulkOperations.listPayable();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListPayable } from "@wingspan/payments/funcs/bulkOperationsListPayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListPayable(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1152,16 +1903,17 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListPayableBatchesResponse](../../sdk/models/operations/listpayablebatchesresponse.md)>**
+**Promise\<[operations.ListPayableBatchesResponse](../../sdk/models/operations/listpayablebatchesresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listSpecificCollaboratorItem
 
@@ -1172,17 +1924,49 @@ Provides a comprehensive list of items present within a specified batch of colla
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listSpecificCollaboratorItem({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.listSpecificCollaboratorItem({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListSpecificCollaboratorItem } from "@wingspan/payments/funcs/bulkOperationsListSpecificCollaboratorItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListSpecificCollaboratorItem(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1195,16 +1979,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListSpecificCollaboratorBatchItemsRequest](../../sdk/models/operations/listspecificcollaboratorbatchitemsrequest.md)                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListSpecificCollaboratorBatchItemsResponse](../../sdk/models/operations/listspecificcollaboratorbatchitemsresponse.md)>**
+**Promise\<[operations.ListSpecificCollaboratorBatchItemsResponse](../../sdk/models/operations/listspecificcollaboratorbatchitemsresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listSpecificInvoice
 
@@ -1215,17 +2000,49 @@ Provides a list of all the items within a specified batch of bulk invoices, iden
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.listSpecificInvoice({
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.listSpecificInvoice({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsListSpecificInvoice } from "@wingspan/payments/funcs/bulkOperationsListSpecificInvoice.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsListSpecificInvoice(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1238,16 +2055,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListSpecificInvoiceBatchesRequest](../../sdk/models/operations/listspecificinvoicebatchesrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListSpecificInvoiceBatchesResponse](../../sdk/models/operations/listspecificinvoicebatchesresponse.md)>**
+**Promise\<[operations.ListSpecificInvoiceBatchesResponse](../../sdk/models/operations/listspecificinvoicebatchesresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update
 
@@ -1258,22 +2076,49 @@ Enables the user to update or modify the attributes of a given batch of bulk inv
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.update({
-    bulkInvoiceBatchUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.update({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdate } from "@wingspan/payments/funcs/bulkOperationsUpdate.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdate(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1286,16 +2131,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateInvoiceBatchRequest](../../sdk/models/operations/updateinvoicebatchrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateInvoiceBatchResponse](../../sdk/models/operations/updateinvoicebatchresponse.md)>**
+**Promise\<[operations.UpdateInvoiceBatchResponse](../../sdk/models/operations/updateinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateClient
 
@@ -1306,22 +2152,49 @@ Allows modification of the details of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updateClient({
-    bulkBatchUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updateClient({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateClient } from "@wingspan/payments/funcs/bulkOperationsUpdateClient.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateClient(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1334,16 +2207,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateClientBatchRequest](../../sdk/models/operations/updateclientbatchrequest.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateClientBatchResponse](../../sdk/models/operations/updateclientbatchresponse.md)>**
+**Promise\<[operations.UpdateClientBatchResponse](../../sdk/models/operations/updateclientbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateClientItem
 
@@ -1354,27 +2228,51 @@ Allows modification of the details of a specific item within the bulk client bat
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updateClientItem({
-    bulkClientItemUpdate: {
-      integration: {
-        quickbooks: {},
-      },
-      labels: {
-        "key": "<value>",
-      },
-      memberData: {},
-    },
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updateClientItem({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateClientItem } from "@wingspan/payments/funcs/bulkOperationsUpdateClientItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateClientItem(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1387,16 +2285,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateClientBatchItemRequest](../../sdk/models/operations/updateclientbatchitemrequest.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateClientBatchItemResponse](../../sdk/models/operations/updateclientbatchitemresponse.md)>**
+**Promise\<[operations.UpdateClientBatchItemResponse](../../sdk/models/operations/updateclientbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateCollaborator
 
@@ -1407,22 +2306,49 @@ Allows for updating or altering the details and items within a specific bulk col
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updateCollaborator({
-    bulkBatchUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updateCollaborator({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateCollaborator } from "@wingspan/payments/funcs/bulkOperationsUpdateCollaborator.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateCollaborator(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1435,16 +2361,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateCollaboratorBatchRequest](../../sdk/models/operations/updatecollaboratorbatchrequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateCollaboratorBatchResponse](../../sdk/models/operations/updatecollaboratorbatchresponse.md)>**
+**Promise\<[operations.UpdateCollaboratorBatchResponse](../../sdk/models/operations/updatecollaboratorbatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updatePayable
 
@@ -1455,22 +2382,49 @@ Updates the information or items of a specific bulk payable batch, given its uni
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updatePayable({
-    bulkPayableBatchUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updatePayable({
+    batchId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdatePayable } from "@wingspan/payments/funcs/bulkOperationsUpdatePayable.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdatePayable(payments, {
+    batchId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1483,16 +2437,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdatePayableBatchRequest](../../sdk/models/operations/updatepayablebatchrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdatePayableBatchResponse](../../sdk/models/operations/updatepayablebatchresponse.md)>**
+**Promise\<[operations.UpdatePayableBatchResponse](../../sdk/models/operations/updatepayablebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateSpecific
 
@@ -1503,23 +2458,51 @@ Updates the details or status of a specific item within a bulk payable batch, gi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updateSpecific({
-    bulkPayableItemUpdate: {
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updateSpecific({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateSpecific } from "@wingspan/payments/funcs/bulkOperationsUpdateSpecific.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateSpecific(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1532,16 +2515,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateSpecificPayableBatchItemRequest](../../sdk/models/operations/updatespecificpayablebatchitemrequest.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateSpecificPayableBatchItemResponse](../../sdk/models/operations/updatespecificpayablebatchitemresponse.md)>**
+**Promise\<[operations.UpdateSpecificPayableBatchItemResponse](../../sdk/models/operations/updatespecificpayablebatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateSpecificCollaboratorItem
 
@@ -1552,24 +2536,51 @@ Provides the functionality to update or alter the attributes of an item present 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bulkOperations.updateSpecificCollaboratorItem({
-    bulkCollaboratorItemUpdate: {
-      formW9Data: {},
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
-    batchItemId: "<value>",
+async function run() {
+  const result = await payments.bulkOperations.updateSpecificCollaboratorItem({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateSpecificCollaboratorItem } from "@wingspan/payments/funcs/bulkOperationsUpdateSpecificCollaboratorItem.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateSpecificCollaboratorItem(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1582,16 +2593,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateSpecificCollaboratorBatchItemRequest](../../sdk/models/operations/updatespecificcollaboratorbatchitemrequest.md)                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/updatespecificcollaboratorbatchitemresponse.md)>**
+**Promise\<[operations.UpdateSpecificCollaboratorBatchItemResponse](../../sdk/models/operations/updatespecificcollaboratorbatchitemresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## updateSpecificInvoice
 
@@ -1601,29 +2613,52 @@ Allows for updates or edits to be made to a specific items details within an exi
 
 ```typescript
 import { Payments } from "@wingspan/payments";
-import { BulkInvoiceItemUpdateAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
+
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
 async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
-
-  const result = await sdk.bulkOperations.updateSpecificInvoice({
-    bulkInvoiceItemUpdate: {
-      acceptedPaymentMethods: [
-        BulkInvoiceItemUpdateAcceptedPaymentMethods.Ach,
-      ],
-      creditFeeHandling: {},
-      labels: {
-        "key": "<value>",
-      },
-    },
-    batchId: "<value>",
-    batchItemId: "<value>",
+  const result = await payments.bulkOperations.updateSpecificInvoice({
+    batchId: "<id>",
+    batchItemId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bulkOperationsUpdateSpecificInvoice } from "@wingspan/payments/funcs/bulkOperationsUpdateSpecificInvoice.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bulkOperationsUpdateSpecificInvoice(payments, {
+    batchId: "<id>",
+    batchItemId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -1636,13 +2671,14 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdateSpecificInvoiceBatchRequest](../../sdk/models/operations/updatespecificinvoicebatchrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdateSpecificInvoiceBatchResponse](../../sdk/models/operations/updatespecificinvoicebatchresponse.md)>**
+**Promise\<[operations.UpdateSpecificInvoiceBatchResponse](../../sdk/models/operations/updatespecificinvoicebatchresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

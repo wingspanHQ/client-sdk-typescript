@@ -1,5 +1,12 @@
 # InvoiceLineItemsCreateRequest
 
+## Example Usage
+
+```typescript
+import { InvoiceLineItemsCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceLineItemsCreateRequest = {};
+```
 
 ## Fields
 

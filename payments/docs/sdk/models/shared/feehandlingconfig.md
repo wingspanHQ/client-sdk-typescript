@@ -1,5 +1,12 @@
 # FeeHandlingConfig
 
+## Example Usage
+
+```typescript
+import { FeeHandlingConfig } from "@wingspan/payments/sdk/models/shared";
+
+let value: FeeHandlingConfig = {};
+```
 
 ## Fields
 

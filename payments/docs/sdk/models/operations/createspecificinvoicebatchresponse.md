@@ -1,5 +1,18 @@
 # CreateSpecificInvoiceBatchResponse
 
+## Example Usage
+
+```typescript
+import { CreateSpecificInvoiceBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateSpecificInvoiceBatchResponse = {
+  contentType: "<value>",
+  statusCode: 408,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

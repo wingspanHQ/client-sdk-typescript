@@ -1,5 +1,17 @@
 # TinVerification
 
+## Example Usage
+
+```typescript
+import { TinVerification } from "@wingspan/payments/sdk/models/shared";
+
+let value: TinVerification = {
+  lastVerifiedTimestamp: 9233.06,
+  message: "<value>",
+  status: "unverified",
+  unlockTimestamp: 9682.87,
+};
+```
 
 ## Fields
 

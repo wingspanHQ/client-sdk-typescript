@@ -1,5 +1,15 @@
 # ScheduleDate
 
+## Example Usage
+
+```typescript
+import { ScheduleDate } from "@wingspan/payments/sdk/models/shared";
+
+let value: ScheduleDate = {
+  date: "2024-12-06",
+  status: "Pending",
+};
+```
 
 ## Fields
 

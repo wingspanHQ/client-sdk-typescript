@@ -1,5 +1,18 @@
 # CollaboratorGroupResponse
 
+## Example Usage
+
+```typescript
+import { CollaboratorGroupResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorGroupResponse = {
+  clientId: "<id>",
+  collaboratorGroupId: "<id>",
+  defaultGroup: false,
+  description: "unwelcome aftermath grown whereas",
+  name: "<value>",
+};
+```
 
 ## Fields
 

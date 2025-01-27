@@ -1,5 +1,18 @@
 # ListSummaryPayablesResponse
 
+## Example Usage
+
+```typescript
+import { ListSummaryPayablesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSummaryPayablesResponse = {
+  contentType: "<value>",
+  statusCode: 422,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

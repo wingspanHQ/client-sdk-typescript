@@ -1,5 +1,15 @@
 # PaymentEligibility
 
+## Example Usage
+
+```typescript
+import { PaymentEligibility } from "@wingspan/payments/sdk/models/shared";
+
+let value: PaymentEligibility = {
+  field: "<value>",
+  value: "<value>",
+};
+```
 
 ## Fields
 

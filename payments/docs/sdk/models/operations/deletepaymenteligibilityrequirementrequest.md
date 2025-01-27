@@ -1,5 +1,14 @@
 # DeletePaymentEligibilityRequirementRequest
 
+## Example Usage
+
+```typescript
+import { DeletePaymentEligibilityRequirementRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeletePaymentEligibilityRequirementRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

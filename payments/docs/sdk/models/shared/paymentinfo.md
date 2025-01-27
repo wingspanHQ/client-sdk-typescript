@@ -1,5 +1,14 @@
 # PaymentInfo
 
+## Example Usage
+
+```typescript
+import { PaymentInfo } from "@wingspan/payments/sdk/models/shared";
+
+let value: PaymentInfo = {
+  meansType: "Account",
+};
+```
 
 ## Fields
 

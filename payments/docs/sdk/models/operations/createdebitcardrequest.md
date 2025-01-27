@@ -1,5 +1,14 @@
 # CreateDebitCardRequest
 
+## Example Usage
+
+```typescript
+import { CreateDebitCardRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateDebitCardRequest = {
+  memberId: "<id>",
+};
+```
 
 ## Fields
 

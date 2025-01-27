@@ -1,5 +1,12 @@
 # ExternalIds
 
+## Example Usage
+
+```typescript
+import { ExternalIds } from "@wingspan/payments/sdk/models/shared";
+
+let value: ExternalIds = {};
+```
 
 ## Fields
 

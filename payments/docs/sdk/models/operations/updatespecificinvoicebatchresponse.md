@@ -1,5 +1,18 @@
 # UpdateSpecificInvoiceBatchResponse
 
+## Example Usage
+
+```typescript
+import { UpdateSpecificInvoiceBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateSpecificInvoiceBatchResponse = {
+  contentType: "<value>",
+  statusCode: 101,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

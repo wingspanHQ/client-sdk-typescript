@@ -1,9 +1,15 @@
 # InvoiceCurrency
 
+## Example Usage
+
+```typescript
+import { InvoiceCurrency } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCurrency = "USD";
+```
 
 ## Values
 
-| Name  | Value |
-| ----- | ----- |
-| `Usd` | USD   |
-| `Cad` | CAD   |
+```typescript
+"USD" | "CAD"
+```

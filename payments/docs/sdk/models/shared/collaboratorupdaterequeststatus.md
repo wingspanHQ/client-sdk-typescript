@@ -1,10 +1,15 @@
 # CollaboratorUpdateRequestStatus
 
+## Example Usage
+
+```typescript
+import { CollaboratorUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorUpdateRequestStatus = "Inactive";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Active`   | Active     |
-| `Inactive` | Inactive   |
-| `Pending`  | Pending    |
+```typescript
+"Active" | "Inactive" | "Pending"
+```

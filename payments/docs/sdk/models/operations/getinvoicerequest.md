@@ -1,5 +1,14 @@
 # GetInvoiceRequest
 
+## Example Usage
+
+```typescript
+import { GetInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetInvoiceRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,5 +1,12 @@
 # ProcessingFees
 
+## Example Usage
+
+```typescript
+import { ProcessingFees } from "@wingspan/payments/sdk/models/shared";
+
+let value: ProcessingFees = {};
+```
 
 ## Fields
 

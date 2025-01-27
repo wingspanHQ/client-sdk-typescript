@@ -1,5 +1,35 @@
 # BulkCollaboratorBatch
 
+## Example Usage
+
+```typescript
+import { BulkCollaboratorBatch } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCollaboratorBatch = {
+  bulkCollaboratorBatchId: "<id>",
+  client: {
+    user: {},
+  },
+  clientId: "<id>",
+  createdAt: "1736653052949",
+  eventActors: {
+    "key": "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  status: "Open",
+  updatedAt: "1737930066225",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

@@ -1,5 +1,18 @@
 # CreateDebitCardResponse
 
+## Example Usage
+
+```typescript
+import { CreateDebitCardResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateDebitCardResponse = {
+  contentType: "<value>",
+  statusCode: 305,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

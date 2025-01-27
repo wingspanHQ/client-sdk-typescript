@@ -1,5 +1,18 @@
 # UpdateEligibilityRequirementCollaboratorGroupResponse
 
+## Example Usage
+
+```typescript
+import { UpdateEligibilityRequirementCollaboratorGroupResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateEligibilityRequirementCollaboratorGroupResponse = {
+  contentType: "<value>",
+  statusCode: 103,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

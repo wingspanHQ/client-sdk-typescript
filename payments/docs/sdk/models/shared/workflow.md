@@ -1,9 +1,15 @@
 # Workflow
 
+## Example Usage
+
+```typescript
+import { Workflow } from "@wingspan/payments/sdk/models/shared";
+
+let value: Workflow = "DualStage";
+```
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `SingleStage` | SingleStage   |
-| `DualStage`   | DualStage     |
+```typescript
+"SingleStage" | "DualStage"
+```

@@ -1,5 +1,77 @@
 # PayableSchema
 
+## Example Usage
+
+```typescript
+import { PayableSchema } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableSchema = {
+  amount: 1512.3,
+  attachments: {},
+  client: {},
+  clientId: "<id>",
+  collaboratorId: "<id>",
+  createdAt: "1731806607462",
+  creditFeeHandling: {},
+  currency: "CAD",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  events: {},
+  integration: {},
+  invoiceNotes: "<value>",
+  invoiceNumber: "<value>",
+  invoiceTemplateId: "<id>",
+  labels: {
+    "key": "<value>",
+  },
+  lateFeeHandling: {
+    frequency: {
+      startDate: "<value>",
+    },
+  },
+  lineItems: [
+    {
+      costPerUnit: 5692.87,
+      createdAt: "1722554521788",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 9717.64,
+      reimbursableExpense: false,
+      totalCost: 3638.45,
+      unit: "steradian",
+      updatedAt: "1737903121701",
+    },
+  ],
+  member: {},
+  memberAddress: {
+    addressLine1: "9514 S College Street",
+    city: "Durham",
+    postalCode: "45998-3864",
+    state: "Alaska",
+  },
+  memberId: "<id>",
+  notificationPreferences: {
+    sendReminders: false,
+  },
+  payableId: "<id>",
+  status: "PaymentInTransit",
+  updatedAt: "1737898526267",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

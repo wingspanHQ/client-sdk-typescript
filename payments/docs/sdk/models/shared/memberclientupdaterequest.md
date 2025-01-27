@@ -1,5 +1,12 @@
 # MemberClientUpdateRequest
 
+## Example Usage
+
+```typescript
+import { MemberClientUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientUpdateRequest = {};
+```
 
 ## Fields
 

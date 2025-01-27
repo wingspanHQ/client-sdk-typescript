@@ -1,5 +1,25 @@
 # InvoicePayment
 
+## Example Usage
+
+```typescript
+import { InvoicePayment } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoicePayment = {
+  amount: 1158.98,
+  createdAt: "1734783740970",
+  events: {},
+  labels: {
+    "key": "<value>",
+  },
+  paymentId: "<id>",
+  sourceId: "<id>",
+  sourceMetadata: {},
+  sourceType: "Account",
+  status: "Returned",
+  updatedAt: "1737863477521",
+};
+```
 
 ## Fields
 

@@ -1,11 +1,15 @@
 # PayrollSettingsUpdateStatus
 
+## Example Usage
+
+```typescript
+import { PayrollSettingsUpdateStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayrollSettingsUpdateStatus = "Draft";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Active`    | Active      |
-| `Draft`     | Draft       |
-| `Expired`   | Expired     |
-| `Cancelled` | Cancelled   |
+```typescript
+"Active" | "Draft" | "Expired" | "Cancelled"
+```

@@ -1,5 +1,12 @@
 # DocumentEvents
 
+## Example Usage
+
+```typescript
+import { DocumentEvents } from "@wingspan/payments/sdk/models/shared";
+
+let value: DocumentEvents = {};
+```
 
 ## Fields
 

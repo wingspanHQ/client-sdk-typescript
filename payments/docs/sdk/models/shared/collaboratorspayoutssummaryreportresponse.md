@@ -1,5 +1,42 @@
 # CollaboratorsPayoutsSummaryReportResponse
 
+## Example Usage
+
+```typescript
+import { CollaboratorsPayoutsSummaryReportResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorsPayoutsSummaryReportResponse = {
+  clientId: "<id>",
+  collaboratorGroups: [
+    {
+      collaboratorGroupId: "<id>",
+      description:
+        "judgementally young vary down foolishly jaggedly orderly sans sweetly solemnly",
+      name: "<value>",
+    },
+  ],
+  createdAt: "1709047988991",
+  inviteEmail: "<value>",
+  member: {
+    user: {},
+  },
+  memberClientId: "<id>",
+  memberId: "<id>",
+  payoutsSummary: {
+    deductionsCount: 5161.24,
+    payablesCount: 2198.6,
+    totalDeducted: 2742.95,
+    totalPaid: 7018.41,
+  },
+  servicesStatus: {
+    incomeAndExpenses: false,
+    taxWithholdings: false,
+  },
+  status: "Active",
+  taxStatus: "Incomplete",
+  updatedAt: "1737893547508",
+};
+```
 
 ## Fields
 

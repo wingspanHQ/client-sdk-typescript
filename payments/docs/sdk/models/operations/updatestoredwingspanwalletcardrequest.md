@@ -1,5 +1,14 @@
 # UpdateStoredWingspanWalletCardRequest
 
+## Example Usage
+
+```typescript
+import { UpdateStoredWingspanWalletCardRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateStoredWingspanWalletCardRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

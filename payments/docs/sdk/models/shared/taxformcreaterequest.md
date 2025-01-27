@@ -1,5 +1,16 @@
 # TaxFormCreateRequest
 
+## Example Usage
+
+```typescript
+import { TaxFormCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormCreateRequest = {
+  clientId: "<id>",
+  data: {},
+  memberId: "<id>",
+};
+```
 
 ## Fields
 

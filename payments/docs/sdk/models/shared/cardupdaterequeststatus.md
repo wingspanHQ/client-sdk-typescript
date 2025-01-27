@@ -1,13 +1,15 @@
 # CardUpdateRequestStatus
 
+## Example Usage
+
+```typescript
+import { CardUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardUpdateRequestStatus = "Active";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Active`           | Active             |
-| `Inactive`         | Inactive           |
-| `Stolen`           | Stolen             |
-| `Lost`             | Lost               |
-| `Frozen`           | Frozen             |
-| `ClosedByCustomer` | ClosedByCustomer   |
+```typescript
+"Active" | "Inactive" | "Stolen" | "Lost" | "Frozen" | "ClosedByCustomer"
+```

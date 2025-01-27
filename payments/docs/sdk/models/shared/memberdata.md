@@ -1,5 +1,12 @@
 # MemberData
 
+## Example Usage
+
+```typescript
+import { MemberData } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberData = {};
+```
 
 ## Fields
 

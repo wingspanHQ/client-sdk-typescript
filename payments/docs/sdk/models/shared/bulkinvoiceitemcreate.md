@@ -1,5 +1,18 @@
 # BulkInvoiceItemCreate
 
+## Example Usage
+
+```typescript
+import { BulkInvoiceItemCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkInvoiceItemCreate = {
+  amount: 4329.84,
+  bulkInvoiceBatchId: "<id>",
+  dueDate: "<value>",
+  invoiceStatus: "Approved",
+  lineItemDescription: "<value>",
+};
+```
 
 ## Fields
 

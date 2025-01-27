@@ -1,5 +1,80 @@
 # Invoice
 
+## Example Usage
+
+```typescript
+import { Invoice } from "@wingspan/payments/sdk/models/shared";
+
+let value: Invoice = {
+  amount: 4030.26,
+  client: {},
+  createdAt: "1729907210080",
+  currency: "CAD",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  events: {},
+  externalIds: {},
+  invoiceId: "<id>",
+  invoiceNumber: "<value>",
+  labels: {
+    "key": "<value>",
+  },
+  lineItems: [
+    {
+      costPerUnit: 4876.76,
+      createdAt: "1706422761747",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 4254.02,
+      reimbursableExpense: false,
+      totalCost: 635.53,
+      unit: "kilogram",
+      updatedAt: "1737935702104",
+    },
+  ],
+  member: {},
+  memberAddress: {
+    addressLine1: "88161 Prospect Road",
+    city: "Las Cruces",
+    postalCode: "02741-1848",
+    state: "Oregon",
+  },
+  memberClientId: "<id>",
+  memberId: "<id>",
+  payments: [
+    {
+      amount: 4097.26,
+      createdAt: "1718184587171",
+      events: {},
+      labels: {
+        "key": "<value>",
+      },
+      paymentId: "<id>",
+      sourceId: "<id>",
+      sourceMetadata: {},
+      sourceType: "Card",
+      status: "Returned",
+      updatedAt: "1737918844335",
+    },
+  ],
+  status: "Draft",
+  updatedAt: "1737915118748",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

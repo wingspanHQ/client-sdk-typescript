@@ -1,5 +1,18 @@
 # CreateSpecificCollaboratorBatchItemResponse
 
+## Example Usage
+
+```typescript
+import { CreateSpecificCollaboratorBatchItemResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateSpecificCollaboratorBatchItemResponse = {
+  contentType: "<value>",
+  statusCode: 307,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

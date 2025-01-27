@@ -1,5 +1,12 @@
 # Form1099Correction
 
+## Example Usage
+
+```typescript
+import { Form1099Correction } from "@wingspan/payments/sdk/models/shared";
+
+let value: Form1099Correction = {};
+```
 
 ## Fields
 

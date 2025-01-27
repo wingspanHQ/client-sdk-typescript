@@ -1,5 +1,12 @@
 # PayRequest
 
+## Example Usage
+
+```typescript
+import { PayRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayRequest = {};
+```
 
 ## Fields
 

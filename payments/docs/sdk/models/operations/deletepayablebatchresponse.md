@@ -1,5 +1,18 @@
 # DeletePayableBatchResponse
 
+## Example Usage
+
+```typescript
+import { DeletePayableBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeletePayableBatchResponse = {
+  contentType: "<value>",
+  statusCode: 506,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

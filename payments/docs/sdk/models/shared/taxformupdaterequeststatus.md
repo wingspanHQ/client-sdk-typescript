@@ -1,15 +1,15 @@
 # TaxFormUpdateRequestStatus
 
+## Example Usage
+
+```typescript
+import { TaxFormUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormUpdateRequestStatus = "Pending";
+```
 
 ## Values
 
-| Name                 | Value                |
-| -------------------- | -------------------- |
-| `Pending`            | Pending              |
-| `ReadyToSubmitToIrs` | ReadyToSubmitToIrs   |
-| `SubmittedToIrs`     | SubmittedToIrs       |
-| `AcceptedByIrs`      | AcceptedByIrs        |
-| `RejectedByIrs`      | RejectedByIrs        |
-| `PendingCorrection`  | PendingCorrection    |
-| `Excluded`           | Excluded             |
-| `Ineligible`         | Ineligible           |
+```typescript
+"Pending" | "ReadyToSubmitToIrs" | "SubmittedToIrs" | "AcceptedByIrs" | "RejectedByIrs" | "PendingCorrection" | "Excluded" | "Ineligible"
+```

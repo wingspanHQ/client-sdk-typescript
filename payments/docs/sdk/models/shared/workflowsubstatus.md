@@ -1,8 +1,15 @@
 # WorkflowSubStatus
 
+## Example Usage
+
+```typescript
+import { WorkflowSubStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: WorkflowSubStatus = "Submitted";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Submitted` | Submitted   |
+```typescript
+"Submitted"
+```

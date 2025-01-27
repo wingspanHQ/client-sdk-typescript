@@ -1,10 +1,15 @@
 # MeansType
 
+## Example Usage
+
+```typescript
+import { MeansType } from "@wingspan/payments/sdk/models/shared";
+
+let value: MeansType = "InternalAccount";
+```
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `Card`            | Card              |
-| `Account`         | Account           |
-| `InternalAccount` | InternalAccount   |
+```typescript
+"Card" | "Account" | "InternalAccount"
+```

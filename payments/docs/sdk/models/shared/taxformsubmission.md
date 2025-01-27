@@ -1,5 +1,20 @@
 # TaxFormSubmission
 
+## Example Usage
+
+```typescript
+import { TaxFormSubmission } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormSubmission = {
+  correctionType: "Type1",
+  deliveryMethod: "Mail",
+  externalDocumentId: "<id>",
+  isCorrected: false,
+  status: "SubmittedToIrs",
+  submissionData: {},
+  submissionId: "<id>",
+};
+```
 
 ## Fields
 

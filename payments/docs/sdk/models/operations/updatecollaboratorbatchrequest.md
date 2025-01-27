@@ -1,5 +1,14 @@
 # UpdateCollaboratorBatchRequest
 
+## Example Usage
+
+```typescript
+import { UpdateCollaboratorBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCollaboratorBatchRequest = {
+  batchId: "<id>",
+};
+```
 
 ## Fields
 

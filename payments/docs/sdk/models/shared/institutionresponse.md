@@ -1,5 +1,19 @@
 # InstitutionResponse
 
+## Example Usage
+
+```typescript
+import { InstitutionResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: InstitutionResponse = {
+  address: "53825 Priory Road",
+  isACHSupported: false,
+  isRTPSupported: false,
+  isWireSupported: false,
+  name: "<value>",
+  routingNumber: "<value>",
+};
+```
 
 ## Fields
 

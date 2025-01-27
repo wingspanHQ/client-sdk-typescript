@@ -1,5 +1,19 @@
 # UserRoles
 
+## Example Usage
+
+```typescript
+import { UserRoles } from "@wingspan/payments/sdk/models/shared";
+
+let value: UserRoles = {
+  ownerIds: [
+    "<value>",
+  ],
+  viewerIds: [
+    "<value>",
+  ],
+};
+```
 
 ## Fields
 

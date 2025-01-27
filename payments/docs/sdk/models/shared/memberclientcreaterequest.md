@@ -1,5 +1,12 @@
 # MemberClientCreateRequest
 
+## Example Usage
+
+```typescript
+import { MemberClientCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientCreateRequest = {};
+```
 
 ## Fields
 

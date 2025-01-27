@@ -28,29 +28,49 @@ Allows the addition of a new debit card to a member's profile for payout transac
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.create({
-    checkbookCardCreate: {
-      address: {
-        addressLine1: "4684 Bria Shores",
-        city: "Fort Peytonbury",
-        postalCode: "80413-0778",
-        state: "South Dakota",
-      },
-      cardNumber: "<value>",
-      expMM: "<value>",
-      expYYYY: "<value>",
-      name: "<value>",
-    },
-    memberId: "<value>",
+async function run() {
+  const result = await payments.bankingManagement.create({
+    memberId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementCreate } from "@wingspan/payments/funcs/bankingManagementCreate.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementCreate(payments, {
+    memberId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -63,16 +83,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.CreateDebitCardRequest](../../sdk/models/operations/createdebitcardrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.CreateDebitCardResponse](../../sdk/models/operations/createdebitcardresponse.md)>**
+**Promise\<[operations.CreateDebitCardResponse](../../sdk/models/operations/createdebitcardresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## delete
 
@@ -83,18 +104,51 @@ Initiates a process to remove and permanently delete a specific debit card from 
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.delete({
+async function run() {
+  const result = await payments.bankingManagement.delete({
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementDelete } from "@wingspan/payments/funcs/bankingManagementDelete.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementDelete(payments, {
+    id: "<id>",
+    memberId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -107,16 +161,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.DeleteDebitCardRequest](../../sdk/models/operations/deletedebitcardrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.DeleteDebitCardResponse](../../sdk/models/operations/deletedebitcardresponse.md)>**
+**Promise\<[operations.DeleteDebitCardResponse](../../sdk/models/operations/deletedebitcardresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## download
 
@@ -127,17 +182,49 @@ Retrieve and download the specified bank statement in PDF format using the provi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.download({
+async function run() {
+  const result = await payments.bankingManagement.download({
     id: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementDownload } from "@wingspan/payments/funcs/bankingManagementDownload.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementDownload(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -150,16 +237,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.DownloadBankStatementAsPDFRequest](../../sdk/models/operations/downloadbankstatementaspdfrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.DownloadBankStatementAsPDFResponse](../../sdk/models/operations/downloadbankstatementaspdfresponse.md)>**
+**Promise\<[operations.DownloadBankStatementAsPDFResponse](../../sdk/models/operations/downloadbankstatementaspdfresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get
 
@@ -170,17 +258,49 @@ Fetch details of a specific bank statement using its unique identifier, providin
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.get({
+async function run() {
+  const result = await payments.bankingManagement.get({
     id: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementGet } from "@wingspan/payments/funcs/bankingManagementGet.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementGet(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -193,16 +313,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetBankStatementRequest](../../sdk/models/operations/getbankstatementrequest.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetBankStatementResponse](../../sdk/models/operations/getbankstatementresponse.md)>**
+**Promise\<[operations.GetBankStatementResponse](../../sdk/models/operations/getbankstatementresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getApplicationLink
 
@@ -213,17 +334,49 @@ Get the application link required for a member to initiate the creation of a cle
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.getApplicationLink({
-    memberId: "<value>",
+async function run() {
+  const result = await payments.bankingManagement.getApplicationLink({
+    memberId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementGetApplicationLink } from "@wingspan/payments/funcs/bankingManagementGetApplicationLink.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementGetApplicationLink(payments, {
+    memberId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -236,16 +389,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetApplicationLinkRequest](../../sdk/models/operations/getapplicationlinkrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetApplicationLinkResponse](../../sdk/models/operations/getapplicationlinkresponse.md)>**
+**Promise\<[operations.GetApplicationLinkResponse](../../sdk/models/operations/getapplicationlinkresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getDebitCard
 
@@ -256,18 +410,51 @@ Fetches detailed information of a specific debit card linked to a member's profi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.getDebitCard({
+async function run() {
+  const result = await payments.bankingManagement.getDebitCard({
     id: "<id>",
-    memberId: "<value>",
+    memberId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementGetDebitCard } from "@wingspan/payments/funcs/bankingManagementGetDebitCard.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementGetDebitCard(payments, {
+    id: "<id>",
+    memberId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -280,16 +467,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetDebitCardRequest](../../sdk/models/operations/getdebitcardrequest.md)                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetDebitCardResponse](../../sdk/models/operations/getdebitcardresponse.md)>**
+**Promise\<[operations.GetDebitCardResponse](../../sdk/models/operations/getdebitcardresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getInstitution
 
@@ -300,17 +488,49 @@ Fetches comprehensive information about a banking institution based on the provi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.getInstitution({
+async function run() {
+  const result = await payments.bankingManagement.getInstitution({
     routingNumber: "<value>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementGetInstitution } from "@wingspan/payments/funcs/bankingManagementGetInstitution.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementGetInstitution(payments, {
+    routingNumber: "<value>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -323,16 +543,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetBankingInstitutionRequest](../../sdk/models/operations/getbankinginstitutionrequest.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetBankingInstitutionResponse](../../sdk/models/operations/getbankinginstitutionresponse.md)>**
+**Promise\<[operations.GetBankingInstitutionResponse](../../sdk/models/operations/getbankinginstitutionresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getPayoutSetting
 
@@ -343,17 +564,49 @@ Fetches the payout configuration, including linked debit cards and payout prefer
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.getPayoutSetting({
+async function run() {
+  const result = await payments.bankingManagement.getPayoutSetting({
     id: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementGetPayoutSetting } from "@wingspan/payments/funcs/bankingManagementGetPayoutSetting.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementGetPayoutSetting(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -366,16 +619,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.GetPayoutSettingRequest](../../sdk/models/operations/getpayoutsettingrequest.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.GetPayoutSettingResponse](../../sdk/models/operations/getpayoutsettingresponse.md)>**
+**Promise\<[operations.GetPayoutSettingResponse](../../sdk/models/operations/getpayoutsettingresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list
 
@@ -386,17 +640,49 @@ Retrieves a list of all debit cards linked to a member's profile for payout purp
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.list({
-    memberId: "<value>",
+async function run() {
+  const result = await payments.bankingManagement.list({
+    memberId: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementList } from "@wingspan/payments/funcs/bankingManagementList.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementList(payments, {
+    memberId: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -409,16 +695,17 @@ run();
 | `request`                                                                                                                                                                      | [operations.ListDebitCardsRequest](../../sdk/models/operations/listdebitcardsrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListDebitCardsResponse](../../sdk/models/operations/listdebitcardsresponse.md)>**
+**Promise\<[operations.ListDebitCardsResponse](../../sdk/models/operations/listdebitcardsresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## listStatements
 
@@ -429,15 +716,45 @@ Fetch a comprehensive list of all bank statements available in the system, provi
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.listStatements();
+async function run() {
+  const result = await payments.bankingManagement.listStatements();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementListStatements } from "@wingspan/payments/funcs/bankingManagementListStatements.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementListStatements(payments);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -449,16 +766,17 @@ run();
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.ListBankStatementsResponse](../../sdk/models/operations/listbankstatementsresponse.md)>**
+**Promise\<[operations.ListBankStatementsResponse](../../sdk/models/operations/listbankstatementsresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update
 
@@ -469,22 +787,49 @@ Allows adjustments and updates to a member's payout configuration, including cha
 ```typescript
 import { Payments } from "@wingspan/payments";
 
-async function run() {
-  const sdk = new Payments({
-    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-  });
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
 
-  const result = await sdk.bankingManagement.update({
-    payoutSettingsUpdate: {
-      payoutDestinations: [
-        {},
-      ],
-    },
+async function run() {
+  const result = await payments.bankingManagement.update({
     id: "<id>",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { PaymentsCore } from "@wingspan/payments/core.js";
+import { bankingManagementUpdate } from "@wingspan/payments/funcs/bankingManagementUpdate.js";
+
+// Use `PaymentsCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const payments = new PaymentsCore({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
+async function run() {
+  const res = await bankingManagementUpdate(payments, {
+    id: "<id>",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -497,13 +842,14 @@ run();
 | `request`                                                                                                                                                                      | [operations.UpdatePayoutSettingRequest](../../sdk/models/operations/updatepayoutsettingrequest.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise<[operations.UpdatePayoutSettingResponse](../../sdk/models/operations/updatepayoutsettingresponse.md)>**
+**Promise\<[operations.UpdatePayoutSettingResponse](../../sdk/models/operations/updatepayoutsettingresponse.md)\>**
+
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

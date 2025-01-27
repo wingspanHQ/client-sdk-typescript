@@ -1,5 +1,46 @@
 # CollaboratorSchema
 
+## Example Usage
+
+```typescript
+import { CollaboratorSchema } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorSchema = {
+  achCreditAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  clientId: "<id>",
+  collaboratorId: "<id>",
+  createdAt: "1710680199963",
+  eventActors: {
+    "key": "<value>",
+  },
+  form1099Balances: {},
+  internationalWireAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  member: {
+    user: {},
+  },
+  memberId: "<id>",
+  status: "Pending",
+  taxStatus: "Incomplete",
+  updatedAt: "1737912571160",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

@@ -1,5 +1,12 @@
 # CollaboratorGroupRequirement
 
+## Example Usage
+
+```typescript
+import { CollaboratorGroupRequirement } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorGroupRequirement = {};
+```
 
 ## Fields
 

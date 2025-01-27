@@ -1,5 +1,18 @@
 # CreateInvoiceTemplateResponse
 
+## Example Usage
+
+```typescript
+import { CreateInvoiceTemplateResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateInvoiceTemplateResponse = {
+  contentType: "<value>",
+  statusCode: 101,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

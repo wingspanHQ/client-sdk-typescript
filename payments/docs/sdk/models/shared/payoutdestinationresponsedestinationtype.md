@@ -1,10 +1,15 @@
 # PayoutDestinationResponseDestinationType
 
+## Example Usage
+
+```typescript
+import { PayoutDestinationResponseDestinationType } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayoutDestinationResponseDestinationType = "WeGift";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Account` | Account   |
-| `Card`    | Card      |
-| `WeGift`  | WeGift    |
+```typescript
+"Account" | "Card" | "WeGift"
+```

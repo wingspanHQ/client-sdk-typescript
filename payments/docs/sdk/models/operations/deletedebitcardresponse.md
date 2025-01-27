@@ -1,5 +1,18 @@
 # DeleteDebitCardResponse
 
+## Example Usage
+
+```typescript
+import { DeleteDebitCardResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteDebitCardResponse = {
+  contentType: "<value>",
+  statusCode: 102,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

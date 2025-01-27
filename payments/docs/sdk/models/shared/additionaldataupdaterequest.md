@@ -1,5 +1,12 @@
 # AdditionalDataUpdateRequest
 
+## Example Usage
+
+```typescript
+import { AdditionalDataUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: AdditionalDataUpdateRequest = {};
+```
 
 ## Fields
 

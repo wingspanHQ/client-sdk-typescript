@@ -1,5 +1,15 @@
 # Collaboration
 
+## Example Usage
+
+```typescript
+import { Collaboration } from "@wingspan/payments/sdk/models/shared";
+
+let value: Collaboration = {
+  collaboratorId: "<id>",
+  status: "Inactive",
+};
+```
 
 ## Fields
 

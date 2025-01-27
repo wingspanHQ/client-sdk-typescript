@@ -1,5 +1,14 @@
 # ListSpecificClientDetailsRequest
 
+## Example Usage
+
+```typescript
+import { ListSpecificClientDetailsRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSpecificClientDetailsRequest = {
+  clientId: "<id>",
+};
+```
 
 ## Fields
 

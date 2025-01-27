@@ -1,9 +1,15 @@
 # AdditionalDataUpdateRequestType
 
+## Example Usage
+
+```typescript
+import { AdditionalDataUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
+
+let value: AdditionalDataUpdateRequestType = "String";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Boolean` | Boolean   |
-| `String`  | String    |
+```typescript
+"Boolean" | "String"
+```

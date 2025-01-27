@@ -1,5 +1,18 @@
 # GetPaymentEligibilityRequirementResponse
 
+## Example Usage
+
+```typescript
+import { GetPaymentEligibilityRequirementResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetPaymentEligibilityRequirementResponse = {
+  contentType: "<value>",
+  statusCode: 305,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

@@ -1,5 +1,19 @@
 # InvoiceCreateRequest
 
+## Example Usage
+
+```typescript
+import { InvoiceCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCreateRequest = {
+  creditFeeHandling: {},
+  dueDate: "<value>",
+  lineItems: [
+    {},
+  ],
+  memberClientId: "<id>",
+};
+```
 
 ## Fields
 

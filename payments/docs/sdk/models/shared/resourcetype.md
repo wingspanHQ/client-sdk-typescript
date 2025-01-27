@@ -1,9 +1,15 @@
 # ResourceType
 
+## Example Usage
+
+```typescript
+import { ResourceType } from "@wingspan/payments/sdk/models/shared";
+
+let value: ResourceType = "Collaborator";
+```
 
 ## Values
 
-| Name           | Value          |
-| -------------- | -------------- |
-| `Collaborator` | Collaborator   |
-| `LineItem`     | LineItem       |
+```typescript
+"Collaborator" | "LineItem"
+```
