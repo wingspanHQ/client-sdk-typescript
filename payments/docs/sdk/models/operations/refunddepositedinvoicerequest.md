@@ -1,5 +1,14 @@
 # RefundDepositedInvoiceRequest
 
+## Example Usage
+
+```typescript
+import { RefundDepositedInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: RefundDepositedInvoiceRequest = {
+  invoiceId: "<id>",
+};
+```
 
 ## Fields
 

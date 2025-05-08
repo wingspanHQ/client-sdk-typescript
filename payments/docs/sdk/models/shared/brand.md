@@ -1,13 +1,15 @@
 # Brand
 
+## Example Usage
+
+```typescript
+import { Brand } from "@wingspan/payments/sdk/models/shared";
+
+let value: Brand = "Mastercard";
+```
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `AmericanExpress` | AmericanExpress   |
-| `Visa`            | Visa              |
-| `Mastercard`      | Mastercard        |
-| `Discover`        | Discover          |
-| `DinersClub`      | DinersClub        |
-| `Jcb`             | JCB               |
+```typescript
+"AmericanExpress" | "Visa" | "Mastercard" | "Discover" | "DinersClub" | "JCB"
+```

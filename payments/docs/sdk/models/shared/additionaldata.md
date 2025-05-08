@@ -1,5 +1,18 @@
 # AdditionalData
 
+## Example Usage
+
+```typescript
+import { AdditionalData } from "@wingspan/payments/sdk/models/shared";
+
+let value: AdditionalData = {
+  key: "<key>",
+  name: "<value>",
+  required: false,
+  resourceType: "Collaborator",
+  type: "Boolean",
+};
+```
 
 ## Fields
 

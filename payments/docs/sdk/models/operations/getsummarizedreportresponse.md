@@ -1,5 +1,18 @@
 # GetSummarizedReportResponse
 
+## Example Usage
+
+```typescript
+import { GetSummarizedReportResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetSummarizedReportResponse = {
+  contentType: "<value>",
+  statusCode: 424,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

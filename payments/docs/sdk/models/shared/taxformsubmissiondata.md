@@ -1,5 +1,12 @@
 # TaxFormSubmissionData
 
+## Example Usage
+
+```typescript
+import { TaxFormSubmissionData } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormSubmissionData = {};
+```
 
 ## Fields
 

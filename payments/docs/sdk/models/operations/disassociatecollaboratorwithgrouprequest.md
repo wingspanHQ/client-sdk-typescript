@@ -1,5 +1,15 @@
 # DisassociateCollaboratorWithGroupRequest
 
+## Example Usage
+
+```typescript
+import { DisassociateCollaboratorWithGroupRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DisassociateCollaboratorWithGroupRequest = {
+  groupId: "<id>",
+  id: "<id>",
+};
+```
 
 ## Fields
 

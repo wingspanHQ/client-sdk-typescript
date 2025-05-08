@@ -1,5 +1,14 @@
 # CompanyPerson
 
+## Example Usage
+
+```typescript
+import { CompanyPerson } from "@wingspan/payments/sdk/models/shared";
+
+let value: CompanyPerson = {
+  memberId: "<id>",
+};
+```
 
 ## Fields
 

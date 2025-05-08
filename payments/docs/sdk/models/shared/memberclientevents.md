@@ -1,5 +1,12 @@
 # MemberClientEvents
 
+## Example Usage
+
+```typescript
+import { MemberClientEvents } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClientEvents = {};
+```
 
 ## Fields
 

@@ -1,5 +1,16 @@
 # Ping
 
+## Example Usage
+
+```typescript
+import { Ping } from "@wingspan/payments/sdk/models/shared";
+
+let value: Ping = {
+  code: 7997.96,
+  message: "<value>",
+  status: "<value>",
+};
+```
 
 ## Fields
 

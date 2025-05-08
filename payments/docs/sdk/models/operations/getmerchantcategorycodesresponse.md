@@ -1,5 +1,18 @@
 # GetMerchantCategoryCodesResponse
 
+## Example Usage
+
+```typescript
+import { GetMerchantCategoryCodesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetMerchantCategoryCodesResponse = {
+  contentType: "<value>",
+  statusCode: 100,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

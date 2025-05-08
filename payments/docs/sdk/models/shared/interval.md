@@ -1,9 +1,15 @@
 # Interval
 
+## Example Usage
+
+```typescript
+import { Interval } from "@wingspan/payments/sdk/models/shared";
+
+let value: Interval = "Month";
+```
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `Week`  | Week    |
-| `Month` | Month   |
+```typescript
+"Week" | "Month"
+```

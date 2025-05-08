@@ -1,5 +1,14 @@
 # UpdateClientDeductionRequest
 
+## Example Usage
+
+```typescript
+import { UpdateClientDeductionRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateClientDeductionRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

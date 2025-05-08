@@ -1,5 +1,14 @@
 # GetClientInvoiceTemplateRequest
 
+## Example Usage
+
+```typescript
+import { GetClientInvoiceTemplateRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetClientInvoiceTemplateRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

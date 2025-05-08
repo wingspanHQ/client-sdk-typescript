@@ -1,5 +1,18 @@
 # UpdateGeneratedInvoiceResponse
 
+## Example Usage
+
+```typescript
+import { UpdateGeneratedInvoiceResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateGeneratedInvoiceResponse = {
+  contentType: "<value>",
+  statusCode: 204,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

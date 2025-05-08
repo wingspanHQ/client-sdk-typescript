@@ -1,11 +1,15 @@
 # CollaboratorV2TaxStatus
 
+## Example Usage
+
+```typescript
+import { CollaboratorV2TaxStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorV2TaxStatus = "Incomplete";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Complete`   | Complete     |
-| `Failed`     | Failed       |
-| `Pending`    | Pending      |
-| `Incomplete` | Incomplete   |
+```typescript
+"Complete" | "Failed" | "Pending" | "Incomplete"
+```

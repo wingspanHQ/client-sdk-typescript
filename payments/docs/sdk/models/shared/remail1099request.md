@@ -1,5 +1,21 @@
 # Remail1099Request
 
+## Example Usage
+
+```typescript
+import { Remail1099Request } from "@wingspan/payments/sdk/models/shared";
+
+let value: Remail1099Request = {
+  address: {
+    addressLine1: "4439 Ava Greens",
+    city: "Magaliview",
+    postalCode: "37689-8763",
+    state: "Delaware",
+  },
+  memberId: "<id>",
+  year: 626.36,
+};
+```
 
 ## Fields
 

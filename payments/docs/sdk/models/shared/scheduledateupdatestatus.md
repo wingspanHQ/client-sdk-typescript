@@ -1,11 +1,15 @@
 # ScheduleDateUpdateStatus
 
+## Example Usage
+
+```typescript
+import { ScheduleDateUpdateStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: ScheduleDateUpdateStatus = "Completed";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Pending`   | Pending     |
-| `Completed` | Completed   |
-| `Skipped`   | Skipped     |
-| `Modified`  | Modified    |
+```typescript
+"Pending" | "Completed" | "Skipped" | "Modified"
+```

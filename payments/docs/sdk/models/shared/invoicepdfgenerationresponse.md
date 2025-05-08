@@ -1,5 +1,15 @@
 # InvoicePdfGenerationResponse
 
+## Example Usage
+
+```typescript
+import { InvoicePdfGenerationResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoicePdfGenerationResponse = {
+  attachments: {},
+  invoiceId: "<id>",
+};
+```
 
 ## Fields
 

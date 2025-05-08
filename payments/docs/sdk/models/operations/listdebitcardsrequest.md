@@ -1,5 +1,14 @@
 # ListDebitCardsRequest
 
+## Example Usage
+
+```typescript
+import { ListDebitCardsRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListDebitCardsRequest = {
+  memberId: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,5 +1,18 @@
 # GetForm1099PDFResponse
 
+## Example Usage
+
+```typescript
+import { GetForm1099PDFResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetForm1099PDFResponse = {
+  contentType: "<value>",
+  statusCode: 505,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

@@ -1,5 +1,14 @@
 # UpdateCustomFieldRequest
 
+## Example Usage
+
+```typescript
+import { UpdateCustomFieldRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCustomFieldRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

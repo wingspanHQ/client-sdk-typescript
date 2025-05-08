@@ -1,5 +1,18 @@
 # DeleteCollaboratorBatchResponse
 
+## Example Usage
+
+```typescript
+import { DeleteCollaboratorBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCollaboratorBatchResponse = {
+  contentType: "<value>",
+  statusCode: 504,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

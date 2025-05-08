@@ -1,5 +1,19 @@
 # InvoicePayoutDestination
 
+## Example Usage
+
+```typescript
+import { InvoicePayoutDestination } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoicePayoutDestination = {
+  amount: 1478.01,
+  description: "besides forsaken coordinated married aside",
+  destinationType: "Account",
+  payoutMethod: "ECheck",
+  percentage: 9185.47,
+  transferId: "<id>",
+};
+```
 
 ## Fields
 

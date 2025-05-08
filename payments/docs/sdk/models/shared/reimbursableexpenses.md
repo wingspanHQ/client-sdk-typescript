@@ -1,9 +1,15 @@
 # ReimbursableExpenses
 
+## Example Usage
+
+```typescript
+import { ReimbursableExpenses } from "@wingspan/payments/sdk/models/shared";
+
+let value: ReimbursableExpenses = "Exclude";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Include` | Include   |
-| `Exclude` | Exclude   |
+```typescript
+"Include" | "Exclude"
+```

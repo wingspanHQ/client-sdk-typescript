@@ -1,5 +1,18 @@
 # DeleteCollaboratorResponse
 
+## Example Usage
+
+```typescript
+import { DeleteCollaboratorResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCollaboratorResponse = {
+  contentType: "<value>",
+  statusCode: 101,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

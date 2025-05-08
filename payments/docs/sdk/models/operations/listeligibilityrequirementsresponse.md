@@ -1,5 +1,18 @@
 # ListEligibilityRequirementsResponse
 
+## Example Usage
+
+```typescript
+import { ListEligibilityRequirementsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListEligibilityRequirementsResponse = {
+  contentType: "<value>",
+  statusCode: 201,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

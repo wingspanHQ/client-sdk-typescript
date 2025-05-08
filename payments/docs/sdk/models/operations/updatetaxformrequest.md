@@ -1,5 +1,14 @@
 # UpdateTaxFormRequest
 
+## Example Usage
+
+```typescript
+import { UpdateTaxFormRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateTaxFormRequest = {
+  taxFormId: "<id>",
+};
+```
 
 ## Fields
 

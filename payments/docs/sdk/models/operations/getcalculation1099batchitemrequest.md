@@ -1,5 +1,15 @@
 # GetCalculation1099BatchItemRequest
 
+## Example Usage
+
+```typescript
+import { GetCalculation1099BatchItemRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCalculation1099BatchItemRequest = {
+  batchId: "<id>",
+  batchItemId: "<id>",
+};
+```
 
 ## Fields
 

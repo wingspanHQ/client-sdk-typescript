@@ -1,12 +1,15 @@
 # InvoiceRefundDestinationDestinationType
 
+## Example Usage
+
+```typescript
+import { InvoiceRefundDestinationDestinationType } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceRefundDestinationDestinationType = "Account";
+```
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `Account`         | Account           |
-| `Card`            | Card              |
-| `InternalAccount` | InternalAccount   |
-| `PaperCheck`      | PaperCheck        |
-| `WeGift`          | WeGift            |
+```typescript
+"Account" | "Card" | "InternalAccount" | "PaperCheck" | "WeGift"
+```

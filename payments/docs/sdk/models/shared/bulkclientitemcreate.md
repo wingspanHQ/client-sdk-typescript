@@ -1,5 +1,12 @@
 # BulkClientItemCreate
 
+## Example Usage
+
+```typescript
+import { BulkClientItemCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkClientItemCreate = {};
+```
 
 ## Fields
 

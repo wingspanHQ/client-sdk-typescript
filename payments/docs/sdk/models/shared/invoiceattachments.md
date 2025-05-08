@@ -1,5 +1,12 @@
 # InvoiceAttachments
 
+## Example Usage
+
+```typescript
+import { InvoiceAttachments } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceAttachments = {};
+```
 
 ## Fields
 

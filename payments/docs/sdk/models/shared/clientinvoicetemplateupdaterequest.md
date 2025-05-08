@@ -1,5 +1,14 @@
 # ClientInvoiceTemplateUpdateRequest
 
+## Example Usage
+
+```typescript
+import { ClientInvoiceTemplateUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientInvoiceTemplateUpdateRequest = {
+  clientId: "<id>",
+};
+```
 
 ## Fields
 

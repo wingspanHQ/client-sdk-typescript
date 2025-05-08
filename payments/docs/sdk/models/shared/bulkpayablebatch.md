@@ -1,5 +1,36 @@
 # BulkPayableBatch
 
+## Example Usage
+
+```typescript
+import { BulkPayableBatch } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableBatch = {
+  bulkPayableBatchId: "<id>",
+  client: {
+    user: {},
+  },
+  clientId: "<id>",
+  createdAt: "1719153770193",
+  eventActors: {
+    "key": "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  processingStrategy: "Single",
+  status: "Pending",
+  updatedAt: "1737871608654",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

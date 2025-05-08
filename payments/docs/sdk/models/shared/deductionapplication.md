@@ -1,5 +1,15 @@
 # DeductionApplication
 
+## Example Usage
+
+```typescript
+import { DeductionApplication } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionApplication = {
+  amountDeducted: 8818.97,
+  payableId: "<id>",
+};
+```
 
 ## Fields
 

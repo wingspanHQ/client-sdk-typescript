@@ -1,9 +1,15 @@
 # DeductionUpdateRequestType
 
+## Example Usage
+
+```typescript
+import { DeductionUpdateRequestType } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionUpdateRequestType = "PostPayment";
+```
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `PrePayment`  | PrePayment    |
-| `PostPayment` | PostPayment   |
+```typescript
+"PrePayment" | "PostPayment"
+```

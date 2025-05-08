@@ -1,10 +1,15 @@
 # PayableSchemaAcceptedPaymentMethods
 
+## Example Usage
+
+```typescript
+import { PayableSchemaAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableSchemaAcceptedPaymentMethods = "Credit";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Credit` | Credit   |
-| `Ach`    | ACH      |
-| `Manual` | Manual   |
+```typescript
+"Credit" | "ACH" | "Manual"
+```

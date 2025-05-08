@@ -1,9 +1,15 @@
 # ClientUserAccountType
 
+## Example Usage
+
+```typescript
+import { ClientUserAccountType } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientUserAccountType = "enterprise";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Member`     | member       |
-| `Enterprise` | enterprise   |
+```typescript
+"member" | "enterprise"
+```

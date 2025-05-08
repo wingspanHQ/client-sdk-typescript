@@ -1,5 +1,27 @@
 # PayrollReportLineItem
 
+## Example Usage
+
+```typescript
+import { PayrollReportLineItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayrollReportLineItem = {
+  costPerUnit: 3970.14,
+  createdAt: "1728619551315",
+  index: 2848.85,
+  labels: {
+    "key": "<value>",
+  },
+  labelsBak2: {
+    "key": "<value>",
+  },
+  quantity: 1039.88,
+  reimbursableExpense: false,
+  totalCost: 9078.99,
+  unit: "gray",
+  updatedAt: "1737908304342",
+};
+```
 
 ## Fields
 

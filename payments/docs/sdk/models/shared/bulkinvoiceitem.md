@@ -1,5 +1,38 @@
 # BulkInvoiceItem
 
+## Example Usage
+
+```typescript
+import { BulkInvoiceItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkInvoiceItem = {
+  amount: 8562.77,
+  bulkInvoiceBatchId: "<id>",
+  bulkInvoiceItemId: "<id>",
+  createdAt: "1711518168286",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  invoiceStatus: "Approved",
+  labels: {
+    "key": "<value>",
+  },
+  lineItemDescription: "<value>",
+  memberId: "<id>",
+  paidDate: "<value>",
+  status: "Complete",
+  updatedAt: "1737894577238",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

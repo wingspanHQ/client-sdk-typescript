@@ -1,5 +1,12 @@
 # InvoiceWithholdings
 
+## Example Usage
+
+```typescript
+import { InvoiceWithholdings } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceWithholdings = {};
+```
 
 ## Fields
 

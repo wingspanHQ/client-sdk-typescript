@@ -1,5 +1,14 @@
 # UpdateInvoiceRequest
 
+## Example Usage
+
+```typescript
+import { UpdateInvoiceRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateInvoiceRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

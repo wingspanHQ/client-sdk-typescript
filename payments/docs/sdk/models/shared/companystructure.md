@@ -1,17 +1,15 @@
 # CompanyStructure
 
+## Example Usage
+
+```typescript
+import { CompanyStructure } from "@wingspan/payments/sdk/models/shared";
+
+let value: CompanyStructure = "SoleProprietorship";
+```
 
 ## Values
 
-| Name                 | Value                |
-| -------------------- | -------------------- |
-| `None`               | None                 |
-| `SoleProprietorship` | SoleProprietorship   |
-| `LlcSingleMember`    | LlcSingleMember      |
-| `LlcMultiMember`     | LlcMultiMember       |
-| `CorporationS`       | CorporationS         |
-| `LLCCorporationS`    | LLCCorporationS      |
-| `LLCCorporationC`    | LLCCorporationC      |
-| `LLCPartnership`     | LLCPartnership       |
-| `CorporationC`       | CorporationC         |
-| `Partnership`        | Partnership          |
+```typescript
+"None" | "SoleProprietorship" | "LlcSingleMember" | "LlcMultiMember" | "CorporationS" | "LLCCorporationS" | "LLCCorporationC" | "LLCPartnership" | "CorporationC" | "Partnership"
+```

@@ -1,12 +1,15 @@
 # BulkBatchUpdateStatus
 
+## Example Usage
+
+```typescript
+import { BulkBatchUpdateStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkBatchUpdateStatus = "Processing";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Open`       | Open         |
-| `Pending`    | Pending      |
-| `Processing` | Processing   |
-| `Complete`   | Complete     |
-| `Failed`     | Failed       |
+```typescript
+"Open" | "Pending" | "Processing" | "Complete" | "Failed"
+```

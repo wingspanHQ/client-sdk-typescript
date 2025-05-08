@@ -1,5 +1,12 @@
 # FrequencyUpdate
 
+## Example Usage
+
+```typescript
+import { FrequencyUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: FrequencyUpdate = {};
+```
 
 ## Fields
 

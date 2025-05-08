@@ -1,11 +1,15 @@
 # InvoiceTemplateUpdateRequestStatus
 
+## Example Usage
+
+```typescript
+import { InvoiceTemplateUpdateRequestStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceTemplateUpdateRequestStatus = "Expired";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Active`    | Active      |
-| `Draft`     | Draft       |
-| `Expired`   | Expired     |
-| `Cancelled` | Cancelled   |
+```typescript
+"Active" | "Draft" | "Expired" | "Cancelled"
+```

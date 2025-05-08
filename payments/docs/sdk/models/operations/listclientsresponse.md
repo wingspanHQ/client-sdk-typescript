@@ -1,5 +1,18 @@
 # ListClientsResponse
 
+## Example Usage
+
+```typescript
+import { ListClientsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListClientsResponse = {
+  contentType: "<value>",
+  statusCode: 102,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

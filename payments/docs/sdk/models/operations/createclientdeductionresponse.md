@@ -1,5 +1,18 @@
 # CreateClientDeductionResponse
 
+## Example Usage
+
+```typescript
+import { CreateClientDeductionResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: CreateClientDeductionResponse = {
+  contentType: "<value>",
+  statusCode: 404,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

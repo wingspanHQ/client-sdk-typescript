@@ -1,5 +1,14 @@
 # GetCustomDataCollaboratorMemberRequest
 
+## Example Usage
+
+```typescript
+import { GetCustomDataCollaboratorMemberRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetCustomDataCollaboratorMemberRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

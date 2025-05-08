@@ -1,10 +1,15 @@
 # InvoiceDataCreateRequestAcceptedPaymentMethods
 
+## Example Usage
+
+```typescript
+import { InvoiceDataCreateRequestAcceptedPaymentMethods } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceDataCreateRequestAcceptedPaymentMethods = "Manual";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Credit` | Credit   |
-| `Ach`    | ACH      |
-| `Manual` | Manual   |
+```typescript
+"Credit" | "ACH" | "Manual"
+```

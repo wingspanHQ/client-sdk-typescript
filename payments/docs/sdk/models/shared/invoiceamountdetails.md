@@ -1,5 +1,21 @@
 # InvoiceAmountDetails
 
+## Example Usage
+
+```typescript
+import { InvoiceAmountDetails } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceAmountDetails = {
+  clientPaid: 8536.06,
+  collaboratorPayments: 8894.48,
+  deductions: 2201.04,
+  memberGross: 6228.94,
+  memberNet: 1114.96,
+  memberTaxWithheld: 4589.7,
+  processingFee: 3223.33,
+  wingspanTopUp: 3165.01,
+};
+```
 
 ## Fields
 

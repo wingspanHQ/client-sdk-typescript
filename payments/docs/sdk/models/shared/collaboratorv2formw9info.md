@@ -1,5 +1,19 @@
 # CollaboratorV2FormW9Info
 
+## Example Usage
+
+```typescript
+import { CollaboratorV2FormW9Info } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorV2FormW9Info = {
+  addressLine1: "14152 Carroll Wall",
+  city: "Hesperia",
+  companyStructure: "LlcSingleMember",
+  country: "Dominica",
+  postalCode: "06438",
+  state: "Oklahoma",
+};
+```
 
 ## Fields
 

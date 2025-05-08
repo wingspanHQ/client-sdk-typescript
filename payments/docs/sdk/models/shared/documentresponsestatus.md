@@ -1,13 +1,15 @@
 # DocumentResponseStatus
 
+## Example Usage
+
+```typescript
+import { DocumentResponseStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: DocumentResponseStatus = "Invalid";
+```
 
 ## Values
 
-| Name            | Value           |
-| --------------- | --------------- |
-| `Required`      | Required        |
-| `Approved`      | Approved        |
-| `Invalid`       | Invalid         |
-| `ReceivedFront` | ReceivedFront   |
-| `ReceivedBack`  | ReceivedBack    |
-| `PendingReview` | PendingReview   |
+```typescript
+"Required" | "Approved" | "Invalid" | "ReceivedFront" | "ReceivedBack" | "PendingReview"
+```

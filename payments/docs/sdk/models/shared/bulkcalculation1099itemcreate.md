@@ -1,5 +1,15 @@
 # BulkCalculation1099ItemCreate
 
+## Example Usage
+
+```typescript
+import { BulkCalculation1099ItemCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCalculation1099ItemCreate = {
+  clientId: "<id>",
+  year: 4776.46,
+};
+```
 
 ## Fields
 

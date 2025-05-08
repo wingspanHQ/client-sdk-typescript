@@ -1,5 +1,18 @@
 # GetPayableBatchResponse
 
+## Example Usage
+
+```typescript
+import { GetPayableBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetPayableBatchResponse = {
+  contentType: "<value>",
+  statusCode: 408,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

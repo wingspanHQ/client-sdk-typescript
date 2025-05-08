@@ -1,5 +1,18 @@
 # GetPayableResponse
 
+## Example Usage
+
+```typescript
+import { GetPayableResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetPayableResponse = {
+  contentType: "<value>",
+  statusCode: 201,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 
