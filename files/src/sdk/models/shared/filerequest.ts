@@ -6,7 +6,7 @@ import {
     Dfd8f315b764d3bf459f8459cd5f444c6ac6656c1b8ec561168ce998df37955c,
     Dfd8f315b764d3bf459f8459cd5f444c6ac6656c1b8ec561168ce998df37955c$,
 } from "./dfd8f315b764d3bf459f8459cd5f444c6ac6656c1b8ec561168ce998df37955c";
-import { z } from "zod";
+import * as z from "zod";
 
 export type FileRequest = {
     encoding?: string | null | undefined;

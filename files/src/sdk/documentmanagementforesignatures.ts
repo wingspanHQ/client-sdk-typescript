@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class DocumentManagementForESignatures extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -61,9 +61,13 @@ export class DocumentManagementForESignatures extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/document",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/document" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -139,9 +143,13 @@ export class DocumentManagementForESignatures extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/document/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/document/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -218,9 +226,13 @@ export class DocumentManagementForESignatures extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/document/{id}/save-files",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/document/{id}/save-files" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -298,9 +310,13 @@ export class DocumentManagementForESignatures extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/document/{id}/signing-urls",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/document/{id}/signing-urls" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

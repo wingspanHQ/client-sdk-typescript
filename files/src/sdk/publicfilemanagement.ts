@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class PublicFileManagement extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -74,9 +74,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "delete_/files/member/public/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/files/member/public/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -142,9 +146,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/public",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/public" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -220,9 +228,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/public/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/public/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -300,9 +312,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/public/{id}/download",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/public/{id}/download" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -378,9 +394,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/files/member/public/{id}/summary",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/files/member/public/{id}/summary" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -458,9 +478,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/files/member/public/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/files/member/public/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -521,9 +545,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/files/member/public",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/files/member/public" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -583,9 +611,13 @@ export class PublicFileManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/files/member/public/upload",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/files/member/public/upload" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
