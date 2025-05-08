@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class BenefitsService extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -63,9 +63,13 @@ export class BenefitsService extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/benefits/service",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/benefits/service" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -142,9 +146,13 @@ export class BenefitsService extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "patch_/benefits/service/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "patch_/benefits/service/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
