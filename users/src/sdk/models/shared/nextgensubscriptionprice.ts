@@ -3,7 +3,7 @@
  */
 
 import { SkuId, SkuId$ } from "./skuid";
-import { z } from "zod";
+import * as z from "zod";
 
 export type NextgenSubscriptionPrice = {
     amount: number;

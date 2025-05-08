@@ -3,7 +3,7 @@
  */
 
 import { ClientProfileCreate, ClientProfileCreate$ } from "./clientprofilecreate";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ClientCreateRequest = {
     profile?: ClientProfileCreate | null | undefined;

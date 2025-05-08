@@ -12,7 +12,7 @@ import {
     SixHundredAndSixtyTwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d$,
 } from "./sixhundredandsixtytwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AccountStatus {
     Active = "Active",

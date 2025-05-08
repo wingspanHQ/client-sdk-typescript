@@ -3,7 +3,7 @@
  */
 
 import { Charge, Charge$ } from "./charge";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum InvoiceStatus {
     Draft = "draft",

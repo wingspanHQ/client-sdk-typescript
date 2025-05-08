@@ -6,7 +6,7 @@ import {
     F8c6f82160a6fdfd5126819f1852fc694cb8161367b6d04413104146646d63fb,
     F8c6f82160a6fdfd5126819f1852fc694cb8161367b6d04413104146646d63fb$,
 } from "./f8c6f82160a6fdfd5126819f1852fc694cb8161367b6d04413104146646d63fb";
-import { z } from "zod";
+import * as z from "zod";
 
 export type SixHundredAndSixtyTwob4b108cbbf88d6c8da2cc52e8dc2fcc4e24449d66b34b20beeb55bad5790d = {
     quickbooks?:

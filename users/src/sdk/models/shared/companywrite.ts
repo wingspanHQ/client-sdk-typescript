@@ -4,7 +4,7 @@
 
 import { CompanyLinks, CompanyLinks$ } from "./companylinks";
 import { CompanyPersonWrite, CompanyPersonWrite$ } from "./companypersonwrite";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum CompanyWriteStructure {
     None = "None",
