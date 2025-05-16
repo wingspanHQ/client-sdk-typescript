@@ -1,0 +1,36 @@
+# !!! DO NOT UPDATE MANUALLY !!!
+# Generated automatically. For more information see:
+# https://github.com/wingspanHQ/arch/tree/staging/prod-release-notifications
+
+name: Prod release Slack notification
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  pull-requests: read
+  contents: read
+
+jobs:
+  log-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log extracted information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          echo "Commit author: ${{ github.event.pusher.name }}"
+
+  notify:
+    needs: log-info
+    uses: wingspanHQ/arch/.github/workflows/notify-slack-on-prod-release.yml@staging
+    with:
+      repository: ${{ github.repository }}
+      commit_sha: ${{ github.sha }}
+      commit_message: ${{ github.event.head_commit.message }}
+      commit_author: ${{ github.event.pusher.name }}
+    secrets: inherit
