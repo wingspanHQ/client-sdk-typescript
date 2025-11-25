@@ -1,0 +1,23 @@
+# !!! DO NOT UPDATE MANUALLY !!!
+# If you need to update this file, please update the template file at
+# https://github.com/wingspanHQ/arch/tree/staging/dependabot
+
+# This configuration is set up to drive ONLY security updates, NOT version updates.
+# The open-pull-requests-limit: 0 setting disables version updates while keeping security updates active.
+
+# Documentation with all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+
+updates:
+  - package-ecosystem: "npm" # "npm" is used for yarn: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem
+    directories:
+      - "/benefits"
+      - "/files"
+      - "/payments"
+      - "/users"
+    schedule:
+      interval: "daily"
+    labels: ["dependabot-cve"]
+    open-pull-requests-limit: 0 # Disable version updates. This doesn't impact security updates.
