@@ -6,7 +6,7 @@ import {
     Fivea32679f9ede76c39a5dbdbf1b227070bff3053fb97aac841f885751d36d7dac,
     Fivea32679f9ede76c39a5dbdbf1b227070bff3053fb97aac841f885751d36d7dac$,
 } from "./fivea32679f9ede76c39a5dbdbf1b227070bff3053fb97aac841f885751d36d7dac";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Oneec70b8932527ff4790394003fff4dc0129da172d7ffa7d79fdfb7db427d1746 = {
     quickbooks?:

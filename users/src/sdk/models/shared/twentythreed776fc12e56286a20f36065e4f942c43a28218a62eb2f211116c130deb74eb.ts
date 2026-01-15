@@ -4,7 +4,7 @@
 
 import { Address, Address$ } from "./address";
 import { Company, Company$ } from "./company";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TwentyThreed776fc12e56286a20f36065e4f942c43a28218a62eb2f211116c130deb74eb = {
     address?: Address | null | undefined;

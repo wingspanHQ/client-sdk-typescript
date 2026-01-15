@@ -3,7 +3,7 @@
  */
 
 import { FlowProgress, FlowProgress$ } from "./flowprogress";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Flows = {
     benefitsSetup?: FlowProgress | null | undefined;

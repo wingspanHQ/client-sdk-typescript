@@ -8,8 +8,8 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
 
 export class SubscriptionManagement extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -83,11 +83,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
-
         const context = {
             operationID: "delete_/users/user/member/{memberId}/nextgen-subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -174,9 +176,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "get_/users/user/member/{memberId}/nextgen-subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/users/user/member/{memberId}/nextgen-subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -263,11 +269,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
-
         const context = {
             operationID: "get_/users/user/member/{memberId}/nextgen-subscription-plan",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -355,11 +363,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
-
         const context = {
             operationID: "get_/users/user/member/{memberId}/nextgen-subscription-plan/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -447,11 +457,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
-
         const context = {
             operationID: "get_/users/user/member/{memberId}/nextgen-subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -542,11 +554,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
-
         const context = {
             operationID: "patch_/users/user/member/{memberId}/nextgen-subscription/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -636,9 +650,13 @@ export class SubscriptionManagement extends ClientSDK {
         } else {
             security$ = {};
         }
+        const context = {
+            operationID: "post_/users/user/member/{memberId}/nextgen-subscription",
+            oAuth2Scopes: [],
+            securitySource: this.options$.bearerAuth,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/users/user/member/{memberId}/nextgen-subscription" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

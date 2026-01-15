@@ -6,7 +6,7 @@ import {
     Sevena01613108052d8f7b4782efc42c1c6198c318ddee48446943e5402df03118c4,
     Sevena01613108052d8f7b4782efc42c1c6198c318ddee48446943e5402df03118c4$,
 } from "./sevena01613108052d8f7b4782efc42c1c6198c318ddee48446943e5402df03118c4";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum AccountVerifyRequestType {
     MicroDeposit = "MicroDeposit",

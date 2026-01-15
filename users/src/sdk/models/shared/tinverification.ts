@@ -3,7 +3,7 @@
  */
 
 import { VerificationState, VerificationState$ } from "./verificationstate";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TinVerification = {
     ein?: VerificationState | null | undefined;

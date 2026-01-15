@@ -6,7 +6,7 @@ import { MemberProfile, MemberProfile$ } from "./memberprofile";
 import { NewUser, NewUser$ } from "./newuser";
 import { ServiceStatus, ServiceStatus$ } from "./servicestatus";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Member = {
     advocateId?: string | null | undefined;

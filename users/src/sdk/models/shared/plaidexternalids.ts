@@ -6,7 +6,7 @@ import {
     QuickbooksAccountExternalIds,
     QuickbooksAccountExternalIds$,
 } from "./quickbooksaccountexternalids";
-import { z } from "zod";
+import * as z from "zod";
 
 export type PlaidExternalIds = {
     checkbookAccountId?: string | null | undefined;

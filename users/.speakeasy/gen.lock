@@ -3,21 +3,21 @@ id: 9dc5c2ac-9a6c-42e2-aa68-24b245224cec
 management:
   docChecksum: 0de556d1c2dbd2ed989cc3cfa530242c
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.275.2
-  releaseVersion: 2.0.1
-  configChecksum: 3cc7af58c3adfc327f235047f6cea111
+  speakeasyVersion: 1.221.0
+  generationVersion: 2.287.0
+  releaseVersion: 2.1.1
+  configChecksum: 673b3437c19427fdad9f926b10c36f37
   repoURL: https://github.com/wingspanHQ/client-sdk-typescript.git
   repoSubDirectory: users
   installationURL: https://gitpkg.now.sh/wingspanHQ/client-sdk-typescript/users
   published: true
 features:
   typescript:
-    core: 3.6.1
-    globalSecurity: 2.82.4
-    globalServerURLs: 2.82.3
-    responseFormat: 0.1.0
-    unions: 2.85.2
+    core: 3.6.3
+    globalSecurity: 2.82.8
+    globalServerURLs: 2.82.4
+    responseFormat: 0.2.2
+    unions: 2.85.3
 generatedFiles:
   - src/sdk/userandmembermanagement.ts
   - src/sdk/accountandbankingoperations.ts
@@ -37,7 +37,6 @@ generatedFiles:
   - src/lib/base64.ts
   - src/lib/config.ts
   - src/lib/encodings.ts
-  - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
   - src/lib/schemas.ts
@@ -48,7 +47,6 @@ generatedFiles:
   - src/sdk/models/errors/sdkerror.ts
   - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
-  - src/sdk/types/decimal.ts
   - src/sdk/types/index.ts
   - src/sdk/types/operations.ts
   - src/sdk/types/rfcdate.ts

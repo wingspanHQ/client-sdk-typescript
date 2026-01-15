@@ -3,7 +3,7 @@
  */
 
 import { NextgenSubscriptionPrice, NextgenSubscriptionPrice$ } from "./nextgensubscriptionprice";
-import { z } from "zod";
+import * as z from "zod";
 
 export type SixHundredAndTwentyNined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278 = {
     monthly: NextgenSubscriptionPrice;

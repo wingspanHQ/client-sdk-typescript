@@ -3,7 +3,7 @@
  */
 
 import { ScopeModification, ScopeModification$ } from "./scopemodification";
-import { z } from "zod";
+import * as z from "zod";
 
 export type A24fdd81435ed05a57123a87880fde150a3466e9cd38875e4ecd540139f5e47d = {
     organizationAccount?: Array<ScopeModification> | null | undefined;

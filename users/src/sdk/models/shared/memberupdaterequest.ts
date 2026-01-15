@@ -3,7 +3,7 @@
  */
 
 import { MemberProfileWrite, MemberProfileWrite$ } from "./memberprofilewrite";
-import { z } from "zod";
+import * as z from "zod";
 
 export type MemberUpdateRequest = {
     memberId: string;

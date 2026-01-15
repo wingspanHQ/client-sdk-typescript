@@ -9,7 +9,7 @@ import {
 import { NextgenSubscriptionPlan, NextgenSubscriptionPlan$ } from "./nextgensubscriptionplan";
 import { NextgenSubscriptionPrice, NextgenSubscriptionPrice$ } from "./nextgensubscriptionprice";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum NextgenSubscriptionResponseStatus {
     Active = "Active",

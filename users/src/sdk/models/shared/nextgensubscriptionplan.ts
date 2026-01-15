@@ -6,7 +6,7 @@ import {
     SixHundredAndTwentyNined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278,
     SixHundredAndTwentyNined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278$,
 } from "./sixhundredandtwentynined384730e878960087338a314c3117c9abb8337ea9c58dda95ee9d8385a278";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum Partner {
     Usa = "USA",

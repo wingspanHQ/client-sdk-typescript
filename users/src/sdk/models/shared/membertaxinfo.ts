@@ -3,7 +3,7 @@
  */
 
 import { MemberOccupation, MemberOccupation$ } from "./memberoccupation";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum FilingCode {
     S = "S",
