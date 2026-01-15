@@ -6,7 +6,7 @@ import {
     A71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc,
     A71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc$,
 } from "./a71f30be878693b235f8c5f1650be03c9920ca9821526545760476436104c9dc";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum FundingStatus {
     Pending = "Pending",
