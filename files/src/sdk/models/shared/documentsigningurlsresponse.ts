@@ -6,7 +6,7 @@ import { DocumentEvents, DocumentEvents$ } from "./documentevents";
 import { DocumentFiles, DocumentFiles$ } from "./documentfiles";
 import { DocumentSigningUrls, DocumentSigningUrls$ } from "./documentsigningurls";
 import { UserRoles, UserRoles$ } from "./userroles";
-import { z } from "zod";
+import * as z from "zod";
 
 export enum DocumentSigningUrlsResponseStatus {
     New = "New",
