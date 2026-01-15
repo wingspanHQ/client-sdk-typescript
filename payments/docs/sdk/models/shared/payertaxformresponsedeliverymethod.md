@@ -1,9 +1,15 @@
 # PayerTaxFormResponseDeliveryMethod
 
+## Example Usage
+
+```typescript
+import { PayerTaxFormResponseDeliveryMethod } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayerTaxFormResponseDeliveryMethod = "Mail";
+```
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `Electronic` | Electronic   |
-| `Mail`       | Mail         |
+```typescript
+"Electronic" | "Mail"
+```

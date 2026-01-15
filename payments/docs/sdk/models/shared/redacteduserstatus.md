@@ -1,10 +1,15 @@
 # RedactedUserStatus
 
+## Example Usage
+
+```typescript
+import { RedactedUserStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: RedactedUserStatus = "Active";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Pending`  | Pending    |
-| `Active`   | Active     |
-| `Disabled` | Disabled   |
+```typescript
+"Pending" | "Active" | "Disabled"
+```

@@ -1,5 +1,12 @@
 # ClientOptions
 
+## Example Usage
+
+```typescript
+import { ClientOptions } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientOptions = {};
+```
 
 ## Fields
 

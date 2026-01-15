@@ -1,5 +1,14 @@
 # GetApplicationLinkRequest
 
+## Example Usage
+
+```typescript
+import { GetApplicationLinkRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetApplicationLinkRequest = {
+  memberId: "<id>",
+};
+```
 
 ## Fields
 

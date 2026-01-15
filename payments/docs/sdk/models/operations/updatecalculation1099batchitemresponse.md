@@ -1,5 +1,18 @@
 # UpdateCalculation1099BatchItemResponse
 
+## Example Usage
+
+```typescript
+import { UpdateCalculation1099BatchItemResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCalculation1099BatchItemResponse = {
+  contentType: "<value>",
+  statusCode: 201,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

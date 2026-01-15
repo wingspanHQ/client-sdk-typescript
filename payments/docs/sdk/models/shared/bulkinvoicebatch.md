@@ -1,5 +1,33 @@
 # BulkInvoiceBatch
 
+## Example Usage
+
+```typescript
+import { BulkInvoiceBatch } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkInvoiceBatch = {
+  bulkInvoiceBatchId: "<id>",
+  createdAt: "1717276574262",
+  eventActors: {
+    "key": "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  memberId: "<id>",
+  processingStrategy: "Single",
+  status: "Complete",
+  updatedAt: "1737889630867",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

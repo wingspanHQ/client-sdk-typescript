@@ -1,5 +1,15 @@
 # UpdateEligibilityRequirementCollaboratorGroupRequest
 
+## Example Usage
+
+```typescript
+import { UpdateEligibilityRequirementCollaboratorGroupRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateEligibilityRequirementCollaboratorGroupRequest = {
+  eligibilityRequirementId: "<id>",
+  id: "<id>",
+};
+```
 
 ## Fields
 

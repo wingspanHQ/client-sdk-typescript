@@ -1,5 +1,18 @@
 # ListPayableBatchesResponse
 
+## Example Usage
+
+```typescript
+import { ListPayableBatchesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListPayableBatchesResponse = {
+  contentType: "<value>",
+  statusCode: 103,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

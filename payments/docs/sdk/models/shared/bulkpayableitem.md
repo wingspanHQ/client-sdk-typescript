@@ -1,5 +1,38 @@
 # BulkPayableItem
 
+## Example Usage
+
+```typescript
+import { BulkPayableItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableItem = {
+  amount: 9799.63,
+  bulkPayableBatchId: "<id>",
+  bulkPayableItemId: "<id>",
+  clientId: "<id>",
+  createdAt: "1719767546852",
+  dueDate: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  lineItemDescription: "<value>",
+  paidDate: "<value>",
+  payableStatus: "Cancelled",
+  status: "Open",
+  updatedAt: "1737878579622",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

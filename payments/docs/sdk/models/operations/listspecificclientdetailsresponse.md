@@ -1,5 +1,18 @@
 # ListSpecificClientDetailsResponse
 
+## Example Usage
+
+```typescript
+import { ListSpecificClientDetailsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListSpecificClientDetailsResponse = {
+  contentType: "<value>",
+  statusCode: 305,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

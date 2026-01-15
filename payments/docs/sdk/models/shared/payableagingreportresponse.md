@@ -1,5 +1,29 @@
 # PayableAgingReportResponse
 
+## Example Usage
+
+```typescript
+import { PayableAgingReportResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableAgingReportResponse = {
+  ageGroup: "<value>",
+  amount: 9792.71,
+  createdAt: "1726893111723",
+  currency: "Hryvnia",
+  dueDate: "<value>",
+  invoiceId: "<id>",
+  invoiceNumber: "<value>",
+  invoicePdf: "<value>",
+  member: {
+    user: {},
+  },
+  memberClientId: "<id>",
+  memberId: "<id>",
+  receiptPdf: "<value>",
+  status: "Cancelled",
+  updatedAt: "1737919218907",
+};
+```
 
 ## Fields
 

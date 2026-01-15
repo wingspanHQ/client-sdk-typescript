@@ -1,5 +1,12 @@
 # PayableUpdateRequest
 
+## Example Usage
+
+```typescript
+import { PayableUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableUpdateRequest = {};
+```
 
 ## Fields
 

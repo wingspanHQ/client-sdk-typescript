@@ -1,9 +1,15 @@
 # FrequencyUpdateInterval
 
+## Example Usage
+
+```typescript
+import { FrequencyUpdateInterval } from "@wingspan/payments/sdk/models/shared";
+
+let value: FrequencyUpdateInterval = "Month";
+```
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `Week`  | Week    |
-| `Month` | Month   |
+```typescript
+"Week" | "Month"
+```

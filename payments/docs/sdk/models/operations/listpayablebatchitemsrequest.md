@@ -1,5 +1,14 @@
 # ListPayableBatchItemsRequest
 
+## Example Usage
+
+```typescript
+import { ListPayableBatchItemsRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListPayableBatchItemsRequest = {
+  batchId: "<id>",
+};
+```
 
 ## Fields
 

@@ -1,5 +1,12 @@
 # CollaboratorForm1099BalancesUpdateRequest
 
+## Example Usage
+
+```typescript
+import { CollaboratorForm1099BalancesUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorForm1099BalancesUpdateRequest = {};
+```
 
 ## Fields
 

@@ -1,9 +1,15 @@
 # BulkPayableBatchProcessingStrategy
 
+## Example Usage
+
+```typescript
+import { BulkPayableBatchProcessingStrategy } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableBatchProcessingStrategy = "Merge";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Merge`  | Merge    |
-| `Single` | Single   |
+```typescript
+"Merge" | "Single"
+```

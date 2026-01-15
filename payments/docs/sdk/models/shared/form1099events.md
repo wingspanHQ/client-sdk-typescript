@@ -1,5 +1,12 @@
 # Form1099Events
 
+## Example Usage
+
+```typescript
+import { Form1099Events } from "@wingspan/payments/sdk/models/shared";
+
+let value: Form1099Events = {};
+```
 
 ## Fields
 

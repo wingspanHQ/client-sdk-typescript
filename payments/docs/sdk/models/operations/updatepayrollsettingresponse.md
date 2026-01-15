@@ -1,5 +1,18 @@
 # UpdatePayrollSettingResponse
 
+## Example Usage
+
+```typescript
+import { UpdatePayrollSettingResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdatePayrollSettingResponse = {
+  contentType: "<value>",
+  statusCode: 102,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

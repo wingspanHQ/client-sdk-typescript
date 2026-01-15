@@ -1,5 +1,12 @@
 # CardCreateRequest
 
+## Example Usage
+
+```typescript
+import { CardCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardCreateRequest = {};
+```
 
 ## Fields
 

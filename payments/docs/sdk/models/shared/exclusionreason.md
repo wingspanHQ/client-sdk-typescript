@@ -1,10 +1,15 @@
 # ExclusionReason
 
+## Example Usage
+
+```typescript
+import { ExclusionReason } from "@wingspan/payments/sdk/models/shared";
+
+let value: ExclusionReason = "NonUsEntity";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `BelowThreshold`   | BelowThreshold     |
-| `CompanyStructure` | CompanyStructure   |
-| `NonUsEntity`      | NonUsEntity        |
+```typescript
+"BelowThreshold" | "CompanyStructure" | "NonUsEntity"
+```

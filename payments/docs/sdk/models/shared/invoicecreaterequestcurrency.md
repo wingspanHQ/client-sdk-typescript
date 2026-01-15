@@ -1,9 +1,15 @@
 # InvoiceCreateRequestCurrency
 
+## Example Usage
+
+```typescript
+import { InvoiceCreateRequestCurrency } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceCreateRequestCurrency = "CAD";
+```
 
 ## Values
 
-| Name  | Value |
-| ----- | ----- |
-| `Usd` | USD   |
-| `Cad` | CAD   |
+```typescript
+"USD" | "CAD"
+```

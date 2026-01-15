@@ -1,5 +1,12 @@
 # BulkBatchCreate
 
+## Example Usage
+
+```typescript
+import { BulkBatchCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkBatchCreate = {};
+```
 
 ## Fields
 

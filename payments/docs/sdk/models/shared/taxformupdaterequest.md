@@ -1,5 +1,14 @@
 # TaxFormUpdateRequest
 
+## Example Usage
+
+```typescript
+import { TaxFormUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormUpdateRequest = {
+  data: {},
+};
+```
 
 ## Fields
 

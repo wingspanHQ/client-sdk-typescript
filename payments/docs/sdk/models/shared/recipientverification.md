@@ -1,5 +1,16 @@
 # RecipientVerification
 
+## Example Usage
+
+```typescript
+import { RecipientVerification } from "@wingspan/payments/sdk/models/shared";
+
+let value: RecipientVerification = {
+  failureCount: 1602.3,
+  tinType: "Business",
+  verified: false,
+};
+```
 
 ## Fields
 

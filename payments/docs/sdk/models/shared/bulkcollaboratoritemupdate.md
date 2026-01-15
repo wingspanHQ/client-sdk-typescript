@@ -1,5 +1,12 @@
 # BulkCollaboratorItemUpdate
 
+## Example Usage
+
+```typescript
+import { BulkCollaboratorItemUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCollaboratorItemUpdate = {};
+```
 
 ## Fields
 

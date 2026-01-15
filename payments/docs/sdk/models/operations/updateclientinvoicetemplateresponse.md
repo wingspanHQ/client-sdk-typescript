@@ -1,5 +1,18 @@
 # UpdateClientInvoiceTemplateResponse
 
+## Example Usage
+
+```typescript
+import { UpdateClientInvoiceTemplateResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateClientInvoiceTemplateResponse = {
+  contentType: "<value>",
+  statusCode: 204,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

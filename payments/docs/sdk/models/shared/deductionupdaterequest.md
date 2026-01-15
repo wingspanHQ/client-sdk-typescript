@@ -1,5 +1,12 @@
 # DeductionUpdateRequest
 
+## Example Usage
+
+```typescript
+import { DeductionUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: DeductionUpdateRequest = {};
+```
 
 ## Fields
 

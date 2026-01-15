@@ -1,9 +1,15 @@
 # AutoPayRequirement
 
+## Example Usage
+
+```typescript
+import { AutoPayRequirement } from "@wingspan/payments/sdk/models/shared";
+
+let value: AutoPayRequirement = "None";
+```
 
 ## Values
 
-| Name   | Value  |
-| ------ | ------ |
-| `All`  | All    |
-| `None` | None   |
+```typescript
+"All" | "None"
+```

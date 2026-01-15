@@ -1,5 +1,14 @@
 # UpdateCustomDataCollaboratorMemberRequest
 
+## Example Usage
+
+```typescript
+import { UpdateCustomDataCollaboratorMemberRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCustomDataCollaboratorMemberRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

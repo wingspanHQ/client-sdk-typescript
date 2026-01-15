@@ -1,5 +1,12 @@
 # TaxFormSubmissionEvents
 
+## Example Usage
+
+```typescript
+import { TaxFormSubmissionEvents } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormSubmissionEvents = {};
+```
 
 ## Fields
 

@@ -2,15 +2,15 @@
 ```typescript
 import { Payments } from "@wingspan/payments";
 
+const payments = new Payments({
+  bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+});
+
 async function run() {
-    const sdk = new Payments({
-        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-    });
+  const result = await payments.serviceSettings.get();
 
-    const result = await sdk.serviceSettings.get();
-
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();

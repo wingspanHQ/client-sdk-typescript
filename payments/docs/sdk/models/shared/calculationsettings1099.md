@@ -1,5 +1,12 @@
 # CalculationSettings1099
 
+## Example Usage
+
+```typescript
+import { CalculationSettings1099 } from "@wingspan/payments/sdk/models/shared";
+
+let value: CalculationSettings1099 = {};
+```
 
 ## Fields
 

@@ -1,5 +1,14 @@
 # InvoiceRefundRequest
 
+## Example Usage
+
+```typescript
+import { InvoiceRefundRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceRefundRequest = {
+  amount: 3884.04,
+};
+```
 
 ## Fields
 

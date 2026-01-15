@@ -1,5 +1,14 @@
 # UpdateCollaboratorGroupConfigurationRequest
 
+## Example Usage
+
+```typescript
+import { UpdateCollaboratorGroupConfigurationRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCollaboratorGroupConfigurationRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

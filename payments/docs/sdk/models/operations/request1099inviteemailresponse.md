@@ -1,5 +1,18 @@
 # Request1099InviteEmailResponse
 
+## Example Usage
+
+```typescript
+import { Request1099InviteEmailResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: Request1099InviteEmailResponse = {
+  contentType: "<value>",
+  statusCode: 300,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

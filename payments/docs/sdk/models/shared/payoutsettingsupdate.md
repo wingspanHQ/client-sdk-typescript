@@ -1,5 +1,12 @@
 # PayoutSettingsUpdate
 
+## Example Usage
+
+```typescript
+import { PayoutSettingsUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayoutSettingsUpdate = {};
+```
 
 ## Fields
 

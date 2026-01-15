@@ -1,5 +1,12 @@
 # Fees
 
+## Example Usage
+
+```typescript
+import { Fees } from "@wingspan/payments/sdk/models/shared";
+
+let value: Fees = {};
+```
 
 ## Fields
 

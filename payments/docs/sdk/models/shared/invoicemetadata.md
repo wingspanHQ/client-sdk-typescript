@@ -1,5 +1,12 @@
 # InvoiceMetadata
 
+## Example Usage
+
+```typescript
+import { InvoiceMetadata } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceMetadata = {};
+```
 
 ## Fields
 

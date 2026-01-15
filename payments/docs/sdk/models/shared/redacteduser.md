@@ -1,5 +1,12 @@
 # RedactedUser
 
+## Example Usage
+
+```typescript
+import { RedactedUser } from "@wingspan/payments/sdk/models/shared";
+
+let value: RedactedUser = {};
+```
 
 ## Fields
 

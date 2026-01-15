@@ -1,5 +1,14 @@
 # DeleteCollaboratorBatchRequest
 
+## Example Usage
+
+```typescript
+import { DeleteCollaboratorBatchRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: DeleteCollaboratorBatchRequest = {
+  batchId: "<id>",
+};
+```
 
 ## Fields
 

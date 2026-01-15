@@ -1,5 +1,18 @@
 # UpdateCollaboratorBatchResponse
 
+## Example Usage
+
+```typescript
+import { UpdateCollaboratorBatchResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCollaboratorBatchResponse = {
+  contentType: "<value>",
+  statusCode: 300,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

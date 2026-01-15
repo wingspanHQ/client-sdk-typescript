@@ -9,16 +9,23 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   telemetryEnabled: false
 typescript:
-  version: 2.1.0
+  version: 2.8.11
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
     peerDependencies: {}
+  additionalPackageJSON: {}
   author: Wingspan Networks, Inc.
   clientServerStatusCodesAsErrors: false
+  defaultErrorName: SDKError
+  enableCustomCodeRegions: false
+  enableReactQuery: false
+  enumFormat: union
   flattenGlobalSecurity: true
+  flatteningOrder: body-first
   imports:
     option: openapi
     paths:
@@ -29,7 +36,10 @@ typescript:
       webhooks: sdk/models/webhooks
   inputModelSuffix: input
   maxMethodParams: 0
+  methodArguments: require-security-and-request
+  moduleFormat: commonjs
   outputModelSuffix: output
   packageName: '@wingspan/payments'
   responseFormat: envelope
   templateVersion: v2
+  useIndexModules: true

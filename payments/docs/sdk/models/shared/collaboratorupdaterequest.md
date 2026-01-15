@@ -1,5 +1,12 @@
 # CollaboratorUpdateRequest
 
+## Example Usage
+
+```typescript
+import { CollaboratorUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorUpdateRequest = {};
+```
 
 ## Fields
 

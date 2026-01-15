@@ -1,5 +1,15 @@
 # ExternalIdsQuickbooksData
 
+## Example Usage
+
+```typescript
+import { ExternalIdsQuickbooksData } from "@wingspan/payments/sdk/models/shared";
+
+let value: ExternalIdsQuickbooksData = {
+  id: "<id>",
+  syncToken: "<value>",
+};
+```
 
 ## Fields
 

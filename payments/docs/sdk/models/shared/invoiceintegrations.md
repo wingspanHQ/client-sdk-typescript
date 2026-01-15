@@ -1,5 +1,12 @@
 # InvoiceIntegrations
 
+## Example Usage
+
+```typescript
+import { InvoiceIntegrations } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceIntegrations = {};
+```
 
 ## Fields
 

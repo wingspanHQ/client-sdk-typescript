@@ -1,5 +1,18 @@
 # BulkPayableItemCreate
 
+## Example Usage
+
+```typescript
+import { BulkPayableItemCreate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableItemCreate = {
+  amount: 8224.07,
+  bulkPayableBatchId: "<id>",
+  dueDate: "<value>",
+  lineItemDescription: "<value>",
+  payableStatus: "Paid",
+};
+```
 
 ## Fields
 

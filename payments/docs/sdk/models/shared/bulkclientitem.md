@@ -1,5 +1,34 @@
 # BulkClientItem
 
+## Example Usage
+
+```typescript
+import { BulkClientItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkClientItem = {
+  bulkClientBatchId: "<id>",
+  bulkClientItemId: "<id>",
+  clientStatus: "Active",
+  createdAt: "1729655592844",
+  eventActors: {
+    "key": "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  memberId: "<id>",
+  status: "Open",
+  updatedAt: "1737907528204",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

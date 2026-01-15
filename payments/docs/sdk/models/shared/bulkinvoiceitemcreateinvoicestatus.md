@@ -1,12 +1,15 @@
 # BulkInvoiceItemCreateInvoiceStatus
 
+## Example Usage
+
+```typescript
+import { BulkInvoiceItemCreateInvoiceStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkInvoiceItemCreateInvoiceStatus = "Draft";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Draft`     | Draft       |
-| `Open`      | Open        |
-| `Approved`  | Approved    |
-| `Paid`      | Paid        |
-| `Cancelled` | Cancelled   |
+```typescript
+"Draft" | "Open" | "Approved" | "Paid" | "Cancelled"
+```

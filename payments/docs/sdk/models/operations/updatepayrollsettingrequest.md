@@ -1,5 +1,14 @@
 # UpdatePayrollSettingRequest
 
+## Example Usage
+
+```typescript
+import { UpdatePayrollSettingRequest } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdatePayrollSettingRequest = {
+  id: "<id>",
+};
+```
 
 ## Fields
 

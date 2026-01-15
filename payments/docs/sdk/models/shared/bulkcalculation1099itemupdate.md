@@ -1,5 +1,12 @@
 # BulkCalculation1099ItemUpdate
 
+## Example Usage
+
+```typescript
+import { BulkCalculation1099ItemUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkCalculation1099ItemUpdate = {};
+```
 
 ## Fields
 

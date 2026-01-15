@@ -1,5 +1,19 @@
 # PayableCreateRequest
 
+## Example Usage
+
+```typescript
+import { PayableCreateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: PayableCreateRequest = {
+  collaboratorId: "<id>",
+  creditFeeHandling: {},
+  dueDate: "<value>",
+  lineItems: [
+    {},
+  ],
+};
+```
 
 ## Fields
 

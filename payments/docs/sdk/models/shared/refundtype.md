@@ -1,11 +1,15 @@
 # RefundType
 
+## Example Usage
+
+```typescript
+import { RefundType } from "@wingspan/payments/sdk/models/shared";
+
+let value: RefundType = "TaxWithholding";
+```
 
 ## Values
 
-| Name             | Value            |
-| ---------------- | ---------------- |
-| `Account`        | Account          |
-| `TaxWithholding` | TaxWithholding   |
-| `Wallet`         | Wallet           |
-| `Card`           | Card             |
+```typescript
+"Account" | "TaxWithholding" | "Wallet" | "Card"
+```

@@ -1,5 +1,27 @@
 # LineItemsAgingReportLineItem
 
+## Example Usage
+
+```typescript
+import { LineItemsAgingReportLineItem } from "@wingspan/payments/sdk/models/shared";
+
+let value: LineItemsAgingReportLineItem = {
+  costPerUnit: 1979.82,
+  createdAt: "1719170485883",
+  index: 6012.77,
+  labels: {
+    "key": "<value>",
+  },
+  labelsBak2: {
+    "key": "<value>",
+  },
+  quantity: 7719.31,
+  reimbursableExpense: false,
+  totalCost: 4130.86,
+  unit: "gray",
+  updatedAt: "1737923389061",
+};
+```
 
 ## Fields
 

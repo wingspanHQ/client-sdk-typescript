@@ -1,5 +1,12 @@
 # PaymentEligibilityUpdateRequest
 
+## Example Usage
+
+```typescript
+import { PaymentEligibilityUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: PaymentEligibilityUpdateRequest = {};
+```
 
 ## Fields
 

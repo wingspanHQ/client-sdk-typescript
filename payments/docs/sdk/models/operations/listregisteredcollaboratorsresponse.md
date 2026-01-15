@@ -1,5 +1,18 @@
 # ListRegisteredCollaboratorsResponse
 
+## Example Usage
+
+```typescript
+import { ListRegisteredCollaboratorsResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListRegisteredCollaboratorsResponse = {
+  contentType: "<value>",
+  statusCode: 205,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

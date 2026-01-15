@@ -1,5 +1,18 @@
 # GetSpecificPayableBatchItemResponse
 
+## Example Usage
+
+```typescript
+import { GetSpecificPayableBatchItemResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: GetSpecificPayableBatchItemResponse = {
+  contentType: "<value>",
+  statusCode: 412,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

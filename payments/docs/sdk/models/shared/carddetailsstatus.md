@@ -1,14 +1,15 @@
 # CardDetailsStatus
 
+## Example Usage
+
+```typescript
+import { CardDetailsStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardDetailsStatus = "ClosedByCustomer";
+```
 
 ## Values
 
-| Name               | Value              |
-| ------------------ | ------------------ |
-| `Active`           | Active             |
-| `Inactive`         | Inactive           |
-| `Stolen`           | Stolen             |
-| `Lost`             | Lost               |
-| `Frozen`           | Frozen             |
-| `ClosedByCustomer` | ClosedByCustomer   |
-| `SuspectedFraud`   | SuspectedFraud     |
+```typescript
+"Active" | "Inactive" | "Stolen" | "Lost" | "Frozen" | "ClosedByCustomer" | "SuspectedFraud"
+```

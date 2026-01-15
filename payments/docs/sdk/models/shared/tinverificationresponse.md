@@ -1,5 +1,14 @@
 # TinVerificationResponse
 
+## Example Usage
+
+```typescript
+import { TinVerificationResponse } from "@wingspan/payments/sdk/models/shared";
+
+let value: TinVerificationResponse = {
+  verificationStatus: "Verified",
+};
+```
 
 ## Fields
 

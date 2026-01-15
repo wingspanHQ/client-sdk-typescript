@@ -1,10 +1,15 @@
 # TriggeredBy
 
+## Example Usage
+
+```typescript
+import { TriggeredBy } from "@wingspan/payments/sdk/models/shared";
+
+let value: TriggeredBy = "Payer";
+```
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `Payer`  | Payer    |
-| `Payee`  | Payee    |
-| `System` | System   |
+```typescript
+"Payer" | "Payee" | "System"
+```

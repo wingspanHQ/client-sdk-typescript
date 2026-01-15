@@ -1,10 +1,15 @@
 # CollaboratorSchemaStatus
 
+## Example Usage
+
+```typescript
+import { CollaboratorSchemaStatus } from "@wingspan/payments/sdk/models/shared";
+
+let value: CollaboratorSchemaStatus = "Active";
+```
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Active`   | Active     |
-| `Inactive` | Inactive   |
-| `Pending`  | Pending    |
+```typescript
+"Active" | "Inactive" | "Pending"
+```

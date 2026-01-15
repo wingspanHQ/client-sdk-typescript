@@ -1,5 +1,18 @@
 # UpdateCollaboratorGroupConfigurationResponse
 
+## Example Usage
+
+```typescript
+import { UpdateCollaboratorGroupConfigurationResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: UpdateCollaboratorGroupConfigurationResponse = {
+  contentType: "<value>",
+  statusCode: 511,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

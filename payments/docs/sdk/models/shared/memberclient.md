@@ -1,5 +1,58 @@
 # MemberClient
 
+## Example Usage
+
+```typescript
+import { MemberClient } from "@wingspan/payments/sdk/models/shared";
+
+let value: MemberClient = {
+  achCreditAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  client: {
+    user: {},
+  },
+  clientData: {},
+  clientId: "<id>",
+  clientUserAccountType: "enterprise",
+  createdAt: "1714972384648",
+  emailTo: "<value>",
+  eventActors: {
+    "key": "<value>",
+  },
+  events: {},
+  externalIds: {},
+  form1099Balances: {},
+  formW9Data: {},
+  internationalWireAccount: {
+    accountNumber: "<value>",
+    bankName: "<value>",
+  },
+  labels: {
+    "key": "<value>",
+  },
+  member: {
+    user: {},
+  },
+  memberClientId: "<id>",
+  memberData: {},
+  memberId: "<id>",
+  parentMemberClientId: "<id>",
+  payerPayeeId: "<id>",
+  status: "Inactive",
+  taxStatus: "Failed",
+  updatedAt: "1737876605919",
+  userRoles: {
+    ownerIds: [
+      "<value>",
+    ],
+    viewerIds: [
+      "<value>",
+    ],
+  },
+};
+```
 
 ## Fields
 

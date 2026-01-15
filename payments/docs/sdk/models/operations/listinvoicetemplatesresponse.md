@@ -1,5 +1,18 @@
 # ListInvoiceTemplatesResponse
 
+## Example Usage
+
+```typescript
+import { ListInvoiceTemplatesResponse } from "@wingspan/payments/sdk/models/operations";
+
+let value: ListInvoiceTemplatesResponse = {
+  contentType: "<value>",
+  statusCode: 406,
+  rawResponse: new Response("{\"message\": \"hello world\"}", {
+    headers: { "Content-Type": "application/json" },
+  }),
+};
+```
 
 ## Fields
 

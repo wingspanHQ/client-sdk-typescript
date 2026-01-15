@@ -1,5 +1,12 @@
 # BulkPayableItemUpdate
 
+## Example Usage
+
+```typescript
+import { BulkPayableItemUpdate } from "@wingspan/payments/sdk/models/shared";
+
+let value: BulkPayableItemUpdate = {};
+```
 
 ## Fields
 

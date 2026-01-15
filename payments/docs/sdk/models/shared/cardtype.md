@@ -1,11 +1,15 @@
 # CardType
 
+## Example Usage
+
+```typescript
+import { CardType } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardType = "individualVirtualDebitCard";
+```
 
 ## Values
 
-| Name                         | Value                        |
-| ---------------------------- | ---------------------------- |
-| `IndividualDebitCard`        | individualDebitCard          |
-| `BusinessDebitCard`          | businessDebitCard            |
-| `IndividualVirtualDebitCard` | individualVirtualDebitCard   |
-| `BusinessVirtualDebitCard`   | businessVirtualDebitCard     |
+```typescript
+"individualDebitCard" | "businessDebitCard" | "individualVirtualDebitCard" | "businessVirtualDebitCard"
+```

@@ -1,5 +1,12 @@
 # TaxFormRedactedSubmissionData
 
+## Example Usage
+
+```typescript
+import { TaxFormRedactedSubmissionData } from "@wingspan/payments/sdk/models/shared";
+
+let value: TaxFormRedactedSubmissionData = {};
+```
 
 ## Fields
 

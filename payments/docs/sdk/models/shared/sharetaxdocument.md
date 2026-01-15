@@ -1,9 +1,15 @@
 # ShareTaxDocument
 
+## Example Usage
+
+```typescript
+import { ShareTaxDocument } from "@wingspan/payments/sdk/models/shared";
+
+let value: ShareTaxDocument = "Allow";
+```
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Allow`   | Allow     |
-| `Decline` | Decline   |
+```typescript
+"Allow" | "Decline"
+```

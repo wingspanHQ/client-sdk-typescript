@@ -1,5 +1,12 @@
 # InvoiceRefundEvents
 
+## Example Usage
+
+```typescript
+import { InvoiceRefundEvents } from "@wingspan/payments/sdk/models/shared";
+
+let value: InvoiceRefundEvents = {};
+```
 
 ## Fields
 

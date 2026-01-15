@@ -1,5 +1,105 @@
 # ClientInvoice
 
+## Example Usage
+
+```typescript
+import { ClientInvoice } from "@wingspan/payments/sdk/models/shared";
+
+let value: ClientInvoice = {
+  additionalRecipientEmails: [
+    "<value>",
+  ],
+  amount: 1858.97,
+  client: {},
+  createdAt: "1728212943531",
+  currency: "USD",
+  dueDate: "<value>",
+  events: {},
+  invoiceId: "<id>",
+  invoiceNumber: "<value>",
+  lineItems: [
+    {
+      costPerUnit: 2646.49,
+      createdAt: "1737156129397",
+      labels: {
+        "key": "<value>",
+      },
+      labelsBak2: {
+        "key": "<value>",
+      },
+      quantity: 6394.63,
+      reimbursableExpense: false,
+      totalCost: 5206.78,
+      unit: "joule",
+      updatedAt: "1737922060644",
+    },
+  ],
+  member: {},
+  memberAcceptsPayments: false,
+  memberAddress: {
+    addressLine1: "98607 N Elm Street",
+    city: "North Nicola",
+    postalCode: "17096-5292",
+    state: "Tennessee",
+  },
+  memberClient: {
+    achCreditAccount: {
+      accountNumber: "<value>",
+      bankName: "<value>",
+    },
+    client: {
+      user: {},
+    },
+    clientData: {},
+    clientId: "<id>",
+    clientUserAccountType: "enterprise",
+    createdAt: "1731110740369",
+    emailTo: "<value>",
+    eventActors: {
+      "key": "<value>",
+    },
+    events: {},
+    externalIds: {},
+    form1099Balances: {},
+    formW9Data: {},
+    internationalWireAccount: {
+      accountNumber: "<value>",
+      bankName: "<value>",
+    },
+    labels: {
+      "key": "<value>",
+    },
+    member: {
+      user: {},
+    },
+    memberClientId: "<id>",
+    memberData: {},
+    memberId: "<id>",
+    parentMemberClientId: "<id>",
+    payerPayeeId: "<id>",
+    status: "Inactive",
+    taxStatus: "Complete",
+    updatedAt: "1737895960621",
+    userRoles: {
+      ownerIds: [
+        "<value>",
+      ],
+      viewerIds: [
+        "<value>",
+      ],
+    },
+  },
+  memberCompany: "<value>",
+  memberEmail: "<value>",
+  memberLogoUrl: "https://distorted-hierarchy.info/",
+  memberName: "<value>",
+  memberPaymentsVersion: 1636.84,
+  memberStripeAccountId: "<id>",
+  projectName: "<value>",
+  status: "Cancelled",
+  updatedAt: "1737877850197",
+};
+```
 
 ## Fields
 

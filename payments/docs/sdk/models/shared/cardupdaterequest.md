@@ -1,5 +1,14 @@
 # CardUpdateRequest
 
+## Example Usage
+
+```typescript
+import { CardUpdateRequest } from "@wingspan/payments/sdk/models/shared";
+
+let value: CardUpdateRequest = {
+  status: "Active",
+};
+```
 
 ## Fields
 
